@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ForgeOrangeEquipSkin" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:customui="customui.*" xmlns:game="game.*">
+	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
+		<customui:CommonWin id="commonWin" left="0" right="0" top="0" bottom="0" visible="false"/>
+		<e:Image source="common_bg_interface_level_1_png" horizontalCenter="0.5" top="0" visible="false"/>
+		<e:Image source="forge_bg_shengjichengzhuang_png" y="62" horizontalCenter="0" height="790"/>
+		<e:Image source="forge_zhuangshi_png" y="26" horizontalCenter="0" touchEnabled="false" visible="false"/>
+		<game:HeroHeadComponentView id="headComponent" width="720" height="120" scaleX="1" scaleY="1" horizontalCenter="0" top="70" x="0" y="60"/>
+		<e:Group id="gp_equip" left="0" right="0" touchThrough="true" touchEnabled="false" height="620" y="205">
+		</e:Group>
+		<e:Group id="gp_middle" width="460" height="630" y="221" horizontalCenter="0">
+			<e:Group id="gp_attr" width="400" height="310" y="184" horizontalCenter="0">
+				<e:Image source="common_bg_tips_title_png" scale9Grid="64,5,390,37" width="412" horizontalCenter="0" top="2"/>
+				<e:Image source="forge_faguang_png" horizontalCenter="-1" verticalCenter="0"/>
+				<e:Image source="forge_dangqianshuxing_png" y="14" left="25"/>
+				<e:Image source="forge_txt_tishengyulan_png" y="13" right="65"/>
+				<e:Image source="forge_fengexian_png" y="3" horizontalCenter="0.5"/>
+				<e:Label id="lb_attr" text="Label" x="29" y="80" fontFamily="SimHei" size="20" textColor="0xbfbfbf" lineSpacing="12"/>
+				<e:Label id="lb_attr_next" text="Label" x="240" y="80" fontFamily="SimHei" size="20" textColor="0x6dff00" lineSpacing="12"/>
+				<e:Group id="gp_arrow" width="200" top="0" bottom="0" horizontalCenter="0">
+					<e:Image source="compound_jiantou_png" y="93" horizontalCenter="0.5"/>
+				</e:Group>
+			</e:Group>
+			<customui:BaseItem id="baseItem_left" width="90" height="90" x="105" y="103" anchorOffsetX="45" anchorOffsetY="45"/>
+			<customui:BaseItem id="baseItem_right" width="90" height="90" x="354" y="103" anchorOffsetX="45" anchorOffsetY="45"/>
+			<e:Image source="forge_txt_tisheng1_png" x="198" y="37"/>
+			<e:Image y="74" horizontalCenter="0.5" source="compound_jiantou_png"/>
+			<e:Label text="需要消耗橙装精华" x="19" y="510" fontFamily="SimHei" textColor="0x269dc4" size="20"/>
+			<e:Label id="lb_get" text="获取碎片" x="346" y="510" fontFamily="SimHei" size="20" textColor="0x6cff00"/>
+			<e:Image source="common_bg_shuju_png" y="505" x="192"/>
+			<e:Label id="lb_cost" text="999/9999" y="508" fontFamily="SimHei" horizontalCenter="37" size="24" textColor="0xbfbfbf"/>
+			<e:Image id="img_upgrade" source="common_btn_common_png" y="565" horizontalCenter="0.5"/>
+			<e:Image source="forge_txt-tisheng_png" y="578" horizontalCenter="0" touchEnabled="false"/>
+		</e:Group>
+		<e:Image id="img_return" source="common_btn_fanhui_png" x="612" y="833" visible="false"/>
+		<e:Label id="lb_tips" text="该部位没有可升级的橙装" y="427" horizontalCenter="0" fontFamily="SimHei" size="28" textColor="0xb90b0a" visible="false"/>
+	</e:Group>
+</e:Skin>

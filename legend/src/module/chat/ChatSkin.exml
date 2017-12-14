@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ChatSkin" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:customui="customui.*">
+	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
+		<customui:CommonWin id="commonWin" left="0" right="0" top="0" bottom="0"/>
+		<e:Image horizontalCenter="0" top="0" source="common_bg_interface_level_1_png" visible="false"/>
+		<e:Image y="58" height="666" source="chat_bg_liaotian_png" horizontalCenter="0"/>
+		<e:Image source="shop_bg__png" bottom="115" horizontalCenter="-8" visible="false"/>
+		<e:TabBar id="tabbar" width="497" height="54" x="15" y="841" anchorOffsetY="0" anchorOffsetX="0" itemRendererSkinName="skins.TabbarButtonSkin1"/>
+		<e:Scroller id="scroller" width="636" top="71" bottom="349" height="606" anchorOffsetY="0" anchorOffsetX="0" horizontalCenter="0">
+		<e:Group id="scr_group">
+		</e:Group>
+		</e:Scroller>
+		<e:Image source="chat_bg_fasong_png" x="31" y="732"/>
+		<e:Group id="gp_nexttime1" width="660" height="60" horizontalCenter="-5" bottom="256">
+			<e:Image id="img_emoji" x="470" y="7" scaleX="1" scaleY="1" anchorOffsetX="0" width="51" source="chat_biaoqing_png"/>
+			<e:Image id="img_send" source="chat_btn_ss_png" x="534" y="5"/>
+			<e:Image source="chat_bg_shurukuang_png" x="20" y="5"/>
+			<e:TextInput id="inp_textf" width="406" height="37" x="33" y="13" anchorOffsetX="0" anchorOffsetY="0" textColor="0xbfbfbf"/>
+			<e:Image source="chat_txt_fasong_png" x="565" y="20" touchEnabled="false"/>
+			<e:Label id="lb_notalk" text="系统频道禁止发言" x="148" y="20" fontFamily="SimHei" size="22" textColor="0xee3b01"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

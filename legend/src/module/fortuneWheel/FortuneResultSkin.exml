@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="FortuneResultSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" width="327" height="311">
+	<e:Image horizontalCenter="0" top="13" bottom="13" scale9Grid="140,97,215,101" source="monthcard_bg_goumaijiangli_png"/>
+	<e:Label touchEnabled="false" text="金币" fontFamily="SimHei" size="20" textColor="0xBFBFBF" y="207" textAlign="center" horizontalCenter="0.5"/>
+	<e:Image touchEnabled="false" horizontalCenter="0" verticalCenter="0" source="common_default_png"/>
+	<e:Image source="turnplate_fanbeichenggong_png" y="56" horizontalCenter="0"/>
+	<e:Image y="119" source="common_yuanbao_jiangli_png" horizontalCenter="0"/>
+	<e:Label id="lb_num" touchEnabled="false" text="金币" fontFamily="SimHei" size="20" textColor="0xBFBFBF" y="173" textAlign="center" horizontalCenter="19.5"/>
+</e:Skin>

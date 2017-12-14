@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="EncounterRewardListItemSkin" xmlns:e="http://ns.egret.com/eui" xmlns:customui="customui.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image anchorOffsetX="0" anchorOffsetY="0" scale9Grid="3,6,526,135" source="common_bg_list_neiromg_png" width="576" height="105.92" horizontalCenter="0" verticalCenter="0"/>
+	<e:Label id="lb_rank" text="Label" x="64" textColor="0xbfbfbf" size="28" fontFamily="SimHei" verticalCenter="0"/>
+	<customui:BaseItem id="baseItem0" x="341" anchorOffsetX="0" anchorOffsetY="0" skinName="BaseItemSkin" width="90" height="90" verticalCenter="0"/>
+	<customui:BaseItem id="baseItem1" x="456" anchorOffsetX="0" anchorOffsetY="0" skinName="BaseItemSkin" width="90" height="90" verticalCenter="0"/>
+</e:Skin>

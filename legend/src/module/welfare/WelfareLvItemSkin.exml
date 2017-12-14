@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="WelfareLvItemSkin" width="623" height="117" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:customui="customui.*">
+	<e:Image source="sign_bg_list_png" x="-6" y="1" touchEnabled="false"/>
+	<customui:BaseItem id="baseItem1" width="90" height="90" y="56" anchorOffsetX="45" anchorOffsetY="45" horizontalCenter="-37.5"/>
+	<customui:BaseItem id="baseItem2" width="90" height="90" y="57" anchorOffsetX="45" anchorOffsetY="45" horizontalCenter="56.5"/>
+	<e:Image source="sign_bg_level_png" x="13" y="17"/>
+	<e:Label id="lb_name" text="10级礼包" y="49" fontFamily="SimHei" size="24" x="19" scaleX="1" scaleY="1" anchorOffsetX="0" width="152" anchorOffsetY="0" height="27" lineSpacing="5" minWidth="320" textAlign="center" textColor="0xffc600"/>
+	<e:Label text="剩余数量：" y="82" fontFamily="SimHei" size="20" x="424" scaleX="1" scaleY="1" anchorOffsetX="0" width="152" anchorOffsetY="0" height="27" lineSpacing="5" minWidth="320" textAlign="center" textColor="0xf87500"/>
+	<e:Label id="lb_leftnum" text="不限" y="82" fontFamily="SimHei" size="20" x="551" scaleX="1" scaleY="1" anchorOffsetX="0" width="51" anchorOffsetY="0" height="27" lineSpacing="5" minWidth="320" textAlign="left" textColor="0x00f828"/>
+	<e:Image id="btn_take" source="common_btn_common_png" x="447" y="15"/>
+	<e:Image id="img_grey" source="common_btn_common_huise_png" x="448" y="12"/>
+	<e:Image id="img_token" source="mail_yilingqu_png" x="488" y="27"/>
+	<e:Image id="img_take" source="boss_txt_lingqujiangli_succeed_png" x="474" y="26" touchEnabled="false"/>
+</e:Skin>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="incomePromote" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:customui="customui.*">
+	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0" touchEnabled="false">
+		<e:Group y="402" horizontalCenter="0.5">
+			<e:Image source="common_interface_tanchuang_2_png" y="-36" anchorOffsetX="0" width="485.44" anchorOffsetY="0" height="238.01" alpha="0.6" horizontalCenter="0"/>
+			<e:Image source="common_bg_tips_title_png" y="-28" anchorOffsetX="0" width="402" anchorOffsetY="0" height="51" horizontalCenter="1.5" alpha="0.6"/>
+			<e:Image source="boss_txt_guangqiashouyitisheng_png" y="-42" horizontalCenter="0"/>
+			<e:Group y="43" horizontalCenter="0">
+				<e:Image source="boss_jiantou_tisheng_png" x="133" y="3"/>
+				<e:Label id="lb_lastExp" text="101775687" x="24" y="3" size="20" textColor="0xbfbfbf" anchorOffsetX="0" width="106"/>
+				<e:Label text="/小时" x="313" y="1" size="24" textColor="0xBFBFBF" fontFamily="黑体"/>
+				<e:Label id="lb_exp" text="101775687" x="206" y="3" size="20" textColor="0x00ff1e" textAlign="right" anchorOffsetX="0" width="103"/>
+				<e:Image source="main_exp_png" x="-24" y="-12"/>
+			</e:Group>
+			<e:Group y="90" anchorOffsetX="0" width="393" anchorOffsetY="0" height="27" horizontalCenter="0">
+				<e:Image source="common_jinbi_png" x="-16" y="0"/>
+				<e:Image source="boss_jiantou_tisheng_png" x="142" y="3"/>
+				<e:Label id="lb_lastCoin" text="101775687" x="30" y="1" size="20" textColor="0xBFBFBF" anchorOffsetX="0" width="105"/>
+				<e:Label text="/小时" x="322" y="1" size="24" textColor="0xBFBFBF" fontFamily="黑体"/>
+				<e:Label id="lb_coin" text="101775687" x="217" y="4" size="20" textColor="0x00FF1E" textAlign="right" anchorOffsetX="0" width="102" anchorOffsetY="0" height="21"/>
+			</e:Group>
+			<e:Label text="离线挂机  小时  分，即可升级。" y="140" size="20" textColor="0xf6a527" fontFamily="黑体" horizontalCenter="0"/>
+			<e:Label id="lb_hour" text="2" x="173" y="140" size="20" fontFamily="黑体" textColor="0x00ff1e" textAlign="center" anchorOffsetX="0" width="21" anchorOffsetY="0" height="23" rotation="1.12"/>
+			<e:Label id="lb_minute" text="30" x="233" y="140" size="20" fontFamily="黑体" textColor="0x00FF1E" textAlign="center" anchorOffsetX="0" width="21" anchorOffsetY="0" height="23" rotation="1.12"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

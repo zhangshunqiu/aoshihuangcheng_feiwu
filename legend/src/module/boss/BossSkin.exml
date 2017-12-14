@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="BossSkin" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:customui="customui.*">
+	<e:Group left="0" right="0" top="0" bottom="67" anchorOffsetY="0">
+		<e:Image source="common_bg_all_png" left="0" top="0"/>
+		<e:Group id="gp_main" x="0" y="55">
+			<e:Image source="common_bg_interface_level_1_png" x="9" y="8"/>
+			<e:Image source="boss_bg_guaiwumoxing_png" x="31" y="73"/>
+			<e:Group id="gp_middle" height="400" y="282" x="0" anchorOffsetX="0" width="720">
+				<e:Image source="boss_guaiwu_png" horizontalCenter="-2.5" verticalCenter="-83.5" visible="false"/>
+				<e:Group id="gp_boss" width="1" height="0" y="341" anchorOffsetY="0" anchorOffsetX="0" horizontalCenter="0"/>
+				<e:Group x="550" y="242">
+				<e:Image source="boss_frame_tongguanjiangli_png" x="0" y="5"/>
+					<e:Image id="img_passReward" source="common_jinbi_jiangli2_png" horizontalCenter="0" verticalCenter="0"/>
+				</e:Group>
+				<e:ProgressBar id="pb_challengeNum" width="113.33" height="22.68" x="545" y="363" skinName="ProgressBarGuanqiaSkin" anchorOffsetX="0" anchorOffsetY="0" value="1" maximum="10"/>
+				<e:Image source="boss_bosslaixi_png" x="83" y="1" visible="false"/>
+				<e:Image source="boss_txt_tongguanjiangli_png" x="548" y="202"/>
+				<e:Image source="boss_bg_name_png" y="-25" horizontalCenter="0"/>
+				<e:Image id="img_bossName" source="boss_txt_yuangushachong_png" y="-8" horizontalCenter="0.5"/>
+			</e:Group>
+			<e:Image source="boss_guangqia_title_png" x="230" y="0"/>
+			<e:Image source="boss_dangqianguanqia_png" x="498" y="95"/>
+			<e:Group x="35" y="78">
+				<e:Image source="boss_bg_paihangbang_png" x="0" y="1"/>
+				<e:Label text="关卡排名" x="20" y="15" size="24" textColor="0x9d2515" fontFamily="SimHei"/>
+				<e:Group y="55" x="24">
+				<e:Label id="lb_no1" text="1、xxx" y="0" size="24" fontFamily="SimHei" textColor="0xbfbfbf" left="0"/>
+				<e:Label id="lb_no2" text="2、xxx" y="27" size="24" fontFamily="SimHei" textColor="0xBFBFBF" left="0"/>
+				<e:Label id="lb_no3" text="3、xxx" y="51" size="24" fontFamily="SimHei" textColor="0xBFBFBF" left="0"/>
+				</e:Group>
+				<e:Group y="55" x="197">
+				<e:Label id="lb_no1_guanqia" text="xxx关" y="0" size="24" fontFamily="SimHei" textColor="0xBFBFBF" left="0"/>
+				<e:Label id="lb_no2_guanqia" text="xxx关" y="27" size="24" fontFamily="SimHei" textColor="0xBFBFBF" left="0"/>
+				<e:Label id="lb_no3_guanqia" text="xxx关" y="51" size="24" fontFamily="SimHei" textColor="0xBFBFBF" left="0"/>
+				</e:Group>
+				<e:Label id="lb_look_ranking" text="查看排名" x="190" y="15" size="24" fontFamily="SimHei" textColor="0x53dd01"/>
+			</e:Group>
+			<e:Group x="482" y="160" anchorOffsetX="0" width="188" anchorOffsetY="0" height="57">
+				<e:Image source="boss_bg_guanqia_png" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0"/>
+				<e:BitmapLabel id="btlb_guanqia" font="boss_guanqia_txt_fnt" text="第88关" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" verticalCenter="4.5"/>
+			</e:Group>
+			<e:Image source="boss_bg_diaoluowupin_png" y="681" x="0"/>
+			<e:Image source="boss_txt_guangqiadiaoluo_png" y="688" x="303"/>
+			<e:Group id="gp_challenge" x="262" y="865">
+				<e:Image source="boss_btn_t_succeed_png" x="0" y="0"/>
+				<e:Image source="boss_txt_tiaozhan_png" horizontalCenter="0" verticalCenter="0"/>
+			</e:Group>
+			<e:Group x="82" y="727" visible="false">
+				<e:Image source="common_default_png" x="0" y="0"/>
+				<e:Image source="2000000000_png" y="15" horizontalCenter="0"/>
+				<e:Label text="元宝" y="87" size="20" fontFamily="黑体" textColor="0xbfbfbf" horizontalCenter="0"/>
+			</e:Group>
+			<e:Group x="198.25" y="727" visible="false">
+				<e:Image source="common_default_png" x="0" y="0"/>
+				<e:Image source="common_jinbi_jiangli_png" y="9" horizontalCenter="0"/>
+				<e:Label text="元宝" y="87" size="20" fontFamily="黑体" textColor="0xBFBFBF" horizontalCenter="0"/>
+			</e:Group>
+			<e:Group x="314.5" y="726" visible="false">
+				<e:Image source="common_default_png" x="0" y="0"/>
+				<e:Image source="common_yuanbao_jiangli_png" y="10" horizontalCenter="0"/>
+				<e:Label text="元宝" y="89" size="20" fontFamily="黑体" textColor="0xBFBFBF" horizontalCenter="0"/>
+			</e:Group>
+			<e:Group x="430.75" y="727" visible="false">
+				<e:Image source="common_frame_blue_png" x="0" y="0"/>
+				<e:Image source="common_yuanbao_jiangli_png" y="7" horizontalCenter="0"/>
+				<e:Label text="元宝" y="88" size="20" fontFamily="黑体" horizontalCenter="0" textColor="0x318ae4"/>
+			</e:Group>
+			<e:Group x="547" y="727" visible="false">
+				<e:Image source="common_frame_green_png" x="0" y="0"/>
+				<e:Image source="common_yuanbao_jiangli_png" y="9" horizontalCenter="0"/>
+				<e:Label text="元宝" y="89" size="20" fontFamily="黑体" horizontalCenter="0" textColor="0x22a322"/>
+			</e:Group>
+			<e:List id="list" width="566" height="112" x="75" y="724" anchorOffsetX="0" anchorOffsetY="0"/>
+		</e:Group>
+		<e:Group id="gp_getReward" x="0" y="55" scaleX="1" scaleY="1" visible="false">
+			<e:Image source="boss_bg_tongguanjiangli_png" x="20" y="65" anchorOffsetY="0" height="866" anchorOffsetX="0" width="680"/>
+			<e:Group x="304" y="408">
+			<e:Image source="boss_frame_tongguanjiangli_png" y="0" horizontalCenter="0"/>
+			<e:Image id="img_passReward1" source="common_jinbi_jiangli2_png" horizontalCenter="0" verticalCenter="0"/>
+			</e:Group>
+			<e:Image id="img_getReward" source="boss_btn_t_succeed_png" x="263" y="600"/>
+			<e:Image source="boss_txt_lingqu_png" y="615" x="325" touchEnabled="false"/>
+			<e:Image source="boss_txt_tonggaunjiangli_png" y="274" horizontalCenter="0"/>
+			<e:Label id="lb_passRewardName" text="麻痹戒指" y="519" size="20" fontFamily="黑体" textColor="0xF5A627" horizontalCenter="0"/>
+		</e:Group>
+	</e:Group>
+	<e:Image id="img_close" source="common_btn_close_1_png" x="656" y="68"/>
+	<e:Image id="img_back" source="common_btn_fanhui_png" x="612" y="897"/>
+</e:Skin>

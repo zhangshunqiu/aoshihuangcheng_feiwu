@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="WelfareSkin" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="gp_bg" x="0" y="0">
+		<customui:CommonWin id="commonWin" xmlns:customui="customui.*" x="0" y="70" skinName="CommonWinSkin"/>
+		<e:Image source="forge_zhuangshi_png" x="1" y="53"/>
+		<e:Image source="sign_bg_banzi_png" x="26" y="185" alpha="1"/>
+		<e:Image id="btn_code" source="sign_icon_jihuoma_png" x="353" y="143"/>
+		<e:Image id="btn_note" source="sign_icon_youxigonggao_png" x="253" y="145"/>
+		<e:Image id="bt_back" source="common_btn_fanhui_png" x="628.11" y="926.4" scaleX="1" scaleY="1" anchorOffsetX="11.11" anchorOffsetY="20.4" height="90" width="87"/>
+		<e:Image id="img_close" source="common_btn_close_1_png" x="652" y="80"/>
+		<e:Group id="btn_sign" width="124" height="89" x="21" y="138">
+			<e:Image source="sign_icon_meiriqiandao_png" x="0" y="0" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Group id="btn_level" width="107" height="82" x="152" y="145">
+			<e:Image source="sign_iocn_dengjilibao_png" x="0" y="0" scaleX="1" scaleY="1"/>
+		</e:Group>
+	</e:Group>
+	<e:Group id="gp_level" x="40.02999999999997" y="237.49" touchEnabled="false" touchThrough="true" visible="false">
+		<e:Image source="sign_bg_banzi_png" x="-13.69" y="617.19" scaleX="1" scaleY="1"/>
+		<e:Image source="sign_bg_m_png" x="-0.33" y="20" anchorOffsetY="0" height="628" alpha="1" scaleX="1" scaleY="1"/>
+		<e:Group x="-12.67" y="21.33">
+			<e:Image source="sign_bg_dibu_png" x="2" y="722" anchorOffsetX="0" width="670"/>
+			<e:Image id="btn_lvback" source="common_btn_fanhui_png" x="586" y="647"/>
+		</e:Group>
+		<e:Scroller id="scr_levelpackage" width="638" height="568.33" anchorOffsetY="0" anchorOffsetX="0" x="0" y="37" scaleX="1" scaleY="1">
+		<e:Group>
+		</e:Group>
+		</e:Scroller>
+	</e:Group>
+	<e:Group id="gp_sign" x="40.03" y="237.49" touchEnabled="false" touchThrough="true" width="638" height="682">
+	</e:Group>
+	<e:Group id="gp_note" x="292" y="279" touchThrough="true" touchEnabled="false" visible="false">
+		<e:Image source="sign_bg_banzi_png" x="-266.03" y="575.85" scaleX="1" scaleY="1"/>
+		<e:Image source="sign_bg_m_png" x="-251.66" y="-18.33" anchorOffsetY="0" height="624" alpha="1" scaleX="1" scaleY="1"/>
+		<e:Scroller id="scr_note" width="636" height="570" anchorOffsetY="0" anchorOffsetX="0" x="-249" y="-10" scaleX="1" scaleY="1">
+			<e:Group id="vp_note" x="6" y="-29">
+			<e:Label id="lb_notecontent" text="巴拉巴拉巴拉啦啦八八爸爸把阿拉喇叭叭叭叭爸爸被" y="111" fontFamily="SimHei" size="24" x="55" scaleX="1" scaleY="1" anchorOffsetX="0" width="544" anchorOffsetY="0" lineSpacing="18" minWidth="320" textAlign="left" textColor="0xbfbfbf" maxWidth="550"/>
+				<e:Label id="lb_notetitle" text="亲爱的玩家" y="62" fontFamily="SimHei" size="24" x="47" scaleX="1" scaleY="1" anchorOffsetX="0" width="512" anchorOffsetY="0" height="27" lineSpacing="5" minWidth="320" textAlign="left" textColor="0x00ccf8"/>
+				<e:Label text="更新内容" y="9" fontFamily="SimHei" size="30" x="265" scaleX="1" scaleY="1" anchorOffsetX="0" width="152" anchorOffsetY="0" lineSpacing="5" minWidth="320" textColor="0xF87500"/>
+			</e:Group>
+		</e:Scroller>
+		<e:Image id="btn_noteback" source="common_btn_fanhui_png" x="321.36" y="626.82" scaleX="1" scaleY="1" alpha="1"/>
+	</e:Group>
+</e:Skin>

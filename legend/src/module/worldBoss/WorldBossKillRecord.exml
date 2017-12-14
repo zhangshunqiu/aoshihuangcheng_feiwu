@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="WorldBossKillRecord" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="common_bg_window_tips_png" y="259" anchorOffsetY="0" height="436" horizontalCenter="5" anchorOffsetX="0" width="648"/>
+	<e:Image source="common_bg_tips_title_png" x="53" y="267" anchorOffsetX="0" width="623" anchorOffsetY="0" height="53"/>
+	<e:Image source="wing_bg_shuxing_png" x="83" y="326" anchorOffsetY="0" height="307" anchorOffsetX="0" width="563"/>
+	<e:Image source="全民BOSS-击杀记录_jpg" alpha="1" top="0" horizontalCenter="0" locked="true" visible="false"/>
+	<e:Label text="时间" y="342" textColor="0xF87500" size="24" fontFamily="黑体" horizontalCenter="-186"/>
+	<e:Label text="只显示最近五位击杀大奖获得者" y="649" textColor="0xF87500" size="20" fontFamily="黑体" horizontalCenter="2"/>
+	<e:Label id="lb_time0" text="14：30" y="397" size="24" fontFamily="Arial" horizontalCenter="-187" textColor="0xffffff" width="78" textAlign="center"/>
+	<e:Label id="lb_kill0" text="梦之安魂曲" y="396" size="24" fontFamily="黑体" textColor="0xffffff" width="161" anchorOffsetX="0" textAlign="center" horizontalCenter="9.5"/>
+	<e:Label id="lb_score0" text="66666" y="396" size="24" fontFamily="黑体" horizontalCenter="192" textColor="0x00f829" textAlign="center" anchorOffsetX="0" width="156"/>
+	<e:Label id="lb_time1" text="14：30" y="444" size="24" fontFamily="Arial" horizontalCenter="-188" textColor="0xFFFFFF" width="78" textAlign="center"/>
+	<e:Label id="lb_kill1" text="梦之安魂曲" y="443" size="24" fontFamily="黑体" textColor="0xFFFFFF" width="160" textAlign="center" horizontalCenter="10"/>
+	<e:Label id="lb_score1" text="66666" y="443" size="24" fontFamily="黑体" textColor="0x00F829" textAlign="center" anchorOffsetX="0" width="156" x="474"/>
+	<e:Label id="lb_time2" text="14：30" y="492" size="24" fontFamily="Arial" horizontalCenter="-187" textColor="0xFFFFFF" width="78" textAlign="center"/>
+	<e:Label id="lb_kill2" text="梦之安魂曲" y="493" size="24" fontFamily="黑体" textColor="0xFFFFFF" width="160" textAlign="center" horizontalCenter="10"/>
+	<e:Label id="lb_score2" text="66666" y="491" size="24" fontFamily="黑体" textColor="0x00F829" textAlign="center" anchorOffsetX="0" width="156" x="474"/>
+	<e:Label id="lb_time3" text="14：30" y="541" size="24" fontFamily="Arial" horizontalCenter="-186" textColor="0xFFFFFF" width="78" textAlign="center"/>
+	<e:Label id="lb_kill3" text="梦之安魂曲" y="540" size="24" fontFamily="黑体" textColor="0xFFFFFF" width="160" textAlign="center" horizontalCenter="8"/>
+	<e:Label id="lb_score3" text="66666" y="539" size="24" fontFamily="黑体" textColor="0x00F829" textAlign="center" anchorOffsetX="0" width="156" x="474"/>
+	<e:Label id="lb_time4" text="14：30" y="589" size="24" fontFamily="Arial" horizontalCenter="-188" textColor="0xFFFFFF" width="78" textAlign="center"/>
+	<e:Label id="lb_kill4" text="梦之安魂曲" y="588" size="24" fontFamily="黑体" textColor="0xFFFFFF" width="160" textAlign="center" horizontalCenter="8"/>
+	<e:Label id="lb_score4" text="66666" y="589" size="24" fontFamily="黑体" textColor="0x00F829" textAlign="center" anchorOffsetX="0" width="156" x="474"/>
+	<e:Label text="获得者" y="344" textColor="0xF87500" size="24" fontFamily="黑体" horizontalCenter="10"/>
+	<e:Label text="战力" y="343" textColor="0xF87500" size="24" fontFamily="黑体" horizontalCenter="184"/>
+	<e:Image id="img_close" source="common_btn_close_2_png" x="627" y="268"/>
+	<e:Image source="worldboss_jishajilu_title_png" x="307" y="282"/>
+</e:Skin>

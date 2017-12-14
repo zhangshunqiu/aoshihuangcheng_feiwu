@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="JewelMasterSkin" width="413" height="429" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
+		<e:Image source="common_bg_window_tips_png" scale9Grid="270,214,84,128" left="0" right="0" top="0" bottom="0" x="0" y="0" scaleX="1" scaleY="1"/>
+		<e:Image x="3" y="3" source="jewel_baoshidashi_png"/>
+		<e:Image source="forge_bg_jihuo_png" y="115" horizontalCenter="0"/>
+		<e:Image id="img_status" source="forge_txt_jihuo_png" y="119" horizontalCenter="0"/>
+		<e:Image x="123" y="40" source="jewel_txt_quanshenbaoshidengji_png"/>
+		<e:Image source="forge_jia_quanshenshengxing_png" x="273" y="50"/>
+		<e:Label id="lb_cur" text="当前效果：全身升星" x="8" y="158" fontFamily="SimHei" size="24" textColor="0x9E5020"/>
+		<e:Label id="lb_attr" text="当前效果：全身升星" x="8" y="198" fontFamily="SimHei" size="24" textColor="0xBFBFBF" lineSpacing="12" visible="false"/>
+		<e:Label id="lb_cur1" text="当前效果：全身升星" x="8" y="290" fontFamily="SimHei" size="24" textColor="0x9E5020"/>
+		<e:Label id="lb_attr1" text="当前效果：全身升星" x="8" y="331" fontFamily="SimHei" size="24" textColor="0xBFBFBF" lineSpacing="12" visible="false"/>
+		<e:BitmapLabel id="bmlb_level" x="292" y="49" font="forge_shuju_shengxing_fnt" text="99"/>
+	</e:Group>
+</e:Skin>

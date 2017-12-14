@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CopySkin" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:customui="customui.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="common_bg_all_png" left="0" top="0"/>
+	<customui:CommonWin id="commonWin" height="932" y="65" skinName="CommonWinSkin" anchorOffsetX="0" anchorOffsetY="0" left="0" right="0"/>
+	<e:Image id="img_btnBg1" source="skill_btn_faguang_xianshi_png" x="26" y="908"/>
+	<e:Image id="img_btnBg2" source="skill_btn_faguang_xianshi_png" x="183" y="908" visible="false"/>
+	<e:Image id="img_btnBg3" source="skill_btn_faguang_xianshi_png" x="339" y="908" visible="false"/>
+	<e:TabBar id="tabbar" width="470" height="58" x="29" y="913" anchorOffsetX="0" anchorOffsetY="0" itemRendererSkinName="skins.TabbarButtonSkin2"/>
+	<e:Image id="img_back" source="common_btn_fanhui_png" x="611" y="897" scaleX="1" scaleY="1"/>
+	<e:Image source="common_bg_window_tips_png" y="124" horizontalCenter="2" anchorOffsetX="0" width="672" anchorOffsetY="0" height="779"/>
+	<e:Group id="gp_boss" width="680" height="757" x="20" y="120" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Scroller id="scroller_boss" width="653" height="759" x="14" y="12" anchorOffsetX="0" anchorOffsetY="0">
+			<e:Group anchorOffsetX="0" width="352" anchorOffsetY="0" height="305">
+			</e:Group>
+		</e:Scroller>
+		<e:List id="list_boss" width="653" height="759" x="14" y="12" anchorOffsetX="0" anchorOffsetY="0"/>
+	</e:Group>
+	<e:Group id="gp_material" width="680" height="757" x="20" y="120" anchorOffsetX="0" anchorOffsetY="0" visible="false">
+		<e:Scroller id="scroller_material" width="653" height="759" x="14" y="12" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1">
+			<e:Group anchorOffsetX="0" width="352" anchorOffsetY="0" height="305"/>
+		</e:Scroller>
+		<e:List id="list_material" width="653" height="759" x="14" y="12" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1"/>
+	</e:Group>
+	<e:Group id="gp_challenge" width="680" height="757" x="20" y="120" anchorOffsetX="0" anchorOffsetY="0" visible="false">
+		<e:Image source="copy_tower_bg_png" x="8" y="6"/>
+		<e:Image source="copy_tower_bg_jiangli_png" y="625" anchorOffsetX="0" horizontalCenter="-1" width="656"/>
+		<e:List id="list_challenge" width="292" height="93" x="88" y="666" anchorOffsetX="0" anchorOffsetY="0"/>
+		<e:Button id="btn_challenge" label="" x="429" y="700" scaleX="1" scaleY="1">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="common_btn_common_png" source.down="common_btn_common_huise_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Image id="img_challenge" source="boss_txt_tiaozhan_png" touchEnabled="false" x="479" y="714" scaleX="1" scaleY="1"/>
+		<e:Image id="img_done" source="task_yiwancheng_png" x="525" y="664" scaleX="1" scaleY="1" visible="false"/>
+		<e:Image source="boss_bg_woyaobianqiang_lose_png" x="148" y="576"/>
+		<e:Label id="lb_score" text="10000" x="209" y="562" size="24" fontFamily="黑体" textColor="0x29ef13"/>
+		<e:Label id="lb_tip" text="人物达到50级可进行挑战" x="430" y="684" size="24" fontFamily="黑体" textColor="0xFF3D3D" anchorOffsetY="0" height="83" anchorOffsetX="0" width="149" textAlign="center" scaleX="1" scaleY="1"/>
+		<e:Group id="gp_bossModel" width="13" height="14" x="209" y="533" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1"/>
+		<e:Image id="img_nextBoss1" x="394" y="242" source="copy_tower_icon_weikaiqi_png"/>
+		<e:Image id="img_nextBoss2" x="75" y="46" source="copy_tower_icon_weikaiqi_png"/>
+		<e:Image source="copy_tower_wenzi_png" x="18" y="629"/>
+		<e:Image source="copy_tower_bg_level_png" x="73" y="176"/>
+		<e:Image source="copy_tower_bg_level_png" x="15" y="11" anchorOffsetX="0" width="319"/>
+		<e:Image source="copy_tower_bg_level_png" x="380" y="372"/>
+		<e:Image source="copy_tower_bg_level_png" x="126" y="522"/>
+		<e:Label text="推荐战力：" x="107" y="564" size="20" fontFamily="黑体" textColor="0x29ef13"/>
+		<e:Label id="lb_nowLevel" text="第2层" x="308" y="593" size="20" fontFamily="黑体" textColor="0xffea00"/>
+		<e:Label id="lb_nextLevel2" text="第4层" x="125" y="183" size="24" fontFamily="黑体" textColor="0xbfbfbf"/>
+		<e:Label text="每天凌晨4点重置副本进度" x="17" y="17" size="24" fontFamily="黑体" textColor="0xBFBFBF"/>
+		<e:Label id="lb_nextLevel1" text="第3层" x="436" y="379" size="24" fontFamily="黑体" textColor="0xBFBFBF"/>
+		<e:Label id="lb_level" text="第2层" x="170" y="528" size="24" fontFamily="黑体" textColor="0xBFBFBF"/>
+	</e:Group>
+	<e:Image source="副本系统-材料副本_jpg" x="1" y="-6" alpha="0.5" locked="true" visible="false"/>
+	<e:Image source="副本系统-挑战副本_jpg" left="1" top="-6" alpha="0.5" locked="true" visible="false"/>
+</e:Skin>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="InvestTipsSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" width="487" height="300">
+	<w:Config id="160014de68b"/>
+	<e:Group horizontalCenter="0" verticalCenter="0" width="90%" height="300">
+		<e:Image source="shop_bg_tips_png" horizontalCenter="0" top="13" bottom="13" scale9Grid="140,97,215,101"/>
+		<e:Label id="lb_content" size="24" verticalAlign="middle" textAlign="center" fontFamily="SimHei" top="91" lineSpacing="5" text="" width="433.29" anchorOffsetY="0" height="171" anchorOffsetX="0" horizontalCenter="0"/>
+		<e:Label text="投资计划提示" y="33" textColor="0xf57300" horizontalCenter="0" bold="true" size="28"/>
+	</e:Group>
+</e:Skin>

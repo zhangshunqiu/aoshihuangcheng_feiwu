@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="EquipSpecialSkin" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:customui="customui.*" xmlns:game="game.*">
+	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
+		<customui:CommonWin id="commonWin" left="0" right="0" top="0" bottom="0"/>
+		<e:Image source="common_bg_interface_level_1_png" horizontalCenter="0" top="0" visible="false"/>
+		<e:Image source="equip_sp_bg_png" horizontalCenter="0" top="63"/>
+		<e:Image source="equip_sp_bg_name_png" x="63" y="212"/>
+		<game:HeroHeadComponentView id="hero_head" width="700" height="120" horizontalCenter="0" top="68"/>
+		<e:Group id="gp_ring" height="700" left="0" right="0" top="190">
+			<e:Group id="gp_ring_attr" height="120" y="363.28" left="0" right="0">
+				<e:Image source="wing_bg_shuxing_png" horizontalCenter="0" scale9Grid="66,18,403,111" width="638" height="128" verticalCenter="0"/>
+				<e:Label id="lb_ring_attr" text="" x="68" y="33" fontFamily="SimHei" size="24" textColor="0xbfbfbf" height="88" lineSpacing="8" width="220" textAlign="center" verticalAlign="middle"/>
+				<e:Label id="lb_ring_attr_next" text="" x="419" y="33" fontFamily="SimHei" size="24" height="88" textColor="0x008f29" lineSpacing="8" width="220" textAlign="center" verticalAlign="middle"/>
+				<e:Image source="forge_dangqianshuxing_png" x="130" y="10"/>
+				<e:Image source="medal_txt_xiajishuxing_png" x="479" y="10"/>
+				<e:Image source="compound_jiantou_png" x="327" y="48"/>
+			</e:Group>
+			<e:Group id="gp_ring_fragment" height="140" y="491.28" left="0" right="0">
+				<e:Image id="img_ring_fragment0" x="56" source="equip_sp_shenjiesuipian_png" y="5"/>
+				<e:Image x="371" id="img_ring_fragment1" source="equip_sp_shenjiesuipian_png" top="5"/>
+				<e:Image x="56" id="img_ring_fragment2" source="equip_sp_shenjiesuipian_png" y="81"/>
+				<e:Image x="372" id="img_ring_fragment3" source="equip_sp_shenjiesuipian_png" bottom="5"/>
+				<e:Label id="lb_ring_fragment0" text="Label" x="118" y="20" fontFamily="SimHei" textColor="0x8f8f8f" size="24"/>
+				<e:Label text="Label" x="433.33" y="20" fontFamily="SimHei" textColor="0x8f8f8f" size="24" id="lb_ring_fragment1"/>
+				<e:Label text="Label" x="118" y="96" fontFamily="SimHei" textColor="0x8f8f8f" size="24" id="lb_ring_fragment2"/>
+				<e:Label text="Label" x="431.67" y="96" fontFamily="SimHei" textColor="0x8f8f8f" size="24" id="lb_ring_fragment3"/>
+			</e:Group>
+			<e:Image source="wing_bg_tips_png" y="659" horizontalCenter="0.5"/>
+			<e:Label id="lb_ring_tip" text="收集满4个碎片即可对神器进行升阶" y="669" horizontalCenter="0" fontFamily="SimHei" size="20" textColor="0xf87500"/>
+			<e:Label id="lb_ring_desc" text="收集满4个碎片即可对神器进行升阶" y="326" horizontalCenter="0" fontFamily="SimHei" size="24" textColor="0x00f829"/>
+		</e:Group>
+		<e:Group id="gp_other" height="700" left="0" right="0" top="190" visible="false">
+			<e:Group id="gp_other_attr" height="120" y="368.28" left="0" right="0" x="0" scaleX="1" scaleY="1">
+				<e:Image source="wing_bg_shuxing_png" scale9Grid="66,18,403,111" width="632" height="138" horizontalCenter="0" verticalCenter="0"/>
+				<e:Image source="forge_dangqianshuxing_png" x="130" y="10"/>
+				<e:Image source="medal_txt_xiajishuxing_png" x="479" y="10"/>
+				<e:Label id="lb_other_attr" text="" x="68" y="33" fontFamily="SimHei" size="24" textColor="0xBFBFBF" width="220" height="88" textAlign="center" verticalAlign="middle"/>
+				<e:Label id="lb_other_attr_next" text="" x="419" y="33" fontFamily="SimHei" size="24" width="220" height="88" textAlign="center" verticalAlign="middle" textColor="0x00f829"/>
+				<e:Image source="compound_jiantou_png" y="48" horizontalCenter="0.5"/>
+			</e:Group>
+			<e:Group id="gp_star" y="506" horizontalCenter="0" x="127" scaleX="1" scaleY="1">
+				<e:Image source="wing_bg_xingxing_png" x="0" y="1"/>
+				<e:Image source="wing_bg_xingxing_png" x="47" y="1"/>
+				<e:Image source="wing_bg_xingxing_png" x="94" y="1"/>
+				<e:Image source="wing_bg_xingxing_png" x="141" y="1"/>
+				<e:Image source="wing_bg_xingxing_png" x="188" y="1"/>
+				<e:Image source="wing_bg_xingxing_png" x="235" y="1"/>
+				<e:Image source="wing_bg_xingxing_png" x="282" y="1"/>
+				<e:Image source="wing_bg_xingxing_png" x="327" y="1"/>
+				<e:Image source="wing_bg_xingxing_png" x="376" y="1"/>
+				<e:Image source="wing_bg_xingxing_png" x="423" y="1"/>
+				<e:Image id="img_star0" source="wing_xingxing_png" x="2" y="4"/>
+				<e:Image id="img_star1" source="wing_xingxing_png" x="49" y="3"/>
+				<e:Image id="img_star2" source="wing_xingxing_png" x="96" y="3"/>
+				<e:Image id="img_star3" source="wing_xingxing_png" x="143" y="3"/>
+				<e:Image id="img_star4" source="wing_xingxing_png" x="190" y="3"/>
+				<e:Image id="img_star5" source="wing_xingxing_png" x="237" y="4"/>
+				<e:Image id="img_star6" source="wing_xingxing_png" x="284" y="3"/>
+				<e:Image id="img_star7" source="wing_xingxing_png" x="329" y="3"/>
+				<e:Image id="img_star8" source="wing_xingxing_png" x="378" y="3"/>
+				<e:Image id="img_star9" source="wing_xingxing_png" x="425" y="3"/>
+			</e:Group>
+			<e:ProgressBar id="pb_exp" width="555" height="37" y="559" anchorOffsetX="0" anchorOffsetY="0" skinName="ProgressBarWingExpSkin" maximum="100" value="0" scaleX="1" scaleY="1" horizontalCenter="0.5"/>
+			<e:Label id="lb_other_cost" text="lb_other_cost" y="602" fontFamily="SimHei" size="24" horizontalCenter="0" textColor="0x2fc9fb"/>
+			<e:Button id="btn_other_upgrade" label="" y="642" skinName="skins.ButtonSkinCommon" horizontalCenter="0.5"/>
+			<e:Image id="img_other_txt" source="medal_txt_shengji_png" y="656" touchEnabled="false" horizontalCenter="0"/>
+		</e:Group>
+		<e:Group id="gp_tip" height="700" left="0" right="0" top="190" touchThrough="true" visible="false">
+			<e:Label id="lb_active_desc" text="激活后xxxxxx惺想寻寻寻寻寻寻，的点点滴滴555到底是来看看打发打发的" y="409" fontFamily="SimHei" horizontalCenter="0" size="24" width="550" textAlign="center" lineSpacing="10" textColor="0x00f829"/>
+			<e:Label id="lb_active_condition" text="激活寻，的点点滴滴" y="490" fontFamily="SimHei" size="30" textAlign="center" lineSpacing="12" textColor="0xf87500" horizontalCenter="0"/>
+			<e:Button id="btn_active" label="" y="609" skinName="skins.ButtonSkinCommon" horizontalCenter="0.5"/>
+			<e:Image source="equip_sp_txt_jihuo_png" y="624" horizontalCenter="0" touchEnabled="false"/>
+		</e:Group>
+		<e:Image id="img_icon" width="20" height="20" y="280" horizontalCenter="0"/>
+		<e:Group id="gp_effect" width="300" height="300" y="200" horizontalCenter="0"/>
+		<e:Label id="lb_name" text="麻痹神戒指" x="79" y="232" fontFamily="SimHei" textColor="0xd7852f" width="30" textAlign="center"/>
+		<e:Image id="img_return" source="common_btn_fanhui_png" x="593.65" y="825.68"/>
+	</e:Group>
+</e:Skin>

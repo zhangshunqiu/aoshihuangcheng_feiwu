@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="WingPerfect" width="720" height="1000" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect id="re_close" width="720" height="1000" x="0" y="0" alpha="0.5"/>
+	<e:Image id="img_bg" source="common_interface_tanchuang_1_png" y="250" width="378" height="375" horizontalCenter="0" anchorOffsetY="0"/>
+	<e:Group x="177" y="273">
+		<e:Image source="common_bg_tips_title_png" y="38" anchorOffsetX="0" width="366" x="1"/>
+		<e:Image source="medal_bg_longjing_png" y="83" anchorOffsetY="0" height="92" horizontalCenter="0"/>
+		<e:Label id="lb_active" text="&lt;未激活>" y="0" size="24" fontFamily="黑体" textColor="0xFE0000" x="260"/>
+		<e:Label text="神羽大师  级 " y="48" size="24" fontFamily="黑体" textColor="0xffcc00" x="105"/>
+		<e:Label text="激活属性：" y="139" size="20" fontFamily="黑体" textColor="0xFFA800" x="20"/>
+		<e:Label text="羽翼全属性+" y="138" size="20" fontFamily="黑体" textColor="0xD9D0CC" x="115"/>
+		<e:Label text="激活条件：" y="99" size="20" fontFamily="黑体" textColor="0xFFA800" x="18"/>
+		<e:Label text="全部神羽  阶可激活（ /4）" y="99" size="20" fontFamily="黑体" textColor="0xD9D0CC" x="113"/>
+		<e:Label id="lb_step" text="1" y="48" size="24" fontFamily="黑体" textColor="0xfe0000" textAlign="center" x="208"/>
+		<e:Label id="lb_progress" text="0" y="99" size="20" fontFamily="黑体" textColor="0xFE0000" textAlign="center" x="313"/>
+		<e:Label id="lb_rate" text="5%" y="137" size="20" fontFamily="黑体" textAlign="left" textColor="0x06ff00" x="228"/>
+		<e:Label id="lb_step1" text="1" y="99" size="20" fontFamily="黑体" textAlign="center" x="198" textColor="0xd9d0cc"/>
+	</e:Group>
+	<e:Group id="gp_nextAttr" y="433" horizontalCenter="0">
+		<e:Image source="common_bg_tips_title_png" y="38" anchorOffsetX="0" width="366" x="1"/>
+		<e:Image source="medal_bg_longjing_png" y="83" anchorOffsetY="0" height="87" horizontalCenter="0"/>
+		<e:Label text="神羽大师  级 " y="48" size="24" fontFamily="黑体" textColor="0xFFCC00" x="105"/>
+		<e:Label text="激活条件：" y="100" size="20" fontFamily="黑体" textColor="0xFFA800" x="20"/>
+		<e:Label text="全部神羽  阶可激活（ /4）" y="100" size="20" fontFamily="黑体" textColor="0xD9D0CC" x="115"/>
+		<e:Label text="激活属性：" y="141" size="20" fontFamily="黑体" textColor="0xFFA800" x="21"/>
+		<e:Label text="羽翼全属性+" y="140" size="20" fontFamily="黑体" textColor="0xD9D0CC" x="116"/>
+		<e:Label id="lb_step2" text="2" y="48" size="24" fontFamily="黑体" textColor="0xFE0000" textAlign="center" x="208"/>
+		<e:Label id="lb_progress1" text="0" y="100" size="20" fontFamily="黑体" textColor="0xFE0000" textAlign="center" x="315"/>
+		<e:Label id="lb_step3" text="2" y="100" size="20" fontFamily="黑体" textAlign="center" x="200" textColor="0xd9d0cc"/>
+		<e:Label id="lb_rate1" text="5%" y="139" size="20" fontFamily="黑体" textColor="0x06FF00" textAlign="left" x="229"/>
+	</e:Group>
+</e:Skin>

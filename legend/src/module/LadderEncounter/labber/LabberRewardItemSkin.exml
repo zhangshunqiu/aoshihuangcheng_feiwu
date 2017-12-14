@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="LabberRewardItemSkin" width="639" height="102" xmlns:e="http://ns.egret.com/eui" xmlns:customui="customui.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="mail_btn_list_png" x="4" y="-1" height="102"/>
+	<e:Label id="lb_margin" text="43场" x="440" y="41" fontFamily="SimHei" size="22" textAlign="center" textColor="0xff8500"/>
+	<customui:BaseItem id="item" width="90" height="90" y="53" anchorOffsetX="45" anchorOffsetY="45" x="579" touchChildren="true" touchEnabled="true"/>
+	<e:Label id="lb_rank" text="" x="56" y="37" fontFamily="SimHei" size="24" textColor="0xffffff"/>
+	<e:Label id="lb_name" text="梦之安魂曲" x="242" y="41" fontFamily="SimHei" size="22" textColor="0xffea01"/>
+	<e:Image id="img_rank" width="72" height="61" x="28" y="23" source="ranking list_1_png"/>
+	<e:Image id="img_tier" width="83" height="70" x="159" y="20" source="labber_huizhang_zuanshi_png" anchorOffsetX="43"/>
+	<e:BitmapLabel id="lb_lv" width="20" height="20" x="146" y="67" font="labber_small_lv_fnt" text="5"/>
+</e:Skin>

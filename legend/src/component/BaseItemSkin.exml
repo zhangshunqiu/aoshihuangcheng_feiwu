@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="BaseItemSkin" width="90" height="90" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
+		<e:Image id="img_bg" horizontalCenter="0" verticalCenter="0" source="common_default_png" touchEnabled="false" visible="false"/>
+		<e:Image touchEnabled="false" id="img_frame" horizontalCenter="0" verticalCenter="0" source="common_frame_white_png"/>
+		<e:Image touchEnabled="false" id="img_select" horizontalCenter="0" verticalCenter="0" source="forge_wupin_xuanze_png" visible="false"/>
+		<e:Image touchEnabled="false" id="img_icon" horizontalCenter="0" verticalCenter="0" source=""/>
+		<e:Label touchEnabled="false" id="lb_name" text="掉落物" fontFamily="SimHei" size="20" horizontalCenter="0" textColor="0xbfbfbf" y="91" textAlign="center" visible="false"/>
+		<e:Label touchEnabled="false" id="lb_strength" text="+99" fontFamily="SimHei" size="20" top="5" right="5" textColor="0xda8409" visible="false"/>
+		<e:Label touchEnabled="false" id="lb_star" text="+9" fontFamily="SimHei" size="20" left="5" textColor="0x58bc27" top="5" visible="false"/>
+		<e:Label touchEnabled="false" id="lb_num" text="*999" fontFamily="SimHei" size="20" bottom="7" right="8" textColor="0xbfbfbf" visible="false"/>
+		<e:Label touchEnabled="false" id="lb_type" text="掉落物" fontFamily="SimHei" size="22" horizontalCenter="0" verticalCenter="0" textColor="0x473d34" visible="false"/>
+		<e:Image touchEnabled="false" id="img_career" height="30" source="equipping_zhan_png" top="0" left="0" width="30" visible="false"/>
+		<e:Image touchEnabled="false" id="img_status" source="2000000000_png" width="30" height="30" right="0" bottom="0" visible="false"/>
+	</e:Group>
+</e:Skin>

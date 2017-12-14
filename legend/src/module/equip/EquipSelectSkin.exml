@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="EquipSelectSkin" width="720" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="gp_main" left="1" right="-1" top="1" bottom="-1">
+		<e:Image source="equipping_bg_xuanzezhuangbei_png" scaleX="0.98" scaleY="0.99" horizontalCenter="0" verticalCenter="0"/>
+		<e:Image source="equipping_ xuanzezhuangbei_png" y="235" horizontalCenter="-2.5" scaleX="1.2" scaleY="1.2"/>
+		<e:Image id="img_close" x="557.12" y="218.58" scaleX="1" scaleY="1" source="common_btn_close_2_png"/>
+		<e:Scroller id="scroller" width="470" height="615" y="285" horizontalCenter="0">
+			<e:Group>
+			</e:Group>
+		</e:Scroller>
+		<e:Group id="gp_tip" width="470" height="270" y="286" horizontalCenter="0">
+			<e:Image source="equipping_huoqutujing_png" x="11" y="8"/>
+			<e:Group id="gp_tip_item" width="440" height="40" y="35" scaleX="1" scaleY="1" horizontalCenter="0">
+				<e:Image source="equipping_xuanze_png" x="12" verticalCenter="0"/>
+				<e:Label text="没有可替换装备，可以前往xxxx获取" x="36" fontFamily="SimHei" size="24" verticalCenter="0" textColor="0xe58014"/>
+			</e:Group>
+		</e:Group>
+	</e:Group>
+</e:Skin>

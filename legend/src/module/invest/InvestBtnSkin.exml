@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<e:Skin class="InvestBtnSkin" states="up,down" minHeight="50" minWidth="100"
+        xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+    <e:Image  includeIn="up,down"  source.down="common_btn_common_2_png" source="common_btn_common_png" scale9Grid="14,18,123,25" anchorOffsetX="0" width="147.99" anchorOffsetY="0" height="51.96" horizontalCenter="0" verticalCenter="0"/>
+	<e:Image width="89.64" height="23.64"  includeIn="up,down" anchorOffsetX="0" anchorOffsetY="0"   source.down="invest_txt_lijilingqu_png" source="invest_txt_lijilingqu_png" scaleX="0.94" horizontalCenter="0" verticalCenter="0"/>
+
+</e:Skin>

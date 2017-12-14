@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.ProgressBarExpSkin" minWidth="30" minHeight="18" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<w:Config id="158b9b7cce5"/>
+	<e:Image verticalCenter="0" scale9Grid="21,17,1,1" source="boss_bg_jingyan_succeed_png"/>
+	<e:Image id="thumb" horizontalCenter="0" verticalCenter="0" source="boss_jingyan_succeed_png" scale9Grid="70,5,60,8" width="350" height="20"/>
+	<e:Label id="labelDisplay" textAlign="center" verticalAlign="middle"
+			 size="20"
+			 horizontalCenter="0" verticalCenter="1" text="123" fontFamily="SimHei" textColor="0xe0d5c6"/>
+</e:Skin>

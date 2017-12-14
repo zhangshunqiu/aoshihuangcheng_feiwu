@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="VipSkin" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="common_bg_all_png" left="0" top="0"/>
+	<e:Image source="common_bg_interface_level_1_png" horizontalCenter="0.5" y="64"/>
+	<e:Group id="gp_main" anchorOffsetX="0" anchorOffsetY="0" left="0" right="0" top="0" bottom="0">
+	</e:Group>
+	<e:Image source="vip_zhuangshi_png" y="45" horizontalCenter="3" touchEnabled="false"/>
+	<e:Image source="VIP系统-_jpg" x="-2" y="-5" alpha="0.5" visible="false"/>
+	<e:Image id="img_close" source="common_btn_guanbi_shangchengzhuanyong_png" x="640" y="55"/>
+	<e:Image source="vip_title_png" y="79" horizontalCenter="-3.5"/>
+	<e:Image source="vip_bg3_png" x="48" y="125"/>
+	<e:Image source="chat_txt_vip_png" x="79" y="151"/>
+	<e:Image source="chat_txt_vip_png" x="563" y="151"/>
+	<e:BitmapLabel id="btlb_vip" width="56" height="34" x="133" y="152" anchorOffsetX="0" anchorOffsetY="0" text="1" font="main_vip_shuju_fnt" letterSpacing="-5"/>
+	<e:BitmapLabel id="btlb_nextVip" width="56" height="34" x="617" y="152" anchorOffsetX="0" anchorOffsetY="0" text="2" font="main_vip_shuju_fnt" letterSpacing="-5"/>
+	<e:Image source="vip_jiantou_png" y="146" horizontalCenter="4"/>
+	<e:Group id="gp_maxVip" x="92" y="212" visible="false">
+		<e:Image source="chat_txt_vip_png" x="261" y="0"/>
+		<e:Label text="天呐！您已达到当前" x="0" y="5" size="24" fontFamily="黑体" textColor="0xBFBFBF"/>
+		<e:Label text="最高" x="215" y="5" size="24" fontFamily="黑体" textColor="0xff6000"/>
+	</e:Group>
+	<e:Group id="gp_notMaxVip" x="89" y="210">
+		<e:Label text="再充值         即可成为VIP" x="0" y="6" size="24" fontFamily="黑体" textColor="0xbfbfbf"/>
+		<e:Label id="lb_gold" text="5555" x="117" y="6" size="24" fontFamily="黑体" width="60" textAlign="center" textColor="0xffd800"/>
+		<e:Label id="lb_nextVip" text="6" x="313" y="7" size="24" fontFamily="黑体" textAlign="left" textColor="0xbfbfbf"/>
+		<e:Image source="common_yuanbao_png" x="68" y="0"/>
+	</e:Group>
+	<e:Image id="img_charge" source="common_btn_huabian_png" x="460" y="195"/>
+	<e:Image source="vip_txt_lijichongzhi_png" x="501" y="212" touchEnabled="false"/>
+	<e:Image id="img_right" source="vip_jiantou_right_png" x="649" y="501"/>
+	<e:Image id="img_left" source="vip_jiantou_left_png" x="25" y="502"/>
+	<e:Image id="img_return" source="common_btn_fanhui_png" x="611" y="899"/>
+</e:Skin>

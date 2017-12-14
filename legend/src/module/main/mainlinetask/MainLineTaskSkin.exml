@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MainLineTaskSkin" width="400" height="150" xmlns:e="http://ns.egret.com/eui" xmlns:customui="customui.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Button id="btn_goto" label="" x="8" y="48">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="Main task_bg_png" source.down="Main task_bg_png" source.disabled="Main task_bg_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:Button id="btn_reward" label="" x="9" y="48" visible="false">
+		<e:skinName>
+		<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="Main task_bg_yuan_png" source.down="Main task_bg_yuan_png" source.disabled="Main task_bg_yuan_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+		</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<customui:BaseItem id="baseItem" width="90" height="90" y="94" anchorOffsetX="45" anchorOffsetY="45" x="62" touchChildren="false" touchEnabled="false" visible="false"/>
+	<e:Label id="lb_taskname" text="通关材料副本" y="72.67" fontFamily="SimHei" size="24" x="128" textColor="0xf87500" textAlign="left" touchEnabled="false"/>
+	<e:Label id="lb_taskdetail" text="打开副本" y="101.67" fontFamily="SimHei" size="20" x="133" textColor="0x8f8f8f" touchEnabled="false"/>
+</e:Skin>

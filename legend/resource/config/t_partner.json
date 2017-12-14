@@ -1,0 +1,14 @@
+{
+	"1":{
+		"id":1,
+		"level":80,
+		"transmigration":0,
+		"vip":2
+	},
+	"2":{
+		"id":2,
+		"level":0,
+		"transmigration":4,
+		"vip":4
+	}
+}

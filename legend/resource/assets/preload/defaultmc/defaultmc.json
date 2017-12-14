@@ -1,0 +1,16 @@
+{"mc":{
+	"defaultmc":{
+		"frameRate":12,
+		"frames":[
+			{"res":"defaultmc0","x":-42,"y":-103},
+			{"res":"defaultmc0","x":-42,"y":-103},
+			{"res":"defaultmc0","x":-42,"y":-103},
+			{"res":"defaultmc0","x":-42,"y":-103},
+			{"res":"defaultmc0","x":-42,"y":-103},
+			{"res":"defaultmc1","x":-42,"y":-103}
+		]
+}},
+"res":{
+	"defaultmc0":{"x":0,"y":0,"w":87,"h":128},
+	"defaultmc1":{"x":89,"y":0,"w":87,"h":128}
+}}

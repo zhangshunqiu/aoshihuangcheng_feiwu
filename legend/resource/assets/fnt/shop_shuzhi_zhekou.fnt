@@ -1,0 +1,13 @@
+{"file":"shop_shuzhi_zhekou.png","frames":{
+" ":{"x":58,"y":47,"w":3,"h":5,"offX":0,"offY":0,"sourceW":3,"sourceH":20},
+"1":{"x":47,"y":40,"w":9,"h":18,"offX":2,"offY":1,"sourceW":13,"sourceH":19},
+"2":{"x":16,"y":21,"w":13,"h":19,"offX":2,"offY":0,"sourceW":17,"sourceH":19},
+"3":{"x":32,"y":20,"w":13,"h":19,"offX":2,"offY":0,"sourceW":17,"sourceH":19},
+"4":{"x":0,"y":21,"w":14,"h":19,"offX":2,"offY":0,"sourceW":18,"sourceH":19},
+"5":{"x":48,"y":0,"w":14,"h":18,"offX":2,"offY":1,"sourceW":18,"sourceH":19},
+"6":{"x":16,"y":0,"w":14,"h":19,"offX":2,"offY":0,"sourceW":18,"sourceH":19},
+"7":{"x":47,"y":20,"w":13,"h":18,"offX":2,"offY":1,"sourceW":17,"sourceH":19},
+"8":{"x":32,"y":0,"w":14,"h":18,"offX":2,"offY":1,"sourceW":18,"sourceH":19},
+"9":{"x":0,"y":42,"w":14,"h":19,"offX":2,"offY":0,"sourceW":18,"sourceH":19},
+"0":{"x":0,"y":0,"w":14,"h":19,"offX":2,"offY":0,"sourceW":18,"sourceH":19},
+" ":{"x":58,"y":40,"w":3,"h":5,"offX":0,"offY":0,"sourceW":3,"sourceH":19}}}

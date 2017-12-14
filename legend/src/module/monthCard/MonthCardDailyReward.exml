@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MonthCardDailyReward" width="720" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect id="re_close" left="0" right="0" top="0" bottom="0" alpha="0.5"/>
+	<e:Image source="shop_bg_tips_png" y="281" scaleX="1.16" width="400" height="312" anchorOffsetX="0" horizontalCenter="0"/>
+	<e:Image source="monthcard_yuekajiangli_title_png" y="310" horizontalCenter="0.5"/>
+	<e:Label text="本月第   日奖励" y="358" size="24" fontFamily="黑体" textColor="0xbfbfbf" horizontalCenter="0"/>
+	<e:Label text="元宝" y="486" size="20" fontFamily="黑体" textColor="0xBFBFBF" horizontalCenter="0"/>
+	<e:Label id="lb_day" text="10" y="358" size="24" fontFamily="黑体" horizontalCenter="1" textAlign="center" anchorOffsetX="0" width="42" textColor="0xf87501"/>
+	<e:Image source="common_default_png" y="394" horizontalCenter="0.5"/>
+	<e:Image source="common_yuanbao_jiangli_png" y="402" horizontalCenter="0"/>
+	<e:Image id="img_getReward" source="common_btn_common_png" y="519" horizontalCenter="0"/>
+	<e:Image source="boss_txt_lingqu_png" y="534" horizontalCenter="0" touchEnabled="false"/>
+</e:Skin>

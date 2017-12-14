@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="RankViewSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" width="720" height="1066">
+	<e:Image source="common_bg_all_png" left="0" top="0" x="0" y="0" scaleX="1" scaleY="1"/>
+	<e:Image width="730.7" height="983.63" y="-4.67" source="shop_bg_shangcheng_png" scale9Grid="51,113,591,786" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0"/>
+	<e:Image anchorOffsetX="0" anchorOffsetY="0" top="8" bottom="136" width="674.76" source="ranking list_bg_png" horizontalCenter="-1.5"/>
+	<e:Image width="186" height="800" x="497" y="127" anchorOffsetX="0" anchorOffsetY="0" source="wing_bg_shuxing_png" scale9Grid="5,4,524,137"/>
+	<e:TabBar id="tabBar_rank" width="186" height="800" x="497" y="127" anchorOffsetY="0" anchorOffsetX="0">
+		<e:layout>
+			<e:VerticalLayout gap="10"/>
+		</e:layout>
+	</e:TabBar>
+	
+	<e:Image id="img_close" x="629.49" y="-0.85" source="common_btn_guanbi_shangchengzhuanyong_png" anchorOffsetX="0" width="55" anchorOffsetY="0" height="55"/>
+	<e:DataGroup id="dataGp_rank" width="458" height="356" x="34" y="102.89" anchorOffsetX="0" anchorOffsetY="0"/>
+	<e:Scroller width="458" height="404.89" x="34" y="459.52" anchorOffsetX="0" anchorOffsetY="0" rotation="359.9" scrollPolicyH="off" scrollPolicyV="on">
+        <e:List id="list_rank" width="458" height="409.65" x="2.27" y="0.42" anchorOffsetX="0" anchorOffsetY="0" rotation="359.97" useVirtualLayout="false"/>
+	</e:Scroller>
+	<e:Group x="126.75" y="876.53" anchorOffsetY="0" anchorOffsetX="0">
+		<e:Image width="293.32" height="52.81" source="ranking list_bg3_png" anchorOffsetX="0" anchorOffsetY="0" y="-4" horizontalCenter="0"/>
+		<e:Label id="lb_myRank" text="" y="10" anchorOffsetX="0" width="219.33" textAlign="center" height="31" horizontalCenter="-0.5" size="24"/>
+	</e:Group>
+	<e:Group width="143" height="148" x="350.79" y="188.03" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Button id="btn_worShip" label="膜拜" x="18.28" y="93.42" anchorOffsetX="0" width="105.01" anchorOffsetY="0" height="47.07" scaleX="1" scaleY="1" touchEnabled="true" skinName="RankBtnSkin">
+		</e:Button>
+		<e:Label id="lb_worShip_exp" text="" x="76" y="61.35" anchorOffsetX="0" width="82" anchorOffsetY="0" height="23.34" size="20" scaleX="1" scaleY="1" textColor="0xffa200"/>
+		<e:Label id="lb_worShip_money" text="" x="76" y="18.02" anchorOffsetX="0" width="119.33" anchorOffsetY="0" height="24.67" size="20" scaleX="1" scaleY="1" textColor="0xffa200"/>
+		<e:Image width="40.49" height="31.62" x="24" y="55.05" source="main_exp_png" anchorOffsetX="0" anchorOffsetY="0"/>
+		<e:Image width="42.33" height="31.33" x="26" y="13.01" anchorOffsetX="0" anchorOffsetY="0" source="main_jinbi_png"/>
+		<e:Image id="img_gotten" width="89.15" height="68.11" x="37" y="68.89" source="ranking list_yilingqu_png" anchorOffsetX="0" anchorOffsetY="0"/>
+	</e:Group>
+	<e:Image id="img_return" source="common_btn_fanhui_png" x="591.81" y="850.92" scaleX="1" scaleY="1"/>
+	<e:Image width="291.87" height="55.98" y="2.39" source="ranking list_bg_title_png" anchorOffsetX="0" anchorOffsetY="0" scaleX="1.07" horizontalCenter="0"/>
+	<e:Image width="136.6" height="36.67" y="13.22" source="ranking list_paihangbang_title_png" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0"/>
+	<e:Image id="img_question" x="97.67" y="21.09" scaleX="1" scaleY="1" anchorOffsetX="0" width="51.01" anchorOffsetY="0" height="48.86" source="common_btn_wenhao_png"/>
+</e:Skin>

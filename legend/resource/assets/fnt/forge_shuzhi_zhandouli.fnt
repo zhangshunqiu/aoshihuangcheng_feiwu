@@ -1,0 +1,12 @@
+{"file":"forge_shuzhi_zhandouli.png","frames":{
+"1":{"x":21,"y":92,"w":12,"h":27,"offX":2,"offY":2,"sourceW":16,"sourceH":31},
+"2":{"x":0,"y":95,"w":19,"h":26,"offX":2,"offY":3,"sourceW":23,"sourceH":31},
+"3":{"x":42,"y":0,"w":19,"h":29,"offX":2,"offY":1,"sourceW":23,"sourceH":31},
+"4":{"x":0,"y":31,"w":18,"h":30,"offX":2,"offY":1,"sourceW":22,"sourceH":31},
+"5":{"x":0,"y":0,"w":19,"h":29,"offX":2,"offY":1,"sourceW":23,"sourceH":31},
+"6":{"x":20,"y":31,"w":17,"h":28,"offX":2,"offY":2,"sourceW":21,"sourceH":31},
+"7":{"x":39,"y":31,"w":16,"h":28,"offX":2,"offY":2,"sourceW":20,"sourceH":31},
+"8":{"x":21,"y":0,"w":19,"h":29,"offX":2,"offY":1,"sourceW":23,"sourceH":31},
+"9":{"x":0,"y":63,"w":17,"h":30,"offX":2,"offY":0,"sourceW":21,"sourceH":31},
+"0":{"x":19,"y":63,"w":18,"h":27,"offX":2,"offY":2,"sourceW":22,"sourceH":31},
+" ":{"x":21,"y":121,"w":4,"h":5,"offX":0,"offY":0,"sourceW":4,"sourceH":31}}}

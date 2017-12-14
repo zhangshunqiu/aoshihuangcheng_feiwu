@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="LabberTipsSkin" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image id="img_bg" source="common_bg_window_tips_png" x="47" y="131" width="637" height="766"/>
+	<e:Label id="lb_tips" text="1.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" y="150" fontFamily="SimHei" size="24" x="68" scaleX="1" scaleY="1" touchEnabled="false" width="580" textAlign="left" textColor="0xffffff" anchorOffsetX="0" lineSpacing="5"/>
+</e:Skin>

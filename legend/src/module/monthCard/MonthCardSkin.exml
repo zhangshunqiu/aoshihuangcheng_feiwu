@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MonthCardSkin" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<w:Config id="15febe1b64a"/>
+
+
+
+	<e:Group x="-1" y="-83">
+		<e:Image source="common_bg_all_png" x="1" y="83"/>
+		<e:Image y="153" x="10" source="common_bg_interface_level_1_png"/>
+		<e:Image source="monthcard_bg2_png" x="33" y="209"/>
+		<e:Image y="134" source="vip_zhuangshi_png" x="5"/>
+		<e:Image source="monthcard_yueka_title_png" y="166" horizontalCenter="-1.5"/>
+		<e:Group id="gp_wing" x="32" y="0" touchEnabled="false">
+			<e:Image source="4011_png" x="14" y="0" scaleX="0.9" scaleY="0.9" touchEnabled="false"/>
+			<e:Image source="monthcard_yueka_png" x="256" y="278" visible="false"/>
+		</e:Group>
+		<e:Image id="img_close" source="common_btn_guanbi_shangchengzhuanyong_png" x="626" y="144"/>
+		<e:Image id="img_help" source="common_btn_wenhao_png" x="28" y="147"/>
+		<e:Image source="monthcard_chaozhiyueka_png" x="114" y="218"/>
+		<e:Image source="monthcard_bg_tips_png" x="58" y="464"/>
+		<e:Image source="monthcard_laba_png" x="64" y="474"/>
+		<e:Image source="monthcard_txt_tips_png" x="115" y="465"/>
+		<e:Image source="monthcard_bg3_png" x="43" y="523"/>
+		<e:Image source="monthcard_bg3_png" x="43" y="631"/>
+		<e:Image source="monthcard_bg3_png" x="43" y="739"/>
+		<e:Image source="monthcard_bg3_png" x="43" y="847"/>
+		<e:Image source="monthcard_yuanbaolingbuting_png" x="46" y="521"/>
+		<e:Image source="monthcard_yuanbao_png" x="116" y="530"/>
+		<e:Image source="monthcard_chengzhangjiasu_png" x="48" y="630"/>
+		<e:Image source="monthcard_exp_png" x="137" y="640"/>
+		<e:Image source="monthcard_beibaokuochong_png" x="47" y="738"/>
+		<e:Image source="monthcard_beibao_png" x="126" y="749"/>
+		<e:Image source="monthcard_xunzhangkuangsheng_png" x="48" y="846"/>
+		<e:Image source="monthcard_xunzhang_png" x="121" y="856"/>
+		<e:Image id="img_buy" source="monthcard_btn_qianggou_png" x="252" y="979"/>
+		<e:Image source="monthcard_txt_28yuanqianggou_png" x="308" y="996" touchEnabled="false"/>
+		<e:Image source="monthcard_txt_yuanbao_png" x="591" y="548"/>
+		<e:Image source="monthcard_txt_yuanbao_png" x="592" y="584"/>
+		<e:Label text="每天可领取" x="401" y="551" size="24" fontFamily="黑体"/>
+		<e:Label text="总共领取" x="405" y="587" size="24" fontFamily="黑体"/>
+		<e:Label text="挂机经验" x="477" y="656" size="24" fontFamily="黑体"/>
+		<e:Label text="挂机金币" x="478" y="693" size="24" fontFamily="黑体"/>
+		<e:Label text="背包容量" x="472" y="763" size="24" fontFamily="黑体"/>
+		<e:Label text="离线挂机不用愁" x="471" y="800" size="24" fontFamily="黑体"/>
+		<e:Label text="每日必做产出" x="433" y="872" size="24" fontFamily="黑体"/>
+		<e:Label text="勋章等级遥遥领先" x="436" y="912" size="24" fontFamily="黑体"/>
+		<e:Group id="gp_leftTime" x="48" y="981">
+			<e:Label text="月卡有效期" x="0" y="0" size="24" fontFamily="黑体" textColor="0xf87500"/>
+			<e:Label text="天  小时" x="38" y="31" size="24" fontFamily="黑体" textColor="0x00f828"/>
+			<e:Label id="lb_day" text="29" x="13" y="30" size="24" fontFamily="黑体" textColor="0x00F828" textAlign="center" width="24"/>
+			<e:Label id="lb_hour" text="10" x="63" y="30" size="24" fontFamily="黑体" textColor="0x00F828" textAlign="center" width="24"/>
+		</e:Group>
+		<e:Image id="img_back" source="common_btn_fanhui_png" x="597" y="976"/>
+		<e:BitmapLabel id="btlb_dailyGold" width="71" height="26" x="517" y="551" anchorOffsetX="0" anchorOffsetY="0" text="1000" font="monthcard_money_shuzi_fnt" textAlign="right"/>
+		<e:BitmapLabel id="btlb_allGold" width="89" height="26" x="501" y="586" anchorOffsetX="0" anchorOffsetY="0" text="30000" font="monthcard_money_shuzi_fnt" textAlign="right"/>
+		<e:BitmapLabel id="btlb_hookExp" width="80" height="26" x="565" y="657" anchorOffsetX="0" anchorOffsetY="0" text="+10%" textAlign="right" font="monthcard_exp_shuzi_fnt"/>
+		<e:BitmapLabel id="btlb_bag" width="80" height="26" x="563" y="765" anchorOffsetX="0" anchorOffsetY="0" text="+100" font="monthcard_exp_shuzi_fnt" textAlign="right"/>
+		<e:BitmapLabel id="btlb_achievement" width="80" height="26" x="568" y="872" anchorOffsetX="0" anchorOffsetY="0" text="+20%" font="monthcard_exp_shuzi_fnt" textAlign="right"/>
+		<e:BitmapLabel id="btlb_hookCoin" width="80" height="26" x="559" y="693" anchorOffsetX="0" anchorOffsetY="0" text="+10%" textAlign="right" font="monthcard_money_shuzi_fnt"/>
+	</e:Group>
+</e:Skin>

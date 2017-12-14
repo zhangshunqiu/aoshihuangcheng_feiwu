@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="InvestListItemSkin" xmlns:e="http://ns.egret.com/eui" xmlns:customui="customui.*" xmlns:w="http://ns.egret.com/wing" width="640" height="112">
+	<e:Image width="652" anchorOffsetX="0" anchorOffsetY="0" height="111.39" source="sign_bg_list_png" horizontalCenter="-9" verticalCenter="0"/>
+	<e:Label id="lb_level" text="等级达到{20}级" x="144" y="18.38" anchorOffsetX="0" width="214.49" anchorOffsetY="0" height="36.59" verticalAlign="middle" textAlign="left" size="20" textColor="0xf87500" fontFamily="SimHei"/>
+	<e:Label id="lb_money" text="可领取{100}元宝" x="144" y="57.38" anchorOffsetX="0" width="235.49" anchorOffsetY="0" height="36.59" verticalAlign="middle" textAlign="left" size="30" textColor="0xffeb01" fontFamily="SimHei"/>
+	<e:Button id="btn_worShip" label="" x="452.01" y="29.07" anchorOffsetX="0" width="163.81" anchorOffsetY="0" height="55.47" scaleX="1" scaleY="1" touchEnabled="true" skinName="InvestBtnSkin"/>
+	<e:Group id="gp_cannot" width="154" height="64.72" x="462" y="23.28" anchorOffsetY="0" anchorOffsetX="0">
+		<e:Image width="147.7" height="51.86" source="common_btn_common_huise_png" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" verticalCenter="0.6400000000000006" horizontalCenter="-2"/>
+		<e:Image width="73" height="23.73" source="invest_txt_weidabiao_png" anchorOffsetX="0" scaleX="1" scaleY="1" anchorOffsetY="0" horizontalCenter="0" verticalCenter="0"/>
+	</e:Group>
+	<e:Image id="img_get" width="112.04" height="58.97" x="489" y="26.63" anchorOffsetX="0" anchorOffsetY="0" source="invest_yilingqu_png" scaleX="0.94" visible="false"/>
+	<e:Group x="22" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0">
+		<e:Image width="100" height="100" source="common_default_png" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0"/>
+		<e:Image width="84" height="84" anchorOffsetX="0" anchorOffsetY="0" source="common_yuanbao_jiangli_png" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0"/>
+		<e:Label id="lb_num" text="Label" x="63" y="76" anchorOffsetX="0" width="40" anchorOffsetY="0" height="18" size="18" textAlign="center" scaleX="1" scaleY="1"/>
+	</e:Group>
+</e:Skin>

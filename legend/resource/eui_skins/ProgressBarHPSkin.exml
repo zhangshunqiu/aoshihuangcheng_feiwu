@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.ProgressBarHPSkin" minWidth="30" minHeight="18" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing" height="23" width="125">
+	<w:Config id="158b9b7cce5" />
+	<e:Image id="thumb" x="0" y="0" scale9Grid="21,12,1,1" width="121" source="common_img_xue_03_png" />
+	<e:Label id="labelDisplay" textAlign="center" verticalAlign="middle" size="18" text="" x="0.58" y="3.6"
+	         textColor="0xff0000" width="84%"  fontFamily="Arial" visible="false"/>
+</e:Skin>

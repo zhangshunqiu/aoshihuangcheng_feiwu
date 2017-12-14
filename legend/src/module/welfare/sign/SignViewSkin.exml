@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="SignViewSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:game="game.*" height="682" width="638">
+	<e:Image width="646.67" height="590.67" y="1.67" source="sign_biankuang_png" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0.5"/>
+	<e:Image source="sign_bg_banzi_png" y="551.74" anchorOffsetX="0" width="638.91" horizontalCenter="0.5"/>
+	<e:Image width="638.22" height="565.91" source="sign_bg_m_png" anchorOffsetX="0" anchorOffsetY="0" y="4.45" horizontalCenter="0"/>
+	<e:ProgressBar id="progressBar" width="556.78" height="27.48" y="654" skinName="SignProgressBarSkin" anchorOffsetX="0" anchorOffsetY="0" value="0" horizontalCenter="0"/>
+	<e:Group id="gp_items" width="621.67" height="511" y="16.54" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
+		<e:layout>
+			<e:TileLayout horizontalAlign="center" verticalAlign="middle" horizontalGap="12" verticalGap="12"/>
+		</e:layout>
+	</e:Group>
+	<e:Group id="gp_reward" width="560.76" height="81" y="576.42" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
+		<e:layout>
+			<e:HorizontalLayout gap="38"/>
+		</e:layout>
+	</e:Group>
+</e:Skin>

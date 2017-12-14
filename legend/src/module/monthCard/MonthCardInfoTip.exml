@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MonthCardInfoTip" width="720" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect id="re_close" left="0" right="0" top="0" bottom="0" alpha="0.5"/>
+	<e:Image source="shop_bg_tips_png" y="281" scaleX="1.16" width="524.34" height="262" anchorOffsetX="0" horizontalCenter="0"/>
+	<e:Label text="月卡详情" y="306" textColor="0xf87500" size="24" fontFamily="黑体" horizontalCenter="0"/>
+	<e:Label text="1、购买月卡不计入    和" y="359" size="24" fontFamily="黑体" textColor="0xbfbfbf" anchorOffsetX="0" width="495" horizontalCenter="-0.5"/>
+	<e:Label text="VIP" y="359" size="24" fontFamily="黑体" anchorOffsetX="0" width="41" horizontalCenter="-16.5" textColor="0x00f828"/>
+	<e:Label text="2、开通月卡之后立即送            ，登陆将可免费领取" y="402" textColor="0xBFBFBF" size="24" fontFamily="黑体" anchorOffsetX="0" width="495" lineSpacing="10" horizontalCenter="-0.5"/>
+	<e:Label text="专属幻化羽翼" y="402" size="24" fontFamily="黑体" textColor="0x00F828" anchorOffsetX="0" width="167" horizontalCenter="89.5"/>
+	<e:Label text="海量元宝" y="435" size="24" fontFamily="黑体" textColor="0x00F828" anchorOffsetX="0" width="119" horizontalCenter="-67.5" anchorOffsetY="0" height="23"/>
+	<e:Label text="累加有效期" y="479" size="24" fontFamily="黑体" textColor="0x00F828" anchorOffsetX="0" width="132" horizontalCenter="23" anchorOffsetY="0" height="23"/>
+	<e:Label text="首充" y="358" size="24" fontFamily="黑体" textColor="0x00F828" anchorOffsetX="0" width="52" horizontalCenter="57"/>
+	<e:Label text="3、重复购买可自动" y="479" textColor="0xBFBFBF" size="24" fontFamily="黑体" anchorOffsetX="0" width="495" lineSpacing="10" horizontalCenter="0"/>
+</e:Skin>

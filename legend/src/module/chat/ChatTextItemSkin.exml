@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ChatTextItemSkin" width="646" height="66" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Label id="lb_content" text="系统消息" x="125" y="25" size="20" fontFamily="SimHei" textColor="0xbfbfbf"/>
+	<e:Image id="img_notice" source="chat_gonggao_png" x="21" y="15"/>
+	<e:Image id="img_system" source="chat_xitong_png" x="20" y="15"/>
+	<e:Image id="img_line" source="chat_fengexian_png" x="41" y="61"/>
+</e:Skin>

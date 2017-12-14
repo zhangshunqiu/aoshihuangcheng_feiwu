@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="SmeltOrangeItemSkin" width="630" height="122" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:customui="customui.*">
+	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
+		<e:Image source="common_bg_list_neiromg_png" horizontalCenter="0" verticalCenter="0" scale9Grid="77,18,464,86" width="629"/>
+		<customui:BaseItem id="baseItem" width="90" height="90" x="58" anchorOffsetX="45" anchorOffsetY="45" verticalCenter="0"/>
+		<e:Label id="lb_level" text="技能名字" x="116" y="20" fontFamily="SimHei" size="24" textColor="0x946b29"/>
+		<e:Label id="lb_get" text="熔炼后可获得：" x="116" y="55" fontFamily="SimHei" size="24" textAlign="left" textColor="0xf6a426"/>
+		<e:Button id="btn_smelt" label="" scaleX="1" scaleY="1" x="464" verticalCenter="0">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="common_btn_common_png" source.down="common_btn_common_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Image x="515" source="smelt_orange_ronglian_png" verticalCenter="0" touchEnabled="false"/>
+	</e:Group>
+</e:Skin>

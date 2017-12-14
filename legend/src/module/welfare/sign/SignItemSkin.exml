@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="SignItemSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" width="87" height="87">
+	<e:Image width="87" height="87" source="common_frame_blue_png" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" verticalCenter="0"/>
+	<e:Image id="img_item" width="76.93" height="72.84" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="0" horizontalCenter="0"/>
+	<e:Image id="img_hasSigned" width="68" height="68" source="sign_gou_png" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" verticalCenter="0"/>
+	<e:Image id="img_buqian" width="29" height="29" x="60" y="2" anchorOffsetX="0" anchorOffsetY="0" source="sign_bu_png"/>
+	<e:Image id="img_qian" width="29" height="29" x="60" y="2" anchorOffsetX="0" anchorOffsetY="0" source="sign_qian_png"/>
+	<e:Label id="lb_num" text="22" x="61" y="61" anchorOffsetX="0" width="30" anchorOffsetY="0" height="17" size="20"/>
+	<e:Group id="gp_vip" width="73" height="33" anchorOffsetX="0" anchorOffsetY="0" left="2" top="2">
+		<e:Image id="img_vipBg" width="47.8" height="45.63" source="sign_bg_shuangbei_png" anchorOffsetX="0" anchorOffsetY="0" scaleX="1.1" scaleY="1.1"/>
+		<e:Group width="50" height="16" y="32" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" rotation="-45" x="-7">
+			<e:BitmapLabel font="sign_bitmap_fnt" text="V" anchorOffsetX="0" anchorOffsetY="0" letterSpacing="0.01" lineSpacing="10" x="3"/>
+			<e:BitmapLabel id="bitmap_vip1" font="sign_bitmap_fnt" text="2" anchorOffsetX="0" anchorOffsetY="0" letterSpacing="0.01" lineSpacing="10" x="13"/>
+			<e:BitmapLabel id="bitmap_vip2" font="sign_bitmap_fnt" text="双" anchorOffsetX="0" anchorOffsetY="0" letterSpacing="0.01" lineSpacing="10" x="22"/>
+			<e:BitmapLabel font="sign_bitmap_fnt" text="倍" anchorOffsetX="0" anchorOffsetY="0" letterSpacing="0.01" lineSpacing="10" x="35"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

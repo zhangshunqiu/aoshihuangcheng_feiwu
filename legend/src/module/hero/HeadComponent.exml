@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="HeadComponent" width="720" height="120" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image horizontalCenter="0" source="equipping_bg_huobantouxiang_png" top="-5"/>
+	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
+		<e:Group width="105" height="105" id="gp_head0" y="6" horizontalCenter="-140">
+			<e:Image scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" id="img_bg0" source="equipping_frame_juesetouxiang_png"/>
+			<e:Image source="main_touxiang_png" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" id="img_head0" width="93" height="93"/>
+			<e:Image scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" id="img_select0" source="equipping_choose_png" visible="false"/>
+			<e:Rect id="rect_mask0" width="105" height="105" horizontalCenter="0" verticalCenter="0" ellipseWidth="105" ellipseHeight="105" visible="false"/>
+		</e:Group>
+		<e:Group id="gp_head1" width="105" height="105" y="6" horizontalCenter="0">
+			<e:Image scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" id="img_bg1" source="equipping_frame_juesetouxiang_png"/>
+			<e:Image source="main_touxiang_png" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" id="img_head1" width="93" height="93"/>
+			<e:Image scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" id="img_select1" source="equipping_choose_png" visible="false"/>
+			<e:Rect id="rect_mask1" width="105" height="105" horizontalCenter="0" verticalCenter="0" ellipseWidth="105" ellipseHeight="105" visible="false"/>
+			<e:Label id="lb_tip1" text="Label" verticalCenter="0" fontFamily="SimHei" size="24" horizontalCenter="0" touchEnabled="false" visible="false"/>
+		</e:Group>
+		<e:Group id="gp_head2" width="105" height="105" y="6" horizontalCenter="140">
+			<e:Image id="img_bg2" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" source="equipping_frame_juesetouxiang_png"/>
+			<e:Image id="img_head2" source="main_touxiang_png" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" width="93" height="93"/>
+			<e:Image id="img_select2" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" source="equipping_choose_png" visible="false"/>
+			<e:Rect id="rect_mask2" width="105" height="105" horizontalCenter="0" verticalCenter="0" ellipseWidth="105" ellipseHeight="105" x="83" y="0" scaleX="1" scaleY="1" visible="false"/>
+			<e:Label id="lb_tip2" text="Label" verticalCenter="0" fontFamily="SimHei" size="24" horizontalCenter="0" x="-112" y="41" scaleX="1" scaleY="1" touchEnabled="false" visible="false"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

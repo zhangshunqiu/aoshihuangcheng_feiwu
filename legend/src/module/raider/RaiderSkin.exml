@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="RaiderSkin" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:customui="customui.*" xmlns:game="game.*">
+	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
+		<customui:CommonWin id="commonWin" left="0" right="0" top="0" bottom="0"/>
+
+		<e:Image source="common_bg_interface_level_1_png" horizontalCenter="0" top="0" locked="true"/>
+		<e:Image source="raider_bg_cangku_png" top="59" horizontalCenter="0"/>
+		<e:Group id="gp_raid" height="775" y="70" left="0" right="0" visible="false">
+			<e:Image source="raider_bg1_png" top="-2" horizontalCenter="0"/>
+
+
+
+
+
+
+			<e:Image source="raider_bg_huangdi_png" y="432" horizontalCenter="0"/>
+			<e:Image source="raider_bg_huangdi_png" y="655" height="116" scale9Grid="79,24,478,148" horizontalCenter="0"/>
+			<e:Image source="raider_bg_shenzhuang_png" y="77" horizontalCenter="0.5"/>
+			<e:Image source="raider_bg_shenzhuang_png" y="243" horizontalCenter="0.5"/>
+			<e:Image source="raider_aoshishenjian_png" y="25" horizontalCenter="0"/>
+			<e:Image source="raider_txt_aoshizhanjia_png" y="372" horizontalCenter="0.5"/>
+			<e:Button id="btn_buyone" label="" x="102" y="681" skinName="skins.ButtonSkinCommon"/>
+			<e:Button id="btn_buyten" label="" x="477" y="681" skinName="skins.ButtonSkinCommon"/>
+			<e:Image id="img_costone" x="125" y="736" source="common_yuanbao_png"/>
+			<e:Label id="lb_costone" text="9999" x="179" y="740" textColor="0xbfbfbf" size="24" fontFamily="SimHei"/>
+			<e:Image id="img_costten" x="439" y="736" source="common_yuanbao_png"/>
+			<e:Label id="lb_costten" text="9999" x="491" y="742" textColor="0xBFBFBF" size="24" fontFamily="SimHei"/>
+			<e:Group id="gp_broadcast" height="220" y="433" left="0" right="0"/>
+			<e:Image source="raider_txt_xunbao10ci_png" x="502" y="695" touchEnabled="false"/>
+			<e:Image source="raider_txt_xunbao1ci_png" x="134" y="695" touchEnabled="false"/>
+			<e:Label text="（必得橙装）" x="534" y="743" size="24" textColor="0xf87500" fontFamily="SimHei"/>
+		</e:Group>
+		<e:Group id="gp_orange" left="0" right="0" top="0" bottom="0" touchThrough="true">
+			<game:ForgeOrangeView id="forgeOrangeView" left="0" right="0" top="0" bottom="0"/>
+		</e:Group>
+		<e:Group id="gp_storage" height="775" y="70" left="0" right="0">
+			<e:Image source="common_bg_window_tips_png" scale9Grid="81,83,488,500" width="611" height="674" horizontalCenter="0" top="0"/>
+			<e:Image id="img_withdraw" x="501" y="707" source="common_btn_common_png"/>
+			<e:Label id="lb_capacity" text="999/999" y="718" horizontalCenter="0" fontFamily="SimHei" size="28" textColor="0xbfbfbf"/>
+			<e:Image x="528" y="720" source="raider_txt_quanbuquchu_png" touchEnabled="false"/>
+			<e:Group id="gp_page" width="580" height="640" horizontalCenter="0" top="20"/>
+		</e:Group>
+		<e:Group id="gp_bottom" height="80" left="0" right="0" bottom="140">
+			<e:TabBar id="tabbar" width="500" height="65" x="34" verticalCenter="0.5" itemRendererSkinName="skins.TabbarButtonSkin2"/>
+			<e:Image id="img_return" source="common_btn_fanhui_png" x="612" y="-10"/>
+		</e:Group>
+		<e:Image source="raider_taitou_png" top="-23" horizontalCenter="0" touchEnabled="false" locked="true"/>
+		<e:Image id="img_title" source="raider_xunbao_title_png" scaleX="1" scaleY="1" horizontalCenter="0" top="15" touchEnabled="false"/>
+		<e:Image id="img_close" source="common_btn_guanbi_shangchengzhuanyong_png" x="646" y="4"/>
+	</e:Group>
+</e:Skin>

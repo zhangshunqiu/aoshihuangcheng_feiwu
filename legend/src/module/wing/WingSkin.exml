@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="WingSkin" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:game="game.*">
+	<e:Image source="common_bg_all_png" left="0" top="0"/>
+	<e:Image source="common_bg_interface_level_1_png" horizontalCenter="0" y="64"/>
+	<e:Image source="wing_yuyi_title_png" y="56" horizontalCenter="0"/>
+	<e:Group id="gp_developAndEquip" x="32" y="40">
+		<e:Image source="wing_bg_png" y="79" x="0"/>
+		<e:Image source="equipping_bg_huobantouxiang_png" y="80" x="55" visible="false"/>
+		<e:Image id="img_wing" source="4013_png" scaleX="0.8" scaleY="0.8" y="0" x="40"/>
+		<e:Group id="gp_wing" width="1" height="1" x="330" y="361" anchorOffsetX="0" anchorOffsetY="0"/>
+		<e:Group x="152" y="89" visible="false">
+			<e:Image source="equipping_frame_juesetouxiang_png" x="4" y="2"/>
+			<e:Image source="equipping_choose_png" horizontalCenter="0" verticalCenter="0"/>
+			<e:Image source="equipping_tx1_png" horizontalCenter="0" verticalCenter="0"/>
+		</e:Group>
+		<e:Group y="94" x="288" visible="false">
+			<e:Image source="equipping_frame_juesetouxiang_png" horizontalCenter="0" verticalCenter="0"/>
+			<e:Image source="equipping_tx2_png" horizontalCenter="0" verticalCenter="0"/>
+		</e:Group>
+		<e:Group x="418" y="94" visible="false">
+			<e:Image source="equipping_frame_juesetouxiang_png" horizontalCenter="0" verticalCenter="0"/>
+			<e:Image source="equipping_tx3_png" horizontalCenter="0" verticalCenter="0"/>
+		</e:Group>
+		<e:Group id="gp_openWing" x="52" y="492" visible="false">
+			<e:Image source="wing_bg_lv_jihuo_png" y="0" x="182"/>
+			<e:Label text="1阶羽翼" y="4" size="20" fontFamily="黑体" textColor="0xf5f203" x="241"/>
+			<e:Image source="wing_bg_tips_png" y="46" x="0"/>
+			<e:Label text="15级可激活炫酷羽翼，提升角色属性" y="53" size="24" fontFamily="黑体" textColor="0xf87500" x="84"/>
+			<e:Group id="gp_freeActivate" x="201" y="135">
+			<e:Image source="common_btn_common_png" y="0" x="0"/>
+			<e:Image source="wing_txt_mianfeijihuo_png" horizontalCenter="0" verticalCenter="0"/>
+			</e:Group>
+		</e:Group>
+		<e:Group id="gp_developWing" x="11" y="201">
+			<e:Image source="wing_icon_yuhua_png" x="533" y="3"/>
+			<e:Group id="gp_goStep" x="0" y="21" anchorOffsetX="0" width="85" anchorOffsetY="0" height="65">
+				<e:Image id="img_goStep" source="wing_icon_zhishengdan_png" x="1" y="-16"/>
+				<e:Label text="直升一阶" x="17" y="77" size="18" textColor="0xffae00" fontFamily="黑体"/>
+			</e:Group>
+			<e:Image source="wing_bg_lv_peiyang_png" x="569" y="102"/>
+			<e:Label id="lb_step" text="5阶" x="576" y="132" textColor="0xfffc01" size="24" fontFamily="黑体" anchorOffsetX="0" width="24" textAlign="center"/>
+			<e:Group id="gp_star" y="257" horizontalCenter="0">
+			<e:Image source="wing_bg_xingxing_png" x="0" y="1"/>
+			<e:Image source="wing_bg_xingxing_png" x="47" y="1"/>
+			<e:Image source="wing_bg_xingxing_png" x="94" y="1"/>
+			<e:Image source="wing_bg_xingxing_png" x="141" y="1"/>
+			<e:Image source="wing_bg_xingxing_png" x="188" y="1"/>
+			<e:Image source="wing_bg_xingxing_png" x="235" y="1"/>
+			<e:Image source="wing_bg_xingxing_png" x="282" y="1"/>
+			<e:Image source="wing_bg_xingxing_png" x="327" y="1"/>
+			<e:Image source="wing_bg_xingxing_png" x="376" y="1"/>
+			<e:Image source="wing_bg_xingxing_png" x="423" y="1"/>
+			<e:Image id="img_star1" source="wing_xingxing_png" x="2" y="4"/>
+			<e:Image id="img_star2" source="wing_xingxing_png" x="49" y="3"/>
+			<e:Image id="img_star3" source="wing_xingxing_png" x="96" y="3"/>
+			<e:Image id="img_star4" source="wing_xingxing_png" x="143" y="3"/>
+			<e:Image id="img_star5" source="wing_xingxing_png" x="190" y="3"/>
+			<e:Image id="img_star6" source="wing_xingxing_png" x="237" y="4"/>
+			<e:Image id="img_star7" source="wing_xingxing_png" x="284" y="3"/>
+			<e:Image id="img_star8" source="wing_xingxing_png" x="329" y="3"/>
+			<e:Image id="img_star9" source="wing_xingxing_png" x="378" y="3"/>
+			<e:Image id="img_star10" source="wing_xingxing_png" x="425" y="3"/>
+			</e:Group>
+			<e:ProgressBar id="pb_exp" width="555" height="37" y="310" anchorOffsetX="0" anchorOffsetY="0" skinName="ProgressBarWingExpSkin" maximum="100" value="0" x="40"/>
+			<e:Group id="gp_progress" width="0" height="1" y="328" anchorOffsetX="-1" anchorOffsetY="0" horizontalCenter="-8.5"/>
+			<e:Group x="50" y="354" anchorOffsetX="0" width="532" anchorOffsetY="0" height="144">
+			<e:Image source="wing_bg_shuxing_png" y="0" x="0"/>
+			<e:Label id="lb_hp" text="生命值：10000" x="32" y="17" size="20" textColor="0xbfbfbf" fontFamily="黑体"/>
+			<e:Label id="lb_attack" text="物理攻击：10000" x="32" y="47.33000000000004" size="20" textColor="0xBFBFBF" fontFamily="黑体"/>
+			<e:Label id="lb_physicsDefense" text="物理防御：10000" x="32" y="77.66999999999996" size="20" textColor="0xBFBFBF" fontFamily="黑体"/>
+			<e:Label id="lb_magicDefense" text="魔法防御：10000" x="32" y="108" size="20" textColor="0xBFBFBF" fontFamily="黑体"/>
+			<e:Label id="lb_hp1" text="生命值：10000" x="362" y="17" size="20" fontFamily="黑体" textColor="0x00c015"/>
+			<e:Label id="lb_attack1" text="物理攻击：10000" x="362" y="47.33000000000004" size="20" fontFamily="黑体" textColor="0x00c015"/>
+			<e:Label id="lb_physicsDefense1" text="物理防御：10000" x="362" y="77.66999999999996" size="20" fontFamily="黑体" textColor="0x00c015"/>
+			<e:Label id="lb_magicDefense1" text="魔法防御：10000" x="362" y="108" size="20" fontFamily="黑体" textColor="0x00c015"/>
+			<e:Image source="forge_jiantou1_png" y="44" x="203"/>
+			</e:Group>
+			<e:Group id="gp_developStar" x="43" y="510">
+			<e:Group id="gp_autoAddExpStop" x="0" y="49">
+				<e:Image source="common_btn_common_png" x="0" y="0"/>
+				<e:Image source="wing_txt_tingzhi_png" horizontalCenter="0" verticalCenter="0"/>
+			</e:Group>
+			<e:Group id="gp_autoAddExp" x="0" y="49">
+				<e:Image source="common_btn_common_png" x="0" y="0"/>
+				<e:Image source="wing_txt_zidongshengxing_png" horizontalCenter="0" verticalCenter="0"/>
+			</e:Group>
+			<e:Group id="gp_addExpByCoin" x="199.5" y="49">
+				<e:Image source="common_btn_common_png" x="0" y="0"/>
+				<e:Image source="wing_txt_tisheng_png" horizontalCenter="0" verticalCenter="0"/>
+			</e:Group>
+			<e:Group id="gp_addExpByWing" x="399" y="49">
+				<e:Image source="common_btn_common_png" x="0" y="0"/>
+				<e:Image source="wing_txt_yuyitisheng_png" horizontalCenter="0" verticalCenter="0"/>
+			</e:Group>
+			<e:Image source="common_jinbi_png" x="198" y="8"/>
+			<e:Label id="lb_coin" text="123457" x="251" y="9" size="24" fontFamily="黑体" textColor="0xffc602"/>
+			<e:Group x="453" y="6" anchorOffsetX="0" width="85">
+				<e:Label text="/1" x="40" y="0" size="24" fontFamily="黑体" textColor="0xbfbfbf" textAlign="left"/>
+				<e:Label id="lb_wingNum" text="0" x="0" y="0" size="24" fontFamily="黑体" textColor="0xf50000" anchorOffsetX="0" width="38" textAlign="right"/>
+			</e:Group>
+			<e:Image source="243008_png" x="410" y="0" anchorOffsetX="0" width="42" anchorOffsetY="0" height="41"/>
+			</e:Group>
+			<e:Group id="gp_developStep" x="241" y="530" visible="false">
+			<e:Image source="common_btn_common_png" y="0" x="0"/>
+			<e:Image source="wing_txt_shengjie_png" horizontalCenter="0" verticalCenter="0"/>
+			</e:Group>
+			<e:Group y="19" horizontalCenter="0">
+			<e:Image source="forge_txt_zhandouli_png" x="0" y="0"/>
+			<e:BitmapLabel id="btlb_score" x="119" y="8" anchorOffsetX="0" anchorOffsetY="0" text="12345689" font="forge_shuzhi_zhandouli_fnt"/>
+			</e:Group>
+		</e:Group>
+		<e:Group id="gp_wingEquip" x="42" y="227" visible="false">
+			<e:Group y="-8" horizontalCenter="-14">
+			<e:Image source="forge_txt_zhandouli_png" x="0" y="0"/>
+			<e:BitmapLabel id="btlb_equipScore" x="119" y="8" anchorOffsetX="0" anchorOffsetY="0" text="12345689" font="forge_shuzhi_zhandouli_fnt"/>
+			</e:Group>
+			<e:Group x="0" y="0">
+			<e:Image id="img_zhengyuframe" source="common_frame_purple_png" x="0" y="0"/>
+			<e:Image id="img_zhengyu_bg" source="wing_1_icon_zhengyu_png" horizontalCenter="0" verticalCenter="0"/>
+			<e:Image id="img_zhengyu" source="wing_1_zhengyu_png" horizontalCenter="0" verticalCenter="0"/>
+			<e:Group id="gp_zhengyuStep" y="57" horizontalCenter="0" visible="false">
+				<e:Image source="wing_bg_keshengjie_png" x="0" y="0"/>
+				<e:Label text="可升阶" size="18" textColor="0x3dea30" fontFamily="黑体" horizontalCenter="0" verticalCenter="0"/>
+			</e:Group>
+				<e:Image id="img_zhengyuStepText" source="wing_1_png" left="0" top="0"/>
+			</e:Group>
+			<e:Group x="497" y="0">
+			<e:Image id="img_fuyuframe" source="common_default_png" x="0" y="0"/>
+			<e:Image id="img_fuyu_bg" source="wing_2_icon_fuyu_png" horizontalCenter="0" verticalCenter="0"/>
+			<e:Image id="img_fuyu" source="wing_2_fuyu_png" horizontalCenter="0" verticalCenter="0"/>
+			<e:Group id="gp_fuyuStep" y="57" horizontalCenter="0" x="-489" scaleX="1" scaleY="1" visible="false">
+				<e:Image source="wing_bg_keshengjie_png" x="0" y="0"/>
+				<e:Label text="可升阶" size="18" textColor="0x3DEA30" fontFamily="黑体" horizontalCenter="0" verticalCenter="0"/>
+			</e:Group>
+				<e:Image id="img_fuyuStepText" source="wing_1_png" left="0" top="0"/>
+			</e:Group>
+			<e:Group x="0" y="187">
+			<e:Image id="img_rongyuframe" source="common_default_png" x="0" y="0"/>
+			<e:Image id="img_rongyu_bg" source="wing_3_icon_rongyu_png" horizontalCenter="0" verticalCenter="0"/>
+			<e:Image id="img_rongyu" source="wing_3_rongyu_png" horizontalCenter="0" verticalCenter="0"/>
+			<e:Group id="gp_rongyuStep" y="58" scaleX="1" scaleY="1" horizontalCenter="0" visible="false">
+				<e:Image source="wing_bg_keshengjie_png" x="0" y="0"/>
+				<e:Label text="可升阶" size="18" textColor="0x3DEA30" fontFamily="黑体" horizontalCenter="0" verticalCenter="0"/>
+			</e:Group>
+				<e:Image id="img_rongyuStepText" source="wing_1_png" left="0" top="0"/>
+			</e:Group>
+			<e:Group x="496" y="187">
+			<e:Image id="img_xuyuframe" source="common_default_png" x="0" y="0"/>
+			<e:Image id="img_xuyu_bg" source="wing_4_icon_xuyu_png" horizontalCenter="0" verticalCenter="0"/>
+			<e:Image id="img_xuyu" source="wing_4_xuyu_png" horizontalCenter="0" verticalCenter="0"/>
+			<e:Group id="gp_xuyuStep" y="58" scaleX="1" scaleY="1" horizontalCenter="-7.5" x="-488" visible="false">
+				<e:Image source="wing_bg_keshengjie_png" x="0" y="0"/>
+				<e:Label text="可升阶" size="18" textColor="0x3DEA30" fontFamily="黑体" horizontalCenter="0" verticalCenter="0"/>
+			</e:Group>
+				<e:Image id="img_xuyuStepText" source="wing_1_png" left="0" top="0"/>
+			</e:Group>
+			<e:Image id="img_perfectWing" source="wing_icon_wanmeishenyi_png" x="81" y="394"/>
+			<e:Image id="img_wingSkill" source="wing_icon_yuyijineng_png" x="370" y="394"/>
+			<e:Group id="gp_compose" x="34" y="527">
+			<e:Image source="common_btn_common_png" x="1" y="0"/>
+			<e:Image source="wing_txt_hecheng_png" horizontalCenter="0" verticalCenter="0"/>
+			</e:Group>
+			<e:Group id="gp_wear" x="387" y="527">
+			<e:Image source="common_btn_common_png" x="0" y="0"/>
+			<e:Image source="wing_txt_yijianchuandai_png" horizontalCenter="0" verticalCenter="0"/>
+			</e:Group>
+			<e:Group x="125" y="222">
+			<e:Image source="wing_bg_shuxing_png" y="0" width="322" height="146" x="0"/>
+			<e:Group horizontalCenter="0" verticalCenter="0">
+				<e:Label id="lb_hpEquip" text="生命值：10000" y="0" size="20" textColor="0xBFBFBF" fontFamily="黑体" horizontalCenter="0"/>
+				<e:Label id="lb_attackEquip" text="物理攻击：10000" y="30.33000000000004" size="20" textColor="0xBFBFBF" fontFamily="黑体" horizontalCenter="0"/>
+				<e:Label id="lb_physicsDefenseEquip" text="物理防御：10000" y="60.66999999999996" size="20" textColor="0xBFBFBF" fontFamily="黑体" horizontalCenter="0"/>
+				<e:Label id="lb_magicDefenseEquip" text="魔法防御：10000" y="91" size="20" textColor="0xBFBFBF" fontFamily="黑体" horizontalCenter="0"/>
+			</e:Group>
+			</e:Group>
+			<e:Label id="lb_zhengyu" text=" " x="4" y="90" textColor="0x65ddff" fontFamily="黑体" size="24" textAlign="center" anchorOffsetX="0" width="80"/>
+			<e:Label id="lb_fuyu" text=" " x="500" y="90" textColor="0x65DDFF" fontFamily="黑体" size="24" textAlign="center" anchorOffsetX="0" width="80"/>
+			<e:Label id="lb_rongyu" text=" " x="3" y="279" textColor="0x65DDFF" fontFamily="黑体" size="24" textAlign="center" anchorOffsetX="0" width="80"/>
+			<e:Label id="lb_xuyu" text=" " x="501" y="278" textColor="0x65DDFF" fontFamily="黑体" size="24" textAlign="center" anchorOffsetX="0" width="80"/>
+		</e:Group>
+		<game:HeroHeadComponentView id="heroHead" width="699" height="120" y="85" anchorOffsetX="0" anchorOffsetY="0" skinName="HeadComponent" x="-22"/>
+	</e:Group>
+	<e:Button id="btn_develop" label="羽翼培养" x="36" y="897" skinName="skins.ButtonSkin2" currentState="down"/>
+	<e:Button id="btn_equip" label="羽翼装备" x="204" y="897" skinName="skins.ButtonSkin2"/>
+	<e:Button id="btn_transform" label="转换" x="370" y="897" skinName="skins.ButtonSkin2"/>
+	<e:Image id="img_developSelector" source="skill_btn_faguang_xianshi_png" x="31" y="892"/>
+	<e:Image id="img_equipSelector" source="skill_btn_faguang_xianshi_png" x="199" y="892" visible="false"/>
+	<e:Image id="img_transformSelector" source="skill_btn_faguang_xianshi_png" x="365" y="892" visible="false"/>
+	<e:Image source="wing_bg_zhuanhuan_png" y="119" horizontalCenter="0" visible="false"/>
+	<e:Image id="img_close" source="common_btn_close_1_png" x="658.74" y="69.57"/>
+	<game:WingTransform id="wingTransform" anchorOffsetX="0" anchorOffsetY="0" left="0" right="0" top="0" bottom="0" visible="false"/>
+	<e:Image id="img_back" source="common_btn_fanhui_png" x="605" y="889"/>
+</e:Skin>

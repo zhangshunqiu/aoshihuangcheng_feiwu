@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="BagCapacityTipSkin" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:customui="customui.*">
+	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
+		<e:Group y="272" horizontalCenter="0" width="470" height="281">
+			<e:Image source="common_interface_tanchuang_2_png" x="2" y="-36" anchorOffsetX="0" width="470" anchorOffsetY="0" height="281"/>
+			<e:Image source="common_bg_dikuang_png" x="14" y="54" anchorOffsetY="0" height="107" anchorOffsetX="0" width="448"/>
+			<e:Image source="common_bg_tips_title_png" x="13" y="-26" anchorOffsetX="0" width="451" anchorOffsetY="0" height="51"/>
+			<e:Image source="boss_txt_tips_png" y="-18" horizontalCenter="0"/>
+			<e:Label text="背包空间不足  ，请先清理  " y="98" size="24" fontFamily="黑体" textColor="0xf6a527" horizontalCenter="0"/>
+			<e:Label text="20" y="98" size="24" fontFamily="黑体" horizontalCenter="-0.5" textColor="0xff0000"/>
+			<e:Label text="背包" y="98" size="24" fontFamily="黑体" horizontalCenter="155.5" textColor="0xFF0000"/>
+			<e:Group id="gp_smelt" y="175" horizontalCenter="0">
+				<e:Image source="boss_btn_t_succeed_png" y="-3" x="0"/>
+				<e:Image source="smelt_orange_ronglian_png" horizontalCenter="0" verticalCenter="0"/>
+			</e:Group>
+		</e:Group>
+	</e:Group>
+</e:Skin>

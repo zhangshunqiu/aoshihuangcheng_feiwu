@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="SmeltSkin" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:customui="customui.*">
+	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
+		<customui:CommonWin id="commonWin" width="720" height="1066" y="0" x="0"/>
+		<e:Image source="common_bg_interface_level_1_png" top="0" horizontalCenter="0" visible="false"/>
+		<e:Image source="smelt_bg_png" y="58" horizontalCenter="0"/>
+		<e:Group height="200" bottom="150" width="645" horizontalCenter="0">
+			<e:Label text="熔炼以下品质的装备：" y="10" fontFamily="SimHei" textColor="0xc31e1c" left="0"/>
+			<e:Button id="btn_smelt" label="" y="150" horizontalCenter="0.5">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="common_btn_common_png" source.down="common_btn_common_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Image source="smelt_orange_ronglian_png" horizontalCenter="0.5" verticalCenter="74.5" touchEnabled="false"/>
+			<e:CheckBox id="cbox0" label="白装" x="8" y="59" enabled="true"/>
+			<e:CheckBox id="cbox1" label="绿装" x="183" y="59" enabled="true"/>
+			<e:CheckBox id="cbox2" label="蓝装" x="338" y="59" enabled="true"/>
+			<e:CheckBox id="cbox3" label="紫装" x="509" y="59" enabled="true"/>
+			<e:CheckBox id="cbox_keep" label="保存当前穿戴战力更高的装备" x="8" y="107" enabled="true" selected="false"/>
+		</e:Group>
+		<e:Scroller id="scroller" width="620" height="635" y="65" horizontalCenter="0" visible="false">
+			<e:Group/>
+		</e:Scroller>
+		<e:Group id="gp_equip" width="620" height="635" y="65" horizontalCenter="0"/>
+	</e:Group>
+</e:Skin>

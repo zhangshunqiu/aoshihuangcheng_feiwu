@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MustDoSkin" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:customui="customui.*" xmlns:w="http://ns.egret.com/wing" xmlns:game="game.*">
+	<e:Group id="gp_bg" x="0" y="0">
+		<customui:CommonWin id="commonWin" x="0" y="70" skinName="CommonWinSkin"/>
+		<e:TabBar id="tab_medal" width="434.85" height="54" x="20.09" y="908.7" anchorOffsetY="0" anchorOffsetX="0" itemRendererSkinName="skins.TabbarButtonSkin1" scaleX="1" scaleY="1" visible="false"/>
+		<e:Image id="bt_back" source="common_btn_fanhui_png" x="612" y="899" scaleX="1" scaleY="1"/>
+		<e:RadioButton id="rb_mustdo" label="勋章" x="42" y="926"/>
+		<e:RadioButton id="rb_title" label="称号" x="186" y="927"/>
+		<e:RadioButton id="rb_achieve" label="称号" x="476" y="927" visible="false"/>
+		<e:RadioButton id="rb_medal" label="称号" x="332" y="927" visible="false"/>
+	</e:Group>
+	<e:Group id="gp_activity" x="0" y="12" touchEnabled="false" touchThrough="true" visible="false">
+		<e:Image id="bg_mustdo" source="task_bg_renwu_png" x="26.3" y="128.97"/>
+		<e:ProgressBar id="pgbar_activity" width="20" height="20" x="80.00000000000001" y="828" scaleX="1" scaleY="1" skinName="ProgressBarActivitySkin"/>
+		<e:Image id="img_pghead" source="task_bg_jindutiao1_png" x="76.99999999999999" y="824"/>
+		<e:Label id="lb_activitydes0" text="今日活跃度" y="857" fontFamily="SimHei" size="18" x="39.999999999999964" scaleX="1" scaleY="1" textColor="0xcdde98"/>
+		<e:Label id="lb_activitydes1" text="20" y="858" fontFamily="SimHei" size="18" x="163.00000000000006" scaleX="1" scaleY="1" textColor="0xe4e1de"/>
+		<e:Label id="lb_activitydes2" text="40" y="858" fontFamily="SimHei" size="18" x="275" scaleX="1" scaleY="1" textColor="0x34d70a"/>
+		<e:Label id="lb_activitydes3" text="60" y="857" fontFamily="SimHei" size="18" x="385.00000000000006" scaleX="1" scaleY="1" textColor="0x30c8f4"/>
+		<e:Label id="lb_activitydes4" text="100" y="856" fontFamily="SimHei" size="18" x="548.9999999999999" scaleX="1" scaleY="1" textColor="0xedbc22"/>
+		<e:Scroller id="scr_task" width="638" height="595.33" anchorOffsetY="0" anchorOffsetX="0" x="40.03" y="138.49" scaleX="1" scaleY="1">
+			<e:Group id="vp_activity">
+			</e:Group>
+		</e:Scroller>
+		<game:ActivityRewardItem id="activity_reward1" width="20" height="20" x="118" y="734" skinName="ActivityRewardItem"/>
+		<game:ActivityRewardItem id="activity_reward2" width="20" height="20" x="226" y="734" skinName="ActivityRewardItem"/>
+		<game:ActivityRewardItem id="activity_reward3" width="20" height="20" x="329" y="735" skinName="ActivityRewardItem"/>
+		<game:ActivityRewardItem id="activity_reward4" width="20" height="20" x="481" y="735" skinName="ActivityRewardItem"/>
+	</e:Group>
+	<e:Group id="gp_medal" x="0" y="0" touchThrough="true" touchEnabled="false" visible="false">
+		<e:Image id="bg_medal" source="medal_bg_xunzhang2_png" x="26" y="132" scaleX="1" scaleY="1" touchEnabled="false"/>
+		<e:Image id="bg_tipstitle1" source="common_bg_tips_title_png" x="38" y="561" width="300" height="44"/>
+		<e:Image source="common_bg_tips_title_png" x="383" y="562" width="300" height="44" id="bg_tipstitle0"/>
+		<e:Image id="bg_tips1" source="common_bg_window_tips_png" x="39" y="604" width="300" height="168"/>
+		<e:Image source="common_bg_window_tips_png" x="382" y="606" width="300" height="168" id="bg_tips0"/>
+		<e:Image id="bg_honor" source="common_bg_dikuang_png" x="38" y="444" anchorOffsetX="0" width="644" anchorOffsetY="0" height="107"/>
+		<e:Image id="bt_view" source="common_btn_hong_png" x="39" y="181"/>
+		<e:Image id="bt_untake" source="medal_bg_chengjiuzhi2_png" x="539" y="167" alpha="1" touchEnabled="true"/>
+		<e:Image id="img_lvframe" source="medal_bg_lv2_png" x="243" y="389" touchEnabled="false"/>
+		<e:Image id="img_honorframe" source="medal_bg_rongyaoguanghuan2_png" x="49" y="448" touchEnabled="false"/>
+		<e:Image id="btn_lvup" source="common_btn_common_png" x="280" y="819"/>
+		<e:Image id="icon_honor" source="medal_icon_rongyaoguanghuan2_png" x="59" y="468" touchEnabled="false"/>
+		<e:Image id="img_arrow" source="medal_jinatou2_png" x="303" y="667" touchEnabled="false"/>
+		<e:Image id="img_lvup" source="medal_txt_shengji2_png" x="332" y="833" touchEnabled="false"/>
+		<e:Image id="img_curproperty" source="medal_txt_dangqianshuxing2_png" x="131" y="572" touchEnabled="false"/>
+		<e:Image id="img_nextproperty" source="medal_txt_xiajishuxing2_png" x="486" y="572" touchEnabled="false"/>
+		<e:Image id="img_viewrank" source="medal_txt-chakanpaiming2_png" x="57" y="196" touchEnabled="false"/>
+		<e:Image id="img_medal" source="medal_xunzhang2_png" x="284" y="197" touchEnabled="false"/>
+		<e:Image id="img_power" source="forge_txt_zhandouli_png" x="242" y="155" touchEnabled="false" anchorOffsetX="0" width="109" anchorOffsetY="0" height="40"/>
+		<e:Label id="lb_rank" text="1.梦想安魂曲" y="244" fontFamily="SimHei" textColor="0xe4e1de" size="20" x="46" scaleX="1" scaleY="1"/>
+		<e:Label id="lb_hp" text="攻击力：120" y="615" fontFamily="SimHei" textColor="0xE4E1DE" size="20" x="61" scaleX="1" scaleY="1" textAlign="left"/>
+		<e:Label id="lb_attak" text="攻击力：120" y="658" fontFamily="SimHei" textColor="0xE4E1DE" size="20" x="61" scaleX="1" scaleY="1" textAlign="left"/>
+		<e:Label id="lb_dfphydic" text="攻击力：120" y="699" fontFamily="SimHei" textColor="0xE4E1DE" size="20" x="61" scaleX="1" scaleY="1" textAlign="left"/>
+		<e:Label id="lb_dfmagic" text="攻击力：120" y="737" fontFamily="SimHei" textColor="0xE4E1DE" size="20" x="61" scaleX="1" scaleY="1" textAlign="left"/>
+		<e:Label id="lb_nexthp" text="攻击力：120" y="615" fontFamily="SimHei" size="20" x="409" scaleX="1" scaleY="1" textColor="0xff9936" textAlign="left"/>
+		<e:Label id="lb_nextak" text="攻击力：120" y="658" fontFamily="SimHei" textColor="0xFF9936" size="20" x="409" scaleX="1" scaleY="1" textAlign="left"/>
+		<e:Label id="lb_nextdfp" text="攻击力：120" y="699" fontFamily="SimHei" textColor="0xFF9936" size="20" x="409" scaleX="1" scaleY="1" textAlign="left"/>
+		<e:Label id="lb_nextdfm" text="攻击力：120" y="737" fontFamily="SimHei" textColor="0xFF9936" size="20" x="409" scaleX="1" scaleY="1" textAlign="left"/>
+		<e:Label id="lb_untakedes" text="未领取成就" y="271" fontFamily="SimHei" size="18" x="553" scaleX="1" scaleY="1" textColor="0x27e0f6"/>
+		<e:Label id="lb_untake" text="0" fontFamily="SimHei" size="24" scaleX="1" scaleY="1" textColor="0xe4e1de" touchEnabled="false" textAlign="center" verticalCenter="-228" horizontalCenter="246.5"/>
+		<e:Label id="lb_lv" text="Lv.0" fontFamily="SimHei" size="24" scaleX="1" scaleY="1" textColor="0xff9001" textAlign="center" verticalCenter="-37" horizontalCenter="20.5"/>
+		<e:Label id="lb_honordes" text="荣耀光环" y="456" fontFamily="SimHei" size="24" x="150" scaleX="1" scaleY="1" textColor="0xf6a527"/>
+		<e:Label id="lb_honor" text="被勋章等级低" y="497" fontFamily="SimHei" size="20" x="152" scaleX="1" scaleY="1" textColor="0xe4e1d1"/>
+		<e:Label id="bt_getachieve" text="获得成就" y="843" fontFamily="SimHei" size="24" x="440" scaleX="1" scaleY="1" textColor="0x00ff18"/>
+		<e:ProgressBar id="pgbar_medalvalue" width="131" height="32" x="47" y="785" anchorOffsetX="0" anchorOffsetY="0" skinName="ProgressBarMedalExpSkin"/>
+		<e:Label id="lb_pgtext" text="111" y="789.33" fontFamily="SimHei" size="20" x="342" scaleX="1" scaleY="1" textColor="0xFFFFFF"/>
+		<e:BitmapLabel id="lb_power" width="206" height="25" x="356" y="160" anchorOffsetX="0" anchorOffsetY="0" text="35852200" font="forge_shuzhi_zhandouli_fnt" rotation="0.05"/>
+	</e:Group>
+	<e:Group id="gp_achieve" x="0" y="0" touchEnabled="false" touchThrough="true" visible="false">
+		<e:Image id="bg_mustdo0" source="task_bg_renwu_png" x="36.3" y="138.97" scaleX="1" scaleY="1" anchorOffsetY="0" height="609"/>
+		<e:Image id="bg_achieve" source="shop_bg__png" x="20" y="758.66" touchEnabled="false" scaleX="1" scaleY="1"/>
+		<e:Image id="bt_takeall" source="common_btn_common_png" x="528.9300000000001" y="803.01"/>
+		<e:Label id="des_achievepercent" text="当前成就完成度：" y="793" fontFamily="SimHei" size="24" x="57.3" scaleX="1" scaleY="1" textColor="0x6FAFE6"/>
+		<e:Label id="lb_achievepercent" text="50%" y="793" fontFamily="SimHei" size="24" x="249.3" scaleX="1" scaleY="1" textColor="0xf6a527"/>
+		<e:Label id="lb_achievevalue" text="5000000" y="833" fontFamily="SimHei" size="24" x="200.3" scaleX="1" scaleY="1" textColor="0xF6A527"/>
+		<e:Label id="des_achievevalue" text="累计成就值：" y="833" fontFamily="SimHei" size="24" x="57.3" scaleX="1" scaleY="1" textColor="0x6FAFE6"/>
+		<e:Image id="img_takeall" source="task_txt_yijianlingqu_png" x="557" y="816" touchEnabled="false"/>
+		<e:Scroller id="scr_achieve" width="638" height="595.33" anchorOffsetY="0" anchorOffsetX="0" x="40.03" y="138.49" scaleX="1" scaleY="1">
+			<e:Group id="vp_achieve"/>
+		</e:Scroller>
+	</e:Group>
+	<e:Group id="gp_title" x="40.03" y="138.49" visible="false">
+		<e:Image id="btn_lighten" source="common_btn_huabian_png" x="445.97" y="623.51"/>
+		<e:Scroller id="scr_title" width="638" height="595.33" anchorOffsetY="0" anchorOffsetX="0" x="0" y="0" scaleX="1" scaleY="1">
+			<e:Group id="vp_activity0"/>
+		</e:Scroller>
+		<e:Label id="lb_totalactivity" text="当前成就完成度：" y="654.51" fontFamily="SimHei" size="24" x="17.269999999999996" scaleX="1" scaleY="1" textColor="0x6FAFE6"/>
+	</e:Group>
+</e:Skin>

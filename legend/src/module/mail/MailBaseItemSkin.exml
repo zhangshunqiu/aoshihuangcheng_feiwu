@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MailBaseItemSkin" xmlns:e="http://ns.egret.com/eui" xmlns:customui="customui.*" xmlns:w="http://ns.egret.com/wing">
+	<customui:BaseItem id="baseItem" width="74.46" height="71.2" anchorOffsetX="37.65" anchorOffsetY="35.19" horizontalCenter="0" verticalCenter="0"/>
+</e:Skin>

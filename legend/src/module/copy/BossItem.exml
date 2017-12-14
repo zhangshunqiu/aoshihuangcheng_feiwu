@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="BossItem" width="654" height="190" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="sign_bg_list_png" width="669" height="190" x="-16" y="0" anchorOffsetX="0"/>
+	<e:Image source="copy_boss_bg_touxiang_png" x="8" y="41"/>
+	<e:Label id="lb_bossName" text="碎玉猪王" x="31" y="17" size="24" fontFamily="黑体" textColor="0x4395fb"/>
+	<e:Image id="img_bossIcon" x="30" y="66" source="copy_boss_icon_1_png"/>
+	<e:List id="list" width="278.93" height="89" y="64" anchorOffsetX="0" anchorOffsetY="0" x="162" scaleX="1"/>
+	<e:Group id="gp_right" x="496" y="43">
+		<e:Label text="挑战次数：" x="-21" y="-5" size="24" fontFamily="黑体"/>
+		<e:Label id="lb_challengeNum" text="1次" x="99" y="-5" size="24" fontFamily="黑体" textColor="0x00f829"/>
+		<e:Button id="btn_challenge" label="" x="-19" y="50">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="common_btn_common_png" source.down="common_btn_common_huise_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Image id="img_challenge" source="boss_txt_tiaozhan_png" touchEnabled="false" x="29" y="64"/>
+		<e:Image id="img_done" source="task_yiwancheng_png" x="22" y="64"/>
+	</e:Group>
+	<e:Label id="lb_tip" text="人物达到50级可进行挑战" x="475" y="78" size="24" fontFamily="黑体" textColor="0xff3d3d" anchorOffsetY="0" height="83" anchorOffsetX="0" width="149" textAlign="center"/>
+</e:Skin>

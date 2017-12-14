@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<e:Skin class="skins.ButtonSkin1" states="up,down" minHeight="50" minWidth="100"
+        xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+    <e:Image horizontalCenter="0" verticalCenter="0"  includeIn="up,down" scale9Grid="1,3,8,8" source.down="common_btn_dinglan_small_red_png" source="common_btn_dinglan_small_gray_png"/>
+    <e:Label id="labelDisplay" size="24"
+             verticalAlign="middle" textAlign="center" text=""  includeIn="up,down" left="0" right="0" top="0" bottom="0" fontFamily="SimHei" textColor="0xe4cea9"/>
+</e:Skin>

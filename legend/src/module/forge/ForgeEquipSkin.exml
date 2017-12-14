@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ForgeEquipSkin" width="470" height="300" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:customui="customui.*">
+	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
+		<e:Image source="common_interface_tanchuang_2_png" left="0" right="0" top="0" bottom="0" scale9Grid="81,31,61,138"/>
+		<customui:BaseItem id="baseItem" width="90" height="90" x="60" y="60" anchorOffsetX="45" anchorOffsetY="45"/>
+		<e:Label text="部位：" x="122" y="23" size="24" fontFamily="SimHei" textColor="0xebd292"/>
+		<e:Label text="职业：" x="122" y="55" size="24" fontFamily="SimHei" textColor="0xEBD292"/>
+		<e:Label text="强化等级：" x="122" y="87" size="24" fontFamily="SimHei" textColor="0xEBD292"/>
+		<e:Label id="lb_part" text="" x="186" y="23" size="24" fontFamily="SimHei" textColor="0xfbfbfb"/>
+		<e:Label id="lb_career" text="" x="186" y="55" size="24" fontFamily="SimHei" textColor="0xFBFBFB"/>
+		<e:Label id="lb_level" text="" x="236" y="87" size="24" fontFamily="SimHei" textColor="0xd81e1f"/>
+		<e:Image source="forge_bg_wupinqianghuashuxing_png" y="126" horizontalCenter="0.5"/>
+		<e:Label text="强化属性" x="22" y="133" textColor="0x8b4f1b" fontFamily="SimSun" size="24"/>
+		<e:Label id="lb_left" text="" x="28" y="170" textColor="0xfbfbfb" size="24" fontFamily="SimHei" lineSpacing="10" width="175" height="80" verticalAlign="middle" textAlign="center"/>
+		<e:Label id="lb_right" text="" x="271" y="170" size="24" fontFamily="SimHei" lineSpacing="10" textColor="0x58bc27" width="175" height="80" verticalAlign="middle" textAlign="center"/>
+		<e:Image source="forge_jintou_wupinqianghuashuxing_png" y="195" x="203"/>
+	</e:Group>
+</e:Skin>

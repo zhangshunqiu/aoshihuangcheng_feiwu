@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ProgressBarGuanqiaSkin" width="112" height="25" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="boss_bg_jindutiao_png" horizontalCenter="0" verticalCenter="0"/>
+	<e:Image id="thumb" source="boss_jindutiao_png" verticalCenter="0" horizontalCenter="0"/>
+	<e:Label id="labelDisplay" text="Label" size="18" textColor="0xbfbfbf" horizontalCenter="0" verticalCenter="0"/>
+</e:Skin>

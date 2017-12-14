@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ActivityLimitGiftSkin" width="720" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
+		<e:Group id="gp_top" height="150" left="0" right="0" top="0">
+			<e:Image source="activity_bg_tips_png" horizontalCenter="0" verticalCenter="0"/>
+			<e:Label id="lb_time" text="" fontFamily="SimHei" size="24" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" textColor="0x00F829" x="160" y="60"/>
+			<e:Label id="lb_desc" text="开服期间，满足对应条件可购买以下折扣商品" x="160" y="96" fontFamily="SimHei" size="24" scaleX="1" scaleY="1" textColor="0xBFBFBF"/>
+			<e:Label text="剩余时间：" x="49" y="60" fontFamily="SimHei" size="24" scaleX="1" scaleY="1" textColor="0xFF8400"/>
+			<e:Label text="活动说明：" x="49" y="96" fontFamily="SimHei" size="24" scaleX="1" scaleY="1" textColor="0xFF8400"/>
+			<e:Image source="activity_wenzi1_png" y="18" horizontalCenter="0.5"/>
+		</e:Group>
+		<e:Scroller id="scroller" width="650" height="510" y="150" horizontalCenter="0">
+			<e:Group/>
+		</e:Scroller>
+	</e:Group>
+</e:Skin>

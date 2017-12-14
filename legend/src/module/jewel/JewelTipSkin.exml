@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="JewelTipSkin" width="400" height="270" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:customui="customui.*">
+	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
+		<e:Image source="common_bg_window_tips_png" scale9Grid="270,214,84,128" left="0" right="0" top="0" bottom="0" x="0" y="0" scaleX="1" scaleY="1"/>
+		<e:Image source="medal_bg_longjing_png" y="168" horizontalCenter="0"/>
+		<e:Label id="lb_name" text="名字" x="9" y="20" fontFamily="SimHei" size="20" width="140" textAlign="center" textColor="0x029dff"/>
+		<e:Label id="lb_num" text="背包数量：" x="146" y="59" fontFamily="SimHei" size="20"/>
+		<e:Label id="lb_level" text="等    级：" x="146" y="108" fontFamily="SimHei" size="20"/>
+		<e:Label id="lb_desc" text="描述" y="180" fontFamily="SimHei" size="20" textColor="0xf87500" width="320" horizontalCenter="0"/>
+		<customui:BaseItem id="baseItem" width="90" height="90" x="80" y="94" anchorOffsetX="45" anchorOffsetY="45"/>
+		<e:Button id="btn_upgrade" label="升级" x="281" y="13" skinName="skins.ButtonSkin4"/>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="EquipSelectItem" width="470" height="145" xmlns:e="http://ns.egret.com/eui" xmlns:customui="customui.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
+		<e:Image source="equipping_bg_list_zhuangbei_png" left="0" right="0" top="0" bottom="0"/>
+		<customui:BaseItem id="baseItem" x="50" width="90" height="90" y="65" anchorOffsetX="45" anchorOffsetY="45" scaleX="0.9" scaleY="0.9"/>
+		<e:Label id="lb_level" text="等级" x="32" y="113" fontFamily="SimHei" size="18" textColor="0xbfbfbf"/>
+		<e:Label id="lb_attr" text="基础属性" x="97" y="52" fontFamily="SimHei" size="18"/>
+		<e:Label id="lb_name" text="名字" x="99" y="15" fontFamily="SimHei" size="20"/>
+		<e:Label id="lb_cap" text="评分：99999" x="240" y="10" fontFamily="SimHei" size="22" visible="false"/>
+		<e:Image id="img_equiped" source="equipping_yizhuangbei_png" x="432" y="3" visible="false"/>
+		<e:BitmapLabel id="bmlb_cap" x="309" y="17" font="equipping_pingfen_wuqi_shuju_small_fnt" text="123456789"/>
+		<e:Button id="btn_select" label="选择" y="39" skinName="skins.ButtonSkin4" scaleX="0.9" scaleY="0.9" horizontalCenter="13.5"/>
+		<e:Image source="equipping_pingfen_png" x="268" y="16" scaleX="0.6" scaleY="0.6"/>
+	</e:Group>
+</e:Skin>

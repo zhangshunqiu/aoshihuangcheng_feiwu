@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ShopSkin" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
+		<e:Image source="common_bg_all_png" horizontalCenter="0" verticalCenter="0"/>
+		<e:Image source="shop_bg_shangcheng_png" horizontalCenter="0" top="0"/>
+		<e:Image source="shop_bg2_png" y="75" horizontalCenter="0" height="873"/>
+		<e:Image source="shop_title_shangcheng_png" horizontalCenter="0" top="20"/>
+		<e:Image source="shop_bg__png" bottom="115" horizontalCenter="-10" height="96"/>
+		<e:Image id="img_close" source="common_btn_guanbi_shangchengzhuanyong_png" x="656" y="15"/>
+		<e:Image id="img_return" source="common_btn_fanhui_png" x="593" bottom="115"/>
+		<e:TabBar id="tabbar" width="400" height="51" x="60" bottom="139" itemRendererSkinName="skins.TabbarButtonSkin1"/>
+		<e:Scroller id="scroller" width="646" horizontalCenter="0" top="79" bottom="297">
+			<e:Group y="-1">
+			</e:Group>
+		</e:Scroller>
+		<e:Group id="gp_nexttime" width="660" height="60" horizontalCenter="0" bottom="214">
+			<e:Label id="lb_nexttime" text="距离下一批物品刷新时间：" x="9" fontFamily="SimHei" size="23" textColor="0x18cfcb" verticalCenter="0" y="-269" scaleX="1" scaleY="1"/>
+			<e:Label id="lb_tip" text="每批商品都不同，需要的玩家尽快购买哦!!!!" x="453" fontFamily="SimHei" textColor="0xb91313" size="18" width="200" verticalCenter="0" visible="false"/>
+			<e:Group id="gp_refresh" width="280" height="60" verticalCenter="0" right="0">
+				<e:Image id="img_refresh" source="common_btn_shuaxin_png" y="-2" scaleX="1" scaleY="1" x="93"/>
+				<e:Image x="119" y="-25" scaleX="1" scaleY="1" source="common_jinbi_png"/>
+				<e:Label id="lb_cost" text="987654" x="166" y="-20" fontFamily="SimHei" size="20" textColor="0xbfbfbf" scaleX="1" scaleY="1"/>
+				<e:Image source="shop_txt_shuaxin_png" x="150" touchEnabled="false" y="18" scaleX="1" scaleY="1"/>
+			</e:Group>
+		</e:Group>
+		<e:Label id="lb_over_tip" text="已购买全部商品，请刷新" horizontalCenter="0" top="396" fontFamily="SimHei" textColor="0xbfbfbf"/>
+	</e:Group>
+</e:Skin>

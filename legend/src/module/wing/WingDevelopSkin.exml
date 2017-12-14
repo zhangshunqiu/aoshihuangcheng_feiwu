@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="WingDevelopSkin" width="720" height="1000" xmlns:e="http://ns.egret.com/eui">
+	<e:Image source="common_bg_interface_level_1_png" bottom="0" horizontalCenter="0"/>
+	<e:Image source="4013_png" y="77.04" anchorOffsetX="0" width="501.05" anchorOffsetY="0" height="793.57" horizontalCenter="0"/>
+	<e:Image source="common_txt_jineng_png" y="72" horizontalCenter="0"/>
+	<e:Image source="common_interface_tanchuang_2_png" y="120" anchorOffsetX="0" width="435" anchorOffsetY="0" height="119" horizontalCenter="0"/>
+	<e:Image source="equipping_tx1_png" x="187" y="143"/>
+	<e:Image source="equipping_tx2_png" x="319" y="143"/>
+	<e:Image source="equipping_tx3_png" x="446" y="143"/>
+	<e:Group x="54" y="911">
+		<e:Image source="common_btn_dinglan_small_gray_png" x="0" y="0"/>
+		<e:Label text="羽翼培养" y="14" size="24" fontFamily="黑体" x="15"/>
+	</e:Group>
+	<e:Group x="210" y="911">
+		<e:Image source="common_btn_dinglan_small_gray_png" x="0" y="0"/>
+		<e:Label text="羽翼装备" y="14" size="24" fontFamily="黑体" x="16"/>
+	</e:Group>
+	<e:Group x="372" y="911">
+		<e:Image source="common_btn_dinglan_small_gray_png" x="0" y="0"/>
+		<e:Label text="转换" y="13" size="24" fontFamily="黑体" x="41"/>
+	</e:Group>
+	<e:Image source="common_btn_ditu_png" x="76" y="284"/>
+	<e:Image source="common_btn_ditu_png" x="552" y="284"/>
+	<e:Label text="直升一阶" x="76" y="380" fontFamily="黑体" size="24"/>
+	<e:Label text="羽化" x="573" y="378" fontFamily="黑体" size="24"/>
+	<e:Image source="common_interface_tanchuang_2_png" x="569" y="419" anchorOffsetX="0" width="57" anchorOffsetY="0" height="125"/>
+	<e:Label text="5阶" x="582" y="445" anchorOffsetX="0" width="31" textAlign="center" anchorOffsetY="0" height="66"/>
+	<e:ProgressBar width="351" height="28" x="186" y="555" anchorOffsetX="0" anchorOffsetY="0" skinName="skins.ProgressBarExpSkin" value="50"/>
+	<e:Group width="368" height="142" y="622" anchorOffsetY="0" anchorOffsetX="0" horizontalCenter="0">
+	</e:Group>
+	<e:Group x="70" y="810">
+		<e:Image source="common_btn_common_png" x="0" y="0"/>
+		<e:Label text="自动升星" size="24" fontFamily="黑体" horizontalCenter="0" verticalCenter="0"/>
+	</e:Group>
+	<e:Group x="281" y="810">
+		<e:Image source="common_btn_common_png" x="0" y="0"/>
+		<e:Label text="提升" size="24" fontFamily="黑体" horizontalCenter="0" verticalCenter="0"/>
+	</e:Group>
+	<e:Group x="498" y="809">
+		<e:Image source="common_btn_common_png" x="0" y="0"/>
+		<e:Label text="羽毛提升" size="24" fontFamily="黑体" horizontalCenter="0" verticalCenter="0"/>
+	</e:Group>
+	<e:Label text="222222" size="24" fontFamily="黑体" horizontalCenter="2" verticalCenter="291"/>
+	<e:Image source="common_jinbi_png" x="278" y="779"/>
+	<e:Label text="1/10" size="24" fontFamily="黑体" horizontalCenter="221" verticalCenter="287"/>
+	<e:Image source="common_jinbi_png" x="496" y="776"/>
+	<e:Image source="common_btn_close_1_png" x="658.74" y="69.57"/>
+</e:Skin>

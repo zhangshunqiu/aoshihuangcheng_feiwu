@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="InvestViewSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" width="720" height="1066">
+	<e:Group left="0" right="0" top="0" bottom="0">
+		<e:Image source="common_bg_all_png" left="0" top="0" x="0" y="0" scaleX="1" scaleY="1"/>
+		<e:Image width="730.7" height="983.63" source="shop_bg_shangcheng_png" scale9Grid="51,113,591,786" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" x="-5" y="0" scaleX="1" scaleY="1"/>
+		<e:Image width="656.36" height="790.93" y="80.71" source="common_bg_window_tips_png" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0"/>
+		<e:Image width="634.37" height="213.22" y="89.86" source="invest_bg_png" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0"/>
+		<e:Image id="img_close" x="643.76" y="9.55" source="common_btn_guanbi_shangchengzhuanyong_png"/>
+		<e:Image id="img_return" source="common_btn_fanhui_png" x="598" y="856.78" scaleX="1" scaleY="1"/>
+		<e:Image id="img_question" x="20" y="17" scaleX="1" scaleY="1" source="common_btn_wenhao_png"/>
+		<e:Label id="lb_invest_time" text="" x="61.64" y="238.89" anchorOffsetX="0" width="330.91" anchorOffsetY="0" height="44.59" verticalAlign="middle" textAlign="left" size="20" textColor="0x00f828" fontFamily="SimHei"/>
+		<e:Label id="lb_vip" text="VIP{3}以上可投资" x="451.88" y="165.64" anchorOffsetX="0" width="208.49" anchorOffsetY="0" height="44.59" verticalAlign="middle" textAlign="center" size="20" textColor="0xffea01" fontFamily="SimHei"/>
+		<e:Scroller id="scroller" width="640" height="549.61" y="307.38" anchorOffsetX="0" anchorOffsetY="0" scrollPolicyH="off" scrollPolicyV="on" horizontalCenter="0">
+			<e:List id="list_invest" useVirtualLayout="false" anchorOffsetX="0" width="562.73" x="1.52" anchorOffsetY="0" height="574.79" y="-1.52">
+				<e:layout>
+					<e:VerticalLayout gap="3"/>
+				</e:layout>
+			</e:List>
+		</e:Scroller>
+		<e:Image width="614.17" height="38.72" y="117.46" source="invest_wenzi_png" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="1"/>
+		<e:Image width="227.8" height="59.44" x="202.88" y="179.22" anchorOffsetX="0" anchorOffsetY="0" source="invest_1shengzhiyouyici_png"/>
+		<e:Image width="174.29" height="36.06" y="22.58" anchorOffsetX="0" anchorOffsetY="0" source="invest_touzijihua_title_png" horizontalCenter="0"/>
+		<e:BitmapLabel id="bitmap_gold" width="97.73" height="39.48" x="165.24" y="118.04" font="invest1_fnt" text="888" anchorOffsetX="0" anchorOffsetY="0" letterSpacing="-3"/>
+		<e:BitmapLabel id="bitmap_beishu" width="24" height="41" x="475.39" y="121.08" text="66" anchorOffsetX="0" anchorOffsetY="0" font="invest2_fnt"/>
+		<e:Group id="gp_buy" width="183.3" height="75.73" x="482.15" y="211.26" anchorOffsetY="0" anchorOffsetX="0">
+			<e:Image width="188.66" height="64.12" source="common_btn_huabian_png" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0"/>
+			<e:Image width="106.05" height="32.04" anchorOffsetX="0" anchorOffsetY="0" source="invest_txt_lijitouzi_png" scaleX="1" scaleY="1" verticalCenter="1.134999999999998" horizontalCenter="0"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

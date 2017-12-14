@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="SkillItemSkin" width="620" height="122" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:customui="customui.*">
+	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
+		<e:Image source="common_bg_list_neiromg_png" horizontalCenter="0" verticalCenter="0"/>
+		<customui:BaseItem id="baseItem" width="90" height="90" x="53" y="53" anchorOffsetX="45" anchorOffsetY="45"/>
+		<e:Label id="lb_name" text="技能名字" x="109" y="10" fontFamily="SimHei" size="22" textColor="0x8a7244"/>
+		<e:Label id="lb_desc" text="技能描述" x="108" y="51" fontFamily="SimHei" size="20" textAlign="left" width="350" textColor="0x9c9c9c"/>
+		<e:Group id="gp_cost" width="100" height="100" x="487" y="12">
+			<e:Image source="common_bg_shuju_png" y="-2" height="30" horizontalCenter="0"/>
+			<e:Button id="btn_active" label="" y="43" scaleX="1" scaleY="1" x="-25">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="skill_btn_fanhui_png" source.down="skill_btn_fanhui_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Label id="lb_cost" text="9999999" x="19" y="3" size="20" fontFamily="SimHei" scaleX="1" scaleY="1" textColor="0x9c9c9c"/>
+			<e:Image id="img_cost" x="-15" y="-2" width="30" height="30" scaleX="1" scaleY="1" source="skill_jinbi_png"/>
+			<e:Image source="skill_shengji_png" y="56" horizontalCenter="0" touchEnabled="false"/>
+		</e:Group>
+		<e:Label id="lb_tip" text="到达30级后开放" x="472" fontFamily="SimHei" size="22" verticalAlign="middle" textAlign="center" width="130" verticalCenter="0" textColor="0xaf1d0e" visible="false"/>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="SynthesisSuccessSkin" width="400" height="300" xmlns:e="http://ns.egret.com/eui" xmlns:customui="customui.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="compound_bg_cchenggong_png" horizontalCenter="0" verticalCenter="0"/>
+	<e:Image source="compound_txt_hechengchenggong_png" x="109" y="9"/>
+	<customui:BaseItem id="baseItem" width="90" height="90" anchorOffsetX="45" anchorOffsetY="45" horizontalCenter="0" verticalCenter="0"/>
+</e:Skin>

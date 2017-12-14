@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="RankTipsSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" width="487" height="300">
+	<w:Config id="160014de68b"/>
+	<e:Group horizontalCenter="0" verticalCenter="0" width="90%" height="300">
+		<e:Image source="shop_bg_tips_png" horizontalCenter="0" top="13" bottom="13" scale9Grid="140,97,215,101"/>
+		<e:Image source="shop_txt_tishi_png" horizontalCenter="0" top="36"/>
+		<e:Label id="lb_content" size="24" verticalAlign="middle" textAlign="left" fontFamily="SimHei" top="99" lineSpacing="5" text="" width="432.35" anchorOffsetY="0" height="147" wordWrap="true" anchorOffsetX="0" horizontalCenter="0"/>
+	</e:Group>
+</e:Skin>

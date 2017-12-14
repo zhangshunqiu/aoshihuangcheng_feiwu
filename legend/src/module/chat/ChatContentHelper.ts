@@ -1,0 +1,4 @@
+class ChatContentHelper {
+	public constructor() {
+	}
+}

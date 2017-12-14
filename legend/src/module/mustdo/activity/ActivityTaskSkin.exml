@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ActivityTaskSkin" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:game="game.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image id="bg_mustdo" source="task_bg_renwu_png" x="26.30000000000001" y="140.97"/>
+	<e:ProgressBar id="pgbar_activity" width="20" height="20" x="80" y="840" scaleX="1" scaleY="1" skinName="ProgressBarActivitySkin"/>
+	<e:Image id="img_pghead0" source="task_bg_jindutiao1_png" x="77" y="836"/>
+	<e:Label id="lb_activitydes5" text="今日活跃度" y="869" fontFamily="SimHei" size="18" x="39.99999999999997" scaleX="1" scaleY="1" textColor="0xCDDE98"/>
+	<e:Label id="lb_activitydes0" text="20" y="870" fontFamily="SimHei" size="18" x="163.00000000000006" scaleX="1" scaleY="1" textColor="0xE4E1DE"/>
+	<e:Label id="lb_activitydes1" text="40" y="870" fontFamily="SimHei" size="18" x="275" scaleX="1" scaleY="1" textColor="0x34D70A"/>
+	<e:Label id="lb_activitydes2" text="60" y="869" fontFamily="SimHei" size="18" x="385" scaleX="1" scaleY="1" textColor="0x30C8F4"/>
+	<e:Label id="lb_activitydes3" text="100" y="868" fontFamily="SimHei" size="18" x="548.9999999999999" scaleX="1" scaleY="1" textColor="0xEDBC22"/>
+	<e:Scroller id="scr_task" width="638" height="595.33" anchorOffsetY="0" anchorOffsetX="0" x="40.03" y="150.49" scaleX="1" scaleY="1">
+		<e:Group id="vp_activity"/>
+	</e:Scroller>
+	<game:ActivityRewardItem id="activity_reward1" width="20" height="20" x="118" y="746" skinName="ActivityRewardItem"/>
+	<game:ActivityRewardItem id="activity_reward2" width="20" height="20" x="226" y="746" skinName="ActivityRewardItem"/>
+	<game:ActivityRewardItem id="activity_reward3" width="20" height="20" x="329" y="747" skinName="ActivityRewardItem"/>
+	<game:ActivityRewardItem id="activity_reward4" width="20" height="20" x="481" y="747" skinName="ActivityRewardItem"/>
+</e:Skin>

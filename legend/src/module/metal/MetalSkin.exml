@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MetalSkin" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="gp_bg" x="0" y="0">
+		<customui:CommonWin id="commonWin" xmlns:customui="customui.*" x="0" y="70" skinName="CommonWinSkin"/>
+		<e:Image id="bt_back" source="common_btn_fanhui_png" x="612" y="899" scaleX="1" scaleY="1"/>
+		<e:RadioButton id="rb_achieve" label="称号" x="189" y="920"/>
+		<e:RadioButton id="rb_medal" label="称号" x="41" y="920"/>
+	</e:Group>
+</e:Skin>

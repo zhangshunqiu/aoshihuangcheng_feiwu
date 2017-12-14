@@ -1,0 +1,368 @@
+
+{
+
+	"10001": {
+		"id" : 10001,
+		"desc" : "对敌方前排造成120%+20物理伤害",
+		"type" : 2,
+		"targetType" : 3,
+		"hurtTarget" : "[3,0]",
+		"numericalSource" : 0,
+		"coefficient" : 120,
+		"addition" : 20,
+		"buff" : "",
+		"tiggerCondition" : "",
+		"modelId" : ""
+	},
+
+	"10002": {
+		"id" : 10002,
+		"desc" : "队敌方竖排造成200%+40物理伤害，50%眩晕1回合",
+		"type" : 2,
+		"targetType" : 3,
+		"hurtTarget" : "[7,0]",
+		"numericalSource" : 0,
+		"coefficient" : 200,
+		"addition" : 40,
+		"buff" : "[1001]",
+		"tiggerCondition" : "",
+		"modelId" : ""
+	},
+
+	"20001": {
+		"id" : 20001,
+		"desc" : "对敌方全体造成40%+10法术伤害",
+		"type" : 3,
+		"targetType" : 3,
+		"hurtTarget" : "[2,0]",
+		"numericalSource" : 0,
+		"coefficient" : 40,
+		"addition" : 10,
+		"buff" : "",
+		"tiggerCondition" : "",
+		"modelId" : ""
+	},
+
+	"20002": {
+		"id" : 20002,
+		"desc" : "对敌方全体造成100%+20法术伤害，50%降低1点怒气",
+		"type" : 3,
+		"targetType" : 3,
+		"hurtTarget" : "[2,0]",
+		"numericalSource" : 0,
+		"coefficient" : 100,
+		"addition" : 20,
+		"buff" : "[37001]",
+		"tiggerCondition" : "",
+		"modelId" : ""
+	},
+
+	"30001": {
+		"id" : 30001,
+		"desc" : "对敌方随机3人造成110%+20法术伤害",
+		"type" : 3,
+		"targetType" : 3,
+		"hurtTarget" : "[1,3]",
+		"numericalSource" : 0,
+		"coefficient" : 110,
+		"addition" : 20,
+		"buff" : "",
+		"tiggerCondition" : "",
+		"modelId" : ""
+	},
+
+	"30002": {
+		"id" : 30002,
+		"desc" : "对敌方全体造成100%+80法术伤害，50%概率降低2点怒气",
+		"type" : 3,
+		"targetType" : 3,
+		"hurtTarget" : "[2,0]",
+		"numericalSource" : 0,
+		"coefficient" : 100,
+		"addition" : 80,
+		"buff" : "[37002]",
+		"tiggerCondition" : "",
+		"modelId" : ""
+	},
+
+	"40001": {
+		"id" : 40001,
+		"desc" : "对敌方后排单体造成180%+30物理伤害",
+		"type" : 2,
+		"targetType" : 3,
+		"hurtTarget" : "[5,0]",
+		"numericalSource" : 0,
+		"coefficient" : 180,
+		"addition" : 30,
+		"buff" : "",
+		"tiggerCondition" : "",
+		"modelId" : ""
+	},
+
+	"40002": {
+		"id" : 40002,
+		"desc" : "对敌方后排单体造成700%+120物理伤害，眩晕1回合",
+		"type" : 2,
+		"targetType" : 3,
+		"hurtTarget" : "[5,0]",
+		"numericalSource" : 0,
+		"coefficient" : 700,
+		"addition" : 120,
+		"buff" : "[1002]",
+		"tiggerCondition" : "",
+		"modelId" : ""
+	},
+
+	"50001": {
+		"id" : 50001,
+		"desc" : "对敌方后排全体造成110%+20物理伤害",
+		"type" : 2,
+		"targetType" : 3,
+		"hurtTarget" : "[6,0]",
+		"numericalSource" : 0,
+		"coefficient" : 110,
+		"addition" : 20,
+		"buff" : "",
+		"tiggerCondition" : "",
+		"modelId" : ""
+	},
+
+	"50002": {
+		"id" : 50002,
+		"desc" : "对敌方后排全体造成400%+80物理伤害，中毒30%持续2回合",
+		"type" : 2,
+		"targetType" : 3,
+		"hurtTarget" : "[6,0]",
+		"numericalSource" : 0,
+		"coefficient" : 400,
+		"addition" : 80,
+		"buff" : "[2001]",
+		"tiggerCondition" : "",
+		"modelId" : ""
+	},
+
+	"60001": {
+		"id" : 60001,
+		"desc" : "对己方全体进行50%+10治疗",
+		"type" : 5,
+		"targetType" : 2,
+		"hurtTarget" : "[2,0]",
+		"numericalSource" : 0,
+		"coefficient" : 50,
+		"addition" : 10,
+		"buff" : "",
+		"tiggerCondition" : "",
+		"modelId" : ""
+	},
+
+	"60002": {
+		"id" : 60002,
+		"desc" : "对己方全体进行160%+40治疗，驱散减益效果",
+		"type" : 5,
+		"targetType" : 2,
+		"hurtTarget" : "[2,0]",
+		"numericalSource" : 0,
+		"coefficient" : 160,
+		"addition" : 40,
+		"buff" : "[7001]",
+		"tiggerCondition" : "",
+		"modelId" : ""
+	},
+
+	"70001": {
+		"id" : 70001,
+		"desc" : "对敌方前排单体造成120%+20法术伤害",
+		"type" : 3,
+		"targetType" : 3,
+		"hurtTarget" : "[3,0]",
+		"numericalSource" : 0,
+		"coefficient" : 120,
+		"addition" : 20,
+		"buff" : "",
+		"tiggerCondition" : "",
+		"modelId" : ""
+	},
+
+	"70002": {
+		"id" : 70002,
+		"desc" : "对敌方全体造成50%+10法术伤害，30%眩晕1回合",
+		"type" : 3,
+		"targetType" : 3,
+		"hurtTarget" : "[2,0]",
+		"numericalSource" : 0,
+		"coefficient" : 50,
+		"addition" : 10,
+		"buff" : "[1003]",
+		"tiggerCondition" : "",
+		"modelId" : ""
+	},
+
+	"80001": {
+		"id" : 80001,
+		"desc" : "对己方生命比例最少单位进行150%+30治疗，提升30%免伤持续2回合",
+		"type" : 5,
+		"targetType" : 2,
+		"hurtTarget" : "[11,1]",
+		"numericalSource" : 0,
+		"coefficient" : 150,
+		"addition" : 30,
+		"buff" : "[11001]",
+		"tiggerCondition" : "",
+		"modelId" : ""
+	},
+
+	"80002": {
+		"id" : 80002,
+		"desc" : "对敌方随机3人造成200%+40神圣伤害，降低目标30%攻击",
+		"type" : 4,
+		"targetType" : 3,
+		"hurtTarget" : "[1,3]",
+		"numericalSource" : 0,
+		"coefficient" : 200,
+		"addition" : 40,
+		"buff" : "[38001]",
+		"tiggerCondition" : "",
+		"modelId" : ""
+	},
+
+	"90001": {
+		"id" : 90001,
+		"desc" : "对敌方随机单体造成120%+20物理伤害",
+		"type" : 2,
+		"targetType" : 3,
+		"hurtTarget" : "[1,1]",
+		"numericalSource" : 0,
+		"coefficient" : 120,
+		"addition" : 20,
+		"buff" : "",
+		"tiggerCondition" : "",
+		"modelId" : ""
+	},
+
+	"90002": {
+		"id" : 90002,
+		"desc" : "对敌方随机单体造成500%+80物理伤害，沉默2回合",
+		"type" : 2,
+		"targetType" : 3,
+		"hurtTarget" : "[1,1]",
+		"numericalSource" : 0,
+		"coefficient" : 500,
+		"addition" : 80,
+		"buff" : "[4001]",
+		"tiggerCondition" : "",
+		"modelId" : ""
+	},
+
+	"90003": {
+		"id" : 90003,
+		"desc" : "对地方全体造成100%物理伤害，伤害下降100%持续10回合",
+		"type" : 2,
+		"targetType" : 3,
+		"hurtTarget" : "[12,0]",
+		"numericalSource" : 0,
+		"coefficient" : 100,
+		"addition" : 0,
+		"buff" : "[37003]",
+		"tiggerCondition" : "",
+		"modelId" : ""
+	},
+
+	"90004": {
+		"id" : 90004,
+		"desc" : "对敌方前排单体人造成100%法术伤害",
+		"type" : 3,
+		"targetType" : 3,
+		"hurtTarget" : "[3,0]",
+		"numericalSource" : 0,
+		"coefficient" : 100,
+		"addition" : 0,
+		"buff" : "",
+		"tiggerCondition" : "",
+		"modelId" : ""
+	},
+
+	"90005": {
+		"id" : 90005,
+		"desc" : "对地方全体造成130%法术伤害",
+		"type" : 3,
+		"targetType" : 3,
+		"hurtTarget" : "[2,0]",
+		"numericalSource" : 0,
+		"coefficient" : 130,
+		"addition" : 0,
+		"buff" : "",
+		"tiggerCondition" : "",
+		"modelId" : ""
+	},
+
+	"90006": {
+		"id" : 90006,
+		"desc" : "对敌方前排单体人造成100%物理伤害",
+		"type" : 2,
+		"targetType" : 3,
+		"hurtTarget" : "[3,0]",
+		"numericalSource" : 0,
+		"coefficient" : 100,
+		"addition" : 0,
+		"buff" : "",
+		"tiggerCondition" : "",
+		"modelId" : ""
+	},
+
+	"90007": {
+		"id" : 90007,
+		"desc" : "对敌方前排单体人造成200%物理伤害",
+		"type" : 2,
+		"targetType" : 3,
+		"hurtTarget" : "[3,0]",
+		"numericalSource" : 0,
+		"coefficient" : 200,
+		"addition" : 0,
+		"buff" : "",
+		"tiggerCondition" : "",
+		"modelId" : ""
+	},
+
+	"700011": {
+		"id" : 700011,
+		"desc" : "吸血30%",
+		"type" : 1,
+		"targetType" : 1,
+		"hurtTarget" : "",
+		"numericalSource" : 0,
+		"coefficient" : 0,
+		"addition" : 0,
+		"buff" : "[5001]",
+		"tiggerCondition" : "",
+		"modelId" : ""
+	},
+
+	"800021": {
+		"id" : 800021,
+		"desc" : "提升我方全体10%免伤2回合",
+		"type" : 1,
+		"targetType" : 2,
+		"hurtTarget" : "[2,0]",
+		"numericalSource" : 0,
+		"coefficient" : 0,
+		"addition" : 0,
+		"buff" : "[11002]",
+		"tiggerCondition" : "",
+		"modelId" : ""
+	},
+
+	"900011": {
+		"id" : 900011,
+		"desc" : "提高自身30%减伤2回合",
+		"type" : 1,
+		"targetType" : 1,
+		"hurtTarget" : "",
+		"numericalSource" : 0,
+		"coefficient" : 0,
+		"addition" : 0,
+		"buff" : "[11001]",
+		"tiggerCondition" : "",
+		"modelId" : ""
+	}
+
+}

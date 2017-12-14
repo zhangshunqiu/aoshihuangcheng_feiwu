@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="WorldBossFight" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="worldboss_bg_tips_png" x="85" y="293"/>
+	<e:Label text="伤害排行第1玩家可获得击杀大奖其它玩家可获得参与奖" x="237" y="299" size="20" fontFamily="黑体" textColor="0xffea00" anchorOffsetX="0" width="306" anchorOffsetY="0" height="42" textAlign="center" lineSpacing="8"/>
+	<e:Image source="boss_bg_touxiang_png" x="50" y="186"/>
+	<e:Image id="img_icon" source="boss_touxiang_png" x="82" y="223"/>
+	<e:Image source="boss_xueliangtiao_png" x="180" y="255" visible="false"/>
+	<e:Image id="img_cheer" x="611" y="402" source="worldboss_icon_zhuwei_png"/>
+	<e:Image id="img_rankBg" x="495" y="67" anchorOffsetY="0" height="178" scale9Grid="77,29,125,88" source="worldboss_bg_shanghai_png"/>
+	<e:Image source="worldboss_bg_shanghaipaihang_png" x="494" y="63"/>
+	<e:Button id="btn_showOrHide" label="" x="684" y="73" width="27" height="22">
+		<e:skinName>
+		<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="worldboss_btn_kai_png" source.down="worldboss_btn_shou_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+		</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:Image id="img_reward" x="606" y="502" source="worldboss_icon_jianglijieshao_png"/>
+	<e:Button id="btn_shield" label="" x="610" y="606" anchorOffsetX="0" width="71">
+		<e:skinName>
+		<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="worldboss_icon_pingbi_png" source.down="worldboss_icon_pingbizhong_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+		</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:Label id="lb_bossName" text="boss名字" x="197" y="226" size="20" fontFamily="黑体" textAlign="left"/>
+	<e:Label text="伤害排行" x="530" y="68" size="20" fontFamily="黑体" textAlign="left" visible="false"/>
+	<e:Group id="gp_rankAll" x="505" y="101">
+		<e:Group id="gp_rank0" x="0" y="0" visible="false">
+			<e:Label id="lb_rank0" text="1" x="0" y="0" size="18" fontFamily="黑体" textAlign="left"/>
+			<e:Label id="lb_name0" text="巴拉巴拉小魔" x="27" y="0" size="18" fontFamily="黑体" textAlign="center" width="108"/>
+			<e:Label id="lb_hurt0" text="6666666" x="145" y="0" size="18" fontFamily="黑体" textAlign="left" textColor="0x49fc16"/>
+		</e:Group>
+		<e:Group id="gp_rank1" x="0" y="24" visible="false">
+			<e:Label id="lb_rank1" text="1" x="0" y="0" size="18" fontFamily="黑体" textAlign="left"/>
+			<e:Label id="lb_name1" text="巴拉巴拉小魔" x="27" y="0" size="18" fontFamily="黑体" textAlign="center" width="108"/>
+			<e:Label id="lb_hurt1" text="6666666" x="145" y="0" size="18" fontFamily="黑体" textAlign="left" textColor="0x49FC16"/>
+		</e:Group>
+		<e:Group id="gp_rank2" x="0" y="48" visible="false">
+			<e:Label id="lb_rank2" text="1" x="0" y="0" size="18" fontFamily="黑体" textAlign="left"/>
+			<e:Label id="lb_name2" text="巴拉巴拉小魔" x="27" y="0" size="18" fontFamily="黑体" textAlign="center" width="108"/>
+			<e:Label id="lb_hurt2" text="6666666" x="145" y="0" size="18" fontFamily="黑体" textAlign="left" textColor="0x49FC16"/>
+		</e:Group>
+		<e:Group id="gp_rank3" x="0" y="72" visible="false">
+			<e:Label id="lb_rank3" text="1" x="0" y="0" size="18" fontFamily="黑体" textAlign="left"/>
+			<e:Label id="lb_name3" text="巴拉巴拉小魔" x="27" y="0" size="18" fontFamily="黑体" textAlign="center" width="108"/>
+			<e:Label id="lb_hurt3" text="6666666" x="145" y="0" size="18" fontFamily="黑体" textAlign="left" textColor="0x49FC16"/>
+		</e:Group>
+		<e:Group id="gp_rank4" x="0" y="96" visible="false">
+			<e:Label id="lb_rank4" text="1" x="0" y="0" size="18" fontFamily="黑体" textAlign="left"/>
+			<e:Label id="lb_name4" text="巴拉巴拉小魔" x="27" y="0" size="18" fontFamily="黑体" textAlign="center" width="108"/>
+			<e:Label id="lb_hurt4" text="6666666" x="145" y="0" size="18" fontFamily="黑体" textAlign="left" textColor="0x49FC16"/>
+		</e:Group>
+	</e:Group>
+	<e:Group id="gp_myHurt" x="496" y="217">
+		<e:Image source="worldboss_bg_wodeshanghai_png" x="0" y="0"/>
+		<e:Label text="我的伤害" x="38" y="6" size="18" fontFamily="黑体" textAlign="left" textColor="0xbfbfbf"/>
+		<e:Label id="lb_myHurt" text="0" x="148" y="5" size="20" fontFamily="黑体" textAlign="left" textColor="0x49FC16"/>
+	</e:Group>
+	<e:Label id="lb_bossLv" text="222" x="153" y="218" size="18" fontFamily="黑体" width="27" textAlign="center"/>
+	<e:ProgressBar id="pb_hp" width="448" height="23" x="177" y="255" skinName="skins.ProgressBarSkin3" anchorOffsetX="0" anchorOffsetY="0" value="100"/>
+	<e:Group id="gp_countDwon" x="219" y="789" visible="false">
+		<e:Image source="main_bg_bossdaojishi_png" y="0" x="0"/>
+		<e:Label id="lb_time" text="60" y="17" x="124"/>
+	</e:Group>
+	<e:Image source="全民BOSS-挑战界面_jpg" top="0" horizontalCenter="0" alpha="0.5" locked="true" visible="false"/>
+</e:Skin>

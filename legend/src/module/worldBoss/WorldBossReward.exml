@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="WorldBossReward" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:customui="customui.*" xmlns:w="http://ns.egret.com/wing" xmlns:game="game.*">
+	<e:Image source="common_bg_window_tips_png" y="170" anchorOffsetX="0" width="644.77" anchorOffsetY="0" height="730" horizontalCenter="5.5"/>
+	<e:Image source="全民BOSS-奖励_jpg" top="0" horizontalCenter="0" alpha="0.5" locked="true" visible="false"/>
+	<e:Label text="击杀大奖的                   的掉落几率是参与奖的" y="290" size="24" fontFamily="黑体" horizontalCenter="10" textColor="0xbfbfbf" anchorOffsetY="0" height="68" width="516" lineSpacing="16"/>
+	<e:Label text="击杀大奖" y="250" size="24" fontFamily="黑体" horizontalCenter="0" textColor="0xf6a527"/>
+	<e:Label text="生命宝石、星级装备" y="290" size="24" fontFamily="黑体" horizontalCenter="-15" textColor="0x22a322"/>
+	<e:Image source="reborn_bg2_png" y="594" horizontalCenter="0"/>
+	<e:Image source="reborn_bg2_png" y="239" horizontalCenter="0"/>
+	<e:Label text="2倍" y="331" size="24" fontFamily="黑体" horizontalCenter="-157" textColor="0x22A322"/>
+	<e:Label text="参与奖" y="604" size="24" fontFamily="黑体" horizontalCenter="1" textColor="0xF6A527"/>
+	<e:Image source="wing_bg_shuxing_png" x="109" y="370" anchorOffsetY="0" height="224" anchorOffsetX="0" width="521"/>
+	<e:Image source="wing_bg_shuxing_png" x="107" y="642" anchorOffsetY="0" height="233" anchorOffsetX="0" width="521"/>
+	<e:Group id="gp_killReward" height="20" y="320" anchorOffsetX="0" anchorOffsetY="0" x="33" width="20">
+	</e:Group>
+	<e:Group id="gp_joinReward" width="18" height="16" y="602" anchorOffsetX="0" anchorOffsetY="0" x="34">
+	</e:Group>
+	<e:Image source="worldboss_jianglijieshao_title_png" x="306" y="187"/>
+</e:Skin>

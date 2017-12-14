@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="RaiderRewardSkin" width="605" height="745" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
+		<e:Image source="common_bg_window_tips_png" left="0" right="0" top="0" bottom="0" scale9Grid="81,83,488,500"/>
+		<e:Image source="raider_bg_tips_png" y="5" horizontalCenter="0.5"/>
+		<e:Image source="raider_txt_tips_png" y="28" horizontalCenter="0"/>
+		<e:Image source="raider_bg_huangdi_png" y="617" horizontalCenter="0.5" height="120" scale9Grid="79,24,478,148"/>
+		<e:Button id="btn_store" label="" y="640" skinName="skins.ButtonSkinCommon" x="50"/>
+		<e:Button id="btn_buy" label="" y="640" skinName="skins.ButtonSkinCommon" x="404"/>
+		<e:Group id="gp_reward" width="600" height="480" horizontalCenter="0.5" top="95"/>
+		<e:Label id="lb_cost" text="9999" x="477" y="702" fontFamily="SimHei" textColor="0xbfbfbf" size="24"/>
+		<e:Image id="img_cost" source="common_yuanbao_png" x="423" y="695"/>
+		<e:Image id="img_time" source="raider_txt_10_png" y="32" horizontalCenter="-112"/>
+		<e:Image id="img_close" source="common_btn_guanbi_shangchengzhuanyong_png" x="565" y="-14"/>
+		<e:Image source="raider_txt_cunrucangku_png" x="77" y="654" touchEnabled="false"/>
+		<e:Image id="img_btn_time" source="raider_txt_xunbao10ci_png" y="654" touchEnabled="false" horizontalCenter="177.5"/>
+	</e:Group>
+</e:Skin>

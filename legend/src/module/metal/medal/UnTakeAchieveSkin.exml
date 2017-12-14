@@ -1,0 +1,16 @@
+ <e:Skin  class="UnTakeAchieveSkin" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+		<e:Rect left="0" right="0" top="0" bottom="0" alpha="0.5"/>
+		<e:Image id="bg_untake" source="shop_bg_tips_png" scaleX="1" scaleY="1" scale9Grid="188,118,109,79" height="462" x="126" y="221"/>
+		<e:Image id="img_close" source="common_btn_close_2_png" x="547" y="232"/>
+		<e:Image source="medal_bg_tips2_png" id="bg_tips2" y="448" x="149"/>
+		<e:Image id="btn_opennow" source="common_btn_huabian_png" x="284" y="603"/>
+		<e:Image id="img_opennow" source="medal_txt_lijikaitong2_png" x="324" y="623" touchEnabled="false"/>
+		<e:Image source="medal_txt_weilingquchengjiu2_png" y="238" x="305"/>
+		<e:Image source="medal_yueka2_png" id="img_monthcard" y="457" x="168"/>
+		<e:Image source="medal_txt_tips2_png" id="img_tips" y="450" x="296"/>
+		<e:Label id="des_untake0" text="未领取：" y="417" fontFamily="SimHei" size="18" x="225" scaleX="1" scaleY="1" textColor="0xE4E1DE"/>
+		<e:Label id="des_untake" text="成就值" y="383" fontFamily="SimHei" size="20" x="338" scaleX="1" scaleY="1" textColor="0x27e0f6"/>
+		<e:Label id="lb_untakevalue" text="20/1000" y="415" fontFamily="SimHei" size="18" x="335" scaleX="1" scaleY="1" textColor="0xe4e1de" textAlign="center"/>
+		<e:Image id="img_achieveframe" source="medal_bg_chengjiuzhi2_png" x="312" y="279"/>
+		<e:Image id="bt_back" source="common_btn_fanhui_png" x="509" y="585" scaleX="1" scaleY="1"/>
+					</e:Skin>

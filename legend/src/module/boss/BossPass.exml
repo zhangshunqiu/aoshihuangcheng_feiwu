@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="BossPass" width="720" height="1280" xmlns:e="http://ns.egret.com/eui">
+	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
+		<e:Group x="0" y="55">
+		<e:Image source="common_bg_interface_level_1_png" x="9" y="8"/>
+			<e:Image source="boss_bg_tongguanjiangli_png" x="27" y="58"/>
+			<e:Image source="boss_frame_tongguanjiangli_png" y="408" horizontalCenter="0"/>
+			<e:Image source="common_jinbi_jiangli2_png" y="424" horizontalCenter="0"/>
+		<e:Image source="boss_guangqia_title_png" x="230" y="0"/>
+		<e:Image id="img_close0" source="common_btn_close_1_png" x="653" y="14"/>
+		<e:Image id="img_back0" source="common_btn_fanhui_png" x="599" y="812"/>
+		<e:Group id="gp_challenge0" y="600" horizontalCenter="0">
+			<e:Image source="boss_btn_t_succeed_png" x="0" y="0"/>
+			<e:Image source="boss_txt_lingqu_png" horizontalCenter="0" verticalCenter="0"/>
+		</e:Group>
+			<e:Image source="boss_txt_tonggaunjiangli_png" y="274" horizontalCenter="0"/>
+			<e:Label text="麻痹戒指" y="519" size="20" fontFamily="黑体" textColor="0xf5a627" horizontalCenter="0"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

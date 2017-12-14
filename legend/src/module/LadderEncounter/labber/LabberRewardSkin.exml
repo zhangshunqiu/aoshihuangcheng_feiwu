@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="LabberRewardSkin" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:customui="customui.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect left="0" right="0" top="1" bottom="-1" alpha="0.5"/>
+	<e:Image source="common_bg_interface_level_2_png" x="18" y="71"/>
+	<e:Image source="labber_tiantijiangli_title_png" x="236" y="61"/>
+	<e:Image source="common_bg_window_tips_png" x="38.32" y="365.68" height="536" width="655"/>
+	<e:Image source="labber_bg4_png" x="29" y="895.99"/>
+	<e:Image source="monthcard_bg_tips_png" x="56" y="322" height="40" locked="true"/>
+	<e:Image source="reborn_bg2_png" x="223" y="144"/>
+	<e:Scroller id="scr_reward" width="636" top="374" bottom="176" height="606" anchorOffsetY="0" anchorOffsetX="0" horizontalCenter="1">
+		<e:Group id="scr_group" anchorOffsetY="0" height="587" x="1" y="199">
+		</e:Group>
+	</e:Scroller>
+	<e:Image id="img_tier" width="83" height="70" x="159.67" y="896.01" source="labber_huizhang_zuanshi_png"/>
+	<e:Label id="lb_margin" text="41场" x="481.66" y="926" fontFamily="SimHei" size="22" textColor="0xff8500"/>
+	<e:Label text="我的战绩:" x="63.65" y="929.34" fontFamily="SimHei" size="22" textColor="0xffffff"/>
+	<e:Label text="净胜场:" x="318.98" y="924.67" fontFamily="SimHei" size="22" textColor="0xFFFFFF"/>
+	<e:Label text="钻石段位" x="107.68" y="293.33" fontFamily="SimHei" size="24" textColor="0xffea01"/>
+	<e:Label text="黄金段位" x="247.01" y="292.66" fontFamily="SimHei" size="24" textColor="0xff8500"/>
+	<e:Label text="天梯争霸奖励" x="275.67" y="150.67" fontFamily="SimHei" size="30" textColor="0xf6a527" textAlign="center"/>
+	<e:Label text="钻石组排名奖励" x="273.67" y="329.99" fontFamily="SimHei" size="24" textAlign="center" textColor="0xbfbfbf"/>
+	<e:Label text="白银段位" x="386.34" y="293.33" fontFamily="SimHei" size="24" textColor="0x74e7ff"/>
+	<e:Label text="青铜段位" x="516.34" y="294" fontFamily="SimHei" size="24" textColor="0x22a322"/>
+	<customui:BaseItem id="item1" width="90" height="90" y="240" anchorOffsetX="45" anchorOffsetY="45" x="563" touchChildren="true" touchEnabled="true"/>
+	<customui:BaseItem id="item2" width="90" height="90" y="240" anchorOffsetX="45" anchorOffsetY="45" x="431" touchChildren="true" touchEnabled="true"/>
+	<customui:BaseItem id="item3" width="90" height="90" y="240" anchorOffsetX="45" anchorOffsetY="45" x="294" touchChildren="true" touchEnabled="true"/>
+	<customui:BaseItem id="item4" width="90" height="90" y="240" anchorOffsetX="45" anchorOffsetY="45" x="155" touchChildren="true" touchEnabled="true"/>
+	<e:Image id="img_close" x="606.33" y="886.33" source="common_btn_fanhui_png"/>
+	<e:BitmapLabel id="lb_lv" width="20" height="20" x="187" y="948" font="labber_small_lv_fnt" text="5"/>
+</e:Skin>

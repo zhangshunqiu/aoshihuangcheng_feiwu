@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="WorldBossSkin" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:customui="customui.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="common_bg_all_png" left="0" top="0" visible="false"/>
+	<customui:CommonWin id="commonWin" skinName="CommonWinSkin" left="0" right="0" y="64"/>
+	<e:Image id="img_back" source="common_btn_fanhui_png" x="617" y="897" scaleX="1" scaleY="1"/>
+	<e:Image source="common_bg_window_tips_png" y="174" horizontalCenter="3" anchorOffsetX="0" width="672" anchorOffsetY="0" height="735"/>
+	<e:Group id="gp_boss" width="680" height="757" x="20" y="120" anchorOffsetX="0" anchorOffsetY="0" touchEnabled="true">
+		<e:Scroller id="scroller" width="667" height="717" x="7" y="60" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Group id="gp_middle" anchorOffsetX="0" width="352" anchorOffsetY="0" height="305">
+		</e:Group>
+		</e:Scroller>
+	</e:Group>
+	<e:Label text="剩余场数：" x="42" y="136" size="24" fontFamily="黑体" textColor="0xffa200"/>
+	<e:Label id="lb_timesLimit" text="/5" x="198" y="136" size="24" fontFamily="黑体" textColor="0xbfbfbf"/>
+	<e:Label id="lb_curTimes" text="5" x="186" y="135" size="24" fontFamily="黑体" textColor="0x22a322"/>
+	<e:Group id="gp_refreshTime" x="329" y="137">
+		<e:Label id="lb_timesReturn" text="10:00:00" x="0" y="0" size="20" fontFamily="Arial" textColor="0xf87500" textAlign="right" width="78"/>
+		<e:Label text="后恢复一次" x="80" y="0" size="20" fontFamily="黑体" textColor="0xF87500"/>
+	</e:Group>
+	<e:Image id="img_buyTimes" source="common_btn_jiahao_png" x="269" y="125"/>
+	<e:Image id="img_btnBg1" source="skill_btn_faguang_xianshi_png" x="27" y="907" scaleX="0.9" scaleY="0.9"/>
+	<e:Button label="全民" x="32" y="912" skinName="skins.ButtonSkin2" scaleX="0.9" scaleY="0.9" currentState="down"/>
+</e:Skin>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="JewelSuperSkin" width="420" height="482" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
+		<e:Image source="common_bg_window_tips_png" scale9Grid="81,83,488,500" left="0" right="0" top="0" bottom="0" x="0" y="0" scaleX="1" scaleY="1"/>
+		<e:Label text="全身宝石高级属性额外加成：" y="25" fontFamily="SimHei" size="24" left="25" textColor="0xca8d19"/>
+		<e:Label text="全身宝石总属性加成：" y="271" fontFamily="SimHei" size="24" left="25" textColor="0xca8d19"/>
+		<e:Label text="(4级以上的宝石拥有超级属性)" y="72" fontFamily="SimHei" size="24" left="25" textColor="0x00e4ff"/>
+		<e:Label id="lb_attr" text="Label" y="116" fontFamily="SimHei" size="24" left="25" lineSpacing="10" textColor="0xbfbfbf"/>
+		<e:Label id="lb_attr1" text="Label" y="312" fontFamily="SimHei" size="24" left="25" lineSpacing="10" textColor="0xbfbfbf"/>
+	</e:Group>
+</e:Skin>

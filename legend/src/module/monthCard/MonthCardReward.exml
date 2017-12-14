@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MonthCardReward" width="720" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="monthcard_bg_goumaijiangli_png" y="368" horizontalCenter="0"/>
+	<e:Image source="monthcard_txt_yuekagoumaijiangli_png" y="419" horizontalCenter="0.5"/>
+	<e:List id="list" width="203" height="94" x="260" y="470" anchorOffsetX="0" anchorOffsetY="0"/>
+</e:Skin>

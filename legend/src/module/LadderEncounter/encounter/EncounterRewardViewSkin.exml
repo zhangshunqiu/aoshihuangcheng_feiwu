@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="EncounterRewardViewSkin" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:customui="customui.*">
+	<e:Image y="119.04" source="common_bg_window_tips_png" anchorOffsetX="0" anchorOffsetY="0" scale9Grid="3,9,638,646" height="806" width="612.67" horizontalCenter="0"/>
+	<e:Image y="186.73" anchorOffsetX="0" anchorOffsetY="0" source="wing_bg_shuxing_png" scale9Grid="3,6,526,135" width="583" height="687.66" horizontalCenter="0"/>
+	<e:Scroller id="scroller" width="578" height="623.72" y="246.23" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
+		<e:List id="list_reward" y="44" anchorOffsetY="0" height="614.38" x="0">
+			<e:layout>
+				<e:VerticalLayout horizontalAlign="center" verticalAlign="middle" gap="-5"/>
+			</e:layout>
+		</e:List>
+	</e:Scroller>
+	<e:Label id="lb_myRank" text="Label" x="79.97" y="882" size="24" fontFamily="SimHei"/>
+	<e:Label text="每天4点结算" x="505.81" y="882" size="24" fontFamily="SimHei" textColor="0xf87500"/>
+	<e:Label text="排名" y="204.99" anchorOffsetX="0" width="61.66" anchorOffsetY="0" height="40.25" textColor="0xf87500" x="177" size="24" fontFamily="SimHei"/>
+	<e:Label text="奖励" y="204.99" anchorOffsetX="0" width="61.66" anchorOffsetY="0" height="40.25" textColor="0xF87500" x="492" fontFamily="SimHei" size="24"/>
+	<e:Image id="img_close" x="603.96" y="128.47" source="common_btn_close_1_png"/>
+	<e:Image source="encounter_zaoyuzhanmeirijiangli_title_png" y="139.68" horizontalCenter="0.5"/>
+	<e:Image source="forge_fengexian_png" y="196.03" horizontalCenter="0.5"/>
+</e:Skin>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="WorldBossBuyTimes" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="common_bg_window_tips_png" y="323" anchorOffsetY="0" height="355" horizontalCenter="0.5" anchorOffsetX="0" width="523"/>
+	<e:Image source="common_bg_tips_title_png" x="106" y="329" anchorOffsetX="0" width="507" anchorOffsetY="0" height="53"/>
+	<e:Image source="common_bg_list_neiromg_png" x="103" y="433" anchorOffsetX="0" width="512"/>
+	<e:Image id="img_close" source="common_btn_close_2_png" x="560" y="328"/>
+	<e:Label text="是否消耗         购买1次挑战次数" y="459" size="24" fontFamily="黑体" horizontalCenter="-1" textColor="0xf87500"/>
+	<e:Label text="今日可购买  次" y="500" size="24" fontFamily="黑体" textColor="0xBFBFBF" horizontalCenter="0"/>
+	<e:Label id="lb_gold" text="1000" y="461" size="24" fontFamily="黑体" horizontalCenter="-20" textColor="0xffea01"/>
+	<e:Label id="lb_times" text="2" y="499" size="24" fontFamily="黑体" horizontalCenter="50" textColor="0xBFBFBF"/>
+	<e:Image id="img_cancle" source="shop_btn_tanchuang_huise2_png" x="161" y="588"/>
+	<e:Image id="img_comfirm" source="shop_btn_tanchuang_hongse2_png" x="431" y="591"/>
+	<e:Image source="shop_txt_quxiao_png" x="197" y="597" touchEnabled="false"/>
+	<e:Image source="shop_txt_queren_png" x="466" y="599" touchEnabled="false"/>
+	<e:Image source="common_yuanbao_png" x="262" y="454"/>
+	<e:Image source="shop_txt_tishi_png" y="343" horizontalCenter="0"/>
+</e:Skin>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="LabberResultSkin" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:customui="customui.*">
+	<e:Group id="gp_win" x="14" y="120">
+		<e:Image source="boss_qizhi_succeed_png" x="69" y="115"/>
+		<e:Image source="boss_taitou_succeed_png" x="0" y="0"/>
+		<e:Image source="boss_txt_tiaozhanchenggong_succeed_png" x="187" y="57"/>
+	</e:Group>
+	<e:Group id="gp_lose" x="7" y="119">
+		<e:Image source="boss_qizhi_lose2_png" x="78" y="110"/>
+		<e:Image source="boss_taitou_lose_png" x="0" y="0"/>
+		<e:Image source="boss_txt_tiaozhanshibai_lose_png" x="200" y="67"/>
+	</e:Group>
+	<e:Group id="gp_content" x="150" y="283">
+		<e:Image source="labber_bg3_png" x="161" y="147"/>
+		<e:Image id="star_reward1" x="108" y="240" source="labber_xingxing_liang_png"/>
+		<e:Image id="star_reward2" x="167" y="240" source="labber_xingxing_liang_png"/>
+		<e:Image id="star_reward3" x="224" y="240" source="labber_xingxing_liang_png"/>
+		<e:Image x="120" y="30" rotation="338.13" source="labber_xingxing_hui_png"/>
+		<e:Image x="194" y="0" source="labber_xingxing_hui_png"/>
+		<e:Image x="268" y="11" rotation="23.95" source="labber_xingxing_hui_png"/>
+		<e:Image id="star_tier1" x="120" y="30" source="labber_xingxing_liang_png" rotation="338.13"/>
+		<e:Image id="star_tier2" x="194" y="0" source="labber_xingxing_liang_png"/>
+		<e:Image id="star_tier3" x="268" y="11" rotation="23.95" source="labber_xingxing_liang_png"/>
+		<e:Image id="img_tier" x="183" y="62" source="labber_huizhang_qingtong_png"/>
+		<customui:BaseItem id="item" width="90" height="90" y="388" anchorOffsetX="45" anchorOffsetY="45" x="52" touchChildren="false" touchEnabled="false" visible="false"/>
+		<e:Label text="星级奖励:" y="251.66" fontFamily="SimHei" size="24" x="2.67" scaleX="1" scaleY="1" textColor="0xfcfffc"/>
+		<e:Label text="挑战奖励:" y="302.66" fontFamily="SimHei" size="24" x="1.67" scaleX="1" scaleY="1" textColor="0xffea01"/>
+		<e:BitmapLabel id="lb_lv" width="20" height="20" x="204" y="154" text="1" font="laber_big_lv_fnt"/>
+		<e:Button id="btn_take" label="" x="138.51000000000005" y="444.05999999999995" scaleX="1" scaleY="1">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="common_btn_common_png" source.down="common_btn_common_png" source.disabled="common_btn_common_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Image source="boss_txt_lingqujiangli_succeed_png" x="160.28" y="457.56" scaleX="1" scaleY="1" touchEnabled="false"/>
+	</e:Group>
+</e:Skin>

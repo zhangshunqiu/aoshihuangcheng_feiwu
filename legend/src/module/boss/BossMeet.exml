@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="BossMeet" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="gp_main" left="0" right="0" top="0" bottom="67" anchorOffsetY="0">
+		<e:Image source="common_bg_all_png" left="0" top="0"/>
+		<e:Group y="160" anchorOffsetX="0" width="629" anchorOffsetY="0" height="751" horizontalCenter="0.5">
+		<e:Image source="common_bg_interface_level_1_png" x="0" y="0" width="630" height="754" scale9Grid="87,63,529,756"/>
+			<e:Image source="accident_bg_png" y="66" horizontalCenter="0"/>
+			<e:Image source="accident_zaoyuboss_title_png" y="-12" horizontalCenter="0"/>
+			<e:Image id="img_close" source="common_btn_close_1_png" x="575" y="5"/>
+			<e:Group id="gp_boss" width="1" height="0" y="432" anchorOffsetY="0" anchorOffsetX="0" x="315"/>
+			<e:Image id="img_challengeBoss" source="boss_btn_t_succeed_png" x="85" y="678" anchorOffsetX="0" width="147" anchorOffsetY="0" height="52"/>
+			<e:Image id="img_thinkAgain" source="boss_btn_t_succeed_png" x="387" y="680" anchorOffsetX="0" width="146" anchorOffsetY="0" height="49"/>
+			<e:Image source="boss_txt_tiaozhan_png" x="134" y="692" touchEnabled="false"/>
+		<e:List id="list" width="551" height="90" y="571" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0"/>
+			<e:Image source="wing_bg_tips_png" y="479" anchorOffsetX="0" width="424" anchorOffsetY="0" height="41" horizontalCenter="0"/>
+			<e:Label text="您在挂机时偶遇携带珍宝的BOSS：" x="43" y="85" size="24" fontFamily="黑体" textColor="0xffea01"/>
+			<e:Label text="有概率掉落" x="37" y="540" size="24" fontFamily="黑体" textColor="0x00f829"/>
+			<e:Group y="486" horizontalCenter="0">
+				<e:Label id="lb_bossName" text="boss名字" x="0" y="1" size="24" fontFamily="黑体" textColor="0xffa200"/>
+				<e:Label id="lb_bossLv" text="Lv" x="109" y="0" size="24" fontFamily="黑体" textColor="0xffa200"/>
+			</e:Group>
+			<e:Image source="accident_txt_zaixiangxiang_png" x="423" y="693" touchEnabled="false"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

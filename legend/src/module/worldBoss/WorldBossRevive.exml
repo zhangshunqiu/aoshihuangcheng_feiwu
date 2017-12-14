@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="WorldBossRevive" width="210" height="289" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="common_bg_window_tips_png" y="2" anchorOffsetY="0" height="292" horizontalCenter="1.5" anchorOffsetX="0" width="213.34" scale9Grid="81,83,488,500"/>
+	<e:Image source="common_bg_tips_title_png" x="5" y="7" anchorOffsetX="0" width="197" anchorOffsetY="0" height="53"/>
+	<e:Label id="lb_bossName" text="碎玉猪王" x="1.99" y="14.68" size="30" fontFamily="黑体" textColor="0x4395FB" anchorOffsetX="0" width="201.33" textAlign="center" touchEnabled="false"/>
+	<e:Image id="img_close" source="common_btn_close_2_png" x="159.99" y="1.01"/>
+	<e:Image source="copy_boss_bg_touxiang_png" x="33.34" y="61.67"/>
+	<e:Image id="img_icon" source="copy_boss_icon_1_png" x="55.01" y="82.01"/>
+	<e:Image id="img_revive" x="31.01" y="66.01" anchorOffsetX="0" anchorOffsetY="0" source="worldboss_yifuhuo_png"/>
+	<e:Label id="lb_bossLv" text="Lv.10" x="62" y="190" size="30" fontFamily="黑体" textColor="0xFFEA00"/>
+	<e:Button id="btn_challenge" label="" x="30.67" y="224.33" scaleX="1" scaleY="1">
+		<e:skinName>
+		<e:Skin states="up,down,disabled" xmlns:customui="customui.*">
+			<e:Image width="100%" height="100%" source="common_btn_common_png" source.down="common_btn_common_huise_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+		</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:Image id="img_challenge" source="boss_txt_tiaozhan_png" touchEnabled="false" x="82.67" y="238.33" scaleX="1" scaleY="1"/>
+</e:Skin>

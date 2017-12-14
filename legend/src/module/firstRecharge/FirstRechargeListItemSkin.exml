@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="FirstRechargeListItemSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" width="268" height="157">
+	<e:Image source="charge_btn_a_png" top="-1" horizontalCenter="0"/>
+	<e:Label id="lb_gold" text="获得20000元宝" y="129" size="28" fontFamily="SimHei" horizontalCenter="0" textAlign="center"/>
+	<e:Label id="lb_money" text="50元" verticalCenter="-6" size="48" fontFamily="SimHei" textColor="0xffe57f" horizontalCenter="0"/>
+</e:Skin>

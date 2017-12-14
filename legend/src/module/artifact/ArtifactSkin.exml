@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ArtifactSkin" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:customui="customui.*">
+	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
+		<customui:CommonWin id="commonWin" left="0" right="0" top="0" bottom="0"/>
+		<e:Image source="common_bg_interface_level_1_png" horizontalCenter="0" top="0" visible="false"/>
+		<e:Image source="Artifact_bg_png" y="57" horizontalCenter="0"/>
+		<e:Image source="Artifact_bg_shenqi_png" x="534" y="95"/>
+		<e:Group width="500" height="770" x="29" y="90">
+			<e:Image source="monthcard_bg_tips_png" y="3" scale9Grid="76,7,459,48" width="338" height="44" scaleX="1" scaleY="1" horizontalCenter="0"/>
+			<e:Image source="Artifact_txt_tips_png" y="361" horizontalCenter="0"/>
+			<e:Label id="lb_name" text="Label" y="13" fontFamily="SimHei" size="24" textColor="0xffea00" scaleX="1" scaleY="1" horizontalCenter="0"/>
+			<e:Group id="gp_effect" width="250" height="250" y="60" scaleX="1" scaleY="1" horizontalCenter="0">
+			</e:Group>
+			<e:Label id="lb_desc" text="Label" y="326" fontFamily="SimHei" size="24" scaleX="1" scaleY="1" horizontalCenter="0" textColor="0x00f829"/>
+			<e:Group id="gp_attr" height="240" y="408" width="500" scaleX="1" scaleY="1" horizontalCenter="0">
+				<e:Image source="compound_bg_yulan_png" x="13" y="0" scale9Grid="54,46,117,70" height="240" width="205"/>
+				<e:Image source="compound_bg_yulan_png" x="285" y="0" scale9Grid="54,46,117,70" height="240" width="205"/>
+				<e:Image source="Artifact_txt_shenqishuxing_png" x="64" y="18"/>
+				<e:Image source="medal_txt_xiajishuxing2_png" x="337" y="18"/>
+				<e:Image source="compound_jiantou_png" y="117" horizontalCenter="0.5"/>
+				<e:Label id="lb_attr" text="Label" y="56" fontFamily="SimHei" size="24" textColor="0xBFBFBF" x="25" width="176" height="170" verticalAlign="middle" textAlign="center" lineSpacing="18"/>
+				<e:Label id="lb_attr_next" text="Label" y="56" fontFamily="SimHei" size="24" x="304" textColor="0x00f829" width="176" height="170" verticalAlign="middle" textAlign="center" lineSpacing="18"/>
+			</e:Group>
+			<e:Group id="gp_cost" height="120" y="658" width="500" scaleX="1" scaleY="1" horizontalCenter="0">
+				<e:Label id="lb_cost" text="Label" y="15" fontFamily="SimHei" size="24" horizontalCenter="0" textColor="0x2fc9fb"/>
+				<e:Label id="lb_get" text="Label" y="76" horizontalCenter="134" fontFamily="SimHei" size="24" textColor="0xBFBFBF"/>
+				<e:Button id="btn_upgrade" label="" y="54" horizontalCenter="0.5" skinName="skins.ButtonSkinCommon"/>
+				<e:Image id="img_txt" source="equip_sp_txt_jihuo_png" y="67" horizontalCenter="0" touchEnabled="false"/>
+			</e:Group>
+		</e:Group>
+		<e:Scroller id="scroller" width="140" height="760" y="101" right="41">
+			<e:Group/>
+		</e:Scroller>
+		<e:Image id="img_return" source="common_btn_fanhui_png" x="615" y="835"/>
+		<e:Image source="raider_taitou_png" horizontalCenter="0" top="-19" touchEnabled="false" locked="true"/>
+		<e:Image id="img_close" source="common_btn_guanbi_shangchengzhuanyong_png" x="657" y="-1"/>
+		<e:Image source="Artifact_shenqi_title_png" y="17" horizontalCenter="0"/>
+	</e:Group>
+</e:Skin>

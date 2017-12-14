@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<e:Skin class="skins.PageViewDotSkin" states="up,down" minHeight="30" minWidth="30" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" width="30" height="30">
+	<e:Image source="common_light_gray_png" horizontalCenter="0" verticalCenter="0" includeIn="up"/>
+	<e:Image source="common_light_ing_png" horizontalCenter="0" verticalCenter="0" includeIn="down"/>
+</e:Skin>

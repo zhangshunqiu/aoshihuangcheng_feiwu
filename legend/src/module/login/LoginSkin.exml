@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="LoginSkin" width="720" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
+		<e:Image scaleX="1" scaleY="1" horizontalCenter="0" source="login_bg_png" verticalCenter="0"/>
+		<e:Image y="50" source="Login_LOGO02_png" horizontalCenter="0.5"/>
+		<e:Image id="img_notice" y="65.06" scaleX="1" scaleY="1" x="581" source="common_icon_gonggao_png"/>
+		<e:Image x="152" y="952" source="Login_hongdian_png"/>
+		<e:Image y="794" horizontalCenter="20" source="Login_xuanqudiwen_png"/>
+		<e:Label id="lb_server" text="xxxxx服" x="217" y="958" scaleX="1" scaleY="1" fontFamily="SimHei" size="30" textColor="0xffc509"/>
+		<e:Button id="btn_start" label="" y="1043.03" scaleX="1" scaleY="1" horizontalCenter="0">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="Login_btn_start_png" source.down="Login_btn_start_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="btn_server" label="点击选区" y="958" x="481" scaleX="1" scaleY="1" visible="false">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="alpha_png" source.down="alpha_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Label id="lb_server_select" text="点击选区" x="505" y="958" fontFamily="SimHei" textColor="0x00c32e"/>
+		<e:TextInput id="input" width="200" height="32" y="831" horizontalCenter="0" textColor="0xffffff" prompt="这里输入账号" maxChars="8"/>
+	</e:Group>
+</e:Skin>

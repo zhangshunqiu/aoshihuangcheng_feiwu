@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="FastFightSkin" width="570" height="500" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="gp_root" horizontalCenter="0" verticalCenter="0" width="90%" height="391">
+		<e:Image horizontalCenter="0" height="365" y="13" source="main_bg_1_jiesuan_png" scale9Grid="140,147,215,290"/>
+		<e:Image id="img_title" horizontalCenter="0" top="25" source="fight_kuaisuzhandou_title_png"/>
+		<e:Image id="img_content_bg" width="82%" source="common_bg_wenzineirong_png" horizontalCenter="1" scale9Grid="125,36,392,58" height="205" y="66"/>
+		<e:Label id="lb_content" text="xxxxxxxxxxx" size="22" width="78%" verticalAlign="middle" textAlign="left" horizontalCenter="0.5" fontFamily="SimHei" top="86" lineSpacing="12" textColor="0xbfbfbf"/>
+		<e:Image id="img_close" x="433" y="14" source="common_btn_close_1_png"/>
+		<e:Group id="gp_btn" width="85%" horizontalCenter="1" bottom="65" height="50">
+			<e:Image id="img_confirm" source="common_btn_common_png" horizontalCenter="0" verticalCenter="0"/>
+			<e:Image id="img_cost" source="common_yuanbao_png" x="289" y="13"/>
+			<e:Label id="lb_cost" text="99999" x="341" y="19" fontFamily="SimHei" size="24" textColor="0xbfbfbf"/>
+			<e:Image source="fight_txt_kuaisuzhandou_png" horizontalCenter="0" verticalCenter="0" touchEnabled="false"/>
+		</e:Group>
+		<e:Label id="lb_time" text="Label" y="331" horizontalCenter="0.5" fontFamily="SimHei" size="24" textColor="0xf87500"/>
+	</e:Group>
+</e:Skin>

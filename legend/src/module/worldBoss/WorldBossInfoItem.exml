@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="WorldBossInfoItem" width="665" height="355" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="全民BOSS-掉落奖励_jpg" x="-29" y="-367" visible="false"/>
+	<e:Group id="gp_other" x="-7" y="-3">
+		<e:Image source="worldboss_bg2_png" x="0" y="0"/>
+		<e:Label text="掉落物品" y="19" size="24" fontFamily="黑体" x="287" textColor="0xffa200"/>
+		<e:Image id="img_reward" source="worldboss_icon_jianglijieshao_png" x="547" y="267"/>
+	</e:Group>
+	<e:Image id="img_left" x="23" y="113" source="worldboss_left_jiantou_png"/>
+	<e:Image id="img_right" x="600" y="113" source="mail_jiantou_right_png"/>
+	<e:Group id="gp_main" width="424" height="195" anchorOffsetX="0" horizontalCenter="-0.5" verticalCenter="-24" anchorOffsetY="0">
+		<e:List id="list" width="495" height="197" x="1" y="0" anchorOffsetX="0" anchorOffsetY="0" visible="false"/>
+	</e:Group>
+	<e:Button id="btn_challenge" label="" x="256" y="287" scaleX="1" scaleY="1" currentState="down">
+		<e:skinName>
+		<e:Skin states="up,down,disabled" xmlns:customui="customui.*">
+			<e:Image width="100%" height="100%" source="common_btn_common_png" source.down="common_btn_common_huise_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+		</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:Image id="img_challenge" source="boss_txt_tiaozhan_png" touchEnabled="false" x="308" y="301" scaleX="1" scaleY="1"/>
+</e:Skin>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="EquipSpecialTipSkin" width="442" height="300" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="common_bg_window_tips_png" left="0" right="0" top="0" bottom="0" scale9Grid="81,83,488,500"/>
+	<e:Image source="common_bg_tips_title_png" y="7" scale9Grid="64,5,390,37" width="426" height="48" horizontalCenter="-1"/>
+	<e:Image source="common_bg_list_neiromg_png" y="114" scale9Grid="77,16,464,96" width="426" height="120" horizontalCenter="0"/>
+	<e:Label id="lb_name" text="Label" y="17" fontFamily="SimHei" textColor="0xd7852f" size="24" horizontalCenter="0"/>
+	<e:Label id="lb_condition" text="Label" y="245" fontFamily="SimHei" textColor="0xD7852F" size="24" horizontalCenter="0"/>
+	<e:Button id="btn_active" label="" y="234" skinName="skins.ButtonSkinCommon" horizontalCenter="0.5"/>
+	<e:Image id="img_txt" source="equip_sp_txt_jihuo_png" y="247" horizontalCenter="0" touchEnabled="false"/>
+	<e:Label text="碎片属性：" y="128" horizontalCenter="-143" fontFamily="SimHei" textColor="0xD7852F" size="24"/>
+	<e:Group id="gp_attr" height="65" y="158" left="0" right="0"/>
+	<e:Label id="lb_tip" text="点击空白区域可关闭窗口" y="299" fontFamily="SimHei" textColor="0x8f8f8f" size="20" horizontalCenter="0"/>
+</e:Skin>

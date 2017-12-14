@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<e:Skin class="skins.ButtonSkin5" states="up,down" minHeight="40" minWidth="100"
+        currentState="up" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image includeIn="up,down" source.down="shop_btn_tanchuang_hongse_png" source="shop_btn_tanchuang_huise_png"/>
+    <e:Label id="labelDisplay" size="20"
+             verticalAlign="middle" textAlign="center" text=""  includeIn="up,down" fontFamily="SimHei" textColor="0xe4cea9" horizontalCenter="0" verticalCenter="0"/>
+	<e:Image source="shop_txt_quxiao_png" source.down="shop_txt_queren_png" includeIn="up,down" horizontalCenter="0" verticalCenter="0"/>
+    <e:Image id="iconDisplay" horizontalCenter="0" verticalCenter="0"  includeIn="up,down"/>
+</e:Skin>

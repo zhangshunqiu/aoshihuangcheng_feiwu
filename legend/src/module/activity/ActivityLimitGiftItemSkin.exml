@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ActivityLimitGiftItemSkin" width="650" height="127" xmlns:e="http://ns.egret.com/eui" xmlns:customui="customui.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
+		<e:Image source="sign_bg_list_png" scale9Grid="75,14,457,89" width="650" height="127" horizontalCenter="-2" verticalCenter="0"/>
+		<customui:BaseItem id="baseItem" width="90" height="90" x="85" scaleX="1" scaleY="1" anchorOffsetX="45" anchorOffsetY="45" y="73"/>
+		<e:Label id="lb_name" text="Label" y="4" fontFamily="SimHei" size="24" horizontalCenter="-240" textColor="0xffea00"/>
+		<e:Label id="lb_origin_price" text="Label" x="260" y="41" fontFamily="SimHei" size="20"/>
+		<e:Label id="lb_origin_price0" text="原价：" x="153" y="40" fontFamily="SimHei" size="20"/>
+		<e:Label id="lb_cur_price" text="Label" x="261" y="85" fontFamily="SimHei" size="20" textColor="0xffa200"/>
+		<e:Label id="lb_cur_price0" text="现价：" x="152" y="85" fontFamily="SimHei" size="20" textColor="0xFFA200"/>
+		<e:Image id="img_gold" source="common_yuanbao_png" x="204" y="33"/>
+		<e:Image id="img_gold1" source="common_yuanbao_png" x="205" y="78"/>
+		<e:Image source="activity_huaxian_png" x="145" y="49"/>
+		<e:Label id="lb_time" text="Labelxxxxxxxxx" y="17" fontFamily="SimHei" size="24" textColor="0xbfbfbf" horizontalCenter="227"/>
+		<e:Button id="btn_buy" label="" x="475" skinName="skins.ButtonSkinCommon" y="50"/>
+		<e:Image id="img_txt" source="shop_txt_goumai_anniu_png" x="526" y="62" touchEnabled="false"/>
+		<e:Image id="img_have_buy" x="516" y="62" source="activity_txt_yigoumai_png"/>
+		<e:Image source="shop_bg_zhekou_png" x="39" y="26"/>
+		<e:Image source="shop_txt_zhe_png" x="48" y="38" rotation="-45"/>
+		<e:BitmapLabel id="bmlb_discount" width="20" height="20" x="38" y="52" font="shop_shuzhi_zhekou_fnt" rotation="-45" text="5.5"/>
+	</e:Group>
+</e:Skin>

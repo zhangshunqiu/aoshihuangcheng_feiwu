@@ -1,0 +1,18 @@
+{
+	"1":{
+		"id":1,
+		"name":"转盘活动",
+		"day_number":7,
+		"begin_time":0,
+		"end_time":0,
+		"open":1
+	},
+	"2":{
+		"id":2,
+		"name":"充值双倍",
+		"day_number":0,
+		"begin_time":0,
+		"end_time":0,
+		"open":0
+	}
+}

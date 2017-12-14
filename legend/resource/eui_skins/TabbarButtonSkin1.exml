@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.TabbarButtonSkin1" states="up,down,upAndSelected,downAndSelected" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" width="128" height="51">
+	<e:Image fillMode="scale" alpha="1" source.up="common_btn_dinglan_small_gray_png" horizontalCenter="0" verticalCenter="0" source="common_btn_dinglan_small_red_png"/>
+	<e:Label id="labelDisplay" size="24" textAlign="center" verticalAlign="middle" fontFamily="SimHei" width="100%" textColor.up="0xe4cea9" y="12" horizontalCenter="0" text="{data}" textColor="0xe4cea9"/>
+</e:Skin>

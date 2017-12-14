@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ItemWayItemSkin" width="480" height="50" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:customui="customui.*">
+	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
+		<e:Image source="common_bg_tips_title_png" scale9Grid="64,5,390,37" left="0" right="0" top="0" bottom="0"/>
+		<e:Label id="lb_name" text="" x="34" fontFamily="SimHei" size="24" textColor="0xbfbfbf" verticalCenter="0"/>
+		<e:Label text="点击前往" x="319" fontFamily="SimHei" size="24" textColor="0xBFBFBF" verticalCenter="0"/>
+	</e:Group>
+</e:Skin>

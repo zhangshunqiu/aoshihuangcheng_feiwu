@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CountDownSkin" width="300" height="48" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="main_bg_shuju_png" x="40" y="4"/>
+	<e:Label id="lb_time" text="你是猪吗" y="11.67" fontFamily="SimHei" size="24" x="102" touchEnabled="false" textColor="0x01ACF1"/>
+</e:Skin>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MainHeadSkin" width="720" height="180" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	
+	<e:Image x="-1" y="24" source="main_bg_touxiang_png"/>
+	<e:Image source="main_pingfen_png" x="139" y="67"/>
+	<e:Image id="img_vip" source="main_btn_vip_png" x="137" y="125"/>
+	<e:Image x="151" y="130" source="main_VIP_png" touchEnabled="false"/>
+	<e:Image id="img_head" x="21" y="73" source="main_icon_touxiang_png"/>
+	<e:Image id="img_rank" source="main_btn_vip_png" x="266" y="125"/>
+	<e:Image source="main_txt_paihangbang_png" x="283" y="128" touchEnabled="false"/>
+	<e:Label id="lb_career" text="职业是什么" x="170" y="103" fontFamily="Microsoft YaHei" size="28" visible="false"/>
+	<e:Label id="lb_fightcap" text="9999999" x="238" y="87" fontFamily="Microsoft YaHei" size="24" textColor="0xf49424" visible="false"/>
+	<e:Label id="lb_vip" text="VIP15" x="57" y="118" fontFamily="Microsoft YaHei" size="26" visible="false"/>
+	<e:Group id="gp_fight_info" width="300" height="95" x="425" y="74">
+		<e:Image horizontalCenter="0" verticalCenter="0" source="main_bg_dangqiaguanqia_png" height="108" scale9Grid="115,50,64,42"/>
+		<e:Label id="lb_area" text="当前关卡：xxxx" y="-1" fontFamily="SimHei" size="20" scaleX="1" scaleY="1" horizontalCenter="0" textColor="0x2aa0de"/>
+		<e:Label id="lb_info_exp" text="xxxxxx经验/小时" y="32" fontFamily="SimHei" size="22" scaleX="1" scaleY="1" horizontalCenter="1.5" textColor="0xfff6e4"/>
+		<e:Label id="lb_info_money" text="xxxxxx金钱/小时" y="67" fontFamily="SimHei" size="22" scaleX="1" scaleY="1" horizontalCenter="1.5" textColor="0xfff6e4"/>
+		<e:Image source="main_exp_png" x="19" y="22"/>
+		<e:Image source="main_jinbi_png" x="23" y="65"/>
+	</e:Group>
+	<e:BitmapLabel id="bmlb_vip" x="201" y="128" text="99" scaleX="1" scaleY="1" font="main_vip_shuju_fnt" touchEnabled="false" letterSpacing="-10"/>
+	<e:BitmapLabel id="bmlb_fightcap" x="216" y="78" text="999999999" font="main_pingfen_shu_fnt"/>
+</e:Skin>

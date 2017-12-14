@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MustDoAchieveSkin" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image id="bg_mustdo1" source="task_bg_renwu_png" x="36.30000000000001" y="138.97" scaleX="1" scaleY="1" anchorOffsetY="0" height="609"/>
+	<e:Image id="bg_achieve0" source="shop_bg__png" x="20" y="758.66" touchEnabled="false" scaleX="1" scaleY="1"/>
+	<e:Image id="bt_takeall" source="common_btn_common_png" x="528.9300000000001" y="803.01"/>
+	<e:Label id="des_achievepercent0" text="当前成就完成度：" y="793" fontFamily="SimHei" size="24" x="57.30000000000001" scaleX="1" scaleY="1" textColor="0x6FAFE6"/>
+	<e:Label id="lb_achievepercent" text="50%" y="793" fontFamily="SimHei" size="24" x="249.3" scaleX="1" scaleY="1" textColor="0xF6A527"/>
+	<e:Label id="lb_achievevalue" text="5000000" y="833" fontFamily="SimHei" size="24" x="200.3" scaleX="1" scaleY="1" textColor="0xF6A527"/>
+	<e:Label id="des_achievevalue0" text="累计成就值：" y="833" fontFamily="SimHei" size="24" x="57.30000000000001" scaleX="1" scaleY="1" textColor="0x6FAFE6"/>
+	<e:Image id="img_takeall" source="task_txt_yijianlingqu_png" x="557" y="816" touchEnabled="false"/>
+	<e:Scroller id="scr_achieve" width="638" height="595.33" anchorOffsetY="0" anchorOffsetX="0" x="40.03" y="138.49" scaleX="1" scaleY="1">
+		<e:Group id="vp_achieve"/>
+	</e:Scroller>
+</e:Skin>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="EncounterPlayerItem" width="627" height="124" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="mail_btn_list_png" y="0" horizontalCenter="1"/>
+	<e:Image source="chat_bg_touxiang_putong_png" x="9" y="24"/>
+	<e:Image id="img_icon" source="chat_10001_png" x="19" y="34"/>
+	<e:Label id="lb_name" text="玩家名字" x="136" y="26" size="20" fontFamily="黑体" textColor="0x01acfe"/>
+	<e:Label id="lb_achievementNum" text="0000" x="330" y="75" size="20" fontFamily="黑体" textColor="0xffa200"/>
+	<e:Label id="lb_riseStar" text="0000" x="184" y="76" size="20" fontFamily="黑体" textColor="0xffa200"/>
+	<e:Label id="lb_lv" text="等级" x="286" y="27" size="20" fontFamily="黑体" textColor="0x00f829"/>
+	<e:Button id="btn_challenge" label="" x="461" y="43">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="common_btn_common_png" source.down="common_btn_common_huise_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:Image source="accident_txt_tiaozhan_png" x="511" y="55" touchEnabled="false"/>
+	<e:Image source="encounter_chengjiuzhi_png" x="286" y="68" anchorOffsetX="0" width="31" anchorOffsetY="0" height="31"/>
+	<e:Image source="243016_png" x="128" y="60" anchorOffsetX="0" width="48" anchorOffsetY="0" height="48"/>
+	<e:Image source="遭遇UI_jpg" x="-47" y="-329" alpha="0.5" locked="true" visible="false"/>
+</e:Skin>

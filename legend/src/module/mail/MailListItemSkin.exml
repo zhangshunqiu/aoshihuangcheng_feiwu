@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MailListItemSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image width="557" source="mail_btn_list_png" anchorOffsetX="0" anchorOffsetY="0" height="109"/>
+	<e:Label id="lb_theme0" text="竞技场奖励" x="44" y="23" size="24" anchorOffsetX="0" width="293" textColor="0x000000"/>
+	<e:Label id="lb_time" text="2017.11.15" x="40" y="65" size="20" textColor="0xbfbfbf"/>
+	<e:Image id="img_reward" width="78" height="78" x="449" y="15" source="icon_baoxiang_4_png" anchorOffsetX="0" anchorOffsetY="0"/>
+</e:Skin>

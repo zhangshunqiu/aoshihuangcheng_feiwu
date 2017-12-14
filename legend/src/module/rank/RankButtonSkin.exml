@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<e:Skin class="RankButtonSkin" states="up,down" minHeight="50" minWidth="100"
+        xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+    <e:Image  includeIn="up,down" source="ranking list_btn_hong_png" source.down="ranking list_huang_png" anchorOffsetX="0" width="185.1" anchorOffsetY="0" height="72.54" scale9Grid="21,13,135,40" horizontalCenter="0" verticalCenter="0"/>
+    <e:Label id="labelDisplay" size="30"
+             verticalAlign="middle" textAlign="center" text="{data}"  includeIn="up,down" fontFamily="SimHei" textColor.down="0xe4cea9" textColor="0x968a76" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" verticalCenter="0"/>
+</e:Skin>

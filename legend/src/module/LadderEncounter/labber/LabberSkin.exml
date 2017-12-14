@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="LabberSkin" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image width="720" height="1066" x="0" y="0" source="file:///d%3A/client/trunk/legend/resource/AAAAAAAAAAAAAA/%E5%A4%A9%E6%A2%AF%E4%BA%89%E9%9C%B8.png" visible="false"/>
+	<e:Image source="labber_bg5_png" x="30" y="120" anchorOffsetY="0" height="783"/>
+	<e:Group id="gp_up" x="181" y="133" touchEnabled="false" touchThrough="true">
+		<e:Image id="img_career" x="-190" y="-21" scaleX="1" scaleY="1" source="300012_png" width="370" height="430"/>
+		<e:Scroller id="scr_match" width="374" height="421" anchorOffsetY="0" anchorOffsetX="0" x="122" y="0">
+		<e:Group id="scr_group" touchEnabled="false" y="33"/>
+		</e:Scroller>
+		<e:Image id="img_winingstreak" x="0" y="32" source="labber_liansheng_png"/>
+		<e:Image source="labber_vs_png" x="66" y="63"/>
+		<e:Button id="btn_tips" label="?" x="-159" y="-64" scaleX="1" scaleY="1">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="common_btn_wenhao_png" source.down="common_btn_wenhao_png" source.disabled="common_btn_wenhao_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+	</e:Group>
+	<e:Group id="gp_middle" x="120" y="268" touchChildren="true" touchEnabled="false" touchThrough="true">
+		<e:Image source="labber_bg_huizhang_png" x="75" y="333"/>
+		<e:Label id="lb_name" text="梦之安魂曲" y="208" fontFamily="SimHei" size="24" x="0" scaleX="1" scaleY="1" textAlign="center" textColor="0xe4d1de"/>
+		<e:Label id="lb_tier" text="段位" y="233" fontFamily="SimHei" size="24" x="10" scaleX="1" scaleY="1" textAlign="left" textColor="0x22a322"/>
+		<e:Label id="lb_tierdetail" text="青铜五阶" y="313" fontFamily="SimHei" size="24" x="197" scaleX="1" scaleY="1" textAlign="center" textColor="0x22a322"/>
+		<e:Label text="胜率" y="260" fontFamily="SimHei" size="24" x="9" scaleX="1" scaleY="1" textAlign="center" textColor="0xf87500"/>
+		<e:Label id="lb_winingrate" text="0%" y="261" fontFamily="SimHei" size="24" x="81" scaleX="1" scaleY="1" textAlign="left" textColor="0xffea01"/>
+		<e:Button id="btn_reward" label="" x="349" y="337">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="common_btn_shuaxin_png" source.down="common_btn_shuaxin_png" source.disabled="common_btn_shuaxin_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Image id="img_default" source="main_btn_zhucheng_png" x="276" y="0" width="0" height="0"/>
+		<e:Image id="img_tier" x="75" y="337" source="labber_huizhang_qingtong_png"/>
+		<e:Image source="labber_xingxing_hui_png" x="165" y="347"/>
+		<e:Image source="labber_xingxing_hui_png" x="222" y="346"/>
+		<e:Image source="labber_xingxing_hui_png" x="279" y="347"/>
+		<e:Image id="img_star1" x="165" y="347" source="labber_xingxing_liang_png"/>
+		<e:Image id="img_star2" x="222" y="346" source="labber_xingxing_liang_png"/>
+		<e:Image id="img_star3" x="279" y="346" source="labber_xingxing_liang_png"/>
+		<e:Image source="labber_txt_tiantijiangli_png" x="382" y="357" touchEnabled="false"/>
+	</e:Group>
+	<e:Group id="gp_down" x="22" y="108" touchThrough="true" touchEnabled="false">
+		<e:Image source="monthcard_bg_tips_png" x="28" y="729"/>
+		<e:Button id="btn_rank" label="" x="37" y="618">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="labber_bg_chakanpaiming_png" source.down="labber_bg_chakanpaiming_png" source.disabled="labber_bg_chakanpaiming_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Image source="common_bg_shuju_png" x="461" y="631" anchorOffsetX="0" width="105"/>
+		<e:Label text="净场数：" y="632" fontFamily="SimHei" size="24" x="172" scaleX="1" scaleY="1" textAlign="center" textColor="0xffffff"/>
+		<e:Label id="lb_winmatch" text="0" y="632" fontFamily="SimHei" size="24" x="268" scaleX="1" scaleY="1" textAlign="center" textColor="0xffa200"/>
+		<e:Label id="lb_rank" text="0" y="663" fontFamily="SimHei" size="24" scaleX="1" scaleY="1" textColor="0xf6a527" touchEnabled="false" horizontalCenter="-223.5" width="72" textAlign="center"/>
+		<e:Label text="剩余场数:" y="633" fontFamily="SimHei" size="24" x="340" scaleX="1" scaleY="1" textAlign="center" textColor="0xffa200"/>
+		<e:Label id="lb_leftcount" text="1/2" y="634" fontFamily="SimHei" size="24" x="497" scaleX="1" scaleY="1" textAlign="center" textColor="0xf9fcfa"/>
+		<e:Label text="（每2小时恢复一次）" y="760" fontFamily="SimHei" size="20" x="242" scaleX="1" scaleY="1" textAlign="center" textColor="0xf87500"/>
+		<e:Button id="btn_match" label="" x="263" y="699" anchorOffsetX="0" width="149" anchorOffsetY="0" height="45">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="common_btn_common_png" source.down="common_btn_common_png" source.disabled="common_btn_common_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="btn_buytimes" label="" x="579" y="626" width="45">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="common_btn_jiahao_png" source.down="common_btn_jiahao2_png" source.disabled="common_btn_jiahao2_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Image source="medal_txt-chakanpaiming_png" x="46" y="623" touchEnabled="false"/>
+		<e:Image source="labber_txt_pipeiduishou_png" x="290" y="708" touchEnabled="false"/>
+	</e:Group>
+</e:Skin>

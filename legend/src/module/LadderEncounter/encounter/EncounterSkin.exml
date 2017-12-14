@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="EncounterSkin" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:customui="customui.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="common_bg_window_tips_png" y="132" horizontalCenter="1.5" anchorOffsetX="0" width="659" anchorOffsetY="0" height="780" visible="false"/>
+	<e:Image source="common_bg_window_tips_png" y="324" horizontalCenter="1" anchorOffsetX="0" width="646" anchorOffsetY="0" height="508"/>
+	<e:Button id="btn_rank" label="" x="121" y="843">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="common_btn_common_png" source.down="common_btn_common_huise_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:Image source="medal_txt-chakanpaiming_png" x="149" y="857" touchEnabled="false"/>
+	<e:Button id="btn_fightRecord" label="" x="455" y="844">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="common_btn_common_png" source.down="common_btn_common_huise_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:Image source="encounter_txt_zhandoujilu_png" x="485" y="857" touchEnabled="false"/>
+	<e:Label text="杀 戮 值：" x="178" y="152" size="20" fontFamily="黑体"/>
+	<e:Image source="chat_bg_touxiang_vip_png" x="60" y="148"/>
+	<e:Image source="chat_20002_png" x="68" y="157"/>
+	<e:Label id="lb_killNum" text="160" x="278" y="153" size="20" fontFamily="黑体" textColor="0x00f829"/>
+	<e:Label id="lb_rank" text="11名" x="278" y="180" size="20" fontFamily="黑体" textColor="0xffea00"/>
+	<e:Label id="lb_pkNum" text="110" x="278" y="208" size="20" fontFamily="黑体" textColor="0xffea00"/>
+	<e:Group id="gp_pkText" x="308" y="208">
+		<e:Label id="lb_pkTime" text="30" x="19" y="0" size="20" fontFamily="黑体" textColor="0xFFEA00" width="20" textAlign="center"/>
+		<e:Label text="（  分钟后可以挑战）" x="0" y="0" size="20" fontFamily="黑体" textColor="0xFFEA00"/>
+	</e:Group>
+	<e:Image id="img_reward" source="encounter_icon_meirijiangli_png" x="546" y="154"/>
+	<e:Image source="reborn_bg2_png" y="239" anchorOffsetX="0" width="385" horizontalCenter="22.5" anchorOffsetY="0" height="42"/>
+	<e:Label text="当前排名：" x="178" y="181" size="20" fontFamily="黑体"/>
+	<e:Label text="附近玩家" x="320" y="287" size="24" fontFamily="黑体" textColor="0x2fc9fb"/>
+	<e:Label text="成功击杀玩家增加25点pk值，达到100时无法继续挑战" x="153" y="251" size="18" fontFamily="黑体" textColor="0xf87500"/>
+	<e:Label text="PK    值：" x="179" y="209" size="20" fontFamily="黑体"/>
+	<e:Image id="img_question" source="common_btn_wenhao_png" x="15" y="68"/>
+	<e:Scroller id="scroller" width="625" height="496" x="48" y="330" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Group id="gp_scrollerGroup">
+			<e:List id="list" width="639" height="443" x="3" y="3" anchorOffsetX="0" anchorOffsetY="0"/>
+		</e:Group>
+	</e:Scroller>
+	<e:Group id="gp_refreshEnemy" x="0" y="703">
+		<e:Image source="mail_btn_list_png" y="0" x="0"/>
+		<e:Label text="后，新的敌人将出现，请做好准备" y="47" size="24" fontFamily="黑体" scaleX="1" scaleY="1" x="167" textColor="0xf87500"/>
+		<e:Label id="lb_time" text="60秒" y="48" size="24" fontFamily="黑体" scaleX="1" scaleY="1" x="118" textColor="0xc31e1c"/>
+	</e:Group>
+	<e:Image source="遭遇UI_jpg" top="0" horizontalCenter="0" alpha="0.5" locked="true" visible="false"/>
+</e:Skin>

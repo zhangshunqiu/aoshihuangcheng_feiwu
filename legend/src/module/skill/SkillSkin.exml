@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="SkillSkin" width="720" height="660" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
+		<e:Image source="skill_bg_1_png" touchEnabled="false" horizontalCenter="0" bottom="0" height="795"/>
+		<e:Image source="common_interface_tanchuang_1_png" scale9Grid="142,87,68,87" width="642" height="590" horizontalCenter="0" bottom="78"/>
+		<e:Button id="btn_career" label="职业技能" x="48.65" skinName="skins.ButtonSkin3" y="0"/>
+		<e:Button id="btn_reborn" label="转生技能" x="253.35" skinName="skins.ButtonSkin3" y="0"/>
+		<e:Button id="btn_back" label="" horizontalCenter="0.5" bottom="11">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="skill_btn_fanhui_png" source.down="skill_btn_fanhui_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Scroller id="scroller" width="620" height="515" y="55" horizontalCenter="0" x="30" scaleX="1" scaleY="1">
+			<e:Group y="-18"/>
+		</e:Scroller>
+		<e:Image source="skill_fanhui_png" x="336" touchEnabled="false" bottom="28"/>
+	</e:Group>
+</e:Skin>

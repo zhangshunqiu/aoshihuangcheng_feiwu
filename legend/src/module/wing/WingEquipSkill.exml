@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="WingEquipSkill" width="720" height="1000" xmlns:e="http://ns.egret.com/eui">
+	<e:Rect id="re_close" width="720" height="1000" x="0" y="0" alpha="0.5"/>
+	<e:Image source="common_interface_tanchuang_1_png" y="296" width="378" height="266" horizontalCenter="0"/>
+	<e:Image source="medal_bg_longjing_png" y="475" horizontalCenter="0"/>
+	<e:Image source="common_bg_tips_title_png" x="179" y="303" anchorOffsetX="0" width="365"/>
+	<e:Label text="破空一击" x="197" y="316" size="20" textColor="0x00ffe9" fontFamily="黑体"/>
+	<e:Label text="等级：" x="297" y="364" size="20" fontFamily="黑体" textColor="0xd9d0cc"/>
+	<e:Label text="所有神羽达到  阶" x="210" y="515" size="20" fontFamily="黑体" textColor="0xD9D0CC"/>
+	<e:Label text="这是快到如穿越空间而来的一刀" x="299" y="399" size="20" fontFamily="黑体" anchorOffsetY="0" height="46" anchorOffsetX="0" width="222" textColor="0xf87500"/>
+	<e:Label text="激活条件" x="212" y="485" size="20" fontFamily="黑体" anchorOffsetY="0" height="21" anchorOffsetX="0" width="105" textColor="0xffa900"/>
+	<e:Label text="1" x="354" y="364" size="20" fontFamily="黑体" textAlign="left" anchorOffsetX="0" width="46" anchorOffsetY="0" height="18" textColor="0xffa900"/>
+	<e:Label text="&lt;未激活&gt;" x="449" y="315" size="20" fontFamily="黑体" textColor="0xfe0000"/>
+	<e:Label text="4" x="335" y="515" size="20" fontFamily="黑体" textColor="0xFE0000" textAlign="center"/>
+	<e:Group x="190" y="361">
+		<e:Image source="common_default_png" x="0" y="0"/>
+		<e:Image source="wing_jineng_png" horizontalCenter="0" verticalCenter="0"/>
+	</e:Group>
+</e:Skin>

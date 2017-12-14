@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="SynthesisItemSkin" width="155" height="60" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing">
+    <e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
+        <e:Image id="img_item" source="common_btn_list_an_png" scaleX="1" scaleY="1" horizontalCenter="0"
+                 verticalCenter="0" />
+        <e:Label id="lb_name" text="xxxx等级" fontFamily="SimHei" textAlign="center" horizontalCenter="0" x="104"
+                 scaleX="1" scaleY="1" size="20" textColor="0xf1d4b2" bold="true" verticalCenter="0" />
+    </e:Group>
+</e:Skin>

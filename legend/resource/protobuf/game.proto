@@ -1,0 +1,2802 @@
+//import "pb_common.proto";
+
+message pbAccountLogin{
+        optional string   acc_name = 1;                // 账号名
+        optional int32    server_id = 2;               // 服务器id
+        optional string   platform = 3;                // 登录平台
+        optional string   os_type = 4; 		     	   // 系统类型：1 ios, 2 android
+}
+
+message pbAccountCreate{
+ 		optional string   acc_name = 1;                // 账号名
+ 		optional int32    server_id = 2;               // 服务器id
+		optional string   platform = 3;                // 登录平台
+		optional string   os_type = 4; 		     	   // 系统类型：1 ios, 2 android
+        optional string   nickname = 5; 	     	   // 角色名
+        optional int32    sex = 6; 		     		   // 性别1男2女
+        optional int32    career = 7;                  // 职业1战士2法师3道士
+}
+
+// ==== 角色登录===
+// 协议号10000
+// c >> 
+//		pbAccountLogin
+// s >> 
+//		pbResult  失败错误提示
+
+// ==== 创建角色 ====
+// 协议号10001
+// c >> s:
+//     pbAccountCreate
+// s >> c:
+//     pbResult  成功返回1 失败错误提示
+
+// ==== 心跳协议 ====
+// 协议号10002
+// c >> s:
+//     null
+// s >> c:
+//     pbResult  返回时间戳//import "pb_common.proto";
+
+message pbSceneMove{
+		optional int32	  obj_type =1;				  // 对象类型
+		optional int32	  obj_id   = 2;				 // 对象id
+        optional int32    begin_x = 3;                // 起始点x
+		optional int32    begin_y = 4;				  // 起始点y
+		optional int32	  end_x	  = 5;				  // 终点x
+		optional int32	  end_y	 = 6;				   // 终点y
+        optional int32    direction = 7;			 // 朝向
+}
+
+message pbSceneMoveRe{
+		optional int32	  obj_type =1;				  // 对象类型
+		optional int32	  obj_id   = 2;				 // 对象id
+		optional int32    begin_x = 3;                // 起始点x
+		optional int32    begin_y = 4;				  // 起始点y
+		optional int32	  end_x	  = 5;				  // 终点x
+		optional int32	  end_y	 = 6;				   // 终点y
+        optional int32    direction = 7;			 // 朝向
+}
+
+message pbSceneLeave{
+		repeated	pbSceneLeaveObj	list = 1;		// 对象集合
+}
+
+message pbSceneLeaveObj{
+		optional	int32 obj_type	= 1;		 // 对象type 
+		optional	int32 obj_id   = 2;			 //对象id
+}
+
+message pbSceneEnter{
+		optional   int32 map_id		= 1;		     //场景id
+		repeated   pbScenePlayer player_list  = 2;	//对象列表（玩家/玩家镜像)
+		repeated   pbSceneMon	 mon_list = 3;		//对象列表（怪物/宠物)
+		repeated   pbSceneDrop   drop_list = 4;    // 对象列表(掉落)
+		
+}
+
+message pbScenePlayer{
+		optional	int32 obj_type		= 1;		//对象类型
+		optional	int32 obj_id		= 2;        //对象id
+		optional	string name         = 3;		//对象昵称
+		optional	int32 sex			= 4;		//对象性别
+		optional	int32 career		= 5;        //对象职业
+		optional	int32 lv			= 6;		//对象等级
+		optional	int32 cur_hp		= 7;		//对象当前血量
+		optional	int32 cur_mp		= 8;		//对象当前魔法
+		optional	int32 hp			= 9;		//血量
+		optional	int32 mp			= 10;		//魔法
+		optional 	int32 begin_x 		= 11;       // 起始点x
+		optional 	int32 begin_y 		= 12;		// 起始点y
+		optional	int32 obj_owner_id	= 13;		// 对象主人id
+		optional	int32 weapon_id		= 14;		// 对象武器id
+		optional	int32 clothes_id	= 15;		// 对象衣服id
+		optional	int32 wing_id		= 16;		// 翅膀id
+}
+
+message pbSceneMon{
+		optional	int32 obj_type		= 1;		//对象类型
+		optional	int32 obj_id		= 2;        //对象id
+		optional	int32 obj_owner_type = 3;		// 对象主人类型
+		optional	int32 obj_owner_id	= 4;		// 对象主人id
+		optional	int32 mon_id		= 5;		// 怪物模板id
+		optional	int32 cur_hp		= 6;		//对象当前血量
+		optional	int32 cur_mp		= 7;		//对象当前魔法
+		optional	int32 hp			= 8;		//血量
+		optional	int32 mp			= 9;		//魔法
+		optional 	int32 begin_x 		= 10;       // 起始点x
+		optional 	int32 begin_y 		= 11;		// 起始点y
+}
+
+message pbSceneDrop{
+		optional	int32 obj_type		= 1;		//对象类型
+		optional	int32 obj_id		= 2;        //对象id
+		optional    int32 goods_id		= 3;		//道具id
+		optional	int32  x			= 4;		//坐标x
+		optional	int32  y			= 5;		//坐标y
+		optional	int32 goods_num		= 6;		//物品数量
+		optional	int32 own_id		= 7;		//归属玩家id
+		optional	int32 time_out		= 8;		//归属失效时间
+}
+
+message pbSceneOftenUpdateList{
+		repeated	pbSceneOftenUpdate list =1;		//对象更新列表
+}
+
+message pbSceneOftenUpdate{
+		optional	int32 obj_type		= 1;		//对象类型
+		optional	int32 obj_id		= 2;        //对象id
+		optional	int32 att_type		= 3;		//攻击方对象类型
+		optional	int32 att_id		= 4;        //攻击方对象id
+		optional	int32 cause			= 5;		//变更原因: 0 其他原因, 1 技能造成, 2 自身恢复, 3 换装, 4 升级,
+		optional	int32 harm_status	= 6;		//伤害状态: 1 miss, 2 普通, 3 暴击 4 反击
+		optional	int32 hp_change		= 7;		//血量变更值
+		optional	int32 mp_change		= 8;		//魔法变更值
+		optional	int32 cur_hp		= 9;		//当前血量
+		optional	int32 cur_mp		= 10;		//当前魔法
+}
+
+
+// ====切换场景(主动推送)===
+// 协议号11001
+// c >> 
+//		null
+// s >> 
+//		pbSceneEnter
+
+// ==== 场景移动 ====
+// 协议号11002
+// c >> s:
+//     pbSceneMove
+// s >> c:
+//     pbSceneMoveRe 
+
+// ==== 回到主城 ====
+// 协议号11003
+// c >> s:
+//     null
+// s >> c:
+//     null 
+
+
+// ==== 对象离屏 ====
+// 协议号11004
+// c >> s:
+//     null
+// s >> c:
+//     pbSceneLeave 
+
+// ==== 对象进屏或更新 ====
+// 协议号11005
+// c >> s:
+//     null
+// s >> c:
+//     pbSceneEnter
+
+
+
+// ==== 对象频繁数据更新 ====
+// 协议号11020
+// c >> s:
+//     null
+// s >> c:
+//     pbSceneOftenUpdateList//import "pb_common.proto";
+
+message pbSkillInfo{
+		optional	int32		hero_id =1;  //英雄唯一id
+        repeated	pbSkillList list = 2;
+}
+
+
+message pbSkillUse{
+		optional	int32	skill_id	= 1;  // 技能id
+		optional	int32	skill_lv	= 2;  // 技能等级
+		optional	int32 	direction	= 3;  // 朝向
+		optional	int32	target_type	= 4;  // 目标类型: 1 对象, 2 地面坐标
+		optional	int32	cast_type	= 5;  // 施法者类型
+		optional	int32	cast_id		= 6;  // 施法者id
+		optional	int32 	obj_type 	= 7;  //受击者id
+		optional	int32	obj_id		= 8;  //受击者类型
+		optional	int32	x			= 9;  // 坐标x
+		optional	int32	y			= 10; // 坐标y
+}
+
+message pbSkillUp{
+		optional	int32	hero_id		=1;//英雄唯一id
+		optional	int32   skill_id    =2;//技能id
+}
+
+message pbSkillUpRe{
+		optional	int32	hero_id		=1;//英雄唯一id
+		optional	int32   skill_id    =2;//技能id
+		optional	int32	skill_lv	=3;//技能等级
+}
+
+message pbSkillObj{
+		optional	int32	obj_type	=1;//对象类型
+		optional	int32	obj_id      =2;//对象id
+}
+
+message pbSkillBuff{
+		optional	int32	obj_type	=1;//对象类型
+		optional	int32	obj_id      =2;//对象id
+		optional    int32	buff_op		=3;//buff操作:1 添加,2 更新,3 删除
+		optional    int32   buff_id		=4;//buff_id
+		optional	int32   buff_time   =5;//倒计时
+}
+
+message pbSkillMove{
+		optional	int32	obj_type	=1;//对象类型
+		optional	int32	obj_id      =2;//对象id
+		optional	int32	begin_x		=3;//起始坐标x
+		optional	int32	begin_y		=4;//起始坐标y
+		optional	int32	end_x		=5;//结束坐标x
+		optional	int32	end_y		=6;//结束坐标y
+}
+
+message pbSkillTrigger{
+		repeated	pbSkillObj obj_list = 1; //目标列表
+		repeated    pbSkillBuff buff_list=2; //buff列表
+		repeated    pbSkillMove move_list=3; //移动列表
+		repeated	pbSkillMove Konck_list=4;//击退列表 
+}
+
+
+
+// ==== 获取技能列表===
+// 协议号12001
+// c >> 
+//		pbId32		//   英雄唯一id
+// s >> 
+//		pbSkillInfo
+
+// ==== 释放技能 ====
+// 协议号12002
+// c >> s:
+//     pbSkillUse
+// s >> c:
+//     pbSkillUse  成功返回 失败错误提示
+
+// ==== 一键升级技能====
+// 协议号12003
+// c >> s:
+//     pbId32		//   英雄唯一id
+// s >> c:
+//      pbSkillInfo  成功返回 失败错误提示 
+
+// ==== 升级技能====
+// 协议号12004
+// c >> s:
+//     pbSkillUp	  //技能id
+// s >> c:
+//     pbSkillUpRe     成功返回 失败错误提示
+
+// ==== 技能效果触发====
+// 协议号12010
+// c >> s:
+//     pbSkillObj
+// s >> c:
+//     pbSkillTrigger
+//import "pb_common.proto";
+
+message pbHookWave{
+	optional	int32	hook_id	=1;//挂机场景id
+	optional	int32   wave	= 2;//当前波数
+}
+
+message pbHookBattleResult{
+	optional	int32	hook_id	=1;//挂机场景id
+	optional	int32   result	= 2;//0失败1成功
+	optional	int64   exp    =3; //经验
+	repeated    pbHookGood list  =4; //物品列表
+}
+
+message pbHookUseSkill{
+		optional	int32	skill_id	= 1;  // 技能id
+		optional	int32	cast_type	= 2;  // 施法者类型
+		optional	int32	cast_id		= 3;  // 施法者id
+		repeated	pbHookObj target_list = 4;// 受击者列表
+		optional	int32	x			= 5;  // 目标坐标x
+		optional	int32	y			= 6; // 目标坐标y
+}
+
+message pbHookObj{
+		optional	int32	obj_type	=1;//对象类型
+		optional	int32	obj_id      =2;//对象id
+}
+
+message pbHookUseSkillRe{
+		repeated	pbHookHarm  harm_list = 1; //伤害列表
+		repeated    pbHookBuff buff_list=2;   //buff列表
+		repeated    pbHookCure Cur_list=3;    //回血列表
+}
+
+
+message pbHookHarm{
+		optional	int32 obj_type		= 1;		//对象类型
+		optional	int32 obj_id		= 2;        //对象id
+		optional	int32 harm_status	= 3;		//伤害状态: 1 miss, 2 普通, 3 暴击 4 反击
+		optional	int32 harm_value	= 4;		//伤害值
+		optional	int32 cur_hp		= 5;		//当前血量
+		optional	int32 cur_mp		= 6;		//当前魔法
+}
+
+message pbHookBuff{
+		optional	int32	obj_type	=1;//对象类型
+		optional	int32	obj_id      =2;//对象id
+		optional    int32	buff_op		=3;//buff操作:1 添加,2 更新,3 删除
+		optional    int32   buff_id		=4;//buff_id
+		optional	int32   buff_time   =5;//倒计时
+}
+
+message pbHookCure{
+		optional	int32	obj_type	=1;//对象类型
+		optional	int32	obj_id      =2;//对象id
+		optional	int32	add_hp		=3;//增加血量
+		optional	int32 	cur_hp		=4;//当前血量
+		optional	int32 	cur_mp		=5;//当前魔法
+}
+
+
+message pbHookReward{
+  optional  int32   time  = 1;      //挂机时长
+  optional  int32	scene_id =2;    //挂机层数
+  optional  int64   exp   = 3;		//获得经验
+  optional	int64   coin  = 4;      //获得金币
+  repeated  pbHookGood list  =5; //物品列表
+  optional  int32   type  = 6;      //0离线1在线
+}
+
+message pbHookGood{
+	  optional int32 type			= 1;		//类型
+      optional int32 id				= 2;		//id
+      optional int32 num		    = 3;		//数量
+}
+
+
+message pbHookTenReward{
+	  repeated  pbHookGood list  =1; //物品列表
+}
+
+// ==== 进入挂机副本===
+// 协议号13001
+// c >> 
+//		null
+// s >> 
+//		pbId32  副本id
+
+
+// ==== 挑战挂机boss===
+// 协议号13002
+// c >> 
+//		null
+// s >> 
+//		pbResult         // 成功返回场景，失败错误提示
+
+
+// ====挂机副本波数更新===
+// 协议号13003
+// c >> 
+//		null
+// s >> 
+//		pbHookWave      //主动更新
+
+
+// ====挂机副本挑战结果===
+// 协议号13004
+// c >> 
+//		null
+// s >> 
+//		pbHookBattleResult      //主动更新
+
+
+// ====挂机释放技能===
+// 协议号13005
+// c >> 
+//		pbHookUseSkill
+// s >> 
+//		pbHookUseSkillRe
+
+
+// ====设置自动战斗===
+// 协议号13006
+// c >> 
+//		pbId32			//0取消1自动
+// s >> 
+//		pbId32			//0取消1自动
+
+// ====挂机特殊技能释放返回===
+// 协议号13007
+// c >> 
+//		null			
+// s >> 
+//		pbHookUseSkill	
+
+
+//============离线/在线挂机奖励=============
+// 主动推送
+//协议号：13008
+// c >> s:
+//       null
+// s >> c:
+//		pbHookReward
+
+//============获取快速挂机次数=============
+//协议号：13009
+// c >> s:
+//       null
+// s >> c:
+//		pbResult
+
+
+//============快速挂机奖励=============
+//协议号：13010
+// c >> s:
+//       null
+// s >> c:
+//		pbHookReward
+
+//============领取每10关boss奖励=============
+//协议号：13011
+// c >> s:
+//       null
+// s >> c:
+//		pbHookTenReward   // 成功返回，失败错误提示
+
+//============领取到10关boss奖励最高关卡=============
+//协议号：13012
+// c >> s:
+//       null
+// s >> c:
+//		pbId32   // 
+
+
+//============领取到10关boss奖励最高关卡=============
+//协议号：13012
+// c >> s:
+//       null
+// s >> c:
+//		pbId32   //
+
+//============触发随机boss事件=============
+// 主动推送
+//协议号：13013
+// c >> s:
+//       null
+// s >> c:
+//		pbResult   //1触发了随机事件
+
+
+//============挑战随机boss事件=============
+//协议号：13014
+// c >> s:
+//       null
+// s >> c:
+//		pbId32  		副本id
+
+
+      //import "pb_common.proto";
+
+message pbPlayerGoods{
+	optional int32     id = 1;            //唯一id
+	optional int32     good_id = 2;       //基础id
+	optional int32     type = 3;          //类型1道具，2装备
+	optional int32     num = 4;           //数量
+	optional pbEquip   equip = 5;         //装备属性
+}
+
+message pbGoodList{
+	repeated pbPlayerGoods playergoods = 1; //物品列表
+    optional int32         total = 2;       //总格子数
+}
+
+message pbGoodListRefresh{
+	repeated pbPlayerGoods playergoods = 1; //刷新的物品列表
+}
+
+message pbGoodModel{
+      optional int32 id				= 1;		//唯一id
+      optional int32 num		    = 2;		//数量
+}
+
+message pbGoodSmelt{
+	  repeated int32  options       = 1;   //[1,1,0,1,1]白、绿、蓝、紫、高战力(1是,0否)
+}
+
+message pbGoodWingSwitch{
+	  optional int32 good_id		= 1;		//基础id
+	  optional int32 to_type		= 2;		//转换到到类型
+}
+
+message pbGoodCombine{
+	  optional int32 type		    = 1;	    //1宝石，2翅膀装备
+	  optional int32 to_good_id		= 2;		//要合成的物品id
+}
+
+message pbToGood{
+	  optional int32 good_id		= 1;		//基础id
+	  optional int32 num		    = 2;		//数量
+}
+
+message pbGoodCombineRe{
+	  optional int32 type		    = 1;	    //1宝石，2翅膀装备
+	  repeated pbToGood to_good_list = 2;	//合成的物品列表
+}
+
+message pbOrangeSmelt{
+	  optional int32     id = 1;            //唯一id
+}
+
+
+// ====玩家背包===
+// 协议号14001
+// c >> 
+//		null
+// s >> 
+//		pbGoodList        //背包物品列表
+
+// ====玩家背包刷新===
+// 协议号14002
+// c >> 
+//		null
+// s >> 
+//		pbGoodListRefresh        //刷新的物品列表
+
+
+// ====使用道具===
+// 协议号14003
+// c >> 
+//		pbGoodModel
+// s >> 
+//		pbResult         // 成功返回，失败错误提示
+
+// ====出售道具===
+// 协议号14004
+// c >> 
+//		pbGoodModel
+// s >> 
+//		pbResult         // 成功返回，失败错误提示
+
+
+// ====装备熔炼===
+// 协议号14011
+// c >> 
+//		pbGoodSmelt
+// s >> 
+//		pbResult         // 成功返回，失败错误提示
+
+
+// ====翅膀装备转换===
+// 协议号14012
+// c >> 
+//		pbGoodWingSwitch
+// s >> 
+//		pbResult         // 成功返回，失败错误提示
+
+// ====合成===
+// 协议号14013
+// c >> 
+//		pbGoodCombine
+// s >> 
+//		pbGoodCombine         // 成功返回，失败错误提示
+
+// ====一键合成===
+// 协议号14014
+// c >> 
+//		pbGoodCombine
+// s >> 
+//		pbGoodCombineRe       // 成功返回，失败错误提示
+
+
+// ====橙装熔炼===
+// 协议号14015
+// c >> 
+//		pbOrangeSmelt
+// s >> 
+//		pbOrangeSmelt         // 成功返回，失败错误提示
+
+
+//import "pb_common.proto";
+
+message pbEquipInfo{
+	optional int32 part = 1;          //位置
+	optional int32 lv = 2;            //强化等级
+	optional int32 star = 3;          //升星等级
+	optional int32 good_id = 4;       //装备基础表id
+    optional pbEquip equip = 5;       //装备属性
+}
+
+message pbSpEquip{
+	optional int32 pos = 1;           //位置
+	optional int32 id  = 2;           //特殊装备基础表id
+	repeated int32 peaces = 3;        //碎片id列表, 0未激活 
+}
+
+message pbStoneList{
+	optional int32 hole = 1;          //孔位置
+	optional int32 stone_id = 2;      //宝石id
+}
+
+message pbStoneInfo{
+	optional int32 part = 1;          //位置
+	repeated pbStoneList sotne_list = 2; //宝石列表
+}
+
+message pbWingEquip{
+	optional int32 pos = 1;           //位置
+	optional int32 good_id = 2;       //装备基础表id
+}
+
+message pbWingInfo{
+	optional int32 wing_id =  1;          //羽翼id
+	optional int32 exp     =  2;          //当前经验
+	optional int32 score   =  3;          //当前评分
+	repeated pbWingEquip wing_equip = 4;  //装备列表
+}
+
+message pbHero{
+    optional int32 id = 1;               //伙伴唯一id
+    optional int32 type = 2;             //1主角,2其他
+    optional int32 job = 3;              //伙伴职业
+    optional int32 sex = 4;              //伙伴性别
+    optional int32 score = 5;              //评分
+    repeated pbEquipInfo equip_info = 6; //装备列表
+    repeated pbSpEquip   sp_equip   = 7; //特殊装备列表
+    repeated pbSkillList skill_list = 8; //技能列表
+    repeated pbStoneInfo stone_info = 9; //宝石列表
+    optional pbWingInfo  wing_info  = 10; //翅膀
+    repeated pbAttribute attribute  = 11;//详细属性
+} 
+
+message pbHeroList{
+	repeated pbHero hero = 1;   //
+}
+
+message pbEquipModelWear{
+    optional int32 id = 1;               //伙伴唯一id
+    optional int32 part = 2;             //位置
+    optional int32 player_good_id=3;     //玩家道具唯一id
+}
+
+message pbEquipModelRemove{
+    optional int32 id = 1;               //伙伴唯一id 
+    optional int32 part = 2;             //位置
+}
+
+message pbEquipModel{
+    optional int32 id = 1;               //伙伴唯一id 
+    optional int32 part = 2;             //位置
+}
+
+
+message pbStoneModel{
+    optional int32 id = 1;               //伙伴唯一id 
+    optional int32 part = 2;             //位置
+    optional int32 hole = 3;             //孔
+    optional int32 player_good_id=4;     //玩家道具唯一id
+}
+
+message pbStoneModelOne{
+    optional int32 id = 1;               //伙伴唯一id
+}
+
+message pbStoneModelOneRe{
+    optional int32 id = 1;               //伙伴唯一id
+    repeated pbStoneInfo stone_info = 2; //宝石列表
+} 
+
+message pbStoneUpModel{
+    optional int32 id = 1;               //伙伴唯一id 
+    optional int32 part = 2;             //位置
+    optional int32 hole = 3;             //孔
+}
+
+message pbStoneUpModelRe{
+    optional int32 id = 1;               //伙伴唯一id 
+    optional int32 part = 2;             //位置
+    optional int32 hole = 3;             //孔
+    optional int32 stone_id = 4;        //宝石id
+}
+
+
+message pbHeroActive{
+	optional int32 sex = 1;               //伙伴性别 
+    optional int32 job = 2;               //伙伴职业
+}
+
+message pbSpEquipModel{
+    optional int32 id = 1;               //伙伴唯一id 
+    optional int32 pos = 2;              //位置
+}
+
+message pbSpEquipPeaceModel{
+   	optional int32 id = 1;               //伙伴唯一id 
+    optional int32 pos = 2;              //位置
+    optional int32 num = 3;              //碎片num
+}
+
+message pbWingModel{
+	optional int32 id = 1;               //伙伴唯一id
+}
+
+message pbWingModelUp{
+	optional int32 id = 1;               //伙伴唯一id
+	optional int32 type = 2;             //1金币,2羽毛
+}
+
+message pbWingModelRe{
+	optional int32 id = 1;               //伙伴唯一id
+	optional pbWingInfo  wing_info  = 2; //翅膀
+}
+
+message pbWingEquipModel{
+	optional int32 id = 1;               //伙伴唯一id
+	optional int32 pos = 2;              //位置
+	optional int32 good_id = 3;          //装备基础表id
+}
+
+// ====玩家伙伴===
+// 协议号15001
+// c >> 
+//		null
+// s >> 
+//		pbHeroList        //伙伴列表
+
+// ===穿戴装备===
+// 协议号15002
+// c >> 
+//		pbEquipModelWear
+// s >> 
+//		pbResult         // 成功返回，失败错误提示
+
+// ===卸下装备===
+// 协议号15003
+// c >> 
+//		pbEquipModelRemove
+// s >> 
+//		pbResult         // 成功返回，失败错误提示
+
+
+// ===装备强化===
+// 协议号15004
+// c >> 
+//		pbEquipModel
+// s >> 
+//		pbEquipModel      	// 成功返回，失败错误提示
+
+// ===装备一键强化===
+// 协议号15005
+// c >> 
+//		pbEquipModel
+// s >> 
+//		pbEquipModel     	// 成功返回，失败错误提示
+
+// ===装备升星===
+// 协议号15006
+// c >> 
+//		pbEquipModel
+// s >> 
+//		pbEquipModel         // 成功返回，失败错误提示
+
+
+// ===镶嵌宝石===
+// 协议号15007
+// c >> 
+//		pbStoneModel
+// s >> 
+//		pbStoneModel         // 成功返回，失败错误提示
+
+// ===一键镶嵌===
+// 协议号15008
+// c >> 
+//		pbStoneModelOne
+// s >> 
+//		pbStoneModelOneRe      // 成功返回，失败错误提示
+
+// ===宝石升级===
+// 协议号15009
+// c >> 
+//		pbStoneUpModel
+// s >> 
+//		pbStoneUpModelRe          // 成功返回，失败错误提示
+
+// ===橙装升级===
+// 协议号15010
+// c >> 
+//		pbEquipModel
+// s >> 
+//		pbEquipModel           // 成功返回，失败错误提示
+
+
+
+// ====激活伙伴===
+// 协议号15011
+// c >> 
+//		pbHeroActive
+// s >> 
+//		pbHeroList        //成功返回伙伴列表，失败错误提示
+
+
+// ===特殊装备激活===
+// 协议号15012
+// c >> 
+//		pbSpEquipModel
+// s >> 
+//		pbSpEquipModel           // 成功返回，失败错误提示
+
+// ===特殊装备升级===
+// 协议号15013
+// c >> 
+//		pbSpEquipModel
+// s >> 
+//		pbSpEquipModel           // 成功返回，失败错误提示
+
+// ===特殊装备碎片激活===
+// 协议号15014
+// c >> 
+//		pbSpEquipPeaceModel
+// s >> 
+//		pbSpEquipPeaceModel           // 成功返回，失败错误提示
+
+
+// ====激活羽翼===
+// 协议号15021
+// c >> 
+//		pbWingModel
+// s >> 
+//		pbWingModelRe        //成功返回伙伴列表，失败错误提示
+
+// ====提升羽翼===
+// 协议号15022
+// c >> 
+//		pbWingModelUp
+// s >> 
+//		pbWingModelRe        //成功返回伙伴列表，失败错误提示
+
+// ====羽翼升阶===
+// 协议号15023
+// c >> 
+//		pbWingModel
+// s >> 
+//		pbWingModelRe        //成功返回伙伴列表，失败错误提示
+
+// ====羽翼直升===
+// 协议号15024
+// c >> 
+//		pbWingModel
+// s >> 
+//		pbWingModelRe        //成功返回伙伴列表，失败错误提示
+
+// ====羽翼装备一键穿戴===
+// 协议号15025
+// c >> 
+//		pbWingModel
+// s >> 
+//		pbWingModelRe        //成功返回伙伴列表，失败错误提示
+
+// ====羽翼装备升阶===
+// 协议号15026
+// c >> 
+//		pbWingEquipModel
+// s >> 
+//		pbWingEquipModel        //成功返回伙伴列表，失败错误提示
+
+
+
+//import "pb_common.proto";
+
+message pbShop{
+	optional int32 id			= 1;		//商店配表id
+	optional int32 discount		= 2;		//折扣(百分比)
+	optional int32 type			= 3;		//1道具2装备
+	optional int32 good_id 		= 4;       	//(装备/道具)基础表id
+	optional int32 num			= 5;		//数量
+	optional int32 price        = 6;        //价格
+	optional int32 money_type   = 7;        //货币1金币,2元宝
+    optional pbEquip equip 		= 8;       	//装备属性
+}
+
+message pbShopMystery{
+	repeated pbShop shop        = 1;   	    //商品列表
+	optional int32 left_time	= 2;        //刷新倒计时
+	optional int32 refresh_num	= 3;        //今天已刷新次数
+}
+
+message pbShopBuy{
+	optional int32 id			= 1;		//商店配表id
+	optional int32 limit		= 2;		//已购买次数
+}
+	
+message pbShopLimit{
+	repeated pbShopBuy shop_buy    = 1;   	//已过买过商品列表
+	optional int32 num      	   = 2;     //当前批次
+	optional int32 left_time	   = 3;     //刷新倒计时
+}
+
+message pbShopItem{
+    optional int32 type			= 1;		//商城类型，1神秘商店2限购商店3普通商店
+	optional int32 id			= 2;		//商店配表id
+	optional int32 num			= 3;		//数量
+}
+
+// ====神秘商城列表===
+// 协议号16001
+// c >> 
+//		null
+// s >> 
+//		pbShopMystery        //
+
+// ====限购商城列表===
+// 协议号16002
+// c >> 
+//		null
+// s >> 
+//		pbShopLimit          //
+
+// ====购买===
+// 协议号16003
+// c >> 
+//		pbShopItem
+// s >> 
+//		pbShopItem         // 成功返回，失败错误提示
+
+// ====刷新神秘商店===
+// 协议号16004
+// c >> 
+//		null
+// s >> 
+//		pbShopMystery       // 成功返回，失败错误提示
+//import "pb_common.proto";
+
+message pbChatMsg{
+	optional int32 player_id		= 1;	//玩家id（id为0时为系统信息）
+	optional string   player_name	= 2;	//玩家名
+	optional int32 icon_id			= 3;	//头像id
+	optional int32 position_id		= 4;	//玩家id
+	optional int32 vip_id			= 5;	//vip id
+	optional int32 time				= 6;	//发信息时间（时间戳）
+	optional string content			= 7;	//聊天内容
+	optional int32 channel			= 8;	//频道
+	optional int32 month_card		= 9;	// 月卡（0没有 1有）
+	optional int32 config_id		= 10;	// 配置表id
+	repeated string	args			= 11;	// 参数
+}
+
+
+message pbChatGetMsg{
+	optional int32 page			= 1;	//页数
+	optional int32 channel		= 2;	//频道（1所有，2世界，3工会，4系统）
+}
+	
+message pbChatGetMsgResult{
+	optional int32 page			= 1;	//页数
+	optional int32 total_page	= 2;	//总页数
+	optional int32 channel	   	= 3;    //频道（1所有，2世界，3工会，4系统）
+	repeated pbChatMsg msg_list = 4;   	//聊天信息列表
+
+}
+
+message pbChatSendMsg{
+    optional int32 channel	   	= 1;    //频道
+	optional string content		= 2;	//聊天内容
+}
+
+
+message pbChatRcvMsg{
+    optional int32 channel	   	= 1;    //频道
+	optional pbChatMsg msg		= 2;	//聊天信息
+}
+
+message pbChatDeny{
+	optional int32 player_id	= 1;	//玩家id
+}
+
+// ====获取聊天频道内容===
+// 协议号17001
+// c >> 
+//		pbChatGetMsg
+// s >> 
+//		pbChatGetMsgResult
+
+// ====发送聊天信息===
+// 协议号17002
+// c >> 
+//		pbChatSendMsg
+// s >> 
+//		null
+
+// ====接收聊天信息===
+// 协议号17003
+// c >> 
+//		null
+// s >> 
+//		pbChatRcvMsg
+
+
+// ====屏蔽玩家===
+// 协议号17004
+// c >> 
+//		pbChatDeny
+// s >> 
+//		null
+
+
+
+// 每日任务
+//import "pb_common.proto";
+// 任务奖励结构
+message pbTaskDailyReward{
+	optional int32 id	= 1;	//物品id
+	optional int32 num	= 2;	//物品数量
+}
+
+// 每日任务结构
+message pbTaskDaily{
+	optional int32 task_id		= 1;	//任务id
+	optional string task_name	= 2;	//任务名
+	optional int32 finish_num	= 3;	//已完成数量
+	optional int32 need_num		= 4;	//需要完成数量
+	optional int32 state		= 5;	//任务状态（0未完成，1未领取奖励，2已领取奖励）
+	repeated pbTaskDailyReward reward_list	= 6;	//奖励列表
+}
+
+// 活跃度结构
+message pbLivenessReward{
+	optional int32 liveness		= 1;	//活跃度
+	optional int32 reward_id	= 2;	//物品id
+	optional int32 reward_num	= 3;	//物品数量
+	optional int32 state 		= 4;	//状态（0未完成，1未领取奖励，2已领取奖励）
+}
+
+// 打开界面
+message pbTaskDailyInterface{
+	repeated pbTaskDaily task_list		= 1;	//任务列表
+	optional int32 liveness_num			= 2;	//当前活跃度
+	repeated pbLivenessReward liveness_reward_list 	= 3;	//活跃度奖励列表
+}
+	
+// 领取每日任务奖励	
+message pbTaskDailyGetTaskReward{
+	optional int32 task_id			= 1;	//任务id
+}
+
+
+// 领取活跃度奖励	
+message pbTaskDailyGetLivenessReward{
+	optional int32 liveness			= 1;	//活跃度
+}
+
+
+// ====每日任务界面===
+// 协议号 18001
+// c >> 
+//		null
+// s >> 
+//		pbTaskDailyInterface
+
+// ====领取每日任务奖励===
+// 协议号 18002
+// c >> 
+//		pbTaskDailyGetTaskReward
+// s >> 
+//		pbResult         // 成功返回，失败错误提示
+
+// ====领取活跃度奖励===
+// 协议号 18003
+// c >> 
+//		pbTaskDailyGetLivenessReward
+// s >> 
+//		pbResult         // 成功返回，失败错误提示
+
+
+// ====数据重置===
+// 协议号 18004
+// c >> 
+//		null
+// s >> 
+//		null
+
+
+
+// ================ 成就 ================
+//import "pb_common.proto";
+// 成就奖励结构
+message pbAchieveReward{
+	optional int32 id	= 1;	//物品id
+	optional int32 num	= 2;	//物品数量
+}
+
+// 成就结构
+message pbAchieve{
+	optional int32 id			= 1;	//成就id
+	optional string name		= 2;	//成就名
+	optional int32 finish_num	= 3;	//已完成数量
+	optional int32 need_num		= 4;	//需要完成数量
+	optional int32 state		= 5;	//成就状态（0未完成，1未领取奖励，2已领取奖励）
+	repeated pbAchieveReward reward_list	= 6;	//奖励列表
+}
+
+// 勋章排行榜结构
+message pbMedalRank{
+	optional int32 rank			= 1; 	// 排名
+	optional int32 player_id	= 2;	// 玩家id
+	optional string name		= 3;	// 玩家名
+	optional int32 lv			= 4;	// 等级
+}
+
+
+// 打开界面
+message pbAchieveInterface{
+	repeated pbAchieve achieve_list		= 1;	//成就列表
+	optional int32 p_complete			= 2;	//完成度（百分比）
+	optional int32 total_achieve 		= 3;	//累计成就值
+}
+	
+// 领取某个成就奖励	
+message pbAchieveGetReward{
+	optional int32 achieve_id			= 1;	//成就id
+}
+
+// 勋章界面
+message pbMedalInterface{
+	optional int32 power			= 1;	// 战斗力
+	optional int32 achieve_not_get 	= 2;	// 未领取成就
+	optional int32 lv				= 3;	// 等级
+	optional int32 achieve_own		= 4;	// 拥有的成就
+	optional int32 achieve_upgrade	= 5;	// 升级需要的成就（会有achieve_own > achieve_upgrade的情况）
+	repeated pbMedalRank rank_list	= 6;	// 排行榜
+	optional int32 month_card		= 7;	// 是否有月卡 （0没 1有）
+}
+
+
+
+// ====成就界面===
+// 协议号 19001
+// c >> 
+//		null
+// s >> 
+//		pbAchieveInterface
+
+// ====领取成就奖励===
+// 协议号 19002
+// c >> 
+//		pbAchieveGetReward
+// s >> 
+//		pbResult         // 成功返回，失败错误提示
+
+// ====一键领取成就奖励===
+// 协议号 19003
+// c >> 
+//		null
+// s >> 
+//		pbResult         // 成功返回，失败错误提示
+
+
+// ====领取未领取成就===
+// 协议号 19004
+// c >> 
+//		null
+// s >> 
+//		pbResult         // 成功返回，失败错误提示
+
+
+// ====勋章界面===
+// 协议号 19005
+// c >> 
+//		null
+// s >> 
+//		pbMedalInterface         
+
+// ====勋章升级===
+// 协议号 19006
+// c >> 
+//		null
+// s >> 
+//		pbResult         // 成功返回，失败错误提示       
+
+
+
+
+//import "pb_common.proto";
+
+message pbGetLifeExpInfo{
+		optional int32 type = 1;             //1降级,2高级转生,3超级转生
+		optional int32 used_times = 2;       //已用次数
+}
+
+message pbGetLifeExp{
+		repeated pbGetLifeExpInfo get_life_exp_list =1 ; //
+}
+
+message pbGetLifeExpType{
+		optional int32 type = 1;             //1降级,2高级转生,3超级转生
+}
+
+// ====转生===
+// 协议号20001
+// c >> 
+//		null
+// s >> 
+//		pbResult         // 成功返回，失败错误提示
+
+
+// ====获得修为列表===
+// 协议号20002
+// c >> 
+//		null
+// s >> 
+//		pbGetLifeExp     // 成功返回，失败错误提示
+
+
+// ====兑换修为===
+// 协议号20003
+// c >> 
+//		pbGetLifeExpType
+// s >> 
+//		pbResult         // 成功返回，失败错误提示// ================ 邮件 ================
+//import "pb_common.proto";
+
+// 附件结构
+message attachment{
+	optional int32 type	= 1;	// 类型（1物品 2装备）
+	optional int32 id	= 2;	// 物品id/装备id
+	optional int32 num	= 3;	// 数量
+}
+
+
+// 获取邮件列表
+message pbMailGetList{
+	optional int32 page	= 1;	//页
+}
+
+// 邮件结构
+message pbMail{
+	optional int32 id			= 1;	// 邮件id
+	optional int32 conf_id		= 2;	// 配置id
+	repeated string	args		= 3;	// 参数
+	repeated pbGood attachment_list = 4;	// 附件
+	optional int32 attachment_state	= 5;	// 附件状态 （0未领取， 1已领取）
+	optional int32 time			= 6;	// 时间（时间戳）
+}
+
+// 邮件列表
+message pbMailList{
+	optional int32 page			= 1;
+	optional int32 total_page	= 2;
+	repeated pbMail mail_list	= 3;
+}
+
+// 打开邮件
+message pbMailOpen{
+	optional int32 id		= 1;	// 邮件id
+}
+
+// 领取附件
+message pbMailGetAttachment{
+	optional int32 id		= 1;	// 邮件id
+}
+
+// 领取附件结果
+message pbMailGetAttachmentRes{
+	optional int32 id		= 1;	// 邮件id
+	optional int32 res		= 2;	// 结果 0背包不足 1成功
+}
+
+// 一键领取
+message pbMailGetAllAttachmentRes{
+	repeated pbId32	id_list	= 1;	// 附件领取成功的邮件id列表
+}
+
+// 所有邮件列表（不分页）
+message pbMailAllList{
+	repeated pbMail mail_list	= 1;
+}
+
+// ====邮件列表===
+// 协议号 21001
+// c >> 
+//		pbMailGetList
+// s >> 
+//		pbMailList
+
+// ====打开邮件===
+// 协议号 21002
+// c >> 
+//		pbMailOpen
+// s >> 
+//		null
+
+// ====领取附件===
+// 协议号 21003
+// c >> 
+//		pbMailGetAttachment
+// s >> 
+//		pbMailGetAttachmentRes
+
+// ====一键领取===
+// 协议号 21004
+// c >> 
+//		null
+// s >> 
+//		pbMailGetAllAttachmentRes
+
+
+// ====收到邮件===
+// 协议号 21005
+// c >> 
+//		null
+// s >> 
+//		pbMail
+
+
+// ====所有邮件列表===
+// 协议号 21006
+// c >> 
+//		null
+// s >> 
+//		pbMailAllList// ================ 福利 ================
+//import "pb_common.proto";
+
+// 福利等级
+message pbWelfareLv{
+	optional int32	lv 			= 1;	//唯一id
+	optional int32	state 		= 2; 	//状态（0不能领， 1可领， 2已领） 
+	optional int32	left_num	= 3;	// 剩余数量（-1未不限数量）
+}
+
+// 福利界面
+message pbWelfareInterface{
+	repeated pbWelfareLv list = 1;		// 等级列表
+	
+}
+
+// 领取福利
+message pbGetWelfare{
+	optional int32 lv	= 1;	// 等级
+}
+
+
+// 福利礼包数量变更
+message pbWelfareChange{
+	optional int32 lv			= 1;
+	optional int32 left_num		= 2;	
+}
+
+// ====福利界面===
+// 协议号 22001
+// c >> 
+//		null
+// s >> 
+//		pbWelfareInterface
+
+// ====领取福利===
+// 协议号 22002
+// c >> 
+//		pbGetWelfare
+// s >> 
+//		pbResult  成功返回1 失败错误提示
+
+// ====福利礼包数量变更===
+// 协议号 22003
+// s >> 
+//		pbWelfareChange
+
+// ================ 签到 ================
+//import "pb_common.proto";
+
+// 额外奖励
+message pbSignExtReward{
+	optional int32 day			= 1;	// 天数
+	optional int32 state		= 2;	// 状态（0不能领， 1可领取 2已领取）
+}
+
+// 界面
+message pbSignInterface{
+	optional int32	signed_num 			= 1;	// 已签到天数
+	optional int32	can_sign_num 		= 2;	// 可签到天数
+	optional int32	fix_num				= 3;	// 可补签天数
+	repeated pbSignExtReward extreward_list = 4; // 额外奖励列表
+}
+
+// 领取额外奖励
+message pbSignGetExtReward{
+	optional int32 day	= 1;
+}
+
+// ====签到界面===
+// 协议号 23001
+// c >> 
+//		null
+// s >> 
+//		pbSignInterface
+
+// ====签到===
+// 协议号 23002
+// c >> 
+//		null
+// s >> 
+//		pbResult  成功返回1 失败错误提示
+
+// ====补签===
+// 协议号 23003
+// c >> 
+//		null
+// s >> 
+//		pbResult  成功返回1 失败错误提示
+
+// ====领取额外奖励===
+// 协议号 23004
+// c >> 
+//		pbSignGetExtReward
+// s >> 
+//		pbResult  成功返回1 失败错误提示
+
+// ====刷新通知===
+// 协议号 23005
+// c >> 
+//		null
+// s >> 
+//		null
+
+
+
+// ================ vip ================
+//import "pb_common.proto";
+
+message pbVipReward{
+	optional int32 lv		= 1; //vip等级
+	optional int32 state	= 2; //状态（0不能领 1可领 2已领）
+}
+
+// vip界面
+message pbVipInterface{
+	optional int32 up_gold				= 1; // 再充xx元宝升级
+	repeated pbVipReward reward_list	= 2; // 奖励列表
+}
+
+// 领取vip奖励
+message pbVipGetRreward{
+	optional int32 lv	= 1; // vip等级
+}
+
+// ====vip界面===
+// 协议号 24001
+// c >> 
+//		null
+// s >> 
+//		pbVipInterface
+
+// ====领取vip奖励===
+// 协议号 24002
+// c >> 
+//		pbVipGetRreward
+// s >> 
+//		pbResult  成功返回1 失败错误提示// ================ 月卡 ================
+//import "pb_common.proto";
+
+message pbMonthCardInterface{
+	optional int32 left_time	= 1;	// 月卡剩余时间
+	optional int32 day			= 2;	// 今天月卡的天数（day>=1）
+	optional int32 reward_num	= 3;	// 未领取的奖励数
+}
+
+// ====月卡界面===
+// 协议号 25001
+// c >> 
+//		null
+// s >> 
+//		pbMonthCardInterface
+
+
+// ====领取月卡奖励===
+// 协议号 25002
+// c >> 
+//		null
+// s >> 
+//		pbResult  成功返回1 失败错误提示
+
+// ====购买月卡推送===
+// 协议号 25003
+// s >> 
+//		pbResult  1首次 2续费//import "pb_common.proto";
+
+
+message pbTreasureLog{
+	optional int32 player_id = 1;               //玩家id
+	optional string player_nick = 2;            //玩家名字
+	optional int32 good_type = 3;               //类型1道具，2装备
+	optional int32 good_id   = 4;               //id
+	optional int32 num   = 5;                   //num
+}
+
+message pbTreasureLogList{
+	repeated pbTreasureLog treasure_log = 1;    //寻宝记录列表
+}
+
+message pbTreasureInfo{
+	optional int32 open_days = 1;               //开服天数	
+	repeated pbTreasureLog treasure_log = 2;    //寻宝记录列表
+}
+
+message pbTreasure{
+	optional int32 good_type = 1;               //类型1道具，2装备
+	optional int32 good_id   = 2;               //id
+	optional int32 num       = 3;               //num
+}
+
+message pbTreasureList{
+	repeated pbTreasure treasure = 1;            //
+}
+
+// ====寻宝界面===
+// 协议号26001
+// c >> 
+//		null
+// s >> 
+//		pbTreasureInfo        //寻宝界面
+
+// ====寻宝日志推送=== 
+// 协议号26002
+// c >> 
+//		null
+// s >> 
+//		pbTreasureLogList     //寻宝记录列表
+
+// ====寻宝1次===
+// 协议号26003
+// c >> 
+//		null
+// s >> 
+//		pbTreasureList        //获得列表
+
+// ====寻宝10次===
+// 协议号26004
+// c >> 
+//		null
+// s >> 
+//		pbTreasureList        //获得列表
+
+// ====寻宝仓库===
+// 协议号26005
+// c >> 
+//		null
+// s >> 
+//		pbTreasureList        //仓库列表
+
+// ====全部取出===
+// 协议号26006
+// c >> 
+//		null
+// s >> 
+//		pbResult         // 成功返回，失败错误提示
+
+// ================ 排行榜 ================
+//import "pb_common.proto";
+
+
+// 战力榜
+message pbRankCombatPlayer{
+	optional int32 player_id	= 1;
+	optional string name		= 2;
+	optional int32 month_card	= 3;	// 0无月卡 1有月卡
+	optional int32 vip			= 4;
+	optional int32 turn			= 5;
+	optional int32 lv			= 6;
+	optional int32 combat		= 7;	// 战力
+	optional int32 rank			= 8;	// 排名
+}
+
+message pbRankCombat{
+	optional int32 my_rank		= 1; // 我的排名（0没上榜）
+	optional int32 worship		= 2; // 膜拜状态 （1可膜拜 2已膜拜）
+	repeated pbRankCombatPlayer list = 3; // 上榜玩家列表
+	optional int32 sex			= 4;	// 第一名性别
+	optional int32 weapon_id	= 5;	// 第一名武器
+	optional int32 wing_id		= 6;	// 第一名翅膀
+	optional int32 closth_id	= 7;	// 第一名衣服
+}
+
+// 等级榜
+message pbRankLvPlayer{
+	optional int32 player_id	= 1;
+	optional string name		= 2;
+	optional int32 month_card	= 3;	// 0无月卡 1有月卡
+	optional int32 vip			= 4;
+	optional int32 turn			= 5;
+	optional int32 lv			= 6;
+	optional int32 rank			= 7;	// 排名
+}
+
+message pbRankLv{
+	optional int32 my_rank		= 1; // 我的排名
+	optional int32 worship		= 2; // 膜拜状态 （1可膜拜 2已膜拜）
+	repeated pbRankLvPlayer list = 3; // 上榜玩家列表
+	optional int32 sex			= 4;	// 第一名性别
+	optional int32 weapon_id	= 5;	// 第一名武器
+	optional int32 wing_id		= 6;	// 第一名翅膀
+	optional int32 closth_id	= 7;	// 第一名衣服
+}
+
+
+// 战圣、法神、道尊榜
+message pbRankCareerPlayer{
+	optional int32 player_id	= 1;
+	optional string name		= 2;
+	optional int32 month_card	= 3;	// 0无月卡 1有月卡
+	optional int32 vip			= 4;
+	optional int32 turn			= 5;
+	optional int32 lv			= 6;
+	optional int32 combat		= 7;	// 战力
+	optional int32 rank			= 8;	// 排名
+}
+
+// 战圣
+message pbRankZhanshi{
+	optional int32 my_rank		= 1; // 我的排名
+	optional int32 worship		= 2; // 膜拜状态 （1可膜拜 2已膜拜）
+	repeated pbRankCareerPlayer list = 3; // 上榜玩家列表
+	optional int32 sex			= 4;	// 第一名性别
+	optional int32 weapon_id	= 5;	// 第一名武器
+	optional int32 wing_id		= 6;	// 第一名翅膀
+	optional int32 closth_id	= 7;	// 第一名衣服
+}
+
+// 法神
+message pbRankFashi{
+	optional int32 my_rank		= 1; // 我的排名
+	optional int32 worship		= 2; // 膜拜状态 （1可膜拜 2已膜拜）
+	repeated pbRankCareerPlayer list = 3; // 上榜玩家列表
+	optional int32 sex			= 4;	// 第一名性别
+	optional int32 weapon_id	= 5;	// 第一名武器
+	optional int32 wing_id		= 6;	// 第一名翅膀
+	optional int32 closth_id	= 7;	// 第一名衣服
+}
+
+// 道尊
+message pbRankDaoshi{
+	optional int32 my_rank		= 1; // 我的排名
+	optional int32 worship		= 2; // 膜拜状态 （1可膜拜 2已膜拜）
+	repeated pbRankCareerPlayer list = 3; // 上榜玩家列表
+	optional int32 sex			= 4;	// 第一名性别
+	optional int32 weapon_id	= 5;	// 第一名武器
+	optional int32 wing_id		= 6;	// 第一名翅膀
+	optional int32 closth_id	= 7;	// 第一名衣服
+}
+
+
+// 遭遇榜
+message pbRankKillPlayer{
+	optional int32 player_id	= 1;
+	optional string name		= 2;
+	optional int32 month_card	= 3;	// 0无月卡 1有月卡
+	optional int32 vip			= 4;
+	optional int32 turn			= 5;
+	optional int32 lv			= 6;
+	optional int32 kill			= 7;	// 杀戮值
+	optional int32 rank			= 8;	// 排名
+}
+
+message pbRankKill{
+	optional int32 my_rank		= 1; // 我的排名
+	optional int32 worship		= 2; // 膜拜状态 （1可膜拜 2已膜拜）
+	repeated pbRankKillPlayer list	= 3; // 上榜玩家列表
+	optional int32 sex			= 4;	// 第一名性别
+	optional int32 weapon_id	= 5;	// 第一名武器
+	optional int32 wing_id		= 6;	// 第一名翅膀
+	optional int32 closth_id	= 7;	// 第一名衣服
+}
+
+// 勋章榜
+message pbRankMedalPlayer{
+	optional int32 player_id	= 1;
+	optional string name		= 2;
+	optional int32 month_card	= 3;	// 0无月卡 1有月卡
+	optional int32 vip			= 4;
+	optional int32 turn			= 5;
+	optional int32 lv			= 6;
+	optional int32 medal_lv		= 7;	// 勋章等级
+	optional int32 rank			= 8;	// 排名
+}
+
+message pbRankMedal{
+	optional int32 my_rank		= 1; // 我的排名
+	optional int32 worship		= 2; // 膜拜状态 （1可膜拜 2已膜拜）
+	repeated pbRankMedalPlayer list	= 3; // 上榜玩家列表
+	optional int32 sex			= 4;	// 第一名性别
+	optional int32 weapon_id	= 5;	// 第一名武器
+	optional int32 wing_id		= 6;	// 第一名翅膀
+	optional int32 closth_id	= 7;	// 第一名衣服
+}
+
+
+// 王者榜（竞技场）
+message pbRankArenaPlayer{
+	optional int32 player_id	= 1;
+	optional string name		= 2;
+	optional int32 month_card	= 3;	// 0无月卡 1有月卡
+	optional int32 vip			= 4;
+	optional int32 grade		= 5;	// 段
+	optional int32 gradeLv		= 6;	// 等级
+	optional int32 margin		= 7;	// 净胜场
+	optional int32 rank			= 8;	// 排名
+}
+
+message pbRankArena{
+	optional int32 my_rank		= 1; // 我的排名
+	optional int32 worship		= 2; // 膜拜状态 （1可膜拜 2已膜拜）
+	repeated pbRankArenaPlayer list	= 3; // 上榜玩家列表
+	optional int32 sex			= 4;	// 第一名性别
+	optional int32 weapon_id	= 5;	// 第一名武器
+	optional int32 wing_id		= 6;	// 第一名翅膀
+	optional int32 closth_id	= 7;	// 第一名衣服
+}
+
+// 膜拜
+message pbRankWorship{
+	optional int32 rank			= 1; // 排行榜id
+}
+
+// ====战力榜===
+// 协议号 27001
+// c >> 
+//		null
+// s >> 
+//		pbRankCombat
+
+// ====等级榜===
+// 协议号 27002
+// c >> 
+//		null
+// s >> 
+//		pbRankLv
+
+
+// ====战圣榜===
+// 协议号 27003
+// c >> 
+//		null
+// s >> 
+//		pbRankZhanshi
+
+
+// ====法神榜===
+// 协议号 27004
+// c >> 
+//		null
+// s >> 
+//		pbRankFashi
+
+// ====道尊榜===
+// 协议号 27005
+// c >> 
+//		null
+// s >> 
+//		pbRankDaoshi
+
+// ====遭遇榜===
+// 协议号 27006
+// c >> 
+//		null
+// s >> 
+//		pbRankKill
+
+// ====勋章榜===
+// 协议号 27007
+// c >> 
+//		null
+// s >> 
+//		pbRankMedal
+
+// ====王者榜（竞技场）===
+// 协议号 27008
+// c >> 
+//		null
+// s >> 
+//		pbRankArena
+
+// ====膜拜===
+// 协议号 27020
+// c >> 
+//		pbRankWorship
+// s >> 
+//		pbResult  成功返回排行榜id 失败错误提示
+// ================ 充值 ================
+//import "pb_common.proto";
+
+message pbChargeItem{
+	optional int32 rmb		= 1; // 人民币
+	optional int32 ext_gold	= 2; // 赠送元宝 
+}
+
+
+message pbChargeInterface{
+	optional int32 vip			= 1; // vip等级
+	optional int32 up_gold		= 2; // 再充x元宝升级vip
+	repeated pbChargeItem list	= 3; // 充值列表
+}
+
+
+// ====领取首充奖励===
+// 协议号 28001
+// c >> 
+//		null
+// s >> 
+//		pbResult  成功返回1 失败错误提示
+
+
+
+// ====常规充值界面===
+// 协议号 28002
+// c >> 
+//		null
+// s >> 
+//		pbChargeInterface
+
+// ====获取首充状态===
+// 协议号 28003
+// c >> 
+//		null
+// s >> 
+//		pbResult  0未首充 1已充未领奖励 2已领奖励// ================ 主线任务 ================
+//import "pb_common.proto";
+
+
+// 任务结构
+message pbTask{
+	optional int32 id		= 1;	// 任务id	(0 表示完成了所有的任务)
+	optional int32 state	= 2;	// 状态（0未完成 1完成 2已领奖励）
+	optional int32 num		= 3;	// 该任务已完成的数量
+	optional int32 total_num =4;	// 总数量
+}
+
+// ====获取正在进行的主线任务===
+// 协议号 29001
+// c >> 
+//		null
+// s >> 
+//		pbTask
+
+
+// ====领取主线任务奖励===
+// 协议号 29002
+// c >> 
+//		null
+// s >> 
+//		pbResult  成功返回1 失败错误提示
+
+
+// ====任务数据变更推送===
+// 协议号 29003
+// c >> 
+//		null
+// s >> 
+//		pbTask
+
+// ================ 开服活动 ================
+//import "pb_common.proto";
+
+//获取所有的开服活动 
+message pbOpenActivityAll{
+	repeated int32	list	= 1;	// 正在开启的活动id
+}
+
+// 活动id
+// 1	每日竞技
+// 2	限购礼包
+// 3	特惠礼包
+// 4	累计充值
+// 5	每日累充
+// 6	连续充值
+
+// 每日竞技对应的排行榜id(rank_id)
+// 1	羽翼战力
+// 2	宝石等级
+// 3	护盾等级
+// 4	暗器等级
+// 5	肩甲等级
+// 6	饰品等级
+// 7	神器等级
+
+// ====每日竞技界面===
+message pbOpenActivityDailyRankPlayer{
+	optional int32 rank			= 1;	// 排名
+	optional int32 player_id	= 2;	// 玩家id
+	optional string name		= 3;	// 玩家名
+	optional int32 key			= 4;	// 用于排名的数值
+}
+message pbOpenActivityDailyRankStage{
+	optional int32 condition	= 1;	// 阶段条件（如等级， 战力等）
+	optional int32 state		= 2;	// 状态（0不能领 1可领 2已领）
+}
+
+message pbOpenActivityDailyRank{
+	optional int32 left_time					= 1;	// 剩余时间（s）
+	optional int32 rank_id						= 2;	// 排行榜id
+	repeated pbOpenActivityDailyRankPlayer list	= 3; 	// 排名列表
+	optional int32	value						= 4;	// 玩家自己的数值（如宝石榜就是宝石等级，羽翼榜就是羽翼战力）
+	repeated pbOpenActivityDailyRankStage stage_list = 5;// 阶段奖励列表
+}
+
+// ====每日竞技领取阶段奖励===
+message pbOpenActivityDailyRankGetStage{
+	optional int32 condition	= 1;	// 条件
+}
+
+message pbOpenActivityDailyRankGetStageRes{
+	optional int32 condition	= 1;	// 条件
+}
+
+// ====限购礼包界面===
+message pbOpenActivityLimitGiftGoods{
+	optional int32 id	= 1;
+	optional int32 left_num	= 2;	// 剩余数量
+}
+message pbOpenActivityLimitGift{
+	optional int32 left_time	= 1;	// 剩余时间（s）
+	repeated pbOpenActivityLimitGiftGoods list	= 2;// 礼包列表
+}
+
+
+// ====限购礼包购买==
+message pbOpenActivityLimitGiftBuy{
+	optional int32 id	= 1;	
+}
+message pbOpenActivityLimitGiftBuyRes{
+	optional int32 id		= 1;
+	optional int32 left_num	= 2;
+}
+
+
+
+// ====特惠礼包界面====
+message pbOpenActivityCheapGift{
+	optional int32 left_time	= 1;	// 剩余时间（s）
+	repeated pbOpenActivityCheapGiftGood list = 2;	// 礼包列表 
+}
+
+message pbOpenActivityCheapGiftGood{
+	optional int32 id		= 1;
+	optional int32 state	= 2;	// 状态 （1可买 2已买）
+}
+
+
+message pbOpenActivityCheapGiftBuy{
+	optional int32 id	= 1;
+}
+
+message pbOpenActivityCheapGiftBuyRes{
+	optional int32 id = 1;
+}
+
+
+// 累计充值界面
+message pbOpenActivityTotalCharge{
+	optional int32 left_time 	= 1;
+	optional int32 charge		= 2;
+	optional int32 state		= 3;	// 状态 （0不能领 1可领 2已领）
+}
+
+
+// 每日累充界面
+message pbOpenActivityDailyCharge{
+	optional int32 left_time		= 1;
+	repeated pbOpenActivityDailyChargeGood list = 2;
+	optional int32 charge			= 3;	// 累计充值金额
+}
+
+message pbOpenActivityDailyChargeGood{
+	optional int32 id = 1;
+	optional int32 state = 2;		// 状态 （0不能领 1可领 2已领）
+}
+
+message pbOpenActivityDailyChargeGet{
+	optional int32 id	= 1;
+}
+
+message pbOpenActivityDailyChargeGetRes{
+	optional int32 id = 1;
+}
+
+
+// 连续充值界面
+message pbOpenActivityContinueCharge{
+	optional int32 left_time = 1;
+	optional int32 days		= 2;	// 达成天数
+	repeated pbOpenActivityContinueChargeItem list = 3;
+}
+
+message pbOpenActivityContinueChargeItem{
+	optional int32 id 	= 1;
+	optional int32 state = 2;		// 状态 （0不能领 1可领 2已领）
+}
+
+message pbOpenActivityContinueChargeGet{
+	optional int32 id = 1;
+}
+
+message pbOpenActivityContinueChargeGetRes{
+	optional int32 id = 1;
+}
+
+// ====获取所有的开服活动===
+// 协议号 30001
+// c >> 
+//		null
+// s >> 
+//		pbOpenActivityAll
+
+
+
+// ====每日竞技界面===
+// 协议号 30002
+// c >> 
+//		null
+// s >> 
+//		pbOpenActivityDailyRank
+
+
+// ====每日竞技领取阶段奖励===
+// 协议号 30003
+// c >> 
+//		pbOpenActivityDailyRankGetStage
+// s >> 
+//		pbOpenActivityDailyRankGetStageRes // 成功返回， 失败错误提示
+
+// ====限购礼包界面===
+// 协议号 30004
+// c >> 
+//		null
+// s >> 
+//		pbOpenActivityLimitGift
+
+
+// ====限购礼包购买==
+// 协议号 30005
+// c >> 
+//		pbOpenActivityLimitGiftBuy
+// s >> 
+//		pbOpenActivityLimitGiftBuyRes 成功返回 失败错误提示
+
+// ====特惠礼包界面==
+// 协议号 30006
+// c >> 
+//		null
+// s >> 
+//		pbOpenActivityCheapGift
+
+// ====特惠礼包购买==
+// 协议号 30007
+// c >> 
+//		pbOpenActivityCheapGiftBuy
+// s >> 
+//		pbOpenActivityCheapGiftBuyRes  成功返回 失败错误提示
+
+
+// ====累计充值界面==
+// 协议号 30008
+// c >> 
+//		null
+// s >> 
+//		pbOpenActivityTotalCharge
+
+// ====累计充值领取==
+// 协议号 30009
+// c >> 
+//		null
+// s >> 
+//		pbResult  成功返回1 失败错误提示
+
+
+
+
+// ====每日累充界面==
+// 协议号 30010
+// c >> 
+//		null
+// s >> 
+//		pbOpenActivityDailyCharge
+
+// ====每日累充领取==
+// 协议号 30011
+// c >> 
+//		pbOpenActivityDailyChargeGet
+// s >> 
+//		pbOpenActivityDailyChargeGetRes  成功返回 失败错误提示
+
+
+// ====连续充值界面==
+// 协议号 30012
+// c >> 
+//		null
+// s >> 
+//		pbOpenActivityContinueCharge
+
+// ====连续充值领取==
+// 协议号 30013
+// c >> 
+//		pbOpenActivityContinueChargeGet
+// s >> 
+//		pbOpenActivityContinueChargeGetRes  成功返回 失败错误提示
+
+
+//import "pb_common.proto";
+
+message pbCopyInfo{
+	optional	int32	type	= 1;//副本类型1副本boss2副本材料3副本爬塔
+	repeated    pbCopyList list  =2; //副本信息列表(适用于1副本boss2副本材料)
+	optional	int32    top_id =3; //爬塔的最高关卡(适用于3副本爬塔)
+}
+
+message pbCopyList{
+	optional	int32  id		= 1;//副本id
+	optional	int32  times	= 2;//已进入次数
+}
+
+message pbCopyBattle{
+	optional	int32	type	= 1;//副本类型1副本boss2副本材料3副本爬塔
+	optional	int32	id		= 2;//副本id
+}
+
+// ====请求副本信息===
+// 协议号31001
+// c >> 
+//		pbId32		//副本类型1副本boss1副本材料2副本爬塔
+// s >> 
+//		pbCopyInfo
+
+
+  
+// ====请求挑战副本===
+// 协议号31002
+// c >> 
+//		pbCopyBattle	
+// s >> 
+//		pbCopyBattle	//成功返回 错误提示
+
+
+//import "pb_common.proto";
+
+message pbTitleActive{
+	optional int32 id  = 1;               //称号基础表id
+	optional int32 use  = 2;              //是否使用称号0否1是
+	optional int32 show  = 3;             //是否显示称号0否1是
+}
+
+message pbTitleList{
+    repeated pbTitleActive titles = 1;          //已激活称号列表
+    optional int32 total_liveness  = 2;         //总活跃度
+}
+
+message pbTitle{
+	optional int32 id  = 1;               //称号基础表id
+}
+
+// ====玩家称号===
+// 协议号32001
+// c >> 
+//		null
+// s >> 
+//		pbTitleList        //称号列表
+
+
+// ====称号属性使用===
+// 协议号32002
+// c >> 
+//		pbTitle
+// s >>
+//		pbResult         // 成功返回，失败错误提示
+
+// ====称号显示===
+// 协议号32003
+// c >> 
+//		pbTitle
+// s >>
+//		pbResult         // 成功返回，失败错误提示//import "pb_common.proto";
+
+message pbWeaponList{
+    repeated pbWeapon weapons = 1;        //已激活神器列表
+}
+
+message pbWeapon{
+	optional int32 id  = 1;               //神器基础表id
+}
+
+message pbWeaponActive{
+	optional int32 type  = 1;             //激活神器类型
+}
+
+// ====玩家神器===
+// 协议号33001
+// c >> 
+//		null
+// s >> 
+//		pbWeaponList        //神器列表
+
+
+// ====神器激活===
+// 协议号33002
+// c >> 
+//		pbWeaponActive
+// s >>
+//		pbWeapon
+
+// ====神器升阶===
+// 协议号33003
+// c >> 
+//		pbWeapon
+// s >>
+//		pbWeapon//import "pb_common.proto";
+
+message pbItem{
+	optional int32 id  = 1;               //配置表id
+}
+
+message pbInvestment{
+	optional int32 buy  = 1;               //是否已购买1是0否
+	optional int32 left_time  = 2;         //剩余时间(秒数)
+	repeated pbItem items = 3;             //已领取列表
+}
+
+// ====玩家投资==
+// 协议号34001
+// c >> 
+//		null
+// s >> 
+//		pbInvestment        //投资记录
+
+
+// ====购买投资==
+// 协议号34002
+// c >> 
+//		null
+// s >> 
+//		pbResult         // 成功返回，失败错误提示
+
+// ====领取奖励==
+// 协议号34003
+// c >> 
+//		pbItem
+// s >> 
+//		pbItem         // 成功返回，失败错误提示
+
+// ================ 活动 ================
+//import "pb_common.proto";
+
+
+//获取所有的开服活动 
+message pbActivityAll{
+	repeated int32	list	= 1;	// 正在开启的活动id
+}
+
+// ====转盘界面===
+message pbDialInterface{
+	optional int32 left_time	= 1; // 剩余时间
+	optional int32 use_times	= 2; // 已使用次数 
+}
+
+message pbDialPool{
+	optional int32 gold		= 1;	// 充值数
+	optional int32 max_gold	= 2;	// 满值数
+	optional string name	= 3;	// 上次幸运玩家名
+}
+
+message pbDialRes{
+	optional int32 gold		= 1;
+}
+// ====获取所有开启的活动===
+// 协议号 35000
+// c >> 
+//		null
+// s >> 
+//		pbActivityAll
+
+// ====转盘界面===
+// 协议号 35001
+// c >> 
+//		null
+// s >> 
+//		pbDialInterface
+
+// ====转盘元宝池===
+// 协议号 35002
+// c >> 
+//		null
+// s >> 
+//		pbDialPool
+
+// ====转盘开始转动===
+// 协议号 35003
+// c >> 
+//		null
+// s >> 
+//		pbResult	// 成功返回id, 失败错误提示
+
+
+// ====转盘转动结束===
+// 协议号 35004
+// c >> 
+//		null
+// s >> 
+//		pbDialRes
+//import "pb_common.proto";
+
+message pbWorldBoss{
+	optional int32 scene_id  = 1;              //Scene ID
+	optional int32 status =2;                  //当前状态0结束(倒计时中)1开启中
+	optional int32 refresh_time =3;            //刷新倒计时
+	optional int32 num = 4;                    //当前人数
+	optional int32 notice = 5;                 //是否关注1是0否	 
+}
+
+message pbWorldBossInfo{
+	optional int32 left_times  = 1;               //剩余次数
+	optional int32 refresh_time = 2;              //剩余次数恢复倒计时
+	optional int32 buy_times  = 3;                //已购买次数 
+	repeated pbWorldBoss bosses = 4;              //boss列表
+}
+
+message pbBossModel{
+	optional int32 scene_id  = 1;              //Scene ID
+}
+
+
+message pbKillPlayer{
+	optional int32 time  = 1;                  //时间
+	optional string nick  = 2;                 //玩家名
+	optional int32 score = 3;                  //战力
+}
+
+message pbKillList{
+	repeated pbKillPlayer kill_players =  1;              
+}
+
+message pbBossBuffNum{
+	optional int32 num  = 1;                  //以助威次数	
+}
+
+message pbReward{
+	optional int32 type  = 1;                  //类型1道具，2装备
+	optional int32 good_id  = 2;               //物品id	
+	optional int32 good_num  = 3;              //物品数量
+}
+
+message pbBattleResult{
+	optional int32 rank  = 1;                  //伤害排名
+	repeated pbReward reward = 2;              //奖励列表
+}
+
+message pbHurt{
+	optional int32 rank  = 1;                  //伤害排名
+	optional string nick  = 2;                 //玩家
+	optional int32 hurt  = 3;                  //伤害
+}
+
+message pbHurtList{
+	optional int32 left_time  = 1;              //剩余时间
+	optional int32 self_hurt  = 2;              //自己的伤害
+	repeated pbHurt hurt_list = 3;              //伤害列表
+}
+
+// ====全民boss==
+// 协议号36001
+// c >> 
+//		null
+// s >> 
+//		pbWorldBossInfo        //全面boss界面
+
+
+// ====玩家发起挑战==
+// 协议号36002
+// c >> 
+//		pbBossModel
+// s >> 
+//		pbResult         // 成功返回，失败错误提示
+
+
+// ====击杀记录==
+// 协议号36003
+// c >> 
+//		pbBossModel
+// s >> 
+//		pbKillList         // 击杀记录
+
+
+// ====购买次数==
+// 协议号36004
+// c >> 
+//		null
+// s >> 
+//		pbResult         // 成功返回，失败错误提示
+
+
+// ====boss助威次数==
+// 协议号36005
+// c >> 
+//		pbBossModel
+// s >> 
+//		pbBossBuffNum         
+
+
+// ====助威一次==
+// 协议号36006
+// c >> 
+//		pbBossModel
+// s >> 
+//		pbResult         // 成功返回，失败错误提示
+
+// ====关注/取消关注==
+// 协议号36007
+// c >> 
+//		pbBossModel
+// s >> 
+//		pbResult         // 成功返回，失败错误提示
+
+// ====退出挑战==
+// 协议号36008
+// c >> 
+//		null
+// s >> 
+//		pbResult         // 成功返回，失败错误提示
+
+// ====挑战成功==
+// 协议号36009
+// c >> 
+//		null
+// s >> 
+//		pbBattleResult      //
+
+// ====伤害排行==
+// 协议号36010
+// c >> 
+//		null
+// s >> 
+//		pbHurtList         //
+
+
+// ================ 天梯争霸 ================
+//import "pb_common.proto";
+
+// ====天梯争霸界面===
+message pbArenaInterface{
+	optional int32 win_streak		= 1;	// 连胜次数（>=2时为连胜）
+	optional int32 grade			= 2;	// 段位（1~4）
+	optional int32 lv				= 3;	// 级
+	optional int32 star				= 4;	// 星
+	optional int32 p_win			= 5;	// 胜率百分比
+	optional int32 margin			= 6;	// 净胜场
+	optional int32 left_times		= 7;	// 剩余次数
+	optional int32 max_times		= 8;	// 次数上限
+	optional int32 left_buy_times	= 9;	// 剩余购买次数
+	optional int32 rank				= 10;	// 排名	
+}
+
+// 天梯争霸对手玩家信息
+message pbArenaPlayer{
+	optional string name		= 1; // 对手名字
+	optional int32 career		= 2; // 对手职业
+	optional int32 sex			= 3; // 对手性别
+	optional int32 p_win		= 4; // 胜率百分比
+	optional int32 grade		= 5;
+	optional int32 lv			= 6;
+}
+
+// 匹配对手
+message pbArenaMatchRes{
+	optional pbArenaPlayer enemy 	= 1; // 对手
+	repeated pbArenaPlayer list		= 2; // 随机对手列表
+	
+}
+
+
+message  pbArenaBuyRes{
+	optional int32 left_times		= 1;	// 剩余次数
+	optional int32 left_buy_times	= 2;	// 剩余购买次数
+}
+
+// 上榜玩家数据
+message pbArenaRankPlayer{
+	optional int32 rank			= 1;	// 排名
+	optional int32 player_id	= 2;	// 玩家id
+	optional string name		= 3;	// 玩家名字
+	optional int32 grade		= 4;	// 段位
+	optional int32 lv 			= 5;	// 等级
+	optional int32 margin		= 6;	// 净胜场
+}
+
+message pbArenaRewardInterface{
+	repeated pbArenaRankPlayer list	= 1;	// 上榜玩家数据列表
+	optional int32 myGrade			= 2;	// 上周我的段位
+	optional int32 myLv				= 3;	// 上周我的等级
+	optional int32 myMargin			= 4;	// 上周我的净胜场
+}
+message pbArenaPkRes{
+	optional int32 res			= 1;	// 0输了 1胜利
+	optional int32 old_grade	= 2;	// 旧的段位
+	optional int32 old_lv		= 3;	// 旧的级
+	optional int32 old_star		= 4;	// 旧的星
+	optional int32 new_grade	= 5;	// 新的段位
+	optional int32 new_lv		= 6;	// 新的级
+	optional int32 new_star		= 7;	// 新的星
+	optional int32 star_res		= 8;	// 本场获得的星星（输了的为0）
+	repeated pbGood surprise_list= 9;	// 惊喜奖励
+}
+
+// ====天梯争霸界面===
+// 协议号 37001
+// c >> 
+//		null
+// s >> 
+//		pbArenaInterface
+
+// ====天梯争霸匹配对手===
+// 协议号 37002
+// c >> 
+//		null
+// s >> 
+//		pbArenaMatchRes
+
+
+// ====天梯争霸购买次数===
+// 协议号 37003
+// c >> 
+//		null
+// s >> 
+//		pbArenaBuyRes		// 成功返回， 失败错误提示
+
+
+// ====天梯争霸奖励界面===
+// 协议号 37004
+// c >> 
+//		null
+// s >> 
+//		pbArenaRewardInterface
+
+// ====天梯争霸战斗结果===
+// 协议号 37005
+// c >> 
+//		null
+// s >> 
+//		pbArenaPkRes
+
+
+
+
+//import "pb_common.proto";
+
+message pbPkPlayer{
+	optional int32 type  = 1;                      //1玩家,2机器人(机器人数据读表)
+	optional int32 id    = 2;                      //玩家id/机器人id
+	optional int32 sex   = 3;                      //性别
+	optional int32 job   = 4;                      //职业
+	optional string nick = 5;                      //玩家名
+	optional int32 lv    = 6;                      //等级
+	optional int32 turn  = 7;                      //转数
+}
+
+message pbPkWar{
+	optional int32 killing_num  = 1;               //杀戮值
+	optional int32 rank  = 2;                      //排名
+	optional int32 pk  = 3;                        //pk值
+	optional int32 refresh_time  = 4;              //刷新倒计时(秒)
+	repeated pbPkPlayer pk_player = 5;             // 
+}
+
+message pbPkModel{
+	optional int32 type  = 1;                      //1玩家,2机器人
+	optional int32 id    = 2;                      //玩家id/机器人id
+}
+
+message pbPkReward{
+	optional int32 type  = 1;                  //类型1道具，2装备
+	optional int32 good_id  = 2;               //物品id	
+	optional int32 good_num  = 3;              //物品数量
+}
+
+message pbPkBattleResult{
+	optional int32     result  = 1;                //1成功/2失败
+	repeated pbPkReward reward = 2;                //奖励列表
+}
+
+message pbPkLog{
+	optional int32     result  = 1;                //成功/失败
+	optional int32     time  = 2;                  //记录时间
+	optional int32     player_id = 3;              //玩家id
+	optional string    nick = 4;                   //玩家名
+	repeated pbPkReward reward = 5;                //奖励列表
+}
+
+message pbPkWarLog{
+	repeated pbPkLog pk_log = 1;             // 
+}
+
+// ====玩家遭遇战==
+// 协议号38001
+// c >> 
+//		null
+// s >> 
+//		pbPkWar        //遭遇战界面
+
+
+// ====玩家发起挑战==
+// 协议号38002
+// c >> 
+//		pbPkModel
+// s >> 
+//		pbResult         // 成功返回，失败错误提示
+
+
+// ====挑战结果==
+// 协议号38003
+// c >> 
+//		null
+// s >> 
+//		pbPkBattleResult         
+
+
+// ====玩家战斗记录==
+// 协议号38004
+// c >> 
+//		null
+// s >> 
+//		pbPkWarLog        //遭遇战记录
+
+
+// ====使用元宝消除pk值==
+// 协议号38005
+// c >> 
+//		null
+// s >> 
+//		pbResult         // 成功返回，失败错误提示
+
+
+//import "pb_common.proto";
+
+//错误提示
+message pbError{
+        optional int32   error_code = 1;
+        repeated string  args       = 2;
+}
+
+message pbPlayerBase{
+  optional int32 player_id = 1;
+  optional string account = 2;
+  optional string name = 3;
+  optional int32 sex  = 4;       //性别
+  optional int32 career = 5;     //职业
+  optional int32 combat = 6;     //战力
+  optional int32 vip_lv = 7;     //vip等级
+  optional int32 lv = 8;      	//等级
+  optional int64 exp = 9;       //经验
+  optional int32 coin = 10;     //金币
+  optional int32 gold = 11;     //元宝
+  optional int32 hook_scene_id =12; //挂机场景id
+  optional int32 turn = 13;      //转生数
+  optional int64 life_exp = 14;  //修为
+  optional int32 guide_id = 15;	//引导id
+}
+
+message pbPlayerChange{
+  optional  int32   type  = 1;      // 改变的字段1金币2元宝3经验4等级6修为7转生数8vip
+  optional  int64   value   = 2;      // 改变的值
+}
+
+
+message pbRedDot{
+	optional int32 id		= 1;	// 红点id
+	optional int32 state	= 2;	// 红点状态（0没有， 1有）
+}
+
+message pbRedDotInfo{
+	repeated pbRedDot list	= 1;	// 红点列表
+}
+
+message pbRedDotUpdate{
+	repeated pbRedDot list	= 1;	// 更新列表
+}
+
+//============错误提示==============
+//协议号：9001
+// c >> s:
+//       null
+// s >> c:
+//		pbError
+
+//============玩家数据==============
+//协议号：9002
+// c >> s:
+//       null
+// s >> c:
+//		pbPlayerBase
+
+
+//============玩家信息更新=============
+//协议号：9004
+// c >> s:
+//      null	
+// s >> c:
+//	    pbPlayerChange				//成功返回
+
+//============4点刷新通知=============
+//协议号：9005
+// c >> s:
+//      null	
+// s >> c:
+//	    null
+
+
+// ==== 获取红点信息 ====
+// 协议号 9010
+// c >> s:
+//     null
+// s >> c:
+//     pbRedDotInfo
+
+// ==== 红点信息更新推送 ====
+// 协议号 9011
+// c >> s:
+//     null
+// s >> c:
+//     pbRedDotUpdate
+
+// ==== 玩家引导通知 ====
+// 协议号 9012
+// c >> s:
+//     pbId32
+// s >> c:
+//     pbId32
+
+// 一些通用的数据
+//package pb_common;
+
+message pbResult {
+        optional int32 result = 1;                      // 返回结果
+}
+
+message pbId32 {
+        optional int32 id = 1;                          // 32位的id信息
+}
+
+message pbId32R {
+        repeated int32 id = 1;                          // 32位的[id1,id2,...]信息
+}
+
+message pbId64 {
+        optional int64 id = 1;                          // 64位的id信息
+}
+
+message pbId64R {
+        repeated int64 ids = 1;                         // 64位的id信息集合
+}
+
+message pbString {
+        optional string id = 1;                         // 字符串
+}
+
+
+message pbAttribute{
+	optional int32     key = 1;          //属性
+	optional int32     value = 2;        //值
+	optional int32     add_value = 3;    //浮动值
+}
+
+message pbEquip{
+	optional int32       score = 1;      //评分
+	repeated pbAttribute base = 2;       //基础属性
+	repeated pbAttribute special = 3;    //极品属性
+	repeated pbAttribute wash = 4;       //神装属性
+}
+
+message pbSkillList{
+ 		optional	int32	skill_id =1;	 //技能id
+ 		optional	int32	skill_lv =2;	 //技能等级
+}
+
+// 物品通用结构
+message pbGood {
+        optional int32 type	= 1;	// 类型（1物品 2装备）
+		optional int32 id	= 2;	// 物品id/装备id
+		optional int32 num	= 3;	// 数量
+}
+
+// ====定义在此之前定义，不要超过此限定行==
+// ====结束proto定义===

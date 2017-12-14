@@ -1,0 +1,10 @@
+{
+	"version":"1.0.0",
+    "IsDebug": true,
+    "ProjectName": "h5mt",
+    "AgentCode": "test",
+    "OS": 5,
+    "HttpSerever": "http://192.168.6.130:4444/h5mt_centers/sy_api/game_api.php",
+    "CodeVersion": "1.0.0.0",
+    "OffLineTest": false
+}

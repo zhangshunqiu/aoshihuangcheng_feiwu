@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="WingTransformSkin" width="720" height="1000" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="wing_bg_zhuanhuan_png" y="120" horizontalCenter="0"/>
+	<e:Image source="common_bg_list_neiromg_png" x="36" y="121" anchorOffsetX="0" width="647" anchorOffsetY="0" height="152"/>
+	<e:Image source="common_bg_list_neiromg_png" x="37" y="455" anchorOffsetX="0" width="647" anchorOffsetY="0" height="240"/>
+	<e:Image source="common_default_png" x="90" y="140" visible="false"/>
+	<e:Scroller id="scroller" width="564" height="123" y="138" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
+		<e:Group anchorOffsetY="0" height="116">
+		</e:Group>
+	</e:Scroller>
+	<e:Image source="wing_bg_tips_png" y="275" horizontalCenter="0"/>
+	<e:Image source="wing_bg_tips_png" y="476" horizontalCenter="-4.5"/>
+	<e:Label text="放入想要转换的羽翼装备" y="285" size="20" fontFamily="黑体" textColor="0xf87500" horizontalCenter="0"/>
+	<e:Group id="gp_noWingQuipe" x="300" y="189">
+		<e:Label text="空空如也" y="0" size="30" fontFamily="黑体" textColor="0xbfbfbf" x="0"/>
+		<e:Label text="~" y="0" size="30" fontFamily="KaiTi_GB2312" textColor="0xBFBFBF" x="122"/>
+	</e:Group>
+	<e:Label text="选择想要的羽翼装备" y="486" size="20" fontFamily="黑体" textColor="0xF87500" horizontalCenter="0"/>
+	<e:Label text="消耗:" y="725" size="24" fontFamily="黑体" textColor="0x26b4f6" x="253"/>
+	<e:Image id="img_selectorFrame" source="common_default_png" x="313" y="327"/>
+	<e:Image id="img_otherFrame0" source="common_default_png" x="129" y="532"/>
+	<e:Image id="img_otherFrame1" source="common_default_png" x="316" y="534"/>
+	<e:Image id="img_otherFrame2" source="common_default_png" x="503" y="535"/>
+	<e:Group id="gp_content" x="122" y="335" visible="false">
+		<e:Label id="lb_selectorName" text=" " x="187" y="87" size="20" textColor="0x66DDFF" fontFamily="黑体"/>
+		<e:Image id="img_selectorIcon" source="wing_1_zhengyu_png" x="199" y="0"/>
+		<e:Image id="img_selectorBg0" source="equipping_choose_png" x="0" y="190" visible="false"/>
+		<e:Image id="img_otherIcon0" source="wing_1_zhengyu_png" x="14" y="206"/>
+		<e:Label id="lb_otherName0" text=" " x="2" y="291" size="20" textColor="0x66DDFF" fontFamily="黑体"/>
+		<e:Image id="img_selectorBg1" source="equipping_choose_png" x="186" y="192" visible="false"/>
+		<e:Image id="img_otherIcon1" source="wing_1_zhengyu_png" x="202" y="208"/>
+		<e:Label id="lb_otherName1" text=" " x="187" y="291" size="20" textColor="0x66DDFF" fontFamily="黑体"/>
+		<e:Image id="img_selectorBg2" source="equipping_choose_png" x="375" y="193" visible="false"/>
+		<e:Image id="img_otherIcon2" source="wing_1_zhengyu_png" x="389" y="209"/>
+		<e:Label id="lb_otherName2" text=" " x="374" y="291" size="20" textColor="0x66DDFF" fontFamily="黑体"/>
+	</e:Group>
+	<e:Image source="common_bg_shuju_png" x="318" y="717" anchorOffsetY="0" height="40" anchorOffsetX="0" width="175"/>
+	<e:Image source="common_yuanbao_png" x="321" y="717"/>
+	<e:Label id="lb_gold" text="0" y="724" size="24" fontFamily="黑体" x="375" textColor="0xf87500"/>
+	<e:Label text="正羽（1阶）" x="85" y="235" size="20" textColor="0x66ddff" fontFamily="黑体" visible="false"/>
+	<e:Button id="btn_transform" label="" x="286" y="788" currentState="down">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="common_btn_common_png" source.down="common_btn_common_huise_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:Image source="wing_txt_zhuanhuan_png" y="801" horizontalCenter="0" touchEnabled="false"/>
+</e:Skin>

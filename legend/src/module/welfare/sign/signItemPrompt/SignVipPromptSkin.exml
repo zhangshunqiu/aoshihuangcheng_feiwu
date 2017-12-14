@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="SignVipPromptSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" width="487" height="300">
+	<e:Image source="shop_bg_tips_png" horizontalCenter="0" top="13" bottom="13" scale9Grid="140,97,215,101"/>
+	<e:Image source="shop_txt_tishi_png" horizontalCenter="0" top="36"/>
+	<e:Image  source="shop_btn_tanchuang_hongse_png" x="294" y="209"/>
+	<e:Image  source="shop_btn_tanchuang_huise_png" x="78" y="209"/>
+	<e:Image id="img_refuse" width="86" height="27.06" x="95" y="214.94" source="sign_txt_canrenjujue_png" anchorOffsetX="0" anchorOffsetY="0"/>
+	<e:Image id="img_accept" width="76" height="25.04" x="318" y="216.96" anchorOffsetX="0" anchorOffsetY="0" source="sign_txt_tishengvip_png"/>
+	<e:Image id="img_close" source="common_btn_close_1_png" x="422" y="27"/>
+	<e:Label id="lb_text" text="vipXX可以双倍签到" y="114" size="24" anchorOffsetX="0" width="316" anchorOffsetY="0" height="67" textAlign="center" verticalAlign="middle" horizontalCenter="0"/>
+</e:Skin>

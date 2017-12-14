@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MainOfflineSkin" width="720" height="1166" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0" touchThrough="true">
+		<e:Image horizontalCenter="0" verticalCenter="0" source="main_bg_1_jiesuan_png"/>
+		<e:Image source="main_bg_2_jiesuan_png" y="322" horizontalCenter="0.5"/>
+		<e:Image y="277" source="main_lixianguajijiesuan_png" horizontalCenter="0"/>
+		<e:Image id="img_close" source="common_btn_close_1_png" x="538.27" y="270.54"/>
+		<e:Label id="lb_info" text="Label" y="336.67" fontFamily="SimHei" size="22" x="165" textColor="0xbfbfbf"/>
+		<e:Label id="lb_get" text="Label" y="480.03" fontFamily="SimHei" size="22" x="165" textColor="0xbfbfbf"/>
+		<e:Label text="单次离线最多可累计20小时离线收益" fontFamily="SimHei" size="18" bottom="307" textColor="0xa74508" horizontalCenter="0"/>
+	</e:Group>
+</e:Skin>

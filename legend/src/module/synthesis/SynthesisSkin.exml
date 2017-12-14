@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="SynthesisSkin" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:customui="customui.*">
+	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
+		<customui:CommonWin id="commonWin" top="0" left="0" right="0" bottom="0"/>
+		<e:Image source="common_bg_interface_level_1_png" horizontalCenter="1.5" top="0" visible="false"/>
+		<e:Image source="common_bg_window_tips_png" y="60" scale9Grid="81,83,488,500" width="656" height="780" horizontalCenter="0"/>
+		<e:Image source="compound_bg2_png" y="122" horizontalCenter="-85"/>
+		<e:Group id="gp_top" height="130" left="0" right="0" top="65">
+			<e:Image source="common_bg_window_tips_png" width="466" height="120" horizontalCenter="0" scale9Grid="81,83,488,500" verticalCenter="0"/>
+			<customui:BaseItem id="baseItem1" width="90" height="90" anchorOffsetX="45" anchorOffsetY="45" x="189" verticalCenter="0"/>
+			<customui:BaseItem width="90" height="90" anchorOffsetX="45" anchorOffsetY="45" x="304" id="baseItem2" y="65"/>
+			<customui:BaseItem width="90" height="90" anchorOffsetX="45" anchorOffsetY="45" x="418" id="baseItem3" y="65"/>
+			<customui:BaseItem id="baseItem4" width="90" height="90" anchorOffsetX="45" anchorOffsetY="45" x="533" verticalCenter="0"/>
+		</e:Group>
+		<e:Group id="gp_middle" height="650" left="0" right="0" bottom="210">
+			<e:Image source="compound_bg_list_png" x="473" y="25" scale9Grid="89,74,20,65" height="600"/>
+			<e:Scroller id="scroller" width="155" height="550" x="495" y="51">
+				<e:Group x="-1"/>
+			</e:Scroller>
+			<e:Image source="compound_bg_name_png" x="83" y="159"/>
+			<e:Image source="compound_bg_name_png" x="308" y="158"/>
+			<customui:BaseItem id="baseItem_left" width="90" height="90" x="154" y="116" anchorOffsetX="45" anchorOffsetY="45"/>
+			<customui:BaseItem id="baseItem_right" width="90" height="90" x="380" y="116" anchorOffsetX="45" anchorOffsetY="45"/>
+			<e:Group id="gp_preview" width="400" height="300" x="65" y="226">
+				<e:Image source="compound_bg_yulan_png" scale9Grid="30,22,182,138" width="418" horizontalCenter="0" height="220" bottom="2"/>
+				<e:Label id="lb_attr" text="Label" y="150" fontFamily="SimHei" size="24" lineSpacing="15" x="45" textColor="0xbfbfbf" verticalAlign="middle" height="100"/>
+				<e:Label id="lb_attr_next" text="Label" y="150" fontFamily="SimHei" size="24" lineSpacing="15" x="278" textColor="0xbfbfbf" verticalAlign="middle" height="100"/>
+				<e:Image id="img_cur" source="compound_txt_dangqianyulan_png" x="34" y="107" visible="false"/>
+				<e:Image id="img_next" source="compound_txt_hechengyulan_png" y="107" horizontalCenter="0"/>
+				<e:Image source="compound_txt_hechenglv_png" top="4" horizontalCenter="0.5"/>
+				<e:Image id="img_arrow" source="compound_jiantou_png" y="174" x="183"/>
+			</e:Group>
+			<e:Image id="img_all" source="common_btn_common_png" x="79" y="549"/>
+			<e:Image id="img_synthesis" source="common_btn_common_png" x="294" y="549"/>
+			<e:Image source="compound_txt_hecheng_png" x="345" y="564" touchEnabled="false"/>
+			<e:Image source="compound_txt_yijianhecheng_png" x="106" y="563" touchEnabled="false"/>
+			<e:Image source="compound_jiantou_png" x="241" y="88"/>
+		</e:Group>
+		<e:Group id="gp_bottom" height="60" left="0" right="0" bottom="155">
+			<e:Button id="btn_jewel" label="宝石合成" x="21" skinName="skins.ButtonSkin2" scaleX="0.9" scaleY="0.9" verticalCenter="0"/>
+			<e:Button id="btn_wing" label="羽翼合成" x="171" skinName="skins.ButtonSkin2" scaleX="0.9" scaleY="0.9" verticalCenter="0"/>
+			<e:Button id="btn_equip" label="装备合成" x="320" skinName="skins.ButtonSkin2" scaleX="0.9" scaleY="0.9" verticalCenter="0" visible="false"/>
+			<e:Button id="btn_item" label="道具合成" x="470" skinName="skins.ButtonSkin2" scaleX="0.9" scaleY="0.9" verticalCenter="0" visible="false"/>
+			<e:Image id="img_return" source="common_btn_fanhui_png" x="613" y="-20"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

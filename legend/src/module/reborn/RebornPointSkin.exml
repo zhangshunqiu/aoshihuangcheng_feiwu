@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="RebornPointSkin" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:customui="customui.*">
+	<e:Group id="gp_main" width="560" height="450" horizontalCenter="0" verticalCenter="-100">
+		<e:Image left="0" right="0" top="0" bottom="0" source="shop_bg_tips_png" scale9Grid="168,100,156,93"/>
+		<e:Image source="reborn_huoquxiuwei_png" y="22" horizontalCenter="0.5"/>
+		<e:Image id="img_close" source="common_btn_close_2_png" x="487" y="12"/>
+		<e:Scroller id="scroller" width="532" height="360" horizontalCenter="0" top="70">
+			<e:Group y="1"/>
+		</e:Scroller>
+	</e:Group>
+</e:Skin>

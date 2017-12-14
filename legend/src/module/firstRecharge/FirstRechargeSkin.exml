@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="FirstRechargeSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" width="720" height="1066">
+	<e:Group left="0" right="0" top="0" bottom="0">
+		<e:Image source="common_bg_all_png" scaleX="1" scaleY="1" top="0" horizontalCenter="0"/>
+		<e:Image source="charge_bg_di_png" horizontalCenter="0.5" top="50" anchorOffsetY="0" height="888.97"/>
+		<e:Image source="charge_bg_png" y="97.94" horizontalCenter="0" anchorOffsetY="0" height="813.58"/>
+		<e:Image source="charge_zhuangshi_png" top="-2" horizontalCenter="0"/>
+		<e:Image width="146" height="147" x="466" y="182.03" anchorOffsetX="0" anchorOffsetY="0" source="Artifact_yitianjian_png"/>
+		<e:Image source="charge_4bei_png" x="108.63" y="165.43"/>
+		<e:Image source="charge_bg_zhandoulli_png" x="51.6" y="301.62"/>
+		<e:Image source="charge_libao_chongzhidalibao_png" x="290.8" y="225.29"/>
+		<e:Image source="charge_libao_wenzi3_png" x="52.82" y="231"/>
+		<e:Image source="charge_libao_yuan_png" x="258.75" y="231"/>
+		<e:Image source="charge_shouchong_title_png" x="307.48" y="32.06"/>
+		<e:Image source="charge_song_png" x="598.12" y="124.52"/>
+		<e:Image source="charge_zhandoullibaozhang_png" x="56.43" y="312.54"/>
+		<e:Image source="charge_zhizunshenqi_png" x="465.21" y="332.84"/>
+		<e:Image source="charge_wenzi4_png" x="54.52" y="119.8"/>
+		<e:BitmapLabel id="lb_money" width="66.96" height="32.12" x="195.82" y="235.26" font="charge_shuzi_fnt" text="568" anchorOffsetX="0" anchorOffsetY="0" letterSpacing="-8"/>
+		<e:BitmapLabel id="lb_artifact" width="91.2" height="29.09" x="204.72" y="314.91" text="126888" anchorOffsetX="0" anchorOffsetY="0" font="charge_zhandaoli_fnt"/>
+		<e:Group id="gp_rewardBtn" width="292.43" height="121.22" y="613.4" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
+			<e:Image source="charge_btn_lingqu_png" x="-2.630000000000024" y="6.339999999999918" scaleX="1" scaleY="1"/>
+			<e:Image source="charge_txt_liqushouchonglibao_png" x="34.670000000000016" y="42.3" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Group width="628.79" height="168.19" y="366.66" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
+			<e:Image source="charge_bg_libao_png" y="3" scaleX="1" scaleY="1" anchorOffsetY="0" height="156.42" horizontalCenter="0"/>
+			<e:Image source="charge_wenzi2_png" x="237.08999999999997" y="1.509999999999991" scaleX="1" scaleY="1"/>
+			<e:Group id="gp_reward" width="612" height="123" y="30.65" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" horizontalCenter="-0.3949999999999818">
+			<e:layout>
+				<e:HorizontalLayout horizontalAlign="center" gap="10"/>
+			</e:layout>
+			</e:Group>
+			<e:Image source="charge_biaoqian_png" x="86.2" y="23.73" scaleX="1" scaleY="1"/>
+			<e:Label text="非卖品" x="89.95" y="42.97" anchorOffsetX="0" width="16.03" anchorOffsetY="0" height="53.39" wordWrap="true" size="17" fontFamily="SimHei" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Group id="gp_charge" width="590" height="367" x="67" y="538" anchorOffsetX="0" anchorOffsetY="0">
+			<e:Image source="charge_bg_zhandoulli_png" y="319.1" anchorOffsetX="0" width="577.94" anchorOffsetY="0" height="49.52" horizontalCenter="-22" x="-18" scaleX="1" scaleY="1"/>
+			<e:Image source="charge_tips_png" y="326.73" horizontalCenter="-13.5" x="10" scaleX="1" scaleY="1"/>
+			<e:List id="list_charge" width="567.82" height="308.73" y="1.3899999999999864" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" x="9" scaleX="1" scaleY="1">
+				<e:layout>
+				<e:TileLayout horizontalAlign="center" verticalAlign="middle"/>
+				</e:layout>
+			</e:List>
+			<e:Image source="charge_tuijian_png" x="473.39" y="168.12" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Image id="img_return" source="common_btn_fanhui_png" x="613.2" y="832.48" scaleX="1" scaleY="1"/>
+		<e:Image id="img_close" x="632.54" y="29.45" source="common_btn_guanbi_shangchengzhuanyong_png" anchorOffsetX="0" width="55" anchorOffsetY="0" height="55"/>
+	</e:Group>
+</e:Skin>

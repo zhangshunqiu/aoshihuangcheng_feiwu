@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MaterialItem" width="654" height="190" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group x="-1" y="-1">
+		<e:Image id="img_bg" source="copy_material_bg_jianjia_png" x="0" y="0"/>
+		<e:Image source="copy_material_bg_name_png" x="10" y="11"/>
+		<e:Image id="img_materialName" x="32" y="21" source="copy_material_name_chibangfuben_png"/>
+		<e:Group id="gp_right" x="448" y="40">
+			<e:Label text="挑战次数：" x="1" y="-2" size="24" fontFamily="黑体"/>
+			<e:Label id="lb_challengeNum" text="1次" x="123" y="-1" size="24" fontFamily="黑体" textColor="0x00f829"/>
+			<e:Button id="btn_challenge" label="" x="7" y="50">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="common_btn_common_png" source.down="common_btn_common_huise_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+			</e:Button>
+			<e:Image id="img_challenge" source="boss_txt_tiaozhan_png" touchEnabled="false" x="58" y="64"/>
+			<e:Image id="img_done" source="task_yiwancheng_png" x="46" y="64"/>
+		</e:Group>
+		<e:Label id="lb_tip" text="人物达到50级可进行挑战" x="453" y="66" size="24" fontFamily="黑体" textColor="0xFF3D3D" anchorOffsetY="0" height="83" anchorOffsetX="0" width="149" textAlign="center"/>
+		<e:Image source="common_frame_purple_png" x="58" y="73"/>
+		<e:Image id="img_icon" source="copy_material_icon_icon_chibang_png" x="64" y="79"/>
+	</e:Group>
+</e:Skin>

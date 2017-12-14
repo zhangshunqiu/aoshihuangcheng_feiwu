@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MustDoItemSkin" width="638" height="112" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image id="bg_list" source="common_bg_list_neiromg_png" x="0" y="2" width="638" height="112"/>
+	<e:Image id="bg_reward" source="task_bg_jiangli_png" x="94" y="47" visible="false"/>
+	<e:Label id="lb_taskname" text="强化装备10次" y="20" fontFamily="SimHei" size="20" x="97" scaleX="1" scaleY="1" textColor="0x6fafe6"/>
+	<e:Label id="lb_reward" text="奖励jasdlajdakjdlj阿三大苏打啊速度去化装备10次" y="58" fontFamily="SimHei" size="18" x="107" scaleX="1" scaleY="1" anchorOffsetX="0" width="318" anchorOffsetY="0" height="46" textColor="0xf6a527" lineSpacing="5" minWidth="320"/>
+	<e:Label id="lb_progress" text="10/10" y="20" fontFamily="SimHei" size="24" x="529" scaleX="1" scaleY="1" anchorOffsetX="0" width="69" anchorOffsetY="0" height="46" lineSpacing="5" minWidth="320" textColor="0x00f612" textAlign="center"/>
+	<e:Image id="img_icon" source="main_icon_duanzao_png" x="1" y="9"/>
+	<e:Group id="gp_take" x="484" y="52" visible="false">
+		<e:Image id="bt_take" source="common_btn_common_png" x="0" y="0"/>
+		<e:Image id="img_take" source="task_txt_lingqu_png" x="51" y="13" touchEnabled="false"/>
+	</e:Group>
+	<e:Group id="gp_goto" x="484" y="53" visible="false">
+		<e:Image id="bt_goto" source="common_btn_common_2_png" x="0" y="0"/>
+		<e:Image id="img_goto" source="task_txt_qianwang_png" x="53" y="13" touchEnabled="false"/>
+	</e:Group>
+	<e:Group id="gp_finish" x="424" y="2" visible="false">
+		<e:Image id="bt_finish" source="common_btn_common_huise_png" x="59" y="51"/>
+		<e:Image id="img_finish" source="task_yiwancheng_png" x="101" y="63" touchEnabled="false"/>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ActivityMainViewSkin" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:customui="customui.*">
+	<e:Group id="gp_main" left="0" right="0" top="6" bottom="-6">
+		<customui:CommonWin id="commonWin" left="0" right="0" top="0" bottom="0" skinName="CommonWinSkin"/>
+		<e:Image source="common_bg_window_tips_png" horizontalCenter="0" anchorOffsetY="0" height="804" anchorOffsetX="0" width="662" y="54"/>
+		<e:Image source="activity_bg_tubiao_png" y="58" horizontalCenter="-2.5"/>
+		<e:Image source="vip_zhuangshi_png" x="3" y="-19" touchEnabled="false" locked="true"/>
+		<e:Image source="activity_huodongdating_title_png" y="16" horizontalCenter="-2"/>
+		<e:Image source="common_bg_interface_level_1_png" horizontalCenter="0" top="0" visible="false"/>
+		<e:Scroller id="scroller" width="540" height="110" y="68" horizontalCenter="0">
+			<e:Group/>
+		</e:Scroller>
+		<e:Image source="vip_jiantou_right_png" x="631" y="76"/>
+		<e:Image source="vip_jiantou_left_png" x="44" y="81"/>
+		<e:Group id="gp_subview" height="750" y="180" left="0" right="0">
+		</e:Group>
+		<e:Image source="开服活动-特惠礼包_jpg" x="-2" y="-73" alpha="0.5" locked="true" visible="false"/>
+		<e:Image id="img_close" source="common_btn_guanbi_shangchengzhuanyong_png" x="642" y="-7"/>
+		<e:Image id="img_back" source="common_btn_fanhui_png" x="614" y="833"/>
+	</e:Group>
+</e:Skin>

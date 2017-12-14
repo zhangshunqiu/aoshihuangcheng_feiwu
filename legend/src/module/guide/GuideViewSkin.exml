@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="GuideViewSkin" width="720" height="1166" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0" touchThrough="true" touchEnabled="false">
+		<e:Group id="gp_text" width="250" height="68" x="95" y="200">
+			<e:Image id="img_arrow" source="main_icon_xinshouzhiyin_down_png" y="11" x="107"/>
+			<e:Image source="main_icon_xinshouzhiyin1_png" scale9Grid="23,10,138,51" left="0" right="0" top="0" bottom="0"/>
+			<e:Label id="lb_text" text="" fontFamily="SimHei" size="24" textAlign="center" height="68" verticalCenter="0" verticalAlign="middle" textColor="0xffea00" horizontalCenter="0"/>
+		</e:Group>
+		<e:Button id="btn_skip" label="跳过" y="1002" skinName="skins.ButtonSkinCommon" x="285" touchEnabled="true"/>
+	</e:Group>
+</e:Skin>

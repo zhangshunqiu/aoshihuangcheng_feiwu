@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="BossWin" width="720" height="1280" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
+		<e:Image source="boss_qizhi_succeed_png" horizontalCenter="0" verticalCenter="0"/>
+		<e:Image source="boss_taitou_succeed_png" y="122.99" horizontalCenter="0"/>
+		<e:Image source="boss_txt_tiaozhanchenggong_succeed_png" y="181.38" horizontalCenter="0.5"/>
+		<e:Group id="gp_bossTop" x="136" y="306">
+			<e:Label id="lb_exp" text="Label" x="0" y="0" fontFamily="SimHei" size="24" textColor="0x2ab119"/>
+			<e:Label id="lb_level" text="Label" x="0" y="37" fontFamily="SimHei" size="24" textColor="0xc4ba1a"/>
+			<e:Label text="获得以下奖励：" x="0" y="84" fontFamily="SimHei" size="24" textColor="0xC4BA1A"/>
+			<e:ProgressBar id="pb_exp" x="76" y="40" skinName="skins.ProgressBarExpSkin" value="30"/>
+		</e:Group>
+		<e:Group id="gp_worldBossTop" y="316" horizontalCenter="0" visible="false">
+			<e:Label id="lb_rank" text="第1" y="4" fontFamily="SimHei" size="24" horizontalCenter="39.5" textColor="0x00f829"/>
+			<e:Label text="伤害排名" y="4" fontFamily="SimHei" size="24" textColor="0xC4BA1A" horizontalCenter="-28.5"/>
+			<e:Image id="img_rewardType" source="worldboss_jishadajiang_png" y="40" scaleX="1" scaleY="1" horizontalCenter="0"/>
+		</e:Group>
+		<e:Scroller id="scroller" width="430" height="384" y="430" horizontalCenter="0">
+			<e:Group/>
+		</e:Scroller>
+		<e:Group id="gp_get" y="843" x="263">
+			<e:Image id="img_get" source="boss_btn_t_succeed_png" y="0" anchorOffsetX="0" width="195" x="0"/>
+			<e:Image source="boss_txt_lingqujiangli_succeed_png" y="12.350000000000023" touchEnabled="false" x="18"/>
+			<e:BitmapLabel id="btlb_countDown" width="55" height="28" x="130" y="16.35" anchorOffsetX="0" anchorOffsetY="0" text="6" font="boss_fail_txt_fnt"/>
+			<e:BitmapLabel id="btlb_countDown0" width="67" height="23" x="117" y="14.35" anchorOffsetX="0" anchorOffsetY="0" text="(     s)" font="boss_fail_txt_fnt"/>
+		</e:Group>
+		<e:Group id="gp_nextLevel" y="842.65" horizontalCenter="118" visible="false">
+			<e:Image id="img_get0" source="boss_btn_t_succeed_png" y="0" anchorOffsetX="0" width="156" x="0"/>
+			<e:Image source="copy_tower_txt_jinruxiayiguan_png" horizontalCenter="0" verticalCenter="0"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

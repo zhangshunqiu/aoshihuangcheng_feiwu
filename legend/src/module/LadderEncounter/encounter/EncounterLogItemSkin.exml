@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="EncounterLogItemSkin" width="650" height="240" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:customui="customui.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="遭遇UI-战斗记录_png" x="-33" y="-207" visible="false"/>
+	<e:Group x="85" y="162" touchEnabled="false" touchThrough="true">
+		<customui:BaseItem id="item1" width="90" height="90" y="2" anchorOffsetX="45" anchorOffsetY="45" x="0" touchChildren="true" touchEnabled="true"/>
+		<customui:BaseItem id="item2" width="90" height="90" y="1" anchorOffsetX="45" anchorOffsetY="45" x="106" touchChildren="true" touchEnabled="true"/>
+		<customui:BaseItem id="item3" width="90" height="90" y="2" anchorOffsetX="45" anchorOffsetY="45" x="217" touchChildren="true" touchEnabled="true"/>
+		<customui:BaseItem id="item4" width="90" height="90" y="3" anchorOffsetX="45" anchorOffsetY="45" x="332" touchChildren="true" touchEnabled="true"/>
+		<customui:BaseItem id="item5" width="90" height="90" y="0" anchorOffsetX="45" anchorOffsetY="45" x="435" touchChildren="true" touchEnabled="true"/>
+	</e:Group>
+	<e:Image source="encounter_bg_name_png" x="103" y="63"/>
+	<e:Label id="lb_name" text="你是猪吗" y="73.67" fontFamily="SimHei" size="24" x="281" touchEnabled="false" textColor="0x01acf1"/>
+	<e:Label text="遭遇玩家:" y="73.67" fontFamily="SimHei" size="24" x="161" touchEnabled="false" textColor="0xbfbfbf"/>
+	<e:Label id="lb_time" text="" y="24.67" fontFamily="SimHei" size="20" x="416" touchEnabled="false" textColor="0xbfbfbf" textAlign="left"/>
+	<e:Image id="img_sucess" x="94" y="23" source="encounter_jingongchenggong_png"/>
+	<e:Image id="img_fail" x="94" y="24" source="encounter_jigongshibai_png"/>
+	<e:Image source="encounter_biaozhi_png" x="15" y="14"/>
+	<e:Image source="chat_fengexian_png" x="-30" y="233" width="720"/>
+</e:Skin>

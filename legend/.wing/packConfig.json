@@ -1,0 +1,12 @@
+{
+    "useClip": true,
+    "maxImageWidth": 2048,
+    "maxImageHeight": 2048,
+    "defaultResPath": "f:\\client\\trunk\\legend\\resource\\default.res.json",
+    "packGroups": {
+        "preload_core": false,
+        "preload_config": false,
+        "preload_pic": false,
+        "login": true
+    }
+}

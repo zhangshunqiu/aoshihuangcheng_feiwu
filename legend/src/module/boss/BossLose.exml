@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="BossLose" width="720" height="1280" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
+		<e:Image horizontalCenter="0" verticalCenter="0" source="boss_qizhi_lose_png"/>
+		<e:Image y="122.99" source="boss_taitou_lose_png" horizontalCenter="0"/>
+		<e:Image y="191.38" horizontalCenter="0.5" source="boss_txt_tiaozhanshibai_lose_png"/>
+		<e:Image source="boss_bg_tujing_lose_png" y="355" horizontalCenter="0"/>
+		<e:Image source="boss_bg_woyaobianqiang_lose_png" y="306" horizontalCenter="0"/>
+		<e:Image source="boss_txt_woyaobianqiang_lose_png" y="319" horizontalCenter="0"/>
+		<e:Group id="gp_return" x="273" y="842.65">
+			<e:Image id="img_return" source="boss_btn_t_succeed_png" y="0" x="0"/>
+			<e:Image y="12.019999999999982" touchEnabled="false" source="boss_txt_tuichu_lose_png" x="31"/>
+			<e:BitmapLabel width="67" height="23" x="85" y="13" anchorOffsetX="0" anchorOffsetY="0" text="(      s)" font="boss_fail_txt_fnt"/>
+			<e:BitmapLabel id="btlb_countDown" width="66" height="31" x="99" y="14.350000000000023" font="boss_fail_txt_fnt" text="6" anchorOffsetX="0" anchorOffsetY="0"/>
+		</e:Group>
+		<e:Group id="gp_middle" x="61" y="479">
+			<e:Group id="gp_go" x="82" y="33">
+				<e:Image source="boss_bg_s_lose_png" y="0" x="0"/>
+				<e:Image id="img_go" source="boss_btn_q_lose_png" x="254" y="117"/>
+				<e:Image source="boss_txt_qianwang_lose_png" x="309" y="125" touchEnabled="false"/>
+				<e:Image source="boss_txt_k_lose_png" y="63" horizontalCenter="0" x="38" scaleX="1" scaleY="1"/>
+			</e:Group>
+			<e:Image source="boss_jilituijian_lose_png" x="0" y="0"/>
+		</e:Group>
+		<e:Image id="img_role" source="main_icon_juese_png" x="132" y="369" scaleX="1" scaleY="1"/>
+		<e:Image id="img_wing" source="main_icon_chibang_png" x="245" y="369" scaleX="1" scaleY="1"/>
+		<e:Image id="img_forge" source="main_icon_duanzao_png" x="369" y="375" scaleX="1" scaleY="1"/>
+		<e:Image id="img_raid" source="boss_icon_xunbao_png" x="478" y="371"/>
+		<e:Scroller id="scroller" width="430" height="279" y="513" horizontalCenter="0" anchorOffsetY="0" x="145" scaleX="1" scaleY="1">
+			<e:Group anchorOffsetY="0" height="286">
+				<e:List id="list" width="421" height="268" x="4" y="5" anchorOffsetX="0" anchorOffsetY="0"/>
+			</e:Group>
+		</e:Scroller>
+	</e:Group>
+</e:Skin>

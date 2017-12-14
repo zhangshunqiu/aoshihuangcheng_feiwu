@@ -1,0 +1,26 @@
+{
+	"1":{
+		"id":1,
+		"liveness":20,
+		"reward_id":102,
+		"reward_num":3
+	},
+	"2":{
+		"id":2,
+		"liveness":40,
+		"reward_id":102,
+		"reward_num":5
+	},
+	"3":{
+		"id":3,
+		"liveness":80,
+		"reward_id":102,
+		"reward_num":7
+	},
+	"4":{
+		"id":4,
+		"liveness":100,
+		"reward_id":102,
+		"reward_num":9
+	}
+}

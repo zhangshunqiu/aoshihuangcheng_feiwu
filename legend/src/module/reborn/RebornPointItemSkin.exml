@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="RebornPointItemSkin" width="528" height="120" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:customui="customui.*">
+	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
+		<e:Image source="common_bg_list_neiromg_png" scale9Grid="77,16,464,96" left="0" right="0" top="0" bottom="0"/>
+		<e:Label id="lb_name" text="Label" x="110" y="22" fontFamily="SimHei" size="20" textColor="0xffd266"/>
+		<e:Label id="lb_cost" text="高级转生丹" x="110" y="74" fontFamily="SimHei" size="20" textColor="0xffd266"/>
+		<e:Label id="lb_time" text="今日还可兑换20次" x="356" y="19" fontFamily="SimHei" textColor="0xBFBFBF" size="20" width="170" textAlign="center"/>
+		<customui:BaseItem id="baseItem" width="90" height="90" x="55" verticalCenter="0" anchorOffsetX="45" anchorOffsetY="45"/>
+		<e:Image id="img_use" source="common_btn_common_png" x="366" y="48"/>
+		<e:Image id="img_change" y="61" touchEnabled="false" source="reborn_txt_duihuan_png" horizontalCenter="174"/>
+		<e:Image id="img_gold" source="common_yuanbao_png" x="210" y="66"/>
+	</e:Group>
+</e:Skin>

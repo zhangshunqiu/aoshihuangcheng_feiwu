@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="VipGiftSkin" width="720" height="1000" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group x="27" y="271">
+		<e:Image source="vip_bg1_png" x="0" y="0"/>
+		<e:Group id="gp_list" x="102" y="-2" anchorOffsetX="0" width="451" anchorOffsetY="0" height="297">
+			<e:Image source="smelt_orange_hengtiao_png" y="57" anchorOffsetY="0" height="175" anchorOffsetX="0" width="419" x="0"/>
+			<e:Scroller id="scroller" width="417" height="170" x="27" y="60" anchorOffsetX="0" anchorOffsetY="0">
+				<e:Group anchorOffsetX="0" width="421" anchorOffsetY="0" height="172" touchChildren="false" touchEnabled="true" touchThrough="false">
+				<e:Group y="15" horizontalCenter="-5.5" anchorOffsetY="0">
+					<e:Label id="lb_backpack" text="1、免费获得     背包" x="0" y="8" size="24" fontFamily="黑体" scaleX="1" scaleY="1" textColor="0xbfbfbf" visible="false"/>
+					<e:Label id="lb_transcript" text="2、每天可购买材料副本" x="0" y="44" size="24" fontFamily="黑体" scaleX="1" scaleY="1" textColor="0xbfbfbf" visible="false"/>
+					<e:Label id="lb_moneyTree" text="3、摇钱树每天可使用" x="0" y="80" size="24" fontFamily="黑体" scaleX="1" scaleY="1" textColor="0xbfbfbf" visible="false"/>
+					<e:Label id="lb_quickFight" text="4、快速战斗每天可购买" x="0" y="116" size="24" fontFamily="黑体" scaleX="1" scaleY="1" textColor="0xbfbfbf" visible="false"/>
+					<e:Label id="lb_arena" text="5、竞技场每天可购买" x="0" y="157" size="24" fontFamily="黑体" scaleX="1" scaleY="1" textColor="0xbfbfbf" visible="false"/>
+					<e:Label id="lb_backpackNum" text="100个" x="132" y="8" size="24" fontFamily="黑体" width="60" textAlign="center" scaleX="1" scaleY="1" textColor="0x00f828" visible="false"/>
+					<e:Label id="lb_partner" text="1、可提前解锁" x="0" y="18" size="24" fontFamily="黑体" scaleX="1" scaleY="1" textColor="0xBFBFBF" visible="false"/>
+					<e:Label id="lb_partnerNum" text="第1个伙伴" x="150" y="18" size="24" fontFamily="黑体" width="122" textAlign="center" scaleX="1" scaleY="1" textColor="0x00F828" anchorOffsetX="0" visible="false"/>
+					<e:Label id="lb_smelt" text="1、装备一键熔炼" x="0" y="28" size="24" fontFamily="黑体" scaleX="1" scaleY="1" textColor="0xBFBFBF" visible="false"/>
+					<e:Label id="lb_wipe" text="1、一键扫荡个人BOSS" x="0" y="38" size="24" fontFamily="黑体" scaleX="1" scaleY="1" textColor="0xBFBFBF" visible="false"/>
+					<e:Label id="lb_transcriptNum" text="2次" x="255" y="44" size="24" fontFamily="黑体" textAlign="center" scaleX="1" scaleY="1" textColor="0x00f828" visible="false"/>
+					<e:Label id="lb_moneyTreeNum" text="2次" x="230" y="80" size="24" fontFamily="黑体" textAlign="center" scaleX="1" scaleY="1" textColor="0x00f828" visible="false"/>
+					<e:Label id="lb_quickFightNum" text="2次" x="258" y="116" size="24" fontFamily="黑体" textAlign="center" scaleX="1" scaleY="1" textColor="0x00f828" visible="false"/>
+					<e:Label id="lb_arenaNum" text="2次" x="234" y="157" size="24" fontFamily="黑体" textAlign="center" scaleX="1" scaleY="1" textColor="0x00f828" visible="false"/>
+				</e:Group>
+				</e:Group>
+			</e:Scroller>
+		</e:Group>
+		<e:Image source="vip_bg2_png" x="32" y="293"/>
+		<e:Image source="boss_bg_woyaobianqiang_lose_png" x="125" y="4"/>
+		<e:Image source="boss_bg_woyaobianqiang_lose_png" x="129" y="243"/>
+		<e:Image source="vip_txt_tequan_png" x="321" y="7"/>
+		<e:BitmapLabel width="49" height="34" x="289" y="10" anchorOffsetX="0" anchorOffsetY="0" text="1" letterSpacing="-15" id="btlb_vip0" font="vip_shuzi_title_fnt"/>
+		<e:Image source="vip_txt_VIP_png" x="238" y="10"/>
+		<e:Image source="vip_txt_tequanlibao_png" x="292" y="245"/>
+		<e:BitmapLabel id="btlb_vip1" width="56" height="34" x="260" y="248" anchorOffsetX="0" anchorOffsetY="0" text="1" letterSpacing="-15" font="vip_shuzi_title_fnt"/>
+		<e:Image source="vip_txt_VIP_png" x="209" y="248"/>
+		<e:Image source="vip_txt_mabidingshen_png" x="290" y="373"/>
+		<e:Button id="btn_get" label="" x="246" y="622">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="vip_btn_lingqu_png" source.down="vip_btn_weilingqu_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Image id="img_hadReceive" source="mail_yilingqu_png" y="634" x="284" touchEnabled="false" visible="false"/>
+		<e:Image id="img_receive" source="boss_txt_lingqu_png" x="295" y="634" touchEnabled="false"/>
+		<e:List id="list" width="470" height="112" y="500" anchorOffsetX="0" anchorOffsetY="0" x="78"/>
+	</e:Group>
+</e:Skin>

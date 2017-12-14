@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="RechargeListItemSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="VIPcharge_bg1_png" horizontalCenter="0" verticalCenter="0"/>
+	<e:Label id="lb_money" text="10元" y="11" size="30" fontFamily="SimHei" textColor="0xf7f1af" anchorOffsetX="0" width="92" anchorOffsetY="0" height="29" textAlign="center" horizontalCenter="0"/>
+	<e:Group width="206" height="123" x="44" y="34" anchorOffsetY="0" anchorOffsetX="0">
+		<e:Image id="img_gold" anchorOffsetX="0" anchorOffsetY="0" source="VIPcharge_yuanbao7_png" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0"/>
+	</e:Group>
+	<e:Group id="gp_attach" width="75" height="80" x="7" anchorOffsetX="0" anchorOffsetY="0" y="71">
+		<e:Image source="VIPcharge_bg-zengsong_png" x="-4" y="-3" scaleX="1" scaleY="1"/>
+		<e:Label id="lb_gold_attach" text="100" y="45" scaleX="1" scaleY="1" size="24" textColor="0xffea01" fontFamily="SimHei" anchorOffsetX="0" width="53" anchorOffsetY="0" height="23" textAlign="center" horizontalCenter="-2"/>
+	</e:Group>
+	<e:BitmapLabel id="lb_gold_total" width="66" height="26" x="209" y="79" anchorOffsetX="0" anchorOffsetY="0" font="vipCharge_txt_fnt" text="123" textAlign="center"/>
+	<e:Label text="元宝" x="217" y="108" scaleX="1" scaleY="1" size="24" fontFamily="SimHei" textColor="0xf7f1af"/>
+</e:Skin>

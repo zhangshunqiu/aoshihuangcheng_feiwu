@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="HeroAttributeSkin" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:game="game.*" xmlns:customui="customui.*">
+	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
+		<customui:CommonWin id="commonWin" left="0" right="0" top="0" bottom="0" locked="true"/>
+		<e:Image source="common_bg_interface_level_1_png" horizontalCenter="0" top="0" visible="false"/>
+		<e:Image source="equipping_bg_juese_png" y="59" scaleX="1" scaleY="1" horizontalCenter="0" locked="true"/>
+		<e:Image source="common_bg_window_tips_png" y="257" width="649" height="576" horizontalCenter="1" locked="true"/>
+		<e:Image source="common_bg_tips_title_png" y="265" scale9Grid="64,5,390,37" width="630" height="60" horizontalCenter="0" locked="true"/>
+		<e:Image source="common_bg_tips_title_png" y="476" scale9Grid="64,5,390,37" width="630" height="60" horizontalCenter="0" locked="true"/>
+		<e:Image source="common_bg_list_neiromg_png" y="323" height="156" scale9Grid="77,16,464,96" width="632" horizontalCenter="0" locked="true"/>
+		<e:Image source="common_bg_list_neiromg_png" y="534" scale9Grid="77,16,464,96" width="632" height="295" horizontalCenter="0" locked="true"/>
+		<e:Image source="equipping_jichushuxing_png" y="273" horizontalCenter="0" visible="false"/>
+		<e:Image source="equipping_txt_xiangxishuxing_png" y="492" horizontalCenter="0" visible="false"/>
+		<game:HeroHeadComponentView id="hero_head" width="700" height="120" horizontalCenter="0" top="65"/>
+		<e:Image x="210" y="203" source="forge_txt_zhandouli_png"/>
+		<e:BitmapLabel id="bmlb_cap" x="333" y="211" text="99999999" scaleX="1" scaleY="1" font="main_pingfen_shu_fnt"/>
+		<e:Image id="img_return" source="common_btn_fanhui_png" x="586" y="734"/>
+		<e:Group id="gp_base" height="200" y="314" left="0" right="0">
+			<e:Image source="common_bg_shuju_png" x="158" y="30" scale9Grid="18,7,112,18" width="162" height="36"/>
+			<e:Image source="common_bg_shuju_png" x="158" y="72" scale9Grid="18,7,112,18" width="162" height="36"/>
+			<e:Image source="common_bg_shuju_png" x="490" y="72" scale9Grid="18,7,112,18" width="162" height="36"/>
+			<e:Image source="common_bg_shuju_png" x="158" y="114" scale9Grid="18,7,112,18" width="162" height="36"/>
+			<e:Image source="common_bg_shuju_png" x="490" y="114" scale9Grid="18,7,112,18" width="162" height="36"/>
+			<e:Label text="攻  击：" x="69" y="38" fontFamily="SimHei" size="20" textColor="0xca8d19"/>
+			<e:Label text="生  命：" x="69" y="77" fontFamily="SimHei" size="20" textColor="0xCA8D19"/>
+			<e:Label text="物  防：" x="69" y="115" fontFamily="SimHei" size="20" textColor="0xCA8D19"/>
+			<e:Label text="法  防：" x="401" y="119" fontFamily="SimHei" size="20" textColor="0xCA8D19"/>
+			<e:Label text="魔  法：" x="401" y="80" fontFamily="SimHei" size="20" textColor="0xCA8D19"/>
+			<e:Label id="lb_ac" text="Label" x="167" y="37" fontFamily="SimHei" textColor="0xd9d0cc" size="20"/>
+			<e:Label id="lb_hp" text="Label" x="167" y="79" fontFamily="SimHei" textColor="0xd9d0cc" size="20"/>
+			<e:Label id="lb_mp" text="Label" x="499" y="80" fontFamily="SimHei" textColor="0xd9d0cc" size="20"/>
+			<e:Label id="lb_def" text="Label" x="167" y="121" fontFamily="SimHei" textColor="0xd9d0cc" size="20"/>
+			<e:Label id="lb_sdef" text="999" x="499" y="121" fontFamily="SimHei" textColor="0xd9d0cc" size="20"/>
+		</e:Group>
+		<e:Group id="gp_special" height="250" y="540" left="0" right="0" touchThrough="true">
+			<e:Image source="common_bg_shuju_png" x="158" y="18" scale9Grid="18,7,112,18" width="162" height="36" scaleX="1" scaleY="1"/>
+			<e:Image source="common_bg_shuju_png" x="490" y="18" scale9Grid="18,7,112,18" width="162" height="36" scaleX="1" scaleY="1"/>
+			<e:Image source="common_bg_shuju_png" x="158" y="60" scale9Grid="18,7,112,18" width="162" height="36" scaleX="1" scaleY="1"/>
+			<e:Image source="common_bg_shuju_png" x="490" y="60" scale9Grid="18,7,112,18" width="162" height="36" scaleX="1" scaleY="1"/>
+			<e:Image source="common_bg_shuju_png" x="158" y="101" scale9Grid="18,7,112,18" width="162" height="36" scaleX="1" scaleY="1"/>
+			<e:Image source="common_bg_shuju_png" x="490" y="101" scale9Grid="18,7,112,18" width="162" height="36" scaleX="1" scaleY="1"/>
+			<e:Image source="common_bg_shuju_png" x="158" y="143" scale9Grid="18,7,112,18" width="162" height="36" scaleX="1" scaleY="1"/>
+			<e:Image source="common_bg_shuju_png" x="490" y="143" scale9Grid="18,7,112,18" width="162" height="36" scaleX="1" scaleY="1"/>
+			<e:Label text="暴  击：" x="69" fontFamily="SimHei" size="20" y="27" textColor="0xca8d19"/>
+			<e:Label text="命  中：" x="69" fontFamily="SimHei" size="20" y="68" textColor="0xCA8D19"/>
+			<e:Label text="伤害倍率：" x="49" fontFamily="SimHei" size="20" y="108" textColor="0xCA8D19"/>
+			<e:Label text="麻  痹：" x="69" fontFamily="SimHei" size="20" y="149" textColor="0xCA8D19"/>
+			<e:Label text="抗  暴：" x="401" fontFamily="SimHei" size="20" y="26" textColor="0xCA8D19"/>
+			<e:Label text="闪  避：" x="401" fontFamily="SimHei" size="20" y="67" textColor="0xCA8D19"/>
+			<e:Label text="伤害减免：" x="380" fontFamily="SimHei" size="20" y="108" textColor="0xCA8D19"/>
+			<e:Label text="魔法抵伤：" x="380" fontFamily="SimHei" size="20" y="149" textColor="0xCA8D19"/>
+			<e:Label id="lb_crit" text="Label" x="167" fontFamily="SimHei" textColor="0xd9d0cc" size="20" y="27"/>
+			<e:Label id="lb_rcrit" text="Label" x="499" fontFamily="SimHei" textColor="0xd9d0cc" size="20" y="26"/>
+			<e:Label id="lb_paralysis" text="Label" x="167" fontFamily="SimHei" textColor="0xd9d0cc" size="20" y="151"/>
+			<e:Label id="lb_damage_offset_rate" text="Label" x="499" fontFamily="SimHei" textColor="0xd9d0cc" size="20" y="151"/>
+			<e:Label id="lb_damage_reduction" text="Label" x="499" fontFamily="SimHei" textColor="0xd9d0cc" size="20" y="109"/>
+			<e:Label id="lb_damage_deepen" text="Label" x="167" fontFamily="SimHei" textColor="0xd9d0cc" size="20" y="110"/>
+			<e:Label id="lb_hit_rate" text="Label" x="167" fontFamily="SimHei" textColor="0xd9d0cc" size="20" y="68"/>
+			<e:Label id="lb_dodge" text="Label" x="499" fontFamily="SimHei" textColor="0xd9d0cc" size="20" y="68" scaleX="1" scaleY="1"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

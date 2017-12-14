@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ActivityDailyRankItemSkin" width="640" height="127" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="mail_btn_list_png" scale9Grid="78,15,473,93" width="640" height="127" horizontalCenter="0" verticalCenter="0"/>
+	<e:Label id="lb_rank" text="99" x="33" fontFamily="SimHei" size="24" verticalCenter="0"/>
+	<e:Group id="gp_reward" width="330" height="100" x="107" verticalCenter="-0.5"/>
+	<e:Group width="200" height="127" x="438" verticalCenter="0">
+		<e:Label id="lb_name" text="Label" y="35" fontFamily="SimHei" size="24" textColor="0xbfbfbf" horizontalCenter="0"/>
+		<e:Label id="lb_level" text="Label" y="71" fontFamily="SimHei" size="24" textColor="0xffa200" horizontalCenter="0"/>
+	</e:Group>
+	<e:Image id="img_rank" source="ranking list_1_png" x="19" verticalCenter="0"/>
+</e:Skin>

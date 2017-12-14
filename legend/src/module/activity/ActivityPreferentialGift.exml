@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ActivityPreferentialGift" width="720" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
+		<e:Group id="gp_top" height="183" left="0" right="0" top="0" anchorOffsetY="0">
+			<e:Image source="activity_bg_tips_png" x="37" y="2"/>
+			<e:Group id="gp_gift0" x="40" y="6" anchorOffsetX="0" width="161" anchorOffsetY="0" height="146">
+				<e:Image source="activity_bg_libao_s_png" x="2" y="85" scaleX="1" scaleY="1"/>
+				<e:Image source="activity_cailiaolibao_png" x="34" y="109"/>
+			</e:Group>
+			<e:Group id="gp_gift1" x="203" y="5" anchorOffsetX="0" width="157" anchorOffsetY="0" height="147">
+				<e:Image source="activity_bg_libao_s_png" x="-2" y="86" scaleX="1" scaleY="1" anchorOffsetX="0" width="159"/>
+				<e:Image source="activity_shenyilibao_png" x="33" y="110"/>
+			</e:Group>
+			<e:Group id="gp_gift2" x="360" y="4" width="160" anchorOffsetX="0" anchorOffsetY="0" height="148">
+				<e:Image source="activity_bg_libao_s_png" x="0" y="87"/>
+				<e:Image source="activity_shenjielibao_png" x="34" y="111"/>
+			</e:Group>
+			<e:Group id="gp_gift3" x="522" y="5" width="158" height="147" anchorOffsetX="0" anchorOffsetY="0">
+				<e:Image source="activity_bg_libao_s_png" x="-3" y="86"/>
+				<e:Image source="activity_shenzhuanglibao_png" x="35" y="110"/>
+			</e:Group>
+		</e:Group>
+		<e:Label text="花费      元宝即可获得" x="172" y="179" size="24" fontFamily="黑体"/>
+		<e:Label text="剩余时间： 天  小时  分" x="240" y="630" size="20" fontFamily="黑体" textColor="0x00f829"/>
+		<e:Label id="lb_gold" text="100000" x="219" y="179" size="24" fontFamily="黑体" textAlign="center" width="72" textColor="0xffea00"/>
+		<e:Label id="lb_day" text="10" x="325" y="630" size="20" fontFamily="黑体" textAlign="center" width="29" anchorOffsetX="0" anchorOffsetY="0" height="23" textColor="0x00f829"/>
+		<e:Label id="lb_hour" text="10" x="365" y="630" size="20" fontFamily="黑体" textAlign="center" width="29" anchorOffsetX="0" anchorOffsetY="0" height="23" textColor="0x00f829"/>
+		<e:Label id="lb_minute" text="10" x="425" y="630" size="20" fontFamily="黑体" textAlign="center" width="29" anchorOffsetX="0" anchorOffsetY="0" height="23" textColor="0x00f829"/>
+		<e:Label id="lb_name" text="特惠礼包" x="442" y="179" size="24" fontFamily="黑体" textAlign="center" width="99" anchorOffsetX="0" textColor="0xffea00"/>
+		<e:Image id="img_display" source="243001_png" x="72" y="341" anchorOffsetX="0" width="187" anchorOffsetY="0" height="178" rotation="0.03" visible="false"/>
+		<e:List id="list" width="341" height="250" x="339" y="266" anchorOffsetX="0" anchorOffsetY="0"/>
+		<e:Button id="btn_buy" label="" x="265" y="560">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="common_btn_huabian_png" source.down="common_btn_huabian_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Image source="activity_bg_libao_l_png" x="54" y="357"/>
+		<e:Image source="activity_txt_lijigoumai_png" x="307" y="580"/>
+	</e:Group>
+</e:Skin>

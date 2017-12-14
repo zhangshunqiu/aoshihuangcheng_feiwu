@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="FastFightResultSkin" width="720" height="1166" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0" touchThrough="true">
+		<e:Image horizontalCenter="0" verticalCenter="0" source="main_bg_1_jiesuan_png"/>
+		<e:Image source="main_bg_2_jiesuan_png" y="340" horizontalCenter="0.5"/>
+		<e:Image y="280" horizontalCenter="0.5" source="fight_kuaisuzhandoujiesuan_title_png"/>
+		<e:Image id="img_close" source="common_btn_close_1_png" x="538.27" y="270.54"/>
+		<e:Label id="lb_info" text="Label" y="354.67" fontFamily="SimHei" size="22" x="165" textColor="0xbfbfbf"/>
+		<e:Label id="lb_get" text="Label" y="498.03" fontFamily="SimHei" size="22" x="165" textColor="0xbfbfbf"/>
+	</e:Group>
+</e:Skin>

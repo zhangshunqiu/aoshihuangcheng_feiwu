@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="FortuneWheelViewSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" width="720" height="1066">
+	<e:Group left="0" right="0" top="0" bottom="0">
+		<e:Image source="common_bg_all_png" left="0" top="0" x="0" y="0" scaleX="1" scaleY="1"/>
+		<e:Image source="common_bg_interface_level_1_png" horizontalCenter="0" top="0" x="9" y="0" scaleX="1" scaleY="1"/>
+		<e:Image source="turnplate_bg_png" y="65.35" horizontalCenter="0"/>
+		<e:Image source="raider_taitou_png" top="-37" horizontalCenter="0"/>
+		<e:Group width="544" height="668" y="99.98" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
+			<e:Image source="turnplate_zhuanpan_png" y="15.689999999999998" horizontalCenter="0" x="20" scaleX="1" scaleY="1"/>
+			<e:Image source="turnplate_bg_beishu_png" x="384.34" y="403.01"/>
+			<e:Image x="398.34" y="407.01" source="turnplate_3bei_png"/>
+			<e:Image source="turnplate_bg_beishu_png" x="163.67" y="194.34"/>
+			<e:Image x="177.67" y="198.34" source="turnplate_fanbei_png"/>
+			<e:Image source="turnplate_bg_beishu_png" x="288.36" y="489.68"/>
+			<e:Image x="302.36" y="493.68" source="turnplate_8bei_png"/>
+			<e:Image source="turnplate_bg_beishu_png" x="384.33" y="287"/>
+			<e:Image x="398.33" y="291" source="turnplate_6bei_png"/>
+			<e:Image source="turnplate_bg_beishu_png" x="80.99" y="403.68"/>
+			<e:Image x="94.99" y="407.68" source="turnplate_5bei_png"/>
+			<e:Image source="turnplate_bg_beishu_png" x="80.33" y="288.33"/>
+			<e:Image x="94.33" y="292.33" source="turnplate_fanbei_png"/>
+			<e:Image source="turnplate_bg_beishu_png" x="293" y="192.99"/>
+			<e:Image source="turnplate_4bei_png" x="307" y="196.99"/>
+			<e:Image source="turnplate_bg_beishu_png" x="169" y="489"/>
+			<e:Image source="turnplate_4bei_png" x="182.33" y="490.33"/>
+			<e:Group id="img_fortuneBtn" width="130" height="132.33" y="307.65000000000003" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="-5" x="202" scaleX="1" scaleY="1">
+				<e:BitmapLabel id="bitmap_cost" width="55.33" height="27" x="12.32" y="56.31" font="fortune_txt_fnt" text="123" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" textAlign="center"/>
+				<e:Image source="turnplate_yuanbao_png" x="68.35" verticalCenter="0.33499999999999375"/>
+			</e:Group>
+		</e:Group>
+		<e:Image id="img_close" x="645.28" y="3.48" source="common_btn_close_1_png"/>
+		<e:Image id="img_return" source="common_btn_fanhui_png" x="605" y="835" scaleX="1" scaleY="1"/>
+		<e:Label id="lb_leftTime" text="" x="49" y="124" size="23" fontFamily="SimHei"/>
+		<e:Label id="lb_name" text="幸运用户：" x="52" y="880.01" size="30" fontFamily="SimHei"/>
+		<e:ProgressBar id="progress" width="558" height="24" y="828" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" skinName="FortuneProgressSkin"/>
+		<e:Label id="lb_progress" text="" y="831.33" size="22" horizontalCenter="-19.5"/>
+		<e:Image source="charge_bg_zhandoulli_png" y="73.11" anchorOffsetX="0" width="641.94" anchorOffsetY="0" height="49.52" horizontalCenter="0"/>
+		<e:Image source="turnplate_xingyunzhuanpan_title_png" y="2.69" horizontalCenter="0"/>
+		<e:Image source="turnplate_wenzi_png" y="78.67" horizontalCenter="0.5"/>
+		<e:Image width="660" height="54.34" y="760.7" source="monthcard_bg_tips_png" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0"/>
+		<e:Label id="lb_desc" text="" y="774.32" anchorOffsetX="0" width="587.33" anchorOffsetY="0" height="30" textColor="0xf87500" size="16" fontFamily="SimHei" horizontalCenter="-0.5" textAlign="center" verticalAlign="middle"/>
+		<e:Image id="img_pointer" width="46.66" height="125" x="354.69" y="471.32" anchorOffsetY="183.33" anchorOffsetX="25.04" source="turnplate_zhizhen_png"/>
+	</e:Group>
+</e:Skin>

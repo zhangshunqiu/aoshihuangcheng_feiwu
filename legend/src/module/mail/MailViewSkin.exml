@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MailViewSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" width="720" height="1066">
+	<e:Group id="gp_main0" left="0" right="0" top="0" bottom="0">
+		<e:Image source="common_bg_all_png" left="0" top="0" x="0" y="0" scaleX="1" scaleY="1"/>
+		<e:Image source="common_bg_interface_level_1_png" horizontalCenter="0" top="0"/>
+		<e:Image width="656.36" height="735.93" y="80.71" source="common_bg_window_tips_png" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0"/>
+		<e:Image id="img_close0" x="645.28" y="3.48" source="common_btn_close_1_png"/>
+		<e:Button id="btn_reward0" label="" y="860" horizontalCenter="0">
+		<e:skinName>
+			<e:Skin states="up,down,disabled" xmlns:customui="customui.*">
+			<e:Image width="100%" height="100%" source="common_btn_common_png" source.down="common_btn_common_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+		</e:Button>
+		<e:Image width="198" height="77" y="-6" source="mail_youjian_title_png" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0"/>
+		<e:Label text="邮件可保存15天" x="62" y="873" textColor="0xE90202" size="24"/>
+		<e:Label text="一键领取" x="292" y="871" size="24" anchorOffsetX="0" width="136" anchorOffsetY="0" height="30" textAlign="center" touchEnabled="false"/>
+		<e:Label id="lb_pageNum" text="页码" x="290" y="819" size="24" anchorOffsetX="0" width="136" anchorOffsetY="0" height="30" textAlign="center" touchEnabled="false" textColor="0xf6a527"/>
+		<e:Image id="img_return0" source="common_btn_fanhui_png" x="598" y="834" scaleX="1" scaleY="1"/>
+		<e:Image id="img_front" width="43.19" height="71" x="85.19" y="476" source="mail_jiantou_right_png" anchorOffsetX="0" anchorOffsetY="0" rotation="180"/>
+		<e:Image id="img_back" width="43.19" height="71" x="632.19" y="403" source="mail_jiantou_right_png" anchorOffsetX="0" anchorOffsetY="0"/>
+	</e:Group>
+</e:Skin>

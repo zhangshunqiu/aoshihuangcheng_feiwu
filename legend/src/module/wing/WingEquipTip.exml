@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="WingEquipTip" width="720" height="1000" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect id="re_close" width="720" height="1000" x="0" y="0" alpha="0.5"/>
+	<e:Image source="common_interface_tanchuang_1_png" y="296" width="378" height="266" horizontalCenter="0"/>
+	<e:Label text="部位：" x="288" y="321" fontFamily="黑体" size="20" textColor="0xbfbfbf"/>
+	<e:Label id="lb_name" text="正羽" x="344" y="321" fontFamily="黑体" size="20" textColor="0xe39b2c"/>
+	<e:Label id="lb_step" text="1阶" x="346" y="357" fontFamily="黑体" size="20" textColor="0x66ddff"/>
+	<e:Label text="阶级：" x="290" y="356" fontFamily="黑体" size="20" textColor="0xBFBFBF"/>
+	<e:Button id="btn_goStep" label="升阶" x="427" y="317" skinName="skins.ButtonSkin4"/>
+	<e:Image source="equipping_shuxingpingfen_png" y="415" horizontalCenter="0.5"/>
+	<e:Label text="基础属性：" x="197.5" y="472.5" fontFamily="黑体" size="20" textColor="0xc98c19"/>
+	<e:Label id="lb_attack" text="物理攻击：5500" x="298.5" y="472" fontFamily="黑体" size="20" textColor="0xd9d0cc"/>
+	<e:Label id="lb_defense" text=" " x="315" y="508" fontFamily="黑体" size="20" textColor="0xd9d0cc"/>
+	<e:Label id="lb_equipScore" text="000" x="274" y="423" fontFamily="黑体" size="20" anchorOffsetX="0" width="108.5" textAlign="left" textColor="0xfed200"/>
+	<e:Image source="wing_txt_pingfen_png" x="225" y="423"/>
+	<e:Group x="188" y="307">
+		<e:Image id="img_icon_frame" source="common_default_png" x="0" y="0"/>
+		<e:Image id="img_icon" source="wing_1_zhengyu_png" x="9" verticalCenter="0"/>
+	</e:Group>
+</e:Skin>

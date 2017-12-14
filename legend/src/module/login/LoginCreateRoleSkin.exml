@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="LoginCreateRoleSkin" width="720" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
+		<e:Image horizontalCenter="0" verticalCenter="0" source="role_bg_png"/>
+		<e:Image horizontalCenter="0" top="0" source="role_bg_taitou_png"/>
+		<e:Image horizontalCenter="0" top="15" source="role_xuanze_png"/>
+		<e:Group id="gp_middle" height="600" verticalCenter="0" left="0" right="0" touchEnabled="false">
+		</e:Group>
+		<e:Image source="role_quan_png" x="4.43" y="83.43"/>
+		<e:Image id="img_career" x="32.24" y="99.69" source="role_zhan_png"/>
+		<e:Image id="img_desc" source="role_jieshao_png" x="46.76" y="234.24" visible="false"/>
+		<e:Button id="btn_warrior" label="" x="590" y="90">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="100001_png" source.down="100002_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="btn_magic" label="" x="590" y="249">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="200001_png" source.down="200002_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="btn_pastor" label="" x="590" y="407">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="300001_png" source.down="300002_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Image id="img_selected" x="570" y="71" source="role_xuanzhong_png"/>
+		<e:Label id="lb_desc" text="详细描述" x="53.88" y="241.13" fontFamily="SimHei" width="30" size="26"/>
+		<e:Button id="btn_male" label="男" x="16.12" y="682.54">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="role_btn_weixianshi_png" source.down="role_btn_xianshi_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="btn_female" label="女" x="16.12" y="772.81">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="role_btn_weixianshi_png" source.down="role_btn_xianshi_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Group height="200" left="0" right="0" y="908.64">
+			<e:Image y="5.319999999999936" source="role_bg_touming_png" horizontalCenter="0" x="0" scaleX="1" scaleY="1"/>
+			<e:Image source="role_bg_shurukuang_png" y="9" horizontalCenter="0" x="138" scaleX="1" scaleY="1"/>
+			<e:TextInput id="textInput" width="230" height="50" y="23.319999999999936" skinName="skins.TextInputSkin" x="210.04" scaleX="1" scaleY="1" maxChars="8"/>
+			<e:Image id="img_rand" x="461.73" y="21.319999999999936" source="role_touzi_png" scaleX="1" scaleY="1"/>
+			<e:Button id="btn_create" label="" y="103.92000000000007" horizontalCenter="0.5" x="189" scaleX="1" scaleY="1">
+				<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="role_btn_start_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+				</e:skinName>
+			</e:Button>
+		</e:Group>
+		<e:Image source="role_zhanshi_png" x="609.52" y="204.56"/>
+		<e:Image source="role_fashi_png" x="610.52" y="365"/>
+		<e:Image source="role_daoshi_png" x="609.52" y="524.5"/>
+	</e:Group>
+</e:Skin>

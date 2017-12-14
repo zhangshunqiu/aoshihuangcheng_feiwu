@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ChatItemSkin" width="646" height="112" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:game="game.*">
+	<e:Group id="gp_text" x="117" y="13">
+		<e:Label id="lb_name" text="风云天下" x="147" y="5" size="24" fontFamily="SimHei" maxWidth="300" textColor="0x01acfe"/>
+		<e:Image id="img_vip" source="chat_txt_vip_png" x="38" y="0"/>
+		<e:Image id="img_monthcard" source="chat_txt_yue_png" x="0" y="1"/>
+		<e:BitmapLabel id="lb_vip" width="126" height="27" x="97" y="1" anchorOffsetX="0" anchorOffsetY="0" font="chat_vip_number_fnt" text="10" letterSpacing="-5"/>
+	</e:Group>
+	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
+		<e:Label id="lb_content" text="啦啦啦持支持" x="122" y="53" fontFamily="SimHei" size="24" maxWidth="300" anchorOffsetX="0" width="487" textColor="0xbfbfbf"/>
+		<e:Image source="chat_fengexian_png" x="21" y="106"/>
+		<e:Image id="frame_normal" source="chat_bg_touxiang_putong_png" x="10" y="13"/>
+		<e:Image id="frame_vip" source="chat_bg_touxiang_vip_png" x="11" y="13"/>
+		<e:Image id="img_icon" source="200002_chat_png" x="24" y="23"/>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="TestSkin" width="720" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
+		<e:Image source="shop_bg_tips_png" x="130" y="364"/>
+		<e:Image source="equipping_shuxingpingfen_png" x="187" y="471" anchorOffsetX="0" width="341.25" anchorOffsetY="0" height="45"/>
+		<e:EditableText id="edtext_input" width="262" height="30" text="" y="478" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0"/>
+		<e:Button id="btn_debug" label="确定" y="553" horizontalCenter="0"/>
+		<e:Image id="img_close" source="common_btn_close_1_png" x="551" y="380"/>
+		<e:Label text="debug" y="385" textColor="0xbfbfbf" horizontalCenter="0"/>
+	</e:Group>
+</e:Skin>

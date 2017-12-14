@@ -1,0 +1,50 @@
+{
+	"native": {
+		"path_ignore": []
+	},
+	"publish": {
+		"web": 0,
+		"native": 1,
+		"path": "C:\\wamp\\www\\"
+	},
+	"egret_version": "5.0.7",
+	"modules": [
+		{
+			"name": "egret"
+		},
+		{
+			"name": "game"
+		},
+		{
+			"name": "res"
+		},
+		{
+			"name": "eui"
+		},
+		{
+			"name": "tween"
+		},
+		{
+			"name": "socket"
+		},
+		{
+			"name": "dragonBones"
+		},
+		{
+			"name": "protobuf",
+			"path": "../third_party/protobuf"
+		},
+		{
+			"name": "md5",
+			"path": "../third_party/md5"
+		},
+		{
+			"name": "ext",
+			"path": "../third_party/ext"
+		},
+		{
+			"name": "promise",
+			"path": "./promise"
+		}
+	]
+}

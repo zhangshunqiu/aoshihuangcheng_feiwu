@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MustDoLightenSkin" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect left="0" right="0" top="0" bottom="0" alpha="0.5"/>
+	<e:Image source="common_bg_window_tips_png" x="96" y="364" width="570" height="224"/>
+	<e:Image source="wing_bg_shuxing_png" x="102" y="437" width="550" height="146"/>
+	<e:Image id="img_close" source="common_btn_close_2_png" x="611" y="369"/>
+	<e:Label id="lb_lightennum" text="当前获得一个称号，获得点亮属性加成" y="399" fontFamily="SimHei" size="24" x="174" scaleX="1" scaleY="1" textAlign="center" textColor="0xffa200"/>
+	<e:Group x="208" y="476">
+		<e:Label id="lb_attack" text="攻击力" y="0" fontFamily="SimHei" size="24" x="1" scaleX="1" scaleY="1" textAlign="left" textColor="0xbfbfbf"/>
+		<e:Label id="lb_hp" text="生命" y="45" fontFamily="SimHei" size="24" x="0" scaleX="1" scaleY="1" textAlign="left" textColor="0xBFBFBF"/>
+		<e:Label id="lb_sdef" text="攻击速度" y="46" fontFamily="SimHei" size="24" x="222" scaleX="1" scaleY="1" textAlign="left" textColor="0xBFBFBF"/>
+		<e:Label id="lb_def" text="攻击力" y="1" fontFamily="SimHei" size="24" x="222" scaleX="1" scaleY="1" textAlign="left" textColor="0xBFBFBF"/>
+	</e:Group>
+</e:Skin>

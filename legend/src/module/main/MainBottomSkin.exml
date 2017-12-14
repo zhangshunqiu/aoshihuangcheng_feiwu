@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MainBottomSkin" width="720" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="gp_top" height="63" left="0" right="0" top="0">
+		<e:Image horizontalCenter="0" top="0" source="main_bg_taitou_png" x="0" y="0" scaleX="1" scaleY="1" />
+		<e:Image source="main_bg_shuju_png" x="10" y="9" scaleX="1" scaleY="1"  width="278"/>
+		<e:Image x="302" y="9" source="main_bg_shuju_png" scaleX="1" scaleY="1"  width="180"/>
+		<e:Image x="518" y="9" source="main_bg_shuju_png" scaleX="1" scaleY="1"  width="180"/>
+		<e:Image x="311" y="17" scaleX="1" scaleY="1"  source="common_jinbi_png"/>
+		<e:Image x="521" y="13" scaleX="1" scaleY="1"  source="common_yuanbao_png"/>
+		<e:Label id="lb_name" text="名字7个字" x="18" y="19" fontFamily="SimHei" size="24" textColor="0xe1e1e1" scaleX="1"
+		         scaleY="1" />
+		<e:Label id="lb_level" text="转999" x="181" y="20" fontFamily="SimHei" size="22"
+		         textColor="0xe1e1e1" scaleX="1" scaleY="1"  width="100" textAlign="center"/>
+		<e:Label id="lb_money" text="99999999" x="364" y="19" fontFamily="SimHei" size="24" textColor="0xe1e1e1" scaleX="1"
+		         scaleY="1" />
+		<e:Label id="lb_diamond" text="99999999" x="573" y="19" fontFamily="SimHei" size="24" textColor="0xe1e1e1" scaleX="1"
+		         scaleY="1" />
+		<e:Image id="img_add_money" x="464" y="9" source="main_btn_jiahao_png" scaleX="1" scaleY="1" />
+		<e:Image id="img_add_diamond" x="671" y="9" source="main_btn_jiahao_png" scaleX="1" scaleY="1" />
+	</e:Group>
+	<e:Group id="gp_btn" width="100%" height="86" x="0" bottom="10" touchEnabled="false" touchThrough="true">
+		<e:Image id="img_main" x="16" y="-27" source="main_btn_zhucheng_png" />
+		<e:Image id="img_shop" x="607" y="-9" source="main_btn_shangcheng_png"/>
+		<e:Image id="img_bg" source="main_bg_longtiao_png" bottom="-9" x="0" y="-79" scaleX="1" scaleY="1" touchEnabled="false" alpha="1"/>
+		<e:Image id="img_maincity" source="main_zhucheng_png" x="50" y="-5"  touchEnabled="false" fillMode="scale"/>
+		<e:Image id="img_field" x="50" y="-5" touchEnabled="false" fillMode="scale" source="main_guaji_png" visible="false"/>
+		<e:Image id="img_bossR" x="51" y="-2" touchEnabled="false" fillMode="scale" source="main_fanhui_png" visible="false"/>
+		<e:Image source="main_shangcheng_png" x="625" y="9"  touchEnabled="false"/>
+	</e:Group>
+	<e:Button id="debug" label="debug" y="68" x="2" anchorOffsetX="0" anchorOffsetY="0" scaleX="0.7" scaleY="0.7"/>
+	<e:Image id="img_backPag_full" x="181" y="978" source="mian_backPag_full_png" height="60"/>
+</e:Skin>

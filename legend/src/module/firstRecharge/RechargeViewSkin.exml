@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="RechargeViewSkin" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group left="0" right="0" top="0" bottom="0">
+		<e:Image source="common_bg_all_png" scaleX="1" scaleY="1" x="-3" top="0"/>
+		<e:Image source="charge_bg_di_png" horizontalCenter="0.5" top="50" anchorOffsetY="0" height="888.97"/>
+		<e:Image source="charge_bg_png" y="97.94" horizontalCenter="0" anchorOffsetY="0" height="813.58"/>
+		<e:Image source="charge_zhuangshi_png" top="-2" anchorOffsetX="0" width="707" horizontalCenter="0"/>
+		<e:Group width="625" height="140" x="50" y="114" anchorOffsetX="0" anchorOffsetY="0">
+			<e:Image source="vip_bg3_png" x="-2" y="0" scaleX="1" scaleY="1"/>
+			<e:Image source="chat_txt_vip_png" x="29" y="26" scaleX="1" scaleY="1"/>
+			<e:Image source="chat_txt_vip_png" x="513" y="26" scaleX="1" scaleY="1"/>
+			<e:BitmapLabel id="btlb_vip" width="56" height="34" x="83" y="27" anchorOffsetX="0" anchorOffsetY="0" text="1" font="main_vip_shuju_fnt" letterSpacing="-5" scaleX="1" scaleY="1"/>
+			<e:BitmapLabel id="btlb_nextVip" width="56" height="34" x="567" y="27" anchorOffsetX="0" anchorOffsetY="0" text="2" font="main_vip_shuju_fnt" letterSpacing="-5" scaleX="1" scaleY="1"/>
+			<e:Label text="再充值         即可成为VIP" x="39" y="91" size="24" fontFamily="黑体" textColor="0xBFBFBF" scaleX="1" scaleY="1" anchorOffsetX="0" width="321"/>
+			<e:Label id="lb_nextVip" text="6" x="353" y="91" size="24" fontFamily="黑体" textAlign="left" textColor="0xBFBFBF"/>
+			<e:Label id="lb_gold" text="5555" x="156" y="91" size="24" fontFamily="黑体" width="60" textAlign="center" textColor="0xFFD800" scaleX="1" scaleY="1"/>
+			<e:Image source="vip_jiantou_png" y="21" horizontalCenter="4" x="124" scaleX="1" scaleY="1"/>
+			<e:Image source="common_yuanbao_png" x="107" y="85" scaleX="1" scaleY="1"/>
+			<e:Group id="gp_vip" width="188" height="60" x="407" y="68" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1">
+			<e:Image source="common_btn_huabian_png" x="3" y="2" scaleX="1" scaleY="1"/>
+			<e:Label text="查看VIP" x="41" y="18" scaleX="1" scaleY="1"/>
+			</e:Group>
+		</e:Group>
+		<e:Image source="charge_bg_zhandoulli_png" y="850.62" anchorOffsetX="0" width="596" anchorOffsetY="0" height="52" horizontalCenter="-16"/>
+		<e:Image source="VIPcharge_wenzi_png" y="861" horizontalCenter="-33.5"/>
+		<e:Scroller id="scroller" width="592" height="578" y="263" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
+			<e:List id="list_rechargeItem" width="585" height="574" y="-1" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
+				<e:layout>
+					<e:TileLayout horizontalAlign="center" horizontalGap="12"/>
+				</e:layout>
+			</e:List>
+		</e:Scroller>
+		<e:Image id="img_return" source="common_btn_fanhui_png" x="598" y="834" scaleX="1" scaleY="1"/>
+		<e:Image id="img_close" x="632.54" y="29.45" source="common_btn_guanbi_shangchengzhuanyong_png" anchorOffsetX="0" width="55" anchorOffsetY="0" height="55" scaleX="1" scaleY="1"/>
+	</e:Group>
+</e:Skin>
