@@ -35,7 +35,7 @@ module game {
         private updateView() {
             for(let i:number=0; i<5; i++) {
                 if(i<this._worldBossModel.killRecord.length) {
-                    let newDate = new Date(this._worldBossModel.killRecord[i].time);
+                    let newDate = new Date(this._worldBossModel.killRecord[i].time * 1000);
                     let hour = newDate.getHours();
                     let min = newDate.getMinutes();
                     this["lb_time"+i].text = hour + ":" + min ;

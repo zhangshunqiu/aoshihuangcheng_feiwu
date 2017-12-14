@@ -5,9 +5,10 @@
 	<e:Image source="common_bg_list_neiromg_png" x="145" y="303" anchorOffsetX="0" width="430" anchorOffsetY="0" height="163"/>
 	<e:Label text="确认使用          提升羽翼吗？" y="332" size="20" fontFamily="黑体" textColor="0xf87500" x="210"/>
 	<e:Label text="羽翼直升丹" y="332" size="20" fontFamily="黑体" x="290" textColor="0xf6e501"/>
-	<e:Label id="lb_step" text="5" y="374" size="18" fontFamily="黑体" x="236" textColor="0x00ff29"/>
+	<e:Label text=" 阶及 阶以下使用直升丹直接升一阶" y="374" size="18" fontFamily="黑体" horizontalCenter="0" textColor="0x1dd9e5"/>
+	<e:Label id="lb_step" text="5" y="374" size="18" fontFamily="黑体" x="214" textColor="0x00ff29"/>
+	<e:Label id="lb_step0" text="5" y="374" size="18" fontFamily="黑体" x="261" textColor="0x00FF29"/>
 	<e:Label text="3000" y="403" size="18" fontFamily="黑体" textColor="0x00FF29" x="368"/>
-	<e:Label text=" 阶以下使用直升丹直接升一阶" y="374" size="18" fontFamily="黑体" horizontalCenter="0" textColor="0x1dd9e5"/>
 	<e:Label text="其他等阶使用增加    点羽翼经验" y="403" size="18" fontFamily="黑体" textColor="0x1DD9E5" horizontalCenter="-1.5"/>
 	<e:Image source="boss_txt_tips_png" y="272" horizontalCenter="0"/>
 	<e:Group id="gp_confirm" x="403" y="482">

@@ -7,6 +7,7 @@ module game{
         public gp_cancel: eui.Group;
         public gp_confirm: eui.Group;
         public lb_step: eui.Label;
+        public lb_step0: eui.Label;
         private _wingModel: WingModel = WingModel.getInstance();
 
         public constructor(viewConf:WinManagerVO = null) {
@@ -20,6 +21,7 @@ module game{
             }, this);
             this.gp_confirm.addEventListener(egret.TouchEvent.TOUCH_TAP, this.confirm, this);
             this.lb_step.text = App.ConfigManager.getConstConfigByType("WING_LEVEL_UP").value;
+            this.lb_step0.text = App.ConfigManager.getConstConfigByType("WING_LEVEL_UP").value;
         }
 
         private confirm() {

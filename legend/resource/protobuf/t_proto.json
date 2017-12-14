@@ -431,6 +431,12 @@
 		"c2s":"pbChatDeny",
 		"des":"屏蔽玩家"
 	},
+	"17005":{
+		"key":17005,
+		"s2c":"pbEquip",
+		"c2s":"pbChatGetEquipInfo",
+		"des":"获取聊天里的装备信息"
+	},
 	"18001":{
 		"key":18001,
 		"s2c":"pbTaskDailyInterface",
@@ -706,6 +712,12 @@
 		"s2c":"pbRankArena",
 		"c2s":"null",
 		"des":"王者榜"
+	},
+	"27009":{
+		"key":27009,
+		"s2c":"pbRankGuanqia",
+		"c2s":"null",
+		"des":"关卡榜"
 	},
 	"27020":{
 		"key":27020,

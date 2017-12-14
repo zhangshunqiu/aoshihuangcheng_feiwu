@@ -170,6 +170,9 @@ class GuideManager {
      * @param id 任务id
     */
     public checkStartGuide(id: number) {
+        if (App.agentConfig.guide) {
+            
+        }
         let curGUideInfo = App.ConfigManager.getGuideInfoByTaskId(id);
         if (curGUideInfo) {
             if (curGUideInfo.id >= this.curGuideId) {

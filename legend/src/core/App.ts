@@ -387,7 +387,7 @@ class App {
      */
     public static logzsq(message?: any, ...optionalParams: any[]): void {
         if (App.Debug) {
-              console.log("zsq____",message,...optionalParams);
+              //console.log("zsq____",message,...optionalParams);
         }
     }
     /**

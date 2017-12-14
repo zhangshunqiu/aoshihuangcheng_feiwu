@@ -105,7 +105,7 @@ module game {
 
         public wingModel: WingModel = WingModel.getInstance() as WingModel;
         public backpackModel: BackpackModel = BackpackModel.getInstance() as BackpackModel;
-        public timer:number = -1; //用于打断自动升星
+        public timer:number = 0; //用于打断自动升星
         private _eventId:number = 0;  //事件id
         private _eventId1:number = 0;  //事件id
         private _changeHeroEventId = 0;  //事件id
@@ -119,8 +119,8 @@ module game {
 
         public constructor(viewConf:WinManagerVO = null) {
             super(viewConf);
-            this._stepMc = new AMovieClip();
-            this._starMc = new AMovieClip();
+            // this._stepMc = new AMovieClip();
+            // this._starMc = new AMovieClip();
         }
 
         public childrenCreated() {
@@ -241,6 +241,8 @@ module game {
         private changeHero(curPos) {
             this.wingModel.wingInfo = this.wingModel.wingInfoObj[(HeroModel.getInstance() as HeroModel).heroInfo[curPos].id];
             if(this.wingModel.wingInfo.wingId) {
+                this.btn_equip.touchEnabled = true;
+                this.btn_transform.touchEnabled = true;
                 if(this.img_developSelector.visible) {
                     this.developWing();
                 } else if(this.img_equipSelector.visible){
@@ -252,6 +254,8 @@ module game {
                 this.updateWingEquip();
             } else {
                 this.initView();
+                this.btn_equip.touchEnabled = false;
+                this.btn_transform.touchEnabled = false;
             }
             this.wingModel.wingInfo.currentStar = this.wingModel.wingInfo.star;
 
@@ -265,6 +269,10 @@ module game {
                 App.Socket.send(15021, { id:this.wingModel.wingInfo.heroId });
                 App.loglyg({ id:this.wingModel.wingInfo.heroId });
                 this.developWing();  //打开羽翼培养界面
+                this.updateView();
+                this.updateWingEquip();
+                this.btn_equip.touchEnabled = true;
+                this.btn_transform.touchEnabled = true;
             } else {
                 //弹出提示框
                 App.GlobalTips.showAlert({ style: BaseTipsStyle.ONLY_OK, content: "角色等级不足15，暂不能开启羽翼" });
@@ -316,29 +324,34 @@ module game {
          */
         private autoAddExp() {
             this.gp_autoAddExp.visible = false;
-            this.timer = App.GlobalTimer.addSchedule(300, 0, ()=>{
-                if(this.wingModel.wingInfo.exp == this.wingModel.wingInfo.expStar) {  //如果经验已满，打断自动升星
-                    this.stopAutoAddExp();
-                    return;
-                } else {
-                    if(this.backpackModel.getItemByTypeIdUuid(ClientType.BASE_ITEM,16)) {   //如果羽毛足够
-                        this.addExpByWing();  //用羽毛升星
-                    } else if(this.wingModel.heroInfo.coin > this.wingModel.wingInfo.coin){  //用金币足够
-                        this.addExpByCoin(); //用金币升星
-                    } else {
+            if(this.timer == 0) {
+                this.timer = App.GlobalTimer.addSchedule(300, 0, ()=>{
+                    if(this.wingModel.wingInfo.exp == this.wingModel.wingInfo.expStar) {  //如果经验已满，打断自动升星
                         this.stopAutoAddExp();
                         return;
-                    }                 
-                }
-            },this);
+                    } else {
+                        if(this.backpackModel.getItemByTypeIdUuid(ClientType.BASE_ITEM,16)) {   //如果羽毛足够
+                            this.addExpByWing();  //用羽毛升星
+                        } else if(this.wingModel.heroInfo.coin > this.wingModel.wingInfo.coin){  //用金币足够
+                            this.addExpByCoin(); //用金币升星
+                        } else {
+                            this.stopAutoAddExp();
+                            return;
+                        }                 
+                    }
+                },this);
+            }
         }
 
         /**
          * 停止自动升阶
          */
         private stopAutoAddExp() {
-            App.GlobalTimer.remove(this.timer);
-            this.gp_autoAddExp.visible = true; 
+            if(this.timer != 0) {
+                App.GlobalTimer.remove(this.timer);
+                this.timer = 0;
+                this.gp_autoAddExp.visible = true; 
+            }
         }
 
         /**
@@ -369,9 +382,8 @@ module game {
             App.Socket.send(15023,{ id:this.wingModel.wingInfo.heroId});
             if(this._stepMc == null) {
                 this._stepMc = new AMovieClip();
-            } else {
-                this._stepMc.visible = true;
-            }
+            } 
+            this._stepMc.visible = true;
             this.gp_star.addChild(this._stepMc);
             this._stepMc.x = 240;
             this._stepMc.y = -142;
@@ -392,7 +404,9 @@ module game {
 
         private removeStepEffect() {
             this._stepMc.visible = false;
-            this.developWing();
+            egret.setTimeout(()=>{
+                this.developWing();
+            }, this, 500)
         }
 
         /**
@@ -440,8 +454,7 @@ module game {
             }
             if(this.wingModel.wingInfo.currentStar+1 === star) {
                 this.joinEffect(this["img_star"+star].x, this["img_star"+star].y, "effxxxq");
-                this.wingModel.wingInfo.currentStar = star!=10 ? star : 0;
-                this.wingModel.wingInfo.currentStar = star;
+                this.wingModel.wingInfo.currentStar = (star!=10 ? star : 0);
                 this.initStar(star);
             }
         }
@@ -450,8 +463,10 @@ module game {
             for(let i=1; i<=10; i++) {
                 if(i<=star) {
                     this["img_star"+i].visible = true;
+                    App.loglyg("this.img_star1111111111111111",i, this["img_star"+i].visible);
                 } else {
                     this["img_star"+i].visible = false;
+                    App.loglyg("this.img_star1111111111111111",i, this["img_star"+i].visible);
                 }
             }
         }
@@ -479,7 +494,7 @@ module game {
         private judgeAttackType(): Array<any> {
             let attackName:string;
             let attackType:string;
-            switch((HeroModel.getInstance() as HeroModel).heroInfo[0].job) {
+            switch((HeroModel.getInstance() as HeroModel).heroInfo[(HeroModel.getInstance() as HeroModel).curPos].job) {
                 case 1:
                     attackName = ConstAttribute.ac;
                     attackType = "ac";
@@ -502,9 +517,8 @@ module game {
         private joinEffect(x:number, y:number, key:string) {
             if(this._starMc == null) {
                 this._starMc = new AMovieClip();
-            } else {
-                this._starMc.visible =true;
             }
+            this._starMc.visible =true;
             this.gp_star.addChild(this._starMc);
             this._starMc.x = x + 20;
             this._starMc.y = y + 18;
@@ -825,7 +839,7 @@ module game {
                 this._eventId1 = App.EventSystem.addEventListener(PanelNotify.WING_INFO_UPDATE, this.updateWingEquip, this);  //翅膀数据变化就刷新界面 
             }
             if(this._transformEventId == 0) {
-                this._eventId = App.EventSystem.addEventListener(PanelNotify.WING_TRANSFORM_RESULT, this.transformResult, this);
+                this._transformEventId = App.EventSystem.addEventListener(PanelNotify.WING_TRANSFORM_RESULT, this.transformResult, this);
             }
             if(this._wingStepEventId == 0) {
                 this._wingStepEventId = App.EventSystem.addEventListener(PanelNotify.WING_STEP_SUCCESS, this.btnTip, this);
@@ -872,7 +886,7 @@ module game {
             }
             if(this._stepMc) {
                 if(this._stepMc.hasEventListener(egret.Event.COMPLETE)) {
-                    this._stepMc.removeEventListener(egret.Event.COMPLETE, this.removeStarEffect, this);
+                    this._stepMc.removeEventListener(egret.Event.COMPLETE, this.removeStepEffect, this);
                 }
                 this._stepMc.destroy();
                 if(this._stepMc.parent) {

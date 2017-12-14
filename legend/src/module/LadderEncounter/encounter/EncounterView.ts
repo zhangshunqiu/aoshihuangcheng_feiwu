@@ -265,6 +265,7 @@ module game {
             //     // this.img_icon.source = App.ConfigManager.getHeroIconBySexAndJob(info.sex, info.career) + "_png";
             //     reward = App.ConfigManager.getEncounterRewardByLvAndTurn(info.level, info.transmigration);
             // }
+            this.img_icon.source = App.ConfigManager.getSmallHeroIconBySexAndJob(this.data.sex, this.data.job) + "_png";
             this.lb_name.text = this.data.nick;
             this.lb_lv.text = this.data.turn + "转" + this.data.lv + "级";
             reward = App.ConfigManager.getEncounterRewardByLvAndTurn(this.data.lv, this.data.turn);

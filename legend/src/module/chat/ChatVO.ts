@@ -16,8 +16,9 @@ module game {
         public type: ChatType;
         public config_id:number;
         public  args:Array<any> = [];
-
         
+        
+
 
     }
 

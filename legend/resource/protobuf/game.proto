@@ -948,18 +948,28 @@ message pbShopItem{
 //		pbShopMystery       // 成功返回，失败错误提示
 //import "pb_common.proto";
 
+message pbChatArgs{
+	repeated pbChatArg arg_list = 1;	// 参数列表
+}
+
+message pbChatArg{
+	optional int32 type		= 1;	// 类型 0字符串 1物品 2装备
+	optional string value	= 2;	// 值
+}
+
 message pbChatMsg{
 	optional int32 player_id		= 1;	//玩家id（id为0时为系统信息）
 	optional string   player_name	= 2;	//玩家名
-	optional int32 icon_id			= 3;	//头像id
-	optional int32 position_id		= 4;	//玩家id
-	optional int32 vip_id			= 5;	//vip id
-	optional int32 time				= 6;	//发信息时间（时间戳）
-	optional string content			= 7;	//聊天内容
-	optional int32 channel			= 8;	//频道
-	optional int32 month_card		= 9;	// 月卡（0没有 1有）
-	optional int32 config_id		= 10;	// 配置表id
-	repeated string	args			= 11;	// 参数
+	optional int32 career			= 3;	//职业
+	optional int32 sex				= 4;	//性别
+	optional int32 position_id		= 5;	//玩家公会职位
+	optional int32 vip_id			= 6;	//vip id
+	optional int32 time				= 7;	//发信息时间（时间戳）
+	optional string content			= 8;	//聊天内容
+	optional int32 channel			= 9;	//频道
+	optional int32 month_card		= 10;	// 月卡（0没有 1有）
+	optional int32 config_id		= 11;	// 配置表id
+	repeated pbChatArgs	args		= 12;	// 参数
 }
 
 
@@ -991,6 +1001,10 @@ message pbChatDeny{
 	optional int32 player_id	= 1;	//玩家id
 }
 
+message pbChatGetEquipInfo{
+	optional int32 id	= 1;		// 唯一id 
+}
+
 // ====获取聊天频道内容===
 // 协议号17001
 // c >> 
@@ -1019,6 +1033,21 @@ message pbChatDeny{
 //		pbChatDeny
 // s >> 
 //		null
+
+// ====屏蔽玩家===
+// 协议号17004
+// c >> 
+//		pbChatDeny
+// s >> 
+//		null
+
+// ====获取聊天里的装备信息===
+// 协议号17005
+// c >> 
+//		pbChatGetEquipInfo
+// s >> 
+//		pbEquip
+
 
 
 
@@ -1731,11 +1760,31 @@ message pbRankArena{
 	optional int32 closth_id	= 7;	// 第一名衣服
 }
 
+// 关卡榜
+message pbRankGuanqiaPlayer{
+	optional int32 player_id	= 1;
+	optional string name		= 2;
+	optional int32 month_card	= 3;	// 0无月卡 1有月卡
+	optional int32 vip			= 4;
+	optional int32 layer		= 5;	// 多少关
+	optional int32 combat		= 6;	// 战力
+	optional int32 rank			= 7;	// 排名
+}
+message pbRankGuanqia{
+	optional int32 my_rank		= 1; // 我的排名
+	optional int32 worship		= 2; // 膜拜状态 （1可膜拜 2已膜拜）
+	repeated pbRankGuanqiaPlayer list	= 3; // 上榜玩家列表
+	optional int32 sex			= 4;	// 第一名性别
+	optional int32 weapon_id	= 5;	// 第一名武器
+	optional int32 wing_id		= 6;	// 第一名翅膀
+	optional int32 closth_id	= 7;	// 第一名衣服
+}
+
+
 // 膜拜
 message pbRankWorship{
 	optional int32 rank			= 1; // 排行榜id
 }
-
 // ====战力榜===
 // 协议号 27001
 // c >> 
@@ -1793,6 +1842,13 @@ message pbRankWorship{
 //		null
 // s >> 
 //		pbRankArena
+
+// ====关卡榜===
+// 协议号 27009
+// c >> 
+//		null
+// s >> 
+//		pbRankGuanqia
 
 // ====膜拜===
 // 协议号 27020

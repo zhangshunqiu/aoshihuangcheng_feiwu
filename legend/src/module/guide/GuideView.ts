@@ -41,6 +41,7 @@ class GuideView extends eui.Component {
             rect.left = rect.right = rect.bottom = rect.top = 0;
             gp.addChild(rect);
         }
+        this.gp_main.setChildIndex(this.gp_text, 998);
         this.gp_main.setChildIndex(this.btn_skip, 999);
         this.validateNow();
 
@@ -88,17 +89,20 @@ class GuideView extends eui.Component {
         this.lb_text.text = guideInfo.des;
         this.lb_text.validateNow();
         this.gp_text.width = this.lb_text.width + 25;
-        // if (point.x > App.stageWidth / 2) {
-        //     this.gp_text.x = point.x - this.gp_text.width - 50;
-        //     // this.lb_text.textAlign = "right";
-        //     this.img_arrow.left = undefined;
-        //     this.img_arrow.right = - 50;
-        // } else {
-        //     this.gp_text.x = point.x + width + 50;
-        //     // this.lb_text.textAlign = "left";
-        //     this.img_arrow.left = - 50;
-        //     this.img_arrow.right = - 50;
-        // }
+        if (point.x > App.stageWidth / 2) {
+            this.gp_text.x = point.x+width/2 - this.gp_text.width - 75;
+            this.img_arrow.x =  this.gp_text.width + 50;
+             RES.getResAsync("main_icon_xinshouzhiyin_right_png",(texture)=>{
+                this.img_arrow.source = texture;
+            },this);
+        } else {
+            this.gp_text.x = point.x+width/2 + 75;
+            // this.lb_text.textAlign = "left";
+            this.img_arrow.x = -50;
+            RES.getResAsync("main_icon_xinshouzhiyin_left_png",(texture)=>{
+                this.img_arrow.source = texture;
+            },this);
+        }
 
     }
 

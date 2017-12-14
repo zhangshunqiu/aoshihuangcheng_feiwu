@@ -410,7 +410,8 @@ module game {
 
 		  public static getChatSystemText(config_id:number,args:Array<any>){
            
-         let info =   App.ConfigManager.getSystemChatByID(config_id);
+            let str:string =   App.ConfigManager.getSystemChatByID(config_id).content;
+			let strs =  str.split
 
          return <Array<egret.ITextElement>>[ ];
     }
