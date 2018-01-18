@@ -9,8 +9,8 @@ class ShopBaseItem extends customui.BaseItem {
         super.childrenCreated();
         this.img_discount = new eui.Image();
         this.addChild(this.img_discount);
-        this.img_discount.left = 10;
-        this.img_discount.top = 5;
+        this.img_discount.left = 7;
+        this.img_discount.top = 2;
     }
 
     public setDiscountIcon(icon: string | egret.Texture) {

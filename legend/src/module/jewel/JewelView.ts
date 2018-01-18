@@ -32,7 +32,7 @@ module game {
 		public gp_middle: eui.Group;
 		public lb_attr: eui.Label;
 		public lb_name: eui.Label;
-		public img_select: eui.Image;
+		// public img_select: eui.Image;
 
 		private _handleId: number = 0;
 		private _equipArray: Array<customui.BaseItem> = [];
@@ -51,7 +51,7 @@ module game {
 
 		protected childrenCreated() {
 			super.childrenCreated();
-			
+
 			this.initView();
 		}
 
@@ -91,14 +91,14 @@ module game {
 		}
 
 		private initEquip() {
-			this.img_select = new eui.Image();
-			RES.getResAsync("equipping_choose_png", (texture) => {
-				this.img_select.source = texture;
-			}, this);
+			// this.img_select = new eui.Image();
+			// RES.getResAsync("equipping_choose_png", (texture) => {
+			// 	this.img_select.source = texture;
+			// }, this);
 
-			egret.setTimeout(() => {
-				this.img_select.x = 65;
-			}, this, 80);
+			// egret.setTimeout(() => {
+			// 	this.img_select.x = 65;
+			// }, this, 80);
 
 			for (let i = 1; i <= 10; i++) {
 				let item = new customui.BaseItem();
@@ -171,7 +171,7 @@ module game {
 				this.hero_head.setRedTips(index, value);
 			}, this)
 			for (let i = 0; i < 10; i++) {
-				if (this.jewelModel.equipPartRedPoint[this._curPos+1][i + 1]) {
+				if (this.jewelModel.equipPartRedPoint[this._curPos + 1][i + 1]) {
 					this._equipArray[i].showRedTips(true);
 				} else {
 					this._equipArray[i].hideRedTips();
@@ -242,13 +242,17 @@ module game {
 
 		//选中框
 		private setSelect() {
-			if (this.img_select.parent) {
-				this.img_select.parent.removeChild(this.img_select);
-			}
-			this.img_select.x = this._equipArray[this._curPart - 1].x - 50;
-			this.img_select.y = this._equipArray[this._curPart - 1].y - 50;
-			this._equipArray[this._curPart - 1].parent.addChild(this.img_select);
-			this._equipArray[this._curPart - 1].parent.setChildIndex(this.img_select, 0);
+			// if (this.img_select.parent) {
+			// 	this.img_select.parent.removeChild(this.img_select);
+			// }
+			// this.img_select.x = this._equipArray[this._curPart - 1].x - 50;
+			// this.img_select.y = this._equipArray[this._curPart - 1].y - 50;
+			// this._equipArray[this._curPart - 1].parent.addChild(this.img_select);
+			// this._equipArray[this._curPart - 1].parent.setChildIndex(this.img_select, 0);
+			this._equipArray.forEach((value, index, arr) => {
+				value.setSelect(false);
+			}, this)
+			this._equipArray[this._curPart-1].setSelect(true);
 		}
 
 		private equipAnimate(info) {
@@ -473,7 +477,7 @@ module game {
 		 */
 		public openWin(openParam: any = null): void {
 			super.openWin(openParam);
-			if(this.com_baseview){
+			if (this.com_baseview) {
 				this.com_baseview.winVo = this.winVo;
 			}
 			this.hero_head.readyOpen();
@@ -482,7 +486,7 @@ module game {
 			}
 			App.EventSystem.addEventListener(PanelNotify.JEWEL_UPDATE_VIEW, this.upgradeSuccess, this);
 			App.EventSystem.addEventListener(PanelNotify.JEWEL_UPDATE_ALL_VIEW, this.oneEquipSuccess, this);
-			
+
 		}
 
 		/**

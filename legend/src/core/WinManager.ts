@@ -138,7 +138,7 @@ class WinManager {
 			[WinName.BROADCAST]: new WinManagerVO(WinName.BROADCAST, "game.BroadcastView", WinLay.SCENE_UI_LAY, "BroadcastSkin", [], "", null, false),
 			// [WinName.SMELT]: new WinManagerVO(WinName.SMELT, "game.SmeltView", WinLay.MODULE_LAY, "SmeltSkin", [], "", { y: 64 }, false),
 			[WinName.FORGE]: new WinManagerVO(WinName.FORGE, "game.ForgeView", WinLay.MODULE_LAY, "ForgeSkin", [], "forge_qianghua_title_png", { y: 0 }, false),
-			[WinName.SHOP]: new WinManagerVO(WinName.SHOP, "game.ShopView", WinLay.MODULE_LAY, "ShopSkin", [],"shop_shangcheng_title_png", { y: 0 }, false),
+			[WinName.SHOP]: new WinManagerVO(WinName.SHOP, "game.ShopView", WinLay.MODULE_LAY, "ShopSkin", [],"shop_icon_shangcheng_png", { y: 0 }, false),
 			[WinName.BOSS]: new WinManagerVO(WinName.BOSS, "game.BossView", WinLay.MODULE_LAY, "BossSkin", []),
 			[WinName.BOSS_WIN]: new WinManagerVO(WinName.BOSS_WIN, "game.BossWin", WinLay.PANEL_LAY, "BossWin", []),
 			[WinName.BOSS_LOSE]: new WinManagerVO(WinName.BOSS_LOSE, "game.BossLose", WinLay.PANEL_LAY, "BossLose", []),

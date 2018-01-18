@@ -61,6 +61,30 @@ module game {
             this.gp_autoChallenge.visible = false;
         }
 
+        private removeBossIconEff() {
+            if (this._mc) {
+                this._mc.destroy();
+                if (this._mc.parent) {
+                    this._mc.parent.removeChild(this._mc);
+                }
+                this._mc = null;
+            }
+            if (this._mcChallenge) {
+                this._mcChallenge.destroy();
+                if (this._mcChallenge.parent) {
+                    this._mcChallenge.parent.removeChild(this._mcChallenge);
+                }
+                this._mcChallenge = null;
+            }
+            if (this._mcMeetBoss) {
+                this._mcMeetBoss.destroy();
+                if (this._mcMeetBoss.parent) {
+                    this._mcMeetBoss.parent.removeChild(this._mcMeetBoss);
+                }
+                this._mcMeetBoss = null;
+            }
+        }
+
         public openBossIconEffect() {  //打开挑战boss图标特效
             this.gp_bossUI.visible = true;
         }
@@ -106,6 +130,7 @@ module game {
 
 		public clear(data:any = null):void{
 			super.clear();
+            this.removeBossIconEff();
 		}
 
 		public destroy():void{
