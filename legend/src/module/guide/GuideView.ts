@@ -91,7 +91,7 @@ class GuideView extends eui.Component {
         this.gp_text.width = this.lb_text.width + 25;
         if (point.x > App.stageWidth / 2) {
             this.gp_text.x = point.x+width/2 - this.gp_text.width - 75;
-            this.img_arrow.x =  this.gp_text.width + 50;
+            this.img_arrow.x =  this.gp_text.width;
              RES.getResAsync("main_icon_xinshouzhiyin_right_png",(texture)=>{
                 this.img_arrow.source = texture;
             },this);

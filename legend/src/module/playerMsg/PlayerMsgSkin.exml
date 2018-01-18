@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="PlayerMsgSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:customui="customui.*" width="720" height="1066">
+	<e:Group left="0" right="0" top="0" bottom="0">
+		<customui:CommonWin xmlns:customui="customui.*" height="1066" width="720" horizontalCenter="0" top="0"/>
+		<e:Image scaleX="1" scaleY="1" source="common_bg_interface_level_1_png" horizontalCenter="0.5" top="0"/>
+		<e:Image id="img_return" source="common_btn_fanhui_png" x="617" y="838" scaleX="1" scaleY="1"/>
+		<e:Image source="equipping_bg_juese_png" top="57" y="-155" scaleX="1" scaleY="1" horizontalCenter="0"/>
+		<e:Image id="img_close" x="658.28" y="5.48" source="common_btn_close_1_png"/>
+		<e:Group width="500" height="500" touchThrough="true" touchEnabled="false" y="252" horizontalCenter="0">
+			<e:Image id="img_wing" source="4000_png" y="-327" horizontalCenter="0" touchEnabled="false"/>
+			<e:Image id="img_body" y="-299" horizontalCenter="0" source="1700_png" touchEnabled="false"/>
+			<e:Image id="img_weapon" x="-118" y="-326" source="3300_png" touchEnabled="false"/>
+		</e:Group>
+		<e:Group width="639.4" height="221.03" y="601.09" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="-0.5">
+			<customui:BaseItem id="special_item0" x="196.99" y="57" anchorOffsetX="45" anchorOffsetY="45" width="90" height="90" scaleX="1" scaleY="1"/>
+			<customui:BaseItem id="special_item1" x="433.08" y="57" anchorOffsetX="45" anchorOffsetY="45" width="90" height="90" scaleX="1" scaleY="1"/>
+			<customui:BaseItem id="special_item2" x="196.99" y="168" anchorOffsetX="45" anchorOffsetY="45" width="90" height="90" scaleX="1" scaleY="1"/>
+			<customui:BaseItem id="special_item3" x="434.67" y="168" anchorOffsetX="45" anchorOffsetY="45" width="90" height="90" scaleX="1" scaleY="1"/>
+			<customui:BaseItem id="special_item4" x="76.19" y="168" anchorOffsetX="45" anchorOffsetY="45" width="90" height="90" scaleX="1" scaleY="1"/>
+			<customui:BaseItem id="special_item5" x="561.67" y="168" anchorOffsetX="45" anchorOffsetY="45" width="90" height="90" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Group height="660" y="125.61" touchThrough="true" touchEnabled="true" anchorOffsetX="0" width="650" horizontalCenter="0">
+			<customui:BaseItem id="baseItem1" x="80.33" y="75" anchorOffsetX="45" anchorOffsetY="45" width="90" height="90"/>
+			<customui:BaseItem id="baseItem2" x="80.33" y="187.75" anchorOffsetX="45" anchorOffsetY="45" width="90" height="90"/>
+			<customui:BaseItem id="baseItem3" x="566.3" y="75" anchorOffsetX="45" anchorOffsetY="45" width="90" height="90"/>
+			<customui:BaseItem id="baseItem4" x="566.3" y="187.5" anchorOffsetX="45" anchorOffsetY="45" width="90" height="90"/>
+			<customui:BaseItem id="baseItem5" x="80.33" y="300.5" anchorOffsetX="45" anchorOffsetY="45" width="90" height="90"/>
+			<customui:BaseItem id="baseItem6" x="566.3" y="301" anchorOffsetX="45" anchorOffsetY="45" width="90" height="90"/>
+			<customui:BaseItem id="baseItem7" x="80.33" y="414.25" anchorOffsetX="45" anchorOffsetY="45" width="90" height="90"/>
+			<customui:BaseItem id="baseItem8" x="566.3" y="413.5" anchorOffsetX="45" anchorOffsetY="45" width="90" height="90"/>
+			<customui:BaseItem id="baseItem9" x="80.33" y="526.86" anchorOffsetX="45" anchorOffsetY="45" width="90" height="90"/>
+			<customui:BaseItem id="baseItem10" x="566.3" y="526.86" anchorOffsetX="45" anchorOffsetY="45" width="90" height="90"/>
+		</e:Group>
+		<e:Group width="576" height="113.33" x="37" y="802.38" anchorOffsetX="0" anchorOffsetY="0">
+			<e:Image scaleX="1.2" scaleY="1.2" verticalCenter="6.335000000000001" source="equipping_frame_juesetouxiang_png" y="-313.4199999999999" left="19"/>
+			<e:Image id="img_head" source="main_touxiang_png" scaleX="1.2" scaleY="1.2" verticalCenter="6.335000000000001" width="93" height="93" y="-318.41999999999996" left="19"/>
+			<e:Image id="img_player" x="31.77" y="28.04" anchorOffsetX="0" anchorOffsetY="0"/>
+			<e:Image id="img_medal_lv" x="426" y="29.56" anchorOffsetX="0" anchorOffsetY="0" scaleX="0.5" scaleY="0.5"/>
+			<e:Label id="lb_player_name" text="Label" x="145.43" y="36.96" size="24" textColor="0x01acfe" fontFamily="SimHei"/>
+			<e:Label id="lb_player_level" text="Label" x="145.43" y="73.45" size="24" textColor="0xbfbfbf" fontFamily="SimHei"/>
+		</e:Group>
+		<e:Image source="com_bg_role_png" y="59.6" touchEnabled="false" horizontalCenter="0"/>
+		<e:TabBar id="tab_head" width="574" height="112" y="56.4" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
+			<e:layout>
+			<e:HorizontalLayout verticalAlign="middle" horizontalAlign="center" gap="30"/>
+			</e:layout>
+		</e:TabBar>
+		<e:Group y="160.97" anchorOffsetX="0" width="403.42" horizontalCenter="-0.5">
+			<e:Image source="equipping_bg_zhandouli_png" scaleX="1" scaleY="1" verticalCenter="0" horizontalCenter="0"/>
+			<e:BitmapLabel id="bitmap_score" text="99999" scaleX="0.8" scaleY="0.8" font="equipping_pingfen_shuju_fnt" letterSpacing="-16" left="155" verticalCenter="0"/>
+			<e:Image source="forge_txt_zhandouli_png" scaleX="1" scaleY="1" left="38" verticalCenter="0.5"/>
+			<e:Image id="img_detail" source="equipping_btn_xiang_png" scaleX="1" scaleY="1" right="6.420000000000016" verticalCenter="-2"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

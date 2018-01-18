@@ -22,7 +22,7 @@ module game {
 
             this.lb_time.text = GlobalUtil.getFormatBySecond1(this._total_sec);
             this._total_sec--;
-            if (this._total_sec <= 0) {
+            if (this._total_sec < 0) {
                 if (this._count_timeId != 0) {
                     App.GlobalTimer.remove(this._count_timeId);
                     this._count_timeId = 0;
@@ -40,9 +40,15 @@ module game {
             if (openParam&&openParam.sec) {
                 this._total_sec = openParam.sec;
             }
+            else{
+                this._total_sec = 120;
+            }
             if (this._count_timeId == 0) {
                 this._count_timeId = App.GlobalTimer.addSchedule(1000, 0, this.onCountDown, this);
             }
+
+            this.x = 220;
+            this.y = 950;
         }
 
 		/**

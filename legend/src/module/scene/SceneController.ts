@@ -41,6 +41,7 @@ class SceneController extends BaseController {
 		//11003回主城 App.Socket.send(11003,{});
 		this.registerProtocal(11004,this.handlerRemoveObject,this);
 		this.registerProtocal(11005,this.handlerAddObject,this);
+		this.registerProtocal(11006,this.handlerPickUpItem,this);//App.Socket.send(11006,{id:12345});
 		this.registerProtocal(11020,this.handlerObjectOftenUpdate,this);//场景数据更新
 
 		this.registerProtocal(12002,this.handlerUseSkill,this);//释放技能
@@ -81,6 +82,13 @@ class SceneController extends BaseController {
 	 * 获取挑战boss结果
 	 */
 	public handlerChallengeBossResult(data) {
+		//延迟弹出窗口
+		SceneManager.getInstance().delayOpenCompleteView(data,this.openChallengeBossResult,this);
+	}
+	/**
+	 * 打开挑战结果
+	 */
+	public openChallengeBossResult(data) {
 		(game.BossModel.getInstance() as game.BossModel).challengeBossResult(data);
 		App.EventSystem.dispatchEvent(PanelNotify.SHOW_BOSS_RESULT, data.result);
 		if(data.result === 1) {
@@ -91,6 +99,8 @@ class SceneController extends BaseController {
 			} else {
 				App.Socket.send(13001, {});
 			}
+			//检测特殊装备
+			game.HeroModel.getInstance().checkSpecialEquipRedDotAll();
 		} else if(data.result === 0) {
 			if(App.WinManager.isOpen(WinName.BOSS_LOSE)== false && (SceneUtil.isBossScene(this._sceneModel.sceneId) || SceneUtil.isActivityScene(this._sceneModel.sceneId))){  //&& GameRootLay.gameLayer()._moduleLay.numChildren == 0
 				App.WinManager.openWin(WinName.BOSS_LOSE);
@@ -318,6 +328,8 @@ class SceneController extends BaseController {
 			this._sceneModel.addSceneObjectVo(ivo);
 			this.dispatchEvent(SceneEventType.ADD_SCENE_OBJECT,ivo);
 		}
+
+		//App.logzsq(data.drop_list.length);
 	}
 
 	/**
@@ -330,6 +342,10 @@ class SceneController extends BaseController {
 			this._sceneModel.removeSceneObjectVo(vo);
 			this.dispatchEvent(SceneEventType.REMOVE_SCENE_OBJECT,vo);
 		}
+	}
+
+	private handlerPickUpItem(data:any){
+
 	}
 
 	/**
@@ -374,9 +390,9 @@ class SceneController extends BaseController {
 	/**
 	 * 更新场景对象翅膀模型
 	 */
-	public updateWingModel(wingId:string,objId:number,ObjType:number = SceneObjectType.PLAYER){
+	public updateWingModel(wingId:number,objId:number,ObjType:number = SceneObjectType.PLAYER){
 		var vo:ScenePlayerVo = this._sceneModel.getSceneObjectVo(objId,ObjType);
-		var conf:any = App.ConfigManager.getWingStepById(wingId);
+		var conf:any = App.ConfigManager.getWingStarById(wingId);
 		if(conf){
 			if(vo.wingId != String(conf.model)){
 				vo.wingId = String(conf.model);

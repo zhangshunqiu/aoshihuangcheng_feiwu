@@ -27,12 +27,16 @@ module game {
         }
 
         private handlerMonthCardGetReward(data) {
-            
+            if(data.result) {
+                this.dispatchEvent(PanelNotify.MONTHCARD_GET_SUCCESS);
+               
+            }
         }
 
         private handlerBuyMonthCardNum(data) {
             (MonthCardModel.getInstance() as MonthCardModel).updateBuyNum(data.result);
             App.WinManager.openWin(WinName.MONTHCARD_BUY_REWARD);
+        
         }
 
          /**

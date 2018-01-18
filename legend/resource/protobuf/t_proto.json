@@ -89,6 +89,12 @@
 		"c2s":"null",
 		"des":"对象进屏或更新"
 	},
+	"11006":{
+		"key":11006,
+		"s2c":"pbResult",
+		"c2s":"pbId32",
+		"des":"拾取掉落"
+	},
 	"11020":{
 		"key":11020,
 		"s2c":"pbSceneOftenUpdateList",
@@ -347,6 +353,12 @@
 		"c2s":"pbSpEquipPeaceModel",
 		"des":"特殊装备碎片激活"
 	},
+	"15015":{
+		"key":15015,
+		"s2c":"pbResult",
+		"c2s":"pbEquipModelWearAll",
+		"des":"一键穿戴装备"
+	},
 	"15021":{
 		"key":15021,
 		"s2c":"pbWingModelRe",
@@ -379,9 +391,15 @@
 	},
 	"15026":{
 		"key":15026,
-		"s2c":"pbWingEquipModel",
+		"s2c":"pbWingModelRe",
 		"c2s":"pbWingEquipModel",
 		"des":"羽翼装备升阶"
+	},
+	"15030":{
+		"key":15030,
+		"s2c":"pbOtherPlayerInfo",
+		"c2s":"pbGetOtherPlayerInfo",
+		"des":"查看他人信息"
 	},
 	"16001":{
 		"key":16001,
@@ -433,7 +451,7 @@
 	},
 	"17005":{
 		"key":17005,
-		"s2c":"pbEquip",
+		"s2c":"pbPlayerGoods",
 		"c2s":"pbChatGetEquipInfo",
 		"des":"获取聊天里的装备信息"
 	},
@@ -523,8 +541,8 @@
 	},
 	"21002":{
 		"key":21002,
-		"s2c":"pbMailOpen",
-		"c2s":"null",
+		"s2c":"pbMail",
+		"c2s":"pbMailOpen",
 		"des":"打开邮件"
 	},
 	"21003":{
@@ -851,6 +869,12 @@
 		"c2s":"pbCopyBattle",
 		"des":"请求挑战副本"
 	},
+	"31003":{
+		"key":31003,
+		"s2c":"pbCopySweepReward",
+		"c2s":"pbCopyBattle",
+		"des":"请求扫荡副本"
+	},
 	"32001":{
 		"key":32001,
 		"s2c":"pbTitleList",
@@ -1054,5 +1078,11 @@
 		"s2c":"pbResult",
 		"c2s":"null",
 		"des":"使用元宝消除pk值"
+	},
+	"38006":{
+		"key":38006,
+		"s2c":"pbResult",
+		"c2s":"null",
+		"des":"玩家退出挑战"
 	}
 }

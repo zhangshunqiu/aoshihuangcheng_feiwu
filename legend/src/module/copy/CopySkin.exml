@@ -35,10 +35,10 @@
 		</e:Button>
 		<e:Image id="img_challenge" source="boss_txt_tiaozhan_png" touchEnabled="false" x="479" y="714" scaleX="1" scaleY="1"/>
 		<e:Image id="img_done" source="task_yiwancheng_png" x="525" y="664" scaleX="1" scaleY="1" visible="false"/>
+		<e:Group id="gp_bossModel" width="13" height="14" x="209" y="533" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1"/>
 		<e:Image source="boss_bg_woyaobianqiang_lose_png" x="148" y="576"/>
 		<e:Label id="lb_score" text="10000" x="209" y="562" size="24" fontFamily="黑体" textColor="0x29ef13"/>
 		<e:Label id="lb_tip" text="人物达到50级可进行挑战" x="430" y="684" size="24" fontFamily="黑体" textColor="0xFF3D3D" anchorOffsetY="0" height="83" anchorOffsetX="0" width="149" textAlign="center" scaleX="1" scaleY="1"/>
-		<e:Group id="gp_bossModel" width="13" height="14" x="209" y="533" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1"/>
 		<e:Image id="img_nextBoss1" x="394" y="242" source="copy_tower_icon_weikaiqi_png"/>
 		<e:Image id="img_nextBoss2" x="75" y="46" source="copy_tower_icon_weikaiqi_png"/>
 		<e:Image source="copy_tower_wenzi_png" x="18" y="629"/>

@@ -11,7 +11,7 @@
 	<e:Image source="encounter_bg_name_png" x="103" y="63"/>
 	<e:Label id="lb_name" text="你是猪吗" y="73.67" fontFamily="SimHei" size="24" x="281" touchEnabled="false" textColor="0x01acf1"/>
 	<e:Label text="遭遇玩家:" y="73.67" fontFamily="SimHei" size="24" x="161" touchEnabled="false" textColor="0xbfbfbf"/>
-	<e:Label id="lb_time" text="" y="24.67" fontFamily="SimHei" size="20" x="416" touchEnabled="false" textColor="0xbfbfbf" textAlign="left"/>
+	<e:Label id="lb_time" text="" y="24.67" fontFamily="SimHei" size="20" x="352" touchEnabled="false" textColor="0xbfbfbf" textAlign="left"/>
 	<e:Image id="img_sucess" x="94" y="23" source="encounter_jingongchenggong_png"/>
 	<e:Image id="img_fail" x="94" y="24" source="encounter_jigongshibai_png"/>
 	<e:Image source="encounter_biaozhi_png" x="15" y="14"/>

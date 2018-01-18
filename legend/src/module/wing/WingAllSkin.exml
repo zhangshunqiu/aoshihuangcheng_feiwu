@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="WingAllSkin" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:game="game.*" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<ns1:ComBaseViewBg id="baseViewBg" skinName="ComBaseViewBgSkin" left="0" right="0" top="0" bottom="0"/>
+	<e:Image source="wing_bg_png" y="65" x="17"/>
+	<game:HeroHeadComponentView id="heroHead" width="636" height="120" y="48" anchorOffsetX="0" anchorOffsetY="0" skinName="HeadComponent" x="-2"/>
+	<e:Image id="img_equipSelector" source="skill_btn_faguang_xianshi_png" x="199" y="892" visible="false"/>
+	<e:Image id="img_transformSelector" source="skill_btn_faguang_xianshi_png" x="365" y="892" visible="false"/>
+	<e:RadioButton id="rb_develop" label="羽翼培养" x="216" y="956" scaleX="1.1" scaleY="1.1" skinName="skins.ComBtnTab2Skin"/>
+	<e:RadioButton id="rb_equip" label="羽翼装备" x="366" y="955" scaleX="1.1" scaleY="1.1" skinName="skins.ComBtnTab2Skin"/>
+	<e:RadioButton id="rb_transform" label="转换" x="375" y="901" skinName="skins.ButtonSkin2" scaleX="1.1" scaleY="1.1" visible="false"/>
+	<e:Image id="img_back" x="624" y="863" source="com_btn_back_png"/>
+</e:Skin>

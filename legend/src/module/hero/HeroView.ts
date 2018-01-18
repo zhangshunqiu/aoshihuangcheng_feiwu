@@ -15,13 +15,16 @@ module game {
 		public btn_reborn: eui.Button;
 		public img_return: eui.Image;
 		public skillPanel: SkillPanel;
-		public commonWin: customui.CommonWin;
+		public com_baseview: ComBaseViewBg;
 		public bmlb_cap: eui.BitmapLabel;
 		public hero_head: HeroHeadComponentView;
 		public img_detail: eui.Image;
 		public gp_model: eui.Group; //存放模型
 		public btn_artifact: eui.Button;
 		public btn_orange: eui.Button;
+		public btn_reloading: eui.Button;
+		public gp_combat:eui.Group;
+		private gp_reloading: eui.Group;
 
 		public img_wing: eui.Image;
 		public img_weapon: eui.Image;
@@ -35,7 +38,8 @@ module game {
 		private curPos: number = 0;
 		private _handleId: number = 0;
 		private _skillHandleId: number = 0;
-
+		private _bgEffanniu: EffectMovieClip;
+		private _combatEff:EffectMovieClip;
 		public constructor(viewConf: WinManagerVO = null) {
 			super(viewConf);
 
@@ -43,30 +47,32 @@ module game {
 
 		protected childrenCreated() {
 			super.childrenCreated();
-			RES.getResAsync("equipping_biaoti_png", (texture) => {
-				this.commonWin.img_title.texture = texture;
-			}, this);
-			this.img_close = this.commonWin.img_close;
+			// RES.getResAsync("equipping_biaoti_png", (texture) => {
+			// 	this.com_baseview.img_title.texture = texture;
+			// }, this);
+			// this.img_close = this.com_baseview.img_close;
 			this.initView();
 		}
 
 		private initView() {
 			this.btn_role.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: Event) => {
 				// App.WinManager.openWin(WinName.WING);
+			    
 				this.gp_equip.visible = true;
 				this.gp_reborn.visible = false;
 				this.gp_skill.visible = false;
 				this.btn_role.currentState = "down";
 				this.btn_skill.currentState = "up";
 				this.btn_reborn.currentState = "up";
-				RES.getResAsync("equipping_biaoti_png", (texture) => {
-					this.commonWin.img_title.texture = texture;
-				}, this);
+				// RES.getResAsync("equipping_biaoti_png", (texture) => {
+				// 	this.com_baseview.img_title.texture = texture;
+				// }, this);
+				this.updateEquipView();
 			}, this);
 
-			this.img_close.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: Event) => {
-				App.WinManager.closeWin(WinName.HERO);
-			}, this);
+			// this.img_close.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: Event) => {
+			// 	App.WinManager.closeWin(WinName.HERO);
+			// }, this);
 
 			this.img_detail.addEventListener(egret.TouchEvent.TOUCH_TAP, this.openHeroAttribute, this);
 
@@ -81,6 +87,18 @@ module game {
 				App.WinManager.openWin(WinName.RAIDER, { lastModule: WinName.HERO, index: 1 });
 			}, this);
 
+			//一键换装
+			this.btn_reloading.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: Event) => {
+				let arr = [];
+				let tempDic = this.heroModel.changeBestEquip(this.heroModel.curPos);
+				for (let key in tempDic) {
+					if (tempDic[key]) {
+						arr.push({ part: Number(key), player_good_id: tempDic[key].id });
+					}
+				}
+				App.Socket.send(15015, { id: this.heroModel.getCurHero().id, wear_list: arr });
+			}, this);
+
 			this.btn_skill.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: Event) => {
 				this.gp_equip.visible = false;
 				this.gp_reborn.visible = false;
@@ -90,9 +108,9 @@ module game {
 				this.btn_skill.currentState = "down";
 				this.btn_reborn.currentState = "up";
 				this.btn_role.currentState = "up";
-				RES.getResAsync("skill_title_png", (texture) => {
-					this.commonWin.img_title.texture = texture;
-				}, this);
+				// RES.getResAsync("skill_title_png", (texture) => {
+				// 	this.com_baseview.img_title.texture = texture;
+				// }, this);
 			}, this);
 
 			this.btn_reborn.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: Event) => {
@@ -100,6 +118,7 @@ module game {
 					this._rebornView = new RebornView();
 					this.gp_reborn.addChild(this._rebornView);
 				}
+				this.hero_head.visible = false;
 				this.gp_equip.visible = false;
 				this.gp_reborn.visible = true;
 				this.gp_skill.visible = false;
@@ -107,9 +126,9 @@ module game {
 				this.btn_skill.currentState = "up";
 				this.btn_reborn.currentState = "down";
 				this.btn_role.currentState = "up";
-				RES.getResAsync("reborn_zhuansheng_title_png", (texture) => {
-					this.commonWin.img_title.texture = texture;
-				}, this);
+				// RES.getResAsync("reborn_zhuansheng_title_png", (texture) => {
+				// 	this.com_baseview.img_title.texture = texture;
+				// }, this);
 			}, this);
 
 			App.BtnTipManager.addBtnTipItem(ConstBtnTipType.ROLE_SKILL, this.btn_skill);
@@ -125,11 +144,12 @@ module game {
 				this.gp_equip.visible = true;
 				this.gp_skill.visible = false;
 				this.gp_reborn.visible = false;
+				this.hero_head.visible = true;
 				this.btn_reborn.currentState = "up";
 				this.btn_skill.currentState = "up";
-				RES.getResAsync("equipping_biaoti_png", (texture) => {
-					this.commonWin.img_title.texture = texture;
-				}, this);
+				// RES.getResAsync("equipping_juese_title_png", (texture) => {
+				// 	this.com_baseview.img_title.texture = texture;
+				// }, this);
 			}, this);
 
 			if (this.heroModel.curPos != undefined) {
@@ -139,19 +159,44 @@ module game {
 			this.gp_equip.visible = true;
 			this.gp_skill.visible = false;
 			this.gp_reborn.visible = false;
+			this.bgEffanniu();
 			this.initEquip();
 			this.initSpecialEquip();
 			this.updateEquipView();
 			this.updateSpecialEquipView();
 			this.updateModelView();
 			this.validateNow();
+			this.combatEff();
+
+		}
+		private combatEff():void {
+			this._combatEff = new EffectMovieClip();
+			this._combatEff.x = 123;
+			this._combatEff.y = 10;
+			this._combatEff.scaleX=1;
+			this._combatEff.scaleY=1;
+			this.gp_combat.addChildAt(this._combatEff,1);
+			this._combatEff.playMCKey("effjspf", "", -1, null, null, null, this);
+			this._combatEff.frameRate = 10;
+		}
+
+		private bgEffanniu():void {
+			this._bgEffanniu = new EffectMovieClip();
+			this._bgEffanniu.x = -148;
+			this._bgEffanniu.y = -210;
+			this.gp_reloading.addChild(this._bgEffanniu);
+			this._bgEffanniu.playMCKey("effttyyjhz", "", -1, null, () => {
+					this._bgEffanniu.frameRate = 10;
+				}, null, this);
+			// this._bgEffanniu.frameRate = 10;
 		}
 
 		private initEquip() {
 			for (let i = 1; i <= 10; i++) {
 				let item = new customui.BaseItem();
+				item.setItemNameVisible(true);
+				item.setItemNameAtt({ y: 88 });   //改一下显示位置
 				item.width = item.height = 90;
-				item.img_bg.visible = true;
 				if (i % 2 != 0) {
 					item.left = 50;
 				} else {
@@ -180,27 +225,15 @@ module game {
 			}
 		}
 
+
 		private initSpecialEquip() {
 			for (let i = 1; i <= 6; i++) {
+				//装备框
 				let item = new customui.BaseItem();
+				item.setItemNameAtt({ y: 88 }); //改一下位置
+				item.setItemNameAtt({ textColor: 0xffa200 });
 				item.width = item.height = 90;
-				item.img_bg.visible = true;
-				if (i <= 4) {
-					if (i % 2 != 0) {
-						item.left = 160;
-					} else {
-						item.right = 160;
-					}
-					item.y = 462 + (Math.floor((i - 1) / 2) * (item.height + 17));
-
-				} else if (i == 5) {
-					item.left = 50;
-					item.y = 34 + 5 * (item.height + 17);
-				} else if (i == 6) {
-					item.right = 50;
-					item.y = 34 + 5 * (item.height + 17);
-				}
-
+				//特效
 				let effect = new EffectMovieClip();
 				effect.scaleX = effect.scaleY = 0.4;
 				effect.x = 45;
@@ -212,6 +245,29 @@ module game {
 				item.addChild(effect);
 
 				this._specialArrayEffect.push(effect);
+
+				if (i <= 4) {
+					if (i % 2 != 0) {
+						item.left = 160;
+					} else {
+						item.right = 160;
+					}
+					item.y = 462 + (Math.floor((i - 1) / 2) * (item.height + 17));
+
+				} else if (i == 5) {
+					item.left = 50;
+					item.y = 34 + 5 * (item.height + 17);
+					effect.scaleX = effect.scaleY = 0.5;
+					// effect.x = 50;
+					effect.y = 45;
+				} else if (i == 6) {
+					item.right = 50;
+					item.y = 34 + 5 * (item.height + 17);
+					effect.scaleX = effect.scaleY = 0.5;
+					// effect.x = 50;
+					effect.y = 45;
+				}
+
 				this.gp_equip.addChild(item);
 				item.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
 					this.openSpecialEquip(i);
@@ -230,8 +286,10 @@ module game {
 			if (info) { //装备中，显示详情
 				App.WinManager.openWin(WinName.EQUIP, { type: 1, id: info.good_id, uuid: info.id, part: part });
 			} else { //未装备，显示装备选择页面
-				let view = new EquipSelect(career, part, this.heroModel.heroInfo[this.heroModel.curPos].sex);
-				PopUpManager.addPopUp({ obj: view, effectType: 0 });
+				// let view = new EquipSelect(career, part, this.heroModel.heroInfo[this.heroModel.curPos].sex);
+				// PopUpManager.addPopUp({ obj: view, effectType: 0 });
+				App.WinManager.openWin(WinName.POP_EQUIP_SELECT, { career: career, type: part, sex: this.heroModel.heroInfo[this.heroModel.curPos].sex });
+				// App.GlobalTips.showTips("没有可穿戴装备");
 			}
 		}
 
@@ -249,21 +307,59 @@ module game {
 			this.hero_head.clearAllRedTips();
 			if (this.gp_equip.visible) {
 				this.heroModel.heroHeadRedDot.forEach((value, index, array) => {
-					this.hero_head.setRedTips(index, value);
+					let value2 = this.heroModel.heroHeadRedDot2[index];
+					this.hero_head.setRedTips(index, value || value2);
 				}, this)
 				//红点显示
+				this._bgEffanniu.visible = false;
 				for (let i = 1; i <= 10; i++) {
 					if (this.heroModel.heroEquipPartRedDot[this.curPos][i - 1]) {
 						this.equipArray[i - 1].showRedTips(true);
+						this._bgEffanniu.visible = true;
 					} else {
 						this.equipArray[i - 1].hideRedTips();
+						if (!this._bgEffanniu.visible) {
+							this._bgEffanniu.visible = false;
+						}
 					}
+				}
+
+				for (let i = 1; i <= 6; i++) {
+					if (this.heroModel.heroSpecialEquipPartRedDot[this.curPos][i - 1]) {
+						this._specialArray[i - 1].showRedTips(true);
+					} else {
+						this._specialArray[i - 1].hideRedTips();
+					}
+				}
+
+				this.heroModel.checkNewPartner();
+				if (this.heroModel.heroHeadFrame[0]) {
+					this.hero_head.setNewPartnerTip(0, true);
+				} else {
+					this.hero_head.setNewPartnerTip(0, false);
+				}
+				if (this.heroModel.heroHeadFrame[1]) {
+					this.hero_head.setNewPartnerTip(1, true);
+				} else {
+					this.hero_head.setNewPartnerTip(1, false);
 				}
 
 			} else if (this.gp_skill.visible) {
 				SkillModel.getInstance().heroHeadRedDot.forEach((value, index, array) => {
-					this.hero_head.setRedTips(index, value);
+					let value2 = this.heroModel.heroHeadRedDot2[index];
+					this.hero_head.setRedTips(index, value || value2);
 				}, this)
+				this.heroModel.checkNewPartner();
+				if (this.heroModel.heroHeadFrame[0]) {
+					this.hero_head.setNewPartnerTip(0, true);
+				} else {
+					this.hero_head.setNewPartnerTip(0, false);
+				}
+				if (this.heroModel.heroHeadFrame[1]) {
+					this.hero_head.setNewPartnerTip(1, true);
+				} else {
+					this.hero_head.setNewPartnerTip(1, false);
+				}
 			}
 		}
 
@@ -276,6 +372,7 @@ module game {
 				// this.checkRedDot();
 			} else if (this.gp_skill.visible) {
 				this.skillPanel.changeList();
+				this.checkRedDot();
 			}
 		}
 
@@ -292,26 +389,33 @@ module game {
 				if (info) {
 					let baseInfo = (EquipModel.getInstance() as EquipModel).getEquipInfoById(info.good_id);
 					this.equipArray[i - 1].updateBaseItem(ClientType.EQUIP, baseInfo.id, null, info);
-					this.equipArray[i - 1].img_career.visible = false;
-					this.equipArray[i - 1].lb_name.text = baseInfo.limit_lvl + "级";
-					this.equipArray[i - 1].lb_name.visible = true;
-					this.equipArray[i - 1].lb_type.visible = false;
+					this.equipArray[i - 1].setCarrerIconVisible(false);
+					this.equipArray[i - 1].setItemName("Lv." + baseInfo.limit_lvl);
+					this.equipArray[i - 1].setItemNameAtt({textColor:0xbfb294,size:20});
+					this.equipArray[i - 1].setItemNameVisible(true);
+					// this.equipArray[i - 1].lb_type.visible = false;
+					//转生 
+					if (baseInfo.reincarnation != 0) {
+						this.equipArray[i - 1].setItemName(baseInfo.reincarnation + "转");
+					}
 				} else {
 					let partInfo = this.heroModel.heroInfo[this.heroModel.curPos].getPartInfoByPart(i);
 					this.equipArray[i - 1].updateBaseItem(ClientType.EQUIP, 0, null, partInfo);
-					this.equipArray[i - 1].lb_type.visible = true;
-					this.equipArray[i - 1].lb_name.visible = false;
+					// this.equipArray[i - 1].lb_type.visible = true;
+					this.equipArray[i - 1].setItemNameVisible(false);
+					this.equipArray[i - 1].setItemIcon(ConstEquipIcon[i]);
 					let type = (EquipModel.getInstance() as EquipModel).getTypeByPos(i);
-					this.equipArray[i - 1].lb_type.text = ConstEquipType[type];
+					// this.equipArray[i - 1].lb_type.text = ConstEquipType[type];
 					let pos = this.curPos;
-					RES.getResAsync("equipping_jiahao_png", (texture) => {
-						if (this.heroModel.getHeroEquipByPosPart(pos, i)) {
-							return;
-						}
-						this.equipArray[i - 1].img_icon.source = texture;
-						this.equipArray[i - 1].img_icon.visible = true;
-						this.equipArray[i - 1].img_frame.source = RES.getRes("common_default_png");
-					}, this);
+					// RES.getResAsync("equipping_jiahao_png", (texture) => {
+					// 	if (this.heroModel.getHeroEquipByPosPart(pos, i)) {
+					// 		return;
+					// 	}
+					// 	this.equipArray[i - 1].setItemIcon(texture);
+					// 	this.equipArray[i - 1].img_icon.visible = true;
+					// 	this.equipArray[i - 1].img_frame.source = RES.getRes("common_default_png");
+					// }, this);
+
 				}
 			}
 		}
@@ -320,16 +424,18 @@ module game {
 			for (let i = 1; i <= 6; i++) {
 				let info = (HeroModel.getInstance() as HeroModel).getHeroSpecialEquipByPosPart(this.curPos, i);
 				if (info) {
-					UIActionManager.setGrey(this._specialArray[i - 1], false);
+					UIActionManager.setGrey(this._specialArrayEffect[i - 1], false);
 					this._specialArray[i - 1].updateBaseItem(ClientType.EQUIP, 0, null);
-					this._specialArray[i - 1].lb_name.visible = false;
-					this._specialArray[i - 1].img_icon.source = "";
+					// this._specialArray[i - 1].lb_name.visible = false;
+					this._specialArray[i - 1].setItemName(ConstSpecialEquipType[i]);
+					this._specialArray[i - 1].setItemIcon("");
 				} else {
 					// let partInfo = this.heroModel.heroInfo[this.heroModel.curPos].getPartInfoByPart(i);
-					UIActionManager.setGrey(this._specialArray[i - 1], true);
+					UIActionManager.setGrey(this._specialArrayEffect[i - 1], true);
 					this._specialArray[i - 1].updateBaseItem(ClientType.EQUIP, 0, null);
-					this._specialArray[i - 1].lb_name.visible = false;
-					this._specialArray[i - 1].img_icon.source = "";
+					// this._specialArray[i - 1].lb_name.visible = false;
+					this._specialArray[i - 1].setItemName(ConstSpecialEquipType[i]);
+					this._specialArray[i - 1].setItemIcon("");
 
 				}
 			}
@@ -381,18 +487,17 @@ module game {
 		private closeSkillPanel() {
 			this.gp_skill.visible = false;
 			this.gp_equip.visible = true;
-			RES.getResAsync("equiping_title_png", (texture) => {
-				this.commonWin.img_title.texture = texture;
-			}, this);
+			// RES.getResAsync("equiping_title_png", (texture) => {
+			// 	this.com_baseview.img_title.texture = texture;
+			// }, this);
 			this.btn_skill.currentState = "up";
 			this.updateView(this.curPos);
 		}
 
 		//打开详细属性
 		private openHeroAttribute() {
-			App.GuideManager.setStartGuide(1000);
-			// let view = new HeroAttributeView();
-			// (EventSystem.getInstance() as EventSystem).dispatchEvent(WinManagerEvent.WIN_ADD, new WinManagerEvent(new WinManagerVO("", "", WinLay.MODULE_LAY), view));
+			let view = new HeroAttributeView();
+			(EventSystem.getInstance() as EventSystem).dispatchEvent(WinManagerEvent.WIN_ADD, new WinManagerEvent(new WinManagerVO("", "", WinLay.MODULE_LAY), view));
 		}
 
 		private checkGuide() {
@@ -415,8 +520,12 @@ module game {
 		private removeGuide() {
 			App.GuideManager.removeClickBtn(1000, 2);
 			App.GuideManager.removeClickBtn(1000, 4);
+			App.GuideManager.removeClickBtn(1002, 2);
+			App.GuideManager.removeClickBtn(1002, 4);
+			App.GuideManager.removeClickBtn(1005, 3);
 			this.skillPanel.removeGuide();
 		}
+
 		/**
 		 * 打开窗口
 		 * @ openParam.type   1:角色  2：技能  4:重生
@@ -425,12 +534,15 @@ module game {
 			super.openWin(openParam);
 			// App.Socket.send(15001,{});
 			this.hero_head.readyOpen();
-			if(openParam && openParam.type) {
-				if(openParam.type == 1) {
+			if(this.com_baseview){
+				this.com_baseview.winVo = this.winVo;
+			}
+			if (openParam && openParam.type) {
+				if (openParam.type == 1) {
 
-				} else if(openParam.type == 2 ) {
+				} else if (openParam.type == 2) {
 					this.btn_skill.dispatchEvent(new egret.TouchEvent(egret.TouchEvent.TOUCH_TAP));
-				} else if(openParam.type == 4) {
+				} else if (openParam.type == 4) {
 					this.btn_reborn.dispatchEvent(new egret.TouchEvent(egret.TouchEvent.TOUCH_TAP));
 				}
 			}
@@ -444,7 +556,6 @@ module game {
 			App.EventSystem.addEventListener(PanelNotify.HERO_ACTIVE_SPECIAL, this.updateSpecialEquipView, this);
 
 			this.checkGuide();
-
 		}
 
 		/**
@@ -460,6 +571,9 @@ module game {
 		public clear(data: any = null): void {
 			super.clear(data);
 			this.hero_head.clear();
+			if (this.com_baseview) {
+				this.com_baseview.destroy();
+			}
 			if (this._handleId) {
 				App.EventSystem.removeEventListener(PanelNotify.HERO_ON_HERO_SELECT, this._handleId);
 				this._handleId = undefined;
@@ -478,9 +592,19 @@ module game {
 		 */
 		public destroy(): void {
 			super.destroy();
+			if (this._bgEffanniu) {
+				this._bgEffanniu.destroy();
+				this._bgEffanniu = null;
+				delete this._bgEffanniu;
+			}
 			this._specialArrayEffect.forEach((value, index, array) => {
 				value.destroy();
 			}, this)
+			if(this._combatEff) {
+				this._combatEff.parent.removeChild(this._combatEff);
+				this._combatEff.destroy();
+				this._combatEff = null;
+			}
 		}
 	}
 }

@@ -54,7 +54,7 @@
 		<e:BitmapLabel id="btlb_dailyGold" width="71" height="26" x="517" y="551" anchorOffsetX="0" anchorOffsetY="0" text="1000" font="monthcard_money_shuzi_fnt" textAlign="right"/>
 		<e:BitmapLabel id="btlb_allGold" width="89" height="26" x="501" y="586" anchorOffsetX="0" anchorOffsetY="0" text="30000" font="monthcard_money_shuzi_fnt" textAlign="right"/>
 		<e:BitmapLabel id="btlb_hookExp" width="80" height="26" x="565" y="657" anchorOffsetX="0" anchorOffsetY="0" text="+10%" textAlign="right" font="monthcard_exp_shuzi_fnt"/>
-		<e:BitmapLabel id="btlb_bag" width="80" height="26" x="563" y="765" anchorOffsetX="0" anchorOffsetY="0" text="+100" font="monthcard_exp_shuzi_fnt" textAlign="right"/>
+		<e:BitmapLabel id="btlb_bag" width="75" height="26" x="560" y="765" anchorOffsetX="0" anchorOffsetY="0" text="+100" font="monthcard_exp_shuzi_fnt" textAlign="right"/>
 		<e:BitmapLabel id="btlb_achievement" width="80" height="26" x="568" y="872" anchorOffsetX="0" anchorOffsetY="0" text="+20%" font="monthcard_exp_shuzi_fnt" textAlign="right"/>
 		<e:BitmapLabel id="btlb_hookCoin" width="80" height="26" x="559" y="693" anchorOffsetX="0" anchorOffsetY="0" text="+10%" textAlign="right" font="monthcard_money_shuzi_fnt"/>
 	</e:Group>

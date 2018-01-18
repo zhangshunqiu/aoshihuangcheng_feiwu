@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ChatPortSkin" width="435" height="73" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="gp_chatlist" touchEnabled="false" height="100" width="412" y="0" x="0">
+		<e:Image scale9Grid="54,22,327,139" height="73" x="0" anchorOffsetY="0" y="0" source="main_bg_liaotiancao_png"/>
+		<e:Scroller id="scr_chatlist" width="403.33" height="65" anchorOffsetY="0" anchorOffsetX="0" scaleX="1" scaleY="1" x="3" y="6" touchEnabled="false" touchChildren="false">
+		<e:Group id="vp_chatlist" touchEnabled="true"/>
+		</e:Scroller>
+	</e:Group>
+</e:Skin>

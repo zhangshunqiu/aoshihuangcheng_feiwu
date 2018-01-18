@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="RankTopSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" width="458" height="356">
+<e:Skin class="RankTopSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:game="game.*" width="458" height="356">
 	<e:Group width="458" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" height="356">
 		<e:Group width="210" height="309" x="26.98" y="42.33" anchorOffsetX="0" anchorOffsetY="0">
 			<e:Image id="img_wing" width="397.47" height="579" y="-141.33" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" x="-34" source="4000_png"/>
@@ -7,18 +7,6 @@
 			<e:Image id="img_weapon" width="427" height="616" y="-152.95" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" x="-55" source="3300_png"/>
 		</e:Group>
 		<e:Image id="img_honor" width="248.64" height="77.24" x="76.56" y="-18.89" anchorOffsetX="0" anchorOffsetY="0" source="ranking list_dangshishashen_png"/>
-		<e:Group anchorOffsetX="0" width="458" height="100" horizontalCenter="0" bottom="0">
-			<e:Image width="458" source="mail_btn_list_png" anchorOffsetX="0" anchorOffsetY="0" height="100" horizontalCenter="0" verticalCenter="0" x="0" y="-128" scaleX="1" scaleY="1" alpha="0.6"/>
-			<e:Image id="img_rankNum" width="84.29" height="65.24" x="5" y="16.76" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" source=""/>
-			<e:Label id="lb_level" text="10转200级" x="260.35" y="28" anchorOffsetX="0" width="91.33" anchorOffsetY="0" height="26" size="20" scaleX="1" scaleY="1" textColor="0x00F829"/>
-			<e:Label id="lb_rankData" text="战斗力：9999" x="103" y="61.34" anchorOffsetX="0" width="182.67" anchorOffsetY="0" height="28.67" size="24" scaleX="1" scaleY="1" textColor="0xFFA200" textAlign="left"/>
-			<e:Label id="lb_name" text="我的名字" x="103" y="25" anchorOffsetX="0" width="149.67" anchorOffsetY="0" height="28.67" size="24" scaleX="1" scaleY="1" verticalAlign="middle" textAlign="left" textColor="0xF7F7F7"/>
-			<e:Image id="img_honour" x="353" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" verticalCenter="-0.5" source=""/>
-			<e:Group x="2" scaleX="1" scaleY="1" y="73" anchorOffsetX="0" width="88">
-				<e:Image id="img_yue" width="25" height="22" source="chat_txt_yue_png" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" y="2" x="1"/>
-				<e:Image id="img_vip" width="40" height="26" source="chat_txt_vip_png" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" x="19"/>
-				<e:BitmapLabel id="bitmap_vip" width="45" height="28" font="chat_vip_number_fnt" text="10" anchorOffsetX="0" anchorOffsetY="0" letterSpacing="-10" scaleX="0.7" scaleY="0.7" x="53" y="1"/>
-			</e:Group>
-		</e:Group>
+		<game:RankListItem id="rankListItem" height="100" anchorOffsetY="0" left="0" right="0" bottom="2" width="458"/>
 	</e:Group>
 </e:Skin>

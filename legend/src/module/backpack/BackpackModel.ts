@@ -62,6 +62,7 @@ module game {
 			//是否提示熔炼
 			this.updateSmeltBtnTip();
 			this.handleRedDot(null);
+			this.sortEquipBackpack();
 		}
 
 		public updateBackpackItemInfo(info) {
@@ -109,7 +110,24 @@ module game {
 							this.chestBackpack.push(new ItemVO(item));
 						}
 					} else if (item.type == ClientType.EQUIP) {  //装备
-						this.equipBackpack.push(new EquipVO(item));
+						let newItem = new EquipVO(item);
+						let exist = false;
+						let newEquipInfo = App.ConfigManager.getEquipById(newItem.good_id);
+						//@这里性能好差，优化一下@勇根
+						for (let i:number=0; i<this.equipBackpack.length; i++) {
+							let equipInfo = App.ConfigManager.getEquipById(this.equipBackpack[i].good_id);
+							//这里要考虑if不为true情况 @勇根
+							if (equipInfo.sorting < newEquipInfo.sorting) {
+								this.equipBackpack.splice(i, 0, newItem);
+								exist = true;
+								break;
+							}
+						}
+						//这里要考虑背包为空的情况 @勇根
+						if (this.equipBackpack.length == 0 || !exist) {
+							this.equipBackpack.push(newItem);
+						}
+						// this.equipBackpack.push(newItem);
 					}
 					this.capacity += 1;
 					this.handleReward(item);
@@ -118,6 +136,16 @@ module game {
 			}
 			//是否提示熔炼
 			this.updateSmeltBtnTip();
+		}
+
+		private sortEquipBackpack() {
+			this.equipBackpack.sort((item1, item2)=>{
+				let equipInfo1 = App.ConfigManager.getEquipById(item1.good_id);
+				let equipInfo2 = App.ConfigManager.getEquipById(item2.good_id);
+				if(equipInfo1 && equipInfo2) {
+					return equipInfo2.sorting - equipInfo1.sorting;
+				}
+			})
 		}
 
 		/**
@@ -225,6 +253,41 @@ module game {
 		}
 
 		/**
+		 * 根据 类型 获取背包里的道具数组，非装备，没有返回null
+		*/
+		public getItemArrayByTypeAndSubType(type: number, subType ?: number): any {
+			let arr = [];
+			let item: ItemVO = undefined;
+			for (let key in this.itemBackpack) {
+				let info = App.ConfigManager.getItemInfoById(this.itemBackpack[key].good_id);
+				if (type == info.type) {
+					if (subType) {
+						if (subType == info.sub_type) {
+							arr.push(this.itemBackpack[key]);
+						}
+					} else {
+						arr.push(this.itemBackpack[key]);
+					}
+					
+				}
+			}
+			for (let key in this.chestBackpack) {
+				let info = App.ConfigManager.getItemInfoById(this.chestBackpack[key].good_id);
+				if (type == info.type) {
+					if (subType) {
+						if (subType == info.sub_type) {
+							arr.push(this.chestBackpack[key]);
+						}
+					} else {
+						arr.push(this.chestBackpack[key]);
+					}
+					
+				}
+			}
+			return arr;
+		}
+
+		/**
 		 * 背包剩余空间
 		*/
 		public getRemindCapacity() {
@@ -235,16 +298,16 @@ module game {
 		public updateSmeltBtnTip() {
 			var num: number = this.getRemindCapacity();
 			if (num <= 0) {
-				App.BtnTipManager.setTypeValue(ConstBtnTipType.BACKPACK_SMELT,true);
-				App.BtnTipManager.setTypeValue(ConstBtnTipType.BACKPACK,"满");//由于需要父级显示不同的内容所以才加
-				App.EventSystem.dispatchEvent(PanelNotify.MAIN_BACKPAG_FULL_TIPS,true,500);
-			}else if(num < 30) {
-				App.BtnTipManager.setTypeValue(ConstBtnTipType.BACKPACK_SMELT,true);
-				App.BtnTipManager.setTypeValue(ConstBtnTipType.BACKPACK,true);//由于需要父级显示不同的内容所以才加	
-				App.EventSystem.dispatchEvent(PanelNotify.MAIN_BACKPAG_FULL_TIPS,false,500);
-			}else{
-				App.BtnTipManager.setTypeValue(ConstBtnTipType.BACKPACK_SMELT,false);
-				App.EventSystem.dispatchEvent(PanelNotify.MAIN_BACKPAG_FULL_TIPS,false,500);
+				App.BtnTipManager.setTypeValue(ConstBtnTipType.BACKPACK_SMELT, true);
+				App.BtnTipManager.setTypeValue(ConstBtnTipType.BACKPACK, true);//由于需要父级显示不同的内容所以才加
+				App.EventSystem.dispatchEvent(PanelNotify.MAIN_BACKPAG_FULL_TIPS, true, 500);
+			} else if (num < 30) {
+				App.BtnTipManager.setTypeValue(ConstBtnTipType.BACKPACK_SMELT, true);
+				App.BtnTipManager.setTypeValue(ConstBtnTipType.BACKPACK, true);//由于需要父级显示不同的内容所以才加	
+				App.EventSystem.dispatchEvent(PanelNotify.MAIN_BACKPAG_FULL_TIPS, false, 500);
+			} else {
+				App.BtnTipManager.setTypeValue(ConstBtnTipType.BACKPACK_SMELT, false);
+				App.EventSystem.dispatchEvent(PanelNotify.MAIN_BACKPAG_FULL_TIPS, false, 500);
 			}
 		}
 		/**
@@ -263,6 +326,7 @@ module game {
 					ForgeModel.getInstance().checkCanOrangeUp(index);
 				}, this);
 				this.heroModel.checkBetterEquipRedDotAll();
+				this.heroModel.checkSpecialEquipRedDotAll();
 				SynthesisModel.getInstance().checkJewelCanSynthesisAll();
 				SynthesisModel.getInstance().checkWingCanSynthesisAll();
 				JewelModel.getInstance().checkCanUpgradeAll();
@@ -281,12 +345,15 @@ module game {
 					this.heroModel.heroInfo.forEach((value, index, array) => {
 						ForgeModel.getInstance().checkCanStarup(index);
 					}, this);
+				} else if (item.good_id == 22 || item.good_id == 23 || item.good_id == 24 || item.good_id == 25) { //特殊装备
+					HeroModel.getInstance().checkSpecialEquipRedDotAll();
 				} else {
 					let itemInfo = App.ConfigManager.getItemInfoById(item.good_id);
 					if (itemInfo.type == ItemType.RUBY || item.good_id == 1000) {  //宝石
-						JewelModel.getInstance().checkCanUpgradeAll();
 						SynthesisModel.getInstance().checkJewelCanSynthesisAll();
-					} else if(itemInfo.type == ItemType.WING || item.good_id == 200) {  //翅膀
+						JewelModel.getInstance().checkCanUpgradeAll();
+						JewelModel.getInstance().checkCanEmbleAll();
+					} else if (itemInfo.type == ItemType.WING || item.good_id == 200) {  //翅膀
 						SynthesisModel.getInstance().checkWingCanSynthesisAll();
 					}
 				}

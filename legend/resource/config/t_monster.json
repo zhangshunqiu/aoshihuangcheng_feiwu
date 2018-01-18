@@ -15,7 +15,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"2":{
 		"id":2,
@@ -33,7 +35,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"3":{
 		"id":3,
@@ -51,7 +55,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"4":{
 		"id":4,
@@ -69,7 +75,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10001":{
 		"id":10001,
@@ -87,7 +95,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10002":{
 		"id":10002,
@@ -105,7 +115,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10003":{
 		"id":10003,
@@ -123,7 +135,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10004":{
 		"id":10004,
@@ -141,7 +155,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10005":{
 		"id":10005,
@@ -159,7 +175,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10006":{
 		"id":10006,
@@ -177,7 +195,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10007":{
 		"id":10007,
@@ -195,7 +215,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10008":{
 		"id":10008,
@@ -213,7 +235,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10009":{
 		"id":10009,
@@ -231,7 +255,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10010":{
 		"id":10010,
@@ -249,7 +275,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10011":{
 		"id":10011,
@@ -267,7 +295,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10012":{
 		"id":10012,
@@ -285,7 +315,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10013":{
 		"id":10013,
@@ -303,7 +335,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10014":{
 		"id":10014,
@@ -321,7 +355,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10015":{
 		"id":10015,
@@ -339,7 +375,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10016":{
 		"id":10016,
@@ -357,7 +395,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10017":{
 		"id":10017,
@@ -375,7 +415,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10018":{
 		"id":10018,
@@ -393,7 +435,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10019":{
 		"id":10019,
@@ -411,7 +455,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10020":{
 		"id":10020,
@@ -429,7 +475,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10021":{
 		"id":10021,
@@ -447,7 +495,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10022":{
 		"id":10022,
@@ -465,7 +515,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10023":{
 		"id":10023,
@@ -483,7 +535,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10024":{
 		"id":10024,
@@ -501,7 +555,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10025":{
 		"id":10025,
@@ -519,7 +575,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10026":{
 		"id":10026,
@@ -537,7 +595,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10027":{
 		"id":10027,
@@ -555,7 +615,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10028":{
 		"id":10028,
@@ -573,7 +635,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10029":{
 		"id":10029,
@@ -591,7 +655,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10030":{
 		"id":10030,
@@ -609,7 +675,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10031":{
 		"id":10031,
@@ -627,7 +695,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10032":{
 		"id":10032,
@@ -645,7 +715,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10033":{
 		"id":10033,
@@ -663,7 +735,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10034":{
 		"id":10034,
@@ -681,7 +755,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10035":{
 		"id":10035,
@@ -699,7 +775,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10036":{
 		"id":10036,
@@ -717,7 +795,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10037":{
 		"id":10037,
@@ -735,7 +815,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10038":{
 		"id":10038,
@@ -753,7 +835,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10039":{
 		"id":10039,
@@ -771,7 +855,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10040":{
 		"id":10040,
@@ -789,7 +875,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10041":{
 		"id":10041,
@@ -807,7 +895,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10042":{
 		"id":10042,
@@ -825,7 +915,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10043":{
 		"id":10043,
@@ -843,7 +935,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10044":{
 		"id":10044,
@@ -861,7 +955,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10045":{
 		"id":10045,
@@ -879,7 +975,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10046":{
 		"id":10046,
@@ -897,7 +995,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10047":{
 		"id":10047,
@@ -915,7 +1015,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10048":{
 		"id":10048,
@@ -933,7 +1035,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10049":{
 		"id":10049,
@@ -951,7 +1055,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10050":{
 		"id":10050,
@@ -969,7 +1075,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10051":{
 		"id":10051,
@@ -987,7 +1095,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10052":{
 		"id":10052,
@@ -1005,7 +1115,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10053":{
 		"id":10053,
@@ -1023,7 +1135,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10054":{
 		"id":10054,
@@ -1041,7 +1155,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10055":{
 		"id":10055,
@@ -1059,7 +1175,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10056":{
 		"id":10056,
@@ -1077,7 +1195,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10057":{
 		"id":10057,
@@ -1095,7 +1215,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10058":{
 		"id":10058,
@@ -1113,7 +1235,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10059":{
 		"id":10059,
@@ -1131,7 +1255,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10060":{
 		"id":10060,
@@ -1149,7 +1275,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10061":{
 		"id":10061,
@@ -1167,7 +1295,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10062":{
 		"id":10062,
@@ -1185,7 +1315,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10063":{
 		"id":10063,
@@ -1203,7 +1335,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10064":{
 		"id":10064,
@@ -1221,7 +1355,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10065":{
 		"id":10065,
@@ -1239,7 +1375,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10066":{
 		"id":10066,
@@ -1257,7 +1395,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10067":{
 		"id":10067,
@@ -1275,7 +1415,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10068":{
 		"id":10068,
@@ -1293,7 +1435,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10069":{
 		"id":10069,
@@ -1311,7 +1455,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10070":{
 		"id":10070,
@@ -1329,7 +1475,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10071":{
 		"id":10071,
@@ -1347,7 +1495,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10072":{
 		"id":10072,
@@ -1365,7 +1515,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10073":{
 		"id":10073,
@@ -1383,7 +1535,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10074":{
 		"id":10074,
@@ -1401,7 +1555,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10075":{
 		"id":10075,
@@ -1419,7 +1575,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10076":{
 		"id":10076,
@@ -1437,7 +1595,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10077":{
 		"id":10077,
@@ -1455,7 +1615,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10078":{
 		"id":10078,
@@ -1473,7 +1635,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10079":{
 		"id":10079,
@@ -1491,7 +1655,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10080":{
 		"id":10080,
@@ -1509,7 +1675,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10081":{
 		"id":10081,
@@ -1527,7 +1695,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10082":{
 		"id":10082,
@@ -1545,7 +1715,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10083":{
 		"id":10083,
@@ -1563,7 +1735,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10084":{
 		"id":10084,
@@ -1581,7 +1755,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10085":{
 		"id":10085,
@@ -1599,7 +1775,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10086":{
 		"id":10086,
@@ -1617,7 +1795,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10087":{
 		"id":10087,
@@ -1635,7 +1815,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10088":{
 		"id":10088,
@@ -1653,7 +1835,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10089":{
 		"id":10089,
@@ -1671,7 +1855,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10090":{
 		"id":10090,
@@ -1689,7 +1875,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10091":{
 		"id":10091,
@@ -1707,7 +1895,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10092":{
 		"id":10092,
@@ -1725,7 +1915,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10093":{
 		"id":10093,
@@ -1743,7 +1935,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10094":{
 		"id":10094,
@@ -1761,7 +1955,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10095":{
 		"id":10095,
@@ -1779,7 +1975,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10096":{
 		"id":10096,
@@ -1797,7 +1995,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10097":{
 		"id":10097,
@@ -1815,7 +2015,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10098":{
 		"id":10098,
@@ -1833,7 +2035,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10099":{
 		"id":10099,
@@ -1851,7 +2055,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10100":{
 		"id":10100,
@@ -1869,7 +2075,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10101":{
 		"id":10101,
@@ -1887,7 +2095,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10102":{
 		"id":10102,
@@ -1905,7 +2115,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10103":{
 		"id":10103,
@@ -1923,7 +2135,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10104":{
 		"id":10104,
@@ -1941,7 +2155,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10105":{
 		"id":10105,
@@ -1959,7 +2175,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10106":{
 		"id":10106,
@@ -1977,7 +2195,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10107":{
 		"id":10107,
@@ -1995,7 +2215,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10108":{
 		"id":10108,
@@ -2013,7 +2235,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10109":{
 		"id":10109,
@@ -2031,7 +2255,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10110":{
 		"id":10110,
@@ -2049,7 +2275,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10111":{
 		"id":10111,
@@ -2067,7 +2295,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10112":{
 		"id":10112,
@@ -2085,7 +2315,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10113":{
 		"id":10113,
@@ -2103,7 +2335,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10114":{
 		"id":10114,
@@ -2121,7 +2355,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10115":{
 		"id":10115,
@@ -2139,7 +2375,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10116":{
 		"id":10116,
@@ -2157,7 +2395,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10117":{
 		"id":10117,
@@ -2175,7 +2415,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10118":{
 		"id":10118,
@@ -2193,7 +2435,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10119":{
 		"id":10119,
@@ -2211,7 +2455,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10120":{
 		"id":10120,
@@ -2229,7 +2475,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10121":{
 		"id":10121,
@@ -2247,7 +2495,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10122":{
 		"id":10122,
@@ -2265,7 +2515,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10123":{
 		"id":10123,
@@ -2283,7 +2535,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10124":{
 		"id":10124,
@@ -2301,7 +2555,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10125":{
 		"id":10125,
@@ -2319,7 +2575,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10126":{
 		"id":10126,
@@ -2337,7 +2595,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10127":{
 		"id":10127,
@@ -2355,7 +2615,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10128":{
 		"id":10128,
@@ -2373,7 +2635,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10129":{
 		"id":10129,
@@ -2391,7 +2655,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10130":{
 		"id":10130,
@@ -2409,7 +2675,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10131":{
 		"id":10131,
@@ -2427,7 +2695,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10132":{
 		"id":10132,
@@ -2445,7 +2715,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10133":{
 		"id":10133,
@@ -2463,7 +2735,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10134":{
 		"id":10134,
@@ -2481,7 +2755,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10135":{
 		"id":10135,
@@ -2499,7 +2775,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10136":{
 		"id":10136,
@@ -2517,7 +2795,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10137":{
 		"id":10137,
@@ -2535,7 +2815,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10138":{
 		"id":10138,
@@ -2553,7 +2835,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10139":{
 		"id":10139,
@@ -2571,7 +2855,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10140":{
 		"id":10140,
@@ -2589,7 +2875,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10141":{
 		"id":10141,
@@ -2607,7 +2895,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10142":{
 		"id":10142,
@@ -2625,7 +2915,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10143":{
 		"id":10143,
@@ -2643,7 +2935,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10144":{
 		"id":10144,
@@ -2661,7 +2955,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10145":{
 		"id":10145,
@@ -2679,7 +2975,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10146":{
 		"id":10146,
@@ -2697,7 +2995,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10147":{
 		"id":10147,
@@ -2715,7 +3015,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10148":{
 		"id":10148,
@@ -2733,7 +3035,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10149":{
 		"id":10149,
@@ -2751,7 +3055,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10150":{
 		"id":10150,
@@ -2769,7 +3075,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10151":{
 		"id":10151,
@@ -2787,7 +3095,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10152":{
 		"id":10152,
@@ -2805,7 +3115,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10153":{
 		"id":10153,
@@ -2823,7 +3135,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10154":{
 		"id":10154,
@@ -2841,7 +3155,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10155":{
 		"id":10155,
@@ -2859,7 +3175,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10156":{
 		"id":10156,
@@ -2877,7 +3195,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10157":{
 		"id":10157,
@@ -2895,7 +3215,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10158":{
 		"id":10158,
@@ -2913,7 +3235,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10159":{
 		"id":10159,
@@ -2931,7 +3255,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10160":{
 		"id":10160,
@@ -2949,7 +3275,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10161":{
 		"id":10161,
@@ -2967,7 +3295,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10162":{
 		"id":10162,
@@ -2985,7 +3315,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10163":{
 		"id":10163,
@@ -3003,7 +3335,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10164":{
 		"id":10164,
@@ -3021,7 +3355,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10165":{
 		"id":10165,
@@ -3039,7 +3375,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10166":{
 		"id":10166,
@@ -3057,7 +3395,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10167":{
 		"id":10167,
@@ -3075,7 +3415,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10168":{
 		"id":10168,
@@ -3093,7 +3435,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10169":{
 		"id":10169,
@@ -3111,7 +3455,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10170":{
 		"id":10170,
@@ -3129,7 +3475,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10171":{
 		"id":10171,
@@ -3147,7 +3495,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10172":{
 		"id":10172,
@@ -3165,7 +3515,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10173":{
 		"id":10173,
@@ -3183,7 +3535,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10174":{
 		"id":10174,
@@ -3201,7 +3555,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10175":{
 		"id":10175,
@@ -3219,7 +3575,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10176":{
 		"id":10176,
@@ -3237,7 +3595,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10177":{
 		"id":10177,
@@ -3255,7 +3615,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10178":{
 		"id":10178,
@@ -3273,7 +3635,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10179":{
 		"id":10179,
@@ -3291,7 +3655,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10180":{
 		"id":10180,
@@ -3309,7 +3675,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10181":{
 		"id":10181,
@@ -3327,7 +3695,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10182":{
 		"id":10182,
@@ -3345,7 +3715,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10183":{
 		"id":10183,
@@ -3363,7 +3735,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10184":{
 		"id":10184,
@@ -3381,7 +3755,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10185":{
 		"id":10185,
@@ -3399,7 +3775,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10186":{
 		"id":10186,
@@ -3417,7 +3795,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10187":{
 		"id":10187,
@@ -3435,7 +3815,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10188":{
 		"id":10188,
@@ -3453,7 +3835,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10189":{
 		"id":10189,
@@ -3471,7 +3855,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10190":{
 		"id":10190,
@@ -3489,7 +3875,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10191":{
 		"id":10191,
@@ -3507,7 +3895,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10192":{
 		"id":10192,
@@ -3525,7 +3915,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10193":{
 		"id":10193,
@@ -3543,7 +3935,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10194":{
 		"id":10194,
@@ -3561,7 +3955,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10195":{
 		"id":10195,
@@ -3579,7 +3975,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10196":{
 		"id":10196,
@@ -3597,7 +3995,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10197":{
 		"id":10197,
@@ -3615,7 +4015,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10198":{
 		"id":10198,
@@ -3633,7 +4035,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10199":{
 		"id":10199,
@@ -3651,7 +4055,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"10200":{
 		"id":10200,
@@ -3669,7 +4075,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"20001":{
 		"id":20001,
@@ -3680,14 +4088,16 @@
 		"type":2,
 		"resId":2207,
 		"lv":1,
-		"hp":3099,
+		"hp":1013,
 		"mp":100,
 		"hookSkill":[50000],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20002":{
 		"id":20002,
@@ -3698,14 +4108,16 @@
 		"type":2,
 		"resId":2207,
 		"lv":2,
-		"hp":3945,
+		"hp":2313,
 		"mp":100,
 		"hookSkill":[50000],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20003":{
 		"id":20003,
@@ -3716,14 +4128,16 @@
 		"type":2,
 		"resId":2207,
 		"lv":3,
-		"hp":4850,
+		"hp":3613,
 		"mp":100,
 		"hookSkill":[50000],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20004":{
 		"id":20004,
@@ -3734,14 +4148,16 @@
 		"type":2,
 		"resId":2207,
 		"lv":4,
-		"hp":5807,
+		"hp":4913,
 		"mp":100,
 		"hookSkill":[50000],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20005":{
 		"id":20005,
@@ -3752,14 +4168,16 @@
 		"type":2,
 		"resId":2207,
 		"lv":5,
-		"hp":6823,
+		"hp":6213,
 		"mp":100,
 		"hookSkill":[50000],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20006":{
 		"id":20006,
@@ -3770,14 +4188,16 @@
 		"type":2,
 		"resId":2207,
 		"lv":6,
-		"hp":7890,
+		"hp":7513,
 		"mp":100,
 		"hookSkill":[50000],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20007":{
 		"id":20007,
@@ -3788,14 +4208,16 @@
 		"type":2,
 		"resId":2207,
 		"lv":7,
-		"hp":9009,
+		"hp":8813,
 		"mp":100,
 		"hookSkill":[50000],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20008":{
 		"id":20008,
@@ -3806,14 +4228,16 @@
 		"type":2,
 		"resId":2207,
 		"lv":8,
-		"hp":10179,
+		"hp":10113,
 		"mp":100,
 		"hookSkill":[50000],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20009":{
 		"id":20009,
@@ -3824,14 +4248,16 @@
 		"type":2,
 		"resId":2207,
 		"lv":9,
-		"hp":11401,
+		"hp":11413,
 		"mp":100,
 		"hookSkill":[50000],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20010":{
 		"id":20010,
@@ -3842,14 +4268,16 @@
 		"type":2,
 		"resId":2207,
 		"lv":10,
-		"hp":12681,
+		"hp":12713,
 		"mp":100,
 		"hookSkill":[50000],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20011":{
 		"id":20011,
@@ -3867,7 +4295,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20012":{
 		"id":20012,
@@ -3885,7 +4315,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20013":{
 		"id":20013,
@@ -3903,7 +4335,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20014":{
 		"id":20014,
@@ -3921,7 +4355,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20015":{
 		"id":20015,
@@ -3939,7 +4375,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20016":{
 		"id":20016,
@@ -3957,7 +4395,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20017":{
 		"id":20017,
@@ -3975,7 +4415,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20018":{
 		"id":20018,
@@ -3993,7 +4435,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20019":{
 		"id":20019,
@@ -4011,7 +4455,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20020":{
 		"id":20020,
@@ -4029,7 +4475,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20021":{
 		"id":20021,
@@ -4047,7 +4495,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20022":{
 		"id":20022,
@@ -4065,7 +4515,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20023":{
 		"id":20023,
@@ -4083,7 +4535,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20024":{
 		"id":20024,
@@ -4101,7 +4555,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20025":{
 		"id":20025,
@@ -4119,7 +4575,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20026":{
 		"id":20026,
@@ -4137,7 +4595,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20027":{
 		"id":20027,
@@ -4155,7 +4615,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20028":{
 		"id":20028,
@@ -4173,7 +4635,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20029":{
 		"id":20029,
@@ -4191,7 +4655,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20030":{
 		"id":20030,
@@ -4209,7 +4675,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20031":{
 		"id":20031,
@@ -4227,7 +4695,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20032":{
 		"id":20032,
@@ -4245,7 +4715,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20033":{
 		"id":20033,
@@ -4263,7 +4735,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20034":{
 		"id":20034,
@@ -4281,7 +4755,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20035":{
 		"id":20035,
@@ -4299,7 +4775,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20036":{
 		"id":20036,
@@ -4317,7 +4795,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20037":{
 		"id":20037,
@@ -4335,7 +4815,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20038":{
 		"id":20038,
@@ -4353,7 +4835,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20039":{
 		"id":20039,
@@ -4371,7 +4855,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20040":{
 		"id":20040,
@@ -4389,7 +4875,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20041":{
 		"id":20041,
@@ -4407,7 +4895,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20042":{
 		"id":20042,
@@ -4420,12 +4910,14 @@
 		"lv":42,
 		"hp":122941,
 		"mp":100,
-		"hookSkill":[50000],
+		"hookSkill":[50001],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20043":{
 		"id":20043,
@@ -4438,12 +4930,14 @@
 		"lv":43,
 		"hp":127512,
 		"mp":100,
-		"hookSkill":[50000],
+		"hookSkill":[50001],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20044":{
 		"id":20044,
@@ -4456,12 +4950,14 @@
 		"lv":44,
 		"hp":132171,
 		"mp":100,
-		"hookSkill":[50000],
+		"hookSkill":[50001],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20045":{
 		"id":20045,
@@ -4474,12 +4970,14 @@
 		"lv":45,
 		"hp":136907,
 		"mp":100,
-		"hookSkill":[50000],
+		"hookSkill":[50001],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20046":{
 		"id":20046,
@@ -4492,12 +4990,14 @@
 		"lv":46,
 		"hp":141732,
 		"mp":100,
-		"hookSkill":[50000],
+		"hookSkill":[50001],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20047":{
 		"id":20047,
@@ -4510,12 +5010,14 @@
 		"lv":47,
 		"hp":146622,
 		"mp":100,
-		"hookSkill":[50000],
+		"hookSkill":[50001],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20048":{
 		"id":20048,
@@ -4528,12 +5030,14 @@
 		"lv":48,
 		"hp":151601,
 		"mp":100,
-		"hookSkill":[50000],
+		"hookSkill":[50001],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20049":{
 		"id":20049,
@@ -4546,12 +5050,14 @@
 		"lv":49,
 		"hp":156658,
 		"mp":100,
-		"hookSkill":[50000],
+		"hookSkill":[50001],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20050":{
 		"id":20050,
@@ -4564,12 +5070,14 @@
 		"lv":50,
 		"hp":161802,
 		"mp":100,
-		"hookSkill":[50000],
+		"hookSkill":[50001],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20051":{
 		"id":20051,
@@ -4587,7 +5095,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20052":{
 		"id":20052,
@@ -4605,7 +5115,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20053":{
 		"id":20053,
@@ -4623,7 +5135,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20054":{
 		"id":20054,
@@ -4641,7 +5155,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20055":{
 		"id":20055,
@@ -4659,7 +5175,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20056":{
 		"id":20056,
@@ -4677,7 +5195,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20057":{
 		"id":20057,
@@ -4695,7 +5215,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20058":{
 		"id":20058,
@@ -4713,7 +5235,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20059":{
 		"id":20059,
@@ -4731,7 +5255,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20060":{
 		"id":20060,
@@ -4749,7 +5275,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20061":{
 		"id":20061,
@@ -4767,7 +5295,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20062":{
 		"id":20062,
@@ -4785,7 +5315,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20063":{
 		"id":20063,
@@ -4803,7 +5335,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20064":{
 		"id":20064,
@@ -4821,7 +5355,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20065":{
 		"id":20065,
@@ -4839,7 +5375,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20066":{
 		"id":20066,
@@ -4857,7 +5395,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20067":{
 		"id":20067,
@@ -4875,7 +5415,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20068":{
 		"id":20068,
@@ -4893,7 +5435,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20069":{
 		"id":20069,
@@ -4911,7 +5455,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20070":{
 		"id":20070,
@@ -4929,7 +5475,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20071":{
 		"id":20071,
@@ -4947,7 +5495,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20072":{
 		"id":20072,
@@ -4965,7 +5515,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20073":{
 		"id":20073,
@@ -4983,7 +5535,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20074":{
 		"id":20074,
@@ -5001,7 +5555,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20075":{
 		"id":20075,
@@ -5019,7 +5575,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20076":{
 		"id":20076,
@@ -5037,7 +5595,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20077":{
 		"id":20077,
@@ -5055,7 +5615,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20078":{
 		"id":20078,
@@ -5073,7 +5635,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20079":{
 		"id":20079,
@@ -5091,7 +5655,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20080":{
 		"id":20080,
@@ -5109,7 +5675,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20081":{
 		"id":20081,
@@ -5127,7 +5695,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20082":{
 		"id":20082,
@@ -5145,7 +5715,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20083":{
 		"id":20083,
@@ -5163,7 +5735,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20084":{
 		"id":20084,
@@ -5181,7 +5755,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20085":{
 		"id":20085,
@@ -5199,7 +5775,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20086":{
 		"id":20086,
@@ -5217,7 +5795,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20087":{
 		"id":20087,
@@ -5235,7 +5815,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20088":{
 		"id":20088,
@@ -5253,7 +5835,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20089":{
 		"id":20089,
@@ -5271,7 +5855,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20090":{
 		"id":20090,
@@ -5289,7 +5875,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20091":{
 		"id":20091,
@@ -5307,7 +5895,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20092":{
 		"id":20092,
@@ -5325,7 +5915,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20093":{
 		"id":20093,
@@ -5343,7 +5935,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20094":{
 		"id":20094,
@@ -5361,7 +5955,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20095":{
 		"id":20095,
@@ -5379,7 +5975,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20096":{
 		"id":20096,
@@ -5397,7 +5995,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20097":{
 		"id":20097,
@@ -5415,7 +6015,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20098":{
 		"id":20098,
@@ -5433,7 +6035,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20099":{
 		"id":20099,
@@ -5451,7 +6055,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20100":{
 		"id":20100,
@@ -5469,7 +6075,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20101":{
 		"id":20101,
@@ -5487,7 +6095,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20102":{
 		"id":20102,
@@ -5505,7 +6115,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20103":{
 		"id":20103,
@@ -5523,7 +6135,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20104":{
 		"id":20104,
@@ -5541,7 +6155,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20105":{
 		"id":20105,
@@ -5559,7 +6175,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20106":{
 		"id":20106,
@@ -5577,7 +6195,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20107":{
 		"id":20107,
@@ -5595,7 +6215,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20108":{
 		"id":20108,
@@ -5613,7 +6235,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20109":{
 		"id":20109,
@@ -5631,7 +6255,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20110":{
 		"id":20110,
@@ -5649,7 +6275,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20111":{
 		"id":20111,
@@ -5667,7 +6295,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20112":{
 		"id":20112,
@@ -5685,7 +6315,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20113":{
 		"id":20113,
@@ -5703,7 +6335,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20114":{
 		"id":20114,
@@ -5721,7 +6355,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20115":{
 		"id":20115,
@@ -5739,7 +6375,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20116":{
 		"id":20116,
@@ -5757,7 +6395,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20117":{
 		"id":20117,
@@ -5775,7 +6415,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20118":{
 		"id":20118,
@@ -5793,7 +6435,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20119":{
 		"id":20119,
@@ -5811,7 +6455,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20120":{
 		"id":20120,
@@ -5829,7 +6475,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20121":{
 		"id":20121,
@@ -5847,7 +6495,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20122":{
 		"id":20122,
@@ -5865,7 +6515,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20123":{
 		"id":20123,
@@ -5883,7 +6535,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20124":{
 		"id":20124,
@@ -5901,7 +6555,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20125":{
 		"id":20125,
@@ -5919,7 +6575,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20126":{
 		"id":20126,
@@ -5937,7 +6595,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20127":{
 		"id":20127,
@@ -5955,7 +6615,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20128":{
 		"id":20128,
@@ -5973,7 +6635,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20129":{
 		"id":20129,
@@ -5991,7 +6655,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20130":{
 		"id":20130,
@@ -6009,7 +6675,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20131":{
 		"id":20131,
@@ -6027,7 +6695,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20132":{
 		"id":20132,
@@ -6045,7 +6715,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20133":{
 		"id":20133,
@@ -6063,7 +6735,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20134":{
 		"id":20134,
@@ -6081,7 +6755,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20135":{
 		"id":20135,
@@ -6099,7 +6775,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20136":{
 		"id":20136,
@@ -6117,7 +6795,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20137":{
 		"id":20137,
@@ -6135,7 +6815,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20138":{
 		"id":20138,
@@ -6153,7 +6835,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20139":{
 		"id":20139,
@@ -6171,7 +6855,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20140":{
 		"id":20140,
@@ -6189,7 +6875,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20141":{
 		"id":20141,
@@ -6207,7 +6895,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20142":{
 		"id":20142,
@@ -6225,7 +6915,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20143":{
 		"id":20143,
@@ -6243,7 +6935,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20144":{
 		"id":20144,
@@ -6261,7 +6955,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20145":{
 		"id":20145,
@@ -6279,7 +6975,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20146":{
 		"id":20146,
@@ -6297,7 +6995,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20147":{
 		"id":20147,
@@ -6315,7 +7015,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20148":{
 		"id":20148,
@@ -6333,7 +7035,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20149":{
 		"id":20149,
@@ -6351,7 +7055,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20150":{
 		"id":20150,
@@ -6369,7 +7075,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20151":{
 		"id":20151,
@@ -6387,7 +7095,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20152":{
 		"id":20152,
@@ -6405,7 +7115,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20153":{
 		"id":20153,
@@ -6423,7 +7135,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20154":{
 		"id":20154,
@@ -6441,7 +7155,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20155":{
 		"id":20155,
@@ -6459,7 +7175,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20156":{
 		"id":20156,
@@ -6477,7 +7195,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20157":{
 		"id":20157,
@@ -6495,7 +7215,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20158":{
 		"id":20158,
@@ -6513,7 +7235,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20159":{
 		"id":20159,
@@ -6531,7 +7255,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20160":{
 		"id":20160,
@@ -6549,7 +7275,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20161":{
 		"id":20161,
@@ -6567,7 +7295,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20162":{
 		"id":20162,
@@ -6585,7 +7315,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20163":{
 		"id":20163,
@@ -6603,7 +7335,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20164":{
 		"id":20164,
@@ -6621,7 +7355,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20165":{
 		"id":20165,
@@ -6639,7 +7375,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20166":{
 		"id":20166,
@@ -6657,7 +7395,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20167":{
 		"id":20167,
@@ -6675,7 +7415,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20168":{
 		"id":20168,
@@ -6693,7 +7435,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20169":{
 		"id":20169,
@@ -6711,7 +7455,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20170":{
 		"id":20170,
@@ -6729,7 +7475,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20171":{
 		"id":20171,
@@ -6747,7 +7495,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20172":{
 		"id":20172,
@@ -6765,7 +7515,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20173":{
 		"id":20173,
@@ -6783,7 +7535,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20174":{
 		"id":20174,
@@ -6801,7 +7555,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20175":{
 		"id":20175,
@@ -6819,7 +7575,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20176":{
 		"id":20176,
@@ -6837,7 +7595,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20177":{
 		"id":20177,
@@ -6855,7 +7615,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20178":{
 		"id":20178,
@@ -6873,7 +7635,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20179":{
 		"id":20179,
@@ -6891,7 +7655,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20180":{
 		"id":20180,
@@ -6909,7 +7675,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20181":{
 		"id":20181,
@@ -6927,7 +7695,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20182":{
 		"id":20182,
@@ -6945,7 +7715,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20183":{
 		"id":20183,
@@ -6963,7 +7735,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20184":{
 		"id":20184,
@@ -6981,7 +7755,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20185":{
 		"id":20185,
@@ -6999,7 +7775,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20186":{
 		"id":20186,
@@ -7017,7 +7795,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20187":{
 		"id":20187,
@@ -7035,7 +7815,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20188":{
 		"id":20188,
@@ -7053,7 +7835,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20189":{
 		"id":20189,
@@ -7071,7 +7855,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20190":{
 		"id":20190,
@@ -7089,7 +7875,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20191":{
 		"id":20191,
@@ -7107,7 +7895,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20192":{
 		"id":20192,
@@ -7125,7 +7915,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20193":{
 		"id":20193,
@@ -7143,7 +7935,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20194":{
 		"id":20194,
@@ -7161,7 +7955,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20195":{
 		"id":20195,
@@ -7179,7 +7975,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20196":{
 		"id":20196,
@@ -7197,7 +7995,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20197":{
 		"id":20197,
@@ -7215,7 +8015,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20198":{
 		"id":20198,
@@ -7233,7 +8035,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20199":{
 		"id":20199,
@@ -7251,7 +8055,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"20200":{
 		"id":20200,
@@ -7269,7 +8075,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30000":{
 		"id":30000,
@@ -7287,7 +8095,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30001":{
 		"id":30001,
@@ -7305,7 +8115,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30002":{
 		"id":30002,
@@ -7323,14 +8135,16 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30003":{
 		"id":30003,
 		"name":"烈焰龙王",
 		"name_photo":0,
 		"magnify_ratio":1.2,
-		"move":0,
+		"move":1,
 		"type":3,
 		"resId":2218,
 		"lv":40,
@@ -7341,7 +8155,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30004":{
 		"id":30004,
@@ -7359,7 +8175,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30005":{
 		"id":30005,
@@ -7377,7 +8195,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30006":{
 		"id":30006,
@@ -7395,7 +8215,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30007":{
 		"id":30007,
@@ -7413,7 +8235,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30008":{
 		"id":30008,
@@ -7431,7 +8255,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30009":{
 		"id":30009,
@@ -7449,7 +8275,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30010":{
 		"id":30010,
@@ -7467,7 +8295,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30011":{
 		"id":30011,
@@ -7485,7 +8315,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30012":{
 		"id":30012,
@@ -7503,7 +8335,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30013":{
 		"id":30013,
@@ -7516,12 +8350,14 @@
 		"lv":140,
 		"hp":2851002,
 		"mp":100,
-		"hookSkill":[50000],
+		"hookSkill":[50001],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30014":{
 		"id":30014,
@@ -7539,25 +8375,29 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30015":{
 		"id":30015,
 		"name":"赤月魔兽",
 		"name_photo":0,
 		"magnify_ratio":0.8,
-		"move":0,
+		"move":1,
 		"type":3,
 		"resId":2204,
 		"lv":160,
 		"hp":4370018,
 		"mp":100,
-		"hookSkill":[50000],
+		"hookSkill":[50001],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30016":{
 		"id":30016,
@@ -7575,7 +8415,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30017":{
 		"id":30017,
@@ -7593,7 +8435,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30100":{
 		"id":30100,
@@ -7603,15 +8447,17 @@
 		"move":0,
 		"type":1,
 		"resId":2117,
-		"lv":30,
-		"hp":6463,
+		"lv":10,
+		"hp":1654,
 		"mp":100,
 		"hookSkill":[50000],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"30101":{
 		"id":30101,
@@ -7621,15 +8467,17 @@
 		"move":0,
 		"type":2,
 		"resId":2219,
-		"lv":30,
-		"hp":49548,
+		"lv":10,
+		"hp":12681,
 		"mp":100,
 		"hookSkill":[50000],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"30102":{
 		"id":30102,
@@ -7639,15 +8487,17 @@
 		"move":0,
 		"type":1,
 		"resId":2112,
-		"lv":30,
-		"hp":6463,
+		"lv":15,
+		"hp":2594,
 		"mp":100,
 		"hookSkill":[50000],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"30103":{
 		"id":30103,
@@ -7657,15 +8507,17 @@
 		"move":0,
 		"type":2,
 		"resId":2220,
-		"lv":30,
-		"hp":49548,
+		"lv":15,
+		"hp":19887,
 		"mp":100,
 		"hookSkill":[50000],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"30104":{
 		"id":30104,
@@ -7675,15 +8527,17 @@
 		"move":0,
 		"type":1,
 		"resId":2114,
-		"lv":30,
-		"hp":6463,
+		"lv":20,
+		"hp":3708,
 		"mp":100,
 		"hookSkill":[50000],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"30105":{
 		"id":30105,
@@ -7693,15 +8547,17 @@
 		"move":0,
 		"type":2,
 		"resId":2216,
-		"lv":30,
-		"hp":49548,
+		"lv":20,
+		"hp":28432,
 		"mp":100,
 		"hookSkill":[50000],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"30106":{
 		"id":30106,
@@ -7719,7 +8575,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"30107":{
 		"id":30107,
@@ -7737,7 +8595,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"30200":{
 		"id":30200,
@@ -7755,7 +8615,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30201":{
 		"id":30201,
@@ -7773,7 +8635,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30202":{
 		"id":30202,
@@ -7791,7 +8655,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30203":{
 		"id":30203,
@@ -7809,7 +8675,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30204":{
 		"id":30204,
@@ -7827,7 +8695,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30205":{
 		"id":30205,
@@ -7845,7 +8715,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30206":{
 		"id":30206,
@@ -7863,7 +8735,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30207":{
 		"id":30207,
@@ -7881,7 +8755,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30208":{
 		"id":30208,
@@ -7899,7 +8775,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30209":{
 		"id":30209,
@@ -7917,7 +8795,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30210":{
 		"id":30210,
@@ -7935,7 +8815,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30211":{
 		"id":30211,
@@ -7953,7 +8835,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30212":{
 		"id":30212,
@@ -7971,7 +8855,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30213":{
 		"id":30213,
@@ -7989,7 +8875,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30214":{
 		"id":30214,
@@ -8007,7 +8895,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30215":{
 		"id":30215,
@@ -8025,7 +8915,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30216":{
 		"id":30216,
@@ -8043,7 +8935,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30217":{
 		"id":30217,
@@ -8061,7 +8955,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30218":{
 		"id":30218,
@@ -8079,7 +8975,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30219":{
 		"id":30219,
@@ -8097,7 +8995,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30220":{
 		"id":30220,
@@ -8115,7 +9015,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30221":{
 		"id":30221,
@@ -8133,7 +9035,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30222":{
 		"id":30222,
@@ -8151,7 +9055,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30223":{
 		"id":30223,
@@ -8169,7 +9075,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30224":{
 		"id":30224,
@@ -8187,7 +9095,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30225":{
 		"id":30225,
@@ -8205,7 +9115,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30226":{
 		"id":30226,
@@ -8223,7 +9135,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30227":{
 		"id":30227,
@@ -8241,7 +9155,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30228":{
 		"id":30228,
@@ -8259,7 +9175,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30229":{
 		"id":30229,
@@ -8277,7 +9195,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30230":{
 		"id":30230,
@@ -8295,7 +9215,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30231":{
 		"id":30231,
@@ -8313,7 +9235,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30232":{
 		"id":30232,
@@ -8331,7 +9255,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30233":{
 		"id":30233,
@@ -8349,7 +9275,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30234":{
 		"id":30234,
@@ -8367,7 +9295,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30235":{
 		"id":30235,
@@ -8385,7 +9315,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30236":{
 		"id":30236,
@@ -8403,7 +9335,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30237":{
 		"id":30237,
@@ -8421,7 +9355,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30238":{
 		"id":30238,
@@ -8439,7 +9375,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30239":{
 		"id":30239,
@@ -8457,7 +9395,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30240":{
 		"id":30240,
@@ -8475,7 +9415,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30241":{
 		"id":30241,
@@ -8493,7 +9435,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30242":{
 		"id":30242,
@@ -8511,7 +9455,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30243":{
 		"id":30243,
@@ -8529,7 +9475,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30244":{
 		"id":30244,
@@ -8547,7 +9495,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30245":{
 		"id":30245,
@@ -8565,7 +9515,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30246":{
 		"id":30246,
@@ -8583,7 +9535,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30247":{
 		"id":30247,
@@ -8601,7 +9555,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30248":{
 		"id":30248,
@@ -8619,7 +9575,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"30249":{
 		"id":30249,
@@ -8637,7 +9595,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"31000":{
 		"id":31000,
@@ -8648,14 +9608,16 @@
 		"type":3,
 		"resId":2208,
 		"lv":10,
-		"hp":22744,
+		"hp":12681,
 		"mp":100,
 		"hookSkill":[50000],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"31001":{
 		"id":31001,
@@ -8666,14 +9628,16 @@
 		"type":3,
 		"resId":2207,
 		"lv":20,
-		"hp":50992,
+		"hp":28432,
 		"mp":100,
 		"hookSkill":[50000],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"31002":{
 		"id":31002,
@@ -8684,32 +9648,36 @@
 		"type":3,
 		"resId":2203,
 		"lv":30,
-		"hp":88862,
+		"hp":49548,
 		"mp":100,
 		"hookSkill":[50000],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"31003":{
 		"id":31003,
 		"name":"烈焰龙王",
 		"name_photo":0,
 		"magnify_ratio":1,
-		"move":0,
+		"move":1,
 		"type":3,
 		"resId":2218,
 		"lv":40,
-		"hp":204514,
+		"hp":114032,
 		"mp":100,
 		"hookSkill":[50000],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"31004":{
 		"id":31004,
@@ -8720,14 +9688,16 @@
 		"type":3,
 		"resId":2210,
 		"lv":50,
-		"hp":290189,
+		"hp":161802,
 		"mp":100,
 		"hookSkill":[50000],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"31005":{
 		"id":31005,
@@ -8738,14 +9708,16 @@
 		"type":3,
 		"resId":2216,
 		"lv":60,
-		"hp":390278,
+		"hp":217609,
 		"mp":100,
 		"hookSkill":[50000],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"31006":{
 		"id":31006,
@@ -8756,14 +9728,16 @@
 		"type":3,
 		"resId":2213,
 		"lv":70,
-		"hp":504801,
+		"hp":281465,
 		"mp":100,
 		"hookSkill":[50000],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"31007":{
 		"id":31007,
@@ -8774,14 +9748,16 @@
 		"type":3,
 		"resId":2217,
 		"lv":80,
-		"hp":845011,
+		"hp":471158,
 		"mp":100,
 		"hookSkill":[50000],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"31008":{
 		"id":31008,
@@ -8792,14 +9768,16 @@
 		"type":3,
 		"resId":2206,
 		"lv":90,
-		"hp":1036200,
+		"hp":577760,
 		"mp":100,
 		"hookSkill":[50000],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"31009":{
 		"id":31009,
@@ -8810,14 +9788,16 @@
 		"type":3,
 		"resId":2214,
 		"lv":100,
-		"hp":1246634,
+		"hp":695093,
 		"mp":100,
 		"hookSkill":[50000],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"31010":{
 		"id":31010,
@@ -8828,14 +9808,16 @@
 		"type":3,
 		"resId":2219,
 		"lv":110,
-		"hp":1476314,
+		"hp":823157,
 		"mp":100,
 		"hookSkill":[50000],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"31011":{
 		"id":31011,
@@ -8846,14 +9828,16 @@
 		"type":3,
 		"resId":2220,
 		"lv":120,
-		"hp":2156550,
+		"hp":1202440,
 		"mp":100,
 		"hookSkill":[50000],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"31012":{
 		"id":31012,
@@ -8864,14 +9848,16 @@
 		"type":3,
 		"resId":2212,
 		"lv":130,
-		"hp":2491731,
+		"hp":1389329,
 		"mp":100,
 		"hookSkill":[50000],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"31013":{
 		"id":31013,
@@ -8882,14 +9868,16 @@
 		"type":3,
 		"resId":2205,
 		"lv":140,
-		"hp":2851002,
+		"hp":1589650,
 		"mp":100,
 		"hookSkill":[50001],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"31014":{
 		"id":31014,
@@ -8900,32 +9888,36 @@
 		"type":3,
 		"resId":2211,
 		"lv":150,
-		"hp":3234297,
+		"hp":1803366,
 		"mp":100,
 		"hookSkill":[50000],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"31015":{
 		"id":31015,
 		"name":"赤月魔兽",
 		"name_photo":0,
 		"magnify_ratio":1,
-		"move":0,
+		"move":1,
 		"type":3,
 		"resId":2204,
 		"lv":160,
-		"hp":4370018,
+		"hp":2436616,
 		"mp":100,
-		"hookSkill":[50000],
+		"hookSkill":[50001],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"31016":{
 		"id":31016,
@@ -8936,14 +9928,16 @@
 		"type":3,
 		"resId":2202,
 		"lv":170,
-		"hp":4887709,
+		"hp":2725268,
 		"mp":100,
 		"hookSkill":[50000],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"31017":{
 		"id":31017,
@@ -8954,14 +9948,16 @@
 		"type":3,
 		"resId":2221,
 		"lv":180,
-		"hp":5434268,
+		"hp":3030016,
 		"mp":100,
 		"hookSkill":[50000],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"31018":{
 		"id":31018,
@@ -8972,14 +9968,16 @@
 		"type":3,
 		"resId":2221,
 		"lv":190,
-		"hp":7011312,
+		"hp":3909338,
 		"mp":100,
 		"hookSkill":[50000],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"50001":{
 		"id":50001,
@@ -8997,7 +9995,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50002":{
 		"id":50002,
@@ -9015,7 +10015,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50003":{
 		"id":50003,
@@ -9033,7 +10035,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50004":{
 		"id":50004,
@@ -9051,7 +10055,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50005":{
 		"id":50005,
@@ -9069,7 +10075,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50006":{
 		"id":50006,
@@ -9087,7 +10095,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50007":{
 		"id":50007,
@@ -9105,7 +10115,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50008":{
 		"id":50008,
@@ -9123,7 +10135,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50009":{
 		"id":50009,
@@ -9141,7 +10155,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50010":{
 		"id":50010,
@@ -9159,7 +10175,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50011":{
 		"id":50011,
@@ -9177,7 +10195,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50012":{
 		"id":50012,
@@ -9195,7 +10215,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50013":{
 		"id":50013,
@@ -9213,7 +10235,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50014":{
 		"id":50014,
@@ -9231,7 +10255,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50015":{
 		"id":50015,
@@ -9249,7 +10275,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50016":{
 		"id":50016,
@@ -9267,7 +10295,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50017":{
 		"id":50017,
@@ -9285,7 +10315,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50018":{
 		"id":50018,
@@ -9303,7 +10335,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50019":{
 		"id":50019,
@@ -9321,7 +10355,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50020":{
 		"id":50020,
@@ -9339,7 +10375,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50021":{
 		"id":50021,
@@ -9357,7 +10395,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50022":{
 		"id":50022,
@@ -9375,7 +10415,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50023":{
 		"id":50023,
@@ -9393,7 +10435,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50024":{
 		"id":50024,
@@ -9411,7 +10455,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50025":{
 		"id":50025,
@@ -9429,7 +10475,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50026":{
 		"id":50026,
@@ -9447,7 +10495,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50027":{
 		"id":50027,
@@ -9465,7 +10515,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50028":{
 		"id":50028,
@@ -9483,7 +10535,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50029":{
 		"id":50029,
@@ -9501,7 +10555,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50030":{
 		"id":50030,
@@ -9519,7 +10575,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50031":{
 		"id":50031,
@@ -9537,7 +10595,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50032":{
 		"id":50032,
@@ -9555,7 +10615,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50033":{
 		"id":50033,
@@ -9573,7 +10635,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50034":{
 		"id":50034,
@@ -9591,7 +10655,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50035":{
 		"id":50035,
@@ -9609,7 +10675,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50036":{
 		"id":50036,
@@ -9627,7 +10695,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50037":{
 		"id":50037,
@@ -9645,7 +10715,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50038":{
 		"id":50038,
@@ -9663,7 +10735,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50039":{
 		"id":50039,
@@ -9681,7 +10755,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50040":{
 		"id":50040,
@@ -9699,7 +10775,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50041":{
 		"id":50041,
@@ -9717,7 +10795,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50042":{
 		"id":50042,
@@ -9735,7 +10815,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50043":{
 		"id":50043,
@@ -9753,7 +10835,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50044":{
 		"id":50044,
@@ -9771,7 +10855,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50045":{
 		"id":50045,
@@ -9789,7 +10875,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50046":{
 		"id":50046,
@@ -9807,7 +10895,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50047":{
 		"id":50047,
@@ -9825,7 +10915,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50048":{
 		"id":50048,
@@ -9843,7 +10935,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50049":{
 		"id":50049,
@@ -9861,7 +10955,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50050":{
 		"id":50050,
@@ -9879,7 +10975,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50051":{
 		"id":50051,
@@ -9897,7 +10995,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50052":{
 		"id":50052,
@@ -9915,7 +11015,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50053":{
 		"id":50053,
@@ -9933,7 +11035,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50054":{
 		"id":50054,
@@ -9951,7 +11055,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50055":{
 		"id":50055,
@@ -9969,7 +11075,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50056":{
 		"id":50056,
@@ -9987,7 +11095,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50057":{
 		"id":50057,
@@ -10005,7 +11115,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50058":{
 		"id":50058,
@@ -10023,7 +11135,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50059":{
 		"id":50059,
@@ -10041,7 +11155,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50060":{
 		"id":50060,
@@ -10059,7 +11175,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50061":{
 		"id":50061,
@@ -10077,7 +11195,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50062":{
 		"id":50062,
@@ -10095,7 +11215,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50063":{
 		"id":50063,
@@ -10113,7 +11235,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50064":{
 		"id":50064,
@@ -10131,7 +11255,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50065":{
 		"id":50065,
@@ -10149,7 +11275,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50066":{
 		"id":50066,
@@ -10167,7 +11295,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50067":{
 		"id":50067,
@@ -10185,7 +11315,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50068":{
 		"id":50068,
@@ -10203,7 +11335,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50069":{
 		"id":50069,
@@ -10221,7 +11355,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50070":{
 		"id":50070,
@@ -10239,7 +11375,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50071":{
 		"id":50071,
@@ -10257,7 +11395,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50072":{
 		"id":50072,
@@ -10275,7 +11415,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50073":{
 		"id":50073,
@@ -10293,7 +11435,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50074":{
 		"id":50074,
@@ -10311,7 +11455,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50075":{
 		"id":50075,
@@ -10329,7 +11475,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50076":{
 		"id":50076,
@@ -10347,7 +11495,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50077":{
 		"id":50077,
@@ -10365,7 +11515,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50078":{
 		"id":50078,
@@ -10383,7 +11535,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50079":{
 		"id":50079,
@@ -10401,7 +11555,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50080":{
 		"id":50080,
@@ -10419,7 +11575,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50081":{
 		"id":50081,
@@ -10437,7 +11595,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50082":{
 		"id":50082,
@@ -10455,7 +11615,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50083":{
 		"id":50083,
@@ -10473,7 +11635,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50084":{
 		"id":50084,
@@ -10491,7 +11655,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50085":{
 		"id":50085,
@@ -10509,7 +11675,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50086":{
 		"id":50086,
@@ -10527,7 +11695,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50087":{
 		"id":50087,
@@ -10545,7 +11715,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50088":{
 		"id":50088,
@@ -10563,7 +11735,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50089":{
 		"id":50089,
@@ -10581,7 +11755,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50090":{
 		"id":50090,
@@ -10599,7 +11775,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50091":{
 		"id":50091,
@@ -10617,7 +11795,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50092":{
 		"id":50092,
@@ -10635,7 +11815,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50093":{
 		"id":50093,
@@ -10653,7 +11835,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50094":{
 		"id":50094,
@@ -10671,7 +11855,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50095":{
 		"id":50095,
@@ -10689,7 +11875,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50096":{
 		"id":50096,
@@ -10707,7 +11895,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50097":{
 		"id":50097,
@@ -10725,7 +11915,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50098":{
 		"id":50098,
@@ -10743,7 +11935,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50099":{
 		"id":50099,
@@ -10761,7 +11955,9 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50100":{
 		"id":50100,
@@ -10779,330 +11975,368 @@
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":0,
+		"immune_kjhh":0
 	},
 	"50201":{
 		"id":50201,
-		"name":"全民BOSS1",
+		"name":"多臂巨人",
 		"name_photo":0,
 		"magnify_ratio":1.3,
 		"move":0,
 		"type":4,
 		"resId":2208,
-		"lv":8,
-		"hp":18256,
+		"lv":5,
+		"hp":648900,
 		"mp":100,
 		"hookSkill":[50000],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"50202":{
 		"id":50202,
-		"name":"全民BOSS2",
+		"name":"野猪领主",
 		"name_photo":0,
 		"magnify_ratio":1.3,
 		"move":0,
 		"type":4,
-		"resId":2217,
-		"lv":20,
-		"hp":50992,
+		"resId":2207,
+		"lv":15,
+		"hp":1891400,
 		"mp":100,
 		"hookSkill":[50000],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"50203":{
 		"id":50203,
-		"name":"全民BOSS3",
-		"name_photo":0,
-		"magnify_ratio":1.3,
-		"move":0,
-		"type":4,
-		"resId":2217,
-		"lv":32,
-		"hp":146381,
-		"mp":100,
-		"hookSkill":[50000],
-		"attack_type":1,
-		"findsound_id":0,
-		"atksound_id":0,
-		"gethitsound_id":0,
-		"deathsound_id":0
-	},
-	"50204":{
-		"id":50204,
-		"name":"全民BOSS4",
+		"name":"铁甲战牛",
 		"name_photo":0,
 		"magnify_ratio":1.3,
 		"move":0,
 		"type":4,
 		"resId":2203,
-		"lv":44,
-		"hp":237046,
+		"lv":25,
+		"hp":3644200,
 		"mp":100,
 		"hookSkill":[50000],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
+	},
+	"50204":{
+		"id":50204,
+		"name":"烈焰龙王",
+		"name_photo":0,
+		"magnify_ratio":1.3,
+		"move":1,
+		"type":4,
+		"resId":2218,
+		"lv":35,
+		"hp":8860950,
+		"mp":100,
+		"hookSkill":[50001],
+		"attack_type":1,
+		"findsound_id":0,
+		"atksound_id":0,
+		"gethitsound_id":0,
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"50205":{
 		"id":50205,
-		"name":"全民BOSS5",
+		"name":"飞翼恶魔",
 		"name_photo":0,
 		"magnify_ratio":1.3,
 		"move":0,
 		"type":4,
-		"resId":2221,
-		"lv":56,
-		"hp":348500,
+		"resId":2210,
+		"lv":45,
+		"hp":13021050,
 		"mp":100,
 		"hookSkill":[50000],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"50206":{
 		"id":50206,
-		"name":"全民BOSS6",
-		"name_photo":0,
-		"magnify_ratio":1.3,
-		"move":0,
-		"type":4,
-		"resId":2210,
-		"lv":68,
-		"hp":480744,
-		"mp":100,
-		"hookSkill":[50000],
-		"attack_type":1,
-		"findsound_id":0,
-		"atksound_id":0,
-		"gethitsound_id":0,
-		"deathsound_id":0
-	},
-	"50207":{
-		"id":50207,
-		"name":"全民BOSS7",
-		"name_photo":0,
-		"magnify_ratio":1.3,
-		"move":0,
-		"type":4,
-		"resId":2210,
-		"lv":80,
-		"hp":845011,
-		"mp":100,
-		"hookSkill":[50000],
-		"attack_type":1,
-		"findsound_id":0,
-		"atksound_id":0,
-		"gethitsound_id":0,
-		"deathsound_id":0
-	},
-	"50208":{
-		"id":50208,
-		"name":"全民BOSS8",
+		"name":"赤炎魔兽",
 		"name_photo":0,
 		"magnify_ratio":1.3,
 		"move":0,
 		"type":4,
 		"resId":2216,
-		"lv":92,
-		"hp":1076750,
+		"lv":55,
+		"hp":17946600,
 		"mp":100,
 		"hookSkill":[50000],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
-	"50209":{
-		"id":50209,
-		"name":"全民BOSS9",
+	"50207":{
+		"id":50207,
+		"name":"恶魔领主",
 		"name_photo":0,
 		"magnify_ratio":1.3,
 		"move":0,
 		"type":4,
 		"resId":2213,
-		"lv":104,
-		"hp":1336210,
+		"lv":65,
+		"hp":23637600,
 		"mp":100,
 		"hookSkill":[50000],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
-	"50210":{
-		"id":50210,
-		"name":"全民BOSS10",
+	"50208":{
+		"id":50208,
+		"name":"飞翼战狼",
 		"name_photo":0,
 		"magnify_ratio":1.3,
 		"move":0,
 		"type":4,
-		"resId":2207,
-		"lv":116,
-		"hp":2029203,
+		"resId":2217,
+		"lv":75,
+		"hp":40124000,
 		"mp":100,
 		"hookSkill":[50000],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
-	"50211":{
-		"id":50211,
-		"name":"全民BOSS11",
-		"name_photo":0,
-		"magnify_ratio":1.3,
-		"move":0,
-		"type":4,
-		"resId":2207,
-		"lv":128,
-		"hp":2422761,
-		"mp":100,
-		"hookSkill":[50000],
-		"attack_type":1,
-		"findsound_id":0,
-		"atksound_id":0,
-		"gethitsound_id":0,
-		"deathsound_id":0
-	},
-	"50212":{
-		"id":50212,
-		"name":"全民BOSS12",
+	"50209":{
+		"id":50209,
+		"name":"炼狱守卫",
 		"name_photo":0,
 		"magnify_ratio":1.3,
 		"move":0,
 		"type":4,
 		"resId":2206,
-		"lv":136,
-		"hp":2704416,
+		"lv":90,
+		"hp":54950000,
 		"mp":100,
 		"hookSkill":[50000],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
+	},
+	"50210":{
+		"id":50210,
+		"name":"剧毒魔兽",
+		"name_photo":0,
+		"magnify_ratio":1.3,
+		"move":0,
+		"type":4,
+		"resId":2214,
+		"lv":100,
+		"hp":66109400,
+		"mp":100,
+		"hookSkill":[50000],
+		"attack_type":1,
+		"findsound_id":0,
+		"atksound_id":0,
+		"gethitsound_id":0,
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
+	},
+	"50211":{
+		"id":50211,
+		"name":"狮鹫兽",
+		"name_photo":0,
+		"magnify_ratio":1.3,
+		"move":0,
+		"type":4,
+		"resId":2219,
+		"lv":110,
+		"hp":78289400,
+		"mp":100,
+		"hookSkill":[50000],
+		"attack_type":1,
+		"findsound_id":0,
+		"atksound_id":0,
+		"gethitsound_id":0,
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
+	},
+	"50212":{
+		"id":50212,
+		"name":"牛族统领",
+		"name_photo":0,
+		"magnify_ratio":1.3,
+		"move":0,
+		"type":4,
+		"resId":2220,
+		"lv":120,
+		"hp":114362500,
+		"mp":100,
+		"hookSkill":[50000],
+		"attack_type":1,
+		"findsound_id":0,
+		"atksound_id":0,
+		"gethitsound_id":0,
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"50213":{
 		"id":50213,
-		"name":"全民BOSS13",
+		"name":"赤炎龙王",
 		"name_photo":0,
 		"magnify_ratio":1.3,
 		"move":0,
 		"type":4,
-		"resId":2220,
-		"lv":152,
-		"hp":3976632,
+		"resId":2212,
+		"lv":130,
+		"hp":132137250,
 		"mp":100,
 		"hookSkill":[50000],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"50214":{
 		"id":50214,
-		"name":"全民BOSS14",
+		"name":"触龙领主",
 		"name_photo":0,
 		"magnify_ratio":1.3,
-		"move":0,
+		"move":1,
 		"type":4,
-		"resId":2220,
-		"lv":160,
-		"hp":4370018,
+		"resId":2205,
+		"lv":140,
+		"hp":151189500,
 		"mp":100,
-		"hookSkill":[50000],
+		"hookSkill":[50001],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"50215":{
 		"id":50215,
-		"name":"全民BOSS15",
+		"name":"蜘蛛女王",
 		"name_photo":0,
 		"magnify_ratio":1.3,
 		"move":0,
 		"type":4,
-		"resId":2202,
-		"lv":168,
-		"hp":4781858,
+		"resId":2211,
+		"lv":150,
+		"hp":171515750,
 		"mp":100,
 		"hookSkill":[50000],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"50216":{
 		"id":50216,
-		"name":"全民BOSS16",
+		"name":"赤月魔兽",
+		"name_photo":0,
+		"magnify_ratio":1.3,
+		"move":1,
+		"type":4,
+		"resId":2204,
+		"lv":160,
+		"hp":231743400,
+		"mp":100,
+		"hookSkill":[50001],
+		"attack_type":1,
+		"findsound_id":0,
+		"atksound_id":0,
+		"gethitsound_id":0,
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
+	},
+	"50217":{
+		"id":50217,
+		"name":"地牢猎手",
 		"name_photo":0,
 		"magnify_ratio":1.3,
 		"move":0,
 		"type":4,
 		"resId":2202,
-		"lv":176,
-		"hp":5212192,
+		"lv":170,
+		"hp":259196700,
 		"mp":100,
 		"hookSkill":[50000],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
-	},
-	"50217":{
-		"id":50217,
-		"name":"全民BOSS17",
-		"name_photo":0,
-		"magnify_ratio":1.3,
-		"move":0,
-		"type":4,
-		"resId":2211,
-		"lv":184,
-		"hp":6604475,
-		"mp":100,
-		"hookSkill":[50000],
-		"attack_type":1,
-		"findsound_id":0,
-		"atksound_id":0,
-		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	},
 	"50218":{
 		"id":50218,
-		"name":"全民BOSS18",
+		"name":"三界魔王",
 		"name_photo":0,
 		"magnify_ratio":1.3,
 		"move":0,
 		"type":4,
-		"resId":2211,
-		"lv":192,
-		"hp":7149635,
+		"resId":2221,
+		"lv":180,
+		"hp":288180900,
 		"mp":100,
 		"hookSkill":[50000],
 		"attack_type":1,
 		"findsound_id":0,
 		"atksound_id":0,
 		"gethitsound_id":0,
-		"deathsound_id":0
+		"deathsound_id":0,
+		"immune_cz":1,
+		"immune_kjhh":1
 	}
 }

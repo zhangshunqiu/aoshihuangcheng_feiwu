@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MustDoTitleItemSkin" width="640" height="150" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="sign_bg_list_png" x="-14" y="1" width="650" height="150"/>
+	<e:Label id="lb_condition" text="累积1000点活跃可激活" y="70" fontFamily="SimHei" size="20" x="425" scaleX="1" scaleY="1" textColor="0xf20000"/>
+	<e:Group id="gp_show" x="540" y="47" visible="true">
+		<e:Label text="显示称号" y="47" fontFamily="SimHei" size="20" x="0" scaleX="1" scaleY="1" textColor="0xFFA200"/>
+		<e:CheckBox id="cbx_show" label="" x="17" y="0"/>
+	</e:Group>
+	<e:Group id="gp_use" x="434" y="48" visible="true">
+		<e:Label text="使用属性" y="46" fontFamily="SimHei" size="20" x="0" scaleX="1" scaleY="1" textColor="0xffa200"/>
+		<e:CheckBox id="cbx_use" label="" x="19" y="0"/>
+	</e:Group>
+	<e:Image id="img_icon" source="title_chenghao4_png" x="21" y="15"/>
+	<e:Image id="img_alive" source="title_yijihuo_png" x="-13" y="34"/>
+	<e:Image id="img_notactive" source="title_weijihuo_png" x="-15" y="35"/>
+</e:Skin>

@@ -19,18 +19,14 @@ module game {
 		private _itemArray: Array<customui.BaseItem> = [];
 		private raiderModel: RaiderModel = RaiderModel.getInstance();
 		public constructor(data) {
-			super();
+			super(data);
 			this.skinName = "RaiderRewardSkin";
-			this._data = data;
+			// this._data = data;
 		}
 
 		protected childrenCreated() {
 			super.childrenCreated();
-			this.initView();
-		}
-
-		private initView() {
-			// this.commonWin.img_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.closeRaider, this);
+			// this.initView();
 			this.btn_store.addEventListener(egret.TouchEvent.TOUCH_TAP, this.closeRaider, this);
 			this.img_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.closeRaider, this);
 			this.btn_buy.addEventListener(egret.TouchEvent.TOUCH_TAP, this.buyRaider, this);
@@ -61,24 +57,24 @@ module game {
 					this.img_btn_time.source = texture;
 				}, this);
 			}
+		}
 
-
+		private initView() {
+			// this.commonWin.img_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.closeRaider, this);
+			this.gp_reward.removeChildren();
 			for (let key in this._data) {
 				let info = this._data[key];
 
 				let item = new customui.BaseItem();
 				item.updateBaseItem(info.good_type, info.good_id, info.num);
-				item.lb_name.visible = true;
-				if (info.good_type == ClientType.EQUIP) {
-					let equipInfo = App.ConfigManager.equipConfig()[info.good_id];
-					item.lb_name.text = "LV:" + equipInfo.limit_lvl;
-				}
+				item.setItemNameVisible(true);
 				this.gp_reward.addChild(item);
 			}
 		}
 
 		private closeRaider() {
-			PopUpManager.removePopUp(this);
+			// PopUpManager.removePopUp(this);
+			App.WinManager.closeWin(WinName.POP_RAIDER_REWARD);
 		}
 
 		private buyRaider() {
@@ -95,6 +91,8 @@ module game {
 		 */
 		public openWin(openParam: any = null): void {
 			super.openWin(openParam);
+			this._data = openParam.data;
+			this.initView();
 		}
 
 		/**

@@ -5,12 +5,13 @@
 		"map_id":20021,
 		"lv_limit":1,
 		"power_limit":0,
-		"monster_list":[[1,[[51,47],[50,48]],20001,1]],
+		"monster_list":[[1,[[57,53],[58,54]],20001,1]],
 		"viplv_limit":0,
-		"birth":[[58,46],[57,47]],
+		"birth":[[58,49],[59,50]],
 		"drop":[],
 		"copy_id":20002,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":0
 	},
 	"40002":{
 		"scene_id":40002,
@@ -18,12 +19,13 @@
 		"map_id":20021,
 		"lv_limit":2,
 		"power_limit":0,
-		"monster_list":[[1,[[37,44],[36,45]],20002,1]],
+		"monster_list":[[1,[[45,48],[44,47]],20002,1]],
 		"viplv_limit":0,
-		"birth":[[44,46],[43,47]],
+		"birth":[[49,51],[48,50]],
 		"drop":[],
 		"copy_id":20003,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":0
 	},
 	"40003":{
 		"scene_id":40003,
@@ -31,12 +33,13 @@
 		"map_id":20021,
 		"lv_limit":3,
 		"power_limit":0,
-		"monster_list":[[1,[[15,33],[14,34]],20003,1]],
+		"monster_list":[[1,[[34,44],[33,43]],20003,1]],
 		"viplv_limit":0,
-		"birth":[[23,37],[22,38]],
+		"birth":[[38,46],[39,45]],
 		"drop":[],
 		"copy_id":20004,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":0
 	},
 	"40004":{
 		"scene_id":40004,
@@ -44,12 +47,13 @@
 		"map_id":20021,
 		"lv_limit":4,
 		"power_limit":0,
-		"monster_list":[[1,[[20,11],[19,10]],20004,1]],
+		"monster_list":[[1,[[25,37],[26,36]],20004,1]],
 		"viplv_limit":0,
-		"birth":[[14,13],[15,14]],
+		"birth":[[27,39],[28,38]],
 		"drop":[],
 		"copy_id":20005,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":0
 	},
 	"40005":{
 		"scene_id":40005,
@@ -57,12 +61,13 @@
 		"map_id":20021,
 		"lv_limit":5,
 		"power_limit":0,
-		"monster_list":[[1,[[49,14],[48,13]],20005,1]],
+		"monster_list":[[1,[[12,33],[13,32]],20005,1]],
 		"viplv_limit":0,
-		"birth":[[41,13],[42,14]],
+		"birth":[[17,36],[16,35]],
 		"drop":[],
 		"copy_id":20006,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":0
 	},
 	"40006":{
 		"scene_id":40006,
@@ -70,1026 +75,1105 @@
 		"map_id":20021,
 		"lv_limit":6,
 		"power_limit":0,
-		"monster_list":[[1,[[69,11],[70,12]],20006,1]],
+		"monster_list":[[1,[[19,12],[18,11]],20006,1]],
 		"viplv_limit":0,
-		"birth":[[62,12],[63,13]],
+		"birth":[[15,14],[14,13]],
 		"drop":[],
 		"copy_id":20007,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":0
 	},
 	"40007":{
 		"scene_id":40007,
 		"name":"7级挑战场景",
-		"map_id":40001,
+		"map_id":20021,
 		"lv_limit":7,
 		"power_limit":0,
-		"monster_list":[[1,[[8,13],[9,14]],20007,1]],
+		"monster_list":[[1,[[36,11],[37,10]],20007,1]],
 		"viplv_limit":0,
-		"birth":[[4,18],[11,17]],
+		"birth":[[32,9],[33,10]],
 		"drop":[],
 		"copy_id":20008,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":0
 	},
 	"40008":{
 		"scene_id":40008,
 		"name":"8级挑战场景",
-		"map_id":40001,
+		"map_id":20021,
 		"lv_limit":8,
 		"power_limit":0,
-		"monster_list":[[1,[[8,13],[9,14]],20008,1]],
+		"monster_list":[[1,[[43,10],[44,9]],20008,1]],
 		"viplv_limit":0,
-		"birth":[[4,18],[11,17]],
+		"birth":[[41,11],[42,12]],
 		"drop":[],
 		"copy_id":20009,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":0
 	},
 	"40009":{
 		"scene_id":40009,
 		"name":"9级挑战场景",
-		"map_id":40001,
+		"map_id":20021,
 		"lv_limit":9,
 		"power_limit":0,
-		"monster_list":[[1,[[8,13],[9,14]],20009,1]],
+		"monster_list":[[1,[[51,11],[50,10]],20009,1]],
 		"viplv_limit":0,
-		"birth":[[4,18],[11,17]],
+		"birth":[[49,14],[48,13]],
 		"drop":[],
 		"copy_id":20010,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":0
 	},
 	"40010":{
 		"scene_id":40010,
 		"name":"10级挑战场景",
-		"map_id":40001,
+		"map_id":20021,
 		"lv_limit":10,
 		"power_limit":0,
-		"monster_list":[[1,[[8,13],[9,14]],20010,1]],
+		"monster_list":[[1,[[68,13],[69,12]],20010,1]],
 		"viplv_limit":0,
-		"birth":[[4,18],[11,17]],
+		"birth":[[65,13],[64,12]],
 		"drop":[],
 		"copy_id":20011,
-		"ten_reward":[[1,1000,1]]
+		"ten_reward":[],
+		"pickup":0
 	},
 	"40011":{
 		"scene_id":40011,
 		"name":"11级挑战场景",
-		"map_id":40001,
+		"map_id":20022,
 		"lv_limit":11,
 		"power_limit":0,
-		"monster_list":[[1,[[8,13],[9,14]],20011,1]],
+		"monster_list":[[1,[[62,39],[63,38]],20011,1]],
 		"viplv_limit":0,
-		"birth":[[4,18],[11,17]],
+		"birth":[[64,41],[65,40]],
 		"drop":[],
 		"copy_id":20012,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":0
 	},
 	"40012":{
 		"scene_id":40012,
 		"name":"12级挑战场景",
-		"map_id":40001,
+		"map_id":20022,
 		"lv_limit":12,
 		"power_limit":0,
-		"monster_list":[[1,[[8,13],[9,14]],20012,1]],
+		"monster_list":[[1,[[56,31],[57,30]],20012,1]],
 		"viplv_limit":0,
-		"birth":[[4,18],[11,17]],
+		"birth":[[56,35],[57,34]],
 		"drop":[],
 		"copy_id":20013,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":0
 	},
 	"40013":{
 		"scene_id":40013,
 		"name":"13级挑战场景",
-		"map_id":40001,
+		"map_id":20022,
 		"lv_limit":13,
 		"power_limit":0,
-		"monster_list":[[1,[[8,13],[9,14]],20013,1]],
+		"monster_list":[[1,[[43,34],[44,35]],20013,1]],
 		"viplv_limit":0,
-		"birth":[[4,18],[11,17]],
+		"birth":[[47,32],[46,31]],
 		"drop":[],
 		"copy_id":20014,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":0
 	},
 	"40014":{
 		"scene_id":40014,
 		"name":"14级挑战场景",
-		"map_id":40001,
+		"map_id":20022,
 		"lv_limit":14,
 		"power_limit":0,
-		"monster_list":[[1,[[8,13],[9,14]],20014,1]],
+		"monster_list":[[1,[[42,18],[41,19]],20014,1]],
 		"viplv_limit":0,
-		"birth":[[4,18],[11,17]],
+		"birth":[[43,16],[42,15]],
 		"drop":[],
 		"copy_id":20015,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":0
 	},
 	"40015":{
 		"scene_id":40015,
 		"name":"15级挑战场景",
-		"map_id":40001,
+		"map_id":20022,
 		"lv_limit":15,
 		"power_limit":0,
-		"monster_list":[[1,[[8,13],[9,14]],20015,1]],
+		"monster_list":[[1,[[31,9],[30,10]],20015,1]],
 		"viplv_limit":0,
-		"birth":[[4,18],[11,17]],
+		"birth":[[35,10],[34,9]],
 		"drop":[],
 		"copy_id":20016,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":0
 	},
 	"40016":{
 		"scene_id":40016,
 		"name":"16级挑战场景",
-		"map_id":40001,
+		"map_id":20022,
 		"lv_limit":16,
 		"power_limit":0,
-		"monster_list":[[1,[[8,13],[9,14]],20016,1]],
+		"monster_list":[[1,[[14,9],[15,8]],20016,1]],
 		"viplv_limit":0,
-		"birth":[[4,18],[11,17]],
+		"birth":[[18,12],[19,11]],
 		"drop":[],
 		"copy_id":20017,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":0
 	},
 	"40017":{
 		"scene_id":40017,
 		"name":"17级挑战场景",
-		"map_id":40001,
+		"map_id":20022,
 		"lv_limit":17,
 		"power_limit":0,
-		"monster_list":[[1,[[8,13],[9,14]],20017,1]],
+		"monster_list":[[1,[[25,26],[26,25]],20017,1]],
 		"viplv_limit":0,
-		"birth":[[4,18],[11,17]],
+		"birth":[[20,25],[21,26]],
 		"drop":[],
 		"copy_id":20018,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":0
 	},
 	"40018":{
 		"scene_id":40018,
 		"name":"18级挑战场景",
-		"map_id":40001,
+		"map_id":20022,
 		"lv_limit":18,
 		"power_limit":0,
-		"monster_list":[[1,[[8,13],[9,14]],20018,1]],
+		"monster_list":[[1,[[22,36],[23,35]],20018,1]],
 		"viplv_limit":0,
-		"birth":[[4,18],[11,17]],
+		"birth":[[17,34],[18,35]],
 		"drop":[],
 		"copy_id":20019,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":0
 	},
 	"40019":{
 		"scene_id":40019,
 		"name":"19级挑战场景",
-		"map_id":40001,
+		"map_id":20022,
 		"lv_limit":19,
 		"power_limit":0,
-		"monster_list":[[1,[[8,13],[9,14]],20019,1]],
+		"monster_list":[[1,[[24,46],[25,47]],20019,1]],
 		"viplv_limit":0,
-		"birth":[[4,18],[11,17]],
+		"birth":[[25,42],[26,43]],
 		"drop":[],
 		"copy_id":20020,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":0
 	},
 	"40020":{
 		"scene_id":40020,
 		"name":"20级挑战场景",
-		"map_id":40001,
+		"map_id":20022,
 		"lv_limit":20,
 		"power_limit":0,
-		"monster_list":[[1,[[8,13],[9,14]],20020,1]],
+		"monster_list":[[1,[[24,56],[23,55]],20020,1]],
 		"viplv_limit":0,
-		"birth":[[4,18],[11,17]],
+		"birth":[[28,55],[27,56]],
 		"drop":[],
 		"copy_id":20021,
-		"ten_reward":[[1,200,1]]
+		"ten_reward":[],
+		"pickup":0
 	},
 	"40021":{
 		"scene_id":40021,
 		"name":"21级挑战场景",
-		"map_id":40002,
+		"map_id":20022,
 		"lv_limit":21,
 		"power_limit":0,
-		"monster_list":[[1,[[10,8],[11,9]],20021,1]],
+		"monster_list":[[1,[[14,54],[13,55]],20021,1]],
 		"viplv_limit":0,
-		"birth":[[5,13],[9,11]],
+		"birth":[[17,53],[16,52]],
 		"drop":[],
 		"copy_id":20022,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40022":{
 		"scene_id":40022,
 		"name":"22级挑战场景",
-		"map_id":40002,
+		"map_id":20022,
 		"lv_limit":22,
 		"power_limit":0,
-		"monster_list":[[1,[[10,8],[11,9]],20022,1]],
+		"monster_list":[[1,[[10,45],[9,44]],20022,1]],
 		"viplv_limit":0,
-		"birth":[[5,13],[9,11]],
+		"birth":[[12,48],[13,47]],
 		"drop":[],
 		"copy_id":20023,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40023":{
 		"scene_id":40023,
 		"name":"23级挑战场景",
-		"map_id":40002,
+		"map_id":20023,
 		"lv_limit":23,
 		"power_limit":0,
-		"monster_list":[[1,[[10,8],[11,9]],20023,1]],
+		"monster_list":[[1,[[56,36],[55,37]],20023,1]],
 		"viplv_limit":0,
-		"birth":[[5,13],[9,11]],
+		"birth":[[61,37],[60,38]],
 		"drop":[],
 		"copy_id":20024,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40024":{
 		"scene_id":40024,
 		"name":"24级挑战场景",
-		"map_id":40002,
+		"map_id":20023,
 		"lv_limit":24,
 		"power_limit":0,
-		"monster_list":[[1,[[10,8],[11,9]],20024,1]],
+		"monster_list":[[1,[[58,52],[59,53]],20024,1]],
 		"viplv_limit":0,
-		"birth":[[5,13],[9,11]],
+		"birth":[[60,50],[61,51]],
 		"drop":[],
 		"copy_id":20025,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40025":{
 		"scene_id":40025,
 		"name":"25级挑战场景",
-		"map_id":40002,
+		"map_id":20023,
 		"lv_limit":25,
 		"power_limit":0,
-		"monster_list":[[1,[[10,8],[11,9]],20025,1]],
+		"monster_list":[[1,[[45,57],[46,56]],20025,1]],
 		"viplv_limit":0,
-		"birth":[[5,13],[9,11]],
+		"birth":[[48,61],[47,60]],
 		"drop":[],
 		"copy_id":20026,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40026":{
 		"scene_id":40026,
 		"name":"26级挑战场景",
-		"map_id":40002,
+		"map_id":20023,
 		"lv_limit":26,
 		"power_limit":0,
-		"monster_list":[[1,[[10,8],[11,9]],20026,1]],
+		"monster_list":[[1,[[41,46],[40,45]],20026,1]],
 		"viplv_limit":0,
-		"birth":[[5,13],[9,11]],
+		"birth":[[38,50],[37,49]],
 		"drop":[],
 		"copy_id":20027,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40027":{
 		"scene_id":40027,
 		"name":"27级挑战场景",
-		"map_id":40002,
+		"map_id":20023,
 		"lv_limit":27,
 		"power_limit":0,
-		"monster_list":[[1,[[10,8],[11,9]],20027,1]],
+		"monster_list":[[1,[[19,46],[18,45]],20027,1]],
 		"viplv_limit":0,
-		"birth":[[5,13],[9,11]],
+		"birth":[[22,44],[21,43]],
 		"drop":[],
 		"copy_id":20028,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40028":{
 		"scene_id":40028,
 		"name":"28级挑战场景",
-		"map_id":40002,
+		"map_id":20023,
 		"lv_limit":28,
 		"power_limit":0,
-		"monster_list":[[1,[[10,8],[11,9]],20028,1]],
+		"monster_list":[[1,[[10,42],[11,41]],20028,1]],
 		"viplv_limit":0,
-		"birth":[[5,13],[9,11]],
+		"birth":[[11,45],[12,44]],
 		"drop":[],
 		"copy_id":20029,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40029":{
 		"scene_id":40029,
 		"name":"29级挑战场景",
-		"map_id":40002,
+		"map_id":20023,
 		"lv_limit":29,
 		"power_limit":0,
-		"monster_list":[[1,[[10,8],[11,9]],20029,1]],
+		"monster_list":[[1,[[17,41],[18,40]],20029,1]],
 		"viplv_limit":0,
-		"birth":[[5,13],[9,11]],
+		"birth":[[13,39],[14,38]],
 		"drop":[],
 		"copy_id":20030,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40030":{
 		"scene_id":40030,
 		"name":"30级挑战场景",
-		"map_id":40002,
+		"map_id":20023,
 		"lv_limit":30,
 		"power_limit":0,
-		"monster_list":[[1,[[10,8],[11,9]],20030,1]],
+		"monster_list":[[1,[[15,33],[14,32]],20030,1]],
 		"viplv_limit":0,
-		"birth":[[5,13],[9,11]],
+		"birth":[[18,35],[19,34]],
 		"drop":[],
 		"copy_id":20031,
-		"ten_reward":[[1,1000,1]]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40031":{
 		"scene_id":40031,
 		"name":"31级挑战场景",
-		"map_id":40002,
+		"map_id":20023,
 		"lv_limit":31,
 		"power_limit":0,
-		"monster_list":[[1,[[10,8],[11,9]],20031,1]],
+		"monster_list":[[1,[[21,20],[20,19]],20031,1]],
 		"viplv_limit":0,
-		"birth":[[5,13],[9,11]],
+		"birth":[[22,17],[24,22]],
 		"drop":[],
 		"copy_id":20032,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40032":{
 		"scene_id":40032,
 		"name":"32级挑战场景",
-		"map_id":40002,
+		"map_id":20023,
 		"lv_limit":32,
 		"power_limit":0,
-		"monster_list":[[1,[[10,8],[11,9]],20032,1]],
+		"monster_list":[[1,[[37,27],[38,26]],20032,1]],
 		"viplv_limit":0,
-		"birth":[[5,13],[9,11]],
+		"birth":[[33,25],[34,25]],
 		"drop":[],
 		"copy_id":20033,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40033":{
 		"scene_id":40033,
 		"name":"33级挑战场景",
-		"map_id":40002,
+		"map_id":20023,
 		"lv_limit":33,
 		"power_limit":0,
-		"monster_list":[[1,[[10,8],[11,9]],20033,1]],
+		"monster_list":[[1,[[54,19],[55,18]],20033,1]],
 		"viplv_limit":0,
-		"birth":[[5,13],[9,11]],
+		"birth":[[48,18],[49,17]],
 		"drop":[],
 		"copy_id":20034,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40034":{
 		"scene_id":40034,
 		"name":"34级挑战场景",
-		"map_id":40002,
+		"map_id":20023,
 		"lv_limit":34,
 		"power_limit":0,
-		"monster_list":[[1,[[10,8],[11,9]],20034,1]],
+		"monster_list":[[1,[[57,9],[56,8]],20034,1]],
 		"viplv_limit":0,
-		"birth":[[5,13],[9,11]],
+		"birth":[[51,13],[52,14]],
 		"drop":[],
 		"copy_id":20035,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40035":{
 		"scene_id":40035,
 		"name":"35级挑战场景",
-		"map_id":40002,
+		"map_id":20024,
 		"lv_limit":35,
 		"power_limit":0,
-		"monster_list":[[1,[[10,8],[11,9]],20035,1]],
+		"monster_list":[[1,[[62,32],[63,31]],20035,1]],
 		"viplv_limit":0,
-		"birth":[[5,13],[9,11]],
+		"birth":[[62,26],[61,25]],
 		"drop":[],
 		"copy_id":20036,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40036":{
 		"scene_id":40036,
 		"name":"36级挑战场景",
-		"map_id":40002,
+		"map_id":20024,
 		"lv_limit":36,
 		"power_limit":0,
-		"monster_list":[[1,[[10,8],[11,9]],20036,1]],
+		"monster_list":[[1,[[55,38],[56,39]],20036,1]],
 		"viplv_limit":0,
-		"birth":[[5,13],[9,11]],
+		"birth":[[61,38],[60,37]],
 		"drop":[],
 		"copy_id":20037,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40037":{
 		"scene_id":40037,
 		"name":"37级挑战场景",
-		"map_id":40002,
+		"map_id":20024,
 		"lv_limit":37,
 		"power_limit":0,
-		"monster_list":[[1,[[10,8],[11,9]],20037,1]],
+		"monster_list":[[1,[[65,47],[66,46]],20037,1]],
 		"viplv_limit":0,
-		"birth":[[5,13],[9,11]],
+		"birth":[[58,44],[59,43]],
 		"drop":[],
 		"copy_id":20038,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40038":{
 		"scene_id":40038,
 		"name":"38级挑战场景",
-		"map_id":40002,
+		"map_id":20024,
 		"lv_limit":38,
 		"power_limit":0,
-		"monster_list":[[1,[[10,8],[11,9]],20038,1]],
+		"monster_list":[[1,[[48,55],[47,54]],20038,1]],
 		"viplv_limit":0,
-		"birth":[[5,13],[9,11]],
+		"birth":[[52,53],[51,52]],
 		"drop":[],
 		"copy_id":20039,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40039":{
 		"scene_id":40039,
 		"name":"39级挑战场景",
-		"map_id":40002,
+		"map_id":20024,
 		"lv_limit":39,
 		"power_limit":0,
-		"monster_list":[[1,[[10,8],[11,9]],20039,1]],
+		"monster_list":[[1,[[37,48],[36,47]],20039,1]],
 		"viplv_limit":0,
-		"birth":[[5,13],[9,11]],
+		"birth":[[42,46],[41,45]],
 		"drop":[],
 		"copy_id":20040,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40040":{
 		"scene_id":40040,
 		"name":"40级挑战场景",
-		"map_id":40002,
+		"map_id":20024,
 		"lv_limit":40,
 		"power_limit":0,
-		"monster_list":[[1,[[10,8],[11,9]],20040,1]],
+		"monster_list":[[1,[[25,53],[24,52]],20040,1]],
 		"viplv_limit":0,
-		"birth":[[5,13],[9,11]],
+		"birth":[[34,57],[35,56]],
 		"drop":[],
 		"copy_id":20041,
-		"ten_reward":[[1,200,1]]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40041":{
 		"scene_id":40041,
 		"name":"41级挑战场景",
-		"map_id":40003,
+		"map_id":20024,
 		"lv_limit":41,
 		"power_limit":0,
-		"monster_list":[[1,[[8,11],[9,12]],20041,1]],
+		"monster_list":[[1,[[29,46],[30,45]],20041,1]],
 		"viplv_limit":0,
-		"birth":[[4,19],[10,20]],
+		"birth":[[30,49],[29,48]],
 		"drop":[],
 		"copy_id":20042,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40042":{
 		"scene_id":40042,
 		"name":"42级挑战场景",
-		"map_id":40003,
+		"map_id":20024,
 		"lv_limit":42,
 		"power_limit":0,
-		"monster_list":[[1,[[8,11],[9,12]],20042,1]],
+		"monster_list":[[1,[[23,41],[22,42]],20042,1]],
 		"viplv_limit":0,
-		"birth":[[4,19],[10,20]],
+		"birth":[[27,45],[28,44]],
 		"drop":[],
 		"copy_id":20043,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40043":{
 		"scene_id":40043,
 		"name":"43级挑战场景",
-		"map_id":40003,
+		"map_id":20024,
 		"lv_limit":43,
 		"power_limit":0,
-		"monster_list":[[1,[[8,11],[9,12]],20043,1]],
+		"monster_list":[[1,[[21,35],[22,34]],20043,1]],
 		"viplv_limit":0,
-		"birth":[[4,19],[10,20]],
+		"birth":[[21,39],[22,38]],
 		"drop":[],
 		"copy_id":20044,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40044":{
 		"scene_id":40044,
 		"name":"44级挑战场景",
-		"map_id":40003,
+		"map_id":20024,
 		"lv_limit":44,
 		"power_limit":0,
-		"monster_list":[[1,[[8,11],[9,12]],20044,1]],
+		"monster_list":[[1,[[10,26],[11,25]],20044,1]],
 		"viplv_limit":0,
-		"birth":[[4,19],[10,20]],
+		"birth":[[10,31],[11,30]],
 		"drop":[],
 		"copy_id":20045,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40045":{
 		"scene_id":40045,
 		"name":"45级挑战场景",
-		"map_id":40003,
+		"map_id":20024,
 		"lv_limit":45,
 		"power_limit":0,
-		"monster_list":[[1,[[8,11],[9,12]],20045,1]],
+		"monster_list":[[1,[[27,30],[26,29]],20045,1]],
 		"viplv_limit":0,
-		"birth":[[4,19],[10,20]],
+		"birth":[[23,33],[22,32]],
 		"drop":[],
 		"copy_id":20046,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40046":{
 		"scene_id":40046,
 		"name":"46级挑战场景",
-		"map_id":40003,
+		"map_id":20024,
 		"lv_limit":46,
 		"power_limit":0,
-		"monster_list":[[1,[[8,11],[9,12]],20046,1]],
+		"monster_list":[[1,[[26,22],[27,21]],20046,1]],
 		"viplv_limit":0,
-		"birth":[[4,19],[10,20]],
+		"birth":[[27,25],[28,24]],
 		"drop":[],
 		"copy_id":20047,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40047":{
 		"scene_id":40047,
 		"name":"47级挑战场景",
-		"map_id":40003,
+		"map_id":20024,
 		"lv_limit":47,
 		"power_limit":0,
-		"monster_list":[[1,[[8,11],[9,12]],20047,1]],
+		"monster_list":[[1,[[31,9],[30,10]],20047,1]],
 		"viplv_limit":0,
-		"birth":[[4,19],[10,20]],
+		"birth":[[33,13],[34,12]],
 		"drop":[],
 		"copy_id":20048,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40048":{
 		"scene_id":40048,
 		"name":"48级挑战场景",
-		"map_id":40003,
+		"map_id":20024,
 		"lv_limit":48,
 		"power_limit":0,
-		"monster_list":[[1,[[8,11],[9,12]],20048,1]],
+		"monster_list":[[1,[[32,20],[33,21]],20048,1]],
 		"viplv_limit":0,
-		"birth":[[4,19],[10,20]],
+		"birth":[[36,19],[35,18]],
 		"drop":[],
 		"copy_id":20049,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40049":{
 		"scene_id":40049,
 		"name":"49级挑战场景",
-		"map_id":40003,
+		"map_id":20025,
 		"lv_limit":49,
 		"power_limit":0,
-		"monster_list":[[1,[[8,11],[9,12]],20049,1]],
+		"monster_list":[[1,[[58,11],[57,12]],20001,1]],
 		"viplv_limit":0,
-		"birth":[[4,19],[10,20]],
+		"birth":[[61,13],[60,14]],
 		"drop":[],
 		"copy_id":20050,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40050":{
 		"scene_id":40050,
 		"name":"50级挑战场景",
-		"map_id":40003,
+		"map_id":20025,
 		"lv_limit":50,
 		"power_limit":0,
-		"monster_list":[[1,[[8,11],[9,12]],20050,1]],
+		"monster_list":[[1,[[44,18],[43,17]],20002,1]],
 		"viplv_limit":0,
-		"birth":[[4,19],[10,20]],
+		"birth":[[49,16],[48,15]],
 		"drop":[],
 		"copy_id":20051,
-		"ten_reward":[[1,1000,1]]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40051":{
 		"scene_id":40051,
 		"name":"51级挑战场景",
-		"map_id":40003,
+		"map_id":20025,
 		"lv_limit":51,
 		"power_limit":0,
-		"monster_list":[[1,[[8,11],[9,12]],20051,1]],
+		"monster_list":[[1,[[26,26],[25,25]],20003,1]],
 		"viplv_limit":0,
-		"birth":[[4,19],[10,20]],
+		"birth":[[30,22],[31,23]],
 		"drop":[],
 		"copy_id":20052,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40052":{
 		"scene_id":40052,
 		"name":"52级挑战场景",
-		"map_id":40003,
+		"map_id":20025,
 		"lv_limit":52,
 		"power_limit":0,
-		"monster_list":[[1,[[8,11],[9,12]],20052,1]],
+		"monster_list":[[1,[[44,31],[45,30]],20004,1]],
 		"viplv_limit":0,
-		"birth":[[4,19],[10,20]],
+		"birth":[[41,29],[42,28]],
 		"drop":[],
 		"copy_id":20053,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40053":{
 		"scene_id":40053,
 		"name":"53级挑战场景",
-		"map_id":40003,
+		"map_id":20025,
 		"lv_limit":53,
 		"power_limit":0,
-		"monster_list":[[1,[[8,11],[9,12]],20053,1]],
+		"monster_list":[[1,[[56,36],[55,35]],20005,1]],
 		"viplv_limit":0,
-		"birth":[[4,19],[10,20]],
+		"birth":[[50,35],[49,36]],
 		"drop":[],
 		"copy_id":20054,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40054":{
 		"scene_id":40054,
 		"name":"54级挑战场景",
-		"map_id":40003,
+		"map_id":20025,
 		"lv_limit":54,
 		"power_limit":0,
-		"monster_list":[[1,[[8,11],[9,12]],20054,1]],
+		"monster_list":[[1,[[52,43],[51,42]],20006,1]],
 		"viplv_limit":0,
-		"birth":[[4,19],[10,20]],
+		"birth":[[59,42],[58,43]],
 		"drop":[],
 		"copy_id":20055,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40055":{
 		"scene_id":40055,
 		"name":"55级挑战场景",
-		"map_id":40003,
+		"map_id":20025,
 		"lv_limit":55,
 		"power_limit":0,
-		"monster_list":[[1,[[8,11],[9,12]],20055,1]],
+		"monster_list":[[1,[[43,51],[42,50]],20007,1]],
 		"viplv_limit":0,
-		"birth":[[4,19],[10,20]],
+		"birth":[[45,49],[44,48]],
 		"drop":[],
 		"copy_id":20056,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40056":{
 		"scene_id":40056,
 		"name":"56级挑战场景",
-		"map_id":40003,
+		"map_id":20025,
 		"lv_limit":56,
 		"power_limit":0,
-		"monster_list":[[1,[[8,11],[9,12]],20056,1]],
+		"monster_list":[[1,[[30,48],[31,47]],20008,1]],
 		"viplv_limit":0,
-		"birth":[[4,19],[10,20]],
+		"birth":[[33,49],[32,50]],
 		"drop":[],
 		"copy_id":20057,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40057":{
 		"scene_id":40057,
 		"name":"57级挑战场景",
-		"map_id":40003,
+		"map_id":20025,
 		"lv_limit":57,
 		"power_limit":0,
-		"monster_list":[[1,[[8,11],[9,12]],20057,1]],
+		"monster_list":[[1,[[19,42],[20,41]],20009,1]],
 		"viplv_limit":0,
-		"birth":[[4,19],[10,20]],
+		"birth":[[21,45],[22,44]],
 		"drop":[],
 		"copy_id":20058,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40058":{
 		"scene_id":40058,
 		"name":"58级挑战场景",
-		"map_id":40003,
+		"map_id":20025,
 		"lv_limit":58,
 		"power_limit":0,
-		"monster_list":[[1,[[8,11],[9,12]],20058,1]],
+		"monster_list":[[1,[[9,39],[10,38]],20010,1]],
 		"viplv_limit":0,
-		"birth":[[4,19],[10,20]],
+		"birth":[[13,41],[14,40]],
 		"drop":[],
 		"copy_id":20059,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40059":{
 		"scene_id":40059,
 		"name":"59级挑战场景",
-		"map_id":40003,
+		"map_id":20026,
 		"lv_limit":59,
 		"power_limit":0,
-		"monster_list":[[1,[[8,11],[9,12]],20059,1]],
+		"monster_list":[[1,[[47,12],[48,13]],20059,1]],
 		"viplv_limit":0,
-		"birth":[[4,19],[10,20]],
+		"birth":[[50,10],[51,11]],
 		"drop":[],
 		"copy_id":20060,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40060":{
 		"scene_id":40060,
 		"name":"60级挑战场景",
-		"map_id":40003,
+		"map_id":20026,
 		"lv_limit":60,
 		"power_limit":0,
-		"monster_list":[[1,[[8,11],[9,12]],20060,1]],
+		"monster_list":[[1,[[53,23],[54,22]],20060,1]],
 		"viplv_limit":0,
-		"birth":[[4,19],[10,20]],
+		"birth":[[52,20],[51,21]],
 		"drop":[],
 		"copy_id":20061,
-		"ten_reward":[[1,200,1]]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40061":{
 		"scene_id":40061,
 		"name":"61级挑战场景",
-		"map_id":40004,
+		"map_id":20026,
 		"lv_limit":61,
 		"power_limit":0,
-		"monster_list":[[1,[[9,9],[10,10]],20061,1]],
+		"monster_list":[[1,[[64,23],[65,24]],20061,1]],
 		"viplv_limit":0,
-		"birth":[[7,17],[12,15]],
+		"birth":[[67,20],[68,21]],
 		"drop":[],
 		"copy_id":20062,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40062":{
 		"scene_id":40062,
 		"name":"62级挑战场景",
-		"map_id":40004,
+		"map_id":20026,
 		"lv_limit":62,
 		"power_limit":0,
-		"monster_list":[[1,[[9,9],[10,10]],20062,1]],
+		"monster_list":[[1,[[67,34],[68,33]],20062,1]],
 		"viplv_limit":0,
-		"birth":[[7,17],[12,15]],
+		"birth":[[62,31],[63,30]],
 		"drop":[],
 		"copy_id":20063,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40063":{
 		"scene_id":40063,
 		"name":"63级挑战场景",
-		"map_id":40004,
+		"map_id":20026,
 		"lv_limit":63,
 		"power_limit":0,
-		"monster_list":[[1,[[9,9],[10,10]],20063,1]],
+		"monster_list":[[1,[[53,40],[54,41]],20063,1]],
 		"viplv_limit":0,
-		"birth":[[7,17],[12,15]],
+		"birth":[[57,38],[58,39]],
 		"drop":[],
 		"copy_id":20064,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40064":{
 		"scene_id":40064,
 		"name":"64级挑战场景",
-		"map_id":40004,
+		"map_id":20026,
 		"lv_limit":64,
 		"power_limit":0,
-		"monster_list":[[1,[[9,9],[10,10]],20064,1]],
+		"monster_list":[[1,[[52,25],[51,26]],20064,1]],
 		"viplv_limit":0,
-		"birth":[[7,17],[12,15]],
+		"birth":[[53,29],[54,28]],
 		"drop":[],
 		"copy_id":20065,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40065":{
 		"scene_id":40065,
 		"name":"65级挑战场景",
-		"map_id":40004,
+		"map_id":20026,
 		"lv_limit":65,
 		"power_limit":0,
-		"monster_list":[[1,[[9,9],[10,10]],20065,1]],
+		"monster_list":[[1,[[44,35],[45,36]],20065,1]],
 		"viplv_limit":0,
-		"birth":[[7,17],[12,15]],
+		"birth":[[48,33],[47,32]],
 		"drop":[],
 		"copy_id":20066,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40066":{
 		"scene_id":40066,
 		"name":"66级挑战场景",
-		"map_id":40004,
+		"map_id":20026,
 		"lv_limit":66,
 		"power_limit":0,
-		"monster_list":[[1,[[9,9],[10,10]],20066,1]],
+		"monster_list":[[1,[[37,34],[38,35]],20066,1]],
 		"viplv_limit":0,
-		"birth":[[7,17],[12,15]],
+		"birth":[[39,32],[38,31]],
 		"drop":[],
 		"copy_id":20067,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40067":{
 		"scene_id":40067,
 		"name":"67级挑战场景",
-		"map_id":40004,
+		"map_id":20026,
 		"lv_limit":67,
 		"power_limit":0,
-		"monster_list":[[1,[[9,9],[10,10]],20067,1]],
+		"monster_list":[[1,[[20,38],[19,39]],20067,1]],
 		"viplv_limit":0,
-		"birth":[[7,17],[12,15]],
+		"birth":[[24,41],[25,40]],
 		"drop":[],
 		"copy_id":20068,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40068":{
 		"scene_id":40068,
 		"name":"68级挑战场景",
-		"map_id":40004,
+		"map_id":20026,
 		"lv_limit":68,
 		"power_limit":0,
-		"monster_list":[[1,[[9,9],[10,10]],20068,1]],
+		"monster_list":[[1,[[14,41],[15,42]],20068,1]],
 		"viplv_limit":0,
-		"birth":[[7,17],[12,15]],
+		"birth":[[16,39],[17,40]],
 		"drop":[],
 		"copy_id":20069,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40069":{
 		"scene_id":40069,
 		"name":"69级挑战场景",
-		"map_id":40004,
+		"map_id":20026,
 		"lv_limit":69,
 		"power_limit":0,
-		"monster_list":[[1,[[9,9],[10,10]],20069,1]],
+		"monster_list":[[1,[[21,44],[22,43]],20069,1]],
 		"viplv_limit":0,
-		"birth":[[7,17],[12,15]],
+		"birth":[[18,42],[19,41]],
 		"drop":[],
 		"copy_id":20070,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40070":{
 		"scene_id":40070,
 		"name":"70级挑战场景",
-		"map_id":40004,
+		"map_id":20026,
 		"lv_limit":70,
 		"power_limit":0,
-		"monster_list":[[1,[[9,9],[10,10]],20070,1]],
+		"monster_list":[[1,[[39,49],[40,48]],20070,1]],
 		"viplv_limit":0,
-		"birth":[[7,17],[12,15]],
+		"birth":[[34,47],[35,46]],
 		"drop":[],
 		"copy_id":20071,
-		"ten_reward":[[1,1000,1]]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40071":{
 		"scene_id":40071,
 		"name":"71级挑战场景",
-		"map_id":40005,
+		"map_id":20026,
 		"lv_limit":71,
 		"power_limit":0,
-		"monster_list":[[1,[[9,13],[10,14]],20071,1]],
+		"monster_list":[[1,[[24,50],[23,49]],20071,1]],
 		"viplv_limit":0,
-		"birth":[[5,18],[11,17]],
+		"birth":[[26,48],[25,47]],
 		"drop":[],
 		"copy_id":20072,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40072":{
 		"scene_id":40072,
 		"name":"72级挑战场景",
-		"map_id":40005,
+		"map_id":20026,
 		"lv_limit":72,
 		"power_limit":0,
-		"monster_list":[[1,[[9,13],[10,14]],20072,1]],
+		"monster_list":[[1,[[12,53],[13,54]],20072,1]],
 		"viplv_limit":0,
-		"birth":[[5,18],[11,17]],
+		"birth":[[15,51],[16,52]],
 		"drop":[],
 		"copy_id":20073,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40073":{
 		"scene_id":40073,
 		"name":"73级挑战场景",
-		"map_id":40005,
+		"map_id":20027,
 		"lv_limit":73,
 		"power_limit":0,
-		"monster_list":[[1,[[9,13],[10,14]],20073,1]],
+		"monster_list":[[1,[[44,14],[41,13]],20073,1]],
 		"viplv_limit":0,
-		"birth":[[5,18],[11,17]],
+		"birth":[[48,11],[47,10]],
 		"drop":[],
 		"copy_id":20074,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40074":{
 		"scene_id":40074,
 		"name":"74级挑战场景",
-		"map_id":40005,
+		"map_id":20027,
 		"lv_limit":74,
 		"power_limit":0,
-		"monster_list":[[1,[[9,13],[10,14]],20074,1]],
+		"monster_list":[[1,[[58,22],[57,23]],20074,1]],
 		"viplv_limit":0,
-		"birth":[[5,18],[11,17]],
+		"birth":[[55,20],[54,21]],
 		"drop":[],
 		"copy_id":20075,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40075":{
 		"scene_id":40075,
 		"name":"75级挑战场景",
-		"map_id":40005,
+		"map_id":20027,
 		"lv_limit":75,
 		"power_limit":0,
-		"monster_list":[[1,[[9,13],[10,14]],20075,1]],
+		"monster_list":[[1,[[58,30],[59,31]],20075,1]],
 		"viplv_limit":0,
-		"birth":[[5,18],[11,17]],
+		"birth":[[62,29],[61,28]],
 		"drop":[],
 		"copy_id":20076,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40076":{
 		"scene_id":40076,
 		"name":"76级挑战场景",
-		"map_id":40005,
+		"map_id":20027,
 		"lv_limit":76,
 		"power_limit":0,
-		"monster_list":[[1,[[9,13],[10,14]],20076,1]],
+		"monster_list":[[1,[[62,40],[63,39]],20076,1]],
 		"viplv_limit":0,
-		"birth":[[5,18],[11,17]],
+		"birth":[[59,38],[58,39]],
 		"drop":[],
 		"copy_id":20077,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40077":{
 		"scene_id":40077,
 		"name":"77级挑战场景",
-		"map_id":40005,
+		"map_id":20027,
 		"lv_limit":77,
 		"power_limit":0,
-		"monster_list":[[1,[[9,13],[10,14]],20077,1]],
+		"monster_list":[[1,[[56,46],[57,47]],20077,1]],
 		"viplv_limit":0,
-		"birth":[[5,18],[11,17]],
+		"birth":[[59,44],[58,43]],
 		"drop":[],
 		"copy_id":20078,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40078":{
 		"scene_id":40078,
 		"name":"78级挑战场景",
-		"map_id":40005,
+		"map_id":20027,
 		"lv_limit":78,
 		"power_limit":0,
-		"monster_list":[[1,[[9,13],[10,14]],20078,1]],
+		"monster_list":[[1,[[42,53],[43,54]],20078,1]],
 		"viplv_limit":0,
-		"birth":[[5,18],[11,17]],
+		"birth":[[47,52],[46,51]],
 		"drop":[],
 		"copy_id":20079,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40079":{
 		"scene_id":40079,
 		"name":"79级挑战场景",
-		"map_id":40005,
+		"map_id":20027,
 		"lv_limit":79,
 		"power_limit":0,
-		"monster_list":[[1,[[9,13],[10,14]],20079,1]],
+		"monster_list":[[1,[[34,45],[33,46]],20079,1]],
 		"viplv_limit":0,
-		"birth":[[5,18],[11,17]],
+		"birth":[[34,49],[35,48]],
 		"drop":[],
 		"copy_id":20080,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40080":{
 		"scene_id":40080,
 		"name":"80级挑战场景",
-		"map_id":40005,
+		"map_id":20027,
 		"lv_limit":80,
 		"power_limit":0,
-		"monster_list":[[1,[[9,13],[10,14]],20080,1]],
+		"monster_list":[[1,[[26,37],[25,38]],20080,1]],
 		"viplv_limit":0,
-		"birth":[[5,18],[11,17]],
+		"birth":[[29,39],[28,40]],
 		"drop":[],
 		"copy_id":20081,
-		"ten_reward":[[1,200,1]]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40081":{
 		"scene_id":40081,
 		"name":"81级挑战场景",
-		"map_id":40006,
+		"map_id":20027,
 		"lv_limit":81,
 		"power_limit":0,
-		"monster_list":[[1,[[9,10],[10,11]],20081,1]],
+		"monster_list":[[1,[[13,36],[12,35]],20081,1]],
 		"viplv_limit":0,
-		"birth":[[5,15],[10,14]],
+		"birth":[[17,36],[16,35]],
 		"drop":[],
 		"copy_id":20082,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40082":{
 		"scene_id":40082,
 		"name":"82级挑战场景",
-		"map_id":40006,
+		"map_id":20027,
 		"lv_limit":82,
 		"power_limit":0,
-		"monster_list":[[1,[[9,10],[10,11]],20082,1]],
+		"monster_list":[[1,[[6,26],[7,25]],20082,1]],
 		"viplv_limit":0,
-		"birth":[[5,15],[10,14]],
+		"birth":[[6,30],[7,29]],
 		"drop":[],
 		"copy_id":20083,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40083":{
 		"scene_id":40083,
 		"name":"83级挑战场景",
-		"map_id":40006,
+		"map_id":20027,
 		"lv_limit":83,
 		"power_limit":0,
-		"monster_list":[[1,[[9,10],[10,11]],20083,1]],
+		"monster_list":[[1,[[21,25],[20,26]],20083,1]],
 		"viplv_limit":0,
-		"birth":[[5,15],[10,14]],
+		"birth":[[18,24],[19,23]],
 		"drop":[],
 		"copy_id":20084,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40084":{
 		"scene_id":40084,
 		"name":"84级挑战场景",
-		"map_id":40006,
+		"map_id":20027,
 		"lv_limit":84,
 		"power_limit":0,
-		"monster_list":[[1,[[9,10],[10,11]],20084,1]],
+		"monster_list":[[1,[[18,29],[17,30]],20084,1]],
 		"viplv_limit":0,
-		"birth":[[5,15],[10,14]],
+		"birth":[[24,32],[25,31]],
 		"drop":[],
 		"copy_id":20085,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40085":{
 		"scene_id":40085,
@@ -1097,12 +1181,13 @@
 		"map_id":40006,
 		"lv_limit":85,
 		"power_limit":0,
-		"monster_list":[[1,[[9,10],[10,11]],20085,1]],
+		"monster_list":[[1,[[6,8],[9,10]],20085,1]],
 		"viplv_limit":0,
-		"birth":[[5,15],[10,14]],
+		"birth":[[10,32],[11,33]],
 		"drop":[],
 		"copy_id":20086,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40086":{
 		"scene_id":40086,
@@ -1110,12 +1195,13 @@
 		"map_id":40006,
 		"lv_limit":86,
 		"power_limit":0,
-		"monster_list":[[1,[[9,10],[10,11]],20086,1]],
+		"monster_list":[[1,[[7,47],[8,48]],20086,1]],
 		"viplv_limit":0,
-		"birth":[[5,15],[10,14]],
+		"birth":[[8,43],[9,44]],
 		"drop":[],
 		"copy_id":20087,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40087":{
 		"scene_id":40087,
@@ -1123,12 +1209,13 @@
 		"map_id":40006,
 		"lv_limit":87,
 		"power_limit":0,
-		"monster_list":[[1,[[9,10],[10,11]],20087,1]],
+		"monster_list":[[1,[[21,56],[22,55]],20087,1]],
 		"viplv_limit":0,
-		"birth":[[5,15],[10,14]],
+		"birth":[[17,54],[18,53]],
 		"drop":[],
 		"copy_id":20088,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40088":{
 		"scene_id":40088,
@@ -1136,12 +1223,13 @@
 		"map_id":40006,
 		"lv_limit":88,
 		"power_limit":0,
-		"monster_list":[[1,[[9,10],[10,11]],20088,1]],
+		"monster_list":[[1,[[26,48],[27,47]],20088,1]],
 		"viplv_limit":0,
-		"birth":[[5,15],[10,14]],
+		"birth":[[22,48],[23,47]],
 		"drop":[],
 		"copy_id":20089,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40089":{
 		"scene_id":40089,
@@ -1149,12 +1237,13 @@
 		"map_id":40006,
 		"lv_limit":89,
 		"power_limit":0,
-		"monster_list":[[1,[[9,10],[10,11]],20089,1]],
+		"monster_list":[[1,[[24,56],[25,57]],20089,1]],
 		"viplv_limit":0,
-		"birth":[[5,15],[10,14]],
+		"birth":[[29,53],[30,54]],
 		"drop":[],
 		"copy_id":20090,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40090":{
 		"scene_id":40090,
@@ -1162,12 +1251,13 @@
 		"map_id":40006,
 		"lv_limit":90,
 		"power_limit":0,
-		"monster_list":[[1,[[9,10],[10,11]],20090,1]],
+		"monster_list":[[1,[[44,44],[45,43]],20090,1]],
 		"viplv_limit":0,
-		"birth":[[5,15],[10,14]],
+		"birth":[[39,44],[40,43]],
 		"drop":[],
 		"copy_id":20091,
-		"ten_reward":[[1,1000,1]]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40091":{
 		"scene_id":40091,
@@ -1175,12 +1265,13 @@
 		"map_id":40007,
 		"lv_limit":91,
 		"power_limit":0,
-		"monster_list":[[1,[[9,13],[10,14]],20091,1]],
+		"monster_list":[[1,[[46,54],[45,55]],20091,1]],
 		"viplv_limit":0,
-		"birth":[[7,19],[12,18]],
+		"birth":[[41,53],[42,52]],
 		"drop":[],
 		"copy_id":20092,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40092":{
 		"scene_id":40092,
@@ -1188,12 +1279,13 @@
 		"map_id":40007,
 		"lv_limit":92,
 		"power_limit":0,
-		"monster_list":[[1,[[9,13],[10,14]],20092,1]],
+		"monster_list":[[1,[[64,52],[63,51]],20092,1]],
 		"viplv_limit":0,
-		"birth":[[7,19],[12,18]],
+		"birth":[[59,55],[58,54]],
 		"drop":[],
 		"copy_id":20093,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40093":{
 		"scene_id":40093,
@@ -1201,12 +1293,13 @@
 		"map_id":40007,
 		"lv_limit":93,
 		"power_limit":0,
-		"monster_list":[[1,[[9,13],[10,14]],20093,1]],
+		"monster_list":[[1,[[40,47],[41,46]],20093,1]],
 		"viplv_limit":0,
-		"birth":[[7,19],[12,18]],
+		"birth":[[47,50],[46,49]],
 		"drop":[],
 		"copy_id":20094,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40094":{
 		"scene_id":40094,
@@ -1214,12 +1307,13 @@
 		"map_id":40007,
 		"lv_limit":94,
 		"power_limit":0,
-		"monster_list":[[1,[[9,13],[10,14]],20094,1]],
+		"monster_list":[[1,[[54,42],[53,41]],20094,1]],
 		"viplv_limit":0,
-		"birth":[[7,19],[12,18]],
+		"birth":[[50,45],[49,44]],
 		"drop":[],
 		"copy_id":20095,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40095":{
 		"scene_id":40095,
@@ -1227,12 +1321,13 @@
 		"map_id":40007,
 		"lv_limit":95,
 		"power_limit":0,
-		"monster_list":[[1,[[9,13],[10,14]],20095,1]],
+		"monster_list":[[1,[[67,34],[66,33]],20095,1]],
 		"viplv_limit":0,
-		"birth":[[7,19],[12,18]],
+		"birth":[[62,36],[61,35]],
 		"drop":[],
 		"copy_id":20096,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40096":{
 		"scene_id":40096,
@@ -1240,12 +1335,13 @@
 		"map_id":40007,
 		"lv_limit":96,
 		"power_limit":0,
-		"monster_list":[[1,[[9,13],[10,14]],20096,1]],
+		"monster_list":[[1,[[61,24],[62,23]],20096,1]],
 		"viplv_limit":0,
-		"birth":[[7,19],[12,18]],
+		"birth":[[64,27],[65,26]],
 		"drop":[],
 		"copy_id":20097,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40097":{
 		"scene_id":40097,
@@ -1253,12 +1349,13 @@
 		"map_id":40007,
 		"lv_limit":97,
 		"power_limit":0,
-		"monster_list":[[1,[[9,13],[10,14]],20097,1]],
+		"monster_list":[[1,[[58,25],[57,24]],20097,1]],
 		"viplv_limit":0,
-		"birth":[[7,19],[12,18]],
+		"birth":[[55,27],[56,28]],
 		"drop":[],
 		"copy_id":20098,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40098":{
 		"scene_id":40098,
@@ -1266,12 +1363,13 @@
 		"map_id":40007,
 		"lv_limit":98,
 		"power_limit":0,
-		"monster_list":[[1,[[9,13],[10,14]],20098,1]],
+		"monster_list":[[1,[[49,15],[50,16]],20098,1]],
 		"viplv_limit":0,
-		"birth":[[7,19],[12,18]],
+		"birth":[[53,14],[52,13]],
 		"drop":[],
 		"copy_id":20099,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40099":{
 		"scene_id":40099,
@@ -1279,12 +1377,13 @@
 		"map_id":40007,
 		"lv_limit":99,
 		"power_limit":0,
-		"monster_list":[[1,[[9,13],[10,14]],20099,1]],
+		"monster_list":[[1,[[49,15],[50,16]],20099,1]],
 		"viplv_limit":0,
-		"birth":[[7,19],[12,18]],
+		"birth":[[53,14],[52,13]],
 		"drop":[],
 		"copy_id":20100,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40100":{
 		"scene_id":40100,
@@ -1292,12 +1391,13 @@
 		"map_id":40007,
 		"lv_limit":100,
 		"power_limit":0,
-		"monster_list":[[1,[[9,13],[10,14]],20100,1]],
+		"monster_list":[[1,[[69,8],[68,7]],20100,1]],
 		"viplv_limit":0,
-		"birth":[[7,19],[12,18]],
+		"birth":[[67,10],[66,9]],
 		"drop":[],
 		"copy_id":20101,
-		"ten_reward":[[1,200,1]]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40101":{
 		"scene_id":40101,
@@ -1305,12 +1405,13 @@
 		"map_id":40007,
 		"lv_limit":101,
 		"power_limit":0,
-		"monster_list":[[1,[[9,13],[10,14]],20101,1]],
+		"monster_list":[[1,[[54,11],[53,10]],20101,1]],
 		"viplv_limit":0,
-		"birth":[[7,19],[12,18]],
+		"birth":[[58,11],[57,10]],
 		"drop":[],
 		"copy_id":20102,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40102":{
 		"scene_id":40102,
@@ -1318,12 +1419,13 @@
 		"map_id":40007,
 		"lv_limit":102,
 		"power_limit":0,
-		"monster_list":[[1,[[9,13],[10,14]],20102,1]],
+		"monster_list":[[1,[[39,10],[40,9]],20102,1]],
 		"viplv_limit":0,
-		"birth":[[7,19],[12,18]],
+		"birth":[[39,13],[40,12]],
 		"drop":[],
 		"copy_id":20103,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40103":{
 		"scene_id":40103,
@@ -1331,12 +1433,13 @@
 		"map_id":40007,
 		"lv_limit":103,
 		"power_limit":0,
-		"monster_list":[[1,[[9,13],[10,14]],20103,1]],
+		"monster_list":[[1,[[48,12],[49,13]],20103,1]],
 		"viplv_limit":0,
-		"birth":[[7,19],[12,18]],
+		"birth":[[50,8],[51,9]],
 		"drop":[],
 		"copy_id":20104,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40104":{
 		"scene_id":40104,
@@ -1344,12 +1447,13 @@
 		"map_id":40007,
 		"lv_limit":104,
 		"power_limit":0,
-		"monster_list":[[1,[[9,13],[10,14]],20104,1]],
+		"monster_list":[[1,[[37,9],[38,10]],20104,1]],
 		"viplv_limit":0,
-		"birth":[[7,19],[12,18]],
+		"birth":[[41,8],[40,7]],
 		"drop":[],
 		"copy_id":20105,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40105":{
 		"scene_id":40105,
@@ -1357,12 +1461,13 @@
 		"map_id":40007,
 		"lv_limit":105,
 		"power_limit":0,
-		"monster_list":[[1,[[9,13],[10,14]],20105,1]],
+		"monster_list":[[1,[[31,12],[30,11]],20105,1]],
 		"viplv_limit":0,
-		"birth":[[7,19],[12,18]],
+		"birth":[[36,11],[35,10]],
 		"drop":[],
 		"copy_id":20106,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40106":{
 		"scene_id":40106,
@@ -1370,12 +1475,13 @@
 		"map_id":40007,
 		"lv_limit":106,
 		"power_limit":0,
-		"monster_list":[[1,[[9,13],[10,14]],20106,1]],
+		"monster_list":[[1,[[23,22],[24,23]],20106,1]],
 		"viplv_limit":0,
-		"birth":[[7,19],[12,18]],
+		"birth":[[24,19],[25,20]],
 		"drop":[],
 		"copy_id":20107,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40107":{
 		"scene_id":40107,
@@ -1383,12 +1489,13 @@
 		"map_id":40007,
 		"lv_limit":107,
 		"power_limit":0,
-		"monster_list":[[1,[[9,13],[10,14]],20107,1]],
+		"monster_list":[[1,[[22,25],[21,24]],20107,1]],
 		"viplv_limit":0,
-		"birth":[[7,19],[12,18]],
+		"birth":[[28,24],[27,23]],
 		"drop":[],
 		"copy_id":20108,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40108":{
 		"scene_id":40108,
@@ -1396,12 +1503,13 @@
 		"map_id":40007,
 		"lv_limit":108,
 		"power_limit":0,
-		"monster_list":[[1,[[9,13],[10,14]],20108,1]],
+		"monster_list":[[1,[[37,30],[36,31]],20108,1]],
 		"viplv_limit":0,
-		"birth":[[7,19],[12,18]],
+		"birth":[[32,29],[33,28]],
 		"drop":[],
 		"copy_id":20109,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40109":{
 		"scene_id":40109,
@@ -1409,12 +1517,13 @@
 		"map_id":40007,
 		"lv_limit":109,
 		"power_limit":0,
-		"monster_list":[[1,[[9,13],[10,14]],20109,1]],
+		"monster_list":[[1,[[48,39],[47,40]],20109,1]],
 		"viplv_limit":0,
-		"birth":[[7,19],[12,18]],
+		"birth":[[45,37],[44,38]],
 		"drop":[],
 		"copy_id":20110,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40110":{
 		"scene_id":40110,
@@ -1422,12 +1531,13 @@
 		"map_id":40007,
 		"lv_limit":110,
 		"power_limit":0,
-		"monster_list":[[1,[[9,13],[10,14]],20110,1]],
+		"monster_list":[[1,[[57,31],[56,30]],20110,1]],
 		"viplv_limit":0,
-		"birth":[[7,19],[12,18]],
+		"birth":[[53,34],[54,35]],
 		"drop":[],
 		"copy_id":20111,
-		"ten_reward":[[1,1000,1]]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40111":{
 		"scene_id":40111,
@@ -1435,12 +1545,13 @@
 		"map_id":40007,
 		"lv_limit":111,
 		"power_limit":0,
-		"monster_list":[[1,[[9,13],[10,14]],20111,1]],
+		"monster_list":[[1,[[60,42],[61,41]],20111,1]],
 		"viplv_limit":0,
-		"birth":[[7,19],[12,18]],
+		"birth":[[56,40],[57,39]],
 		"drop":[],
 		"copy_id":20112,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40112":{
 		"scene_id":40112,
@@ -1448,12 +1559,13 @@
 		"map_id":40007,
 		"lv_limit":112,
 		"power_limit":0,
-		"monster_list":[[1,[[9,13],[10,14]],20112,1]],
+		"monster_list":[[1,[[61,45],[62,46]],20112,1]],
 		"viplv_limit":0,
-		"birth":[[7,19],[12,18]],
+		"birth":[[64,43],[65,44]],
 		"drop":[],
 		"copy_id":20113,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40113":{
 		"scene_id":40113,
@@ -1461,12 +1573,13 @@
 		"map_id":40007,
 		"lv_limit":113,
 		"power_limit":0,
-		"monster_list":[[1,[[9,13],[10,14]],20113,1]],
+		"monster_list":[[1,[[61,45],[62,46]],20113,1]],
 		"viplv_limit":0,
-		"birth":[[7,19],[12,18]],
+		"birth":[[64,43],[65,44]],
 		"drop":[],
 		"copy_id":20114,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40114":{
 		"scene_id":40114,
@@ -1474,12 +1587,13 @@
 		"map_id":40007,
 		"lv_limit":114,
 		"power_limit":0,
-		"monster_list":[[1,[[9,13],[10,14]],20114,1]],
+		"monster_list":[[1,[[48,53],[47,54]],20114,1]],
 		"viplv_limit":0,
-		"birth":[[7,19],[12,18]],
+		"birth":[[50,51],[51,52]],
 		"drop":[],
 		"copy_id":20115,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40115":{
 		"scene_id":40115,
@@ -1487,12 +1601,13 @@
 		"map_id":40007,
 		"lv_limit":115,
 		"power_limit":0,
-		"monster_list":[[1,[[9,13],[10,14]],20115,1]],
+		"monster_list":[[1,[[37,57],[38,58]],20115,1]],
 		"viplv_limit":0,
-		"birth":[[7,19],[12,18]],
+		"birth":[[42,55],[41,54]],
 		"drop":[],
 		"copy_id":20116,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40116":{
 		"scene_id":40116,
@@ -1500,12 +1615,13 @@
 		"map_id":40007,
 		"lv_limit":116,
 		"power_limit":0,
-		"monster_list":[[1,[[9,13],[10,14]],20116,1]],
+		"monster_list":[[1,[[25,52],[26,51]],20116,1]],
 		"viplv_limit":0,
-		"birth":[[7,19],[12,18]],
+		"birth":[[29,54],[30,53]],
 		"drop":[],
 		"copy_id":20117,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40117":{
 		"scene_id":40117,
@@ -1513,12 +1629,13 @@
 		"map_id":40007,
 		"lv_limit":117,
 		"power_limit":0,
-		"monster_list":[[1,[[9,13],[10,14]],20117,1]],
+		"monster_list":[[1,[[21,48],[20,49]],20117,1]],
 		"viplv_limit":0,
-		"birth":[[7,19],[12,18]],
+		"birth":[[23,51],[24,50]],
 		"drop":[],
 		"copy_id":20118,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40118":{
 		"scene_id":40118,
@@ -1526,12 +1643,13 @@
 		"map_id":40007,
 		"lv_limit":118,
 		"power_limit":0,
-		"monster_list":[[1,[[9,13],[10,14]],20118,1]],
+		"monster_list":[[1,[[17,43],[18,42]],20118,1]],
 		"viplv_limit":0,
-		"birth":[[7,19],[12,18]],
+		"birth":[[21,45],[22,44]],
 		"drop":[],
 		"copy_id":20119,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40119":{
 		"scene_id":40119,
@@ -1539,12 +1657,13 @@
 		"map_id":40007,
 		"lv_limit":119,
 		"power_limit":0,
-		"monster_list":[[1,[[9,13],[10,14]],20119,1]],
+		"monster_list":[[1,[[5,43],[6,42]],20119,1]],
 		"viplv_limit":0,
-		"birth":[[7,19],[12,18]],
+		"birth":[[11,41],[12,42]],
 		"drop":[],
 		"copy_id":20120,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40120":{
 		"scene_id":40120,
@@ -1552,12 +1671,13 @@
 		"map_id":40007,
 		"lv_limit":120,
 		"power_limit":0,
-		"monster_list":[[1,[[9,13],[10,14]],20120,1]],
+		"monster_list":[[1,[[42,17],[43,16]],20120,1]],
 		"viplv_limit":0,
-		"birth":[[7,19],[12,18]],
+		"birth":[[40,13],[39,14]],
 		"drop":[],
 		"copy_id":20121,
-		"ten_reward":[[1,200,1]]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40121":{
 		"scene_id":40121,
@@ -1565,12 +1685,13 @@
 		"map_id":40007,
 		"lv_limit":121,
 		"power_limit":0,
-		"monster_list":[[1,[[9,13],[10,14]],20121,1]],
+		"monster_list":[[1,[[50,20],[49,21]],20121,1]],
 		"viplv_limit":0,
-		"birth":[[7,19],[12,18]],
+		"birth":[[45,18],[44,19]],
 		"drop":[],
 		"copy_id":20122,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40122":{
 		"scene_id":40122,
@@ -1578,12 +1699,13 @@
 		"map_id":40007,
 		"lv_limit":122,
 		"power_limit":0,
-		"monster_list":[[1,[[9,13],[10,14]],20122,1]],
+		"monster_list":[[1,[[53,21],[54,22]],20122,1]],
 		"viplv_limit":0,
-		"birth":[[7,19],[12,18]],
+		"birth":[[55,19],[56,20]],
 		"drop":[],
 		"copy_id":20123,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40123":{
 		"scene_id":40123,
@@ -1596,7 +1718,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20124,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40124":{
 		"scene_id":40124,
@@ -1609,7 +1732,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20125,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40125":{
 		"scene_id":40125,
@@ -1622,7 +1746,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20126,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40126":{
 		"scene_id":40126,
@@ -1635,7 +1760,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20127,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40127":{
 		"scene_id":40127,
@@ -1648,7 +1774,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20128,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40128":{
 		"scene_id":40128,
@@ -1661,7 +1788,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20129,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40129":{
 		"scene_id":40129,
@@ -1674,7 +1802,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20130,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40130":{
 		"scene_id":40130,
@@ -1687,7 +1816,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20131,
-		"ten_reward":[[1,1000,1]]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40131":{
 		"scene_id":40131,
@@ -1700,7 +1830,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20132,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40132":{
 		"scene_id":40132,
@@ -1713,7 +1844,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20133,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40133":{
 		"scene_id":40133,
@@ -1726,7 +1858,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20134,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40134":{
 		"scene_id":40134,
@@ -1739,7 +1872,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20135,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40135":{
 		"scene_id":40135,
@@ -1752,7 +1886,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20136,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40136":{
 		"scene_id":40136,
@@ -1765,7 +1900,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20137,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40137":{
 		"scene_id":40137,
@@ -1778,7 +1914,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20138,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40138":{
 		"scene_id":40138,
@@ -1791,7 +1928,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20139,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40139":{
 		"scene_id":40139,
@@ -1804,7 +1942,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20140,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40140":{
 		"scene_id":40140,
@@ -1817,7 +1956,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20141,
-		"ten_reward":[[1,200,1]]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40141":{
 		"scene_id":40141,
@@ -1830,7 +1970,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20142,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40142":{
 		"scene_id":40142,
@@ -1843,7 +1984,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20143,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40143":{
 		"scene_id":40143,
@@ -1856,7 +1998,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20144,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40144":{
 		"scene_id":40144,
@@ -1869,7 +2012,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20145,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40145":{
 		"scene_id":40145,
@@ -1882,7 +2026,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20146,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40146":{
 		"scene_id":40146,
@@ -1895,7 +2040,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20147,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40147":{
 		"scene_id":40147,
@@ -1908,7 +2054,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20148,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40148":{
 		"scene_id":40148,
@@ -1921,7 +2068,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20149,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40149":{
 		"scene_id":40149,
@@ -1934,7 +2082,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20150,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40150":{
 		"scene_id":40150,
@@ -1947,7 +2096,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20151,
-		"ten_reward":[[1,1000,1]]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40151":{
 		"scene_id":40151,
@@ -1960,7 +2110,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20152,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40152":{
 		"scene_id":40152,
@@ -1973,7 +2124,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20153,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40153":{
 		"scene_id":40153,
@@ -1986,7 +2138,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20154,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40154":{
 		"scene_id":40154,
@@ -1999,7 +2152,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20155,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40155":{
 		"scene_id":40155,
@@ -2012,7 +2166,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20156,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40156":{
 		"scene_id":40156,
@@ -2025,7 +2180,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20157,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40157":{
 		"scene_id":40157,
@@ -2038,7 +2194,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20158,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40158":{
 		"scene_id":40158,
@@ -2051,7 +2208,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20159,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40159":{
 		"scene_id":40159,
@@ -2064,7 +2222,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20160,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40160":{
 		"scene_id":40160,
@@ -2077,7 +2236,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20161,
-		"ten_reward":[[1,200,1]]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40161":{
 		"scene_id":40161,
@@ -2090,7 +2250,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20162,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40162":{
 		"scene_id":40162,
@@ -2103,7 +2264,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20163,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40163":{
 		"scene_id":40163,
@@ -2116,7 +2278,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20164,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40164":{
 		"scene_id":40164,
@@ -2129,7 +2292,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20165,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40165":{
 		"scene_id":40165,
@@ -2142,7 +2306,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20166,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40166":{
 		"scene_id":40166,
@@ -2155,7 +2320,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20167,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40167":{
 		"scene_id":40167,
@@ -2168,7 +2334,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20168,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40168":{
 		"scene_id":40168,
@@ -2181,7 +2348,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20169,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40169":{
 		"scene_id":40169,
@@ -2194,7 +2362,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20170,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40170":{
 		"scene_id":40170,
@@ -2207,7 +2376,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20171,
-		"ten_reward":[[1,1000,1]]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40171":{
 		"scene_id":40171,
@@ -2220,7 +2390,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20172,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40172":{
 		"scene_id":40172,
@@ -2233,7 +2404,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20173,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40173":{
 		"scene_id":40173,
@@ -2246,7 +2418,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20174,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40174":{
 		"scene_id":40174,
@@ -2259,7 +2432,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20175,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40175":{
 		"scene_id":40175,
@@ -2272,7 +2446,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20176,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40176":{
 		"scene_id":40176,
@@ -2285,7 +2460,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20177,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40177":{
 		"scene_id":40177,
@@ -2298,7 +2474,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20178,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40178":{
 		"scene_id":40178,
@@ -2311,7 +2488,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20179,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40179":{
 		"scene_id":40179,
@@ -2324,7 +2502,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20180,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40180":{
 		"scene_id":40180,
@@ -2337,7 +2516,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20181,
-		"ten_reward":[[1,200,1]]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40181":{
 		"scene_id":40181,
@@ -2350,7 +2530,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20182,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40182":{
 		"scene_id":40182,
@@ -2363,7 +2544,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20183,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40183":{
 		"scene_id":40183,
@@ -2376,7 +2558,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20184,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40184":{
 		"scene_id":40184,
@@ -2389,7 +2572,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20185,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40185":{
 		"scene_id":40185,
@@ -2402,7 +2586,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20186,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40186":{
 		"scene_id":40186,
@@ -2415,7 +2600,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20187,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40187":{
 		"scene_id":40187,
@@ -2428,7 +2614,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20188,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40188":{
 		"scene_id":40188,
@@ -2441,7 +2628,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20189,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40189":{
 		"scene_id":40189,
@@ -2454,7 +2642,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20190,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40190":{
 		"scene_id":40190,
@@ -2467,7 +2656,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20191,
-		"ten_reward":[[1,1000,1]]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40191":{
 		"scene_id":40191,
@@ -2480,7 +2670,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20192,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40192":{
 		"scene_id":40192,
@@ -2493,7 +2684,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20193,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40193":{
 		"scene_id":40193,
@@ -2506,7 +2698,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20194,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40194":{
 		"scene_id":40194,
@@ -2519,7 +2712,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20195,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40195":{
 		"scene_id":40195,
@@ -2532,7 +2726,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20196,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40196":{
 		"scene_id":40196,
@@ -2545,7 +2740,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20197,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40197":{
 		"scene_id":40197,
@@ -2558,7 +2754,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20198,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40198":{
 		"scene_id":40198,
@@ -2571,7 +2768,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20199,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40199":{
 		"scene_id":40199,
@@ -2584,7 +2782,8 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20200,
-		"ten_reward":[]
+		"ten_reward":[],
+		"pickup":1
 	},
 	"40200":{
 		"scene_id":40200,
@@ -2597,6 +2796,7 @@
 		"birth":[[7,19],[12,18]],
 		"drop":[],
 		"copy_id":20200,
-		"ten_reward":[[1,200,1]]
+		"ten_reward":[],
+		"pickup":1
 	}
 }

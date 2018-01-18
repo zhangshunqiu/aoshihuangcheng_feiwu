@@ -1,4 +1,72 @@
 declare module skins{
+	class ComBtnALeftSkin extends eui.Skin{
+	}
+}
+declare module skins{
+	class ComBtnARightSkin extends eui.Skin{
+	}
+}
+declare module skins{
+	class ComBtnAddSkin extends eui.Skin{
+	}
+}
+declare module skins{
+	class ComBtnBackSkin extends eui.Skin{
+	}
+}
+declare module skins{
+	class ComBtnClose1Skin extends eui.Skin{
+	}
+}
+declare module skins{
+	class ComBtnGTHSkin extends eui.Skin{
+	}
+}
+declare module skins{
+	class ComBtnLeftArrowSkin extends eui.Skin{
+	}
+}
+declare module skins{
+	class ComBtnList1Skin extends eui.Skin{
+	}
+}
+declare module skins{
+	class ComBtnList2Skin extends eui.Skin{
+	}
+}
+declare module skins{
+	class ComBtnRedSkin extends eui.Skin{
+	}
+}
+declare module skins{
+	class ComBtnReduceSkin extends eui.Skin{
+	}
+}
+declare module skins{
+	class ComBtnRightArrowSkin extends eui.Skin{
+	}
+}
+declare module skins{
+	class ComBtnSmallAddSkin extends eui.Skin{
+	}
+}
+declare module skins{
+	class ComBtnTab1Skin extends eui.Skin{
+	}
+}
+declare module skins{
+	class ComBtnTab2Skin extends eui.Skin{
+	}
+}
+declare module skins{
+	class ComBtnWHSkin extends eui.Skin{
+	}
+}
+declare module skins{
+	class ComCheckBox1Skin extends eui.Skin{
+	}
+}
+declare module skins{
 	class ButtonSkin1 extends eui.Skin{
 	}
 }
@@ -17,6 +85,8 @@ declare module skins{
 declare module skins{
 	class ButtonSkin5 extends eui.Skin{
 	}
+}
+declare class ButtonSkinChat extends eui.Skin{
 }
 declare module skins{
 	class ButtonSkinCommon extends eui.Skin{
@@ -72,7 +142,17 @@ declare module skins{
 	class ProgressBarSkin3 extends eui.Skin{
 	}
 }
+declare module skins{
+	class ProgressBarSkin4 extends eui.Skin{
+	}
+}
+declare module skins{
+	class ProgressBarSkin5 extends eui.Skin{
+	}
+}
 declare class ProgressBarWingExpSkin extends eui.Skin{
+}
+declare class ProgressBarWingExpSkin1 extends eui.Skin{
 }
 declare module skins{
 	class ScrollerSkin extends eui.Skin{
@@ -102,11 +182,17 @@ declare module skins{
 	class VSliderSkin extends eui.Skin{
 	}
 }
+declare class comBtnAdd extends eui.Skin{
+}
+declare class AlertTipsSkin extends eui.Skin{
+}
 declare class BaseItemSkin extends eui.Skin{
 }
-declare class BaseTipsSkin extends eui.Skin{
+declare class ComBaseViewBgSkin extends eui.Skin{
 }
 declare class CommonWinSkin extends eui.Skin{
+}
+declare class ItemTipSkin extends eui.Skin{
 }
 declare class ItemWayItemSkin extends eui.Skin{
 }
@@ -170,9 +256,7 @@ declare class ArtifactSkin extends eui.Skin{
 }
 declare class BackpackSkin extends eui.Skin{
 }
-declare class ItemTipSkin extends eui.Skin{
-}
-declare class BagCapacityTipSkin extends eui.Skin{
+declare class BossComing extends eui.Skin{
 }
 declare class BossLose extends eui.Skin{
 }
@@ -186,7 +270,11 @@ declare class BossWin extends eui.Skin{
 }
 declare class incomePromote extends eui.Skin{
 }
+declare class ChatIconTipsSkin extends eui.Skin{
+}
 declare class ChatItemSkin extends eui.Skin{
+}
+declare class ChatPortSkin extends eui.Skin{
 }
 declare class ChatSkin extends eui.Skin{
 }
@@ -226,7 +314,13 @@ declare class ForgeOrangeEquipSkin extends eui.Skin{
 }
 declare class ForgeSkin extends eui.Skin{
 }
+declare class ForgeSkin_1 extends eui.Skin{
+}
 declare class ForgeStarInfoSkin extends eui.Skin{
+}
+declare class ForgeStarSkin extends eui.Skin{
+}
+declare class ForgeStrengthSkin extends eui.Skin{
 }
 declare class FortuneProgressSkin extends eui.Skin{
 }
@@ -239,6 +333,8 @@ declare class GuideViewSkin extends eui.Skin{
 declare class HeadComponent extends eui.Skin{
 }
 declare class HeroAttributeSkin extends eui.Skin{
+}
+declare class HeroHeadItemSkin extends eui.Skin{
 }
 declare class HeroSelectSkin extends eui.Skin{
 }
@@ -259,8 +355,6 @@ declare class JewelSkin extends eui.Skin{
 declare class JewelSuperSkin extends eui.Skin{
 }
 declare class JewelTipSkin extends eui.Skin{
-}
-declare class LoadingSkin extends eui.Skin{
 }
 declare class LoginCreateRoleSkin extends eui.Skin{
 }
@@ -292,9 +386,13 @@ declare class MetalSkin extends eui.Skin{
 }
 declare class MustDoAchieveSkin extends eui.Skin{
 }
-declare class MustDoMedalSkin extends eui.Skin{
+declare class MustDoLightenSkin extends eui.Skin{
 }
-declare class UnTakeAchieveSkin extends eui.Skin{
+declare class MustDoTitleDetailSkin extends eui.Skin{
+}
+declare class MustDoTitleItemSkin extends eui.Skin{
+}
+declare class MustDoTitleSkin extends eui.Skin{
 }
 declare class MonthCardDailyReward extends eui.Skin{
 }
@@ -312,13 +410,15 @@ declare class ActivityRewardItem extends eui.Skin{
 }
 declare class ActivityTaskSkin extends eui.Skin{
 }
-declare class MustDoLightenSkin extends eui.Skin{
+declare class MustDoMedalSkin extends eui.Skin{
 }
-declare class MustDoTitleDetailSkin extends eui.Skin{
+declare class UnTakeAchieveSkin extends eui.Skin{
 }
-declare class MustDoTitleItemSkin extends eui.Skin{
+declare class PlayerHeroAttrSkin extends eui.Skin{
 }
-declare class MustDoTitleSkin extends eui.Skin{
+declare class PlayerMsgSkin extends eui.Skin{
+}
+declare class PlayerMsgTabItemSkin extends eui.Skin{
 }
 declare class RaiderRewardSkin extends eui.Skin{
 }
@@ -328,6 +428,10 @@ declare class RankBtnSkin extends eui.Skin{
 }
 declare class RankButtonSkin extends eui.Skin{
 }
+declare class RankListItemKing extends eui.Skin{
+}
+declare class RankListItemLevel extends eui.Skin{
+}
 declare class RankListItemSkin extends eui.Skin{
 }
 declare class RankTipsSkin extends eui.Skin{
@@ -335,6 +439,10 @@ declare class RankTipsSkin extends eui.Skin{
 declare class RankTopSkin extends eui.Skin{
 }
 declare class RankViewSkin extends eui.Skin{
+}
+declare class GuanqiaListItemSkin extends eui.Skin{
+}
+declare class RankGuanqiaViewSkin extends eui.Skin{
 }
 declare class RebornPointItemSkin extends eui.Skin{
 }
@@ -345,6 +453,8 @@ declare class RebornSkin extends eui.Skin{
 declare class ShopBuyWinSkin extends eui.Skin{
 }
 declare class ShopItemSkin extends eui.Skin{
+}
+declare class ShopPreviewSkin extends eui.Skin{
 }
 declare class ShopSkin extends eui.Skin{
 }
@@ -368,13 +478,21 @@ declare class TestSkin extends eui.Skin{
 }
 declare class BroadcastSkin extends eui.Skin{
 }
+declare class CombatAttrSkin extends eui.Skin{
+}
+declare class CombatSkin extends eui.Skin{
+}
 declare class VipGiftSkin extends eui.Skin{
 }
 declare class VipSkin extends eui.Skin{
 }
+declare class WelfareSkin extends eui.Skin{
+}
 declare class WelfareLvItemSkin extends eui.Skin{
 }
-declare class WelfareSkin extends eui.Skin{
+declare class WelfareLvPackageSkin extends eui.Skin{
+}
+declare class WelfareNoteSkin extends eui.Skin{
 }
 declare class SignItemSkin extends eui.Skin{
 }
@@ -384,9 +502,9 @@ declare class SignRewardSkin extends eui.Skin{
 }
 declare class SignViewSkin extends eui.Skin{
 }
-declare class ResignPromptSkin extends eui.Skin{
-}
 declare class SignVipPromptSkin extends eui.Skin{
+}
+declare class WingAllSkin extends eui.Skin{
 }
 declare class WingDevelopSkin extends eui.Skin{
 }

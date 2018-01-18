@@ -6,24 +6,19 @@
 		<e:Image id="img_close" source="common_btn_close_2_png" x="421" y="11"/>
 		<customui:BaseItem id="baseItem" width="90" height="90" x="66" y="115" anchorOffsetX="45" anchorOffsetY="45"/>
 		<e:Image source="shop_bg_daojuming_moren_png" x="113" y="70"/>
-		<e:Image id="img_money" source="common_yuanbao_png" x="121" y="125"/>
-		<e:Image id="img_money2" source="common_yuanbao_png" x="197" y="279"/>
+		<e:Image id="img_money" x="129" y="133" source="com_icon_gold_png"/>
+		<e:Image id="img_money2" x="206" y="287" source="com_icon_gold_png"/>
 		<e:Image source="common_bg_shuju_png" y="239" height="37" horizontalCenter="0.5"/>
-		<e:Image id="img_mind10" source="shop_btn_tanchuang_huise_png" x="29" y="236" width="90"/>
-		<e:Image id="img_add10" source="shop_btn_tanchuang_hongse_png" x="367" y="236" width="90"/>
-		<e:BitmapLabel x="398" y="248" font="shop_shuzhi_zhekou_fnt" text="10" touchEnabled="false"/>
-		<e:BitmapLabel x="63" y="248" font="shop_shuzhi_zhekou_fnt" text="10" touchEnabled="false"/>
+		<e:Image id="img_mind10" x="36" y="230" source="com_btn_aleft_png"/>
+		<e:Image id="img_add10" x="399" y="230" source="com_btn_aright_png"/>
 		<e:Label id="lb_name" text="名字七个字的" x="129" y="85" fontFamily="SimHei" size="24" textColor="0xffbc3a"/>
 		<e:Label text="总价:" x="148" y="285" fontFamily="SimHei" size="20" textColor="0xFFBC3A"/>
 		<e:Label id="lb_price" text="99999" x="180" y="134" fontFamily="SimHei" size="20" textColor="0xbfbfbf"/>
 		<e:Label id="lb_total" text="99999" x="253" y="288" fontFamily="SimHei" size="20" textColor="0xBFBFBF"/>
 		<e:Label id="lb_count" text="99999" y="244" fontFamily="SimHei" size="24" textColor="0xdf8815" textAlign="center" verticalAlign="middle" width="120" horizontalCenter="0.5"/>
 		<e:Label id="lb_desc" text="" y="161" fontFamily="SimHei" size="24" textColor="0x6cfc38" width="450" horizontalCenter="0.5"/>
-		<e:Image id="img_buy" source="common_btn_common_png" y="320" horizontalCenter="0" height="51"/>
-		<e:Image id="img_add" x="319" y="236" source="common_btn_jiahao_png"/>
-		<e:Image id="img_mind" source="common_btn_jian_png" x="122" y="236"/>
-		<e:Image y="332" horizontalCenter="0.5" touchEnabled="false" source="shop_txt_goumai_anniu_png"/>
-		<e:Image source="shop_jia_png" x="384" y="250" touchEnabled="false"/>
-		<e:Image source="shop-jian_png" x="50" y="250" touchEnabled="false"/>
+		<e:Button id="img_buy" label="购买" y="315" skinName="skins.ComBtnList1Skin" horizontalCenter="0.5"/>
+		<e:Image id="img_add" x="324" y="230" source="com_btn_oneAdd_png"/>
+		<e:Image id="img_mind" x="111" y="230" source="com_btn_oneReduce_png"/>
 	</e:Group>
 </e:Skin>

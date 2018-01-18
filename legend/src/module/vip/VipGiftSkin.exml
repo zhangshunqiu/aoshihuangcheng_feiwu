@@ -10,7 +10,7 @@
 					<e:Label id="lb_backpack" text="1、免费获得     背包" x="0" y="8" size="24" fontFamily="黑体" scaleX="1" scaleY="1" textColor="0xbfbfbf" visible="false"/>
 					<e:Label id="lb_transcript" text="2、每天可购买材料副本" x="0" y="44" size="24" fontFamily="黑体" scaleX="1" scaleY="1" textColor="0xbfbfbf" visible="false"/>
 					<e:Label id="lb_moneyTree" text="3、摇钱树每天可使用" x="0" y="80" size="24" fontFamily="黑体" scaleX="1" scaleY="1" textColor="0xbfbfbf" visible="false"/>
-					<e:Label id="lb_quickFight" text="4、快速战斗每天可购买" x="0" y="116" size="24" fontFamily="黑体" scaleX="1" scaleY="1" textColor="0xbfbfbf" visible="false"/>
+					<e:Label id="lb_quickFight" text="4、快速战斗每天可多购买" x="0" y="116" size="24" fontFamily="黑体" scaleX="1" scaleY="1" textColor="0xbfbfbf" visible="false"/>
 					<e:Label id="lb_arena" text="5、竞技场每天可购买" x="0" y="157" size="24" fontFamily="黑体" scaleX="1" scaleY="1" textColor="0xbfbfbf" visible="false"/>
 					<e:Label id="lb_backpackNum" text="100个" x="132" y="8" size="24" fontFamily="黑体" width="60" textAlign="center" scaleX="1" scaleY="1" textColor="0x00f828" visible="false"/>
 					<e:Label id="lb_partner" text="1、可提前解锁" x="0" y="18" size="24" fontFamily="黑体" scaleX="1" scaleY="1" textColor="0xBFBFBF" visible="false"/>
@@ -19,7 +19,7 @@
 					<e:Label id="lb_wipe" text="1、一键扫荡个人BOSS" x="0" y="38" size="24" fontFamily="黑体" scaleX="1" scaleY="1" textColor="0xBFBFBF" visible="false"/>
 					<e:Label id="lb_transcriptNum" text="2次" x="255" y="44" size="24" fontFamily="黑体" textAlign="center" scaleX="1" scaleY="1" textColor="0x00f828" visible="false"/>
 					<e:Label id="lb_moneyTreeNum" text="2次" x="230" y="80" size="24" fontFamily="黑体" textAlign="center" scaleX="1" scaleY="1" textColor="0x00f828" visible="false"/>
-					<e:Label id="lb_quickFightNum" text="2次" x="258" y="116" size="24" fontFamily="黑体" textAlign="center" scaleX="1" scaleY="1" textColor="0x00f828" visible="false"/>
+					<e:Label id="lb_quickFightNum" text="2次" x="276" y="116" size="24" fontFamily="黑体" textAlign="center" scaleX="1" scaleY="1" textColor="0x00f828" visible="false"/>
 					<e:Label id="lb_arenaNum" text="2次" x="234" y="157" size="24" fontFamily="黑体" textAlign="center" scaleX="1" scaleY="1" textColor="0x00f828" visible="false"/>
 				</e:Group>
 				</e:Group>
@@ -37,10 +37,10 @@
 		<e:Image source="vip_txt_mabidingshen_png" x="290" y="373"/>
 		<e:Button id="btn_get" label="" x="246" y="622">
 			<e:skinName>
-			<e:Skin states="up,down,disabled">
+				<e:Skin states="up,down,disabled">
 				<e:Image width="100%" height="100%" source="vip_btn_lingqu_png" source.down="vip_btn_weilingqu_png"/>
 				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-			</e:Skin>
+				</e:Skin>
 			</e:skinName>
 		</e:Button>
 		<e:Image id="img_hadReceive" source="mail_yilingqu_png" y="634" x="284" touchEnabled="false" visible="false"/>

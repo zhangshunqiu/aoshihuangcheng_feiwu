@@ -16,6 +16,7 @@ module game{
         public countDownNum: number = 5;
         private _timerId: number = 0;
         public btlb_countDown: eui.BitmapLabel;
+        private _worldBoss: boolean = false;
         public _bossModel: BossModel = BossModel.getInstance();
 
         public constructor(viewConf:WinManagerVO = null) {
@@ -31,7 +32,7 @@ module game{
             this.gp_go.addEventListener(egret.TouchEvent.TOUCH_TAP, this.openHeroWin, this);
             this.gp_return.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onBack, this);
             if(App.RoleManager.heroList.length == 3) {
-                this.gp_go.visible = false;
+                this.gp_middle.visible = false;
             }
         }
 
@@ -112,6 +113,9 @@ module game{
                 this.initDropList();
                 this.dropItem();
             }
+            if (SceneUtil.isWorldBossScene(SceneModel.getInstance().sceneId)) {
+                this._worldBoss = true;
+            }
             this.countDownNum = 5;
             if(this._timerId == 0){
                 this._timerId = App.GlobalTimer.addSchedule(1000, 0, this.timeUpdate, this)
@@ -144,7 +148,12 @@ module game{
             App.GlobalTimer.remove(this._timerId);
             this._bossModel.wave = 0;   //把打小怪的波数清零
             App.EventSystem.dispatchEvent(PanelNotify.BOSS_WAVE_UPDATE);
-            App.Socket.send(13001, {});
+            if(this._worldBoss) {
+                App.Socket.send(36008, {});
+                this._worldBoss = false;
+            } else {
+                App.Socket.send(13001, {});
+            }
 		}
 		/**
 		 * 销毁
@@ -162,10 +171,10 @@ module game{
 			this.skinName = `<?xml version="1.0" encoding="utf-8"?>
 				<e:Skin class="getItemSkin" width="100" height="125" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:customui="customui.*">
 					<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
-						<customui:BaseItem id="baseItem" width="100" height="100" horizontalCenter="0" top="0" anchorOffsetX="0" anchorOffsetY="0"/>
+						<customui:BaseItem id="baseItem" width="90" height="90" horizontalCenter="0" top="0" anchorOffsetX="0" anchorOffsetY="0"/>
 					</e:Group>
 				</e:Skin>`;
-			this.baseItem.lb_name.visible = true;
+			this.baseItem.setItemNameVisible(true);
 	    }
 
         protected dataChanged() {
@@ -173,12 +182,6 @@ module game{
             this.data.type = this.data.type || ClientType.BASE_ITEM;
             this.data.num = this.data.num || this.data.good_num;
 			this.baseItem.updateBaseItem(this.data.type, this.data.id, this.data.num);
-            if (this.data.type == ClientType.EQUIP) {
-				let info = App.ConfigManager.equipConfig()[this.data.good_id];
-				if (info) {
-					this.baseItem.lb_name.text = "LV:" + info.limit_lvl;
-				}
-			}
 		}
     }
 }

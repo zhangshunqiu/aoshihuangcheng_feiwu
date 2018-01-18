@@ -51,6 +51,8 @@ class Main extends egret.DisplayObjectContainer {
     private onAddToStage(event: egret.Event) {
         // this.stage.addEventListener(egret.Event.ACTIVATE,this.onActive,this);
         // this.stage.addEventListener(egret.Event.DEACTIVATE,this.onDeactivate,this);
+        this.stage.frameRate = 60;
+        RES.setMaxLoadingThread(10);
         console.log("-- ADD TO STAGE");
         //渲染类型
         //<li>运行在Web上     egret.RuntimeType.WEB</li>
@@ -115,7 +117,7 @@ class Main extends egret.DisplayObjectContainer {
         //console.log(event);
         RES.getResAsync("agent_json", function (obj) {
             if( this.loadingView){
-                 this.loadingView.setProgress(80, 100);
+                 this.loadingView.setProgress(0, 100);
             }
             App.agentConfig = obj;
             // load skin theme configuration file, you can manually modify the file. And replace the default skin.
@@ -178,5 +180,46 @@ class Main extends egret.DisplayObjectContainer {
         }
         this.addChild(this.gameRootLay);
         (MainController.getInstance() as MainController).gameStart(this.gameRootLay);
+
+        /*
+        var tx:RichTextField = new RichTextField(200);
+        //tx.multiline = true;
+        var str:string = 
+            '没有任何格式初始文本，' +
+            '<font fontfamily="Verdana" href="event:triggered" color="#0000ff" size="30">Verdana blue large</font>' +
+            '<font color="#ff7f50" size="10">珊瑚色<b>局部加粗</b>小字体</font>' +
+            '<href>Verdana blue large</href>' +
+            '<i>斜体</i>'
+        
+        console.log( str);
+        tx.textHtml = str;
+        // var arr:any = new Array<egret.ITextElement>(
+        //     { text:"这段文字有链接这段文qwert12345qwert12345", style: { "href" : "event:text event triggered" } },
+        //     { text:" -32- ", style: {} },
+        //     { text:" -32- ", style: {} },
+        //     { text:" -32- ", style: {} },
+        //     { text:" -32- ", style: {} },
+        //     { text:" -32- ", style: {} },
+        //     { text:" -32- ", style: {} },
+        //     { text:"这段文字没链接", style: {} }
+        // );
+        // tx.textFlow = arr;
+
+        tx.x = 0;
+        tx.y = 0;
+        this.addChild( tx );
+        tx.touchEnabled = true;
+        tx.addEventListener( egret.TextEvent.LINK, function( evt:egret.TextEvent ){
+            console.log( evt.text );
+        }, this );
+        console.log(tx.width,tx.height);
+        // var linelist:Array<egret.ILineElement> = tx.$getLinesArr();
+        // console.log(arr);
+        // for(var i:number = 0;i<linelist.length;i++){
+        //     var item:egret.ILineElement = linelist[i];
+
+        // }
+        */
+        
     }
 }

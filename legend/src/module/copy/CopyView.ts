@@ -60,16 +60,43 @@ module game {
             this.initMaterialView();
             this.initChallegeView();
             this.validateNow();
+
+            App.BtnTipManager.addBtnTipItem(ConstBtnTipType.COPY_PERSONAL, this.tabbar.getChildAt(0) as egret.DisplayObjectContainer);
+            App.BtnTipManager.addBtnTipItem(ConstBtnTipType.COPY_MATERIAL, this.tabbar.getChildAt(1) as egret.DisplayObjectContainer);
+            App.BtnTipManager.addBtnTipItem(ConstBtnTipType.COPY_CHALLENGE, this.tabbar.getChildAt(2) as egret.DisplayObjectContainer);
+        }
+
+        /**红点 */
+        private setBtnRedTip() {
+            if (this._copyModel.canChallenge.bossBool) {
+                App.BtnTipManager.setTypeValue(ConstBtnTipType.COPY_PERSONAL, true);
+            } else {
+                App.BtnTipManager.setTypeValue(ConstBtnTipType.COPY_PERSONAL, false);
+            }
+            if (this._copyModel.canChallenge.materialBool) {
+                App.BtnTipManager.setTypeValue(ConstBtnTipType.COPY_MATERIAL, true);
+            } else {
+                App.BtnTipManager.setTypeValue(ConstBtnTipType.COPY_MATERIAL, false);
+            }
         }
 
         private changeIndex(event: eui.ItemTapEvent) {
+            this.changeView(event.itemIndex);
+            if (event.itemIndex == ConstCopyType.Tower) {
+                if (App.BtnTipManager.getTypeValue(ConstBtnTipType.COPY_CHALLENGE)) {
+                    App.BtnTipManager.setTypeValue(ConstBtnTipType.COPY_CHALLENGE, false);
+                }
+            }
+        }
+
+        private changeView(selectIndex) {
             this.gp_boss.visible = false;
             this.gp_challenge.visible = false;
             this.gp_material.visible = false;
             this.img_btnBg1.visible = false;
             this.img_btnBg2.visible = false;
             this.img_btnBg3.visible = false;
-            switch (event.itemIndex) {
+            switch (selectIndex) {
                 case 0:
                     this.gp_boss.visible = true;
                     App.Socket.send(31001, { id: 1 });
@@ -109,7 +136,7 @@ module game {
             layout.horizontalGap = 0;
             layout.horizontalAlign = egret.HorizontalAlign.JUSTIFY;
             this.list_challenge.layout = layout;
-            this.list_challenge.addEventListener(eui.ItemTapEvent.ITEM_TAP, this.itemTap, this);
+            // this.list_challenge.addEventListener(eui.ItemTapEvent.ITEM_TAP, this.itemTap, this);
             this.btn_challenge.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTouchChallengeBoss, this);
             this.img_nextBoss1.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
                 this.updateChallengeView(this._copyModel.challengeCopyInfo1);
@@ -174,6 +201,7 @@ module game {
             } else {
                 this.updateChallengeView(this._copyModel.challengeCopyInfo0);
             }
+            this.setBtnRedTip();
         }
 
         private joinBoss(resId, scale) {
@@ -188,13 +216,15 @@ module game {
         }
 
         private onTouchChallengeBoss() {
-            App.Socket.send(31002, { type: 3, id: this._copyModel.topId });
+            if (!GlobalUtil.checkBagCapacity()) {
+                App.Socket.send(31002, { type: 3, id: this._copyModel.topId });
+            }
         }
 
-        private itemTap(event: eui.ItemTapEvent) {
-            let itemData = event.item;
-            App.GlobalTips.showItemTips(itemData[0], itemData[1], null);
-        }
+        // private itemTap(event: eui.ItemTapEvent) {
+        //     let itemData = event.item;
+        //     App.GlobalTips.showItemTips(itemData[0], itemData[1], null);
+        // }
 
         public checkGuide() {
             if (this.list_boss.numChildren > 0) {
@@ -207,7 +237,7 @@ module game {
         public removeGuide() {
             App.GuideManager.removeClickBtn(1016, 2);
         }
-                
+
         /**
          * openParam 
          * @param {type: ConstCopyType.Boss}  ConstCopyType.Boss为boss副本，ConstCopyType.Material为材料副本,ConstCopyType.Tower为爬塔副本
@@ -216,9 +246,12 @@ module game {
             super.openWin(openParam);
             if (openParam) {
                 this.tabbar.selectedIndex = openParam.type;
-
+                this.changeView(this.tabbar.selectedIndex);
             }
             App.Socket.send(31001, { id: 1 });
+            egret.setTimeout(() => {
+                App.Socket.send(31001, { id: 2 });
+            }, this, 100);
             if (this._copyInfoUpdateEventId == 0) {
                 this._copyInfoUpdateEventId = App.EventSystem.addEventListener(PanelNotify.COPY_INFO_UPDATE, this.updateInfo, this);
             }
@@ -254,6 +287,10 @@ module game {
          */
         public destroy(): void {
             super.destroy();
+            if (this._bossMc) {
+                this._bossMc.destroy();
+                this._bossMc = null;
+            }
         }
     }
 
@@ -285,7 +322,9 @@ module game {
             this.list.layout = layout;
             this.list.addEventListener(eui.ItemTapEvent.ITEM_TAP, this.itemTap, this);
             this.btn_challenge.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
-                App.Socket.send(31002, { type: 1, id: this.data.scene_id });
+                if (!GlobalUtil.checkBagCapacity()) {
+                    App.Socket.send(31002, { type: 1, id: this.data.scene_id });
+                }
             }, this);
         }
 
@@ -334,6 +373,10 @@ module game {
 
     class MaterialItem extends eui.ItemRenderer {
         public img_materialName: eui.Image;
+        public lb_desText: eui.Label;
+        public gp_sweep: eui.Group;
+        public img_sweep: eui.Image;
+        public lb_gold: eui.Label;
         public lb_challengeNum: eui.Label;
         public gp_right: eui.Group;
         public btn_challenge: eui.Button;
@@ -351,7 +394,17 @@ module game {
 
         private initView() {
             this.btn_challenge.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
-                App.Socket.send(31002, { type: 2, id: this.data.scene_id });
+                if (this.data.times_limit > 0) {
+                    if (!GlobalUtil.checkBagCapacity()) {
+                        App.Socket.send(31002, { type: 2, id: this.data.scene_id });
+                    }
+                } else if (this.data.sweep > 0) {
+                    if (!GlobalUtil.checkBagCapacity()) {
+                        App.Socket.send(31003, { type: 2, id: this.data.scene_id });
+                    }
+                } else {
+
+                }
             }, this);
         }
 
@@ -373,7 +426,6 @@ module game {
                     this.img_bg.source = "copy_material_bg_jianjia_png";
                     break;
             }
-            this.lb_challengeNum.text = Math.max(this.data.times_limit, 0) + "次";
             this.updateBtn();
         }
 
@@ -381,16 +433,33 @@ module game {
             if (App.RoleManager.roleInfo.lv >= this.data.lv_limit) {
                 this.gp_right.visible = true;
                 this.lb_tip.visible = false;
+                this.btn_challenge.currentState = "up";
+                this.btn_challenge.touchEnabled = true;
+                this.lb_desText.textAlign = "left";
+                this.lb_challengeNum.visible = true;
+                this.img_done.visible = false;
                 if (this.data.times_limit > 0) {
-                    this.btn_challenge.currentState = "up";
-                    this.btn_challenge.touchEnabled = true;
                     this.img_challenge.visible = true;
+                    this.gp_sweep.visible = false;
+                    this.lb_desText.text = "挑战次数：";
+                    this.lb_challengeNum.text = Math.max(this.data.times_limit, 0) + "次";
+                } else if (this.data.sweep > 0) {
+                    this.img_challenge.visible = false;
+                    this.gp_sweep.visible = true;
+                    this.img_sweep.visible = true;
                     this.img_done.visible = false;
+                    this.lb_desText.text = "扫荡次数：";
+                    this.lb_challengeNum.text = Math.max(this.data.sweep, 0) + "次";
+                    this.lb_gold.text = App.ConfigManager.getConstConfigByType("MATERIAL_SWEEP_GOLD").value;
                 } else {
                     this.btn_challenge.currentState = "down";
                     this.btn_challenge.touchEnabled = false;
                     this.img_challenge.visible = false;
+                    this.gp_sweep.visible = false;
                     this.img_done.visible = true;
+                    this.lb_desText.text = "提升VIP可增加扫荡次数";
+                    this.lb_desText.textAlign = "center";
+                    this.lb_challengeNum.visible = false;
                 }
             } else {
                 this.gp_right.visible = false;
@@ -412,7 +481,7 @@ module game {
             this.skinName = `<?xml version="1.0" encoding="utf-8"?>
 				<e:Skin class="backpackItemSkin" width="100" height="125" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:customui="customui.*">
 					<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
-						<customui:BaseItem id="baseItem" width="100" height="100" horizontalCenter="0" top="0" anchorOffsetX="0" anchorOffsetY="0"/>
+						<customui:BaseItem id="baseItem" width="90" height="90" horizontalCenter="0" top="0" anchorOffsetX="0" anchorOffsetY="0"/>
 					</e:Group>
 				</e:Skin>`;
             // this.baseItem.lb_name.visible = true;
@@ -420,10 +489,6 @@ module game {
 
         protected dataChanged() {
             this.baseItem.updateBaseItem(this.data[0], this.data[1], null);
-            if (this.data.type == ClientType.EQUIP) {
-                let info = App.ConfigManager.equipConfig()[this.data.good_id];
-                this.baseItem.lb_name.text = "LV:" + info.limit_lvl;
-            }
         }
 
     }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="WelfareNoteSkin" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="gp_note" x="292" y="279" touchThrough="true" touchEnabled="false">
+		<e:Image source="sign_bg_banzi_png" x="-266.03" y="575.85" scaleX="1" scaleY="1"/>
+		<e:Image source="sign_bg_m_png" x="-251.66" y="-18.33" anchorOffsetY="0" height="624" alpha="1" scaleX="1" scaleY="1"/>
+		<e:Scroller id="scr_note" width="636" height="570" anchorOffsetY="0" anchorOffsetX="0" x="-249" y="-10" scaleX="1" scaleY="1">
+		<e:Group id="vp_note" x="6" y="-29">
+			<e:Label id="lb_notecontent" text="巴拉巴拉巴拉啦啦八八爸爸把阿拉喇叭叭叭叭爸爸被" y="111" fontFamily="SimHei" size="24" x="55" scaleX="1" scaleY="1" anchorOffsetX="0" width="544" anchorOffsetY="0" lineSpacing="18" minWidth="320" textAlign="left" textColor="0xBFBFBF" maxWidth="550"/>
+			<e:Label id="lb_notetitle" text="亲爱的玩家" y="62" fontFamily="SimHei" size="24" x="47" scaleX="1" scaleY="1" anchorOffsetX="0" width="512" anchorOffsetY="0" height="27" lineSpacing="5" minWidth="320" textAlign="left" textColor="0x00CCF8"/>
+			<e:Label text="更新内容" y="9" fontFamily="SimHei" size="30" x="265" scaleX="1" scaleY="1" anchorOffsetX="0" width="152" anchorOffsetY="0" lineSpacing="5" minWidth="320" textColor="0xF87500"/>
+		</e:Group>
+		</e:Scroller>
+		<e:Image id="btn_noteback" source="common_btn_fanhui_png" x="321.36" y="626.82" scaleX="1" scaleY="1" alpha="1"/>
+	</e:Group>
+</e:Skin>

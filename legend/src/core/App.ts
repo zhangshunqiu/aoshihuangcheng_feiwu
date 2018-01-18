@@ -134,21 +134,12 @@ class App {
     }
 
     /**
-     * 计时器(用TimerManager)
+     * 计时器(不要用TimerManager)
      * @type {GlobalTimer}
      */
     public static get GlobalTimer(): GlobalTimer {
         return GlobalTimer.getInstance();
     }
-
-    /**
-     * 统一的计时器和帧刷管理类
-     * @type {TimerManager}
-     */
-    public static get TimerManager(): TimerManager {
-        return TimerManager.getInstance();
-    }
-
 
     /**
      * 角色管理器
@@ -387,7 +378,7 @@ class App {
      */
     public static logzsq(message?: any, ...optionalParams: any[]): void {
         if (App.Debug) {
-              //console.log("zsq____",message,...optionalParams);
+            //   console.log("zsq____",message,...optionalParams);
         }
     }
     /**
@@ -395,7 +386,7 @@ class App {
      */
     public static logzrj(message?: any, ...optionalParams: any[]): void {
         if (App.Debug) {
-            //console.log("zrj------->  ", message, ...optionalParams);
+            console.log("zrj------->  ", message, ...optionalParams);
         }
     }
     /**

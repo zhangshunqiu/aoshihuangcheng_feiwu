@@ -18,7 +18,6 @@ module game {
 		private img_front:eui.Image;
 		private img_back:eui.Image;
 		private lb_pageNum:eui.Label;
-
 		private _eventId:number =0 ;
 		public constructor(viewConf: WinManagerVO = null) 
 		{
@@ -38,9 +37,10 @@ module game {
 			this.pageView.setTabbarEnabled(false);
 			this.pageView.itemRenderer = MailGroup;
 			this.pageView.horizontalCenter = 1;
-			this.pageView.y = 135;
+			this.pageView.y = 110;
 			this.pageView.height = 700;
 			this.pageView.width = 570;
+			this.pageView.slideCallback = this.pageViewCallback.bind(this);
 			this.gp_main0.addChild(this.pageView);
 
 			if((MailModel.getInstance() as MailModel).mailArr.length <= 0)
@@ -52,7 +52,6 @@ module game {
 			}	
 			this.showPageBtn();
 			this.showPageNum();
-			
         }
 
 		public openWin(openParam: any = null):void 
@@ -64,13 +63,15 @@ module game {
 			}
 		}
 
-		private calll():void
+		private pageViewCallback():void
 		{
 			// console.log(123)
 			this.showPageBtn();
 			this.showPageNum();
 		}
-
+		/**
+		 * 翻后一页
+		 */
 		private pageBackHandler():void
 		{	
 			this.pageView.currentIndex = this.pageView.currentIndex +1;
@@ -78,15 +79,14 @@ module game {
 			this.showPageNum();
 			// this.pageView.slideAnimate(-1)
 		}
-
+		/**
+		 * 翻前一页
+		 */
 		private pageFrontHandler():void
 		{	
-			// var len:number = (MailModel.getInstance() as MailModel).mailDataLength();
-			// var maxPage:number = Math.floor(len/6);
 			this.pageView.currentIndex = this.pageView.currentIndex -1;
 			this.showPageBtn();
 			this.showPageNum();
-			
 		}
 
 		/**
@@ -103,7 +103,7 @@ module game {
 			}
 
 			var len:number = (MailModel.getInstance() as MailModel).mailDataLength();
-			var maxPage:number = Math.floor(len/6);
+			var maxPage:number = Math.ceil(len/6);
 			if(this.pageView.currentIndex+1 >= maxPage)
 			{
 				this.img_back.visible = false;
@@ -119,14 +119,20 @@ module game {
 		{
 			var curPage:number = this.pageView.currentIndex + 1;
 			var len:number = (MailModel.getInstance() as MailModel).mailDataLength();
-			var totalPage:number = Math.floor(len/6);
-			if(totalPage == 0)
-			{
+			var totalPage:number = Math.ceil(len/6);
+			if(totalPage <= 0) {
 				totalPage =1;
 			}
+			// if(totalPage == 0)
+			// {
+			// 	totalPage =1;
+			// }
 			this.lb_pageNum.text = curPage +" / " + totalPage;
 		}
 
+		/**
+		 * 邮件改变（数量增加）
+		 */
 		private HandlerMailChange():void
 		{
 			this.pageView.dataProvider =new eui.ArrayCollection((MailModel.getInstance() as MailModel).mailArr);
@@ -185,9 +191,11 @@ module game {
 			super();
 			this.skinName = `<?xml version="1.0" encoding="utf-8"?>
 				<e:Skin class="backpackItemSkin" width="570" height="700" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:customui="customui.*">
-					<e:List id="list" left="0" right="0" top="0" bottom="0">
-						
-					</e:List>
+					<e:Scroller left="0" right="0" top="0" bottom="0">
+						<e:List id="list" left="0" right="0" top="0" bottom="0">
+							
+						</e:List>
+					</e:Scroller>
 				</e:Skin>`;
 			let layout = new eui.VerticalLayout();
 			// layout.requestedColumnCount = 5;
@@ -208,9 +216,10 @@ module game {
 		}
 
 		private itemTap(event: eui.ItemTapEvent) {
-			var itemData = event.item;
-			var detailView = new MailDetail(itemData);
-			PopUpManager.addPopUp({obj:detailView,effectType:1,dark:true});
+			WinManager.getInstance().openPopWin(WinName.POP_MAILDETAIL,event.item);
+			// var itemData = event.item;
+			// var detailView = new MailDetail(itemData);
+			// PopUpManager.addPopUp({obj:detailView,effectType:1,dark:true});
 
 		}
 

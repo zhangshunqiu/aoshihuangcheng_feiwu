@@ -6,13 +6,16 @@ module game {
 	export class RechargeView extends BaseView{
 		public btlb_vip:eui.BitmapLabel;
 		public btlb_nextVip:eui.BitmapLabel;
+		public gp_vip:eui.Group;
+		public gp_gold:eui.Group;
 		public lb_nextVip:eui.Label;
 		public lb_gold:eui.Label;
-		public gp_vip:eui.Group;
+		public gp_maxVip:eui.Group;
 		public scroller:eui.Scroller;
 		public list_rechargeItem:eui.List;
 		public img_return:eui.Image;
 		public img_close:eui.Image;
+
 
 
 
@@ -57,9 +60,15 @@ module game {
 		{
 			var rechargeVo:RechargeVo = (RechargeModel.getInstance() as RechargeModel).rechargeViewData;
 			this.btlb_vip.text = rechargeVo.vip;
-			this.btlb_nextVip.text = rechargeVo.vip + 1;
-			this.lb_nextVip.text = rechargeVo.vip + 1;
-			this.lb_gold.text = rechargeVo.gold;
+			if(rechargeVo.vip == 10) {
+				this.btlb_nextVip.text = rechargeVo.vip ;
+				this.gp_gold.visible = false;
+				this.gp_maxVip.visible = true;
+			}else {
+				this.btlb_nextVip.text = rechargeVo.vip + 1;
+				this.lb_nextVip.text = rechargeVo.vip + 1;
+				this.lb_gold.text = rechargeVo.gold;
+			}
 			this.list_rechargeItem.dataProvider = rechargeVo.rechargeList;
 		}
 

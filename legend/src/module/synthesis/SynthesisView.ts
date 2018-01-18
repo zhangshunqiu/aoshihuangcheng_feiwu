@@ -42,7 +42,7 @@ module game {
 		private _curSelect: number = 0; //当前选中第几个
 		private _itemArray: Array<customui.BaseItem> = [];
 		private _effectArray: Array<any> = []; //一键合成特效数组
-		private _lastModuleName : string; //上一个模块
+		private _lastModuleName: string; //上一个模块
 		private heroModel: HeroModel = HeroModel.getInstance();
 		private synthesisModel: SynthesisModel = SynthesisModel.getInstance();
 		private backpackModel: BackpackModel = BackpackModel.getInstance();
@@ -215,8 +215,9 @@ module game {
 		//合成成功返回
 		private handleSynthesisSuccess(data) {
 			let callback = () => {
-				let view = new SynthesisSuccessView(data.to_good_id, 1);
-				PopUpManager.addPopUp({ obj: view });
+				// let view = new SynthesisSuccessView(data.to_good_id, 1);
+				// PopUpManager.addPopUp({ obj: view });
+				App.WinManager.openPopWin(WinName.POP_SYNTHESISSUCCESS, { id: data.to_good_id, num: 1 });
 			}
 			callback.bind(this);
 			this.successAnimate(callback);
@@ -237,8 +238,9 @@ module game {
 					this._curSelect = index;
 					this.updateView(data.type);
 				} else {
-					let view = new SynthesisSuccessView(item.good_id, item.num);
-					PopUpManager.addPopUp({ obj: view });
+					// let view = new SynthesisSuccessView(item.good_id, item.num);
+					// PopUpManager.addPopUp({ obj: view });
+					App.WinManager.openWin(WinName.POP_SYNTHESISSUCCESS, { id: item.good_id, num: item.num });
 					this.touchChildren = true;
 				}
 			}
@@ -278,14 +280,15 @@ module game {
 
 		private updateJewelView() {
 			this._curIndex = 1;
-			this._itemArray.forEach((value, index, array) => {
-				RES.getResAsync(ConstJewelIcon[index + 1] + "_hui_png", (texture) => {
-					value.img_icon.source = texture;
-				}, this);
+			this._itemArray.forEach((value:customui.BaseItem, index, array) => {
+				value.setItemIcon(ConstJewelIcon[index + 1] + "_hui");
+				// RES.getResAsync(ConstJewelIcon[index + 1] + "_hui", (texture) => {
+				// 	value.img_icon.source = texture;
+				// }, this);
 				if (this._curJewelType == index + 1) { //选中
-					value.img_select.visible = true;
+					value.setSelect(true);
 				} else {
-					value.img_select.visible = false;
+					value.setSelect(false);
 				}
 			}, this)
 
@@ -391,27 +394,36 @@ module game {
 
 			this.baseItem_left.updateBaseItem(ClientType.BASE_ITEM, info.need);
 			this.baseItem_right.updateBaseItem(ClientType.BASE_ITEM, info.id);
-			this.baseItem_left.lb_name.visible = true;
-			this.baseItem_right.lb_name.visible = true;
+			this.baseItem_left.setItemNameVisible(true);
+			this.baseItem_right.setItemNameVisible(true);
 
 			if (itemInfo.num >= info.number) { //足够
-				this.baseItem_left.lb_name.textFlow = [{ text: preInfo.name + "\n" }, { text: String(itemInfo.num), style: { textColor: 0x63d72a } }, { text: "/" + info.number, style: { textColor: 0xbfbfbf } }];
+				this.baseItem_left.setItemName([{ text: ConstJewelName[preInfo.sub_type] + "\n" }, { text: String(itemInfo.num), style: { textColor: 0x63d72a } }, { text: "/" + info.number, style: { textColor: 0xbfbfbf } }]);
+				//判断是否是宝石碎片
+				if (preInfo.type == ItemType.NORMAL) {
+					this.baseItem_left.setItemName([{ text: preInfo.name + "\n" }, { text: String(itemInfo.num), style: { textColor: 0x63d72a } }, { text: "/" + info.number, style: { textColor: 0xbfbfbf } }]);
+				}
 			} else {
-				this.baseItem_left.lb_name.textFlow = [{ text: preInfo.name + "\n" }, { text: String(itemInfo.num), style: { textColor: 0xb90b0a } }, { text: "/" + info.number, style: { textColor: 0xbfbfbf } }];
+				this.baseItem_left.setItemName([{ text: ConstJewelName[preInfo.sub_type] + "\n" }, { text: String(itemInfo.num), style: { textColor: 0xb90b0a } }, { text: "/" + info.number, style: { textColor: 0xbfbfbf } }]);
+				//判断是否是宝石碎片
+				if (preInfo.type == ItemType.NORMAL) {
+					this.baseItem_left.setItemName([{ text: preInfo.name + "\n" }, { text: String(itemInfo.num), style: { textColor: 0xb90b0a } }, { text: "/" + info.number, style: { textColor: 0xbfbfbf } }]);
+				}
 			}
 			this._preIndex = this._curIndex;
 		}
 
 		private updateWingView() {
 			this._curIndex = 2;
-			this._itemArray.forEach((value, index, array) => {
-				RES.getResAsync(ConstWingIcon[index + 1] + "_png", (texture) => {
-					value.img_icon.source = texture;
-				}, this);
+			this._itemArray.forEach((value:customui.BaseItem, index, array) => {
+				// RES.getResAsync(ConstWingIcon[index + 1] + "", (texture) => {
+				// 	value.img_icon.source = texture;
+				// }, this);
+				value.setItemIcon(ConstWingIcon[index + 1] + "");
 				if (this._curWingType == index + 1) { //选中
-					value.img_select.visible = true;
+					value.setSelect(true);
 				} else {
-					value.img_select.visible = false;
+					value.setSelect(false);
 				}
 			}, this)
 			let data = App.ConfigManager.getItemInfoByTypeAndSubType(ItemType.WING, this._curWingType);
@@ -506,13 +518,13 @@ module game {
 
 			this.baseItem_left.updateBaseItem(ClientType.BASE_ITEM, info.need);
 			this.baseItem_right.updateBaseItem(ClientType.BASE_ITEM, info.id);
-			this.baseItem_left.lb_name.visible = true;
-			this.baseItem_right.lb_name.visible = true;
+			this.baseItem_left.setItemNameVisible(true);
+			this.baseItem_right.setItemNameVisible(true);
 
 			if (itemInfo.num >= info.number) { //足够
-				this.baseItem_left.lb_name.textFlow = [{ text: preInfo.name + "\n" }, { text: String(itemInfo.num), style: { textColor: 0x63d72a } }, { text: "/" + info.number, style: { textColor: 0xbfbfbf } }];
+				this.baseItem_left.setItemName([{ text: preInfo.name + "\n" }, { text: String(itemInfo.num), style: { textColor: 0x63d72a } }, { text: "/" + info.number, style: { textColor: 0xbfbfbf } }]);
 			} else {
-				this.baseItem_left.lb_name.textFlow = [{ text: preInfo.name + "\n" }, { text: String(itemInfo.num), style: { textColor: 0xb90b0a } }, { text: "/" + info.number, style: { textColor: 0xbfbfbf } }];
+				this.baseItem_left.setItemName([{ text: preInfo.name + "\n" }, { text: String(itemInfo.num), style: { textColor: 0xb90b0a } }, { text: "/" + info.number, style: { textColor: 0xbfbfbf } }]);
 			}
 
 			this._preIndex = this._curIndex;
@@ -524,7 +536,7 @@ module game {
 
 		//关闭窗口
 		public closeView() {
-			if(this._lastModuleName) {
+			if (this._lastModuleName) {
 				App.WinManager.openWin(this._lastModuleName);
 			} else {
 				App.WinManager.closeWin(WinName.SYNTHESIS);
@@ -539,7 +551,7 @@ module game {
 			if (openParam) {
 				SynthesisModel.getInstance().synthesisType = openParam.type ? openParam.type : ConstSynthesisType.JEWEL;
 				this._curIndex = openParam.type ? openParam.type : ConstSynthesisType.JEWEL;
-				this._lastModuleName = openParam.lastModule;	
+				this._lastModuleName = openParam.lastModule;
 			} else {
 				SynthesisModel.getInstance().synthesisType = ConstSynthesisType.JEWEL;
 			}
@@ -647,11 +659,11 @@ module game {
 		private _id: number;
 		private _num: number;
 		private _effect: EffectMovieClip;
-		public constructor(id, num) {
-			super();
+		public constructor(openParam) {
+			super(openParam);
 			this.skinName = "SynthesisSuccessSkin";
-			this._id = id;
-			this._num = num
+			// this._id = openParam.id;
+			// this._num = openParam.num;
 		}
 
 		protected childrenCreated() {
@@ -665,8 +677,15 @@ module game {
 			this.addChild(this._effect);
 			this.setChildIndex(this._effect, 1);
 
+			// this.baseItem.updateBaseItem(ClientType.BASE_ITEM, this._id, this._num);
+			// this.baseItem.lb_name.visible = true;
+		}
+
+		public updateView() {
 			this.baseItem.updateBaseItem(ClientType.BASE_ITEM, this._id, this._num);
-			this.baseItem.lb_name.visible = true;
+			if (this._num > 1){
+				this.baseItem.setItemNumVisible(true);
+			}
 		}
 
 		/**
@@ -674,6 +693,9 @@ module game {
 		 */
 		public openWin(openParam: any = null): void {
 			super.openWin(openParam);
+			this._id = openParam.id;
+			this._num = openParam.num;
+			this.updateView();
 		}
 
 		/**

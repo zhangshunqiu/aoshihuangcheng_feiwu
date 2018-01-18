@@ -22,8 +22,8 @@ class ScenePlayerVo extends ScenePetVo {
 
 		this.hpBarUrl = "sceneHpBarRole_png";
 		//测试数据
-		this.bodyId = "1101";
-		this.weaponId = "3505";
+		this.bodyId = "";
+		this.weaponId = "";
 		//this.wingId = "4013";
 		this.gridX = SceneModel.getInstance().getRandomGX();
 		this.gridY = SceneModel.getInstance().getRandomGY();
@@ -131,7 +131,11 @@ class ScenePlayerVo extends ScenePetVo {
 			}else{
 				this.wingId = "";
 			}
-			this.mainOwnerId = RoleManager.getInstance().getMainHeroId();
+			//this.mainOwnerId = RoleManager.getInstance().getMainHeroId();
+			if(this.id == RoleManager.getInstance().getMainHeroId()){
+				//如果是主角，就赋称号
+				this.honorTitleUrl = App.RoleManager.getHonorIcon();
+			}
 		}else{
 			//this.mainOwnerId = 
 			//非自己的英雄就是机器人,需读表获取
@@ -145,8 +149,6 @@ class ScenePlayerVo extends ScenePetVo {
 			this.wingId = String(robot.wing);
 		}
 		this.updateHookSkill(hvo);
-
-		
 	}
 
 	/**
@@ -172,7 +174,7 @@ class ScenePlayerVo extends ScenePetVo {
 	public set bodyId(value:string) {
 		if(value == "" || value =="0")
 		{
-			this._bodyId =  "1101";
+			this._bodyId =  "1700";
 		}else{
 			this._bodyId = value;
 		}

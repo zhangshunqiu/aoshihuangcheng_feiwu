@@ -1,7 +1,7 @@
 {
 	"0":{
 		"id":0,
-		"content":"我是%1，获得物品%2， 获得装备%3，排名第%4，激活%5，%6达到%7级，击杀%8",
+		"content":"我是%1，获得物品%2， 获得装备%3，排名第%4，激活%5，%6达到%7级+B4:E44，击杀%8",
 		"yy":0,
 		"skip":0
 	},
@@ -13,20 +13,236 @@
 	},
 	"2":{
 		"id":2,
-		"content":"%1击杀BOSS%2，#Y获得XX,YY#",
+		"content":"<font textcolor=0x01acfe>%1</font>击杀个人BOSS,获得<font textcolor=0xfdc100>%2</font>,<font textcolor=0x00ff05>yy</font>",
 		"yy":"我也想挑战",
-		"skip":10
+		"skip":36
 	},
 	"3":{
 		"id":3,
-		"content":"%1将%2提升到%3战力暴增，YY",
+		"content":"<font textcolor=0x01acfe>%1</font>将%2提升到%3战力暴增,<font textcolor=0x00ff05>yy</font>",
 		"yy":"我也想提升",
 		"skip":1
 	},
 	"4":{
 		"id":4,
-		"content":"%1成功激活%2战力暴增，YY",
+		"content":"<font textcolor=0x01acfe>%1</font>成功激活%2战力暴增,<font textcolor=0x00ff05>yy</font>",
 		"yy":"我也想提升",
 		"skip":1
+	},
+	"5":{
+		"id":5,
+		"content":"<font textcolor=0x01acfe>%1</font>击杀全民BOSS,获得<font textcolor=0xfdc100>%2</font>,<font textcolor=0x00ff05>yy</font>",
+		"yy":"我也想挑战",
+		"skip":38
+	},
+	"6":{
+		"id":6,
+		"content":"<font textcolor=0x01acfe>%1</font>在天梯争霸中击杀对手,获得<font textcolor=0xfdc100>%2</font>,<font textcolor=0x00ff05>yy</font>",
+		"yy":"我也想挑战",
+		"skip":37
+	},
+	"7":{
+		"id":7,
+		"content":"<font textcolor=0x01acfe>%1</font>击杀挑战副本BOSS,获得<font textcolor=0xfdc100>%2</font>",
+		"yy":0,
+		"skip":0
+	},
+	"8":{
+		"id":8,
+		"content":"<font textcolor=0x01acfe>%1</font>在遭遇战中击杀对手,获得<font textcolor=0xfdc100>%2</font>,<font textcolor=0x00ff05>yy</font>",
+		"yy":"我也想挑战",
+		"skip":39
+	},
+	"9":{
+		"id":9,
+		"content":"<font textcolor=0x01acfe>%1</font>成功将%2强化等级提升到%3,<font textcolor=0x00ff05>yy</font>",
+		"yy":"我也想提升",
+		"skip":8
+	},
+	"10":{
+		"id":10,
+		"content":"<font textcolor=0x01acfe>%1</font>成功将%2总升星等级提升到%3,<font textcolor=0x00ff05>yy</font>",
+		"yy":"我也想提升",
+		"skip":9
+	},
+	"11":{
+		"id":11,
+		"content":"<font textcolor=0x01acfe>%1</font>成功将%2全身宝石总等级提升到%3,<font textcolor=0x00ff05>yy</font>",
+		"yy":"我也想提升",
+		"skip":1
+	},
+	"12":{
+		"id":12,
+		"content":"<font textcolor=0x01acfe>%1</font>战力惊人,成功闯关到%2关,<font textcolor=0x00ff05>yy</font>",
+		"yy":"我也想挑战",
+		"skip":10
+	},
+	"13":{
+		"id":13,
+		"content":"<font textcolor=0x01acfe>%1</font>成功激活第%2伙伴,战力暴增",
+		"yy":0,
+		"skip":0
+	},
+	"14":{
+		"id":14,
+		"content":"<font textcolor=0x01acfe>%1</font>成功领取%2等级礼包,<font textcolor=0x00ff05>yy</font>",
+		"yy":"我也想领取",
+		"skip":18
+	},
+	"15":{
+		"id":15,
+		"content":"<font textcolor=0x01acfe>%1</font>成功冲击到每日竞技的第一名,<font textcolor=0x00ff05>yy</font>",
+		"yy":"我也想参加",
+		"skip":28
+	},
+	"16":{
+		"id":16,
+		"content":"<font textcolor=0x01acfe>%1</font>成功购买%2特惠礼包,<font textcolor=0x00ff05>yy</font>",
+		"yy":"我也想购买",
+		"skip":60
+	},
+	"17":{
+		"id":17,
+		"content":"<font textcolor=0x01acfe>%1</font>成功领取累计充值大礼包,<font textcolor=0x00ff05>yy</font>",
+		"yy":"我也想领取",
+		"skip":61
+	},
+	"18":{
+		"id":18,
+		"content":"<font textcolor=0x01acfe>%1</font>成功领取累计%2元宝的每日累充大礼包,<font textcolor=0x00ff05>yy</font>",
+		"yy":"我也想领取",
+		"skip":62
+	},
+	"19":{
+		"id":19,
+		"content":"<font textcolor=0x01acfe>%1</font>成功领取累计%2天连续充值大礼包,<font textcolor=0x00ff05>yy</font>",
+		"yy":"我也想领取",
+		"skip":63
+	},
+	"20":{
+		"id":20,
+		"content":"<font textcolor=0x01acfe>%1</font>成功将勋章提升到%2,<font textcolor=0x00ff05>yy</font>",
+		"yy":"我也想提升",
+		"skip":21
+	},
+	"21":{
+		"id":21,
+		"content":"<font textcolor=0x01acfe>%1</font>成功冲击到%2排行榜的第一名,<font textcolor=0x00ff05>yy</font>",
+		"yy":"我也想参加",
+		"skip":25
+	},
+	"22":{
+		"id":22,
+		"content":"<font textcolor=0x01acfe>%1</font>成功领取累计%2天的签到奖励,<font textcolor=0x00ff05>yy</font>",
+		"yy":"我也想领取",
+		"skip":19
+	},
+	"23":{
+		"id":23,
+		"content":"<font textcolor=0x01acfe>%1</font>成功激活神器%2,战力暴增,<font textcolor=0x00ff05>yy</font>",
+		"yy":"我也想提升",
+		"skip":27
+	},
+	"24":{
+		"id":24,
+		"content":"<font textcolor=0x01acfe>%1</font>首充成功,领取首充大礼包,<font textcolor=0x00ff05>yy</font>",
+		"yy":"我也想领取",
+		"skip":46
+	},
+	"25":{
+		"id":25,
+		"content":"<font textcolor=0x01acfe>%1</font>成功将天梯争霸段位提升到%2,<font textcolor=0x00ff05>yy</font>",
+		"yy":"我也想挑战",
+		"skip":56
+	},
+	"26":{
+		"id":26,
+		"content":"<font textcolor=0x01acfe>%1</font>成功在天梯争霸击杀对手获得惊喜奖励<font textcolor=0xfdc100>%2</font>,<font textcolor=0x00ff05>yy</font>",
+		"yy":"我也想挑战",
+		"skip":56
+	},
+	"27":{
+		"id":27,
+		"content":"<font textcolor=0x01acfe>%1</font>成功购买投资计划,<font textcolor=0x00ff05>yy</font>",
+		"yy":"我也想购买",
+		"skip":47
+	},
+	"28":{
+		"id":28,
+		"content":"<font textcolor=0x01acfe>%1</font>成功将%2羽翼阶级提升到%3阶,<font textcolor=0x00ff05>yy</font>",
+		"yy":"我也想提升",
+		"skip":11
+	},
+	"29":{
+		"id":29,
+		"content":"<font textcolor=0x01acfe>%1</font>成功激活羽翼,<font textcolor=0x00ff05>yy</font>",
+		"yy":"我也想激活",
+		"skip":11
+	},
+	"30":{
+		"id":30,
+		"content":"<font textcolor=0x01acfe>%1</font>成功将%2神羽大师提升到%3,<font textcolor=0x00ff05>yy</font>",
+		"yy":"我也想提升",
+		"skip":12
+	},
+	"31":{
+		"id":31,
+		"content":"<font textcolor=0x01acfe>%1</font>成功购买月卡,获得专属羽翼和每日领取钻石的特权,<font textcolor=0x00ff05>yy</font>",
+		"yy":"我也想购买",
+		"skip":45
+	},
+	"32":{
+		"id":32,
+		"content":"本次的转盘幸运奖获得者是<font textcolor=0x01acfe>%1</font>,<font textcolor=0x00ff05>yy</font>",
+		"yy":"我也想参加",
+		"skip":64
+	},
+	"33":{
+		"id":33,
+		"content":"<font textcolor=0x01acfe>%1</font>成功将转生等级提升到%2,<font textcolor=0x00ff05>yy</font>",
+		"yy":"我也想提升",
+		"skip":2
+	},
+	"34":{
+		"id":34,
+		"content":"<font textcolor=0x01acfe>%1</font>成功将%2暗器等级提升到%3,<font textcolor=0x00ff05>yy</font>",
+		"yy":"我也想提升",
+		"skip":51
+	},
+	"35":{
+		"id":35,
+		"content":"<font textcolor=0x01acfe>%1</font>成功将%2护盾等级提升到%3,<font textcolor=0x00ff05>yy</font>",
+		"yy":"我也想提升",
+		"skip":48
+	},
+	"36":{
+		"id":36,
+		"content":"<font textcolor=0x01acfe>%1</font>成功将%2饰品等级提升到%3,<font textcolor=0x00ff05>yy</font>",
+		"yy":"我也想提升",
+		"skip":50
+	},
+	"37":{
+		"id":37,
+		"content":"<font textcolor=0x01acfe>%1</font>成功将%2肩甲等级提升到%3,<font textcolor=0x00ff05>yy</font>",
+		"yy":"我也想提升",
+		"skip":49
+	},
+	"38":{
+		"id":38,
+		"content":"<font textcolor=0x01acfe>%1</font>成功将%2护体戒指阶级提升到%3,<font textcolor=0x00ff05>yy</font>",
+		"yy":"我也想提升",
+		"skip":53
+	},
+	"39":{
+		"id":39,
+		"content":"<font textcolor=0x01acfe>%1</font>成功将%2麻痹戒指阶级提升到%3,<font textcolor=0x00ff05>yy</font>",
+		"yy":"我也想提升",
+		"skip":52
+	},
+	"40":{
+		"id":40,
+		"content":"<font textcolor=0x01acfe>%1</font>战力惊人,成功通关挑战副本到第%2关,<font textcolor=0x00ff05>yy</font>",
+		"yy":"我也想挑战",
+		"skip":37
 	}
 }

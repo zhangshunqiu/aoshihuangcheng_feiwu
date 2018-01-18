@@ -24,7 +24,11 @@ module game {
 
 		private getReward():void
 		{
-			App.Socket.send(34003,{id:this._rewardId});
+			if((InvestModel.getInstance() as InvestModel).isBuy) {
+				App.Socket.send(34003,{id:this._rewardId});
+			}else {
+				App.GlobalTips.showTips("请先购买投资后领取奖励");
+			}
 		}
 
 		protected dataChanged():void

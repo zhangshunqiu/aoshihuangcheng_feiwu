@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="AlertTipsSkin" width="720" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="gp_root" height="418" anchorOffsetY="0" verticalCenter="-80" horizontalCenter="0" touchEnabled="false" anchorOffsetX="0" width="583">
+		<e:Image source="com_bg_tips_png" height="412" width="586" fillMode="scale" scale9Grid="292,97,2,45" horizontalCenter="1.5" top="0" touchEnabled="false"/>
+		<e:Label id="lb_content" size="26" width="90%" horizontalCenter="0.5" fontFamily="SimHei" top="98" lineSpacing="5" verticalAlign="justify" textAlign="left" touchEnabled="false" wordWrap="true" text="！"/>
+		<e:Group id="gp_btn" width="90%" horizontalCenter="0" bottom="40" height="62">
+		</e:Group>
+		<e:CheckBox id="cbox" label="本次登录不再提醒" horizontalCenter="0" bottom="110" skinName="skins.ComCheckBox1Skin"/>
+		<e:Label id="lb_title" text="提 示" textColor="0xff9600" size="28" horizontalCenter="0" fontFamily="SimHei" y="22" touchEnabled="false"/>
+	</e:Group>
+	<e:Image y="698" source="com_pic_clickClose_png" touchEnabled="false" horizontalCenter="0"/>
+</e:Skin>

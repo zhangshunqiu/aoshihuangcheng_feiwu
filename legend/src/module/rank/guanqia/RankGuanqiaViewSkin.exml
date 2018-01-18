@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="RankGuanqiaViewSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="common_bg_all_png" left="0" top="0" x="0" y="0" scaleX="1" scaleY="1"/>
+	<e:Image width="730.7" height="983.63" y="-4.67" source="shop_bg_shangcheng_png" scale9Grid="51,113,591,786" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0"/>
+	<e:Image anchorOffsetX="0" anchorOffsetY="0" top="8" bottom="136" width="674.76" source="ranking list_bg_png" horizontalCenter="-1.5"/>
+	<e:Image id="img_close" x="629.49" y="-0.85" source="common_btn_guanbi_shangchengzhuanyong_png" anchorOffsetX="0" width="55" anchorOffsetY="0" height="55"/>
+	<e:Scroller width="641.4" height="711.8" y="179.88" anchorOffsetX="0" anchorOffsetY="0" rotation="359.9" scrollPolicyH="off" scrollPolicyV="on" horizontalCenter="0">
+		<e:List id="list_rank" x="0" y="1.52"/>
+	</e:Scroller>
+	<e:Group y="840.17" anchorOffsetY="0" anchorOffsetX="0" horizontalCenter="0">
+		<e:Image width="293.32" height="52.81" source="ranking list_bg3_png" anchorOffsetX="0" anchorOffsetY="0" y="-4" horizontalCenter="0"/>
+		<e:Label id="lb_myRank" text="" y="10" anchorOffsetX="0" width="219.33" textAlign="center" height="31" horizontalCenter="-0.5" size="24"/>
+	</e:Group>
+	<e:Image id="img_return" source="common_btn_fanhui_png" x="591.81" y="850.92" scaleX="1" scaleY="1"/>
+	<e:Label text="排名           名称        战力            关卡 " x="82" y="119.94" anchorOffsetX="0" width="583.09" anchorOffsetY="0" height="37.58"/>
+</e:Skin>

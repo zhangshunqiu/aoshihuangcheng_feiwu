@@ -10,7 +10,10 @@ module game {
         public openLv: number; // 羽翼开启等级
         public step: any; //翅膀当前阶数
         public star: any;   //星数
+        public currentWingId: number;
+        public currentWingExp: number;
         public currentStar: number; //当前星数
+        public currentWingEquip: any[];  //当前羽翼装备
         public exp: number;   //当前经验
         public score: number;   //当前战力
         public wingEquip: Array<any>=[];   //羽翼装备 是一个对象数组 0正羽，1副羽，2绒羽，3须羽
@@ -27,6 +30,7 @@ module game {
         public coinStar: number;  //升满当前经验条所需金币
         public wingStar: number;  //升满经验条所需羽毛
         public coin: number;  //点击一次消耗金币
+        public needWing: number;  //点击一次消耗羽毛
         public attr: Object;  //翅膀属性
         public nextStarAttr: Object;  //翅膀下一星属性
         public attrRate: number;   //完美神翼属性加成

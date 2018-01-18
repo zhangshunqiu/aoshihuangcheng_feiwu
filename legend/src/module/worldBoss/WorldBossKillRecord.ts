@@ -36,8 +36,14 @@ module game {
             for(let i:number=0; i<5; i++) {
                 if(i<this._worldBossModel.killRecord.length) {
                     let newDate = new Date(this._worldBossModel.killRecord[i].time * 1000);
-                    let hour = newDate.getHours();
-                    let min = newDate.getMinutes();
+                    let hour:any = newDate.getHours();
+                    if(hour < 10) {
+                        hour = "0" + hour;
+                    }
+                    let min: any = newDate.getMinutes();
+                    if(min < 10) {
+                        min = "0" + min;
+                    }
                     this["lb_time"+i].text = hour + ":" + min ;
                     this["lb_kill"+i].text = this._worldBossModel.killRecord[i].nick;
                     this["lb_score"+i].text = this._worldBossModel.killRecord[i].score;

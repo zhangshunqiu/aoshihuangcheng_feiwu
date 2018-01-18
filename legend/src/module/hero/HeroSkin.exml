@@ -1,27 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="HeroSkin" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:game="game.*" xmlns:customui="customui.*">
-	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
-		<customui:CommonWin id="commonWin" height="1066" width="720" horizontalCenter="0" top="0"/>
+<e:Skin class="HeroSkin" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:game="game.*" xmlns:customui="customui.*" xmlns:ns1="*">
+	<e:Group id="gp_main" right="0" left="0" top="0" bottom="0">
+		<ns1:ComBaseViewBg id="com_baseview" x="0" y="0" skinName="ComBaseViewBgSkin"/>
 		<e:Image scaleX="1" scaleY="1" source="common_bg_interface_level_1_png" horizontalCenter="0.5" top="0" visible="false"/>
-		<e:Group id="gp_equip" height="660" y="190" left="0" right="0" touchThrough="true" touchEnabled="false">
-			<e:Image source="equipping_bg_juese_png" horizontalCenter="0" top="-133" x="32" y="-155" scaleX="1" scaleY="1"/>
-			<e:Image x="124" y="-23" source="equipping_pingfen_zhuangbei_png"/>
-			<e:BitmapLabel id="bmlb_cap" x="262" y="10" text="99999999" font="equipping_pingfen_shuju_fnt" scaleX="0.8" scaleY="0.8"/>
-			<e:Group id="gp_model" width="500" height="500" horizontalCenter="0" bottom="72" touchThrough="true" touchEnabled="false">
-				<e:Image id="img_wing" source="4000_png" y="-331" horizontalCenter="0" touchEnabled="false"/>
+		<e:Group id="gp_equip" height="660" y="208.19" left="0" right="0" touchThrough="true" touchEnabled="false">
+			<e:Image source="equipping_bg_juese_png" y="-146.66" scaleX="1" scaleY="1" horizontalCenter="0.5"/>
+			<e:Image y="651.99" horizontalCenter="0.5" height="88" source="com_bg_list2_png"/>
+			<e:Group id="gp_model" width="500" height="500" horizontalCenter="0" touchThrough="true" touchEnabled="false" y="67.04">
+				<e:Image id="img_wing" source="4000_png" y="-327" horizontalCenter="0" touchEnabled="false"/>
 				<e:Image id="img_body" y="-299" horizontalCenter="0" source="1700_png" touchEnabled="false"/>
-				<e:Image id="img_weapon" x="-117" y="-302" source="3300_png" touchEnabled="false"/>
-				<e:Button id="btn_orange" label="" x="370" y="76">
-					<e:skinName>
-					<e:Skin states="up,down,disabled">
-						<e:Image width="100%" height="100%" source="equipping_icon_chengzhuang_png"/>
-						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-					</e:Skin>
-					</e:skinName>
-				</e:Button>
+				<e:Image id="img_weapon" x="-108" y="-300" source="3300_png" touchEnabled="false"/>
 			</e:Group>
-			<e:Image id="img_detail" source="equipping_xiangxishuxing_png" y="588" horizontalCenter="0.5"/>
-			<e:Button id="btn_artifact" label="" x="483" y="250">
+			<e:Group id="gp_combat" width="301" height="34" x="256" y="-6" anchorOffsetX="0" anchorOffsetY="0">
+				<e:Image y="-28.66" source="com_bg_combat_png" horizontalCenter="-45"/>
+				<e:BitmapLabel id="bmlb_cap" x="81.55000000000001" text="99999999" scaleX="1" scaleY="1" y="5.77000000000001" font="combat_shuxing_fnt" anchorOffsetX="0" width="142"/>
+				<e:Image x="20.660000000000025" y="6.819999999999993" source="words_zhandouli_y_png" scaleX="0.7" scaleY="0.7"/>
+				<e:Image id="img_detail" y="-14.569999999999993" source="equipping_btn_xiang_png" x="244" scaleX="1" scaleY="1"/>
+			</e:Group>
+			<e:Group id="gp_reloading" width="200" height="89.39" y="541" anchorOffsetY="0" horizontalCenter="0">
+				<e:Button id="btn_reloading" label="一键换装" y="10" skinName="skins.ComBtnRedSkin" horizontalCenter="0.5" x="-26" scaleX="1" scaleY="1"/>
+			</e:Group>
+			<e:Button id="btn_orange" label="" x="487.04" y="35.35">
+				<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="equipping_icon_chengzhuang_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Button id="btn_artifact" label="" x="487.04" y="119.25">
 				<e:skinName>
 					<e:Skin states="up,down,disabled">
 					<e:Image width="100%" height="100%" source="main_icon_shenqi_png"/>
@@ -30,18 +37,17 @@
 				</e:skinName>
 			</e:Button>
 		</e:Group>
-		<e:Group id="gp_skill" height="660" y="190" left="0" right="0" visible="false">
+		<e:Group id="gp_reborn" height="840" left="0" right="0" x="10" top="0" touchThrough="true" touchEnabled="false" visible="false"/>
+		<e:Group id="gp_skill" height="660" y="0" left="0" right="0">
 			<game:SkillPanel id="skillPanel" width="720" height="660" y="0" x="0"/>
 		</e:Group>
-		<game:HeroHeadComponentView id="hero_head" width="700" height="120" horizontalCenter="0" top="65"/>
-		<e:Group id="gp_reborn" height="840" left="0" right="0" x="10" top="0" touchThrough="true" touchEnabled="false" visible="false">
-		</e:Group>
-		<e:Group width="700" height="65" bottom="157" horizontalCenter="0" x="10" y="691" scaleX="1" scaleY="1">
-			<e:Button id="btn_role" label="角色" x="12" scaleX="0.9" scaleY="0.9" skinName="skins.ButtonSkin2" verticalCenter="0"/>
-			<e:Button id="btn_skill" label="技能" x="162" scaleX="0.9" scaleY="0.9" skinName="skins.ButtonSkin2" enabled="true" verticalCenter="0"/>
-			<e:Button id="btn_ruby" label="宝石" x="312" scaleX="0.9" scaleY="0.9" skinName="skins.ButtonSkin2" verticalCenter="0"/>
-			<e:Button id="btn_reborn" label="重生" x="462" scaleX="0.9" scaleY="0.9" skinName="skins.ButtonSkin2" verticalCenter="0"/>
-			<e:Image id="img_return" source="common_btn_fanhui_png" x="607" y="-6"/>
+		<game:HeroHeadComponentView id="hero_head" width="700" height="120" top="49" horizontalCenter="-6"/>
+		<e:Group width="700" height="65" bottom="64" horizontalCenter="0" x="10" y="691" scaleX="1" scaleY="1">
+			<e:Button id="btn_role" label="角色" x="64.85" scaleX="1" scaleY="1" y="10" skinName="skins.ComBtnTab2Skin"/>
+			<e:Button id="btn_skill" label="技能" x="214.01" scaleX="1" scaleY="1" enabled="true" y="10" skinName="skins.ComBtnTab2Skin"/>
+			<e:Button id="btn_ruby" label="宝石" x="362.68" scaleX="1" scaleY="1" y="10" skinName="skins.ComBtnTab2Skin"/>
+			<e:Button id="btn_reborn" label="转生" x="511.76" scaleX="1" scaleY="1" y="10" skinName="skins.ComBtnTab2Skin"/>
+			<e:Image id="img_return" x="615.66" y="-72.72" source="com_btn_back_png"/>
 		</e:Group>
 	</e:Group>
 </e:Skin>

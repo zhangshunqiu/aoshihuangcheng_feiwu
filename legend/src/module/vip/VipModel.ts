@@ -9,6 +9,7 @@ module game {
         public vipArr: Array<any> = [];
         public upGold: number = 0;
         public currentIndex: number = 0;
+        public hasReward: boolean = false;
         public constructor() { 
 		    super();
             this.getVipInfo();
@@ -38,9 +39,20 @@ module game {
             for(let i:number=0; i<rewardList.length; i++) {
                 if(rewardList[i].state == 1) {
                     this.currentIndex = rewardList[i].lv;
+                    this.hasReward = true;
                     break;
                 }
             }
+        }
+
+        public btnRedTip() {
+            for(let i:number=0; i<this.vipArr.length; i++) {
+                if(this.vipArr[i].rewardList.state == 1) {
+                    this.hasReward = true;
+                    return;
+                }
+            }
+            this.hasReward = false;
         }
 
         /**

@@ -7,7 +7,6 @@ module game {
 		public lb_taskname: eui.Label;
 		public lb_taskdetail: eui.Label;
 		public goto_id: number;
-		public is_task_show;
 		private _canGetMc: AMovieClip;//新任务跟任务完成的特效
 		private _canGetFrameMc: AMovieClip;//可领取效果特效
 		private _mainModule: MainUIModel = MainUIModel.getInstance();
@@ -16,18 +15,25 @@ module game {
 		private _cur_taskstate: number = 0;
 		private _chanllengeEventId: number = 0; //能否挑战boss的事件id
 		private _checkBossGuide: boolean; //是否检测挑战boss的引导
-        
-		private _value : string;
-		public get value() : string {
-			return this._value;
-		}
-		public set value(v : string) {
-			this._value = v;
-		}
-		
 		private _guideTimeHandler: number;
 		public constructor(skinName: string) {
 			super("MainLineTaskSkin")
+		}
+
+
+		public get taskId(): number {
+			return this._cur_taskid;
+		}
+		public set taskId(v: number) {
+			this._cur_taskid = v;
+		}
+
+
+		public get taskState(): number {
+			return this._cur_taskstate;
+		}
+		public set taskState(v: number) {
+			this._cur_taskstate = v;
 		}
 
 
@@ -88,7 +94,7 @@ module game {
 			this.updateMailLineTask();
 
 			if (!this._guideTimeHandler) {
-				this._guideTimeHandler = App.GlobalTimer.addSchedule(1000, 0, this.checkGuide, this);
+				this._guideTimeHandler = App.GlobalTimer.addSchedule(800, 0, this.checkGuide, this);
 			}
 		}
 
@@ -143,27 +149,29 @@ module game {
 			super.destroy();
 		}
 
-
+		public showHideMainLineTask(isshow: boolean) {
+			if (isshow) {
+				this._mainModule.isMainTaskShow = true;
+				this.updateMailLineTask();
+			}
+			else {
+				this._mainModule.isMainTaskShow = false;
+				this.visible = false;
+			}
+		}
 		public updateMailLineTask() {
+
+			if (!this._mainModule.isMainTaskShow)
+				return;
 
 			if (this._mainModule.taskId == 0) {
 
 				this.visible = false;
-				this.is_task_show = false
 				return;
 			}
 			else {
 				this.visible = true;
 			}
-
-
-			// if (this._mainModule.taskState == 2) {
-			// 	this.visible = false;
-			// 	this.is_task_show = false
-			// }
-			// else {
-			// 	this.visible = true;
-			// }
 
 			if (this._cur_taskid != this._mainModule.taskId && this._cur_taskid > 0) {
 				// 新任务特效
@@ -196,7 +204,7 @@ module game {
 				this._canGetFrameMc.visible = true;
 
 				this._canGetFrameMc.playMCKey("effrwts", "", -1, null, () => {
-					this._canGetFrameMc.frameRate = 8;
+					this._canGetFrameMc.frameRate = 6;
 				}
 					, this);
 			}
@@ -206,23 +214,8 @@ module game {
 			}
 
 			let info = App.ConfigManager.getMainLineTaskInfoById(this._mainModule.taskId);
-			let rewardlist: Array<any> = [];
-			rewardlist = info.reward;
 
-			if (rewardlist.length > 0) {
-				let reward_items: Array<any> = [];
-				reward_items = rewardlist[0];
-				// if (reward_items.length >= 3) {
 
-				// 	this.baseItem.updateBaseItem(ClientType.BASE_ITEM, reward_items[1]);
-				// 	this.baseItem.lb_num.visible = true;
-				// 	this.baseItem.lb_num.text = reward_items[2] + "";
-				// }
-
-				// this.baseItem.img_frame.visible = false;
-				// this.baseItem.img_frame.width = 0;
-				// this.baseItem.img_icon.touchEnabled = false;
-			}
 			if (this._mainModule.taskState == 1)
 				this.lb_taskname.textFlow =
 					[{ text: info.name + "" }, { text: "(已完成)", style: { textColor: 0x00f829 } }];
@@ -237,8 +230,7 @@ module game {
 			this._cur_taskid = this._mainModule.taskId;
 			this._cur_taskstate = this._mainModule.taskState;
 
-			//检测新手引导 一切从这里开始
-			// this.checkGuideStart();
+			this.checkGuideStart();
 		}
 
 		private effctComplete(e: egret.Event) {
@@ -251,21 +243,36 @@ module game {
 
 		}
 
+		//开始检测引导
 		private checkGuideStart() {
+			//检测新手引导 一切从这里开始
+			if (App.agentConfig.guide) {
+				if (App.agentConfig.AgentCode == "test") {
+					if (App.RoleManager.roleInfo.account.substring(0, 2).toUpperCase() == "XS") {
+					} else {
+						return;
+					}
+				} else {
+
+				}
+			} else {
+				return;
+			}
+
 			let guideInfo = App.ConfigManager.getGuideInfoByTaskId(this._cur_taskid);
 			if (guideInfo && App.GuideManager.checkStartGuide(guideInfo.task_id) && this._cur_taskstate != 1) { //要出现引导了
 				App.GuideManager.setStartGuide(guideInfo.id);
 			}
 		}
 
-		//引导检测
+		//引导检测，是否可以开始
 		private checkGuide() {
 			if (App.GuideManager.needGuide) {
 				if (App.GuideManager.startGuide && App.GuideManager.curGuideId) { //开始引导了，有引导id
 					if (this.checkGuideEnvironment()) { //没有界面挡住
 						let curGuideInfo = App.ConfigManager.getGuideInfoByIdAndStep(App.GuideManager.curGuideId, 1);
-						if (curGuideInfo.type == 1 ) { //挑战boss引导
-							if(this._checkBossGuide) {
+						if (curGuideInfo.type == 1) { //挑战boss引导
+							if (this._checkBossGuide) {
 								App.GuideManager.bindClickBtn(this.btn_goto, App.GuideManager.curGuideId, 1);
 								App.GuideManager.checkGuide(App.GuideManager.curGuideId);
 							} else {

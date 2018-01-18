@@ -13,7 +13,8 @@ module game {
 
         private offset = 0;
         private heroModel: HeroModel = HeroModel.getInstance();
-        private _handleId : number = 0;
+        private _handleId: number = 0;
+        private btn_allup: eui.Button;
         public constructor() {
             super();
             this.skinName = "SkillSkin";
@@ -28,28 +29,45 @@ module game {
         }
 
         private initView() {
-            this.btn_back.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: Event) => {
-                // this.parent.visible = false;
-                App.EventSystem.dispatchEvent(PanelNotify.HERO_CLOSE_SKILL_PANEL);
-            }, this);
+            // this.btn_back.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: Event) => {
+            //     // this.parent.visible = false;
+            //     App.EventSystem.dispatchEvent(PanelNotify.HERO_CLOSE_SKILL_PANEL);
+            // }, this);
             this.btn_career.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: Event) => {
                 this.btn_career.currentState = "down";
                 this.btn_reborn.currentState = "up";
             }, this);
             this.btn_reborn.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: Event) => {
-                this.btn_career.currentState = "up";
-                this.btn_reborn.currentState = "down";
+                // this.btn_career.currentState = "up";
+                // this.btn_reborn.currentState = "down";
             }, this);
             this.btn_career.currentState = "down";
             this.list = new eui.List();
             this.list.itemRenderer = SkillItem;
             this.scroller.viewport = this.list;
-            this.scroller.addEventListener(eui.UIEvent.CHANGE, (e:eui.UIEvent) => {
+            this.scroller.addEventListener(eui.UIEvent.CHANGE, (e: eui.UIEvent) => {
                 this.offset = this.scroller.viewport.scrollV;
                 // console.log(this.offset,this.scroller.height,this.list.height,this.scroller.viewport.contentHeight);
             }, this)
             // this.updateView();
             // this.changeList();
+
+            // 全部升级
+            this.btn_allup.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
+                let skillInfo = this.heroModel.heroInfo[this.heroModel.curPos].skillDic;
+                let canUp: boolean = true;
+                for (let key in skillInfo) {
+                    if (skillInfo[key] >= App.RoleManager.roleInfo.lv) {
+                        canUp = false;
+                        break;
+                    }
+                }
+                if (canUp){
+                    App.Socket.send(12003, this.heroModel.heroInfo[this.heroModel.curPos].id);
+                }else{
+                    App.GlobalTips.showTips("等级不能超过人物等级");
+                }
+            }, this);
         }
 
         public updateView() {
@@ -65,7 +83,7 @@ module game {
             let skillInfo = this.heroModel.heroInfo[this.heroModel.curPos].skillDic;
             let temp = [];
             for (let key in skillInfo) {
-                temp.push({ id: Number(key), level: skillInfo[key]});
+                temp.push({ id: Number(key), level: skillInfo[key] });
             }
             let data = new eui.ArrayCollection(temp);
             this.offset = this.list.scrollV;
@@ -78,12 +96,12 @@ module game {
 
         public checkGuide() {
             let gp_cost = (<eui.Group>((<SkillItem>this.list.getElementAt(0)).getChildAt(0))).getChildByName("gp_cost");
-            App.GuideManager.bindClickBtn((<eui.Group>gp_cost).getChildByName("btn_active"),1004,2);
+            App.GuideManager.bindClickBtn((<eui.Group>gp_cost).getChildByName("btn_active"), 1004, 2);
             App.GuideManager.checkGuide(1004);
         }
 
         public removeGuide() {
-            App.GuideManager.removeClickBtn(1004,2);
+            App.GuideManager.removeClickBtn(1004, 2);
         }
 
         /**
@@ -92,6 +110,7 @@ module game {
         public openWin(openParam: any = null): void {
             super.openWin(openParam);
             this.changeList();
+
         }
 
         public closeWin() {
@@ -107,7 +126,7 @@ module game {
 		 */
         public destroy(): void {
             this.removeGuide();
-            App.EventSystem.removeEventListener(PanelNotify.HERO_UPDATE_SKILL_PANEL,this._handleId);
+            App.EventSystem.removeEventListener(PanelNotify.HERO_UPDATE_SKILL_PANEL, this._handleId);
         }
     }
 
@@ -121,6 +140,7 @@ module game {
         public img_cost: eui.Image;
         public gp_cost: eui.Group;
         public btn_active: eui.Button;
+        private lb_level: eui.Label;
 
         private skillModel: SkillModel = SkillModel.getInstance();
         private heroModel: HeroModel = HeroModel.getInstance();
@@ -141,22 +161,23 @@ module game {
             // }
 
             let info = this.skillModel.getSkillUpgrageByIdLevel(this.data.id, this.data.level);
-            let nextInfo = this.skillModel.getSkillUpgrageByIdLevel(this.data.id, this.data.level+1)
+            let nextInfo = this.skillModel.getSkillUpgrageByIdLevel(this.data.id, this.data.level + 1)
             if (!info) { //未激活
                 info = nextInfo;
             }
             this.lb_name.text = info.name;
             this.lb_desc.text = info.desc;
-            this.lb_cost.text = nextInfo?nextInfo.cost_coin : 0 ;
+            this.lb_cost.text = nextInfo ? nextInfo.cost_coin : 0;
             // this.baseItem.updateBaseItem(3,this.data.skill_id);
-            this.baseItem.lb_name.visible = true;
-            this.baseItem.lb_name.textColor = 0x3e98a1;
-            this.baseItem.lb_name.size = 20;
-            this.baseItem.lb_name.text = "等级：" + this.data.level;
-            RES.getResAsync(info.icon+"_png",(texture)=>{
-                this.baseItem.img_icon.source = texture;
-            },this);
-            
+            this.baseItem.setItemNameVisible(false);
+            this.baseItem.setItemNameAtt({ textColor: 0x1ba4d1 });
+            this.baseItem.setItemNameAtt({ size: 22 });
+            this.baseItem.setItemName("等级：" + this.data.level);
+            this.lb_level.text = "等级：" + this.data.level;
+            // RES.getResAsync(info.id + "_png", (texture) => {
+            this.baseItem.setItemIcon(info.id);
+            // }, this);
+
             // this.lb_tip.text = ;
             if (info.open_lv <= App.RoleManager.roleInfo.lv) {
                 if (this.data.level == App.RoleManager.roleInfo.lv) {
@@ -175,7 +196,12 @@ module game {
                 this.lb_tip.text = `到达${info.open_lv}级开启`;
             }
             if (!nextInfo) { //满级
-
+                this.gp_cost.visible = false;
+                this.lb_tip.visible = true;
+                this.lb_tip.text = `已满级`;
+            } else {
+                // this.gp_cost.visible = true;
+                // this.lb_tip.visible = false;
             }
         }
 

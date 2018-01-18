@@ -15,15 +15,14 @@ module game {
 		private _data: any;
 		private _updateHandleId : number
 		public constructor(data) {
-			super();
+			super(data);
 			this.skinName = "EquipSpecialTipSkin";
-			this._data = data;
-			this.readyOpenWin();
+			// this._data = data;
 		}
 
 		protected childrenCreated() {
 			super.childrenCreated();
-			this.initView();
+			// this.initView();
 		}
 
 		private initView() {
@@ -97,7 +96,8 @@ module game {
 		}
 
 		public closeView() {
-			PopUpManager.removePopUp(this);
+			// PopUpManager.removePopUp(this);
+			App.WinManager.closeWin(WinName.POP_EQUIPSPECIAL_TIP);
 		}
 
 		public checkGuide() {
@@ -116,6 +116,8 @@ module game {
 		 */
 		public openWin(openParam: any = null): void {
 			super.openWin(openParam);
+			this._data = openParam.data;
+			this.initView();
 			if (!this._updateHandleId) {
 				this._updateHandleId = App.EventSystem.addEventListener(PanelNotify.HERO_SPECIAL_EQUIP_UPDATE, this.closeView, this);
 			}

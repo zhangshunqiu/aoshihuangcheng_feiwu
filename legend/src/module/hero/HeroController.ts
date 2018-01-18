@@ -20,18 +20,26 @@ module game{
 			this.registerProtocal(15012,this.handleSpecialEquipActive,this);
 			this.registerProtocal(15013,this.handleSpecialEquipLevelUp,this);
 			this.registerProtocal(15014,this.handleSpecialEquipFragment,this);
+			this.registerProtocal(15015,this.handleAkeychange,this);
 			this.registerProtocal(12001,this.handleSkillListR,this);
+			this.registerProtocal(12003,this.handleSkillAllUp,this);
 			this.registerProtocal(12004,this.handleSkillUpgrageR,this);
 		}
 
 		public heroInfoR(data) {
+			this.dispatchEvent(PanelNotify.PLAYER_COMBAT_UPDATE,data);
 			(HeroModel.getInstance() as HeroModel).updateHeroInfo(data.hero);
 			(WingModel.getInstance() as WingModel).updateHeroInfo(data.hero);
-			App.loglyg("data.hero= ",data.hero);
+			App.logzrj("data.hero= ",data.hero);
 			if (HeroModel.getInstance().isEquipPuton) {
 				HeroModel.getInstance().isEquipPuton = false;
 				HeroModel.getInstance().checkBetterEquipRedDotAll();
 			}
+			if (HeroModel.getInstance().isSpecialEquip) {
+				HeroModel.getInstance().isSpecialEquip = false;
+				HeroModel.getInstance().checkSpecialEquipRedDotAll();
+			}
+
 			this.dispatchEvent(PanelNotify.HERO_ON_HERO_SELECT,HeroModel.getInstance().curPos);
 			this.dispatchEvent(PanelNotify.PLAYER_UPDATE_PLAYER_INFO);
 		}
@@ -52,6 +60,7 @@ module game{
 			(HeroModel.getInstance() as HeroModel).addNewHero(data.hero);
 			(WingModel.getInstance() as WingModel).updateHeroInfo((HeroModel.getInstance() as HeroModel).heroInfo);
 			HeroModel.getInstance().checkBetterEquipRedDotAll();
+			SkillModel.getInstance().checkSkillCanUpgradeAll();
 			this.dispatchEvent(PanelNotify.HERO_NEW_PARTNER);
 			this.dispatchEvent(PanelNotify.HERO_ON_HERO_SELECT,HeroModel.getInstance().curPos);
 			this.dispatchEvent(PanelNotify.PLAYER_UPDATE_PLAYER_INFO);
@@ -62,6 +71,8 @@ module game{
 		*/
 		public handleSpecialEquipActive(data) {
 			App.logzrj("data:",data);
+			// HeroModel.getInstance().checkSpecialEquipRedDotAll();
+			HeroModel.getInstance().isSpecialEquip = true;
 			this.dispatchEvent(PanelNotify.HERO_SPECIAL_EQUIP_UPDATE);
 			this.dispatchEvent(PanelNotify.HERO_ACTIVE_SPECIAL);
 		}
@@ -71,6 +82,8 @@ module game{
 		*/
 		public handleSpecialEquipLevelUp(data) {
 			App.logzrj("data:",data);
+			// HeroModel.getInstance().checkSpecialEquipRedDotAll();
+			HeroModel.getInstance().isSpecialEquip = true;
 			this.dispatchEvent(PanelNotify.HERO_SPECIAL_EQUIP_UPDATE);
 		}
 
@@ -79,10 +92,26 @@ module game{
 		*/
 		public handleSpecialEquipFragment(data) {
 			App.logzrj("data:",data);
+			// HeroModel.getInstance().checkSpecialEquipRedDotAll();
+			HeroModel.getInstance().isSpecialEquip = true;
 			this.dispatchEvent(PanelNotify.HERO_SPECIAL_EQUIP_UPDATE);
 		}
 
+        /**
+		 * 一键换装
+		 */
+        public handleAkeychange(data){
+			App.logzsq();
+			HeroModel.getInstance().isEquipPuton = true;
+		} 
 
+		/**
+		 * 一键升级技能
+		 */
+        public handleSkillAllUp(data){
+            SkillModel.getInstance().updateSkillInfo(data);
+			this.dispatchEvent(PanelNotify.HERO_UPDATE_SKILL_PANEL);
+		} 
 
 		/**
 		 * 技能列表

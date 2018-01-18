@@ -7,6 +7,7 @@
         public img_revive: eui.Image;
         public btn_challenge: eui.Button;
         public revive:any;
+        public _worldBossFightEventId: number = 0;
         private _worldBossModel: WorldBossModel = WorldBossModel.getInstance();
 
 
@@ -32,11 +33,13 @@
             this.revive = this._worldBossModel.revive;
             this.updateView();
             this.btn_challenge.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTouchChallenge, this);
+            if(this._worldBossFightEventId == 0) {
+                this._worldBossFightEventId = App.EventSystem.addEventListener(PanelNotify.WORLDBOSS_FIGHT, this.closeWin, this);
+            }
         }
 
         public onTouchChallenge() {
              App.Socket.send(36002, {scene_id:this.revive.scene_id});
-             this.closeWin();
         }
 
         public closeWin(): void {
@@ -48,6 +51,10 @@
          */
         public clear(data: any = null): void {
             super.clear(data);
+            if (this._worldBossFightEventId != 0) {
+                App.EventSystem.removeEventListener(PanelNotify.WORLDBOSS_FIGHT, this._worldBossFightEventId);
+                this._worldBossFightEventId = 0;
+            }
         }
         /**
          * 销毁

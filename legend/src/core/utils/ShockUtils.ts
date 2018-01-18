@@ -53,7 +53,6 @@ class ShockUtils extends BaseClass {
                 this._rx = this._target.x;
             }
             this._ry = this._target.y;
-            App.TimerManager.doFrame(1, 0, this.onShockEnter, this);
         }
     }
 
@@ -63,7 +62,6 @@ class ShockUtils extends BaseClass {
                 this._target.x = this._rx;
             }
             this._target.y = this._ry;
-            App.TimerManager.remove(this.onShockEnter, this);
         }
         this._target = null;
     }

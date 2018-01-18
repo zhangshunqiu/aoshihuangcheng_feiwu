@@ -1,29 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="SmeltSkin" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:customui="customui.*">
-	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
-		<customui:CommonWin id="commonWin" width="720" height="1066" y="0" x="0"/>
-		<e:Image source="common_bg_interface_level_1_png" top="0" horizontalCenter="0" visible="false"/>
-		<e:Image source="smelt_bg_png" y="58" horizontalCenter="0"/>
-		<e:Group height="200" bottom="150" width="645" horizontalCenter="0">
-			<e:Label text="熔炼以下品质的装备：" y="10" fontFamily="SimHei" textColor="0xc31e1c" left="0"/>
-			<e:Button id="btn_smelt" label="" y="150" horizontalCenter="0.5">
-				<e:skinName>
-					<e:Skin states="up,down,disabled">
-					<e:Image width="100%" height="100%" source="common_btn_common_png" source.down="common_btn_common_png"/>
-					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-					</e:Skin>
-				</e:skinName>
+	<e:Group id="gp_main" left="0" right="0" top="68" bottom="50" anchorOffsetY="0">
+		<customui:CommonWin id="commonWin" width="720" height="1066" y="0" x="0" visible="false"/>
+		<e:Image y="78.85" source="com_bg_tips_png" scale9Grid="67,69,446,95" anchorOffsetX="0" width="645.72" anchorOffsetY="0" height="821.94" horizontalCenter="5"/>
+		<e:Image source="smelt_bg_png" y="136.2" horizontalCenter="2" anchorOffsetX="0" width="622"/>
+		<e:Image source="smelt_bg_neirong_png" y="184.12" scale9Grid="15,16,247,254" width="560" height="535" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="6"/>
+		<e:Image source="smelt_tanhao_png" x="234.83" y="144.82"/>
+		<e:Group bottom="48" anchorOffsetY="0" horizontalCenter="0">
+			<e:Image anchorOffsetX="0" anchorOffsetY="0" source="com_bg_list2_png" scale9Grid="26,27,647,19" width="637" scaleX="1" scaleY="1" verticalCenter="5" horizontalCenter="4.5"/>
+			<e:Label text="熔炼以下品质的装备：" y="16" fontFamily="SimHei" left="26" size="22" textColor="0xffa200"/>
+			<e:Button id="btn_smelt" label="熔 炼" y="38.18" horizontalCenter="130.5" skinName="skins.ComBtnRedSkin">
 			</e:Button>
-			<e:Image source="smelt_orange_ronglian_png" horizontalCenter="0.5" verticalCenter="74.5" touchEnabled="false"/>
-			<e:CheckBox id="cbox0" label="白装" x="8" y="59" enabled="true"/>
-			<e:CheckBox id="cbox1" label="绿装" x="183" y="59" enabled="true"/>
-			<e:CheckBox id="cbox2" label="蓝装" x="338" y="59" enabled="true"/>
-			<e:CheckBox id="cbox3" label="紫装" x="509" y="59" enabled="true"/>
-			<e:CheckBox id="cbox_keep" label="保存当前穿戴战力更高的装备" x="8" y="107" enabled="true" selected="false"/>
+			<e:CheckBox id="cbox0" label="白装" x="8" y="59" enabled="true" visible="false"/>
+			<e:CheckBox id="cbox1" label="绿装" x="86" y="59" enabled="true" visible="false"/>
+			<e:CheckBox id="cbox2" label=" 白绿蓝装" x="26" y="58" enabled="true" skinName="skins.ComCheckBox1Skin"/>
+			<e:CheckBox id="cbox3" label=" 紫装" x="185" y="58" enabled="true" skinName="skins.ComCheckBox1Skin"/>
 		</e:Group>
 		<e:Scroller id="scroller" width="620" height="635" y="65" horizontalCenter="0" visible="false">
 			<e:Group/>
 		</e:Scroller>
-		<e:Group id="gp_equip" width="620" height="635" y="65" horizontalCenter="0"/>
+		<e:Group id="gp_equip" width="583" height="597" y="146.78" horizontalCenter="8.5">
+		</e:Group>
+		<e:Label text="熔炼功能只回收无用装备" y="149" size="22" textColor="0x656150" fontFamily="SimHei" horizontalCenter="36"/>
+		<e:Label text="熔炼装备" y="100.39" horizontalCenter="11" size="28" textColor="0xc89857" fontFamily="SimHei"/>
+		<e:Image id="img_close" source="com_btn_back_png" right="42" bottom="52"/>
+		<e:Image source="smelt_tielian_png" x="532" y="135"/>
+		<e:Image source="smelt_tielian_png" x="175" y="136"/>
+		<e:Image source="com_pic_clickClose_png" y="906.78" scaleX="1" scaleY="1" horizontalCenter="-9"/>
 	</e:Group>
+	<e:Image source="熔炼_png" left="0" top="0" alpha="0.5" visible="false"/>
 </e:Skin>

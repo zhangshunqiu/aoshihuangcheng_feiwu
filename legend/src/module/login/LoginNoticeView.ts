@@ -27,6 +27,8 @@ module game {
 
             this.scroller.viewport = this.vp_scr;
 			this.scroller.scrollPolicyH = eui.ScrollPolicy.OFF;
+            this.scroller.verticalScrollBar.autoVisibility = false;
+            this.scroller.verticalScrollBar.visible = false;
         }
 
 

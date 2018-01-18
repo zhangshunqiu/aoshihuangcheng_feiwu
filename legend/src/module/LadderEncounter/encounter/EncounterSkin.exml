@@ -34,7 +34,8 @@
 	<e:Image source="reborn_bg2_png" y="239" anchorOffsetX="0" width="385" horizontalCenter="22.5" anchorOffsetY="0" height="42"/>
 	<e:Label text="当前排名：" x="178" y="181" size="20" fontFamily="黑体"/>
 	<e:Label text="附近玩家" x="320" y="287" size="24" fontFamily="黑体" textColor="0x2fc9fb"/>
-	<e:Label text="成功击杀玩家增加25点pk值，达到100时无法继续挑战" x="153" y="251" size="18" fontFamily="黑体" textColor="0xf87500"/>
+	<e:Label text="成功击杀玩家增加  点pk值，达到100时无法继续挑战" x="153" y="251" size="18" fontFamily="黑体" textColor="0xf87500"/>
+	<e:Label id="lb_getPkValue" text="25" x="297" y="252" size="18" fontFamily="黑体" textColor="0xF87500"/>
 	<e:Label text="PK    值：" x="179" y="209" size="20" fontFamily="黑体"/>
 	<e:Image id="img_question" source="common_btn_wenhao_png" x="15" y="68"/>
 	<e:Scroller id="scroller" width="625" height="496" x="48" y="330" anchorOffsetX="0" anchorOffsetY="0">

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ForgeSkin_1" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:customui="customui.*" xmlns:game="game.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
+		<customui:CommonWin id="commonWin" left="0" right="0" top="0" bottom="0" x="0" y="0" scaleX="1" scaleY="1"/>
+		<e:Image source="common_bg_interface_level_1_png" horizontalCenter="0" top="0" x="9" y="0" scaleX="1" scaleY="1" visible="false"/>
+		<e:Group id="gp_strength" left="0" right="0" top="0" bottom="0" touchEnabled="false">
+			<e:Image source="forge_bg_qianghua_png" horizontalCenter="0" top="60" height="793" x="31" y="60" scaleX="1" scaleY="1"/>
+			<e:Image source="forge_lianlu_png" y="295" width="436" height="455" horizontalCenter="0" visible="false"/>
+			<e:Image source="forge_bg_zhandouli_png" y="328" x="193" scaleX="1" scaleY="1"/>
+			<e:Image source="forge_bg_shuxingzengjia_png" y="445" horizontalCenter="0" x="162" scaleX="1" scaleY="1"/>
+			<e:Image source="forge_bg_xiaohaocailiao_png" y="745" x="40" scaleX="1" scaleY="1"/>
+			<e:Image source="forge_jintou_shuxingtisheng_png" x="352" y="477" scaleX="1" scaleY="1"/>
+			<e:Image source="forge_txt_zhandouli_png" x="202" y="385" scaleX="1" scaleY="1"/>
+			<e:Label text="消耗：" x="192" y="751" size="24" fontFamily="SimHei" textColor="0x259dc2" scaleX="1" scaleY="1"/>
+			<e:Label id="lb_num" text="xxx/xxx" y="751" size="24" fontFamily="SimHei" textColor="0x259DC2" x="318" scaleX="1" scaleY="1"/>
+			<e:Group id="gp_equip" height="550" y="210" left="0" right="0" x="0" scaleX="1" scaleY="1">
+				<e:Image y="336" horizontalCenter="0" source="forge_bg_tips_png"/>
+				<e:Label text="更换装备时，强化属性保留" y="340" fontFamily="SimHei" horizontalCenter="0" size="24" textColor="0xb90b0a"/>
+			</e:Group>
+			<e:Image id="img_forge" source="common_btn_common_png" y="789" x="110" scaleX="1" scaleY="1"/>
+			<e:Image id="img_all" source="common_btn_common_png" y="789" x="459" scaleX="1" scaleY="1"/>
+			<e:Image source="forge_txt_qianghua_png" x="156" y="803" touchEnabled="false" scaleX="1" scaleY="1"/>
+			<e:Image source="forge_txt_yijianqianghua_png" x="485" y="803" touchEnabled="false" scaleX="1" scaleY="1"/>
+			<e:Label id="lb_left0" text="攻击力：" x="176" y="447" fontFamily="SimHei" size="24" verticalAlign="middle" textAlign="center" height="90" scaleX="1" scaleY="1" lineSpacing="20"/>
+			<e:Label id="lb_left" text="xxxxxx" x="250" y="447" fontFamily="SimHei" size="24" width="110" height="90" scaleX="1" scaleY="1" lineSpacing="20" verticalAlign="middle" textAlign="center"/>
+			<e:Label id="lb_right" text="xxxxxx" x="420" y="447" fontFamily="SimHei" size="24" textColor="0x54b122" width="130" height="90" verticalAlign="middle" textAlign="center" scaleX="1" scaleY="1" lineSpacing="20"/>
+			<e:Image id="img_cost" source="24300b_png" x="259" y="738" scaleX="0.8" scaleY="0.8"/>
+			<e:Label id="label_get" text="获得道具" x="458" y="751" size="24" fontFamily="SimHei" textColor="0x63d72a" scaleX="1" scaleY="1"/>
+			<e:BitmapLabel id="bmlb_cap" x="330" y="393" font="main_pingfen_shu_fnt" text="96842" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Group id="gp_star" left="0" right="0" top="0" bottom="0" touchEnabled="false">
+			<e:Image source="forge_bg_shengxing_png" y="57" horizontalCenter="0"/>
+			<e:Image source="forge_bg_shuxingzengjia_png" y="480" horizontalCenter="0"/>
+			<e:Image source="forge_bg_wupin_png" y="281" x="282"/>
+			<e:Image source="forge_bg_wuqimingzi_png" y="217" x="206"/>
+			<e:Image y="723" horizontalCenter="0" source="forge_bg_xiaohaocailiao_png"/>
+			<e:Image id="img_starCost" source="24300a_png" x="328" y="630"/>
+			<e:Image source="forge_bg_cailiao_png" y="619" x="317"/>
+			<e:Image id="img_starUp" source="common_btn_common_png" y="775" horizontalCenter="0.5"/>
+			<e:Image source="forge_txt_shengxing_png" y="787" horizontalCenter="0" touchEnabled="false"/>
+			<e:Image source="forge_wupin_t_png" x="313" y="312"/>
+			<e:Label id="lb_name" text="名字777个字" x="234" y="226" fontFamily="SimHei" size="24"/>
+			<e:Label id="lb_star" text="星级+99" x="422" y="226" size="24" fontFamily="SimHei" textColor="0xe8b10a"/>
+			<e:Label text="基础属性增加" y="486" fontFamily="SimHei" size="24" horizontalCenter="0" textColor="0xf93a26"/>
+			<e:Label text="更换装备时，升星属性保留" y="582" fontFamily="SimHei" size="20" horizontalCenter="0" textColor="0xb90b0a"/>
+			<e:Label text="消耗：" x="255" y="729" fontFamily="SimHei" textColor="0x259dc2" size="24"/>
+			<e:Group id="gp_attr" width="400" height="60" y="510" horizontalCenter="0">
+				<e:Image source="forge_jiantou_shuxingzengqiang_png" y="4" x="157" scaleX="1" scaleY="1"/>
+				<e:Label id="lb_starLeft" text="20%" x="105" y="17" fontFamily="SimHei" size="24" textColor="0xbfbfbf" scaleX="1" scaleY="1"/>
+				<e:Label id="lb_starRight" text="20%" x="255" y="17" fontFamily="SimHei" size="24" textColor="0x63d72a" scaleX="1" scaleY="1"/>
+			</e:Group>
+			<e:Label id="lb_total" text="20%" y="526" fontFamily="SimHei" size="24" textColor="0x63D72A" scaleX="1" scaleY="1" horizontalCenter="0" visible="false"/>
+			<e:Label id="lb_starNum" text="xxx/xxx" x="336" y="729" fontFamily="SimHei" textColor="0xbfbfbf" size="24"/>
+			<e:Label id="lb_starGet" text="获得道具" x="466" y="792" size="24" fontFamily="SimHei" textColor="0x63d72a"/>
+			<e:Image id="img_attr" source="forge_btn_taozhuangshuxing_png" x="455" y="293"/>
+			<customui:BaseItem id="baseItem" width="90" height="90" y="357" horizontalCenter="0" anchorOffsetX="45" anchorOffsetY="45"/>
+			<e:Group id="gp_starEquip" height="500" y="210" left="0" right="0" touchEnabled="false">
+			</e:Group>
+		</e:Group>
+		<game:HeroHeadComponentView id="headComponent" width="720" height="120" scaleX="1" scaleY="1" horizontalCenter="0" top="60" x="0" y="60"/>
+		<e:Group id="gp_tab" height="60" y="857" left="0" right="0">
+			<e:Button id="btn_strength" label="强化" x="65" skinName="skins.ButtonSkin2" scaleX="1" scaleY="1" verticalCenter="0.5"/>
+			<e:Button id="btn_star" label="升星" skinName="skins.ButtonSkin2" x="225" scaleX="1" scaleY="1" y="-1"/>
+			<e:Button id="btn_orange" label="橙装" skinName="skins.ButtonSkin2" x="390" scaleX="1" scaleY="1" verticalCenter="0.5" visible="false"/>
+			<e:Image id="img_return" source="common_btn_fanhui_png" x="606" y="-23"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

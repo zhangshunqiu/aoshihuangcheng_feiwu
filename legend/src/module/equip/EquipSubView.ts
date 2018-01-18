@@ -14,27 +14,25 @@ module game {
         private _career: number = 1;
         private _sex: number = 1;
         private heroModel: HeroModel = HeroModel.getInstance();
-        public constructor(career, type, sex?) {
-            super();
+        public constructor(config) {
+            super(config);
             this.skinName = "EquipSelectSkin";
-            this._part = type;  //装备部位
-            this._career = career;
-            this._sex = sex ? sex : 0;
-            this.readyOpenWin();
+            // this._part = type;  //装备部位
+            // this._career = career;
+            // this._sex = sex ? sex : 0;
+            // this.readyOpenWin();
         }
 
         protected childrenCreated() {
             super.childrenCreated();
             App.EventSystem.addEventListener(PanelNotify.HERO_CLOSE_EQUIP_SELECT, () => {
-                PopUpManager.removePopUp(this);
+                // PopUpManager.removePopUp(this);
+                App.WinManager.closeWin(WinName.POP_EQUIP_SELECT);
             }, this);
-            this.initView();
-        }
-
-        private initView() {
-            this.gp_tip.visible = false;
+            // this.gp_tip.visible = false;
             this.img_close.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: Event) => {
-                PopUpManager.removePopUp(this, 0);
+                // PopUpManager.removePopUp(this, 0);
+                App.WinManager.closeWin(WinName.POP_EQUIP_SELECT);
             }, this);
             this.list = new eui.List();
             this.list.itemRenderer = EquipSelectItem;
@@ -42,7 +40,12 @@ module game {
             this.list.addEventListener(eui.ItemTapEvent.ITEM_TAP, (e: eui.ItemTapEvent) => {
                 // console.log("gggg");
             }, this);
-            this.updateView();
+            this.initView();
+        }
+
+        private initView() {
+
+            // this.updateView();
         }
 
         public updateView() {
@@ -54,7 +57,7 @@ module game {
             for (let i = 0; i < temp.length; i++) {
                 let info = App.ConfigManager.equipConfig()[temp[i].good_id];
                 if (info.sex == 0 || info.sex == this.heroModel.heroInfo[this.heroModel.curPos].sex) {
-                    if (info.limit_lvl > App.RoleManager.roleInfo.lv) {
+                    if (App.RoleManager.roleInfo.turn < info.reincarnation || info.limit_lvl > App.RoleManager.roleInfo.lv) {
                         temp2.push(temp[i]);
                     } else {
                         temp1.push(temp[i]);
@@ -62,11 +65,14 @@ module game {
                     // finalArr.push(temp[i]);
                 }
             }
-            finalArr = temp1.concat(temp2);
+            //改动，不符合不显示
+            // finalArr = temp1.concat(temp2);
+            finalArr = temp1;
             if (finalArr.length == 0) {
-                this.gp_tip.visible = true;
+                App.WinManager.closeWin(WinName.POP_EQUIP_SELECT);
+                App.GlobalTips.showTips("没有可穿戴装备");
             } else {
-                this.gp_tip.visible = false;
+                // this.gp_tip.visible = false;
                 this.gp_main.visible = true;
                 EquipModel.getInstance().sortEquipByCap(finalArr);
                 //装备在身上的也要展示
@@ -89,34 +95,38 @@ module game {
         }
 
         private checkGuide() {
-            if(this.list.numElements){
-                App.GuideManager.bindClickBtn((<eui.Group>(<EquipSelectItem>this.list.getElementAt(0)).getChildAt(0)).getChildByName("btn_select"),1000,3);
-                App.GuideManager.bindClickBtn((<eui.Group>(<EquipSelectItem>this.list.getElementAt(0)).getChildAt(0)).getChildByName("btn_select"),1002,3);
+            if (this.list.numElements) {
+                App.GuideManager.bindClickBtn((<eui.Group>(<EquipSelectItem>this.list.getElementAt(0)).getChildAt(0)).getChildByName("btn_select"), 1000, 3);
+                App.GuideManager.bindClickBtn((<eui.Group>(<EquipSelectItem>this.list.getElementAt(0)).getChildAt(0)).getChildByName("btn_select"), 1002, 3);
                 App.GuideManager.checkGuide(1000);
                 App.GuideManager.checkGuide(1002);
             }
         }
 
         private removeGuide() {
-            App.GuideManager.removeClickBtn(1000,3);
-            App.GuideManager.removeClickBtn(1002,3);
+            App.GuideManager.removeClickBtn(1000, 3);
+            App.GuideManager.removeClickBtn(1002, 3);
         }
 
-         /**
-		 * 打开窗口
-		 */
-		public openWin(openParam: any = null): void {
-			super.openWin(openParam);
+        /**
+        * 打开窗口
+        */
+        public openWin(openParam: any = null): void {
+            super.openWin(openParam);
+            this._part = openParam.type;  //装备部位
+            this._career = openParam.career;
+            this._sex = openParam.sex ? openParam.sex : 0;
+            this.updateView();
             this.validateNow();
             this.checkGuide();
-		}
+        }
 
 		/**
 		 * 关闭窗口
 		 */
-		public closeWin(callback): void {
-			super.closeWin(callback);
-		}
+        public closeWin(callback): void {
+            super.closeWin(callback);
+        }
 
         /**
           * 清理
@@ -144,6 +154,7 @@ module game {
         public btn_select: eui.Label;
         public bmlb_cap: eui.BitmapLabel;
         public img_equiped: eui.Image;
+        private bmlb_fightcap : eui.BitmapLabel;
 
         public equipedId: number;// 如果已经装备武器，则是已经装备武器id，
         private heroModel: HeroModel = HeroModel.getInstance();
@@ -161,7 +172,10 @@ module game {
                 let heroModel = HeroModel.getInstance() as HeroModel;
                 let heroInfo = heroModel.heroInfo[heroModel.curPos];
                 let baseInfo = App.ConfigManager.equipConfig()[this.data.good_id];
-                if (baseInfo.limit_lvl > App.RoleManager.roleInfo.lv) {
+                if (App.RoleManager.roleInfo.turn < baseInfo.reincarnation) {
+                    App.GlobalTips.showTips("转生达到" + baseInfo.reincarnation + "转可穿戴");
+                    return;
+                } else if (baseInfo.limit_lvl > App.RoleManager.roleInfo.lv) {
                     App.GlobalTips.showTips("等级达到" + baseInfo.limit_lvl + "级可穿戴");
                     return;
                 }
@@ -173,13 +187,16 @@ module game {
         protected dataChanged() {
             let baseInfo = App.ConfigManager.equipConfig()[this.data.good_id];
             this.lb_name.text = baseInfo.name;
-            this.lb_level.text = "等级" + baseInfo.limit_lvl;
-            this.lb_attr.lineSpacing = 8;
+            this.lb_name.textColor = ConstTextColor[baseInfo.quality];
+            this.lb_level.text = "Lv." + baseInfo.limit_lvl;
+            this.lb_attr.lineSpacing = 4;
             // this.lb_cap.text = "评分：";
+            this.bmlb_fightcap.text = this.data.score;
             this.bmlb_cap.text = this.data.score;
             this.baseItem.updateBaseItem(2, this.data.good_id);
+            this.baseItem.setStopShowTips(true);
             let textArray = [];
-            textArray.push({ text: "【基础属性】：\n", style: { textColor: 0xd47e33, size: 18 } });
+            textArray.push({ text: "【基础属性】\n", style: { textColor: 0xffa200, size: 24 } });
             let attribute = App.ConfigManager.attributeConfig()[baseInfo.base_att];
             // let attrBase = EquipModel.getInstance().attributeFilter(attribute);
             let attrBase = (<EquipVO>this.data).base;
@@ -187,8 +204,8 @@ module game {
             let colorArray = [0xc98f12, 0x2f66a9, 0x149a21, 0x8d1b1b];
             for (let key in attrBase) {
                 let myKey = ConstAttributeArray[attrBase[key].key];
-                textArray.push({ text: "\t" + ConstAttribute[myKey] + "：", style: { textColor: 0xffd237, size: 18 } }, { text: attrBase[key].value, style: { textColor: 0xded9d6, size: 18 } },
-                    { text: "+" + attrBase[key].add_value, style: { textColor: 0xded9d6, size: 18 } });
+                textArray.push({ text: "\t" + ConstAttributeTwo[myKey] + "：", style: { textColor: 0xffa200, size: 24 } }, { text: attrBase[key].value, style: { textColor: 0xbfb294, size: 24 } },
+                    { text: "+" + attrBase[key].add_value, style: { textColor: 0xbfb294, size: 24 } });
                 count++;
                 if (count % 2 == 0) {
                     textArray.push({ text: "\n" });
@@ -202,10 +219,15 @@ module game {
                 this.img_equiped.visible = false;
                 this.btn_select.visible = true;
             }
-            if (baseInfo.limit_lvl > App.RoleManager.roleInfo.lv) {
+            if (App.RoleManager.roleInfo.turn < baseInfo.reincarnation || baseInfo.limit_lvl > App.RoleManager.roleInfo.lv) {
                 this.lb_level.textColor = 0xf63527;
             } else {
-                this.lb_level.textColor = 0xbfbfbf;
+                this.lb_level.textColor = 0xbfb294;
+            }
+
+            if (baseInfo.reincarnation) {
+                //转生
+                this.lb_level.text = baseInfo.reincarnation + "转";
             }
         }
     }

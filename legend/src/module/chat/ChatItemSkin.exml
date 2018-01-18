@@ -7,7 +7,6 @@
 		<e:BitmapLabel id="lb_vip" width="126" height="27" x="97" y="1" anchorOffsetX="0" anchorOffsetY="0" font="chat_vip_number_fnt" text="10" letterSpacing="-5"/>
 	</e:Group>
 	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
-		<e:Label id="lb_content" text="啦啦啦持支持" x="122" y="53" fontFamily="SimHei" size="24" maxWidth="300" anchorOffsetX="0" width="487" textColor="0xbfbfbf"/>
 		<e:Image source="chat_fengexian_png" x="21" y="106"/>
 		<e:Image id="frame_normal" source="chat_bg_touxiang_putong_png" x="10" y="13"/>
 		<e:Image id="frame_vip" source="chat_bg_touxiang_vip_png" x="11" y="13"/>

@@ -10,7 +10,6 @@
 			<e:Image source="activity_wenzi1_png" y="18" horizontalCenter="0.5"/>
 		</e:Group>
 		<e:Scroller id="scroller" width="650" height="510" y="150" horizontalCenter="0">
-			<e:Group/>
 		</e:Scroller>
 	</e:Group>
 </e:Skin>

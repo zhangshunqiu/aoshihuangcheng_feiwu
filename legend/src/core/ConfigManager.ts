@@ -14,6 +14,12 @@ class ConfigManager extends BaseConfManager {
 		this.skillConfig();
 		this.skillKeyConfig();
 
+		this.attributeConfig();//属性表初始化
+		this.skillTreeConfig();//技能树配置初始化
+		this.equipConfig();//装备
+		this.getAllExpConfig();//
+		this.achieveConfig();//成就表
+
 		//合并所有场景表
 		this.setConfig("all_scene_conf", {});
 		var allSceneConf: any = this.getConfig("all_scene_conf");
@@ -235,6 +241,11 @@ class ConfigManager extends BaseConfManager {
 		}
 	}
 
+
+	public getCareerTagByJob() {
+
+	}
+
 	public skillBaseConfig(): any {
 		return this.getConfig("t_skill_base_json");
 	}
@@ -259,12 +270,14 @@ class ConfigManager extends BaseConfManager {
 	 * 
 	 */
 	public getEquipById(id) {
+		//几万条数据，用for循环去拿的话，太慢，消耗太大，暂时改成用键值 zrj 2018.01.16
 		let config = this.equipConfig();
-		for (let key in config) {
-			if (config[key].id == id) {
-				return config[key];
-			}
-		}
+		// for (let key in config) {
+		// 	if (config[key].id == id) {
+		// 		return config[key];
+		// 	}
+		// }
+		return config[id];
 	}
 
 	/**
@@ -301,6 +314,14 @@ class ConfigManager extends BaseConfManager {
 		return this.getConfig("t_goods_json");
 	}
 
+	public achieveConfig(): any {
+
+		return this.getConfig("t_achieve_json");
+	}
+
+	public taskConfig():any{
+		return this.getConfig("t_task_json");
+	}
 	/**
 	 * 道具表
 	*/
@@ -374,17 +395,7 @@ class ConfigManager extends BaseConfManager {
 	public getExpConfigByLv(lv: number): any {
 		return this.getConfig("t_exp_json")[lv]
 	}
-	/**
-	 * 物品掉落组
-	 */
-	public dropConfig(): any {
-		return this.getConfig("t_drop_json");
-	}
-
-	public dropGroupConfig(): any {
-		return this.getConfig("t_drop_group_json");
-	}
-
+	
 	/**
 	 * 怪物表
 	 */
@@ -412,6 +423,13 @@ class ConfigManager extends BaseConfManager {
 	*/
 	public getAllExpConfigById(sceneId: number): any {
 		return this.getConfig("t_all_exp_json")[String(sceneId)];
+	}
+	/**
+	 * 场景挂机经验表
+	 * @param sceneId 场景ID
+	*/
+	private getAllExpConfig(): any {
+		return this.getConfig("t_all_exp_json");
 	}
 
 	/**
@@ -468,7 +486,7 @@ class ConfigManager extends BaseConfManager {
 	 * 获取翅膀升星对应信息
 	 * @param id 翅膀id,对应星级；
 	 */
-	public getWingStarById(id: string): any {
+	public getWingStarById(id: number): any {
 		return this.wingStarConfig()[id];
 	}
 
@@ -656,10 +674,10 @@ class ConfigManager extends BaseConfManager {
     /**
 	 * 等级礼包
 	*/
-	public getLvPackageInfoByLv(lv): any {
+	public getLvPackageInfoById(id): any {
 		let config = this.getConfig("t_welfare_json");
 		for (let key in config) {
-			if (config[key].lv == lv) {
+			if (config[key].id == id) {
 				return config[key];
 			}
 		}
@@ -694,15 +712,20 @@ class ConfigManager extends BaseConfManager {
 
 	public getSensitiveWordCheck(str: string): string {
 
-
-		let config = this.getConfig("t_sensitive_word_json");
-
-		for (let key in config) {
-
-			if (str.indexOf(config[key].w) >= 0)
-				str = str.replace(config[key].w, "*");
+		let list = this.getConfig("t_sensitive_word_json");
+		var value: string;
+		for (let i = 0; i < list.length; i++) {
+			value = list[i];
+			if (str.indexOf(value) >= 0) {
+				str = str.replace(value, "*");
+			}
 		}
-		//str = str.su
+		//let config = this.getConfig("t_sensitive_word_json");
+		// for (let key in config) {
+
+		// 	if (str.indexOf(config[key].word) >= 0)
+		// 		str = str.replace(config[key].word, "*");
+		// }
 		return str;
 	}
 
@@ -799,12 +822,12 @@ class ConfigManager extends BaseConfManager {
 		*/
 	public getRandomManName() {
 		let lastConfig: Array<any> = this.getConfig("t_name_last_json");
-		let tempArr = [];
-		for (let key in lastConfig) {
-			if (lastConfig[key].gender == 0) {
-				tempArr.push(lastConfig[key].name);
-			}
-		}
+		let tempArr = lastConfig["man"];
+		// for (let key in lastConfig) {
+		// 	if (lastConfig[key].gender == 0) {
+		// 		tempArr.push(lastConfig[key].name);
+		// 	}
+		// }
 		let random = Math.floor(Math.random() * tempArr.length);
 		return tempArr[random];
 
@@ -814,12 +837,12 @@ class ConfigManager extends BaseConfManager {
 	*/
 	public getRandomWomanName() {
 		let lastConfig: Array<any> = this.getConfig("t_name_last_json");
-		let tempArr = [];
-		for (let key in lastConfig) {
-			if (lastConfig[key].gender == 1) {
-				tempArr.push(lastConfig[key].name);
-			}
-		}
+		let tempArr = lastConfig["woman"];
+		// for (let key in lastConfig) {
+		// 	if (lastConfig[key].gender == 1) {
+		// 		tempArr.push(lastConfig[key].name);
+		// 	}
+		// }
 		let random = Math.floor(Math.random() * tempArr.length);
 		return tempArr[random];
 	}
@@ -830,9 +853,9 @@ class ConfigManager extends BaseConfManager {
 		let fistConfig = this.getConfig("t_name_first_json");
 		let random = Math.floor(Math.random() * fistConfig.length);
 		if (sex == ConstSex.WOMAN) {
-			return fistConfig[random].name + "" + this.getRandomWomanName();
+			return fistConfig[random] + "" + this.getRandomWomanName();
 		} else {
-			return fistConfig[random].name + "" + this.getRandomManName();
+			return fistConfig[random] + "" + this.getRandomManName();
 		}
 
 	}
@@ -964,11 +987,26 @@ class ConfigManager extends BaseConfManager {
 	/**
 	 * 膜拜表
 	 */
-	public getWorShipByIv(lv) {
+	public getWorShipByIv(arr: Array<any>) {
+		var level: number = arr[0];
+		var turn: number = arr[1];
 		let config = this.getConfig("t_worship_json");
 		for (let key in config) {
-			if (config[key].level == lv) {
-				return config[key];
+			if (turn >= 1) {
+				if (config[key].level[1] == turn) {
+					return config[key];
+				}
+			} else {
+				if (level >= 80) {
+					if (config[key].level[0] == 80) {
+						return config[key];
+					}
+				} else {
+					if (config[key].level[0] == level) {
+						return config[key];
+					}
+				}
+
 			}
 		}
 	}
@@ -1034,6 +1072,23 @@ class ConfigManager extends BaseConfManager {
 		}
 	}
 
+	public getTaskDailyInfoById(id) {
+		let config = this.getConfig("t_task_daily_json");
+		for (let key in config) {
+			if (config[key].task_id == id) {
+				return config[key];
+			}
+		}
+	}
+
+	public getAchieveInfoById(id) {
+		let config = this.getConfig("t_achieve_json");
+		for (let key in config) {
+			if (config[key].id == id) {
+				return config[key];
+			}
+		}
+	}
 
 	/**
 	*主线任务配表 

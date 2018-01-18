@@ -24,7 +24,9 @@ module game {
 			}
 		}
 
-
+		/**
+		 * 判断红点的
+		 */
 		public hasNoReadMail():Boolean{
 			for(var i:number=0;i<this._mailArr.length;i++){
 				var vo:MailVO = this._mailArr[i];
@@ -71,7 +73,7 @@ module game {
 					break;
 				}
 			}
-			App.EventSystem.dispatchEvent(PanelNotify.MAIL_INFO_UPDATE);
+			// App.EventSystem.dispatchEvent(PanelNotify.MAIL_INFO_UPDATE);
 			
 		}
 		
@@ -101,6 +103,7 @@ module game {
 				if(id == mailArrItem.id)
 				{
 					mailArrItem.isRead = true;
+					mailArrItem.rewardState = true;
 					break;
 				}
 			}
@@ -109,6 +112,7 @@ module game {
 
 		public get mailArr():Array<any>
 		{	
+			//一页最多六个
 			var count = Math.floor(this._mailArr.length /6);
 			var arr = [];
             for (var i = 0; i < count; i++) 
@@ -148,82 +152,92 @@ module game {
 		 * 时间戳转换成日期时间格式
 		 */
 		public static formatDate(Num):any
-		{
-//        return new Date(parseInt(Num) * 1000).toLocaleString().replace("/", "-").replace("/", "-");
-//        new Date(parseInt(Num) * 1000).toLocaleString().replace(/\//gi, '-');
-        var Day=new Date(parseInt(Num) * 1000).toLocaleTimeString().replace("上午", '').replace("下午", '').replace(":", '').replace(":", '');
-        var DayBy=new Date(parseInt(Num) * 1000).toLocaleTimeString().replace("上午", '').replace("下午", '');
-        var DayDal=new Date(parseInt(Num) * 1000).toLocaleTimeString();
-        var Text=DayDal.substr(0,1);
-        var DayA=Day;
-        var DayB=Day;
-        var DayC=Day;
-        var DayH;
-        var DayM;
-        var DayS;
-        var DateDal=new Date(parseInt(Num) * 1000).toLocaleDateString().replace(/\//gi, '-');
+		{	
+			// var time = new Date(parseInt(Num) * 1000).toLocaleString();
+			// var hours:number =new Date(parseInt(Num) * 1000).getHours();
+			// if(String(hours).length <= 1) {
+			// 	var index:number = time.indexOf(String(hours));
+			// 	var hour:string = "0" + String(hours);	//变两位数
+			// 	return time.substr(0,index) + hour + time.substr(index);
+				
+			// }else{
+			// 	return time;
+			// }
+			return new Date(parseInt(Num) * 1000).toLocaleString();
+
+					// var Day=new Date(parseInt(Num) * 1000).toLocaleTimeString().replace("上午", '').replace("下午", '').replace(":", '').replace(":", '');
+					// var DayBy=new Date(parseInt(Num) * 1000).toLocaleTimeString().replace("上午", '').replace("下午", '');
+					// var DayDal=new Date(parseInt(Num) * 1000).toLocaleTimeString();
+					// var Text=DayDal.substr(0,1);
+					// var DayA=Day;
+					// var DayB=Day;
+					// var DayC=Day;
+					// var DayH;
+					// var DayM;
+					// var DayS;
+					// var DateDal=new Date(parseInt(Num) * 1000).toLocaleDateString().replace(/\//gi, '-');
 
 
-        if(Text=="下"){
-            for(var i=0;i<4;i++){
-                DayA = DayA.substring(0, DayA.length - 1);
-            }
+					// if(Text=="下"){
+					// 	for(var i=0;i<4;i++){
+					// 		DayA = DayA.substring(0, DayA.length - 1);
+					// 	}
 
-            if(Number(DayA)>=1&&Number(DayA)<=9){
-                DayB=DayB.substring(1);
-                for(var ic=0;ic<3;ic++){
-                    DayC = DayC.substring(1);
-                }
-            }else{
-                for(var ib=0;ib<2;ib++){
-                    DayB=DayB.substring(1);
-                }
-                for(var ia=0;ia<4;ia++){
-                    DayC = DayC.substring(1);
-                }
-            }
-            for(var id=0;id<2;id++){
-                DayB=DayB.substring(0, DayB.length - 1)
-            }
+					// 	if(Number(DayA)>=1&&Number(DayA)<=9){
+					// 		DayB=DayB.substring(1);
+					// 		for(var ic=0;ic<3;ic++){
+					// 			DayC = DayC.substring(1);
+					// 		}
+					// 	}else{
+					// 		for(var ib=0;ib<2;ib++){
+					// 			DayB=DayB.substring(1);
+					// 		}
+					// 		for(var ia=0;ia<4;ia++){
+					// 			DayC = DayC.substring(1);
+					// 		}
+					// 	}
+					// 	for(var id=0;id<2;id++){
+					// 		DayB=DayB.substring(0, DayB.length - 1)
+					// 	}
 
-            if(Number(DayA)==12){
-                DayH="12";
-            }else{
-                DayH=12+Number(DayA);
-            }
-        }else {
-            for (var i = 0; i < 4; i++) {
-                DayA = DayA.substring(0, DayA.length - 1);
-            }
+					// 	if(Number(DayA)==12){
+					// 		DayH="12";
+					// 	}else{
+					// 		DayH=12+Number(DayA);
+					// 	}
+					// }else {
+					// 	for (var i = 0; i < 4; i++) {
+					// 		DayA = DayA.substring(0, DayA.length - 1);
+					// 	}
 
-            if (Number(DayA) >= 0 && Number(DayA) <= 9) {
-                DayB = DayB.substring(1);
-                for (var ic = 0; ic < 3; ic++) {
-                    DayC = DayC.substring(1);
-                }
-            } else {
-                for (var ib = 0; ib < 2; ib++) {
-                    DayB = DayB.substring(1);
-                }
-                for (var ia = 0; ia < 4; ia++) {
-                    DayC = DayC.substring(1);
-                }
-            }
-            for (var id = 0; id < 2; id++) {
-                DayB = DayB.substring(0, DayB.length - 1)
-            }
-            if (Number(DayA) == 12) {
-                DayH = "00";
-            } else if (Number(DayA) >= 10 && Number(DayA) <= 11) {
-                DayH = "0" + Number(DayA);
-            } else {
-                DayH = Number(DayA);
-            }
-        }
-        DayM = DayB;
-        DayS = DayC;
-        DayBy = DateDal + " " + DayH + ":" + DayM + ":" + DayS;
-        return DayBy;
-    }
+					// 	if (Number(DayA) >= 0 && Number(DayA) <= 9) {
+					// 		DayB = DayB.substring(1);
+					// 		for (var ic = 0; ic < 3; ic++) {
+					// 			DayC = DayC.substring(1);
+					// 		}
+					// 	} else {
+					// 		for (var ib = 0; ib < 2; ib++) {
+					// 			DayB = DayB.substring(1);
+					// 		}
+					// 		for (var ia = 0; ia < 4; ia++) {
+					// 			DayC = DayC.substring(1);
+					// 		}
+					// 	}
+					// 	for (var id = 0; id < 2; id++) {
+					// 		DayB = DayB.substring(0, DayB.length - 1)
+					// 	}
+					// 	if (Number(DayA) == 12) {
+					// 		DayH = "00";
+					// 	} else if (Number(DayA) >= 10 && Number(DayA) <= 11) {
+					// 		DayH = "0" + Number(DayA);
+					// 	} else {
+					// 		DayH = Number(DayA);
+					// 	}
+					// }
+					// DayM = DayB;
+					// DayS = DayC;
+					// DayBy = DateDal + " " + DayH + ":" + DayM + ":" + DayS;
+					// return DayBy;
+		}
 	}
 }

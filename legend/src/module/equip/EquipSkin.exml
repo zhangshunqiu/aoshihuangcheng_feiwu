@@ -1,48 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="EquipSkin" width="720" height="1280" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:customui="customui.*">
+<e:Skin class="EquipSkin" width="437" height="707" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:customui="customui.*">
 	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0" touchEnabled="false">
-		<e:Image scaleX="1" scaleY="1" horizontalCenter="-1" verticalCenter="0" source="common_bg_window_tips_png" width="406" height="620"/>
-		<e:Group id="gp_tip" width="406" height="620" horizontalCenter="0" verticalCenter="0"/>
-		<e:Group id="gp_equip" width="406" height="620" horizontalCenter="0" verticalCenter="0">
-			<e:Image source="equipping_shuxingpingfen_png" y="156" width="390" horizontalCenter="-3"/>
-			<e:Image source="equipping_zhuangbeipingfen_png" x="41" y="163"/>
+		<e:Image id="img_bg" scaleX="1" scaleY="1" verticalCenter="0" horizontalCenter="-0.5" right="0" left="0" top="0" bottom="0" source="com_bg_itemTips0_png" scale9Grid="38,24,229,215"/>
+		<e:Group id="gp_tip" anchorOffsetY="0" width="437" height="707" x="0" y="0" anchorOffsetX="0"/>
+		<e:Group id="gp_equip" anchorOffsetY="0" width="437" height="707" x="0" y="0" anchorOffsetX="0">
+			<e:Image y="141.33" width="295" horizontalCenter="-63" anchorOffsetX="0" source="com_bg_combat2_png" scale9Grid="109,5,99,36"/>
+			<e:BitmapLabel id="bmlb_fightcap" x="98" y="153.68" font="combat_shuxing_fnt" text="1582687"/>
+			<e:Image x="37" source="words_zhandouli_png" y="151.68"/>
 			<e:Label id="lb_name" text="装备名字" x="18" y="13" fontFamily="SimHei" scaleX="1" scaleY="1" size="24"/>
-			<customui:BaseItem id="baseItem" width="90" height="90" x="62" y="93" anchorOffsetX="45" anchorOffsetY="45" scaleX="1" scaleY="1"/>
-			<e:Label id="lb_part" text="部位" x="129" y="86" fontFamily="SimHei" size="24" scaleX="1" scaleY="1"/>
-			<e:Label id="lb_career" text="职业" x="129" y="51" fontFamily="SimHei" size="24" scaleX="1" scaleY="1"/>
-			<e:Label id="lb_level" text="需求等级" x="129" y="120" fontFamily="SimHei" size="24" scaleX="1" scaleY="1"/>
-			<e:Label id="lb_cap" text="1234567890" x="128" y="164" fontFamily="SimHei" scaleX="1" scaleY="1" size="20" textColor="0xf5a627"/>
-			<e:Button id="btn_show" label="展示" x="282" y="21" scaleX="1" scaleY="1" skinName="skins.ButtonSkin4"/>
-			<e:Button id="btn_change" label="更换" x="282" y="75" scaleX="1" scaleY="1" skinName="skins.ButtonSkin4"/>
+			<customui:BaseItem id="baseItem" width="90" height="90" x="62" y="89.01" anchorOffsetX="45" anchorOffsetY="45" scaleX="1" scaleY="1"/>
+			<e:Label id="lb_part" text="部位" x="119" y="72.68" fontFamily="SimHei" size="24" scaleX="1" scaleY="1"/>
+			<e:Label id="lb_career" text="职业" x="119" y="105.68" fontFamily="SimHei" size="24" scaleX="1" scaleY="1"/>
+			<e:Label id="lb_level" text="需求等级" x="129" y="120" fontFamily="SimHei" size="24" scaleX="1" scaleY="1" visible="false"/>
+			<e:Label id="lb_cap" text="1234567890" x="96" y="159.01" fontFamily="SimHei" scaleX="1" scaleY="1" size="24" textColor="0xf5a627" visible="false"/>
+			<e:Button id="btn_show" label="展示" x="282" y="21" scaleX="1" scaleY="1" skinName="skins.ButtonSkin4" visible="false"/>
 			<e:Image id="img_close" source="Login_btn_xuanqugb_png" x="372" y="-4" scaleX="1" scaleY="1" visible="false"/>
-			<e:Scroller id="scroller" width="400" height="405" y="200" horizontalCenter="0" x="60" scaleX="1" scaleY="1">
-				<e:Group id="gp_scroller">
+			<e:Group id="gp_scroller" anchorOffsetY="0" height="457" horizontalCenter="0.5" y="177.69">
 				<e:Group id="gp_base" width="400" y="0" horizontalCenter="0" x="50" scaleX="1" scaleY="1">
-					<e:Label text="基础属性：" x="15" y="15" fontFamily="SimHei" scaleX="1" scaleY="1" textColor="0x896a33" size="20" bold="false"/>
-					<e:Label id="lb_base" text="基础属性" x="125" y="15" fontFamily="SimHei" scaleX="1" scaleY="1" textColor="0xc98e18" size="20"/>
-					<e:Image source="equipping_fengexian_png" bottom="0" horizontalCenter="0"/>
+				<e:Label text="基础属性：" x="15" y="15" fontFamily="SimHei" scaleX="1" scaleY="1" size="24" bold="false" textColor="0xFFA200"/>
+				<e:Label id="lb_base" text="基础属性" x="125" y="15" fontFamily="SimHei" scaleX="1" scaleY="1" textColor="0xC98E18" size="24"/>
+				<e:Image source="equipping_fengexian_png" bottom="0" horizontalCenter="0"/>
 				</e:Group>
-					<e:Group id="gp_strength" width="400" y="50" horizontalCenter="0" x="60" scaleX="1" scaleY="1" visible="false">
-						<e:Label text="强化属性：" x="15" y="15" fontFamily="SimHei" scaleX="1" scaleY="1" textColor="0x896A33" size="20"/>
-						<e:Label id="lb_strength" text="基础属性" x="125" y="15" fontFamily="SimHei" scaleX="1" scaleY="1" textColor="0xc98e18" size="20"/>
-						<e:Image source="equipping_fengexian_png" bottom="0" horizontalCenter="0" x="35" y="-6" scaleX="1" scaleY="1"/>
-					</e:Group>
-					<e:Group id="gp_great" width="400" y="100" horizontalCenter="0" x="60" scaleX="1" scaleY="1" visible="false">
-						<e:Label text="极品属性：" x="15" y="15" fontFamily="SimHei" scaleX="1" scaleY="1" textColor="0x896A33" size="20"/>
-						<e:Label id="lb_great" text="基础属性" x="125" y="15" fontFamily="SimHei" scaleX="1" scaleY="1" textColor="0xc98e18" size="20"/>
-						<e:Image source="equipping_fengexian_png" bottom="0" horizontalCenter="0" x="35" y="-6" scaleX="1" scaleY="1"/>
-					</e:Group>
-					<e:Group id="gp_super" width="400" y="150" horizontalCenter="0" x="60" scaleX="1" scaleY="1" visible="false">
-						<e:Label text="橙装属性：" x="15" y="15" fontFamily="SimHei" scaleX="1" scaleY="1" textColor="0x896A33" size="20"/>
-						<e:Label id="lb_super" text="基础属性" x="125" y="15" fontFamily="SimHei" scaleX="1" scaleY="1" textColor="0xc98e18" size="20"/>
-						<e:Image source="equipping_fengexian_png" bottom="0" horizontalCenter="0" x="35" y="-6" scaleX="1" scaleY="1"/>
-					</e:Group>
-					<e:Group id="gp_gem" width="400" y="200" horizontalCenter="0" x="60" scaleX="1" scaleY="1" visible="false">
-						<e:Label text="宝石属性：" x="15" y="15" fontFamily="SimHei" scaleX="1" scaleY="1" textColor="0x896A33" size="20"/>
-						<e:Label id="lb_gem" text="基础属性" x="125" y="15" fontFamily="SimHei" scaleX="1" scaleY="1" textColor="0xc98e18" size="20"/>
-					</e:Group>
+				<e:Group id="gp_strength" width="400" y="50" horizontalCenter="0" x="60" scaleX="1" scaleY="1" visible="false">
+				<e:Label text="强化属性：" x="15" y="15" fontFamily="SimHei" scaleX="1" scaleY="1" size="24" textColor="0xFFA200"/>
+				<e:Label id="lb_strength" text="基础属性" x="125" y="15" fontFamily="SimHei" scaleX="1" scaleY="1" textColor="0xC98E18" size="24"/>
+				<e:Image source="equipping_fengexian_png" bottom="0" horizontalCenter="0" x="35" y="-6" scaleX="1" scaleY="1"/>
 				</e:Group>
-			</e:Scroller>
+				<e:Group id="gp_great" width="400" y="100" horizontalCenter="0" x="60" scaleX="1" scaleY="1" visible="false">
+				<e:Label text="升星属性：" x="15" y="15" fontFamily="SimHei" scaleX="1" scaleY="1" size="24" textColor="0xFFA200"/>
+				<e:Label id="lb_great" text="基础属性" x="125" y="15" fontFamily="SimHei" scaleX="1" scaleY="1" textColor="0xC98E18" size="24"/>
+				<e:Image source="equipping_fengexian_png" bottom="0" horizontalCenter="0" x="35" y="-6" scaleX="1" scaleY="1"/>
+				</e:Group>
+				<e:Group id="gp_super" width="400" y="150" horizontalCenter="0" x="60" scaleX="1" scaleY="1" visible="false">
+				<e:Label text="橙装属性：" x="15" y="15" fontFamily="SimHei" scaleX="1" scaleY="1" size="24" textColor="0xFFA200"/>
+				<e:Label id="lb_super" text="基础属性" x="125" y="15" fontFamily="SimHei" scaleX="1" scaleY="1" textColor="0xC98E18" size="24"/>
+				<e:Image source="equipping_fengexian_png" bottom="0" horizontalCenter="0" x="35" y="-6" scaleX="1" scaleY="1"/>
+				</e:Group>
+				<e:Group id="gp_gem" width="400" y="200" horizontalCenter="0" x="60" scaleX="1" scaleY="1" visible="false">
+				<e:Label text="宝石属性：" x="15" y="15" fontFamily="SimHei" scaleX="1" scaleY="1" size="24" textColor="0xFFA200"/>
+				<e:Label id="lb_gem" text="基础属性" x="125" y="15" fontFamily="SimHei" scaleX="1" scaleY="1" textColor="0xC98E18" size="24"/>
+				</e:Group>
+			</e:Group>
 		</e:Group>
+		<e:Button id="btn_change" label="更换" scaleX="1" scaleY="1" horizontalCenter="1.5" skinName="skins.ComBtnList1Skin" bottom="8"/>
 	</e:Group>
 </e:Skin>

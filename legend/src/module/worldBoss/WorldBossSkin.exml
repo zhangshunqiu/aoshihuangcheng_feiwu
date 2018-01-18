@@ -9,6 +9,7 @@
 		<e:Group id="gp_middle" anchorOffsetX="0" width="352" anchorOffsetY="0" height="305">
 		</e:Group>
 		</e:Scroller>
+		<e:Image source="common_bg_shuju_png" x="138" y="12" anchorOffsetX="0" width="98"/>
 	</e:Group>
 	<e:Label text="剩余场数：" x="42" y="136" size="24" fontFamily="黑体" textColor="0xffa200"/>
 	<e:Label id="lb_timesLimit" text="/5" x="198" y="136" size="24" fontFamily="黑体" textColor="0xbfbfbf"/>

@@ -2,71 +2,111 @@
 	"1":{
 		"title_id":1,
 		"name":"初学乍练",
-		"icon":243010,
-		"active":100,
-		"att_id":1
+		"icon":"title_chuxuezhalian",
+		"type":1,
+		"active":141,
+		"att_id":1,
+		"time":0,
+		"des":"预约礼包奖励:(特定活动)"
 	},
 	"2":{
 		"title_id":2,
 		"name":"略有小成",
-		"icon":243010,
-		"active":200,
-		"att_id":2
+		"icon":"title_lueyouxiaocheng",
+		"type":1,
+		"active":424,
+		"att_id":2,
+		"time":0,
+		"des":"预约礼包奖励:(特定活动)"
 	},
 	"3":{
 		"title_id":3,
 		"name":"一战成名",
-		"icon":243010,
-		"active":300,
-		"att_id":3
+		"icon":"title_yizhanchengming",
+		"type":1,
+		"active":989,
+		"att_id":3,
+		"time":0,
+		"des":"预约礼包奖励:(特定活动)"
 	},
 	"4":{
 		"title_id":4,
 		"name":"出神入化",
-		"icon":243010,
-		"active":400,
-		"att_id":4
+		"icon":"title_chushenruhua",
+		"type":1,
+		"active":2120,
+		"att_id":4,
+		"time":0,
+		"des":"预约礼包奖励:(特定活动)"
 	},
 	"5":{
 		"title_id":5,
 		"name":"罕有敌手",
-		"icon":243010,
-		"active":500,
-		"att_id":5
+		"icon":"title_hanyoudishou",
+		"type":1,
+		"active":4381,
+		"att_id":5,
+		"time":0,
+		"des":"预约礼包奖励:(特定活动)"
 	},
 	"6":{
 		"title_id":6,
 		"name":"深藏不露",
-		"icon":243010,
-		"active":600,
-		"att_id":6
+		"icon":"title_shencangbulou",
+		"type":1,
+		"active":8903,
+		"att_id":6,
+		"time":0,
+		"des":"预约礼包奖励:(特定活动)"
 	},
 	"7":{
 		"title_id":7,
 		"name":"万夫莫敌",
-		"icon":243010,
-		"active":700,
-		"att_id":7
+		"icon":"title_wanfumodi",
+		"type":1,
+		"active":17948,
+		"att_id":7,
+		"time":0,
+		"des":"预约礼包奖励:(特定活动)"
 	},
 	"8":{
 		"title_id":8,
 		"name":"技压群雄",
-		"icon":243010,
-		"active":800,
-		"att_id":8
+		"icon":"title_jiyaqunxiong",
+		"type":1,
+		"active":36038,
+		"att_id":8,
+		"time":0,
+		"des":"预约礼包奖励:(特定活动)"
 	},
 	"9":{
 		"title_id":9,
 		"name":"独孤求败",
-		"icon":243010,
-		"active":900,
-		"att_id":9
+		"icon":"title_duguqiubai",
+		"type":1,
+		"active":72217,
+		"att_id":9,
+		"time":0,
+		"des":"预约礼包奖励:(特定活动)"
 	},
 	"10":{
 		"title_id":10,
 		"name":"天下第一",
-		"icon":243010,
-		"active":1000,
-		"att_id":10
+		"icon":"title_tianxiadiyi",
+		"type":2,
+		"active":0,
+		"att_id":10,
+		"time":86400,
+		"des":"战力榜第一专属称号"
+	},
+	"11":{
+		"title_id":11,
+		"name":"当世杀神",
+		"icon":0,
+		"type":2,
+		"active":0,
+		"att_id":10,
+		"time":86400,
+		"des":"遭遇榜第一专属称号"
 	}
 }

@@ -3,7 +3,7 @@
 	<e:Image source="worldboss_bg_tips_png" x="85" y="293"/>
 	<e:Label text="伤害排行第1玩家可获得击杀大奖其它玩家可获得参与奖" x="237" y="299" size="20" fontFamily="黑体" textColor="0xffea00" anchorOffsetX="0" width="306" anchorOffsetY="0" height="42" textAlign="center" lineSpacing="8"/>
 	<e:Image source="boss_bg_touxiang_png" x="50" y="186"/>
-	<e:Image id="img_icon" source="boss_touxiang_png" x="82" y="223"/>
+	<e:Image id="img_icon" x="80" y="219" source="copy_boss_icon_1_png" scaleX="0.9" scaleY="0.9"/>
 	<e:Image source="boss_xueliangtiao_png" x="180" y="255" visible="false"/>
 	<e:Image id="img_cheer" x="611" y="402" source="worldboss_icon_zhuwei_png"/>
 	<e:Image id="img_rankBg" x="495" y="67" anchorOffsetY="0" height="178" scale9Grid="77,29,125,88" source="worldboss_bg_shanghai_png"/>

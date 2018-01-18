@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="SkillSkin" width="720" height="660" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
-		<e:Image source="skill_bg_1_png" touchEnabled="false" horizontalCenter="0" bottom="0" height="795"/>
-		<e:Image source="common_interface_tanchuang_1_png" scale9Grid="142,87,68,87" width="642" height="590" horizontalCenter="0" bottom="78"/>
-		<e:Button id="btn_career" label="职业技能" x="48.65" skinName="skins.ButtonSkin3" y="0"/>
-		<e:Button id="btn_reborn" label="转生技能" x="253.35" skinName="skins.ButtonSkin3" y="0"/>
-		<e:Button id="btn_back" label="" horizontalCenter="0.5" bottom="11">
-			<e:skinName>
-				<e:Skin states="up,down,disabled">
-				<e:Image width="100%" height="100%" source="skill_btn_fanhui_png" source.down="skill_btn_fanhui_png"/>
-				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-				</e:Skin>
-			</e:skinName>
+<e:Skin class="SkillSkin" width="720" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*" xmlns:game="game.*">
+	<e:Group id="gp_main" right="0" left="0" top="0" bottom="0">
+		<ns1:ComBaseViewBg id="com_baseview" anchorOffsetX="0" anchorOffsetY="0" skinName="ComBaseViewBgSkin" height="1136" y="0" width="720" x="0" visible="false"/>
+		<game:HeroHeadComponentView id="hero_head" width="700" height="120" top="49" horizontalCenter="-6"/>
+		<e:Image x="9.2" y="836" source="com_bg_list2_png"/>
+		<e:Image x="68.25" y="64.59" source="skill_suolian_png"/>
+		<e:Image x="603.52" y="64.59" source="skill_suolian_png"/>
+		<e:Image y="169.29" source="com_pic_decorate4_png" scale9Grid="25,1,505,9" anchorOffsetX="0" width="626" horizontalCenter="0"/>
+		<e:Image source="skill_bg_1_png" touchEnabled="false" horizontalCenter="4" bottom="776" height="795" visible="false"/>
+		<e:Image source="common_interface_tanchuang_1_png" scale9Grid="142,87,68,87" width="642" height="590" horizontalCenter="0" y="158" visible="false"/>
+		<e:Button id="btn_career" label="职业技能" x="48.65" skinName="skins.ButtonSkin3" y="0" visible="false"/>
+		<e:Button id="btn_reborn" label="转生技能" x="253.35" skinName="skins.ButtonSkin3" y="0" visible="false"/>
+		<e:Button id="btn_allup" label="全部升级" horizontalCenter="2.5" y="866" skinName="skins.ComBtnRedSkin">
 		</e:Button>
-		<e:Scroller id="scroller" width="620" height="515" y="55" horizontalCenter="0" x="30" scaleX="1" scaleY="1">
-			<e:Group y="-18"/>
+		<e:Scroller id="scroller" width="620" height="646" y="181.32" horizontalCenter="0" x="30" scaleX="1" scaleY="1" anchorOffsetY="0">
+			<e:Group y="-1" anchorOffsetY="0" height="646">
+			</e:Group>
 		</e:Scroller>
-		<e:Image source="skill_fanhui_png" x="336" touchEnabled="false" bottom="28"/>
+		<e:Button label="Button" x="621.66" y="861.28" skinName="skins.ComBtnBackSkin" visible="false"/>
 	</e:Group>
 </e:Skin>

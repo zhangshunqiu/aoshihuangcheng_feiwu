@@ -24,6 +24,8 @@ module game {
 
             this.scr_logs.viewport = this._list_log;
             this.scr_logs.scrollPolicyH = eui.ScrollPolicy.OFF;
+            this.scr_logs.verticalScrollBar.autoVisibility = false;
+            this.scr_logs.verticalScrollBar.visible = false;
             this._list_log.itemRenderer = EncounterLogItem;
 
         }
@@ -40,7 +42,7 @@ module game {
             if (this._log_eventId == 0) {
                 this._log_eventId = App.EventSystem.addEventListener(PanelNotify.ENCOUNTER_LOG_UPDATE, this.updateLogList, this);
             }
-            App.Socket.send(38004,null);
+            App.Socket.send(38004, null);
         }
 
 		/**
@@ -94,19 +96,19 @@ module game {
             this._items.push(this.item4);
             this._items.push(this.item5);
             this.item1.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
-                App.GlobalTips.showItemTips(ClientType.BASE_ITEM, this.elo.reward_list[0].good_id, null);
+                App.GlobalTips.showItemTips(this.elo.reward_list[0].type, this.elo.reward_list[0].good_id, null);
             }, this);
             this.item2.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
-                App.GlobalTips.showItemTips(ClientType.BASE_ITEM, this.elo.reward_list[1].good_id, null);
+                App.GlobalTips.showItemTips(this.elo.reward_list[1].type, this.elo.reward_list[1].good_id, null);
             }, this);
             this.item3.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
-                App.GlobalTips.showItemTips(ClientType.BASE_ITEM, this.elo.reward_list[2].good_id, null);
+                App.GlobalTips.showItemTips(this.elo.reward_list[2].type, this.elo.reward_list[2].good_id, null);
             }, this);
             this.item4.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
-                App.GlobalTips.showItemTips(ClientType.BASE_ITEM, this.elo.reward_list[3].good_id, null);
+                App.GlobalTips.showItemTips(this.elo.reward_list[3].type, this.elo.reward_list[3].good_id, null);
             }, this);
             this.item5.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
-                App.GlobalTips.showItemTips(ClientType.BASE_ITEM, this.elo.reward_list[4].good_id, null);
+                App.GlobalTips.showItemTips(this.elo.reward_list[4].type, this.elo.reward_list[4].good_id, null);
             }, this);
 
 
@@ -131,10 +133,8 @@ module game {
             }
             for (let i = 0; i < this._items.length; i++) {
                 if (i < info.reward_list.length) {
-                    this._items[i].updateBaseItem(ClientType.BASE_ITEM, info.reward_list[i].good_id);
-                    this._items[i].lb_num.visible = true;
-                    this._items[i].lb_num.text = info.reward_list[i].good_num;
-
+                    this._items[i].setItemNumVisible(true);
+                    this._items[i].updateBaseItem(info.reward_list[i].type, info.reward_list[i].good_id, info.reward_list[i].good_num);
                 }
                 else {
                     this._items[i].visible = false;

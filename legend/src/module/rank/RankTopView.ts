@@ -14,7 +14,7 @@ module game {
 		private img_yue:eui.Image;
 		private img_vip:eui.Image;
 		private img_honor:eui.Image;
-
+		private rankListItem:RankListItem;
 		private img_body:eui.Image;
 		private img_wing:eui.Image;
 		private img_weapon:eui.Image;
@@ -29,57 +29,14 @@ module game {
 		protected dataChanged():void
 		{	
 			//排名图片
-			this.img_rankNum.source = "ranking list_1_png";
+			// this.img_rankNum.source = "ranking list_1_png";
 			//显示人物
 			this.showHero();
-			//称号
+			//称号（绝世杀神、。。。。）
 			this.setHonor();
 
-
-			//月卡 + vip等级
-			if(this.data.month_card)
-			{
-				this.img_yue.visible = true;
-			}else{
-				this.img_yue.visible = false;
-			}
-			if(this.data.vip)
-			{	
-				this.img_vip.visible = true;
-				this.bitmap_vip.text = this.data.vip;
-				this.img_yue.x = 0;
-			}else
-			{
-				this.img_vip.visible = false;
-				this.bitmap_vip.text = "";
-				this.img_yue.x = 30;
-			}
-
-			//玩家等级
-			if(this.data.lv)
-			{	
-				this.lb_level.visible = true;
-				if(this.data.turn)
-				{
-					this.lb_level.text = this.data.turn + "转" + this.data.lv +"级";
-				}else{
-					this.lb_level.text = this.data.lv +"级";
-				}
-			}else{
-				this.lb_level.visible = false;
-			}
-			
-
-			//排行榜描述
-			if(this.data.rankData)
-			{
-				this.lb_rankData.text = this.data.rankData;
-			}else
-			{
-				this.lb_rankData.text = null;
-			}
-			//名字
-			this.lb_name.text = this.data.name;
+			this.rankListItem.updateUi(this.data);
+			this.rankListItem.setFirstStyle();
 		}
 
 		private showHero():void
@@ -140,21 +97,21 @@ module game {
 						this.img_honor.source = "";
 						break;
 					case ConstRankName.KING:
-						switch(this.data.grade)
-						{
-							case 0:
-								this.img_pic.source = "labber_huizhang_qingtong_png";
-								break;
-							case 1:
-								this.img_pic.source = "labber_huizhang_huangjin_png";
-								break;
-							case 2:
-								this.img_pic.source = "labber_huizhang_baiyin_png";
-								break;
-							case 3:
-								this.img_pic.source = "labber_huizhang_zuanshi_png";
-								break;							
-						}
+						// switch(this.data.grade)
+						// {
+						// 	case 0:
+						// 		this.img_pic.source = "labber_huizhang_qingtong_png";
+						// 		break;
+						// 	case 1:
+						// 		this.img_pic.source = "labber_huizhang_huangjin_png";
+						// 		break;
+						// 	case 2:
+						// 		this.img_pic.source = "labber_huizhang_baiyin_png";
+						// 		break;
+						// 	case 3:
+						// 		this.img_pic.source = "labber_huizhang_zuanshi_png";
+						// 		break;							
+						// }
 						break;
 				default:
 						break;

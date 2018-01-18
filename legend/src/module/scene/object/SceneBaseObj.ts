@@ -49,15 +49,46 @@ class SceneBaseObj extends egret.DisplayObjectContainer {
 	}
 
 
-	protected showShadow(){
-		if(this.shadow == null){
-			this.shadow = new egret.Bitmap(RES.getRes("sceneObjShadow_png"));
-			this.addChild(this.shadow);
+	protected showShadow(isSel:boolean = true){
+		var picUrl:string;
+		if(isSel){
+			picUrl = "scene_shadowSel_png";
 		}else{
-			this.shadow.texture = RES.getRes("sceneObjShadow_png");
+			picUrl = "scene_shadow_png";
 		}
-		this.shadow.x = 0-this.shadow.width/2;
-		this.shadow.y = 0-this.shadow.height/2;
+		this.setPicShadow(picUrl);
+	}
+	//设置图片阴影
+	protected setPicShadow(picUrl:string =null){
+		if(picUrl && picUrl != ""){
+			if(this.shadow == null){
+				this.shadow = new egret.Bitmap(RES.getRes(picUrl));
+				this.addChild(this.shadow);
+			}else{
+				this.shadow.texture = RES.getRes(picUrl);
+			}
+			this.shadow.x = 0-this.shadow.width/2;
+			this.shadow.y = 0-this.shadow.height/2;
+		}else{
+			if(this.shadow){
+				if(this.shadow.parent){
+					this.shadow.parent.removeChild(this.shadow);
+				}
+				this.shadow = null;
+			}
+		}
+	}
+
+	//清理阴影
+	protected clearShadow(){
+		this.setPicShadow();
+	}
+
+	//设置阴影显示
+	protected setShadowVisible(b:boolean){
+		if(this.shadow){
+			this.shadow.visible = b;
+		}
 	}
 
 	/**
@@ -65,8 +96,11 @@ class SceneBaseObj extends egret.DisplayObjectContainer {
 	 */
 	public updatePosition(xx:number,yy:number){
 		if(this.x == xx && this.y == yy){return;}
-		xx = Math.min(this._sceneModel.sceneWidth,Math.max(0,xx));
-		yy = Math.min(this._sceneModel.sceneHeight,Math.max(0,yy));
+		if(xx >= this._sceneModel.sceneWidth || yy >= this._sceneModel.sceneHeight){
+			return;
+		}
+		//xx = Math.min(this._sceneModel.sceneWidth,Math.max(0,xx));
+		//yy = Math.min(this._sceneModel.sceneHeight,Math.max(0,yy));
 		this.x = xx;
 		this.y = yy;
 		this._objVo.posX = xx;

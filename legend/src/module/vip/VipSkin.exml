@@ -13,16 +13,16 @@
 	<e:Image source="chat_txt_vip_png" x="563" y="151"/>
 	<e:BitmapLabel id="btlb_vip" width="56" height="34" x="133" y="152" anchorOffsetX="0" anchorOffsetY="0" text="1" font="main_vip_shuju_fnt" letterSpacing="-5"/>
 	<e:BitmapLabel id="btlb_nextVip" width="56" height="34" x="617" y="152" anchorOffsetX="0" anchorOffsetY="0" text="2" font="main_vip_shuju_fnt" letterSpacing="-5"/>
-	<e:Image source="vip_jiantou_png" y="146" horizontalCenter="4"/>
+	<e:Image source="vip_jiantou_png" y="146" horizontalCenter="10"/>
 	<e:Group id="gp_maxVip" x="92" y="212" visible="false">
 		<e:Image source="chat_txt_vip_png" x="261" y="0"/>
 		<e:Label text="天呐！您已达到当前" x="0" y="5" size="24" fontFamily="黑体" textColor="0xBFBFBF"/>
 		<e:Label text="最高" x="215" y="5" size="24" fontFamily="黑体" textColor="0xff6000"/>
 	</e:Group>
 	<e:Group id="gp_notMaxVip" x="89" y="210">
-		<e:Label text="再充值         即可成为VIP" x="0" y="6" size="24" fontFamily="黑体" textColor="0xbfbfbf"/>
-		<e:Label id="lb_gold" text="5555" x="117" y="6" size="24" fontFamily="黑体" width="60" textAlign="center" textColor="0xffd800"/>
-		<e:Label id="lb_nextVip" text="6" x="313" y="7" size="24" fontFamily="黑体" textAlign="left" textColor="0xbfbfbf"/>
+		<e:Label text="再充值           即可成为VIP" x="0" y="6" size="24" fontFamily="黑体" textColor="0xbfbfbf"/>
+		<e:Label id="lb_gold" text="5555555" x="116" y="6" size="24" fontFamily="黑体" width="86" textAlign="center" textColor="0xffd800" anchorOffsetX="0"/>
+		<e:Label id="lb_nextVip" text="6" x="337" y="7" size="24" fontFamily="黑体" textAlign="left" textColor="0xbfbfbf"/>
 		<e:Image source="common_yuanbao_png" x="68" y="0"/>
 	</e:Group>
 	<e:Image id="img_charge" source="common_btn_huabian_png" x="460" y="195"/>

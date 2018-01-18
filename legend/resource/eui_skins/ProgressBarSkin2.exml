@@ -4,6 +4,6 @@
 	<e:Image verticalCenter="0" scale9Grid="21,17,1,1" source="main_bg_lantiao_png"/>
 	<e:Image id="thumb" scale9Grid="21,17,1,1" source="main_lantiao_png" horizontalCenter="0" verticalCenter="0"/>
 	<e:Label id="labelDisplay" textAlign="center" verticalAlign="middle"
-			 size="22"
-			 horizontalCenter="0" verticalCenter="2" text="123" fontFamily="SimHei"/>
+			 size="20"
+			 horizontalCenter="0.5" verticalCenter="0" text="123" fontFamily="SimHei"/>
 </e:Skin>

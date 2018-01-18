@@ -55,6 +55,15 @@ class SceneUtil {
 		return false;
 	}
 	/**
+	 * 是否是世界boss场景
+	 */
+	public static isArenaScene(sceneId:number):boolean{
+		if(sceneId==30601) {
+			return true;
+		}
+		return false;
+	}
+	/**
 	 * 获取自动技能顺序列表
 	 */
 	public static getAutoSkillList(carrer:number):Array<number> {

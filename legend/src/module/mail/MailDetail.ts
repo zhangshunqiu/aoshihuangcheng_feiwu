@@ -17,12 +17,13 @@ module game {
 		private lb_attachBtn:eui.Label;
 
 		private _mailData:MailVO;
-
-		public constructor(data,viewConf: WinManagerVO = null) 
+		private _eventId1:number = 0;
+		public constructor(viewConf: WinManagerVO = null) 
 		{
 			super(viewConf);
-			this._mailData = data;
-			this.skinName = MailDetailSkin;
+			// this._mailData = this.openData;
+			// this._mailData = data;
+			// this.skinName = MailDetailSkin;
 		}
 		protected childrenCreated() 
 		{
@@ -32,27 +33,29 @@ module game {
 			this.img_close.addEventListener(egret.TouchEvent.TOUCH_TAP,this.handlerCloseBtn,this);
 			this.img_return.addEventListener(egret.TouchEvent.TOUCH_TAP,this.handlerCloseBtn,this);
 			this.btn_reward.addEventListener(egret.TouchEvent.TOUCH_TAP,this.handlerReward,this);
-			this.showViewUi();
-			this.readMail();
-			// this.lb_content.addEventListener( egret.TextEvent.LINK, function( evt:egret.TextEvent ){
-			// 	let fun = eval(evt.text);
-			// 	fun();
-			// }, this );
-			
         }
 
 		public openWin(openParam: any = null): void {
 			super.openWin();
+			if(this._eventId1 == 0) {
+				this._eventId1 = App.EventSystem.addEventListener(PanelNotify.MAIL_ATTACHMENT_SUCCESS,this.rewardSuccess,this);
+			}
+			this._mailData = this.openData;
+			this.showViewUi();
+			this.readMail();
+		}
+
+		private rewardSuccess():void {
+			this.img_reward1.visible = false;
+			this.img_reward2.visible = true;
+			this.btn_reward.touchEnabled = false;
 		}
 
 		private showViewUi():void
 		{	
 			//邮件内容
 			this.lb_content.textFlow =(new egret.HtmlTextParser).parser(this._mailData.content);
-			// this.lb_content.textFlow = [
-			// 	{text:"sdfdsf",style:{"href" : "event:()=>{console.log('1111111111111111111');}"}},
-			// 	{text:"sdfdsf",style:{"href" : "event:text event triggered"}}
-			// ]
+		
 			//邮件附件显示
 			if(this._mailData.reward.length > 0)
 			{	
@@ -82,7 +85,7 @@ module game {
 		private readMail():void
 		{
 			if(!this._mailData.isRead && this._mailData.reward.length<=0){
-				(MailModel.getInstance() as MailModel).readMail(this._mailData.id);
+				// (MailModel.getInstance() as MailModel).readMail(this._mailData.id);
 				App.Socket.send(21002,{id:this._mailData.id});
 			}else{
 				return
@@ -99,9 +102,6 @@ module game {
 			}else{
 				// (MailModel.getInstance() as MailModel).readMail(this._mailData.id);
 				App.Socket.send(21003,{id:this._mailData.id})
-				this.img_reward1.visible = false;
-				this.img_reward2.visible = true;
-				this.btn_reward.touchEnabled = false;
 			}
 		}
 
@@ -111,7 +111,8 @@ module game {
 		 */
 		private handlerCloseBtn():void
 		{
-			PopUpManager.removePopUp(this,0);
+			// PopUpManager.removePopUp(this,0);
+			WinManager.getInstance().closePopWin(WinName.POP_MAILDETAIL);
 		}
 
 
@@ -119,9 +120,13 @@ module game {
 
 		public clear():void
 		{	
+			super.clear();
 			this.img_close.removeEventListener(egret.TouchEvent.TOUCH_TAP,this.handlerCloseBtn,this);
 			this.img_return.removeEventListener(egret.TouchEvent.TOUCH_TAP,this.handlerCloseBtn,this);
-			super.clear();
+			if(this._eventId1 != 0) {
+				App.EventSystem.removeEventListener(PanelNotify.MAIL_ATTACHMENT_SUCCESS,this._eventId1);
+				this._eventId1 = 0;
+			}
 		}
 
 		public destroy():void

@@ -55,7 +55,7 @@ class GuideManager {
                 } else {
                     return false;
                 }
-            } else if (game.BossModel.getInstance().level >= info.limit[2]) { //关卡
+            } else if (game.BossModel.getInstance().level >= info.limit[2] && info.limit[2] != 0) { //关卡
                 return true;
             } else {
                 return false;
@@ -104,14 +104,14 @@ class GuideManager {
         if (!id) {  //一个引导都没有完成
             this.curGuideId = 0;
             this.lastGuideId = 0;
-            this.curGuideStep = 1;
+            this.curGuideStep = 0;
             this.needGuide = true;
         } else {
             this.lastGuideId = id;
             let finishGuideInfo = App.ConfigManager.getGuideInfoByIdAndStep(id, 1);
             if (finishGuideInfo && finishGuideInfo.next_id) {
                 this.curGuideId = finishGuideInfo.next_id;
-                this.curGuideStep = 1;
+                this.curGuideStep = 0;
                 this.needGuide = true;
             } else {  //引导全部完成了
                 this.curGuideId = 0;
@@ -120,7 +120,7 @@ class GuideManager {
             }
         }
         // this.startGuide = true;
-        this.checkGuide(this.curGuideId);
+        // this.checkGuide(this.curGuideId);
     }
 
     /**
@@ -133,7 +133,7 @@ class GuideManager {
         if (!this.guideBtnDic[id]) {
             this.guideBtnDic[id] = {}
         }
-        if (this.curGuideId && (!this.guideBtnDic[id][step] || this.guideBtnDic[id][step].hashCode != btn.hashCode)) { //有引导id才给绑定
+        if (this.curGuideId && this.curGuideId == id && (!this.guideBtnDic[id][step] || this.guideBtnDic[id][step].hashCode != btn.hashCode)) { //有引导id才给绑定
             if (btn.hasEventListener(egret.TouchEvent.TOUCH_TAP)) {
                 btn.once(egret.TouchEvent.TOUCH_TAP, () => {
                     this.NextStep(step);
@@ -217,6 +217,7 @@ class GuideManager {
                         this.showGuide();
                     }
                 } else {
+                    App.logzrj("hideeee",this.curGuideStep);
                     this.hideGuide();
                     // this.removeClickBtn(this.curGuideId);
                     // this.nextGuide();
@@ -236,9 +237,10 @@ class GuideManager {
         let curGuideInfo = App.ConfigManager.getGuideInfoByIdAndStep(this.curGuideId, this.curGuideStep);
         if (curGuideInfo && curGuideInfo.next_id) { //完成引导，记录
             App.Socket.send(9012, this.curGuideId);
+            App.logzrj("finishGuide",this.curGuideId);
             this.startGuide = false;
             this.curGuideId = curGuideInfo.next_id;
-            this.curGuideStep = 1;
+            this.curGuideStep = 0;
         } else {
             this.curGuideId = 0;
             this.needGuide = false;

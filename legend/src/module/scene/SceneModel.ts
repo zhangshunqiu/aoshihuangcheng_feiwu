@@ -28,13 +28,16 @@ class SceneModel extends BaseModel {
 	private _mapResId:number;//地图资源ID
 	private _bossSceneId:number;//地图副本bossID
 
+	public curSceneItemNum:number=0;
+
 	private _sceneConfig:any;//地图配置表返回
 
 	public sceneGridConfig : any;//地图场景配置信息，地图编辑器返回的
 	public mapGrid:Array<Array<number>>;//地图格子信息
 
 	private _gridVoPool:Array<SceneGridVo>;//格子Vo对象池
-    public gridTable :Array<Array<any>>; //地图上每个格子占位信息
+    private _gridTable :Array<Array<any>>; //地图上每个格子占位信息
+	private _itemGridTable :Array<Array<any>>; // 掉落物品在地图上每个格子占位信息
 	public gridXNum:number = 0;//x轴格子数量
 	public gridYNum:number = 0;//y轴格子数量
 
@@ -52,6 +55,8 @@ class SceneModel extends BaseModel {
 	private _sceneSkillEffVoDic:any = {};//技能效果，像火墙VO
 
 	public isUseRocker:Boolean = false;//是否使用摇杆
+	public pickItemType:number = PICK_ITEM_TYPE.get_by_fly;//拾取物品类型
+	public pickItemHeroId:number = 0;//拾取物品英雄ID
 
 	private _AStar:aStar.AStar;
 
@@ -71,6 +76,23 @@ class SceneModel extends BaseModel {
 
 		this._AStar = new aStar.AStar();
 	}
+	
+	/**
+	 * 拾取物品英雄ID
+	 */
+	public updatePickItemHeroId(){
+		var heroList = (game.HeroModel.getInstance() as game.HeroModel).heroInfo;
+		this.pickItemHeroId = 0;
+		for(var i:number = 0;i< heroList.length;i++){
+			var vo:game.HeroVO = heroList[i];
+			var playerVo:BaseFightObjVo = this._scenePlayerVoDic[vo.id];
+			if(playerVo && playerVo.actState != ActState.DEAD){
+				this.pickItemHeroId = vo.id;
+				return;
+			}
+		}
+	}
+
 
 	/**
 	 * 获取寻路格子路径列表
@@ -126,15 +148,21 @@ class SceneModel extends BaseModel {
 		if(data){
 			this.clear();
 			this._sceneConfig = App.ConfigManager.getSceneConfigById(data.sceneId);
-			this.mapX = 0;
-			this.mapY = 0;
-			this.sceneWidth = 640;
-			this.sceneHeight = 640;
+			//this.mapX = 0;
+			//this.mapY = 0;
+			//this.sceneWidth = 0;
+			//this.sceneHeight = 0;
 			this._sceneId = this._sceneConfig.scene_id;
 			this._sceneType = this._sceneConfig.scene_type;
 			this.sceneName = this._sceneConfig.name;
 			this._mapResId = this._sceneConfig.map_id;
 			this._bossSceneId = this._sceneConfig.copy_id;
+			//根据配置来获取场景拾取方式
+			if(this._sceneConfig.pickup && this._sceneConfig.pickup == 1){
+				this.pickItemType = PICK_ITEM_TYPE.get_by_move;
+			}else{
+				this.pickItemType = PICK_ITEM_TYPE.get_by_fly;
+			}
 			// this.gridXNum = Math.ceil(this.sceneWidth/SceneModel.GRIDH);
 			// this.gridYNum = Math.ceil(this.sceneHeight/SceneModel.GRIDW);
 			// this.gridTable = [];
@@ -165,13 +193,22 @@ class SceneModel extends BaseModel {
 		this.sceneHeight = this.sceneGridConfig.height-this.sceneGridConfig.height%64;
 		this.gridXNum = Math.floor(this.sceneWidth/SceneModel.GRIDH);
 		this.gridYNum = Math.floor(this.sceneHeight/SceneModel.GRIDW);
-		this.gridTable = [];
+		if(this._gridTable == null || this._gridTable.length > 0){
+			this._gridTable = [];
+		}
 		aStar.AStar.initData(this.mapGrid);
 		for(let i:number = 0;i<this.gridXNum;i++){
-			this.gridTable[i] = [];
+			this._gridTable[i] = [];
 			// for(let j:number = 0;j<this.gridYNum;j++){
 			// 	this.gridTable[i][j] = [];
 			// }
+		}
+
+		if(this._itemGridTable == null || this._itemGridTable.length > 0){
+			this._itemGridTable = [];
+		}
+		for(let i:number = 0;i<this.gridXNum;i++){
+			this._itemGridTable[i] = [];
 		}
 	}
 		
@@ -180,13 +217,13 @@ class SceneModel extends BaseModel {
 	 */
 	public addGridTablePos(vo:BaseObjectVo):void{
 		//App.logzsq("ADD "+xx+"_"+yy);
-		if(vo.gridX == null || vo.gridY == null || this.gridTable[vo.gridX] == null){
+		if(vo.gridX == null || vo.gridY == null || this._gridTable[vo.gridX] == null){
 			return
 		}
-		var gVo:SceneGridVo = this.gridTable[vo.gridX][vo.gridY];
+		var gVo:SceneGridVo = this._gridTable[vo.gridX][vo.gridY];
 		if(gVo == null){
 			gVo = this.getGridVo();
-			this.gridTable[vo.gridX][vo.gridY] = gVo;
+			this._gridTable[vo.gridX][vo.gridY] = gVo;
 		}
 		gVo.add(vo);
 	}
@@ -195,13 +232,13 @@ class SceneModel extends BaseModel {
 	 */
 	public removeGridTablePos(vo:BaseObjectVo):void{
 		//App.logzsq("REMOVE "+xx+"_"+yy);
-		if(this.gridTable && this.gridTable[vo.gridX]){
-			var gVo:SceneGridVo = this.gridTable[vo.gridX][vo.gridY];
+		if(this._gridTable[vo.gridX]){
+			var gVo:SceneGridVo = this._gridTable[vo.gridX][vo.gridY];
 			if(gVo){
 				gVo.remove(vo);
 				if(gVo.length <=0){
 					gVo.clear();
-					this.gridTable[vo.gridX][vo.gridY] = null;
+					this._gridTable[vo.gridX][vo.gridY] = null;
 					this.addGridVo(gVo);
 				}
 			}
@@ -212,8 +249,8 @@ class SceneModel extends BaseModel {
 	 */
 	private getGridTablePosObj(xx:number,yy:number):any{
 		if(xx >=0 && xx < this.gridXNum && yy >= 0 && yy < this.gridYNum){
-			if(this.gridTable[xx][yy]){
-				return (this.gridTable[xx][yy] as SceneGridVo).gridObj;
+			if(this._gridTable[xx][yy]){
+				return (this._gridTable[xx][yy] as SceneGridVo).gridObj;
 			}
 		}
 		return null;
@@ -222,8 +259,8 @@ class SceneModel extends BaseModel {
 	 * 获取场景位置信息2
 	 */
 	public getGridTablePosObjByVo(vo:BaseObjectVo):void{
-		if(this.gridTable[vo.gridX][vo.gridY]){
-			return (this.gridTable[vo.gridX][vo.gridY] as SceneGridVo).gridObj;
+		if(this._gridTable[vo.gridX][vo.gridY]){
+			return (this._gridTable[vo.gridX][vo.gridY] as SceneGridVo).gridObj;
 		}
 		return null;
 	}
@@ -232,7 +269,7 @@ class SceneModel extends BaseModel {
 	 * 获取场景位置信息2
 	 */
 	public getGridTableHasObj(xx:number,yy:number):boolean{
-		if(this.gridTable[xx][yy] && (this.gridTable[xx][yy] as SceneGridVo).length > 0){
+		if(this._gridTable[xx][yy] && (this._gridTable[xx][yy] as SceneGridVo).length > 0){
 			return true;
 		}
 		return false;
@@ -242,11 +279,43 @@ class SceneModel extends BaseModel {
 	 * 获取场景位置信息2
 	 */
 	public getGridTableHasTwoObj(xx:number,yy:number):boolean{
-		if(this.gridTable[xx][yy] && (this.gridTable[xx][yy] as SceneGridVo).length > 1){
+		if(this._gridTable[xx][yy] && (this._gridTable[xx][yy] as SceneGridVo).length > 1){
 			return true;
 		}
 		return false;
 	}
+
+	//掉落物品相关
+
+	/**
+	 * 添加场景位置信息
+	 */
+	public addItemGridTablePos(vo:BaseObjectVo):void{
+		//App.logzsq("ADD "+xx+"_"+yy);
+		if(vo.gridX == null || vo.gridY == null || this._itemGridTable[vo.gridX] == null){
+			return
+		}
+		this._itemGridTable[vo.gridX][vo.gridY] = true;
+	}
+	/**
+	 * 移除场景位置信息
+	 */
+	public removeItemGridTablePos(vo:BaseObjectVo):void{
+		//App.logzsq("REMOVE "+xx+"_"+yy);
+		if(this._itemGridTable[vo.gridX]){
+			this._itemGridTable[vo.gridX][vo.gridY] = null;
+		}
+	}
+	/**
+	 * 获取场景位置信息
+	 */
+	public getItemGridTableHasObj(xx:number,yy:number):any{
+		if(this._itemGridTable[xx]){
+			return this._itemGridTable[xx][yy];
+		}
+		return false;
+	}
+	//掉落物品相关 END
 
 	/**
 	 * 清理
@@ -262,7 +331,7 @@ class SceneModel extends BaseModel {
 		this._sceneItemVoDic = {};
 		this._sceneCollectVoDic = {};
 		this._sceneSkillEffVoDic = {};
-		this.gridTable = null;
+		this._gridTable = [];
 	}
 
 	public destroy(){
@@ -1057,8 +1126,8 @@ class SceneModel extends BaseModel {
 	 */
 	public curGridIsOpen(gx:number,gy:number):boolean{
 		if(gx>=0 && gx< this.gridXNum && gy >=0 && gy< this.gridYNum){
-			//return true;
-			return (this.mapGrid[gy][gx] != 1) ;
+			return true;
+			//return (this.mapGrid[gy][gx] != 1) ;
 		}
 		return false;
 	}
@@ -1130,6 +1199,14 @@ class SceneModel extends BaseModel {
 	 */
 	public getPlayerVo(objId:number):ScenePlayerVo{
 		return this._scenePlayerVoDic[objId];
+	}
+
+	/**
+	 * 获取怪物VO
+	 * objId 对象ID
+	 */
+	public getMonsterVo(objId:number):SceneMonsterVo{
+		return this._sceneMonsterVoDic[objId];
 	}
 
 	/**
@@ -1211,6 +1288,7 @@ class SceneModel extends BaseModel {
 			this._scenePartnerVoDic[vo.id] = null;
 			delete this._scenePartnerVoDic[vo.id];
 		}else if(vo.type == SceneObjectType.ITEM){
+			this.removeItemGridTablePos(vo);
 			this._sceneItemVoDic[vo.id] = null;
 			delete this._sceneItemVoDic[vo.id];
 		}else if(vo.type == SceneObjectType.SKILLEFF){
@@ -1320,7 +1398,6 @@ class SceneModel extends BaseModel {
 	private addGridVo(vo:SceneGridVo){
 		this._gridVoPool.push(vo);
 	}
-
 
 	/**
 	 * 场景副本BossID

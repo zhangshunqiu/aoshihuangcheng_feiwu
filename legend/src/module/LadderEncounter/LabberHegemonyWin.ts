@@ -26,8 +26,8 @@ module game {
 				App.WinManager.closeWin(WinName.HEGEMONY);
 			}, this);
 			RES.getResAsync("encounter_zaoyuzhan_title_png", (texture) => {
-					this.commonWin.img_title.texture = texture;
-				}, this);
+				this.commonWin.img_title.texture = texture;
+			}, this);
 			this.initView();
 		}
 
@@ -45,6 +45,9 @@ module game {
 			this.rb_labber.group = radioGroup;
 			this.rb_labber.label = "争霸";
 			this.rb_labber.value = 2;
+
+			App.BtnTipManager.addBtnTipItem(ConstBtnTipType.AREAN_ENCOUNTER, this.rb_encounter);
+			App.BtnTipManager.addBtnTipItem(ConstBtnTipType.AREAN_LABBER, this.rb_labber);
 		}
 
 		private updateView(index: number): void {
@@ -84,13 +87,25 @@ module game {
 	    */
 		public openWin(openParam: any = null): void {
 			super.openWin(openParam);
-			if (this.view_encounter == null) {
-				this.view_encounter = new EncounterView("EncounterSkin")
+
+			if (openParam && openParam.index) {
+				if (openParam.index == 2) {
+					this.updateView(this.rb_labber.value);
+					this.rb_labber.selected = true;
+				}
 			}
-			this.addChild(this.view_encounter);
-			this.view_encounter.readyOpen({ data: {} });
-			this._curSelView = this.view_encounter;
-			this._curSelIndex = 1;
+			else {
+				this.updateView(this.rb_encounter.value);
+				this.rb_encounter.selected = true;
+			}
+
+			// if (this.view_encounter == null) {
+			// 	this.view_encounter = new EncounterView("EncounterSkin")
+			// }
+			// this.addChild(this.view_encounter);
+			// this.view_encounter.readyOpen({ data: {} });
+			// this._curSelView = this.view_encounter;
+			// this._curSelIndex = 1;
 		}
 
 		/**
@@ -110,6 +125,7 @@ module game {
 			if (this._curSelView) {
 				this._curSelView.clear();
 			}
+			this._curSelIndex = 0;
 		}
 		/**
 		 * 销毁

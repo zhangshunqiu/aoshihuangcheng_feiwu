@@ -48,7 +48,7 @@ module game {
             this.btlb_allGold.text = monthCardInfo.gold * 30 + "";
             this.btlb_hookExp.text = "+" + Math.floor(monthCardInfo.exp / 100) + "%";
             this.btlb_hookCoin.text = "+" + Math.floor(monthCardInfo.coin / 100) + "%";
-            this.btlb_bag.text = monthCardInfo.bag;
+            this.btlb_bag.text = "+" + monthCardInfo.bag;
             this.btlb_achievement.text = "+" + Math.floor(monthCardInfo.achievement / 100) + "%";
             this.joinMonthCardEffect();
         }
@@ -115,6 +115,10 @@ module game {
          */
         public destroy(): void {
             super.destroy();
+            if (this._monthCardMc) {
+                this._monthCardMc.destroy();
+                this._monthCardMc = null;
+            }
         }
     }
 }

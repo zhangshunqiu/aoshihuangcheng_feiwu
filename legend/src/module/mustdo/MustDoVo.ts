@@ -54,8 +54,9 @@ export class AchieveVo {
         public condition:string;
         public title_id: number;
         public att_id:number;
-
-       
-      
+        public type:number;
+        public time:number;
+        public des:string;
+ 
     }
 }

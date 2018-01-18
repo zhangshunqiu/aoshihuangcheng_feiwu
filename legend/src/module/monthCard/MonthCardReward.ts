@@ -59,10 +59,10 @@ module game{
             this.skinName = `<?xml version="1.0" encoding="utf-8"?>
 				<e:Skin class="backpackItemSkin" width="100" height="125" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:customui="customui.*">
 					<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
-						<customui:BaseItem id="baseItem" width="100" height="100" horizontalCenter="0" top="0" anchorOffsetX="0" anchorOffsetY="0"/>
+						<customui:BaseItem id="baseItem" width="90" height="90" horizontalCenter="0" top="0" anchorOffsetX="0" anchorOffsetY="0"/>
 					</e:Group>
 				</e:Skin>`;
-            this.baseItem.lb_name.visible = true;
+			this.baseItem.setItemNameVisible(true);
         }
 
         protected dataChanged() {

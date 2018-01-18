@@ -10,19 +10,20 @@ module game {
 
         private _data : any;
         public constructor(info) {
-            super();
+            super(info);
             this.skinName = "FastFightResultSkin";
-            this._data = info;
+            // this._data = info;
         }
 
         protected childrenCreated() {
             super.childrenCreated();
-            this.initView();
+            // this.initView();
         }
 
         public initView() {
             this.img_close.addEventListener(egret.TouchEvent.TOUCH_TAP,()=>{
-                PopUpManager.removePopUp(this);
+                // PopUpManager.removePopUp(this);
+                App.WinManager.closeWin(WinName.POP_FAST_FIGHT_RESULT);
             },this);
             let textArray = [];
             let sceneInfo = App.ConfigManager.getSceneConfigById(this._data.scene_id);
@@ -35,7 +36,7 @@ module game {
 
             let equipArray = [];
             let temp = {};
-            equipArray.push({text:"快速战斗获得装备： ",style:{textColor:0xbfbfbf}});
+            equipArray.push({text:"快速战斗获得装备：",style:{textColor:0xbfbfbf}});
             for(let k in this._data.list) {
                 let data = this._data.list[k];
                 let info = App.ConfigManager.equipConfig()[data.id];
@@ -53,7 +54,7 @@ module game {
             for(let k in temp) {
                 for (let j in temp[k]){
                     equipArray.push({text:k+"级"+ConstColorName[j]+"装备*"+temp[k][j]+"\n",style:{textColor:ConstTextColor[j]}});
-                    equipArray.push({text:"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t"});
+                    equipArray.push({text:"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t"});
                 }
             }
             this.lb_get.lineSpacing = 14;
@@ -65,6 +66,8 @@ module game {
 		 */
 		public openWin(openParam: any = null): void {
 			super.openWin(openParam);
+            this._data = openParam.data;
+            this.initView();
 		}
 
 		/**

@@ -35,6 +35,7 @@ module game{
 		 * 宝石升级
 		 */
 		public handleJewelUpgrade(data){
+			JewelModel.getInstance().checkCanUpgradeAll();
 			this.dispatchEvent(PanelNotify.JEWEL_UPDATE_VIEW,data);
 		}
 

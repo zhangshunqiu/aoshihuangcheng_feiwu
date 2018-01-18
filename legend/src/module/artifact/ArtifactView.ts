@@ -21,6 +21,7 @@ module game {
 		public gp_effect: eui.Group;
 		public img_txt: eui.Image;
 		public list: eui.List = new eui.List();
+		private _bgMc: AMovieClip;
 
 
 		private _updateHandleId: number;
@@ -43,6 +44,7 @@ module game {
 		}
 
 		private initView() {
+			this.bgEffect();
 			this._effectMC = new EffectMovieClip();
 			this._effectMC.x = 125;
 			this._effectMC.y = 150;
@@ -56,6 +58,8 @@ module game {
 			this.btn_upgrade.addEventListener(egret.TouchEvent.TOUCH_TAP, this.artifactUpgrade, this);
 
 			this.scroller.scrollPolicyH = eui.ScrollPolicy.OFF;
+			this.scroller.verticalScrollBar.visible = false;
+			this.scroller.verticalScrollBar.autoVisibility = false;
 			this.scroller.viewport = this.list;
 			this.list.itemRenderer = ArtifactItem;
 
@@ -80,13 +84,30 @@ module game {
 				this._curIndex = event.itemIndex;
 				this.updateView();
 				this.list.selectedIndex = event.itemIndex;
+				let offset = this.list.scrollV;
+				this.list.validateNow();
+				this.list.scrollV = offset;
 			}
 		}
 
+		private bgEffect() {
+			this._bgMc = new AMovieClip();
+			this._bgMc.x = 205;
+			this._bgMc.y = 345;
+			this.gp_effect.addChild(this._bgMc);
+			this._bgMc.playMCKey("effsqbj");
+		}
+
 		private updateView() {
-			this._originArray.refresh();
 			let artifactInfo = undefined;
+			let nextInfo = undefined;
 			let isActive = false;
+			let offset = this.list.scrollV;
+			this._originArray.refresh();
+			this.list.selectedIndex = this._curIndex;
+			this.list.validateNow();
+			this.list.scrollV = offset;
+
 			if (this.artifactModel.artifactList[this._curIndex]) { //激活了
 				artifactInfo = App.ConfigManager.getArtifactInfoById(this.artifactModel.artifactList[this._curIndex]);
 				isActive = true;
@@ -98,6 +119,7 @@ module game {
 				RES.getResAsync("equip_sp_txt_jihuo_png", (texture) => {
 					this.img_txt.source = texture;
 				}, this)
+				this.lb_cost.visible = true;
 			}
 			this._curArtifact = artifactInfo;
 
@@ -151,7 +173,7 @@ module game {
 
 			if (isActive) {
 				if (artifactInfo.next_id) {
-					let nextInfo = App.ConfigManager.getArtifactInfoById(artifactInfo.next_id);
+					nextInfo = App.ConfigManager.getArtifactInfoById(artifactInfo.next_id);
 					let textArrayNext = [];
 					if (this._career == CareerType.SOLDIER) {
 						if (artifactInfo["ac"] != 0) {
@@ -229,6 +251,9 @@ module game {
 			}
 
 			let costInfo = artifactInfo.item[0];
+			if (nextInfo && this.artifactModel.artifactList[this._curIndex]) {
+				costInfo = nextInfo.item[0];
+			}
 			let costItem = App.ConfigManager.getItemInfoById(costInfo[1]);
 			let itemInfo = BackpackModel.getInstance().getItemByTypeIdUuid(costInfo[0], costInfo[1]);
 			this._costId = costInfo[1];
@@ -250,7 +275,7 @@ module game {
 
 		private artifactUpgrade() {
 			if (this.artifactModel.artifactList[this._curIndex]) {
-				App.Socket.send(33003, { id: this._curArtifact.id });
+				App.Socket.send(33003, { id: this._curArtifact.id }); //发id
 			} else {
 				App.Socket.send(33002, { type: this._curArtifact.type });
 			}
@@ -266,13 +291,13 @@ module game {
 		}
 
 		public checkGuide() {
-			App.GuideManager.bindClickBtn(this.btn_upgrade,1019,2);
-			App.GuideManager.bindClickBtn(this.img_close,1019,3);
+			App.GuideManager.bindClickBtn(this.btn_upgrade, 1019, 2);
+			App.GuideManager.bindClickBtn(this.img_close, 1019, 3);
 			App.GuideManager.checkGuide(1019);
 		}
 
 		public removeGuide() {
-			App.GuideManager.removeClickBtn(1019,2);
+			App.GuideManager.removeClickBtn(1019, 2);
 		}
 
 		/**
@@ -321,6 +346,11 @@ module game {
 		public destroy(): void {
 			super.destroy();
 			this._effectMC.destroy();
+			if (this._bgMc) {
+				this._bgMc.destroy();
+				this._bgMc = null;
+				delete this._bgMc;
+			}
 		}
 	}
 
@@ -358,10 +388,10 @@ module game {
 
 			if (this.selected) { //选择当前
 				this.img_arrow.visible = true;
-				// App.logzrj("select ",this.itemIndex);
+				App.logzrj("select ", this.itemIndex);
 			} else {
 				this.img_arrow.visible = false;
-				// App.logzrj("unselect ",this.itemIndex);
+				App.logzrj("unselect ", this.itemIndex);
 			}
 
 			RES.getResAsync(ConstArtifactQuality[info.quality], (texture) => {

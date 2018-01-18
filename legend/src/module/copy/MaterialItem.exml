@@ -5,7 +5,7 @@
 		<e:Image source="copy_material_bg_name_png" x="10" y="11"/>
 		<e:Image id="img_materialName" x="32" y="21" source="copy_material_name_chibangfuben_png"/>
 		<e:Group id="gp_right" x="448" y="40">
-			<e:Label text="挑战次数：" x="1" y="-2" size="24" fontFamily="黑体"/>
+			<e:Label id="lb_desText" text="挑战次数：" y="-2" size="24" fontFamily="黑体" anchorOffsetX="0" width="158" anchorOffsetY="0" height="49" x="1" textAlign="left"/>
 			<e:Label id="lb_challengeNum" text="1次" x="123" y="-1" size="24" fontFamily="黑体" textColor="0x00f829"/>
 			<e:Button id="btn_challenge" label="" x="7" y="50">
 			<e:skinName>
@@ -16,7 +16,12 @@
 			</e:skinName>
 			</e:Button>
 			<e:Image id="img_challenge" source="boss_txt_tiaozhan_png" touchEnabled="false" x="58" y="64"/>
-			<e:Image id="img_done" source="task_yiwancheng_png" x="46" y="64"/>
+			<e:Image id="img_done" x="59" y="64" source="copy_txt_saodang_hui_png" touchEnabled="false"/>
+			<e:Group id="gp_sweep" x="32" y="64" touchEnabled="false">
+				<e:Label id="lb_gold" text="500" x="55" y="45" size="24" fontFamily="黑体"/>
+				<e:Image id="img_sweep" touchEnabled="false" x="26" y="0" source="copy_txt_saodang_liang_png"/>
+				<e:Image source="common_yuanbao_png" x="0" y="39"/>
+			</e:Group>
 		</e:Group>
 		<e:Label id="lb_tip" text="人物达到50级可进行挑战" x="453" y="66" size="24" fontFamily="黑体" textColor="0xFF3D3D" anchorOffsetY="0" height="83" anchorOffsetX="0" width="149" textAlign="center"/>
 		<e:Image source="common_frame_purple_png" x="58" y="73"/>

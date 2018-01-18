@@ -45,25 +45,33 @@ module game {
         public gp_autoChallenge: eui.Group;
         public gp_bossUiAll: eui.Group;
 
-        public gp_chatlist : eui.Group;
-        public scr_chatlist: eui.Scroller;
-        public vp_chatlist: eui.Group;
-        private _uichatlist: Array<any> = [];
-        private _nextchatposiy: number = 0;
-        private _eventid_chatlist = 0;
-        private _eventid_onechat: number = 0;
+        // public gp_chatlist : eui.Group;
+        // public scr_chatlist: eui.Scroller;
+        // public vp_chatlist: eui.Group;
+        // private _uichatlist: Array<any> = [];
+        // private _nextchatposiy: number = 0;
+        // private _eventid_chatlist = 0;
+        // private _eventid_onechat: number = 0;
         private _eventIdBossResult: number = 0;
         private _initSceneEventId: number = 0;
         private _meetBossEventId: number = 0;
+        private _startChallengeMeetBossEventId: number = 0;
         private _chatModel: ChatModel = ChatModel.getInstance();
 
         private mainUIModel: MainUIModel = MainUIModel.getInstance();
         private _topBtnList:Array<IconButton>=[];
+        private _middleBtnList:Array<IconButton>=[];
+        private _rightBtnList:Array<IconButton>=[];
         private _chatBtn:IconButton;
+        private _mailBtn:IconButton;
+        private _fastFightBtn:IconButton;
+        private _arenaBtn:IconButton;
+        private _worldBossBtn:IconButton;
 
         public mainline_view:MainLineTaskView;
 
-        public img_worldBoss: eui.Image;
+        public btn_worldBoss: eui.Button;
+        public img_worldBoss0: eui.Image;
 
         public removeTopBtnEventId: number = 0;
         private addTopBtnEventId: number = 0;
@@ -101,20 +109,20 @@ module game {
             App.EventSystem.addEventListener(PanelNotify.PLAYER_OFFLINE_INFO, this.showOfflineInfo, this);
             // App.EventSystem.addEventListener(PanelNotify.PLAYER_FASTFIGHT_INFO, this.fastFightInfo, this);
             App.EventSystem.addEventListener(PanelNotify.PLAYER_FASTFIGHT_RESULT, this.fastFightResult, this);
+            App.EventSystem.addEventListener(PanelNotify.PLAYER_COMBAT_UPDATE,this.showCombatChange,this);//战力更新事件
+            // ChatController.getInstance().getChatList();
+            // //聊天窗口
+            // if (this._eventid_chatlist == 0)
+            //     this._eventid_chatlist = App.EventSystem.addEventListener(PanelNotify.CHAT_LIST_UPDATE, this.playChatList, this);
 
-            ChatController.getInstance().getChatList();
-            //聊天窗口
-            if (this._eventid_chatlist == 0)
-                this._eventid_chatlist = App.EventSystem.addEventListener(PanelNotify.CHAT_LIST_UPDATE, this.playChatList, this);
+            // if (this._eventid_onechat == 0){
+            //     this._eventid_onechat = App.EventSystem.addEventListener(PanelNotify.CHAT_HAS_NEW_INFO, this.playOneChat, this);
+            // }
 
-            if (this._eventid_onechat == 0){
-                this._eventid_onechat = App.EventSystem.addEventListener(PanelNotify.CHAT_HAS_NEW_INFO, this.playOneChat, this);
-            }
-
-            this.scr_chatlist.viewport = this.vp_chatlist;
-            this.scr_chatlist.scrollPolicyH = eui.ScrollPolicy.OFF;
-            if (this._uichatlist.length < 1)
-                this.playChatList()
+            // this.scr_chatlist.viewport = this.vp_chatlist;
+            // this.scr_chatlist.scrollPolicyH = eui.ScrollPolicy.OFF;
+            // if (this._uichatlist.length < 1)
+            //     this.playChatList()
 
 
             // this.img_chat.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: Event) => {    //聊天模块入口
@@ -138,35 +146,36 @@ module game {
             //     App.WinManager.openWin(WinName.MUSTDO);
             // }, this);
 
-            this.img_fastfight.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: Event) => {    //每日必做模块入口
-                let view = new FastFightView();
-                PopUpManager.addPopUp({ obj: view });
-            }, this);
+            // this.img_fastfight.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: Event) => {    //快速战斗入口
+            //     // let view = new FastFightView();
+            //     // PopUpManager.addPopUp({ obj: view });
+            //     App.WinManager.openWin(WinName.POP_FAST_FIGHT);
+            // }, this);
 
             this.gp_meetBoss.addEventListener(egret.TouchEvent.TOUCH_TAP, ()=>{  //遭遇boss入口
                 var bossModel:BossModel = BossModel.getInstance();
                 App.WinManager.openWin(WinName.BOSS_MEET,{});
             }, this);
 
-           this.img_copy.addEventListener(egret.TouchEvent.TOUCH_TAP, ()=>{   //副本模块入口
-               App.WinManager.openWin(WinName.COPY);
-           }, this);
+        //    this.img_copy.addEventListener(egret.TouchEvent.TOUCH_TAP, ()=>{   //副本模块入口
+        //        App.WinManager.openWin(WinName.COPY);
+        //    }, this);
 
-           this.img_worldBoss.addEventListener(egret.TouchEvent.TOUCH_TAP, ()=>{
-               App.WinManager.openWin(WinName.WORLDBOSS);
-           }, this)
+        //    this.btn_worldBoss.addEventListener(egret.TouchEvent.TOUCH_TAP, ()=>{  // 世界boss入口
+        //        App.WinManager.openWin(WinName.WORLDBOSS);
+        //    }, this)
 
-           this.btn_arena.addEventListener(egret.TouchEvent.TOUCH_TAP, ()=>{  //竞技场
-               App.WinManager.openWin(WinName.HEGEMONY);
-           }, this)
+        //    this.btn_arena.addEventListener(egret.TouchEvent.TOUCH_TAP, ()=>{  //竞技场
+        //        App.WinManager.openWin(WinName.HEGEMONY);
+        //    }, this)
 
-           this.btn_metal.addEventListener(egret.TouchEvent.TOUCH_TAP, ()=>{  //勋章
-               App.WinManager.openWin(WinName.METAL);
-           }, this)
+        //    this.btn_metal.addEventListener(egret.TouchEvent.TOUCH_TAP, ()=>{  //勋章
+        //        App.WinManager.openWin(WinName.METAL);
+        //    }, this)
 
-           this.btn_daily.addEventListener(egret.TouchEvent.TOUCH_TAP, ()=>{  //日常
-                 App.WinManager.openWin(WinName.MUSTDO);
-           }, this)
+        //    this.btn_daily.addEventListener(egret.TouchEvent.TOUCH_TAP, ()=>{  //日常
+        //          App.WinManager.openWin(WinName.MUSTDO);
+        //    }, this)
            
             this.initView();
             App.WinManager.openWin(WinName.MAIN_BOTTOM);
@@ -184,11 +193,64 @@ module game {
                 this._chatBtn.y = 920-50;
                 App.BtnTipManager.addBtnTipItem(ConstBtnTipType.CHAT,this._chatBtn,80,10);
             }
+            if(this._mailBtn == null){
+                this._mailBtn = new IconButton({id:MainUIBtnType.MAIL,icon:"main_icon_youjian_png",btnTipType:ConstBtnTipType.MAIL,winName:WinName.MAIL});
+                this._mailBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, ()=>{
+                        App.WinManager.openWin(WinName.MAIL);
+                }, this);
+                this.gp_middle.addChild(this._mailBtn);
+                this._mailBtn.x = 68-50;
+                this._mailBtn.y = 920-115;
+                App.BtnTipManager.addBtnTipItem(ConstBtnTipType.MAIL,this._mailBtn,80,10);
+            }
+            if(this._fastFightBtn == null){
+                this._fastFightBtn = new IconButton({id:MainUIBtnType.FASTFIGHT,icon:"main_icon_kuaisuzhandou_png",btnTipType:0,winName:WinName.POP_FAST_FIGHT});
+                this._fastFightBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, ()=>{
+                        App.WinManager.openWin(WinName.POP_FAST_FIGHT);
+                }, this);
+                this.gp_bottom_right.addChild(this._fastFightBtn);
+                this._fastFightBtn.x = -5;
+                this._fastFightBtn.y = -40;
+            }
+            if(this._arenaBtn == null){
+                this._arenaBtn = new IconButton({id:MainUIBtnType.ARENA, icon:"main_icon_jingji_png", btnTipType:ConstBtnTipType.AREAN, winName:WinName.HEGEMONY});
+                this._arenaBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, ()=>{
+                        App.WinManager.openWin(WinName.HEGEMONY);
+                }, this);
+                this.gp_bottom_right.addChild(this._arenaBtn);
+                this._arenaBtn.x = -47;
+                this._arenaBtn.y = 50;
+            }
+            if(this._worldBossBtn == null){
+                this._worldBossBtn = new IconButton({id:MainUIBtnType.WORLDBOSS, icon:"main_icon_shijieboss_png", btnTipType:0, winName:WinName.WORLDBOSS});
+                this._worldBossBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, ()=>{
+                        App.WinManager.openWin(WinName.WORLDBOSS);
+                }, this);
+                this.gp_bottom_right.addChild(this._worldBossBtn);
+                this._worldBossBtn.x = -30;
+                this._worldBossBtn.y = 140;
+            }
             this.updateTopBtn();
-            App.BtnTipManager.addBtnTipItem(ConstBtnTipType.BOSS_CHALLENGE,this.gp_boss);
+            this.updateMiddleBtn();
+            this.updateRightBtn();
+            App.BtnTipManager.addBtnTipItem(ConstBtnTipType.BOSS_CHALLENGE,this.gp_boss,140,15);
+            //App.BtnTipManager.addBtnTipItem(ConstBtnTipType.COPY, this.img_copy);
+            App.BtnTipManager.addBtnTipItem(ConstBtnTipType.AREAN, this.btn_arena);
+
+            App.WinManager.openWin(WinName.CHATPORT);
 
         }
 
+        private showCombatChange(changeData) {
+            var heroVosAfter:Array<HeroVo> = changeData["hero"];
+            var heroVosBefore:Array<HeroVO>= (HeroModel.getInstance() as HeroModel).heroInfo;
+            if(heroVosBefore.length <= 0) {
+                return; 
+            }else {
+                App.GlobalTips.showCombatTips(heroVosBefore,heroVosAfter);
+            }
+        }
+        
         private updateTopBtn(){
             for(var i:number = 0;i<this._topBtnList.length;i++){
                 var item:IconButton = this._topBtnList[i];
@@ -209,11 +271,57 @@ module game {
             }
         }
 
+         private updateMiddleBtn(){
+            for(var i:number = 0;i<this._middleBtnList.length;i++){
+                var item:IconButton = this._middleBtnList[i];
+                item.destroy();
+                if(item.parent){
+                    item.parent.removeChild(item);
+                }
+            }
+            this._middleBtnList = [];
+            for(var j:number = 0;j<MainUIMiddleListConf.length;j++){
+                let d:any = MainUIMiddleListConf[j];
+                let item: IconButton = this.creatOneTopBtn(d);
+                this.gp_bottom_left.addChild(item);
+                var pos:point = this.getMiddleBtnPos(j);
+                item.x = pos.x;
+                item.y = pos.y;
+                this._middleBtnList.push(item);
+            }
+        }
+
+        private updateRightBtn(){
+            for(var i:number = 0;i<this._rightBtnList.length;i++){
+                var item:IconButton = this._rightBtnList[i];
+                item.destroy();
+                if(item.parent){
+                    item.parent.removeChild(item);
+                }
+            }
+            this._rightBtnList = [];
+            for(var j:number = 0;j<MainUIRightListConf.length;j++){
+                let d:any = MainUIRightListConf[j];
+                let item: IconButton = this.creatOneTopBtn(d);
+                this.gp_bottom_right.addChild(item);
+                var pos:point = this.getRightBtnPos(j);
+                item.x = pos.x;
+                item.y = pos.y;
+                this._rightBtnList.push(item);
+            }
+        }
+
         private creatOneTopBtn(d: any):IconButton {
             let item: IconButton = new IconButton(d);
             if (d.btnTipType != ConstBtnTipType.NULL) { 
                 App.BtnTipManager.addBtnTipItem(d.btnTipType, item,70,20);
             }
+            item.addEventListener(egret.TouchEvent.TOUCH_BEGIN, () => {
+                item.setSelected(true);
+            }, this);
+            item.addEventListener(egret.TouchEvent.TOUCH_RELEASE_OUTSIDE, ()=>{
+                item.setSelected(false);
+            }, this);
             item.addEventListener(egret.TouchEvent.TOUCH_END, () => {
                 if(d.id == MainUIBtnType.FIRSTCHARGE)
                 {
@@ -227,6 +335,7 @@ module game {
                         App.WinManager.openWin(String(d.winName));
                     }
                 }
+                item.setSelected(false);
             }, this);
             return item;
         }
@@ -289,11 +398,54 @@ module game {
             }
         }
 
+        private addMiddleBtn(param: any) {
+            for (var j: number = 0; j < this._middleBtnList.length; j++) {
+                var item: IconButton = this._middleBtnList[j];
+                if (item.getId() == param.id) {
+                    return;
+                }
+            }
+            var isfind:boolean = false;
+            for (var j: number = 0; j < MainUIMiddleListConf.length; j++) {
+                let d: any = MainUIMiddleListConf[j];
+                if (d.id == param.id) {
+                    isfind = true;
+                    let item: IconButton = this.creatOneTopBtn(d);
+                    this.gp_bottom_left.addChild(item);
+                    var pos:point = this.getMiddleBtnPos(j);
+                    item.x = pos.x;
+                    item.y = pos.y;
+                    this._middleBtnList.splice(param.index,0,item);
+                    break;
+                }
+            }
+            if(isfind){
+                for (var j: number = 0; j < this._middleBtnList.length; j++) {
+                    var item: IconButton = this._middleBtnList[j];
+                    var pos:point = this.getMiddleBtnPos(j);
+                    egret.Tween.get(item).to({ x: pos.x,y:pos.y }, 300);
+                }
+            }
+        }
+
         /**
          *  根据Id获取顶部按钮
          */
         private getTopBtnPos(j:number):point{
             return new point((j%8)*87+15,Math.floor(j/8)*100);
+        }
+        
+        /**
+         *  根据Id获取顶部二层按钮
+         */
+        private getMiddleBtnPos(j:number):point{
+            return new point(-10, (j%8)*87-35,);
+        }
+        /**
+         *  根据Id获取右侧按钮
+         */
+        private getRightBtnPos(j:number):point{
+            return new point(0, (j%8)*87-220);
         }
         /**
          *  根据Id获取顶部按钮
@@ -374,52 +526,54 @@ module game {
             }
         }
 
-        //聊天窗口
-        //把收到的消息列表显示出来
-        public playChatList() {
-            // _chatList
-            for (let i = 0; i < this._chatModel.chatAllList.length; i++) {
+        // //聊天窗口
+        // //把收到的消息列表显示出来
+        // public playChatList() {
+        //     // _chatList
+        //     for (let i = 0; i < this._chatModel.chatAllList.length; i++) {
 
-                let item = new eui.Label;
-                item.size = 18;
-                item.textFlow = GlobalUtil.getChatPortText(this._chatModel.chatAllList[i]);
-                item.maxWidth = 420;
-                item.lineSpacing = 10;
-                this.vp_chatlist.addChild(item);
-                item.$setY(this._nextchatposiy);
-                item.x += 5;
-                this._nextchatposiy += item.height + 10;
-                this._uichatlist.push(item);
-                this.vp_chatlist.height = 1000;
+        //         let item = new RichTextField;
+        //         item.size = 18;
+        //         item.textFlow = ChatUtil.getChatPortText(this._chatModel.chatAllList[i]);
+        //         item.width = 420;
+        //         //item.maxWidth = 420;
+        //         item.lineSpacing = 10;
+        //         this.vp_chatlist.addChild(item);
+        //         item.$setY(this._nextchatposiy);
+        //         item.x += 5;
+        //         this._nextchatposiy += item.height + 10;
+        //         this._uichatlist.push(item);
+        //         this.vp_chatlist.height = 1000;
 
-            }
-            this.scr_chatlist.viewport.scrollV = this._nextchatposiy - this.scr_chatlist.height;
-        }
+        //     }
+        //     this.scr_chatlist.viewport.scrollV = this._nextchatposiy - this.scr_chatlist.height;
+        // }
 
-        //有新消息加入
-        public playOneChat(data) {
+        // //有新消息加入
+        // public playOneChat(data) {
 
-            if (this._uichatlist.length > 100) {
-                this._nextchatposiy -= this._uichatlist[0].height;
-                for (let i = 0; i < this._uichatlist.length; i++) {
-                    this._uichatlist[i].y -= this._uichatlist[0].height;
-                    this.vp_chatlist.removeChild(this._uichatlist[0]);
-                }
-            }
-            let item = new eui.Label;
-            item.size = 18;
-            item.textFlow = GlobalUtil.getChatPortText(data);
-            item.maxWidth = 420;
-            item.lineSpacing = 10;
-            this.vp_chatlist.addChild(item);
-            item.$setY(this._nextchatposiy);
-            item.x += 5;
-            this._nextchatposiy += item.height + 10;
-            this._uichatlist.push(item);
+        //     if (this._uichatlist.length > 100) {
+        //         this._nextchatposiy -= this._uichatlist[0].height;
+        //         for (let i = 0; i < this._uichatlist.length; i++) {
+        //             this._uichatlist[i].y -= this._uichatlist[0].height;
+        //             this.vp_chatlist.removeChild(this._uichatlist[0]);
+        //         }
+        //     }
+        //     let item = new RichTextField;
+        //     item.size = 18;
+        //     item.textFlow = ChatUtil.getChatPortText(data);
+        //     //item.maxWidth = 420;
+        //     item.width = 420;
+        //     item.lineSpacing = 10;
+        //     this.vp_chatlist.addChild(item);
+        //     item.$setY(this._nextchatposiy);
+        //     item.x += 5;
+        //     this._nextchatposiy += item.height + 10;
+        //     this._uichatlist.push(item);
 
-            this._uichatlist.shift();
-            this.scr_chatlist.viewport.scrollV = this._nextchatposiy - this.scr_chatlist.height;
-        }
+        //     this._uichatlist.shift();
+        //     this.scr_chatlist.viewport.scrollV = this._nextchatposiy - this.scr_chatlist.height;
+        // }
 
         public partAdded(partName: string, instance: any): void {
             super.partAdded(partName, instance);
@@ -428,8 +582,9 @@ module game {
         //离线挂机收益
         public showOfflineInfo() {
             if (this.mainUIModel.hookRewardInfo && this.mainUIModel.showOffline) {
-                let view = new MainOffline(this.mainUIModel.hookRewardInfo);
-                PopUpManager.addPopUp({ obj: view });
+                // let view = new MainOffline(this.mainUIModel.hookRewardInfo);
+                // PopUpManager.addPopUp({ obj: view });
+                App.WinManager.openWin(WinName.POP_OFFLINE_RESULT,{data:this.mainUIModel.hookRewardInfo});
                 this.mainUIModel.showOffline = false;
             }
 
@@ -443,8 +598,9 @@ module game {
         //快速战斗收益
         public fastFightResult() {
             if (this.mainUIModel.fastFightInfo) {
-                let view = new FastFightResultView(this.mainUIModel.fastFightInfo);
-                PopUpManager.addPopUp({ obj: view });
+                // let view = new FastFightResultView(this.mainUIModel.fastFightInfo);
+                // PopUpManager.addPopUp({ obj: view });
+                App.WinManager.openWin(WinName.POP_FAST_FIGHT_RESULT,{data:this.mainUIModel.fastFightInfo});
             }
 
         }
@@ -472,12 +628,11 @@ module game {
 
 
             //判断是否是Boss场景
-            if(SceneUtil.isBossScene(this._sceneModel.sceneId) || SceneUtil.isWorldBossScene(this._sceneModel.sceneId) || this._sceneModel.sceneId == 30601){
+            if(SceneUtil.isBossScene(this._sceneModel.sceneId) || SceneUtil.isActivityScene(this._sceneModel.sceneId)){   //SceneUtil.isWorldBossScene(this._sceneModel.sceneId) || this._sceneModel.sceneId == 30601
                 App.EventSystem.dispatchEvent(PanelNotify.MAIN_CLOSE_BUTTON);   //把主界面上顶部和旁边的图标隐藏
             }else{
                 App.EventSystem.dispatchEvent(PanelNotify.MAIN_OPEN_BUTTON);  //把主界面上顶部和旁边的图标显示
             }
-
 
             //判断是否是世界boss场景
             if(SceneUtil.isWorldBossScene(this._sceneModel.sceneId)) {
@@ -489,10 +644,37 @@ module game {
                     App.WinManager.closeWin(WinName.WORLDBOSS_FIGHT);
                 }
             }
+
+            //判断是否挂机场景跟主场景
+            if(SceneUtil.isHookScene(this._sceneModel.sceneId)||SceneUtil.isMainScene(this._sceneModel.sceneId)){
+                
+                 this.mainline_view.showHideMainLineTask(true);
+                 App.WinManager.openWin(WinName.CHATPORT);
+            }
+            else{
+                 this.mainline_view.showHideMainLineTask(false);
+                 App.WinManager.closeWin(WinName.CHATPORT);
+            }
+
+            /**非挂机场景隐藏右上角挂机收益的面板 */
+            if (SceneUtil.isHookScene(this._sceneModel.sceneId)) {
+                App.EventSystem.dispatchEvent(PanelNotify.MAIN_HIDE_FIGHT_INFO, false);
+            } else {
+                App.EventSystem.dispatchEvent(PanelNotify.MAIN_HIDE_FIGHT_INFO, true);
+            }
+
+            /**如果是boss场景，播放boss来袭特效 */
+            if (SceneUtil.isBossScene(this._sceneModel.sceneId)) {
+                App.WinManager.openWin(WinName.BOSS_COMING);
+            }
         }
 
         public openAutoChallenge() {
-            //自动挑战开启
+            //自动挑战开启  //判断开启条件
+            if (!App.GuideManager.isModuleOpen("AUTO_FIGHT")) {
+                App.GuideManager.moduleNotOpenTip("AUTO_FIGHT");
+                return;
+            }
             
 
             if(this._eventIdBossResult == 0) {
@@ -518,12 +700,14 @@ module game {
         public openButton() {  //打开侧面上面按钮
             this.gp_activity.visible = true;
             this.gp_bottom.visible = true;
-            this.gp_chatlist.visible = true;
+            //this.gp_chatlist.visible = true;
+            App.WinManager.openWin(WinName.CHATPORT);
         }
         public closeButton() { //关闭侧面上面按钮
             this.gp_activity.visible = false;
             this.gp_bottom.visible = false;
-            this.gp_chatlist.visible = false;
+            //this.gp_chatlist.visible = false;
+            App.WinManager.closeWin(WinName.CHATPORT);
         }
 
         public joinBossIconEffect() {  //加入挑战boss图标特效和自动挑战特效
@@ -552,11 +736,14 @@ module game {
             let okCB = function (selected) {
                 // console.log("okkkk", selected);
                 // App.WinManager.openWin(WinName.BACKPACK);
+                App.WinManager.openPopWin(WinName.POP_SMELT);
+                App.WinManager.closeWin(WinName.ALERTTIPS);
+
             }
             let cancelCB = function () {
                 // console.log("cancellll");
             }
-            App.GlobalTips.showAlert({ style: BaseTipsStyle.ONLY_OK, content: "背包空间不足，请先整理背包", okCB: okCB, cancelCB: cancelCB, context: this, needCheckBox: false });
+            App.GlobalTips.showAlert({ style: AlertTipsStyle.ONLY_OK, content: "背包空间不足，请先整理背包", okCB: okCB, cancelCB: cancelCB, context: this, needCheckBox: false });
         }
 
         private meetBoss(data) {
@@ -577,13 +764,14 @@ module game {
                 // console.log("cancellll");
             }
             let text = "元宝不足，是否跳转充值页面"
-            App.GlobalTips.showAlert({ style: BaseTipsStyle.ONLY_OK, content: text, okCB: okCB, cancelCB: cancelCB, context: this, needCheckBox: false });
+            App.GlobalTips.showAlert({ style: AlertTipsStyle.ONLY_OK, content: text, okCB: okCB, cancelCB: cancelCB, context: this, needCheckBox: false });
         }
 
         //金币不足
         private coinNotEnough() {
-            let view = new ItemWay(ClientType.BASE_ITEM, 101);
-            PopUpManager.addPopUp({ obj: view });
+            // let view = new ItemWay(ClientType.BASE_ITEM, 101);
+            // PopUpManager.addPopUp({ obj: view });
+           App.GlobalTips.showItemWayTips(ClientType.BASE_ITEM,101);
         }
 
 
@@ -599,6 +787,7 @@ module game {
                     
                 } else if(priority == 1) {
                     SkillModel.getInstance().checkSkillCanUpgradeAll();
+                    HeroModel.getInstance().checkSpecialEquipRedDotAll();
                 }
                 priority--;
             },this,()=>{
@@ -612,15 +801,24 @@ module game {
 		public openWin(openParam: any = null): void {
 			super.openWin(openParam);
             App.Socket.send(28003,{});
-                    var setTimeOutId = setTimeout(function() {
-                         App.Socket.send(35001,{});
-                         clearTimeout(setTimeOutId);
-                    }, 100);
+            var setTimeOutId = setTimeout(function() {
+                    App.Socket.send(35001,{});
+                    clearTimeout(setTimeOutId);
+            }, 100);
+            var setTimeOutId2 = setTimeout(function() {
+                    App.Socket.send(34001,{});
+                    clearTimeout(setTimeOutId2);
+            }, 100);
             if(this._initSceneEventId === 0) {
                 this._initSceneEventId = App.EventSystem.addEventListener(SceneEventType.INIT_SCENE, this.onInitScene, this);
             }
             if(this._meetBossEventId === 0) {
                 this._meetBossEventId = App.EventSystem.addEventListener(PanelNotify.BOSS_MEET, this.meetBoss, this);
+            }
+            if(this._startChallengeMeetBossEventId == 0) {
+                this._startChallengeMeetBossEventId = App.EventSystem.addEventListener(PanelNotify.BOSS_MEET_START_CHALLENGE, ()=>{
+                    this.gp_meetBoss.visible = false;
+                }, this)
             }
 
             if (this.removeTopBtnEventId == 0) {
@@ -648,15 +846,15 @@ module game {
          */
         public clear(data: any = null): void {
             super.clear(data);
-            //清理聊天窗口事件
-            if(this._eventid_chatlist != 0){
-                App.EventSystem.removeEventListener(PanelNotify.CHAT_LIST_UPDATE, this._eventid_chatlist);
-                this._eventid_chatlist = 0
-            }
-            if(this._eventid_onechat != 0){
-                App.EventSystem.removeEventListener(PanelNotify.CHAT_HAS_NEW_INFO, this._eventid_onechat);
-                this._eventid_onechat = 0
-            }
+            // //清理聊天窗口事件
+            // if(this._eventid_chatlist != 0){
+            //     App.EventSystem.removeEventListener(PanelNotify.CHAT_LIST_UPDATE, this._eventid_chatlist);
+            //     this._eventid_chatlist = 0
+            // }
+            // if(this._eventid_onechat != 0){
+            //     App.EventSystem.removeEventListener(PanelNotify.CHAT_HAS_NEW_INFO, this._eventid_onechat);
+            //     this._eventid_onechat = 0
+            // }
             if(this._eventIdBossResult != 0) {
                 App.EventSystem.removeEventListener(PanelNotify.SHOW_BOSS_RESULT, this._eventIdBossResult);
                 this._eventIdBossResult = 0;
@@ -669,6 +867,10 @@ module game {
                 App.EventSystem.removeEventListener(PanelNotify.BOSS_MEET, this._meetBossEventId);
                 this._meetBossEventId = 0;
             }
+            if(this._startChallengeMeetBossEventId != 0) {
+                App.EventSystem.removeEventListener(PanelNotify.BOSS_MEET_START_CHALLENGE, this._startChallengeMeetBossEventId);
+                this._startChallengeMeetBossEventId = 0;
+            }
             if (this.removeTopBtnEventId != 0) {
                 App.EventSystem.removeEventListener(PanelNotify.REMOVE_TOP_BTN, this.removeTopBtnEventId);
                 this.removeTopBtnEventId = 0;
@@ -676,6 +878,27 @@ module game {
             if (this.addTopBtnEventId != 0) {
                 App.EventSystem.removeEventListener(PanelNotify.ADD_TOP_BTN, this.addTopBtnEventId);
                 this.addTopBtnEventId = 0;
+            }
+            if (this.mc) {
+                this.mc.destroy();
+                if (this.mc.parent) {
+                    this.mc.parent.removeChild(this.mc);
+                }
+                this.mc = null;
+            }
+            if (this.mcChallenge) {
+                this.mcChallenge.destroy();
+                if (this.mcChallenge.parent) {
+                    this.mcChallenge.parent.removeChild(this.mcChallenge);
+                }
+                this.mcChallenge = null;
+            }
+            if (this.mcMeetBoss) {
+                this.mcMeetBoss.destroy();
+                if (this.mcMeetBoss.parent) {
+                    this.mcMeetBoss.parent.removeChild(this.mcMeetBoss);
+                }
+                this.mcMeetBoss = null;
             }
             App.WinManager.closeWin(WinName.MAIN_BOTTOM);
         }
@@ -692,6 +915,7 @@ module game {
             App.EventSystem.removeEventListener(PanelNotify.HERO_COIN_NOT_ENOUGH); //金币不足
             App.EventSystem.removeEventListener(PanelNotify.HERO_MONEY_NOT_ENOUGH); //元宝不足
             App.EventSystem.removeEventListener(PanelNotify.PLAYER_FASTFIGHT_RESULT);
+            App.EventSystem.removeEventListener(PanelNotify.PLAYER_COMBAT_UPDATE);
         }
     }
 }

@@ -1,42 +1,42 @@
 {
 	"1":{
 		"id":1,
-		"number":5000,
+		"number":10000,
 		"gold":1000
 	},
 	"2":{
 		"id":2,
-		"number":5100,
-		"gold":1100
+		"number":20000,
+		"gold":2000
 	},
 	"3":{
 		"id":3,
-		"number":5200,
-		"gold":1200
+		"number":30000,
+		"gold":3000
 	},
 	"4":{
 		"id":4,
-		"number":5300,
-		"gold":1300
+		"number":40000,
+		"gold":4000
 	},
 	"5":{
 		"id":5,
-		"number":5400,
-		"gold":1400
+		"number":50000,
+		"gold":5000
 	},
 	"6":{
 		"id":6,
-		"number":5500,
-		"gold":1500
+		"number":60000,
+		"gold":6000
 	},
 	"7":{
 		"id":7,
-		"number":5600,
-		"gold":1600
+		"number":70000,
+		"gold":7000
 	},
 	"8":{
 		"id":8,
-		"number":5700,
-		"gold":1700
+		"number":80000,
+		"gold":8000
 	}
 }

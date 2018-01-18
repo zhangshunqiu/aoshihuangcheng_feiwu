@@ -37,17 +37,20 @@ class BaseBtnTips extends egret.DisplayObjectContainer {
 			// }
 		}
 		if(parent.width == 0 && this._autoPosX){
-			this._timeOutId = egret.setTimeout(function () {
-               if(this.parent){
-					this.x = this.parent.width - 10;
-				}
-            }, this, 400)
+			if(this._timeOutId == 0){
+				this._timeOutId = egret.setTimeout(function () {
+				if(this.parent){
+						this.x = this.parent.width - 10;
+					}
+				}, this, 400)
+			}
 		}
 		if(this.hasEventListener(egret.Event.REMOVED_FROM_STAGE) == false){
 			this.addEventListener(egret.Event.REMOVED_FROM_STAGE, this.onRemoveFromStage, this);
 		}
 	}
 	private onRemoveFromStage(){
+		this.removeEventListener(egret.Event.REMOVED_FROM_STAGE, this.onRemoveFromStage, this);
 		this.close();
 	}
 	private loadComplete(event:any):void {

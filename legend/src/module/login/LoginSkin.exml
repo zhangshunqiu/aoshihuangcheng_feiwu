@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="LoginSkin" width="720" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
 	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
-		<e:Image scaleX="1" scaleY="1" horizontalCenter="0" source="login_bg_png" verticalCenter="0"/>
+		<e:Image scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" source="login_bg_jpg"/>
 		<e:Image y="50" source="Login_LOGO02_png" horizontalCenter="0.5"/>
 		<e:Image id="img_notice" y="65.06" scaleX="1" scaleY="1" x="581" source="common_icon_gonggao_png"/>
 		<e:Image x="152" y="952" source="Login_hongdian_png"/>

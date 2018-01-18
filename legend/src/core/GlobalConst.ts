@@ -66,9 +66,9 @@ const ConstQuality = {
 }
 
 const ConstCareerIcon = {
-	1: "equipping_zhan",
-	2: "equipping_fa",
-	3: "equipping_dao",
+	1:"com_sign_1_png",// "equipping_zhan",
+	2: "com_sign_2_png",//"equipping_fa",
+	3: "com_sign_3_png",//"equipping_dao",
 }
 
 const ConstEquipType = {
@@ -177,6 +177,46 @@ const ConstAttribute = {
 	skill_add: "技能伤害加成",
 }
 
+const ConstAttributeTwo = {
+	hp: "固定血量",
+	hp_rate: "固定血量",
+	mp: "魔法",
+	mp_rate: "魔法",
+	ac: "物理攻击",
+	ac_rate: "物理攻击",
+	mac: "魔法攻击",
+	mac_rate: "魔法攻击",
+	sc: "道攻",
+	sc_rate: "道攻",
+	def: "物理防御",
+	def_rate: "物理防御",
+	sdef: "魔法防御",
+	sdef_rate: "魔法防御",
+	hit: "命  中",
+	hit_rate: "命  中",
+	dodge: "闪避",
+	dodge_rate: "闪避",
+	holy: "神圣",
+	paralysis: "麻痹",
+	damage_reduction_rate: "伤害减免",
+	damage_offset_rate: "魔法值抵消伤害",
+	relive: "复活",
+	damage_deepen: "伤害倍率",
+	damage_reduction: "固定值伤害减免",
+	attack_add: "固定值伤害增加",
+	hp_recover_rate: "生命恢复",
+	mp_recover_rate: "魔法恢复",
+	crit: "暴击值",
+	crit_rate: "暴击值",
+	crit_add: "暴击伤害增加",
+	crit_reduction: "暴击伤害减免",
+	rcrit: "抗暴",
+	rcrit_rate: "抗暴率",
+	hp_lv_rate: "生命加成",
+	mp_lv_rate: "魔法加成",
+	skill_add: "技能伤害加成",
+}
+
 const ConstAttributeArray = [
 	"占位",
 	"hp",
@@ -214,7 +254,8 @@ const ConstAttributeArray = [
 	"rcrit_rate",
 	"hp_lv_rate",
 	"mp_lv_rate",
-	"skill_add"
+	"skill_add",
+	"sdef_rate"
 ]
 const PropertyIcon = {
 	"1": "common_icon_hunbi_png",//钻石
@@ -235,7 +276,7 @@ const ConstEquipIcon = [
 	"forge_equip_xiezi",
 ]
 
-const enum BaseTipsStyle {
+const enum AlertTipsStyle {
 	COMMON = 0,             //取消、确定
 	ONLY_OK = 1,             //只有居中一个确定
 }
@@ -277,6 +318,7 @@ enum CurrencyType {
 	TURN_EXP = 6,
 	TURN,
 	VIP_LV,
+	TITLE = 9,
 }
 
 enum ShopType {
@@ -300,10 +342,10 @@ const ConstJewelName = {
 }
 
 const ConstJewelIcon = {
-	1: "jewel_l_gongji",
-	2: "jewel_l_shengming",
-	3: "jewel_l_wufang",
-	4: "jewel_l_mofang",
+	1: "jewel_icon_red",//"jewel_l_gongji",
+	2: "jewel_icon_green",//"jewel_l_shengming",
+	3: "jewel_icon_yellow",//"jewel_l_wufang",
+	4: "jewel_icon_blue",//"jewel_l_mofang",
 }
 
 enum ChatType {
@@ -427,6 +469,8 @@ enum ConstRankIndex {
 	MEMAL,
 	KING,
 }
+
+//const 
 /**
  * 主UI顶部按钮常量
  */
@@ -441,6 +485,15 @@ const MainUIBtnType={
 	INVEST:8,
 	FORTUNE:9,
 
+	WORLDBOSS:10,
+	FASTFIGHT:11,
+	ARENA:12,
+
+	DALIY:13,
+	METAL:14,
+	COPY:15, 
+
+	WING:17,
 	ROLE:18,
 	BACKPACK:19,
 	ACHIEVE:20,
@@ -452,16 +505,15 @@ const MainUIBtnType={
  * 顶部按钮配置信息
  */
 const MainUITopListConf:Array<any> = [
-	{id:MainUIBtnType.ACTIVITY,icon:"main_icon_huodong_png",btnTipType:ConstBtnTipType.NULL,winName:""},//活动
-	{id:MainUIBtnType.FIRSTCHARGE,icon:"main_icon_shouchong_png",btnTipType:ConstBtnTipType.NULL,winName:""},//首充
-	{id:MainUIBtnType.MOUTHCARD,icon:"main_icon_yueka_png",btnTipType:ConstBtnTipType.MOUTHCARD,winName:WinName.MONTHCARD},//月卡
-	{id:MainUIBtnType.TREASURE,icon:"main_icon_xunbao_png",btnTipType:ConstBtnTipType.NULL,winName:WinName.RAIDER},//寻宝
+	{id:MainUIBtnType.ACTIVITY,icon:"main_icon_huodong_png",btnTipType:ConstBtnTipType.ACTIVITY,winName:""},//活动
 	{id:MainUIBtnType.WELFARE,icon:"main_icon_fuli_png",btnTipType:ConstBtnTipType.WELFARE,winName:WinName.WELFARE},//福利
-	{id:MainUIBtnType.MAIL,icon:"main_icon_youjian_png",btnTipType:ConstBtnTipType.MAIL,winName:WinName.MAIL},//邮件
-	{id:MainUIBtnType.MISSION,icon:"main_icon_renwu_png",btnTipType:ConstBtnTipType.TASK,winName:WinName.MUSTDO},//任务
-	{id:MainUIBtnType.INVEST,icon:"main_icon_touzi_png",btnTipType:ConstBtnTipType.NULL,winName:WinName.INVEST},//投资
+	{id:MainUIBtnType.WELFARE,icon:"main_icon_gonghui_png",btnTipType:ConstBtnTipType.WELFARE,winName:WinName.WELFARE},//公会
+	{id:MainUIBtnType.FORTUNE,icon:"main_icon_xingyunzhuanpan_png",btnTipType:ConstBtnTipType.NULL,winName:WinName.FORTUNE},//聚宝盘
+	{id:MainUIBtnType.TREASURE,icon:"main_icon_paihangbang_png",btnTipType:ConstBtnTipType.RAIDER,winName:WinName.RANK},//排行榜
+	{id:MainUIBtnType.TREASURE,icon:"main_icon_xunbao_png",btnTipType:ConstBtnTipType.RAIDER,winName:WinName.RAIDER},//寻宝
+	// {id:MainUIBtnType.MAIL,icon:"main_icon_youjian_png",btnTipType:ConstBtnTipType.MAIL,winName:WinName.MAIL},//邮件
+	// {id:MainUIBtnType.MISSION,icon:"main_icon_renwu_png",btnTipType:ConstBtnTipType.TASK,winName:WinName.MUSTDO},//任务
 	// {id:MainUIBtnType.INVEST,icon:"main_icon_jingji_png",btnTipType:ConstBtnTipType.NULL,winName:WinName.HEGEMONY},//争霸
-	{id:MainUIBtnType.FORTUNE,icon:"main_icon_xunbao_png",btnTipType:ConstBtnTipType.NULL,winName:WinName.FORTUNE},//聚宝盘
 	
 ];
 
@@ -472,7 +524,32 @@ const MainUIBottomListConf:Array<any> = [
 	{id:MainUIBtnType.ROLE,icon:"main_icon_juese_png",btnTipType:ConstBtnTipType.ROLE,winName:WinName.HERO},//角色
 	{id:MainUIBtnType.BACKPACK,icon:"main_icon_beibao_png",btnTipType:ConstBtnTipType.BACKPACK,winName:WinName.BACKPACK},//背包
 	{id:MainUIBtnType.FORGE,icon:"main_icon_duanzao_png",btnTipType:ConstBtnTipType.FORGE,winName:WinName.FORGE},//锻造
-	{id:MainUIBtnType.ACHIEVE,icon:"main_icon_yuyi_png",btnTipType:ConstBtnTipType.WING,winName:WinName.WING},//翅膀
+	{id:MainUIBtnType.WING,icon:"main_icon_yuyi_png",btnTipType:ConstBtnTipType.WING,winName:WinName.WING},//翅膀
+	{id:MainUIBtnType.ACHIEVE,icon:"main_icon_chengjiu_png",btnTipType:ConstBtnTipType.WING,winName:WinName.METAL},//成就
+];
+
+/**
+ * 顶部第二层按钮配置信息
+ */
+const MainUIMiddleListConf:Array<any> = [
+	{id:MainUIBtnType.INVEST,icon:"main_icon_touzi_png",btnTipType:ConstBtnTipType.NULL,winName:WinName.INVEST},//投资	
+	{id:MainUIBtnType.FIRSTCHARGE,icon:"main_icon_shouchong_png",btnTipType:ConstBtnTipType.NULL,winName:""},//首充
+	{id:MainUIBtnType.MOUTHCARD,icon:"main_icon_yueka_png",btnTipType:ConstBtnTipType.MOUTHCARD,winName:WinName.MONTHCARD},//月卡	
+	
+	
+	
+];
+
+/**
+ * 右边按钮配置信息
+ */
+const MainUIRightListConf:Array<any> = [
+	{id:MainUIBtnType.DALIY, icon:"main_icon_richang_png", btnTipType:0, winName:WinName.MUSTDO},//日常
+	{id:MainUIBtnType.COPY, icon:"main_icon_fuben_png", btnTipType:ConstBtnTipType.COPY, winName:WinName.COPY},//副本
+	// {id:MainUIBtnType.FASTFIGHT, icon:"main_icon_kuaisuzhandou_png", btnTipType:0, winName:WinName.POP_FAST_FIGHT},//快速战斗
+	// {id:MainUIBtnType.ARENA, icon:"main_icon_jingji_png", btnTipType:ConstBtnTipType.AREAN, winName:WinName.HEGEMONY},//竞技场
+	// {id:MainUIBtnType.WORLDBOSS, icon:"main_icon_shijieboss_png", btnTipType:0, winName:WinName.WORLDBOSS},//世界boss
+	// {id:MainUIBtnType.METAL, icon:"main_icon_xunzhang_png", btnTipType:ConstBtnTipType.METAL, winName:WinName.METAL},//勋章
 ];
 
 const ConstArtifactEffect = {

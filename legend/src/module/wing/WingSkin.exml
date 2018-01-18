@@ -7,7 +7,7 @@
 		<e:Image source="wing_bg_png" y="79" x="0"/>
 		<e:Image source="equipping_bg_huobantouxiang_png" y="80" x="55" visible="false"/>
 		<e:Image id="img_wing" scaleX="0.8" scaleY="0.8" y="-38" x="41" source="4001_png"/>
-		<e:Group id="gp_wing" width="1" height="1" x="330" y="361" anchorOffsetX="0" anchorOffsetY="0"/>
+		<e:Group id="gp_wing" width="1" height="1" x="330" y="361" anchorOffsetX="0" anchorOffsetY="0" visible="false"/>
 		<e:Group x="152" y="89" visible="false">
 			<e:Image source="equipping_frame_juesetouxiang_png" x="4" y="2"/>
 			<e:Image source="equipping_choose_png" horizontalCenter="0" verticalCenter="0"/>
@@ -25,13 +25,14 @@
 			<e:Image source="wing_bg_lv_jihuo_png" y="0" x="182"/>
 			<e:Label text="1阶羽翼" y="4" size="20" fontFamily="黑体" textColor="0xf5f203" x="241"/>
 			<e:Image source="wing_bg_tips_png" y="46" x="0"/>
-			<e:Label text="15级可激活炫酷羽翼，提升角色属性" y="53" size="24" fontFamily="黑体" textColor="0xf87500" x="84"/>
+			<e:Label text=" 级可激活炫酷羽翼，提升角色属性" y="53" size="24" fontFamily="黑体" textColor="0xf87500" x="84"/>
+			<e:Label id="lb_openLevel" text="1" y="53" size="24" fontFamily="黑体" textColor="0xF87500" x="69" textAlign="right" width="24"/>
 			<e:Group id="gp_freeActivate" x="201" y="135">
 			<e:Image source="common_btn_common_png" y="0" x="0"/>
 			<e:Image source="wing_txt_mianfeijihuo_png" horizontalCenter="0" verticalCenter="0"/>
 			</e:Group>
 		</e:Group>
-		<e:Group id="gp_developWing" x="11" y="201">
+		<e:Group id="gp_developWing" x="11" y="201" visible="false">
 			<e:Image source="wing_icon_yuhua_png" x="533" y="3"/>
 			<e:Group id="gp_goStep" x="0" y="21" anchorOffsetX="0" width="85" anchorOffsetY="0" height="65">
 				<e:Image id="img_goStep" source="wing_icon_zhishengdan_png" x="1" y="-16"/>
@@ -62,7 +63,7 @@
 			<e:Image id="img_star10" source="wing_xingxing_png" x="425" y="3"/>
 			</e:Group>
 			<e:ProgressBar id="pb_exp" width="555" height="37" y="310" anchorOffsetX="0" anchorOffsetY="0" skinName="ProgressBarWingExpSkin" maximum="100" value="0" x="40"/>
-			<e:Group id="gp_progress" width="0" height="1" y="328" anchorOffsetX="-1" anchorOffsetY="0" horizontalCenter="-8.5"/>
+			<e:Group id="gp_progress" width="0" height="1" y="328" anchorOffsetX="-1" anchorOffsetY="0" horizontalCenter="-11.5"/>
 			<e:Group x="50" y="354" anchorOffsetX="0" width="532" anchorOffsetY="0" height="144">
 			<e:Image source="wing_bg_shuxing_png" y="0" x="0"/>
 			<e:Label id="lb_hp" text="生命值：10000" x="32" y="17" size="20" textColor="0xbfbfbf" fontFamily="黑体"/>
@@ -109,12 +110,12 @@
 			<e:BitmapLabel id="btlb_score" x="119" y="8" anchorOffsetX="0" anchorOffsetY="0" text="12345689" font="forge_shuzhi_zhandouli_fnt"/>
 			</e:Group>
 		</e:Group>
-		<e:Group id="gp_wingEquip" x="42" y="227" visible="false">
+		<e:Group id="gp_wingEquip" x="42" y="227">
 			<e:Group y="-8" horizontalCenter="-14">
 			<e:Image source="forge_txt_zhandouli_png" x="0" y="0"/>
 			<e:BitmapLabel id="btlb_equipScore" x="119" y="8" anchorOffsetX="0" anchorOffsetY="0" text="12345689" font="forge_shuzhi_zhandouli_fnt"/>
 			</e:Group>
-			<e:Group x="0" y="0">
+			<e:Group id="gp_zhengyu" x="0" y="0">
 			<e:Image id="img_zhengyuframe" source="common_frame_purple_png" x="0" y="0"/>
 			<e:Image id="img_zhengyu_bg" source="wing_1_icon_zhengyu_png" horizontalCenter="0" verticalCenter="0"/>
 			<e:Image id="img_zhengyu" source="wing_1_zhengyu_png" horizontalCenter="0" verticalCenter="0"/>
@@ -124,7 +125,7 @@
 			</e:Group>
 				<e:Image id="img_zhengyuStepText" source="wing_1_png" left="0" top="0"/>
 			</e:Group>
-			<e:Group x="497" y="0">
+			<e:Group id="gp_fuyu" x="497" y="0">
 			<e:Image id="img_fuyuframe" source="common_default_png" x="0" y="0"/>
 			<e:Image id="img_fuyu_bg" source="wing_2_icon_fuyu_png" horizontalCenter="0" verticalCenter="0"/>
 			<e:Image id="img_fuyu" source="wing_2_fuyu_png" horizontalCenter="0" verticalCenter="0"/>
@@ -134,7 +135,7 @@
 			</e:Group>
 				<e:Image id="img_fuyuStepText" source="wing_1_png" left="0" top="0"/>
 			</e:Group>
-			<e:Group x="0" y="187">
+			<e:Group id="gp_rongyu" x="0" y="187">
 			<e:Image id="img_rongyuframe" source="common_default_png" x="0" y="0"/>
 			<e:Image id="img_rongyu_bg" source="wing_3_icon_rongyu_png" horizontalCenter="0" verticalCenter="0"/>
 			<e:Image id="img_rongyu" source="wing_3_rongyu_png" horizontalCenter="0" verticalCenter="0"/>
@@ -144,7 +145,7 @@
 			</e:Group>
 				<e:Image id="img_rongyuStepText" source="wing_1_png" left="0" top="0"/>
 			</e:Group>
-			<e:Group x="496" y="187">
+			<e:Group id="gp_xuyu" x="496" y="187">
 			<e:Image id="img_xuyuframe" source="common_default_png" x="0" y="0"/>
 			<e:Image id="img_xuyu_bg" source="wing_4_icon_xuyu_png" horizontalCenter="0" verticalCenter="0"/>
 			<e:Image id="img_xuyu" source="wing_4_xuyu_png" horizontalCenter="0" verticalCenter="0"/>

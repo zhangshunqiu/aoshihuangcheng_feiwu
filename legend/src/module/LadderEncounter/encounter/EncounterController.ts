@@ -34,12 +34,21 @@ module game{
          * 玩家发起挑战 若返回则发起挑战成功
          */
         private handlerStartChallenge(data) {
-            App.loglyg(data);
+            if(data.result) {
+                App.EventSystem.dispatchEvent(PanelNotify.ENCOUNTER_START_CHALLENGE_SUCCESS)
+            }
         }
         /**
          * 挑战结果
          */
         private handlerChallengeResult(data) {
+            //延迟弹出窗口
+		    SceneManager.getInstance().delayOpenCompleteView(data,this.challengeResult,this);    
+        }
+        /**
+         * 执行挑战结果
+         */
+        private challengeResult(data) {
             (BossModel.getInstance() as BossModel).dropItem = data.reward;
             if(data.result == 1) {
                 App.WinManager.openWin(WinName.BOSS_WIN, "encounter");

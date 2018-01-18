@@ -6,7 +6,7 @@ module game {
 	//批量购买弹窗
 	export class ShopBuyWinView extends BaseView {
 		public gp_main: eui.Group;
-		public baseItem: customui.BaseItem;
+		public baseItem: ShopBaseItem;
 		public img_close: eui.Image;
 		public lb_name: eui.Label;
 		public lb_price: eui.Label;
@@ -28,7 +28,7 @@ module game {
 		private _max: number;
 		private _price: number;
 		private _shopType: number;
-		private _num :number =1;
+		private _num: number = 1;
 		private count: number = 0; //计数器，记录数量
 		private _totalCount: number = 0; //总购买数量
 		/**
@@ -36,30 +36,31 @@ module game {
 		*/
 		public constructor(params) {
 			super(params);
-			this._id = params.id;
-			this._good_id = params.good_id;
-			this._type = params.type;
-			this._max = params.max;
-			this._price = params.price;
-			this._num = params.num;
-			this._shopType = params.shopType;
+			// this._id = params.id;
+			// this._good_id = params.good_id;
+			// this._type = params.type;
+			// this._max = params.max;
+			// this._price = params.price;
+			// this._num = params.num;
+			// this._shopType = params.shopType;
 			this.skinName = "ShopBuyWinSkin";
 		}
 
 		protected childrenCreated() {
 			super.childrenCreated();
 			this.img_close.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
-				App.EventSystem.dispatchEvent(PanelNotify.SHOP_CLOSE_BUY_WIN);
-				PopUpManager.removePopUp(this);
+				// App.EventSystem.dispatchEvent(PanelNotify.SHOP_CLOSE_BUY_WIN);
+				// PopUpManager.removePopUp(this);
+				App.WinManager.closeWin(WinName.POP_SHOP_BUY);
 			}, this);
-			this.initView();
+			// this.initView();
 		}
-
+		private _timeId: number = 0;
 		private initView() {
 			let itemInfo = App.ConfigManager.itemConfig()[this._good_id];
 			this.lb_name.text = itemInfo.name;
 			this.lb_desc.text = itemInfo.des;
-			this.baseItem.updateBaseItem(1, this._good_id,this._num);
+			this.baseItem.updateBaseItem(1, this._good_id, this._num);
 			this.lb_price.text = String(this._price);
 			if (this._type == CurrencyType.COIN) {
 				RES.getResAsync("common_jinbi_png", (texture) => {
@@ -72,6 +73,11 @@ module game {
 					this.img_money2.source = texture;
 				}, this);
 			}
+			this.addKeepEvent(this.img_add, 1);
+			this.addKeepEvent(this.img_mind, -1);
+			this.addKeepEvent(this.img_add10, 10);
+			this.addKeepEvent(this.img_mind10, -10);
+
 			//+1
 			this.img_add.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
 				this.calculate(1);
@@ -96,6 +102,38 @@ module game {
 
 			//默认是一个
 			this.calculate(1);
+		}
+
+		private addKeepEvent(obj, value): void {
+			obj.addEventListener(egret.TouchEvent.TOUCH_BEGIN, () => {
+				var time: number = new Date().getTime();
+				this._timeId = App.GlobalTimer.addSchedule(100, 0, () => {
+					if (new Date().getTime() - time > 300) {
+						this.calculate(value)
+					}
+				}, this)
+			}, this)
+
+			obj.addEventListener(egret.TouchEvent.TOUCH_END, () => {
+				if (this._timeId != 0) {
+					App.GlobalTimer.remove(this._timeId);
+				}
+			}, this)
+			obj.addEventListener(egret.TouchEvent.TOUCH_RELEASE_OUTSIDE, (event: egret.TouchEvent) => {
+				if (this._timeId != 0) {
+					App.GlobalTimer.remove(this._timeId);
+				}
+			}, this)
+			obj.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
+				if (this._timeId != 0) {
+					App.GlobalTimer.remove(this._timeId);
+				}
+			}, this)
+			obj.addEventListener(egret.TouchEvent.TOUCH_CANCEL, () => {
+				if (this._timeId != 0) {
+					App.GlobalTimer.remove(this._timeId);
+				}
+			}, this)
 		}
 
 		private calculate(num) {
@@ -133,6 +171,14 @@ module game {
 		 */
 		public openWin(openParam: any = null): void {
 			super.openWin(openParam);
+			this._id = openParam.data.id;
+			this._good_id = openParam.data.good_id;
+			this._type = openParam.data.type;
+			this._max = openParam.data.max;
+			this._price = openParam.data.price;
+			this._num = openParam.data.num;
+			this._shopType = openParam.data.shopType;
+			this.initView();
 		}
 
 		/**

@@ -17,11 +17,15 @@ module game {
         public config_id:number;
         public  args:Array<any> = [];
         
-        
-
-
     }
 
+
+	export class TextItemVO
+	{
+		public word:string;
+        public color:number = 0;
+        public tap:string = "";
+	}
 
 
 

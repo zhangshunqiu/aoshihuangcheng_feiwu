@@ -82,7 +82,7 @@ message pbScenePlayer{
 		optional	int32 sex			= 4;		//对象性别
 		optional	int32 career		= 5;        //对象职业
 		optional	int32 lv			= 6;		//对象等级
-		optional	int32 cur_hp		= 7;		//对象当前血量
+		optional	int64 cur_hp		= 7;		//对象当前血量
 		optional	int32 cur_mp		= 8;		//对象当前魔法
 		optional	int32 hp			= 9;		//血量
 		optional	int32 mp			= 10;		//魔法
@@ -100,7 +100,7 @@ message pbSceneMon{
 		optional	int32 obj_owner_type = 3;		// 对象主人类型
 		optional	int32 obj_owner_id	= 4;		// 对象主人id
 		optional	int32 mon_id		= 5;		// 怪物模板id
-		optional	int32 cur_hp		= 6;		//对象当前血量
+		optional	int64 cur_hp		= 6;		//对象当前血量
 		optional	int32 cur_mp		= 7;		//对象当前魔法
 		optional	int32 hp			= 8;		//血量
 		optional	int32 mp			= 9;		//魔法
@@ -117,6 +117,7 @@ message pbSceneDrop{
 		optional	int32 goods_num		= 6;		//物品数量
 		optional	int32 own_id		= 7;		//归属玩家id
 		optional	int32 time_out		= 8;		//归属失效时间
+		optional	int32 obj_mon_id	= 9;		//归属怪物对象id
 }
 
 message pbSceneOftenUpdateList{
@@ -132,7 +133,7 @@ message pbSceneOftenUpdate{
 		optional	int32 harm_status	= 6;		//伤害状态: 1 miss, 2 普通, 3 暴击 4 反击
 		optional	int32 hp_change		= 7;		//血量变更值
 		optional	int32 mp_change		= 8;		//魔法变更值
-		optional	int32 cur_hp		= 9;		//当前血量
+		optional	int64 cur_hp		= 9;		//当前血量
 		optional	int32 cur_mp		= 10;		//当前魔法
 }
 
@@ -173,6 +174,12 @@ message pbSceneOftenUpdate{
 // s >> c:
 //     pbSceneEnter
 
+// ==== 拾取掉落 ====
+// 协议号11006
+// c >> s:
+//     pbId32		//掉落对象唯一id
+// s >> c:
+//     pbResult		//1成功 其它错误提示
 
 
 // ==== 对象频繁数据更新 ====
@@ -316,8 +323,8 @@ message pbHookHarm{
 		optional	int32 obj_type		= 1;		//对象类型
 		optional	int32 obj_id		= 2;        //对象id
 		optional	int32 harm_status	= 3;		//伤害状态: 1 miss, 2 普通, 3 暴击 4 反击
-		optional	int32 harm_value	= 4;		//伤害值
-		optional	int32 cur_hp		= 5;		//当前血量
+		optional	int64 harm_value	= 4;		//伤害值
+		optional	int64 cur_hp		= 5;		//当前血量
 		optional	int32 cur_mp		= 6;		//当前魔法
 }
 
@@ -333,7 +340,7 @@ message pbHookCure{
 		optional	int32	obj_type	=1;//对象类型
 		optional	int32	obj_id      =2;//对象id
 		optional	int32	add_hp		=3;//增加血量
-		optional	int32 	cur_hp		=4;//当前血量
+		optional	int64 	cur_hp		=4;//当前血量
 		optional	int32 	cur_mp		=5;//当前魔法
 }
 
@@ -477,14 +484,6 @@ message pbHookTenReward{
 
       //import "pb_common.proto";
 
-message pbPlayerGoods{
-	optional int32     id = 1;            //唯一id
-	optional int32     good_id = 2;       //基础id
-	optional int32     type = 3;          //类型1道具，2装备
-	optional int32     num = 4;           //数量
-	optional pbEquip   equip = 5;         //装备属性
-}
-
 message pbGoodList{
 	repeated pbPlayerGoods playergoods = 1; //物品列表
     optional int32         total = 2;       //总格子数
@@ -500,7 +499,7 @@ message pbGoodModel{
 }
 
 message pbGoodSmelt{
-	  repeated int32  options       = 1;   //[1,1,0,1,1]白、绿、蓝、紫、高战力(1是,0否)
+	  repeated int32  ids       = 1;   			//唯一id列表
 }
 
 message pbGoodWingSwitch{
@@ -656,6 +655,16 @@ message pbEquipModelWear{
     optional int32 id = 1;               //伙伴唯一id
     optional int32 part = 2;             //位置
     optional int32 player_good_id=3;     //玩家道具唯一id
+}
+
+message pbEquipModelWearAll{
+    optional int32 id = 1;               //伙伴唯一id
+    repeated pbEquipModelWearAllPos wear_list = 2; //穿戴列表
+}
+
+message pbEquipModelWearAllPos{
+	optional int32 part = 1;             //位置
+	optional int32 player_good_id=2;     //玩家道具唯一id
 }
 
 message pbEquipModelRemove{
@@ -839,6 +848,14 @@ message pbWingEquipModel{
 //		pbSpEquipPeaceModel           // 成功返回，失败错误提示
 
 
+// ===一键穿戴装备===
+// 协议号15015
+// c >> 
+//		pbEquipModelWearAll
+// s >> 
+//		pbResult         // 成功返回，失败错误提示
+
+
 // ====激活羽翼===
 // 协议号15021
 // c >> 
@@ -879,10 +896,29 @@ message pbWingEquipModel{
 // c >> 
 //		pbWingEquipModel
 // s >> 
-//		pbWingEquipModel        //成功返回伙伴列表，失败错误提示
+//		pbWingModelRe        //成功返回伙伴列表，失败错误提示
 
+message pbGetOtherPlayerInfo{
+	optional int32 id	= 1;	// 玩家id
+}
 
+message pbOtherPlayerInfo{
+	optional int32 player_id	= 1;
+	optional int32 sex			= 2;
+	optional int32 career		= 3;
+	optional string name		= 4;
+	optional int32 lv			= 5;	// 等级
+	optional int32 turn			= 6;	// 转生 
+	repeated pbHero hero 		= 7;	// 伙伴列表
+	optional int32 medal_lv		= 8;	// 勋章等级
+}
 
+// ====查看他人信息===
+// 协议号15030
+// c >> 
+//		pbGetOtherPlayerInfo
+// s >> 
+//		pbOtherPlayerInfo
 //import "pb_common.proto";
 
 message pbShop{
@@ -955,6 +991,7 @@ message pbChatArgs{
 message pbChatArg{
 	optional int32 type		= 1;	// 类型 0字符串 1物品 2装备
 	optional string value	= 2;	// 值
+	optional string value2	= 3;	// 值2（装备时使用， 为base_id）
 }
 
 message pbChatMsg{
@@ -1046,7 +1083,7 @@ message pbChatGetEquipInfo{
 // c >> 
 //		pbChatGetEquipInfo
 // s >> 
-//		pbEquip
+//		pbPlayerGoods
 
 
 
@@ -1286,6 +1323,9 @@ message pbMail{
 	repeated pbGood attachment_list = 4;	// 附件
 	optional int32 attachment_state	= 5;	// 附件状态 （0未领取， 1已领取）
 	optional int32 time			= 6;	// 时间（时间戳）
+	optional string	title		= 7;	// 标题
+	optional string content		= 8;	// 内容
+	optional int32 state		= 9;	// 邮件状态 （0未读， 1已读）  
 }
 
 // 邮件列表
@@ -1333,7 +1373,7 @@ message pbMailAllList{
 // c >> 
 //		pbMailOpen
 // s >> 
-//		null
+//		pbMail
 
 // ====领取附件===
 // 协议号 21003
@@ -1368,26 +1408,25 @@ message pbMailAllList{
 
 // 福利等级
 message pbWelfareLv{
-	optional int32	lv 			= 1;	//唯一id
+	optional int32	id 			= 1;	//唯一id
 	optional int32	state 		= 2; 	//状态（0不能领， 1可领， 2已领） 
 	optional int32	left_num	= 3;	// 剩余数量（-1未不限数量）
 }
 
 // 福利界面
 message pbWelfareInterface{
-	repeated pbWelfareLv list = 1;		// 等级列表
-	
+	repeated pbWelfareLv list = 1;		// 等级列表	
 }
 
 // 领取福利
 message pbGetWelfare{
-	optional int32 lv	= 1;	// 等级
+	optional int32 id	= 1;	// id
 }
 
 
 // 福利礼包数量变更
 message pbWelfareChange{
-	optional int32 lv			= 1;
+	optional int32 id			= 1;
 	optional int32 left_num		= 2;	
 }
 
@@ -2186,11 +2225,25 @@ message pbCopyInfo{
 message pbCopyList{
 	optional	int32  id		= 1;//副本id
 	optional	int32  times	= 2;//已进入次数
+	optional	int32  sweep_times=3;//已扫荡次数
 }
 
 message pbCopyBattle{
 	optional	int32	type	= 1;//副本类型1副本boss2副本材料3副本爬塔
 	optional	int32	id		= 2;//副本id
+}
+
+message pbCopySweepReward{
+	optional	int32	type	= 1;//副本类型1副本boss2副本材料3副本爬塔
+	optional	int32	id		= 2;//副本id
+	repeated	pbCopySweepGood list = 3;//奖励列表
+}
+
+
+message pbCopySweepGood{
+	  optional int32 type			= 1;		//类型
+      optional int32 id				= 2;		//id
+      optional int32 num		    = 3;		//数量
 }
 
 // ====请求副本信息===
@@ -2209,6 +2262,14 @@ message pbCopyBattle{
 // s >> 
 //		pbCopyBattle	//成功返回 错误提示
 
+  
+// ====请求扫荡副本===
+// 协议号31003
+// c >> 
+//		pbCopyBattle	
+// s >> 
+//		pbCopySweepReward	//成功返回 错误提示
+
 
 //import "pb_common.proto";
 
@@ -2216,6 +2277,7 @@ message pbTitleActive{
 	optional int32 id  = 1;               //称号基础表id
 	optional int32 use  = 2;              //是否使用称号0否1是
 	optional int32 show  = 3;             //是否显示称号0否1是
+	optional int32 act_time  = 4;         //激活时间(时间戳,类型为2的才有)
 }
 
 message pbTitleList{
@@ -2704,7 +2766,12 @@ message pbPkWarLog{
 // s >> 
 //		pbResult         // 成功返回，失败错误提示
 
-
+// ====玩家退出挑战==
+// 协议号38006
+// c >> 
+//		null
+// s >> 
+//		pbResult         // 成功返回，失败错误提示
 //import "pb_common.proto";
 
 //错误提示
@@ -2729,10 +2796,11 @@ message pbPlayerBase{
   optional int32 turn = 13;      //转生数
   optional int64 life_exp = 14;  //修为
   optional int32 guide_id = 15;	//引导id
+  optional int32 title_id = 16;	//称号id
 }
 
 message pbPlayerChange{
-  optional  int32   type  = 1;      // 改变的字段1金币2元宝3经验4等级6修为7转生数8vip
+  optional  int32   type  = 1;      // 改变的字段1金币2元宝3经验4等级6修为7转生数8vip9称号id
   optional  int64   value   = 2;      // 改变的值
 }
 
@@ -2852,6 +2920,14 @@ message pbGood {
         optional int32 type	= 1;	// 类型（1物品 2装备）
 		optional int32 id	= 2;	// 物品id/装备id
 		optional int32 num	= 3;	// 数量
+}
+
+message pbPlayerGoods{
+	optional int32     id = 1;            //唯一id
+	optional int32     good_id = 2;       //基础id
+	optional int32     type = 3;          //类型1道具，2装备
+	optional int32     num = 4;           //数量
+	optional pbEquip   equip = 5;         //装备属性
 }
 
 // ====定义在此之前定义，不要超过此限定行==

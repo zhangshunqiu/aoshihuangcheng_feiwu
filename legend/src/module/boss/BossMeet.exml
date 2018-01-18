@@ -8,10 +8,10 @@
 			<e:Image source="accident_zaoyuboss_title_png" y="-12" horizontalCenter="0"/>
 			<e:Image id="img_close" source="common_btn_close_1_png" x="575" y="5"/>
 			<e:Group id="gp_boss" width="1" height="0" y="432" anchorOffsetY="0" anchorOffsetX="0" x="315"/>
+			<e:List id="list" width="551" height="90" y="571" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0"/>
 			<e:Image id="img_challengeBoss" source="boss_btn_t_succeed_png" x="85" y="678" anchorOffsetX="0" width="147" anchorOffsetY="0" height="52"/>
 			<e:Image id="img_thinkAgain" source="boss_btn_t_succeed_png" x="387" y="680" anchorOffsetX="0" width="146" anchorOffsetY="0" height="49"/>
 			<e:Image source="boss_txt_tiaozhan_png" x="134" y="692" touchEnabled="false"/>
-		<e:List id="list" width="551" height="90" y="571" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0"/>
 			<e:Image source="wing_bg_tips_png" y="479" anchorOffsetX="0" width="424" anchorOffsetY="0" height="41" horizontalCenter="0"/>
 			<e:Label text="您在挂机时偶遇携带珍宝的BOSS：" x="43" y="85" size="24" fontFamily="黑体" textColor="0xffea01"/>
 			<e:Label text="有概率掉落" x="37" y="540" size="24" fontFamily="黑体" textColor="0x00f829"/>

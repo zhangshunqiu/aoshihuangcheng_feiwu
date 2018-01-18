@@ -105,7 +105,7 @@
 		"batch":1,
 		"limit":5,
 		"vip":0,
-		"discount":1,
+		"discount":5,
 		"money":2,
 		"number":400
 	},
@@ -171,7 +171,7 @@
 		"batch":1,
 		"limit":5,
 		"vip":0,
-		"discount":1,
+		"discount":5,
 		"money":2,
 		"number":400
 	},
@@ -182,7 +182,7 @@
 		"batch":2,
 		"limit":3,
 		"vip":0,
-		"discount":7,
+		"discount":8,
 		"money":2,
 		"number":150
 	},
@@ -237,20 +237,20 @@
 		"batch":2,
 		"limit":3,
 		"vip":0,
-		"discount":7,
+		"discount":8,
 		"money":2,
 		"number":150
 	},
 	"23":{
 		"id":23,
-		"goods":34,
+		"goods":31,
 		"num":1,
 		"batch":3,
 		"limit":1,
 		"vip":0,
-		"discount":9,
+		"discount":8,
 		"money":2,
-		"number":5000
+		"number":2000
 	},
 	"24":{
 		"id":24,
@@ -281,7 +281,7 @@
 		"batch":1,
 		"limit":5,
 		"vip":0,
-		"discount":1,
+		"discount":5,
 		"money":2,
 		"number":400
 	},

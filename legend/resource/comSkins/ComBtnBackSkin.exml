@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.ComBtnBackSkin" width="86" height="86" xmlns:e="http://ns.egret.com/eui">
+	<e:Image source="com_btn_back_png" x="2" y="2"/>
+</e:Skin>

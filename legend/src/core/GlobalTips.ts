@@ -9,6 +9,7 @@
  * 	App.GlobalTips.showBroadcastTips(); 系统广播提示
  * 	App.GlobalTips.showAlert();         提示窗口提示
  * 	App.GlobalTips.showItemTips();      物品提示
+ *  App.GlobalTips.showCombatTips();    战力提示
  */
 class GlobalTips {
 	private _eventSystem:EventSystem;
@@ -129,28 +130,30 @@ class GlobalTips {
 	/**
 	 * 物品提示面板
 	 */
-	public showItemTips(type: number, id: number, uuid: number){
+	public showItemTips(type: number, id: number, uuid: number, info :any = undefined){
 		let view = undefined;
         switch (type) {
             case 1: {
-                view = new game.ItemTip(id, uuid);
+                // view = new game.ItemTip(id, uuid);
+				App.WinManager.openWin(WinName.ITEMTIPS, {id:id, uuid:uuid});
                 break;
             }
             case 2: {
-                App.WinManager.openWin(WinName.EQUIP, { type: 0, id: id, uuid: uuid });
+                App.WinManager.openWin(WinName.EQUIP, { type: 0, id: id, uuid: uuid, info:info });
                 return;
             }
 
         }
-        PopUpManager.addPopUp({ obj: view, effectType: 0 });
+        // PopUpManager.addPopUp({ obj: view, effectType: 0 });
 	}
 
 	/**
 	 * 物品获取途径提示面板
 	 */
 	public showItemWayTips(type: number, id: number){
-		let view = new ItemWay(type, id);
-		PopUpManager.addPopUp({ obj: view });
+		// let view = new ItemWay(type, id);
+		// PopUpManager.addPopUp({ obj: view });
+		App.WinManager.openWin(WinName.ITEMWAYS, {type: type, id: id});
 	}
 
 
@@ -158,8 +161,9 @@ class GlobalTips {
 	 * 提示面板
 	 */
 	public showAlert(params: any){
-		let view = new BaseTips(params);
-		PopUpManager.addPopUp({ obj: view });
+		// let view = new AlertTips(params);
+		// PopUpManager.addPopUp({ obj: view });
+		App.WinManager.openWin(WinName.ALERTTIPS, params);
 	}
 
 
@@ -186,5 +190,10 @@ class GlobalTips {
 			App.WinManager.closeWin(WinName.BROADCAST);
 		}
 	}
-
+	/**
+	 * 显示战力提升
+	 */
+	public showCombatTips(beforeArr,afterArr):void {
+		game.CombatTips.getInstance().showCombat(beforeArr,afterArr);
+	}
 }

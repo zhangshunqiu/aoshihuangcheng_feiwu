@@ -59,8 +59,10 @@ module game{
         /**
          * 请求挑战遭遇boss
          */
-        private handlerChallengeMeetBoss() {
-
+        private handlerChallengeMeetBoss(data) {
+            if(data.id) {
+                this.dispatchEvent(PanelNotify.BOSS_MEET_START_CHALLENGE);
+            }
         }
 
         /**

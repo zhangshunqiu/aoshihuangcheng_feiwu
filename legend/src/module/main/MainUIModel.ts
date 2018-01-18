@@ -25,6 +25,7 @@ module game {
         public taskState:number = 0;
         public totalTask:number = 0;
         public curTaskIndex:number = 0;
+        public isMainTaskShow:boolean = true;
 
         
 

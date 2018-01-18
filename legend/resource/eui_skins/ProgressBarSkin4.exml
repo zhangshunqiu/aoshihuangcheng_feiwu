@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.ProgressBarSkin4" minWidth="30" minHeight="18" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" height="25">
+	<w:Config id="158b9b7cce5"/>
+	<e:Image id="thumb" scale9Grid="21,17,1,1" horizontalCenter="0" source="main_jingyantiao_png" y="3"/>
+	<e:Label id="labelDisplay" text="0" size="18" horizontalCenter="0" stroke="1" anchorOffsetY="0" height="24" verticalCenter="1.5"/>
+</e:Skin>

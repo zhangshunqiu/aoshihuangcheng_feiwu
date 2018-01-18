@@ -203,6 +203,62 @@ class SceneManager extends BaseClass {
 		
 	}
 
+	private _delayOpenData:any;
+	private _delayOpenSceneId:number;
+	private _delayOpenFun:Function;
+	private _delayOpenThis:any;
+	private _delayOpenEventId:number = 0;
+	/**
+	 * 延迟打开窗口
+	 */
+	public delayOpenCompleteView(data:any,fun:Function,thisObj:any){
+		if(this._sceneModel.pickItemType == PICK_ITEM_TYPE.get_by_move){
+			this._delayOpenSceneId = this._sceneModel.sceneId;
+			this._delayOpenData = data;
+			this._delayOpenFun = fun;
+			this._delayOpenThis = thisObj;
+
+			if(this._delayOpenEventId == 0){
+				this._delayOpenEventId = App.GlobalTimer.addSchedule(1000,60,this.openComplete,this,this.delayOpenComplete,this);
+			}
+		}else{
+			if(this._delayOpenEventId != 0){
+				App.GlobalTimer.remove(this._delayOpenEventId);
+				this._delayOpenEventId = 0;
+			}
+			fun.call(thisObj,data);
+			return;
+		}
+	}
+	public openComplete(){
+		if(this._delayOpenFun && this._delayOpenThis && this._sceneModel.sceneId == this._delayOpenSceneId && this._sceneModel.curSceneItemNum <= 0){
+			this._delayOpenFun.call(this._delayOpenThis,this._delayOpenData);
+			if(this._delayOpenEventId != 0){
+				App.GlobalTimer.remove(this._delayOpenEventId);
+				this._delayOpenEventId = 0;
+			}
+			this._delayOpenFun = null;
+			this._delayOpenThis = null;
+			this._delayOpenData = null;
+			this._delayOpenSceneId = 0;
+		}
+	}
+	public delayOpenComplete(){
+		if(this._delayOpenFun && this._delayOpenThis && this._sceneModel.sceneId == this._delayOpenSceneId){
+			this._delayOpenFun.call(this._delayOpenThis,this._delayOpenData);
+		}
+		if(this._delayOpenEventId != 0){
+			App.GlobalTimer.remove(this._delayOpenEventId);
+			this._delayOpenEventId = 0;
+		}
+		this._delayOpenFun = null;
+		this._delayOpenThis = null;
+		this._delayOpenData = null;
+		this._delayOpenSceneId = 0;
+	}
+
+
+
 	/**
 	 * 销毁
 	 */

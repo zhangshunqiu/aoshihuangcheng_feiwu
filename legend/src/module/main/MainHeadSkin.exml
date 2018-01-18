@@ -1,24 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="MainHeadSkin" width="720" height="180" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="main_bg_touxiang2_png" x="96" y="-1"/>
+	<e:Image source="words_bg_zhandouli_y_png" x="61" y="-27" visible="false"/>
+	<e:Image source="main_bg_touxiang1_png" y="-15"/>
+	<e:Image source="mian_nv_png" x="10" y="5"/>
 	
-	<e:Image x="-1" y="24" source="main_bg_touxiang_png"/>
-	<e:Image source="main_pingfen_png" x="139" y="67"/>
-	<e:Image id="img_vip" source="main_btn_vip_png" x="137" y="125"/>
-	<e:Image x="151" y="130" source="main_VIP_png" touchEnabled="false"/>
-	<e:Image id="img_head" x="21" y="73" source="main_icon_touxiang_png"/>
-	<e:Image id="img_rank" source="main_btn_vip_png" x="266" y="125"/>
-	<e:Image source="main_txt_paihangbang_png" x="283" y="128" touchEnabled="false"/>
+	<e:Image x="0" y="60" source="main_bg_touxiang_png" visible="false"/>
+	<e:Image source="main_txt_paihangbang_png" x="249" y="135.25" touchEnabled="false" visible="false"/>
 	<e:Label id="lb_career" text="职业是什么" x="170" y="103" fontFamily="Microsoft YaHei" size="28" visible="false"/>
 	<e:Label id="lb_fightcap" text="9999999" x="238" y="87" fontFamily="Microsoft YaHei" size="24" textColor="0xf49424" visible="false"/>
-	<e:Label id="lb_vip" text="VIP15" x="57" y="118" fontFamily="Microsoft YaHei" size="26" visible="false"/>
-	<e:Group id="gp_fight_info" width="300" height="95" x="425" y="74">
-		<e:Image horizontalCenter="0" verticalCenter="0" source="main_bg_dangqiaguanqia_png" height="108" scale9Grid="115,50,64,42"/>
-		<e:Label id="lb_area" text="当前关卡：xxxx" y="-1" fontFamily="SimHei" size="20" scaleX="1" scaleY="1" horizontalCenter="0" textColor="0x2aa0de"/>
-		<e:Label id="lb_info_exp" text="xxxxxx经验/小时" y="32" fontFamily="SimHei" size="22" scaleX="1" scaleY="1" horizontalCenter="1.5" textColor="0xfff6e4"/>
-		<e:Label id="lb_info_money" text="xxxxxx金钱/小时" y="67" fontFamily="SimHei" size="22" scaleX="1" scaleY="1" horizontalCenter="1.5" textColor="0xfff6e4"/>
-		<e:Image source="main_exp_png" x="19" y="22"/>
-		<e:Image source="main_jinbi_png" x="23" y="65"/>
+	<e:Label text="级" x="321" y="56" fontFamily="SimHei" size="22"/>
+	<e:Label id="lb_turnText" text="转" x="266" y="56" fontFamily="SimHei" size="22"/>
+	<e:Label id="lb_name" text="陈龙生" x="138" y="56" fontFamily="SimHei" size="22" textColor="0xe1e1e1"/>
+	<e:Label id="lb_turn" text="12" x="241" y="56" fontFamily="SimHei" size="22" width="22" textAlign="right" textColor="0xffea00"/>
+	<e:Label id="lb_lv" text="100" x="287" y="56" fontFamily="SimHei" size="22" width="33" textColor="0xffa200" textAlign="center"/>
+	<e:Label text="第" x="355" y="53" fontFamily="SimHei" size="24"/>
+	<e:Label text="关" x="418" y="53" fontFamily="SimHei" size="24"/>
+	<e:Label id="lb_level" text="10" x="380" y="53" fontFamily="SimHei" size="24" textColor="0x00f828" width="36" textAlign="center"/>
+	<e:Image id="img_expIcon" source="main_exp_png" x="548" y="47" scaleX="1" scaleY="1"/>
+	<e:Label id="lb_info_money" text="10000万" fontFamily="SimHei" size="20" scaleX="1" scaleY="1" y="55" textColor="0x00F828" left="477" x="10" textAlign="left"/>
+	<e:Label id="lb_info_exp" text="xxxxx" fontFamily="SimHei" size="20" scaleX="1" scaleY="1" y="55" textColor="0x00f828" left="590" textAlign="left"/>
+	<e:Label id="lb_perHour" text="/时" fontFamily="SimHei" size="20" scaleX="1" scaleY="1" textColor="0xFFF6E4" x="644" y="57"/>
+	<e:Group id="img_vip" x="20.25" y="97">
+		<e:Image source="main_btn_vip_png" x="0" y="0"/>
+		<e:Image x="3.25" y="3.5" source="main_VIP_png" touchEnabled="false"/>
+		<e:BitmapLabel id="bmlb_vip" x="38.75" y="4" text="10" scaleX="1" scaleY="1" touchEnabled="false" letterSpacing="-10" font="main_vip_small_shuju_fnt" anchorOffsetX="0" width="30" anchorOffsetY="0" height="24"/>
 	</e:Group>
-	<e:BitmapLabel id="bmlb_vip" x="201" y="128" text="99" scaleX="1" scaleY="1" font="main_vip_shuju_fnt" touchEnabled="false" letterSpacing="-10"/>
-	<e:BitmapLabel id="bmlb_fightcap" x="216" y="78" text="999999999" font="main_pingfen_shu_fnt"/>
+	<e:Group x="128" y="17.25" width="201">
+		<e:Group horizontalCenter="0" verticalCenter="0">
+			<e:Image x="0" y="0" source="words_zhandouli_png"/>
+			<e:BitmapLabel id="bmlb_fightcap" x="58.75" y="1.75" text="1582687" font="combat_shuxing_fnt"/>
+		</e:Group>
+	</e:Group>
+	<e:Image horizontalCenter="123" top="-7" x="0" y="0" scaleX="1" scaleY="1" source="main_bg_shujutiao__png" locked="true"/>
+	<e:Label text="9999999" x="388" y="16" fontFamily="SimHei" size="20" textColor="0xE1E1E1" scaleX="1" scaleY="1" anchorOffsetX="0" width="90" visible="false"/>
+	<e:Label text="999900" x="558" y="15" fontFamily="SimHei" size="20" textColor="0xE1E1E1" scaleX="1" scaleY="1" anchorOffsetX="0" width="77" anchorOffsetY="0" height="20" textAlign="center" visible="false"/>
+	<e:Image x="445" scaleX="1" scaleY="1" source="main_jinbi_png" y="56"/>
+	<e:Group x="353" y="15">
+		<e:Image x="-2" scaleX="1" scaleY="1" source="main_jinbi_png" verticalCenter="0.5"/>
+		<e:Image x="177" scaleX="1" scaleY="1" source="main_yuanbao_png" verticalCenter="1"/>
+		<e:Button id="btn_addCoin" label="Button" x="129" skinName="skins.ComBtnSmallAddSkin" verticalCenter="0"/>
+		<e:Button id="btn_addGold" label="Button" x="279" skinName="skins.ComBtnSmallAddSkin" verticalCenter="0"/>
+		<e:Label id="lb_coin" text="123456" x="18" touchEnabled="false" size="20" width="120" textAlign="center" verticalCenter="1"/>
+		<e:Label id="lb_gold" text="123456" touchEnabled="false" size="20" width="100" textAlign="center" x="193" verticalCenter="1"/>
+	</e:Group>
 </e:Skin>

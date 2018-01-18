@@ -1,482 +1,482 @@
 {
 	"81":{
 		"level":81,
-		"number":10
+		"number":30000
 	},
 	"82":{
 		"level":82,
-		"number":20
+		"number":31000
 	},
 	"83":{
 		"level":83,
-		"number":30
+		"number":32000
 	},
 	"84":{
 		"level":84,
-		"number":40
+		"number":33000
 	},
 	"85":{
 		"level":85,
-		"number":50
+		"number":34000
 	},
 	"86":{
 		"level":86,
-		"number":60
+		"number":35000
 	},
 	"87":{
 		"level":87,
-		"number":70
+		"number":36000
 	},
 	"88":{
 		"level":88,
-		"number":80
+		"number":37000
 	},
 	"89":{
 		"level":89,
-		"number":90
+		"number":38000
 	},
 	"90":{
 		"level":90,
-		"number":100
+		"number":39000
 	},
 	"91":{
 		"level":91,
-		"number":110
+		"number":40000
 	},
 	"92":{
 		"level":92,
-		"number":120
+		"number":41000
 	},
 	"93":{
 		"level":93,
-		"number":130
+		"number":42000
 	},
 	"94":{
 		"level":94,
-		"number":140
+		"number":43000
 	},
 	"95":{
 		"level":95,
-		"number":150
+		"number":44000
 	},
 	"96":{
 		"level":96,
-		"number":160
+		"number":45000
 	},
 	"97":{
 		"level":97,
-		"number":170
+		"number":46000
 	},
 	"98":{
 		"level":98,
-		"number":180
+		"number":47000
 	},
 	"99":{
 		"level":99,
-		"number":190
+		"number":48000
 	},
 	"100":{
 		"level":100,
-		"number":200
+		"number":49000
 	},
 	"101":{
 		"level":101,
-		"number":210
+		"number":50000
 	},
 	"102":{
 		"level":102,
-		"number":220
+		"number":51000
 	},
 	"103":{
 		"level":103,
-		"number":230
+		"number":52000
 	},
 	"104":{
 		"level":104,
-		"number":240
+		"number":53000
 	},
 	"105":{
 		"level":105,
-		"number":250
+		"number":54000
 	},
 	"106":{
 		"level":106,
-		"number":260
+		"number":55000
 	},
 	"107":{
 		"level":107,
-		"number":270
+		"number":56000
 	},
 	"108":{
 		"level":108,
-		"number":280
+		"number":57000
 	},
 	"109":{
 		"level":109,
-		"number":290
+		"number":58000
 	},
 	"110":{
 		"level":110,
-		"number":300
+		"number":59000
 	},
 	"111":{
 		"level":111,
-		"number":310
+		"number":60000
 	},
 	"112":{
 		"level":112,
-		"number":320
+		"number":61000
 	},
 	"113":{
 		"level":113,
-		"number":330
+		"number":62000
 	},
 	"114":{
 		"level":114,
-		"number":340
+		"number":63000
 	},
 	"115":{
 		"level":115,
-		"number":350
+		"number":64000
 	},
 	"116":{
 		"level":116,
-		"number":360
+		"number":65000
 	},
 	"117":{
 		"level":117,
-		"number":370
+		"number":66000
 	},
 	"118":{
 		"level":118,
-		"number":380
+		"number":67000
 	},
 	"119":{
 		"level":119,
-		"number":390
+		"number":68000
 	},
 	"120":{
 		"level":120,
-		"number":400
+		"number":69000
 	},
 	"121":{
 		"level":121,
-		"number":410
+		"number":70000
 	},
 	"122":{
 		"level":122,
-		"number":420
+		"number":71000
 	},
 	"123":{
 		"level":123,
-		"number":430
+		"number":72000
 	},
 	"124":{
 		"level":124,
-		"number":440
+		"number":73000
 	},
 	"125":{
 		"level":125,
-		"number":450
+		"number":74000
 	},
 	"126":{
 		"level":126,
-		"number":460
+		"number":75000
 	},
 	"127":{
 		"level":127,
-		"number":470
+		"number":76000
 	},
 	"128":{
 		"level":128,
-		"number":480
+		"number":77000
 	},
 	"129":{
 		"level":129,
-		"number":490
+		"number":78000
 	},
 	"130":{
 		"level":130,
-		"number":500
+		"number":79000
 	},
 	"131":{
 		"level":131,
-		"number":510
+		"number":80000
 	},
 	"132":{
 		"level":132,
-		"number":520
+		"number":81000
 	},
 	"133":{
 		"level":133,
-		"number":530
+		"number":82000
 	},
 	"134":{
 		"level":134,
-		"number":540
+		"number":83000
 	},
 	"135":{
 		"level":135,
-		"number":550
+		"number":84000
 	},
 	"136":{
 		"level":136,
-		"number":560
+		"number":85000
 	},
 	"137":{
 		"level":137,
-		"number":570
+		"number":86000
 	},
 	"138":{
 		"level":138,
-		"number":580
+		"number":87000
 	},
 	"139":{
 		"level":139,
-		"number":590
+		"number":88000
 	},
 	"140":{
 		"level":140,
-		"number":600
+		"number":89000
 	},
 	"141":{
 		"level":141,
-		"number":610
+		"number":90000
 	},
 	"142":{
 		"level":142,
-		"number":620
+		"number":91000
 	},
 	"143":{
 		"level":143,
-		"number":630
+		"number":92000
 	},
 	"144":{
 		"level":144,
-		"number":640
+		"number":93000
 	},
 	"145":{
 		"level":145,
-		"number":650
+		"number":94000
 	},
 	"146":{
 		"level":146,
-		"number":660
+		"number":95000
 	},
 	"147":{
 		"level":147,
-		"number":670
+		"number":96000
 	},
 	"148":{
 		"level":148,
-		"number":680
+		"number":97000
 	},
 	"149":{
 		"level":149,
-		"number":690
+		"number":98000
 	},
 	"150":{
 		"level":150,
-		"number":700
+		"number":99000
 	},
 	"151":{
 		"level":151,
-		"number":710
+		"number":100000
 	},
 	"152":{
 		"level":152,
-		"number":720
+		"number":101000
 	},
 	"153":{
 		"level":153,
-		"number":730
+		"number":102000
 	},
 	"154":{
 		"level":154,
-		"number":740
+		"number":103000
 	},
 	"155":{
 		"level":155,
-		"number":750
+		"number":104000
 	},
 	"156":{
 		"level":156,
-		"number":760
+		"number":105000
 	},
 	"157":{
 		"level":157,
-		"number":770
+		"number":106000
 	},
 	"158":{
 		"level":158,
-		"number":780
+		"number":107000
 	},
 	"159":{
 		"level":159,
-		"number":790
+		"number":108000
 	},
 	"160":{
 		"level":160,
-		"number":800
+		"number":109000
 	},
 	"161":{
 		"level":161,
-		"number":810
+		"number":110000
 	},
 	"162":{
 		"level":162,
-		"number":820
+		"number":111000
 	},
 	"163":{
 		"level":163,
-		"number":830
+		"number":112000
 	},
 	"164":{
 		"level":164,
-		"number":840
+		"number":113000
 	},
 	"165":{
 		"level":165,
-		"number":850
+		"number":114000
 	},
 	"166":{
 		"level":166,
-		"number":860
+		"number":115000
 	},
 	"167":{
 		"level":167,
-		"number":870
+		"number":116000
 	},
 	"168":{
 		"level":168,
-		"number":880
+		"number":117000
 	},
 	"169":{
 		"level":169,
-		"number":890
+		"number":118000
 	},
 	"170":{
 		"level":170,
-		"number":900
+		"number":119000
 	},
 	"171":{
 		"level":171,
-		"number":910
+		"number":120000
 	},
 	"172":{
 		"level":172,
-		"number":920
+		"number":121000
 	},
 	"173":{
 		"level":173,
-		"number":930
+		"number":122000
 	},
 	"174":{
 		"level":174,
-		"number":940
+		"number":123000
 	},
 	"175":{
 		"level":175,
-		"number":950
+		"number":124000
 	},
 	"176":{
 		"level":176,
-		"number":960
+		"number":125000
 	},
 	"177":{
 		"level":177,
-		"number":970
+		"number":126000
 	},
 	"178":{
 		"level":178,
-		"number":980
+		"number":127000
 	},
 	"179":{
 		"level":179,
-		"number":990
+		"number":128000
 	},
 	"180":{
 		"level":180,
-		"number":1000
+		"number":129000
 	},
 	"181":{
 		"level":181,
-		"number":1010
+		"number":130000
 	},
 	"182":{
 		"level":182,
-		"number":1020
+		"number":131000
 	},
 	"183":{
 		"level":183,
-		"number":1030
+		"number":132000
 	},
 	"184":{
 		"level":184,
-		"number":1040
+		"number":133000
 	},
 	"185":{
 		"level":185,
-		"number":1050
+		"number":134000
 	},
 	"186":{
 		"level":186,
-		"number":1060
+		"number":135000
 	},
 	"187":{
 		"level":187,
-		"number":1070
+		"number":136000
 	},
 	"188":{
 		"level":188,
-		"number":1080
+		"number":137000
 	},
 	"189":{
 		"level":189,
-		"number":1090
+		"number":138000
 	},
 	"190":{
 		"level":190,
-		"number":1100
+		"number":139000
 	},
 	"191":{
 		"level":191,
-		"number":1110
+		"number":140000
 	},
 	"192":{
 		"level":192,
-		"number":1120
+		"number":141000
 	},
 	"193":{
 		"level":193,
-		"number":1130
+		"number":142000
 	},
 	"194":{
 		"level":194,
-		"number":1140
+		"number":143000
 	},
 	"195":{
 		"level":195,
-		"number":1150
+		"number":144000
 	},
 	"196":{
 		"level":196,
-		"number":1160
+		"number":145000
 	},
 	"197":{
 		"level":197,
-		"number":1170
+		"number":146000
 	},
 	"198":{
 		"level":198,
-		"number":1180
+		"number":147000
 	},
 	"199":{
 		"level":199,
-		"number":1190
+		"number":148000
 	},
 	"200":{
 		"level":200,
-		"number":1200
+		"number":149000
 	}
 }

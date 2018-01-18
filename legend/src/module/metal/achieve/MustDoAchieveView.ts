@@ -26,7 +26,7 @@ module game {
             //this.isCreated = true;
             this.scr_achieve.viewport = this._listachieve;
             this.scr_achieve.scrollPolicyH = eui.ScrollPolicy.OFF;
-            this._listachieve.itemRenderer = TaskItem;
+            this._listachieve.itemRenderer = AchieveTaskItem;
             this.bt_takeall.addEventListener(egret.TouchEvent.TOUCH_TAP, this.takeAll, this);
 
             if (this._btnTakeAllMc == null) {                     //一键领取特效
@@ -109,6 +109,95 @@ module game {
 
     }
 
+	export class AchieveTaskItem extends eui.ItemRenderer {
+		public lb_taskname: eui.Label;
+		public lb_reward: eui.Label;
+		public lb_progress: eui.Label;
+		public gp_finish: eui.Group;
+		public gp_goto: eui.Group;
+		public gp_take: eui.Group;
+		public bt_take: eui.Image;
+		public bt_goto: eui.Image;
+		public tv_data: TaskVo;;
+
+		public constructor() {
+			super();
+			this.skinName = "MustDoItemSkin";
+			this.gp_finish.visible = false;
+			this.gp_goto.visible = false;
+			this.gp_take.visible = false;
+
+			this.bt_take.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
+				this.getTaskReward();
+			}, this);
+
+			this.bt_goto.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
+				this.gotoTask();
+			}, this);
+		}
+
+		public getTaskReward() {
+			if (this.tv_data.type == MustDoType.ACTIVITY)
+				App.Socket.send(18002, { task_id: this.tv_data.task_id });
+			else if (this.tv_data.type == MustDoType.ACHIEVE)
+				App.Socket.send(19002, { achieve_id: this.tv_data.task_id });
+
+		}
+		public gotoTask() {
+
+			if (this.tv_data.type == MustDoType.ACTIVITY) {
+				let info = App.ConfigManager.getTaskDailyInfoById(this.tv_data.task_id);
+				MainModuleJump.jumpToModule(info.skip);
+			}
+			else if (this.tv_data.type == MustDoType.ACHIEVE) {
+				let info = App.ConfigManager.getAchieveInfoById(this.tv_data.task_id);
+				MainModuleJump.jumpToModule(info.skip);
+
+			}
+		}
+		public dataChanged() {
+
+			let tv: TaskVo = this.data as TaskVo;
+			this.tv_data = tv;
+			this.lb_taskname.text = tv.task_name;
+			if (tv.need_num > tv.finish_num)
+				this.lb_progress.textFlow = [{ text: tv.finish_num + "", style: { textColor: 0xf10000 } }, { text: "/" + tv.need_num, style: { textColor: 0xffffff } }];
+			else
+				this.lb_progress.textFlow = [{ text:  tv.need_num + "" }, { text: "/" + tv.need_num, style: { textColor: 0xffffff } }];//超过上限的显示为上限
+			//this.lb_progress.text = tv.finish_num + "/" + tv.need_num;//
+			if (tv.state == 2) {
+				this.lb_progress.text = "";
+			}
+			switch (tv.state) {
+				case 0:
+					this.gp_take.visible = false;
+					this.gp_finish.visible = false;
+					this.gp_goto.visible = true;
+					break;
+				case 1:
+					this.gp_take.visible = true;
+					this.gp_finish.visible = false;
+					this.gp_goto.visible = false;
+					break;
+				case 2:
+					this.gp_finish.visible = true;
+					this.gp_take.visible = false;
+					this.gp_goto.visible = false;
+					break;
+
+			}
+			let rewardtxt: string = "奖励：";
+			for (let i = 0; i < tv.reward_list.length; i++) {
+				let info = App.ConfigManager.getItemInfoById(tv.reward_list[i].id);
+				rewardtxt += (info.name + "" + tv.reward_list[i].num);
+				if (i < tv.reward_list.length - 1)
+					rewardtxt += ",";
+			}
+			this.lb_reward.text = rewardtxt;
+			//this.lb_reward.text 
+			//this.updateInfo(this.data);
+		}
+	}
 
 
 }

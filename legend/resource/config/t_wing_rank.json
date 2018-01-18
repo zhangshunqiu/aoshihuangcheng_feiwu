@@ -3,81 +3,63 @@
 		"id":1,
 		"attribute_rate":150,
 		"skill":0,
-		"photo":4001,
 		"transition_money":1000,
-		"model":4001,
 		"transition":[[1,201],[2,301],[3,401],[4,501]]
 	},
 	"2":{
 		"id":2,
 		"attribute_rate":300,
 		"skill":0,
-		"photo":4002,
 		"transition_money":1500,
-		"model":4002,
 		"transition":[[1,202],[2,302],[3,402],[4,502]]
 	},
 	"3":{
 		"id":3,
 		"attribute_rate":450,
 		"skill":0,
-		"photo":4003,
 		"transition_money":2000,
-		"model":4003,
 		"transition":[[1,203],[2,303],[3,403],[4,503]]
 	},
 	"4":{
 		"id":4,
 		"attribute_rate":600,
 		"skill":1,
-		"photo":4004,
 		"transition_money":2500,
-		"model":4004,
 		"transition":[[1,204],[2,304],[3,404],[4,504]]
 	},
 	"5":{
 		"id":5,
 		"attribute_rate":750,
 		"skill":2,
-		"photo":4005,
 		"transition_money":3000,
-		"model":4005,
 		"transition":[[1,205],[2,305],[3,405],[4,505]]
 	},
 	"6":{
 		"id":6,
 		"attribute_rate":900,
 		"skill":3,
-		"photo":4006,
 		"transition_money":3500,
-		"model":4006,
 		"transition":[[1,206],[2,306],[3,406],[4,506]]
 	},
 	"7":{
 		"id":7,
 		"attribute_rate":1050,
 		"skill":4,
-		"photo":4007,
 		"transition_money":4000,
-		"model":4007,
 		"transition":[[1,207],[2,307],[3,407],[4,507]]
 	},
 	"8":{
 		"id":8,
 		"attribute_rate":1200,
 		"skill":5,
-		"photo":4008,
 		"transition_money":4500,
-		"model":4008,
 		"transition":[[1,208],[2,308],[3,408],[4,508]]
 	},
 	"9":{
 		"id":9,
 		"attribute_rate":1400,
 		"skill":6,
-		"photo":4009,
 		"transition_money":5000,
-		"model":4009,
 		"transition":[[1,209],[2,309],[3,409],[4,509]]
 	}
 }

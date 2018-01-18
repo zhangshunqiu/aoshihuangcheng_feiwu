@@ -30,10 +30,10 @@ module game {
             this.buyNum = data;
             this.rewardList = [];
             if(data == 1) { //购买月卡
+                this.rewardList.push([1, 102, this.monthCardInfo.gold]);
                 this.rewardList.push(this.monthCardInfo.reward[0]);
-                this.rewardList.push([1,102,1000]);
             } else if(data == 2) {
-                this.rewardList.push(this.monthCardInfo.reward[0]);
+                this.rewardList.push([1, 102, this.monthCardInfo.gold]);
             }
         }
 

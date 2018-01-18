@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.ComBtnLeftArrowSkin" width="47" height="69" xmlns:e="http://ns.egret.com/eui" states="up,down,disable" >
+	<e:Image x="0" y="0" source.up="com_btn_arrowLeftOver_png" source="com_btn_arrowLeftOver_png" source.down="com_btn_arrowLeft_png" source.disable="com_btn_arrowLeftDis_png"/>
+</e:Skin>

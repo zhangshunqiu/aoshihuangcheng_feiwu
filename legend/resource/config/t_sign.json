@@ -3,210 +3,210 @@
 		"id":1,
 		"vip":0,
 		"multiple":1,
-		"reward":[[1,10,20]],
+		"reward":[[1,101,50000]],
 		"extra":[]
 	},
 	"2":{
 		"id":2,
 		"vip":2,
 		"multiple":2,
-		"reward":[[1,10,21]],
+		"reward":[[1,102,50]],
 		"extra":[]
 	},
 	"3":{
 		"id":3,
 		"vip":0,
 		"multiple":1,
-		"reward":[[1,10,22]],
-		"extra":[[1,10,22]]
+		"reward":[[1,10,10]],
+		"extra":[[1,27,2]]
 	},
 	"4":{
 		"id":4,
 		"vip":0,
 		"multiple":1,
-		"reward":[[1,10,23]],
+		"reward":[[1,1002,1]],
 		"extra":[]
 	},
 	"5":{
 		"id":5,
 		"vip":2,
 		"multiple":2,
-		"reward":[[1,10,24]],
+		"reward":[[1,16,5]],
 		"extra":[]
 	},
 	"6":{
 		"id":6,
 		"vip":0,
 		"multiple":1,
-		"reward":[[1,10,25]],
+		"reward":[[1,26,2]],
 		"extra":[]
 	},
 	"7":{
 		"id":7,
 		"vip":0,
 		"multiple":1,
-		"reward":[[1,10,26]],
-		"extra":[[1,10,26]]
+		"reward":[[1,101,80000]],
+		"extra":[[1,102,100]]
 	},
 	"8":{
 		"id":8,
 		"vip":2,
 		"multiple":2,
-		"reward":[[1,10,27]],
+		"reward":[[1,102,80]],
 		"extra":[]
 	},
 	"9":{
 		"id":9,
 		"vip":0,
 		"multiple":1,
-		"reward":[[1,10,28]],
+		"reward":[[1,10,12]],
 		"extra":[]
 	},
 	"10":{
 		"id":10,
 		"vip":0,
 		"multiple":1,
-		"reward":[[1,10,29]],
+		"reward":[[1,1102,1]],
 		"extra":[]
 	},
 	"11":{
 		"id":11,
 		"vip":3,
 		"multiple":3,
-		"reward":[[1,10,30]],
+		"reward":[[1,16,8]],
 		"extra":[]
 	},
 	"12":{
 		"id":12,
 		"vip":0,
 		"multiple":1,
-		"reward":[[1,10,31]],
+		"reward":[[1,26,2]],
 		"extra":[]
 	},
 	"13":{
 		"id":13,
 		"vip":0,
 		"multiple":1,
-		"reward":[[1,10,32]],
+		"reward":[[1,101,100000]],
 		"extra":[]
 	},
 	"14":{
 		"id":14,
 		"vip":3,
 		"multiple":3,
-		"reward":[[1,10,33]],
-		"extra":[[1,10,33]]
+		"reward":[[1,102,100]],
+		"extra":[[1,27,3]]
 	},
 	"15":{
 		"id":15,
 		"vip":0,
 		"multiple":1,
-		"reward":[[1,10,34]],
+		"reward":[[1,10,15]],
 		"extra":[]
 	},
 	"16":{
 		"id":16,
 		"vip":0,
 		"multiple":1,
-		"reward":[[1,10,35]],
+		"reward":[[1,1202,1]],
 		"extra":[]
 	},
 	"17":{
 		"id":17,
 		"vip":4,
 		"multiple":4,
-		"reward":[[1,10,36]],
+		"reward":[[1,16,10]],
 		"extra":[]
 	},
 	"18":{
 		"id":18,
 		"vip":0,
 		"multiple":1,
-		"reward":[[1,10,37]],
+		"reward":[[1,26,2]],
 		"extra":[]
 	},
 	"19":{
 		"id":19,
 		"vip":0,
 		"multiple":1,
-		"reward":[[1,10,38]],
+		"reward":[[1,101,120000]],
 		"extra":[]
 	},
 	"20":{
 		"id":20,
 		"vip":4,
 		"multiple":4,
-		"reward":[[1,10,39]],
+		"reward":[[1,102,150]],
 		"extra":[]
 	},
 	"21":{
 		"id":21,
 		"vip":0,
 		"multiple":1,
-		"reward":[[1,10,40]],
-		"extra":[[1,10,40]]
+		"reward":[[1,10,18]],
+		"extra":[[1,27,4]]
 	},
 	"22":{
 		"id":22,
 		"vip":0,
 		"multiple":1,
-		"reward":[[1,10,41]],
+		"reward":[[1,1302,1]],
 		"extra":[]
 	},
 	"23":{
 		"id":23,
 		"vip":2,
 		"multiple":2,
-		"reward":[[1,10,42]],
+		"reward":[[1,16,15]],
 		"extra":[]
 	},
 	"24":{
 		"id":24,
 		"vip":0,
 		"multiple":1,
-		"reward":[[1,10,43]],
+		"reward":[[1,27,2]],
 		"extra":[]
 	},
 	"25":{
 		"id":25,
 		"vip":0,
 		"multiple":1,
-		"reward":[[1,10,44]],
+		"reward":[[1,101,150000]],
 		"extra":[]
 	},
 	"26":{
 		"id":26,
 		"vip":3,
 		"multiple":3,
-		"reward":[[1,10,45]],
+		"reward":[[1,102,200]],
 		"extra":[]
 	},
 	"27":{
 		"id":27,
 		"vip":0,
 		"multiple":1,
-		"reward":[[1,10,46]],
+		"reward":[[1,10,20]],
 		"extra":[]
 	},
 	"28":{
 		"id":28,
 		"vip":0,
 		"multiple":1,
-		"reward":[[1,10,47]],
-		"extra":[[1,10,47]]
+		"reward":[[1,1002,1]],
+		"extra":[[1,102,200]]
 	},
 	"29":{
 		"id":29,
 		"vip":4,
 		"multiple":4,
-		"reward":[[1,10,48]],
+		"reward":[[1,16,25]],
 		"extra":[]
 	},
 	"30":{
 		"id":30,
 		"vip":0,
 		"multiple":1,
-		"reward":[[1,10,49]],
+		"reward":[[1,27,2]],
 		"extra":[]
 	}
 }

@@ -32,7 +32,7 @@ module game {
 		public constructor(viewConf: WinManagerVO = null) {
 			super(viewConf);
 			this.skinName = "HeroAttributeSkin";
-			this.y += 64;
+			// this.y += 64;
 			this.readyOpenWin();
 		}
 
@@ -42,14 +42,15 @@ module game {
 		}
 
 		private initView() {
-			RES.getResAsync("equipping_biaoti_png", (texture) => {
-				this.commonWin.img_title.texture = texture;
-			}, this);
+			// RES.getResAsync("equipping_juese_title_png", (texture) => {
+			// 	this.commonWin.img_title.texture = texture;
+			// }, this);
 			this.commonWin.img_close.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
 				(EventSystem.getInstance() as EventSystem).dispatchEvent(WinManagerEvent.WIN_REMOVE, new WinManagerEvent(new WinManagerVO("", "", WinLay.MODULE_LAY), this));
 			}, this);
 			this.img_return.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
 				(EventSystem.getInstance() as EventSystem).dispatchEvent(WinManagerEvent.WIN_REMOVE, new WinManagerEvent(new WinManagerVO("", "", WinLay.MODULE_LAY), this));
+				App.WinManager.openWin(WinName.HERO);
 			}, this);
 			this._labelArray.push(this.lb_ac);
 			this._labelArray.push(this.lb_hp);

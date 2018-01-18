@@ -7,7 +7,7 @@ module game {
         public constructor(data) {
             this.updateInfo(data);
         }
-
+        
         public updateInfo(info) {
             this.key = ConstAttributeArray[info.key];
             this.value = info.value;

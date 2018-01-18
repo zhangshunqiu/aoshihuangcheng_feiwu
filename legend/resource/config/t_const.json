@@ -8,7 +8,7 @@
 	"2":{
 		"key":2,
 		"type":"KNAPSACK_SPACE",
-		"value":200,
+		"value":300,
 		"des":"背包最大空间"
 	},
 	"3":{
@@ -20,13 +20,13 @@
 	"4":{
 		"key":4,
 		"type":"SHOP_GOLD",
-		"value":50000,
+		"value":3500,
 		"des":"商城刷新金币价格基础量"
 	},
 	"5":{
 		"key":5,
 		"type":"SHOP_GOLD1",
-		"value":5000,
+		"value":500,
 		"des":"商城刷新金币价格乘积量"
 	},
 	"6":{
@@ -111,7 +111,7 @@
 		"key":19,
 		"type":"WING_SELF_SPEED",
 		"value":200,
-		"des":"羽翼自动升星的速度"
+		"des":"羽翼自动升星的速度(毫秒)"
 	},
 	"20":{
 		"key":20,
@@ -176,13 +176,13 @@
 	"31":{
 		"key":31,
 		"type":"TREASURE_WAREHOUSE",
-		"value":500,
+		"value":200,
 		"des":"寻宝仓库最大容量"
 	},
 	"32":{
 		"key":32,
 		"type":"INVEST_GOLD",
-		"value":888,
+		"value":8888,
 		"des":"投资计划购买金额"
 	},
 	"33":{
@@ -302,7 +302,7 @@
 	"52":{
 		"key":52,
 		"type":"MATERIAL_SWEEP_NUM",
-		"value":1,
+		"value":0,
 		"des":"今日可扫荡材料副本次数"
 	},
 	"53":{
@@ -322,5 +322,89 @@
 		"type":"WING_LEVEL_UP",
 		"value":5,
 		"des":"羽翼直升丹可直接提升一阶的上限"
+	},
+	"56":{
+		"key":56,
+		"type":"WING_LEVEL_MAX",
+		"value":10,
+		"des":"羽翼最高阶数"
+	},
+	"57":{
+		"key":57,
+		"type":"WING_EQUIP_LEVEL_MAX",
+		"value":9,
+		"des":"羽翼装备最高阶数"
+	},
+	"58":{
+		"key":58,
+		"type":"LIMIT_SHOP_REFRESH_DAYS",
+		"value":3,
+		"des":"限购商店刷新天数"
+	},
+	"59":{
+		"key":59,
+		"type":"MYSTERY_SHOP_REFRESH_TIME",
+		"value":60,
+		"des":"神秘商店刷新时间（秒）"
+	},
+	"60":{
+		"key":60,
+		"type":"JEWEL_LEVEL_MAX",
+		"value":10,
+		"des":"宝石最大等级"
+	},
+	"61":{
+		"key":61,
+		"type":"BOSS_MAX",
+		"value":200,
+		"des":"最高关卡数"
+	},
+	"62":{
+		"key":62,
+		"type":"MEDAL_LEVEL_MAX",
+		"value":100,
+		"des":"最高勋章等级"
+	},
+	"63":{
+		"key":63,
+		"type":"SKILL_LEVEL_MAX",
+		"value":180,
+		"des":"最高技能等级"
+	},
+	"64":{
+		"key":64,
+		"type":"ARTIFACT_LEVEL_MAX",
+		"value":10,
+		"des":"神器最高阶数"
+	},
+	"65":{
+		"key":65,
+		"type":"TRANSMIGRATION_MAX",
+		"value":10,
+		"des":"转生最高等级"
+	},
+	"66":{
+		"key":66,
+		"type":"CAST_LEVEL_MAX",
+		"value":180,
+		"des":"强化最高等级"
+	},
+	"67":{
+		"key":67,
+		"type":"STAR_LEVEL_MAX",
+		"value":40,
+		"des":"升星最高等级"
+	},
+	"68":{
+		"key":68,
+		"type":"COPY_TOWER_MAX",
+		"value":50,
+		"des":"挑战副本最高关卡数"
+	},
+	"69":{
+		"key":69,
+		"type":"REPLACE_PROPS",
+		"value":20,
+		"des":"羽毛不足元宝代替（单价）"
 	}
 }

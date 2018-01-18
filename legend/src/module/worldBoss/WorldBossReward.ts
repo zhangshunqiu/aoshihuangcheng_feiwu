@@ -19,6 +19,7 @@ module game {
 
         protected childrenCreated() {
             super.childrenCreated();
+            this.img_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.closeWin, this);
         }
 
         private updateView() {

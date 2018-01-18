@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.ComBtnAddSkin" width="55" height="54" xmlns:e="http://ns.egret.com/eui" states="up" >
+	<e:Image source="com_btn_oneAdd_png" horizontalCenter="0" verticalCenter="0"/>
+</e:Skin>

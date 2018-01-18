@@ -5,7 +5,7 @@
 module game {
 	export class JewelView extends BaseView {
 		public gp_main: eui.Group;
-		public commonWin: customui.CommonWin;
+		public com_baseview: ComBaseViewBg;
 		public gp_equip: eui.Group;
 		public bmlb_cap: eui.BitmapLabel;
 		public hero_head: game.HeroHeadComponentView;
@@ -26,7 +26,7 @@ module game {
 		public lb_hp_up: eui.Label;
 		public lb_def_up: eui.Label;
 		public lb_sdef_up: eui.Label;
-		public img_return: eui.Image;
+		public btn_return: eui.Button;
 
 		public gp_jewel: eui.Group;
 		public gp_middle: eui.Group;
@@ -51,25 +51,22 @@ module game {
 
 		protected childrenCreated() {
 			super.childrenCreated();
-			RES.getResAsync("jewel_baoshi_title_png", (texture) => {
-				this.commonWin.img_title.source = texture;
-			}, this);
+			
 			this.initView();
 		}
 
 		private initView() {
-			this.commonWin.img_close.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: Event) => {
-				App.WinManager.closeWin(WinName.JEWEL);
-			}, this);
 
 			this.img_master.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: Event) => {
-				let view = new JewelMasterView({ pos: this._curPos, part: this._curPart });
-				PopUpManager.addPopUp({ obj: view });
+				// let view = new JewelMasterView({ pos: this._curPos, part: this._curPart });
+				// PopUpManager.addPopUp({ obj: view });
+				App.WinManager.openWin(WinName.POP_JEWEL_MASTER, { data: { pos: this._curPos, part: this._curPart } });
 			}, this);
 
 			this.img_attr.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: Event) => {
-				let view = new JewelSuperView({ pos: this._curPos, part: this._curPart });
-				PopUpManager.addPopUp({ obj: view });
+				// let view = new JewelSuperView({ pos: this._curPos, part: this._curPart });
+				// PopUpManager.addPopUp({ obj: view });
+				App.WinManager.openWin(WinName.POP_JEWEL_SUPER, { data: { pos: this._curPos, part: this._curPart } });
 			}, this);
 
 			this.btn_all.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: Event) => {
@@ -77,10 +74,10 @@ module game {
 			}, this);
 
 			this.btn_combine.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: Event) => {
-				App.WinManager.openWin(WinName.SYNTHESIS,{lastModule:WinName.JEWEL});
+				App.WinManager.openWin(WinName.SYNTHESIS, { lastModule: WinName.JEWEL });
 			}, this);
 
-			this.img_return.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: Event) => {
+			this.btn_return.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: Event) => {
 				HeroModel.getInstance().curPos = this._curPos;
 				App.WinManager.openWin(WinName.HERO);
 			}, this);
@@ -105,8 +102,6 @@ module game {
 
 			for (let i = 1; i <= 10; i++) {
 				let item = new customui.BaseItem();
-				item.width = item.height = 90;
-				item.img_bg.visible = true;
 				if (i % 2 != 0) {
 					item.left = 70;
 				} else {
@@ -127,14 +122,15 @@ module game {
 				if (this.heroModel.heroInfo[this._curPos].equipExist(i) >= 0) { //有装备
 
 					item.updateBaseItem(ClientType.EQUIP, equipInfo.good_id, null);
-					item.img_career.visible = false;
-					item.lb_strength.visible = false;
+					item.setCarrerIconVisible(false);
+					item.setStrengthLvVisible(false);
 				} else {
 					item.updateBaseItem(ClientType.EQUIP, 0, null);
-					RES.getResAsync(ConstEquipIcon[i] + "_png", (texture) => {
-						item.img_icon.source = texture;
-					}, this);
-					item.lb_strength.visible = false;
+					// RES.getResAsync(ConstEquipIcon[i] + "_png", (texture) => {
+					// 	item.img_icon.source = texture;
+					// }, this);
+					item.setItemIcon(ConstEquipIcon[i] + "_png");
+					item.setStrengthLvVisible(false);
 				}
 
 				this.gp_equip.addChild(item);
@@ -175,7 +171,7 @@ module game {
 				this.hero_head.setRedTips(index, value);
 			}, this)
 			for (let i = 0; i < 10; i++) {
-				if (this.jewelModel.equipPartRedPoint[i + 1]) {
+				if (this.jewelModel.equipPartRedPoint[this._curPos+1][i + 1]) {
 					this._equipArray[i].showRedTips(true);
 				} else {
 					this._equipArray[i].hideRedTips();
@@ -190,8 +186,9 @@ module game {
 				this.showJewelWay(index);
 			} else {
 				let data = { heroId: this.heroModel.heroInfo[this._curPos].id, part: this._curPart, hole: jewelInfo[index].hole, id: jewelInfo[index].stone_id };
-				let view = new JewelTipView(data);
-				PopUpManager.addPopUp({ obj: view });
+				// let view = new JewelTipView(data);
+				// PopUpManager.addPopUp({ obj: view });
+				App.WinManager.openWin(WinName.POP_JEWEL_TIP, { data: data });
 			}
 
 
@@ -220,8 +217,9 @@ module game {
 				default: break;
 			}
 
-			let view = new ItemWay(ClientType.BASE_ITEM, id);
-			PopUpManager.addPopUp({ obj: view });
+			// let view = new ItemWay(ClientType.BASE_ITEM, id);
+			// PopUpManager.addPopUp({ obj: view });
+			App.GlobalTips.showItemWayTips(ClientType.BASE_ITEM, id);
 		}
 
 		//移动动画
@@ -231,7 +229,8 @@ module game {
 			item.x = preItem.x;
 			item.y = preItem.y;
 			item.updateBaseItem(ClientType.EQUIP, 0);
-			item.img_icon.source = preItem.img_icon.source;
+			// item.img_icon.source = preItem.img_icon.source;
+			item.setItemIcon(preItem.getItemIcon());
 			preItem.parent.addChild(item);
 			egret.Tween.get(item).to({ x: 355, y: 175 }, 300, egret.Ease.sineOut).call(() => {
 				if (item.parent) {
@@ -358,14 +357,15 @@ module game {
 				let equipInfo = this.heroModel.heroInfo[this._curPos].getPartInfoByPart(i + 1);
 				if (this.heroModel.heroInfo[this._curPos].equipExist(i + 1) >= 0) { //有装备
 					item.updateBaseItem(ClientType.EQUIP, equipInfo.good_id, null, equipInfo);
-					item.img_career.visible = false;
-					item.lb_star.visible = false;
+					item.setCarrerIconVisible(false);
+					item.setStarLvVisible(false);
 				} else {
 					item.updateBaseItem(ClientType.EQUIP, 0, null, equipInfo);
-					item.lb_star.visible = false;
-					RES.getResAsync(ConstEquipIcon[i + 1] + "_png", (texture) => {
-						item.img_icon.source = texture;
-					}, this);
+					item.setStarLvVisible(false);
+					// RES.getResAsync(ConstEquipIcon[i + 1] + "_png", (texture) => {
+					// 	item.img_icon.source = texture;
+					// }, this);
+					item.setItemIcon(ConstEquipIcon[i + 1] + "_png");
 				}
 			}
 		}
@@ -386,15 +386,15 @@ module game {
 
 			if (pos >= 0) { //有装备
 				this.baseItem_equip.updateBaseItem(ClientType.EQUIP, heroInfo.equip_info[pos].good_id, null);
-				this.baseItem_equip.lb_strength.visible = false;
-				this.baseItem_equip.img_career.visible = false;
+				this.baseItem_equip.setStrengthLvVisible(false);
+				this.baseItem_equip.setCarrerIconVisible(false);
 			} else {
 				this.baseItem_equip.updateBaseItem(ClientType.EQUIP, 0, null);
-				this.baseItem_equip.lb_strength.visible = false;
-				this.baseItem_equip.img_frame.source = RES.getRes("common_default_png");
-				RES.getResAsync(ConstEquipIcon[this._curPart] + "_png", (texture) => {
-					this.baseItem_equip.img_icon.source = texture;
-				}, this);
+				this.baseItem_equip.setStrengthLvVisible(false);
+				// RES.getResAsync(ConstEquipIcon[this._curPart] + "_png", (texture) => {
+				// 	this.baseItem_equip.img_icon.source = texture;
+				// }, this);
+				this.baseItem_equip.setItemIcon(ConstEquipIcon[this._curPart] + "_png");
 			}
 
 			let jewelInfo = heroInfo.getJewelInfoByPart(this._curPart);
@@ -439,13 +439,15 @@ module game {
 				RES.getResAsync(ConstJewelIcon[index + 1] + "_png", (texture) => {
 					this._jewelArray[index].source = texture;
 				}, this);
-				RES.getResAsync(ConstJewelIcon[index + 1].replace("_l_", "_s_") + "_png", (texture) => {
-					(<eui.Image>this.gp_middle.getChildAt(3 + index)).source = texture;
-				}, this);
+				// RES.getResAsync(ConstJewelIcon[index + 1].replace("_l_", "_s_") + "_png", (texture) => {
+				// 	(<eui.Image>this.gp_middle.getChildAt(3 + index)).source = texture;
+				// }, this);
 
 				let numInfo = (BackpackModel.getInstance() as BackpackModel).getItemByTypeIdUuid(ClientType.BASE_ITEM, id);
 				if (numInfo) {
-					if (numInfo.num >= 2) {
+					let maxLevel = App.ConfigManager.getConstConfigByType("JEWEL_LEVEL_MAX").value;
+					let baseInfo = App.ConfigManager.getItemInfoById(id);
+					if (numInfo.num >= 2 && baseInfo.limit_lv < maxLevel) {
 						this._jewelLevelTipArray[index].visible = true;
 					} else {
 						this._jewelLevelTipArray[index].visible = false;
@@ -460,9 +462,9 @@ module game {
 				RES.getResAsync(ConstJewelIcon[index + 1] + "_hui_png", (texture) => {
 					this._jewelArray[index].source = texture;
 				}, this);
-				RES.getResAsync(ConstJewelIcon[index + 1].replace("_l_", "_s_") + "_hui_png", (texture) => {
-					(<eui.Image>this.gp_middle.getChildAt(3 + index)).source = texture;
-				}, this);
+				// RES.getResAsync(ConstJewelIcon[index + 1].replace("_l_", "_s_") + "_hui_png", (texture) => {
+				// 	(<eui.Image>this.gp_middle.getChildAt(3 + index)).source = texture;
+				// }, this);
 			}
 		}
 
@@ -471,12 +473,16 @@ module game {
 		 */
 		public openWin(openParam: any = null): void {
 			super.openWin(openParam);
+			if(this.com_baseview){
+				this.com_baseview.winVo = this.winVo;
+			}
 			this.hero_head.readyOpen();
 			if (this._handleId == 0) {
 				this._handleId = App.EventSystem.addEventListener(PanelNotify.HERO_ON_HERO_SELECT, this.updateView, this);
 			}
 			App.EventSystem.addEventListener(PanelNotify.JEWEL_UPDATE_VIEW, this.upgradeSuccess, this);
 			App.EventSystem.addEventListener(PanelNotify.JEWEL_UPDATE_ALL_VIEW, this.oneEquipSuccess, this);
+			
 		}
 
 		/**
@@ -499,6 +505,9 @@ module game {
 			}
 			App.EventSystem.removeEventListener(PanelNotify.JEWEL_UPDATE_VIEW);
 			App.EventSystem.removeEventListener(PanelNotify.JEWEL_UPDATE_ALL_VIEW);
+			if (this.com_baseview) {
+				this.com_baseview.destroy();
+			}
 		}
 		/**
 		 * 销毁

@@ -47,13 +47,16 @@ module game {
 			this.img_upgrade.addEventListener(egret.TouchEvent.TOUCH_TAP, this.sendUpgradeRequest, this);
 
 			this.lb_get.textFlow = [{ text: "获取精华", style: { underline: true } }];
-			this.baseItem_left.lb_name.visible = true;
-			this.baseItem_left.lb_name.top = -25;
-			this.baseItem_left.lb_name.textColor = 0xff8400;
-
-			this.baseItem_right.lb_name.visible = true;
-			this.baseItem_right.lb_name.top = -25;
-			this.baseItem_right.lb_name.textColor = 0xff8400;
+			// this.baseItem_left.lb_name.visible = true;
+			// this.baseItem_left.lb_name.top = -25;
+			// this.baseItem_left.lb_name.textColor = 0xff8400;
+			this.baseItem_left.setItemNameVisible(true);
+			this.baseItem_left.setItemNameAtt({top:-25,textColor:0xff8400});
+			// this.baseItem_right.lb_name.visible = true;
+			// this.baseItem_right.lb_name.top = -25;
+			// this.baseItem_right.lb_name.textColor = 0xff8400;
+			this.baseItem_right.setItemNameVisible(true);
+			this.baseItem_right.setItemNameAtt({top:-25,textColor:0xff8400});
 
 			this.initEquip();
 			this.updateView(null);
@@ -66,8 +69,6 @@ module game {
 			}, this);
 			for (let i = 1; i <= 10; i++) {
 				let item = new customui.BaseItem();
-				item.width = item.height = 90;
-				item.img_bg.visible = true;
 				if (i % 2 != 0) {
 					item.left = 50;
 				} else {
@@ -88,14 +89,15 @@ module game {
 				if (this.heroModel.heroInfo[this.heroModel.curPos].equipExist(i) >= 0) { //有装备
 
 					item.updateBaseItem(ClientType.EQUIP, equipInfo.good_id, null, equipInfo);
-					item.img_career.visible = false;
-					item.lb_strength.visible = false;
+					item.setCarrerIconVisible(false);
+					item.setStrengthLvVisible(false);
 				} else {
 					item.updateBaseItem(ClientType.EQUIP, 0, null, equipInfo);
-					RES.getResAsync(ConstEquipIcon[i] + "_png", (texture) => {
-						item.img_icon.source = texture;
-					}, this);
-					item.lb_strength.visible = false;
+					// RES.getResAsync(ConstEquipIcon[i] + "_png", (texture) => {
+					// 	item.img_icon.source = texture;
+					// }, this);
+					item.setItemIcon(ConstEquipIcon[i] + "_png");
+					item.setStrengthLvVisible(false);
 				}
 
 				this.gp_equip.addChild(item);
@@ -130,19 +132,20 @@ module game {
 				let equipInfo = this.heroModel.heroInfo[this.heroModel.curPos].getPartInfoByPart(i + 1);
 				if (this.heroModel.heroInfo[this.heroModel.curPos].equipExist(i + 1) >= 0) { //有装备
 					item.updateBaseItem(ClientType.EQUIP, equipInfo.good_id, null, equipInfo);
-					item.img_career.visible = false;
-					item.lb_star.visible = false;
-					item.lb_strength.visible = false;
-					item.lb_name.visible = true;
+					item.setCarrerIconVisible(false);
+					item.setStarLvVisible(false);
+					item.setStrengthLvVisible(false);
+					item.setItemNameVisible(true);
 					// item.lb_name.text = "";
 				} else {
 					item.updateBaseItem(ClientType.EQUIP, 0, null, equipInfo);
-					item.lb_star.visible = false;
-					item.lb_strength.visible = false;
-					RES.getResAsync(ConstEquipIcon[i + 1] + "_png", (texture) => {
-						item.img_icon.source = texture;
-					}, this);
-					item.lb_name.visible = false;
+					item.setStarLvVisible(false);
+					item.setStrengthLvVisible(false);
+					// RES.getResAsync(ConstEquipIcon[i + 1] + "_png", (texture) => {
+					// 	item.img_icon.source = texture;
+					// }, this);
+					item.setItemIcon(ConstEquipIcon[i + 1] + "_png");
+					item.setItemNameVisible(false);
 				}
 			}
 		}
@@ -164,12 +167,14 @@ module game {
 			if (!equipVO) {
 				this.gp_middle.visible = false;
 				this.lb_tips.visible = true;
+				this.lb_tips.text = "该部位没有可升级的橙装";
 				return;
 			}
 			let equipInfo = App.ConfigManager.getEquipById(equipVO.good_id);
 			if (!equipInfo || equipInfo.upgrade == 0) {
 				this.gp_middle.visible = false;
 				this.lb_tips.visible = true;
+				this.lb_tips.text = "该部位没有可升级的橙装";
 				return;
 			} else {
 				this.gp_middle.visible = true;
@@ -211,8 +216,8 @@ module game {
 
 			this.baseItem_left.updateBaseItem(ClientType.EQUIP, equipInfo.id);
 			this.baseItem_right.updateBaseItem(ClientType.EQUIP, nextInfo.id);
-			this.baseItem_left.img_career.visible = false;
-			this.baseItem_right.img_career.visible = false;
+			this.baseItem_left.setCarrerIconVisible(false);
+			this.baseItem_right.setCarrerIconVisible(false);
 
 			//橙装精华
 			let itemInfo = BackpackModel.getInstance().getItemByTypeIdUuid(ClientType.BASE_ITEM, 11);
@@ -247,8 +252,9 @@ module game {
 		// }
 
 		private showWay() {
-			let view = new ItemWay(ClientType.BASE_ITEM, 11);
-			PopUpManager.addPopUp({ obj: view });
+			// let view = new ItemWay(ClientType.BASE_ITEM, 11);
+			// PopUpManager.addPopUp({ obj: view });
+			App.GlobalTips.showItemWayTips(ClientType.BASE_ITEM, 11);
 		}
 
 		private sendUpgradeRequest() {

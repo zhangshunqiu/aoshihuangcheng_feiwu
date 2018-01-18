@@ -6,7 +6,7 @@ module game {
 	export class BroadcastView extends BaseView {
 		public gp_main: eui.Group;
 		public img_bg: eui.Image;
-		public lb_content: eui.Label;
+		public lb_content: RichTextField;
 		public rect_mask: eui.Rect;
 		public constructor(viewConf: WinManagerVO = null) {
 			super(viewConf);
@@ -15,13 +15,18 @@ module game {
 		protected childrenCreated() {
 			super.childrenCreated();
 			this.gp_main.mask = this.rect_mask;
+			this.lb_content = new RichTextField();
+			this.addChild(this.lb_content);
+			this.lb_content.size = 24;
 			this.lb_content.x = this.gp_main.x + 10;
+			this.lb_content.y = 9;
+
 		}
 
 		private play(data:any) {
 			this.lb_content.x = this.gp_main.width + 10;
 			if(typeof(data) == "string"){
-				this.lb_content.text = data;
+				this.lb_content.textHtml = "<font fontfamily=\"SimHei\" color=0xbfbfbf >"+data+"</font>";
 			}else if(typeof(data) == "object"){
 				this.lb_content.textFlow = data;
 			}

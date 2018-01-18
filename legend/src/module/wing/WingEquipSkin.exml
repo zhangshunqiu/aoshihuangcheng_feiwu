@@ -1,3 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="WingEquipSkin" width="720" height="1000" xmlns:e="http://ns.egret.com/eui">
+<e:Skin class="WingEquipSkin" width="720" height="1000" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image id="img_wing" scaleX="0.8" scaleY="0.8" y="2" source="4001_png" touchEnabled="false" pixelHitTest="true" x="67" locked="true"/>
+	<e:Group id="gp_combat" x="185" y="162">
+		<e:Image source="com_bg_combat_png" y="0" x="11" scaleX="1" scaleY="1"/>
+		<e:Image source="com_bg_combat1_png" y="13" x="0" scaleX="1" scaleY="1"/>
+	</e:Group>
+	<e:Image source="com_pic_jb_png" x="82" y="566" anchorOffsetY="0" height="160" anchorOffsetX="0" width="558"/>
+	<e:Image source="com_pic_decorate6_png" y="517.68" horizontalCenter="-2.5"/>
+	<e:Group id="gp_wingEquip" y="267" horizontalCenter="0">
+		<e:Group id="gp_zhengyu" x="11" y="477">
+		<e:Image id="img_zhengyuframe" source="common_frame_purple_png" x="0" y="0"/>
+		<e:Image id="img_zhengyu_bg" source="wing_1_icon_zhengyu_png" horizontalCenter="0" verticalCenter="0"/>
+		<e:Image id="img_zhengyu" source="wing_1_zhengyu_png" horizontalCenter="0" verticalCenter="0"/>
+		<e:Group id="gp_zhengyuStep" y="57" horizontalCenter="0" visible="false">
+			<e:Image source="wing_bg_keshengjie_png" x="0" y="0"/>
+			<e:Label text="可升阶" size="18" textColor="0x3DEA30" fontFamily="黑体" horizontalCenter="0" verticalCenter="0"/>
+		</e:Group>
+		<e:Image id="img_zhengyuStepText" source="wing_1_png" left="0" top="0"/>
+		</e:Group>
+		<e:Group id="gp_fuyu" x="170" y="477">
+		<e:Image id="img_fuyuframe" source="common_default_png" x="0" y="0"/>
+		<e:Image id="img_fuyu_bg" source="wing_2_icon_fuyu_png" horizontalCenter="0" verticalCenter="0"/>
+		<e:Image id="img_fuyu" source="wing_2_fuyu_png" horizontalCenter="0" verticalCenter="0"/>
+		<e:Group id="gp_fuyuStep" y="57" horizontalCenter="0" x="-489" scaleX="1" scaleY="1" visible="false">
+			<e:Image source="wing_bg_keshengjie_png" x="0" y="0"/>
+			<e:Label text="可升阶" size="18" textColor="0x3DEA30" fontFamily="黑体" horizontalCenter="0" verticalCenter="0"/>
+		</e:Group>
+		<e:Image id="img_fuyuStepText" source="wing_1_png" left="0" top="0"/>
+		</e:Group>
+		<e:Group id="gp_rongyu" x="331" y="477">
+		<e:Image id="img_rongyuframe" source="common_default_png" x="0" y="0"/>
+		<e:Image id="img_rongyu_bg" source="wing_3_icon_rongyu_png" horizontalCenter="0" verticalCenter="0"/>
+		<e:Image id="img_rongyu" source="wing_3_rongyu_png" horizontalCenter="0" verticalCenter="0"/>
+		<e:Group id="gp_rongyuStep" y="58" scaleX="1" scaleY="1" horizontalCenter="0" visible="false">
+			<e:Image source="wing_bg_keshengjie_png" x="0" y="0"/>
+			<e:Label text="可升阶" size="18" textColor="0x3DEA30" fontFamily="黑体" horizontalCenter="0" verticalCenter="0"/>
+		</e:Group>
+		<e:Image id="img_rongyuStepText" source="wing_1_png" left="0" top="0"/>
+		</e:Group>
+		<e:Group id="gp_xuyu" x="490" y="477">
+		<e:Image id="img_xuyuframe" source="common_default_png" x="0" y="0"/>
+		<e:Image id="img_xuyu_bg" source="wing_4_icon_xuyu_png" horizontalCenter="0" verticalCenter="0"/>
+		<e:Image id="img_xuyu" source="wing_4_xuyu_png" horizontalCenter="0" verticalCenter="0"/>
+		<e:Group id="gp_xuyuStep" y="58" scaleX="1" scaleY="1" horizontalCenter="-7.5" x="-488" visible="false">
+			<e:Image source="wing_bg_keshengjie_png" x="0" y="0"/>
+			<e:Label text="可升阶" size="18" textColor="0x3DEA30" fontFamily="黑体" horizontalCenter="0" verticalCenter="0"/>
+		</e:Group>
+		<e:Image id="img_xuyuStepText" source="wing_1_png" left="0" top="0"/>
+		</e:Group>
+		<e:Image id="img_perfectWing" source="wing_icon_wanmeishenyi_png" x="-46" y="-136"/>
+		<e:Image id="img_wingSkill" source="wing_icon_yuyijineng_png" x="370" y="394" visible="false"/>
+		<e:Group y="317" horizontalCenter="0.5">
+			<e:Label id="lb_hpEquip" text="生命值：10000" y="0" size="24" fontFamily="黑体" horizontalCenter="0" textColor="0xbfb294"/>
+			<e:Label id="lb_attackEquip" text="物理攻击：10000" y="30.33000000000004" size="24" fontFamily="黑体" horizontalCenter="0" textColor="0xbfb294"/>
+			<e:Label id="lb_physicsDefenseEquip" text="物理防御：10000" y="60.66999999999996" size="24" fontFamily="黑体" horizontalCenter="0" textColor="0xbfb294"/>
+			<e:Label id="lb_magicDefenseEquip" text="魔法防御：10000" y="91" size="24" fontFamily="黑体" horizontalCenter="0" textColor="0xbfb294"/>
+		</e:Group>
+		<e:Label id="lb_zhengyu" text=" " x="4" y="90" textColor="0x65DDFF" fontFamily="黑体" size="24" textAlign="center" anchorOffsetX="0" width="80"/>
+		<e:Label id="lb_fuyu" text=" " x="500" y="90" textColor="0x65DDFF" fontFamily="黑体" size="24" textAlign="center" anchorOffsetX="0" width="80"/>
+		<e:Label id="lb_rongyu" text=" " x="3" y="279" textColor="0x65DDFF" fontFamily="黑体" size="24" textAlign="center" anchorOffsetX="0" width="80"/>
+		<e:Label id="lb_xuyu" text=" " x="501" y="278" textColor="0x65DDFF" fontFamily="黑体" size="24" textAlign="center" anchorOffsetX="0" width="80"/>
+	</e:Group>
+	<e:Group width="239" height="43" x="240" y="183" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Group scaleX="1" scaleY="1" horizontalCenter="8.5" verticalCenter="1.5">
+			<e:Image x="0" y="0" source="words_zhandouli_png"/>
+			<e:BitmapLabel id="btlb_equipScore" x="57" y="2" anchorOffsetX="0" anchorOffsetY="0" text="123456" font="combat_shuxing_fnt"/>
+		</e:Group>
+	</e:Group>
+	<e:Label text="羽翼装备属性" y="526.68" size="28" fontFamily="黑体" anchorOffsetX="0" width="173.67" textAlign="center" textColor="0xFFC000" horizontalCenter="-3"/>
+	<e:Image source="羽翼装备界面_png" left="0" top="0" alpha="0.5" locked="true" visible="false"/>
+	<e:Button id="btn_compose" label="合 成" x="128" y="862" skinName="skins.ComBtnRedSkin"/>
+	<e:Button id="btn_wear" label="一键穿戴" x="434" y="863" skinName="skins.ComBtnRedSkin"/>
 </e:Skin>

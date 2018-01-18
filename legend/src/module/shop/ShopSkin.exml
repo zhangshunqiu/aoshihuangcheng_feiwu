@@ -1,28 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="ShopSkin" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
-		<e:Image source="common_bg_all_png" horizontalCenter="0" verticalCenter="0"/>
-		<e:Image source="shop_bg_shangcheng_png" horizontalCenter="0" top="0"/>
-		<e:Image source="shop_bg2_png" y="75" horizontalCenter="0" height="873"/>
-		<e:Image source="shop_title_shangcheng_png" horizontalCenter="0" top="20"/>
-		<e:Image source="shop_bg__png" bottom="115" horizontalCenter="-10" height="96"/>
-		<e:Image id="img_close" source="common_btn_guanbi_shangchengzhuanyong_png" x="656" y="15"/>
-		<e:Image id="img_return" source="common_btn_fanhui_png" x="593" bottom="115"/>
-		<e:TabBar id="tabbar" width="400" height="51" x="60" bottom="139" itemRendererSkinName="skins.TabbarButtonSkin1"/>
-		<e:Scroller id="scroller" width="646" horizontalCenter="0" top="79" bottom="297">
-			<e:Group y="-1">
-			</e:Group>
-		</e:Scroller>
-		<e:Group id="gp_nexttime" width="660" height="60" horizontalCenter="0" bottom="214">
-			<e:Label id="lb_nexttime" text="距离下一批物品刷新时间：" x="9" fontFamily="SimHei" size="23" textColor="0x18cfcb" verticalCenter="0" y="-269" scaleX="1" scaleY="1"/>
-			<e:Label id="lb_tip" text="每批商品都不同，需要的玩家尽快购买哦!!!!" x="453" fontFamily="SimHei" textColor="0xb91313" size="18" width="200" verticalCenter="0" visible="false"/>
-			<e:Group id="gp_refresh" width="280" height="60" verticalCenter="0" right="0">
-				<e:Image id="img_refresh" source="common_btn_shuaxin_png" y="-2" scaleX="1" scaleY="1" x="93"/>
-				<e:Image x="119" y="-25" scaleX="1" scaleY="1" source="common_jinbi_png"/>
-				<e:Label id="lb_cost" text="987654" x="166" y="-20" fontFamily="SimHei" size="20" textColor="0xbfbfbf" scaleX="1" scaleY="1"/>
-				<e:Image source="shop_txt_shuaxin_png" x="150" touchEnabled="false" y="18" scaleX="1" scaleY="1"/>
-			</e:Group>
-		</e:Group>
-		<e:Label id="lb_over_tip" text="已购买全部商品，请刷新" horizontalCenter="0" top="396" fontFamily="SimHei" textColor="0xbfbfbf"/>
+<e:Skin class="ShopSkin" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<ns1:ComBaseViewBg id="comBaseBg" skinName="ComBaseViewBgSkin" width="720" height="1136" horizontalCenter="0" top="0"/>
+	<e:Group y="45.6" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" width="720" height="915">
+		<e:Image source="shop_bg2_png" anchorOffsetY="0" height="853.7" width="720" y="24" x="0"/>
+		<e:Image scale9Grid="25,24,151,144" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" height="892" width="719" x="0" y="14" source="shop_frame_huangbiankuang_png"/>
+		<e:Image y="-29" scaleX="1" scaleY="1" source="shop_pic_dingbu_png"/>
+		<e:Image y="-29" scaleX="-1" scaleY="1" x="720" source="shop_pic_dingbu_png"/>
+		<e:Scroller id="scroller" width="682" top="54" anchorOffsetY="0" height="613.42" anchorOffsetX="0" horizontalCenter="0"/>
+		<e:Image y="49.73" scaleX="-1" scaleY="1" right="0" source="shop_pic_bian_png"/>
+		<e:Image y="53.07" scaleX="1" scaleY="1" left="0" source="shop_pic_bian_png"/>
+		<e:Image id="img_girl" y="729.32" scaleX="1" scaleY="1" left="0" source="shop_pic_renwu_png"/>
+		<e:Image y="837.07" scaleX="1" scaleY="1" x="0" source="shop_pic_dibu1_png"/>
+		<e:Image scaleX="1" scaleY="1" x="558.7" y="837.52" source="shop_pic_dibu2_png"/>
+		<e:Image id="img_close" x="667.83" y="12.62" source="com_btn_close_png"/>
+		<e:Image id="img_return" source="com_btn_back_png" scaleX="1" scaleY="1" x="634" y="822"/>
 	</e:Group>
+	<e:Group id="gp_nexttime" width="522" height="174.61" bottom="127" anchorOffsetY="0" anchorOffsetX="0" horizontalCenter="0">
+		<e:Image y="29.22" source="shop_bg_shuaxin_png" x="29"/>
+		<e:Label id="lb_nexttime" text="距离下一批物品刷新时间：" fontFamily="SimHei" size="23" y="35.82" scaleX="1" scaleY="1" textColor="0xe4cea9" x="123"/>
+		<e:Label id="lb_tip" text="每批商品都不同，需要的玩家尽快购买哦!!!!" x="453" fontFamily="SimHei" textColor="0xb91313" size="18" width="200" verticalCenter="0" visible="false"/>
+		<e:Group id="gp_refresh" width="280" height="60" x="77.4" y="104.89">
+		<e:Image x="119" y="-25" scaleX="1" scaleY="1" source="common_jinbi_png"/>
+		<e:Label id="lb_cost" text="987654" x="166" y="-23.04" fontFamily="SimHei" size="20" scaleX="1" scaleY="1" textColor="0xffea00"/>
+		<e:Button id="img_refresh" label="刷新" x="96.25" y="-0.11" skinName="skins.ComBtnRedSkin"/>
+		</e:Group>
+		<e:Label id="lb_preview" text="极品预览" x="359.53" y="134.6" textColor="0x00f829" size="24" fontFamily="SimHei"/>
+		<e:Image x="2.37" y="67.61" source="shop_duihuakuang_png"/>
+		<e:Label id="lb_desc" text="机不可失\n赶紧入手吧" x="21.68" fontFamily="SimHei" size="23" verticalCenter="10.694999999999993" y="-259" scaleX="1" scaleY="1" textColor="0xbb878e" anchorOffsetX="0" width="131"/>
+	</e:Group>
+	<e:TabBar id="tabbar" width="400" height="51" bottom="43" horizontalCenter="0" itemRendererSkinName="skins.ComBtnTab1Skin"/>
+	<e:Label id="lb_over_tip" text="已购买全部商品，请刷新" top="404" fontFamily="SimHei" textColor="0xbfbfbf" horizontalCenter="0"/>
 </e:Skin>

@@ -14,7 +14,9 @@ module game {
 		public lb_cost: eui.Label;
 		public lb_own: eui.Label;
 		public lb_get: eui.Label;
-		public img_upgrade: eui.Image;
+		public btn_upgrade: eui.Button;
+		private _rebornMc:AMovieClip;//转生特效
+		private _getCultivationMc:AMovieClip;//获取修为特效
 
 		public gp_up:eui.Group;
 		public gp_xiuwei:eui.Group;
@@ -35,35 +37,72 @@ module game {
 			this.lb_get.textFlow = [{ text: "获取修为", style: { underline: true } }];
 			this.lb_get.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
 				if (App.RoleManager.roleInfo.lv >= 80) {
-					let view = new RebornPointView();
-					PopUpManager.addPopUp({ obj: view });
+					// let view = new RebornPointView();
+					// PopUpManager.addPopUp({ obj: view });
+					App.WinManager.openWin(WinName.POP_REBORN_POINT);
 				} else {
 					App.GlobalTips.showTips("80级开启");
 				}
 			}, this);
 
-			this.img_upgrade.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
+			this.btn_upgrade.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
 				App.Socket.send(20001, {});
 			}, this);
 
 
-			App.BtnTipManager.addBtnTipItem(ConstBtnTipType.ROLE_REBORN_CULTURE,this.gp_xiuwei);
-			App.BtnTipManager.addBtnTipItem(ConstBtnTipType.ROLE_REBORN_UP,this.gp_up);
+			App.BtnTipManager.addBtnTipItem(ConstBtnTipType.ROLE_REBORN_CULTURE,this.gp_xiuwei,95,-5);
+			App.BtnTipManager.addBtnTipItem(ConstBtnTipType.ROLE_REBORN_UP,this.gp_up,150,10);
+            
+			if (this._rebornMc == null) {
+				this._rebornMc = new AMovieClip();
+				this._rebornMc.x = 355;//this._rebornMc.x + 180;
+				this._rebornMc.y = 395;//this._rebornMc.y - 20;
+				this._rebornMc.scaleX =1.7;
+				this._rebornMc.scaleY = 1.7;
+				this._rebornMc.touchEnabled = false;
+				this._rebornMc.visible = false;
+				this.addChild(this._rebornMc);
+				//this.addChildAt(this._canGetMc, 1);
+			}
+			if (this._getCultivationMc == null) {
+				this._getCultivationMc = new AMovieClip();
+				this._getCultivationMc.touchEnabled = false;
+				this.lb_get.parent.addChild(this._getCultivationMc);
+				this._getCultivationMc.x = 50;
+				this._getCultivationMc.y = 15;
+				this._getCultivationMc.visible = true;
+				//this.addChildAt(this._canGetMc, 1);
+			} 
+			this._getCultivationMc.playMCKey("effhqxw");
+
 
 			this.updateView();
+
+		}
+		private effctComplete(){
+			this._rebornMc.visible = false;
 		}
 
 		private handleRebornSuccess() {
-			let mc = new EffectMovieClip();
-			mc.x = this.width / 2;
-			mc.y = this.height / 3;
-			mc.playMCKey("effzhuansheng", "", 1, null, null, () => {
-				if (mc.parent) {
-					mc.parent.removeChild(mc);
+			this._rebornMc.visible = true;
+			//this._rebornMc.playMCKey("effzs","",1);
+			//this._rebornMc.playMCKey("effzs");
+			this._rebornMc.playMCKey("effzs", "", 1, null, () => {
+					this._rebornMc.frameRate = 8;
+				}	, this);
+			if (this._rebornMc.hasEventListener(egret.Event.COMPLETE) == false) {
+					this._rebornMc.addEventListener(egret.Event.COMPLETE, this.effctComplete, this);
 				}
-				mc.destroy();
-			}, this);
-			this.addChild(mc);
+			// let mc = new EffectMovieClip();
+			// mc.x = this.width / 2;
+			// mc.y = this.height / 3;
+			// mc.playMCKey("effzhuansheng", "", 1, null, null, () => {
+			// 	if (mc.parent) {
+			// 		mc.parent.removeChild(mc);
+			// 	}
+			// 	mc.destroy();
+			// }, this);
+			//this.addChild(mc);
 		}
 
 		private updateView() {
@@ -153,6 +192,16 @@ module game {
 			super.clear(data);
 			App.EventSystem.removeEventListener(PanelNotify.REBORN_UPDATE_VIEW);
 			App.EventSystem.removeEventListener(PanelNotify.REBORN_SUCCESS);
+			if (this._rebornMc) {
+				this._rebornMc.visible = false;
+				if (this._rebornMc.hasEventListener(egret.Event.COMPLETE)) {
+					this._rebornMc.removeEventListener(egret.Event.COMPLETE, this.effctComplete, this);
+				}
+				this._rebornMc.stop();
+				this._rebornMc.destroy();
+				this._rebornMc = null;
+			}
+
 		}
 		/**
 		 * 销毁

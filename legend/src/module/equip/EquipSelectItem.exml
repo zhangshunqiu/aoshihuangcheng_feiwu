@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="EquipSelectItem" width="470" height="145" xmlns:e="http://ns.egret.com/eui" xmlns:customui="customui.*" xmlns:w="http://ns.egret.com/wing">
-	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
-		<e:Image source="equipping_bg_list_zhuangbei_png" left="0" right="0" top="0" bottom="0"/>
-		<customui:BaseItem id="baseItem" x="50" width="90" height="90" y="65" anchorOffsetX="45" anchorOffsetY="45" scaleX="0.9" scaleY="0.9"/>
-		<e:Label id="lb_level" text="等级" x="32" y="113" fontFamily="SimHei" size="18" textColor="0xbfbfbf"/>
-		<e:Label id="lb_attr" text="基础属性" x="97" y="52" fontFamily="SimHei" size="18"/>
-		<e:Label id="lb_name" text="名字" x="99" y="15" fontFamily="SimHei" size="20"/>
+<e:Skin class="EquipSelectItem" width="608" height="200" xmlns:e="http://ns.egret.com/eui" xmlns:customui="customui.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="gp_main" width="608" x="0" height="210" y="0">
+		<e:Image source="common_bg_list_neiromg1_png" width="608" x="0" height="210" y="0" scale9Grid="76,23,456,145"/>
+		<e:BitmapLabel id="bmlb_fightcap" x="362.67" y="22" font="combat_shuxing_fnt" text="1582687"/>
+		<customui:BaseItem id="baseItem" x="50" width="90" height="90" y="60" anchorOffsetX="45" anchorOffsetY="45" scaleX="0.9" scaleY="0.9"/>
+		<e:Label id="lb_level" text="等级" y="104" fontFamily="SimHei" size="24" horizontalCenter="-256" textColor="0xbfb294"/>
+		<e:Label id="lb_attr" text="基础属性" x="97" y="52" fontFamily="SimHei" size="24"/>
+		<e:Label id="lb_name" text="名字" x="99" y="20" fontFamily="SimHei" size="24" textColor="0xffffff"/>
 		<e:Label id="lb_cap" text="评分：99999" x="240" y="10" fontFamily="SimHei" size="22" visible="false"/>
-		<e:Image id="img_equiped" source="equipping_yizhuangbei_png" x="432" y="3" visible="false"/>
-		<e:BitmapLabel id="bmlb_cap" x="309" y="17" font="equipping_pingfen_wuqi_shuju_small_fnt" text="123456789"/>
-		<e:Button id="btn_select" label="选择" y="39" skinName="skins.ButtonSkin4" scaleX="0.9" scaleY="0.9" horizontalCenter="13.5"/>
-		<e:Image source="equipping_pingfen_png" x="268" y="16" scaleX="0.6" scaleY="0.6"/>
+		<e:Image id="img_equiped" source="equipping_yizhuangbei_png" x="547" y="10" visible="false"/>
+		<e:BitmapLabel id="bmlb_cap" x="308" y="20" text="123456789" font="equipping_ pingfen_fnt" visible="false"/>
+		<e:Button id="btn_select" label="选择" y="137" scaleX="0.9" scaleY="0.9" horizontalCenter="0" skinName="skins.ComBtnRedSkin"/>
+		<e:Image x="308" y="20" scaleX="1" scaleY="1" source="words_zhandouli_png" anchorOffsetX="0" anchorOffsetY="0"/>
+		<e:Image x="579" source="equipping_jiantou_png" verticalCenter="0"/>
 	</e:Group>
 </e:Skin>

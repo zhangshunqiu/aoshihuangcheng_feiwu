@@ -19,7 +19,7 @@
 		<e:Image width="188.66" height="64.12" source="common_btn_huabian_png" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0"/>
 		<e:Image width="106.05" height="32.04" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" verticalCenter="1.134999999999998" horizontalCenter="0" source="activity_txt_lijilingqu_png"/>
 	</e:Group>
-	<e:Group id="btn_recharge" width="183.3" height="75.73" y="47.93" anchorOffsetY="0" anchorOffsetX="0" horizontalCenter="215.5">
+	<e:Group id="gp_recharge" width="183.3" height="62.73" y="60.93" anchorOffsetY="0" anchorOffsetX="0" horizontalCenter="215.5">
 		<e:Image width="188.66" height="64.12" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" source="common_btn_shuaxin_png"/>
 		<e:Image width="51.64" height="24.16" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" source="activity_txt_chongzhi_png" horizontalCenter="0.3499999999999943" verticalCenter="0"/>
 	</e:Group>

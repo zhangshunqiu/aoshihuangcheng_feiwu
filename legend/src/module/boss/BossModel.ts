@@ -41,7 +41,6 @@ module game {
 
         public constructor() {
             super();
-            this.ranking = [{ "name": "小明", "guanqia": 6 }, { "name": "小红", "guanqia": 4 }, { "name": "小白", "guanqia": 2 }];
             this.dropOutItem = [];
         }
 
@@ -74,8 +73,12 @@ module game {
         public getPassReward() {
             this.bossRewardLevel += 10;
             if(this.getBossRewardNum > 0) {
-                let passRewardId = App.ConfigManager.getSceneConfigById(40000 + this.bossRewardLevel).ten_reward[0][1];
-                this.passReward = App.ConfigManager.getItemInfoById(passRewardId);
+                let tenReward = App.ConfigManager.getSceneConfigById(40000 + this.bossRewardLevel).ten_reward[0];
+                if (tenReward) {
+                    let passRewardId = tenReward[1];
+                    this.passReward = App.ConfigManager.getItemInfoById(passRewardId);
+                }
+                
             }
         }
 
@@ -96,11 +99,19 @@ module game {
                 let dropItem = { type: ClientType.BASE_ITEM, good_id: showItem.value };
                 this.showDrop.push(dropItem);
             }
-            let currentPassRewardId = App.ConfigManager.getSceneConfigById(40000 + Math.ceil(this.sceneInfo.lv_limit / 10) * 10).ten_reward[0][1];
+            let tenReward = App.ConfigManager.getSceneConfigById(40000 + Math.ceil(this.sceneInfo.lv_limit / 10) * 10).ten_reward[0];
+            let currentPassRewardId = tenReward ? tenReward[1] : 1;
             this.currentPassReward = App.ConfigManager.getItemInfoById(currentPassRewardId);
             this.lastIncomePromote = App.ConfigManager.getAllExpConfigById(20000 + this.sceneInfo.lv_limit);
-            this.incomePromote = App.ConfigManager.getAllExpConfigById(20000 + this.sceneInfo.lv_limit + 1);
-            this.upLevelExp = App.ConfigManager.getExpConfigByLv(Number(App.RoleManager.roleInfo.lv)+1).exp;
+            if(this.sceneInfo.lv_limit == App.ConfigManager.getConstConfigByType("BOSS_MAX").value){
+                this.incomePromote = App.ConfigManager.getAllExpConfigById(20000 + this.sceneInfo.lv_limit);
+            } else {
+                this.incomePromote = App.ConfigManager.getAllExpConfigById(20000 + this.sceneInfo.lv_limit + 1);
+            }
+            let upLevel = App.ConfigManager.getExpConfigByLv(Number(App.RoleManager.roleInfo.lv)+1);
+            if(upLevel) {
+                this.upLevelExp = upLevel.exp;
+            } 
             this.upLevelTime = Math.floor( (this.upLevelExp - this.exp) / (this.incomePromote.offline_exp / 30) );
         }
         public updateRanking() {

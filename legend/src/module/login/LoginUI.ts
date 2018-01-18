@@ -33,8 +33,9 @@ module game {
             this.lb_server_select.textFlow = [{ text: "点击选区", style: { underline: true, textColor: 0x00c32e } }]
             this.lb_server_select.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: Event) => {
                 if(this._loginModel.serverList.length >0){
-                    let view = new LoginServer();
-                    PopUpManager.addPopUp({ obj: view, effectType: 0 });
+                    // let view = new LoginServer();
+                    // PopUpManager.addPopUp({ obj: view, effectType: 0 });
+                    App.WinManager.openWin(WinName.POP_LOGIN_SERVER);
                 }else{
                    App.GlobalTips.showTips("服务器列表加载中,请稍后！");
                 }

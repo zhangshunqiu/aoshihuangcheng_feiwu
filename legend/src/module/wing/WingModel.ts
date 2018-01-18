@@ -39,13 +39,14 @@ module game {
             for(let i=0; i<heroInfoR.length; i++) {
                 this.updateWingInfo({wing_info:heroInfoR[i].wing_info, id:heroInfoR[i].id, job:heroInfoR[i].job});
             }
+            App.EventSystem.dispatchEvent(PanelNotify.WING_INFO_UPDATE);
         }
 
         public updateWingInfo(data) {
             let wingInfoR = data.wing_info;
             // let wingInfoR = {wing_id:15,exp:200,score:1000};
-            App.loglyg("翅膀id",data.id);
-            App.loglyg("翅膀数据",wingInfoR);
+            // App.loglyg("翅膀id",data.id);
+            // App.loglyg("翅膀数据",wingInfoR);
             this.wingInfo.heroId = data.id;
             this.wingInfoObj[data.id] = wingInfoR;
             this.wingInfo.wingId = wingInfoR.wing_id;
@@ -127,23 +128,33 @@ module game {
                 }
 
                 let wingAttr = App.ConfigManager.getWingAttrById(this.wingInfo.wingId);  //翅膀属性
-                let wingAttr1 = App.ConfigManager.getWingAttrById(this.wingInfo.wingId+1);  //翅膀下一星属性
+                let wingAttr1;
+                if(this.wingInfo.wingId == 100) {
+                    wingAttr1 = App.ConfigManager.getWingAttrById(this.wingInfo.wingId);  //翅膀下一星属性
+                } else {
+                    wingAttr1 = App.ConfigManager.getWingAttrById(this.wingInfo.wingId+1);  //翅膀下一星属性
+                }
                 let wingStarInfo = App.ConfigManager.getWingStarById(this.wingInfo.wingId);  //升星所需信息
-                let wingStepInfo = App.ConfigManager.getWingStepById(this.wingInfo.step);  //阶数对应信息
                 this.wingInfo.expStar = wingStarInfo.exp;   //升星所需经验
-                this.wingInfo.liftExp = wingStarInfo.lift_exp;  //点击一次升星获得经验
+                this.wingInfo.liftExp = wingStarInfo.lift_exp;  //使用金币点击一次升星获得经验
                 this.wingInfo.wingExp = App.ConfigManager.getConstConfigByType("FEATHER_EXP").value;  //一个羽翼升的经验值
                 this.wingInfo.coin = wingStarInfo.gold;  //点击一次消耗金币
+                this.wingInfo.needWing = wingStarInfo.number;  //点击一次消耗羽毛
                 this.wingInfo.coinStar = (this.wingInfo.expStar - this.wingInfo.exp) / this.wingInfo.liftExp * this.wingInfo.coin;  // 升满当前经验条所需金币
                 this.wingInfo.wingStar = (this.wingInfo.expStar - this.wingInfo.exp) / this.wingInfo.wingExp;
                 this.wingInfo.attr = wingAttr; //翅膀属性
                 this.wingInfo.nextStarAttr = wingAttr1; //翅膀下一星属性
-                this.wingInfo.attrRate = wingStepInfo.attribute_rate;  //完美神翼属性加成
-                this.wingInfo.transform_gold = wingStepInfo.transition_money;  //转换所需元宝
-                this.wingInfo.skill = wingStepInfo.skill;  //阶数对应技能
-                this.wingInfo.photo = wingStepInfo.photo;   //阶数对应翅膀图片
-                this.wingInfo.model = wingStepInfo.model;   //阶数对应翅膀模型
+                // let maxEquipStep = App.ConfigManager.getConstConfigByType("WING_EQUIP_LEVEL_MAX");
+                // let wingStepInfo = App.ConfigManager.getWingStepById(this.wingInfo.step);  //阶数对应信息
+                // this.wingInfo.attrRate = wingStepInfo.attribute_rate;  //完美神翼属性加成
+                // this.wingInfo.transform_gold = wingStepInfo.transition_money;  //转换所需元宝
+                // this.wingInfo.skill = wingStepInfo.skill;  //阶数对应技能
+                this.wingInfo.photo = wingStarInfo.photo;   //阶数对应翅膀图片
+                this.wingInfo.model = wingStarInfo.model;   //阶数对应翅膀模型
                 this.updateWingStep();
+            } else {
+                this.wingInfo.model = null;
+                this.wingInfo.photo = "4001";
             }
             let wingInfo = new WingVo();
             for(let k in this.wingInfo) { //深拷贝
@@ -166,7 +177,6 @@ module game {
             wingInfo.wingEquipGoStep = wingEquipGoStep;
             this.wingInfoObj[data.id] = wingInfo; 
             App.loglyg("wingInfoObj", this.wingInfoObj);
-            App.EventSystem.dispatchEvent(PanelNotify.WING_INFO_UPDATE);
         }
 
         /**
@@ -227,6 +237,7 @@ module game {
             let _heroModel: HeroModel = HeroModel.getInstance();
             let btnTip = [];
             for(let index:number=0; index<App.RoleManager.heroList.length; index++) {
+                btnTip[index] = {devBool: false, equipBool: false};
                 wingInfo = _wingModel.wingInfoObj[_heroModel.heroInfo[index].id];
                 if(wingInfo && wingInfo.wingId) {   //如果已开启羽翼
                     let wingStar =  _backpackModel.getItemByTypeIdUuid(ClientType.BASE_ITEM,16) ? 
@@ -234,18 +245,31 @@ module game {
                     if((_wingModel.heroInfo.coin > wingInfo.coinStar || wingStar ||   //可用金币升星    //可用羽翼升星
                     wingInfo.wingEquipGoStep.zhengyuStep || wingInfo.wingEquipGoStep.fuyuStep ||
                     wingInfo.wingEquipGoStep.rongyuStep || wingInfo.wingEquipGoStep.xuyuStep || //羽翼能否升阶  
-                    _backpackModel.getItemByTypeIdUuid(ClientType.BASE_ITEM,17))){  //有羽翼直升丹
-                        btnTip.push({index:index, bool:true});
-                    } else if(wingInfo.replaceWingEquip){ //有可替换的羽翼装备
-                        btnTip.push({index:index, bool:true});
-                    } else {
-                        btnTip.push({index:index, bool:false});
+                    _backpackModel.getItemByTypeIdUuid(ClientType.BASE_ITEM,17)) && wingInfo.wingId < 100){  //有羽翼直升丹
+                        btnTip[index].devBool = true;
                     }
-                } else {  
-                    btnTip.push({index:index, bool:false});
+                    if(wingInfo.replaceWingEquip) {  //有可替换的羽翼装备
+                        btnTip[index].equipBool = true;
+                    }
+                } else if(index < App.RoleManager.heroList.length){  //如果角色已开启
+                    if(App.RoleManager.roleInfo.lv >= wingInfo.openLv) {  //并且达到开启羽翼条件
+                        btnTip[index].devBool = true;
+                    }
                 }
             }
             return btnTip;
+        }
+
+        /**
+         * 根据wingId获取翅膀图片
+         * @param wingId {number}
+         */
+        public getWingPhoto(wingId: number) {
+            if(wingId) {
+                let stepInfo = App.ConfigManager.getWingStarById(wingId); //阶数对应信息
+                return stepInfo.photo;
+            }
+            return null;
         }
 
         public clear(){

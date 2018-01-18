@@ -15,34 +15,36 @@ module game {
         public baseItem: customui.BaseItem;
         public btn_upgrade: eui.Button;
 
-        private _handleId : number;
+        private _handleId: number;
         private _data;
         private heroModel: HeroModel = HeroModel.getInstance() as HeroModel;
         public constructor(data) {
             super(data);
             this.skinName = "JewelTipSkin";
-            this._data = data;
+            // this._data = data;
         }
 
         protected childrenCreated() {
             super.childrenCreated();
-            this.initView();
-            this._handleId = App.EventSystem.addEventListener(PanelNotify.JEWEL_UPDATE_VIEW, this.handleUpgrade, this);
-        }
-
-        private initView() {
+            // this.initView();
             this.btn_upgrade.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
                 App.Socket.send(15009, { id: this._data.heroId, part: this._data.part, hole: this._data.hole });
             }, this);
-            RES.getResAsync(ConstJewelIcon[this._data.hole] + "_png", (texture) => {
-                this.baseItem.img_icon.source = texture;
-            }, this);
+        }
+
+        private initView() {
+            // RES.getResAsync(ConstJewelIcon[this._data.hole] + "_png", (texture) => {
+            //     this.baseItem.img_icon.source = texture;
+            // }, this);
+            this.baseItem.setItemIcon(ConstJewelIcon[this._data.hole] + "_png");
 
             if (this._data.id) {
                 let jewelInfo = App.ConfigManager.itemConfig()[this._data.id];
                 let numInfo = (BackpackModel.getInstance() as BackpackModel).getItemByTypeIdUuid(ClientType.BASE_ITEM, this._data.id);
                 if (numInfo) {
-                    if (numInfo.num >= 2) {
+                    let maxLevel = App.ConfigManager.getConstConfigByType("JEWEL_LEVEL_MAX").value;
+                    let baseInfo = App.ConfigManager.getItemInfoById(this._data.id);
+                    if (numInfo.num >= 2 && baseInfo.limit_lv < maxLevel) {
                         this.btn_upgrade.visible = true;
                     } else {
                         this.btn_upgrade.visible = false;
@@ -67,13 +69,17 @@ module game {
         }
 
         private handleUpgrade() {
-            PopUpManager.removePopUp(this);
+            // PopUpManager.removePopUp(this);
+            App.WinManager.closeWin(WinName.POP_JEWEL_TIP);
         }
 		/**
 		 * 打开窗口
 		 */
         public openWin(openParam: any = null): void {
             super.openWin(openParam);
+            this._data = openParam.data;
+            this.initView();
+            this._handleId = App.EventSystem.addEventListener(PanelNotify.JEWEL_UPDATE_VIEW, this.handleUpgrade, this);
         }
 
 		/**
@@ -88,17 +94,17 @@ module game {
 		 */
         public clear(data: any = null): void {
             super.clear(data);
+            if (this._handleId) {
+                App.EventSystem.removeEventListener(PanelNotify.JEWEL_UPDATE_VIEW, this._handleId);
+                this._handleId = undefined;
+            }
         }
 		/**
 		 * 销毁
 		 */
         public destroy(): void {
             super.destroy();
-            if (this._handleId) {
-                App.EventSystem.removeEventListener(PanelNotify.JEWEL_UPDATE_VIEW,this._handleId);
-                this._handleId = undefined;
-            }
-            
+
         }
     }
 
@@ -117,14 +123,14 @@ module game {
         private _data;
         private heroModel: HeroModel = HeroModel.getInstance() as HeroModel;
         public constructor(data) {
-            super();
+            super(data);
             this.skinName = "JewelMasterSkin";
-            this._data = data;
+            // this._data = data;
         }
 
         protected childrenCreated() {
             super.childrenCreated();
-            this.initView();
+            // this.initView();
         }
 
         private initView() {
@@ -230,7 +236,7 @@ module game {
             this.lb_attr1.textFlow = text;
             this.lb_cur.textFlow = [{ text: "当前效果：全身宝石等级" }, { text: "+" + level, style: { textColor: 0x21c42b } }];
             // this.lb_cur1.textFlow = [{ text: "下级效果：全身宝石等级" }, { text: "+" + (level + 5), style: { textColor: 0x21c42b } }];
-            this.lb_cur1.text = "下级效果：全身宝石等级+" +(level + 5);
+            this.lb_cur1.text = "下级效果：全身宝石等级+" + (level + 5);
             this.lb_cur1.textColor = 0x626262;
         }
 		/**
@@ -238,6 +244,8 @@ module game {
 		 */
         public openWin(openParam: any = null): void {
             super.openWin(openParam);
+            this._data = openParam.data;
+            this.initView();
         }
 
 		/**
@@ -272,14 +280,14 @@ module game {
         private _data;
         private heroModel: HeroModel = HeroModel.getInstance() as HeroModel;
         public constructor(data) {
-            super();
+            super(data);
             this.skinName = "JewelSuperSkin";
-            this._data = data;
+            // this._data = data;
         }
 
         protected childrenCreated() {
             super.childrenCreated();
-            this.initView();
+            // this.initView();
         }
 
         private initView() {
@@ -376,6 +384,8 @@ module game {
 		 */
         public openWin(openParam: any = null): void {
             super.openWin(openParam);
+            this._data = openParam.data;
+            this.initView();
         }
 
 		/**

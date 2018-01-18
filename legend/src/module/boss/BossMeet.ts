@@ -13,6 +13,7 @@ module game{
         private _bossMc: AMovieClip;
         public gp_boss: eui.Group;
         private _bossModel: BossModel = BossModel.getInstance(); 
+		private _startChallengeEventId: number = 0;
 
         public constructor(viewConf:WinManagerVO = null) {
             super(viewConf);
@@ -34,7 +35,6 @@ module game{
 
        private challengeBoss() {
 			App.Socket.send(13014, {});
-			this.closeWin();
 		}
 
 		private itemTap(event: eui.ItemTapEvent) {
@@ -66,6 +66,9 @@ module game{
 		 */
 		public openWin(openParam:any = null):void{
 			super.openWin(openParam);
+			if (this._startChallengeEventId == 0) {
+				this._startChallengeEventId = App.EventSystem.addEventListener(PanelNotify.BOSS_MEET_START_CHALLENGE, this.closeWin, this);
+			}
 			this.updateView();
 		}
 
@@ -83,6 +86,11 @@ module game{
             super.clear();
 			if(this._bossMc){
 				this._bossMc.destroy();
+				this._bossMc = null;
+			}
+			if(this._startChallengeEventId != 0) {
+				App.EventSystem.removeEventListener(PanelNotify.BOSS_MEET_START_CHALLENGE, this._startChallengeEventId);
+				this._startChallengeEventId = 0;
 			}
 		}
 		/**
@@ -101,19 +109,13 @@ module game{
 			this.skinName = `<?xml version="1.0" encoding="utf-8"?>
 				<e:Skin class="backpackItemSkin" width="100" height="125" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:customui="customui.*">
 					<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
-						<customui:BaseItem id="baseItem" width="100" height="100" horizontalCenter="0" top="0" anchorOffsetX="0" anchorOffsetY="0"/>
+						<customui:BaseItem id="baseItem" width="90" height="90" horizontalCenter="0" top="0" anchorOffsetX="0" anchorOffsetY="0"/>
 					</e:Group>
 				</e:Skin>`;
 		}
 
 		protected dataChanged() {
 			this.baseItem.updateBaseItem(ClientType.BASE_ITEM, this.data[0], this.data[2]);
-			if (this.data.type == ClientType.EQUIP) {
-				let info = App.ConfigManager.equipConfig()[this.data.good_id];
-				if (info) {
-					this.baseItem.lb_name.text = "LV:" + info.limit_lvl;
-				}
-			}
 		}
 
 	} 

@@ -1,0 +1,11 @@
+{"file":"combat_shuxing.png","frames":{
+"9":{"x":21,"y":1,"w":17,"h":24,"offX":0,"offY":0,"sourceW":17,"sourceH":24},
+"0":{"x":20,"y":27,"w":16,"h":23,"offX":0,"offY":0,"sourceW":16,"sourceH":23},
+"1":{"x":1,"y":76,"w":11,"h":23,"offX":0,"offY":0,"sourceW":11,"sourceH":23},
+"2":{"x":1,"y":1,"w":18,"h":23,"offX":0,"offY":0,"sourceW":18,"sourceH":23},
+"3":{"x":1,"y":51,"w":16,"h":23,"offX":0,"offY":0,"sourceW":16,"sourceH":23},
+"4":{"x":40,"y":1,"w":17,"h":23,"offX":0,"offY":0,"sourceW":17,"sourceH":23},
+"5":{"x":1,"y":26,"w":17,"h":23,"offX":0,"offY":0,"sourceW":17,"sourceH":23},
+"6":{"x":40,"y":26,"w":16,"h":24,"offX":0,"offY":0,"sourceW":16,"sourceH":24},
+"7":{"x":37,"y":52,"w":16,"h":23,"offX":0,"offY":0,"sourceW":16,"sourceH":23},
+"8":{"x":19,"y":52,"w":16,"h":23,"offX":0,"offY":0,"sourceW":16,"sourceH":23}}}

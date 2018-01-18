@@ -4,7 +4,7 @@
  * 遭遇战每日奖励界面 2017/06/20.
  */
 module game {
-	export class EncounterRewardView extends eui.Component{
+	export class EncounterRewardView extends BaseView{
 		
 		public scroller:eui.Scroller;
 		public list_reward:eui.List;
@@ -12,9 +12,9 @@ module game {
 		public img_close:eui.Image;
 
 
-		public constructor() {
-			super();
-			this.skinName = EncounterRewardViewSkin;
+		public constructor(vo) {
+			super(vo);
+			// this.skinName = EncounterRewardViewSkin;
 		} 
 
 		protected childrenCreated():void
@@ -24,11 +24,32 @@ module game {
 				this.closeWin();
 			},this);
 			this.list_reward.itemRenderer = EncounterRewardListItem;
-			this.addEventListener(eui.UIEvent.CREATION_COMPLETE,this.showUi,this);
 
 			this.scroller.verticalScrollBar.visible = false;
 			this.scroller.verticalScrollBar.autoVisibility = false;
 			
+		}
+		/**
+		 * 打开窗口(每次打开App.WinManager.openWin(WinName.BACKPACK);都会调用)
+		 */
+		public openWin(openParam: any = null): void {
+			super.openWin(openParam);
+			this.showUi();
+		}
+
+		/**
+		 * 清理(每次关闭App.WinManager.closeWin(WinName.BACKPACK);都会调用)
+		 */
+		public clear(data: any = null): void {
+			super.clear(data);
+		}
+
+		/**
+		 * 销毁
+		 */
+		public destroy(): void {
+			super.destroy();
+		
 		}
 
 		private showUi():void
@@ -43,14 +64,15 @@ module game {
 			this.list_reward.dataProvider = dataArr;
 
 			this.lb_myRank.textFlow = [
-				{text:"我的当前排名: ",style:{textColor:0xf875000}},
+				{text:"我的当前排名: ",style:{textColor:0xf87500}},
 				{text:(EncounterModel.getInstance() as EncounterModel).rank + "",style:{textColor:0xffea00}}
 			]
 		}
 
 
 		public closeWin(): void {
-			PopUpManager.removePopUp(this);
+			// PopUpManager.removePopUp(this);
+			WinManager.getInstance().closePopWin(WinName.POP_Encounter_Reward);
 	    }
 
       

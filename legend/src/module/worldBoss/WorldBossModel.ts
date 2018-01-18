@@ -5,6 +5,7 @@
 module game {
     export class WorldBossModel extends BaseModel {
         public worldBossInfo: any = {};
+        public worldBossItemGroup: any = {};
         public pbWorldBossInfo: any;  //服务器返回的boss数据
         public maxTimesLimit: number = 0;  //最大挑战次数
         public killRecord: any[] = [];  //击杀记录
@@ -28,8 +29,8 @@ module game {
                 if(this.pbWorldBossInfo) {
                     for(let i:number=0; i<this.pbWorldBossInfo.bosses.length; i++) {  //更新boss列表数据
                         for(let j:number=0; j<data.bosses.length; j++) {
-                            if(data.bosses[j].sence_id == this.pbWorldBossInfo.bosses[i].scene_id) {
-                                this.pbWorldBossInfo.boss[i].scene_id = data.bosses[j].scene_id;
+                            if(data.bosses[j].scene_id == this.pbWorldBossInfo.bosses[i].scene_id) {
+                                this.pbWorldBossInfo.bosses[i] = data.bosses[j];
                                 break;
                             }
                         }
@@ -48,23 +49,54 @@ module game {
          * 判断哪个boss适合推荐给玩家
          */
         public judgeFitBoss(bosses) {
-            let maxLimitLv = 10;
-            let maxLimitTurn = 1;
+            let maxLimitLv;
+            let maxLimitTurn;
+            if(this.revive) {
+                let nowBossInfo = App.ConfigManager.getWorldBossInfoById(this.revive.scene_id);
+                maxLimitLv = nowBossInfo.lv_limit;
+                maxLimitTurn = nowBossInfo.transmigration;
+            } else {
+                maxLimitLv = 10;
+                maxLimitTurn = 1;
+            }
             for(let i:number=0; i<bosses.length; i++) {
                 if(bosses[i].notice == 1) {
                     let bossInfo = App.ConfigManager.getWorldBossInfoById(bosses[i].scene_id);
                     if(bossInfo.lv_limit) {  //级数存在按级数
-                        if(bossInfo.lv_limit >= maxLimitLv) {
-                            maxLimitLv = bossInfo.lv_limit;
-                            this.revive = bosses[i];
+                        if(bossInfo.lv_limit <= App.RoleManager.roleInfo.lv) {
+                            if(bossInfo.lv_limit >= maxLimitLv) {
+                                maxLimitLv = bossInfo.lv_limit;
+                                this.revive = bosses[i];
+                            }
                         }
                     } else {  //否则按转数
-                        if(bossInfo.transmigration >= maxLimitTurn) {
-                            maxLimitTurn = bossInfo.transmigration;
-                            this.revive = bosses[i];
+                        if(bossInfo.transmigration <= App.RoleManager.roleInfo.turn) {
+                            if(bossInfo.transmigration >= maxLimitTurn) {
+                                maxLimitTurn = bossInfo.transmigration;
+                                this.revive = bosses[i];
+                            }
                         }
                     } 
                 }
+            }
+        }
+
+        /**
+         * boss复活是否推送给玩家
+         * @return {boolean} true为推送
+         */
+        public showBossRevive() {
+            let times = App.ConfigManager.getConstConfigByType("WORLD_BOSS_BAY_NUM").value;
+            let vipTimes = App.ConfigManager.getVipInfoById(App.RoleManager.roleInfo.vipLv).bay_boss; 
+            let allTimes = times - this.pbWorldBossInfo.buy_times + vipTimes;
+            if(!this.revive) {
+                return false;
+            } else if(this.pbWorldBossInfo.left_times <= 0 && allTimes <= 0) {  //当玩家没有挑战次数并且没有剩余购买次数时不需要弹出
+                return false;
+            } else if (SceneUtil.isBossScene(SceneModel.getInstance().sceneId) || SceneUtil.isActivityScene(SceneModel.getInstance().sceneId)) {
+                return false;
+            } else {
+                return true;
             }
         }
 

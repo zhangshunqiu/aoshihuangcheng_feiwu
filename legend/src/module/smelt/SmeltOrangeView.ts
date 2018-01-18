@@ -5,11 +5,12 @@
 module game{
 	export class SmeltOrangeView extends BaseView{
 		public gp_main : eui.Group;
-		public commonWin : customui.CommonWin;
-		public img_smelt : eui.Image;
+		public btn_smelt : eui.Button;
+		public btn_return : eui.Button;
 		public scroller : eui.Scroller;
         public lb_way1 : eui.Label;
         public lb_way2 : eui.Label;
+		public lb_tips : eui.Label;
         public list : eui.List
 		private smeltModel : SmeltModel = SmeltModel.getInstance();
 		private backpackModel : BackpackModel = BackpackModel.getInstance();
@@ -21,18 +22,23 @@ module game{
 		protected childrenCreated() {
             super.childrenCreated();
 			
-			RES.getResAsync("smelt_orange_title_png",(texture)=>{
-			    this.commonWin.img_title.source = texture;
-			},this);
-            
 			this.scroller.scrollPolicyH = eui.ScrollPolicy.OFF;
             this.initView();
 			this.updateView();
         }
 
         private initView() {
-			this.commonWin.img_close.addEventListener(egret.TouchEvent.TOUCH_TAP,()=>{
-				App.WinManager.closeWin(WinName.SMELT_ORANGE);
+			this.btn_return.addEventListener(egret.TouchEvent.TOUCH_TAP,()=>{
+				App.WinManager.closeWin(WinName.POP_SMELT_ORANGE);
+            },this);
+			this.btn_smelt.addEventListener(egret.TouchEvent.TOUCH_TAP,()=>{
+				this.jumpTo(20);
+            },this);
+			this.lb_way1.addEventListener(egret.TouchEvent.TOUCH_TAP,()=>{
+				this.jumpTo(44);
+            },this);
+			this.lb_way2.addEventListener(egret.TouchEvent.TOUCH_TAP,()=>{
+				this.jumpTo(38);
             },this);
             this.lb_way1.textFlow = [{text:"获得橙装：寻宝",style:{underline:true}}];
             this.lb_way2.textFlow = [{text:"获得橙装：全民BOSS",style:{underline:true}}];
@@ -45,7 +51,21 @@ module game{
 		public updateView() {
 			let data = this.backpackModel.getEquipByQuality(ConstQuality.ORANGE);
 			this.list.dataProvider = new eui.ArrayCollection(data);
+			if (this.list.dataProvider.length == 0) {
+				this.lb_tips.visible = true;
+			} else {
+				this.lb_tips.visible = false;
+			}
 
+		}
+
+		private jumpCallback() {
+			App.WinManager.closeWin(WinName.POP_SMELT_ORANGE);
+		}
+
+		private jumpTo(moduleId) {
+			this.jumpCallback.bind(this);
+			MainModuleJump.jumpToModule(moduleId,this.jumpCallback,this);
 		}
 
 		/**
@@ -97,7 +117,7 @@ module game{
 			let itemInfo = App.ConfigManager.getEquipById(this.data.good_id);
 			let smeltInfo = App.ConfigManager.getSmeltInfoById(itemInfo.smelt);
 			let getInfo = App.ConfigManager.getItemInfoById(smeltInfo.goods_id);
-            this.baseItem.updateBaseItem(ClientType.EQUIP,this.data.good_id);
+            this.baseItem.updateBaseItem(ClientType.EQUIP,this.data.good_id,null,this.data);
 			this.lb_level.text = "装备等级："+itemInfo.limit_lvl+"级";
 			this.lb_get.text = "熔炼后可获得："+smeltInfo.stone+"个"+getInfo.name;
         }

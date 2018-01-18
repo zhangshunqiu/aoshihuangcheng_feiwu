@@ -39,7 +39,6 @@ module game {
             if(this._worldBossFightEventId == 0) {
                 this._worldBossFightEventId = App.EventSystem.addEventListener(PanelNotify.WORLDBOSS_FIGHT, ()=>{
                     App.WinManager.closeWin(WinName.WORLDBOSS);
-                    App.WinManager.openWin(WinName.WORLDBOSS_FIGHT, this.worldBossInfo);
                 }, this);
             }
             if(this._eventId == 0) {
@@ -53,8 +52,8 @@ module game {
                 App.GlobalTips.showTips(text);
             } else {
                 if(this.worldBossInfo.pbWorldBossItem.left_times == 0) {
-                App.WinManager.openWin(WinName.WORLDBOSS_BUY_TIMES);
-                } else {
+                    App.WinManager.openWin(WinName.WORLDBOSS_BUY_TIMES);
+                } else if (!GlobalUtil.checkBagCapacity()){
                     App.Socket.send(36002, {scene_id:this.worldBossInfo.worldBossItem.scene_id});
                 } 
             }       
@@ -206,18 +205,14 @@ module game {
 			this.skinName = `<?xml version="1.0" encoding="utf-8"?>
 				<e:Skin class="backpackItemSkin" width="100" height="125" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:customui="customui.*">
 					<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
-						<customui:BaseItem id="baseItem" width="100" height="100" horizontalCenter="0" top="0" anchorOffsetX="0" anchorOffsetY="0"/>
+						<customui:BaseItem id="baseItem" width="90" height="90" horizontalCenter="0" top="0" anchorOffsetX="0" anchorOffsetY="0"/>
 					</e:Group>
 				</e:Skin>`;
-			this.baseItem.lb_name.visible = false;
+            this.baseItem.setItemNameVisible(true);
 		}
 
 		protected dataChanged() {
             this.baseItem.updateBaseItem(this.data[0], this.data[1], this.data[2]);
-			if (this.data.type == ClientType.EQUIP) {
-				let info = App.ConfigManager.equipConfig()[this.data.good_id];
-				this.baseItem.lb_name.text = "LV:" + info.limit_lvl;
-			}
 		}
 
 	}

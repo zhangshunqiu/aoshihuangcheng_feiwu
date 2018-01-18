@@ -26,6 +26,7 @@ module game {
 			super.initProtocol();
 			//协议监听示范 ,唯一，只能再一个地方监听
 			this.registerProtocal(21001, this.getMailsList, this);
+			this.registerProtocal(21002, this.readMail, this);
 			this.registerProtocal(21003, this.mailRewardStatus, this);
 			this.registerProtocal(21004, this.mailsReceiveStatus, this);
 			this.registerProtocal(21005, this.getMail, this);
@@ -55,9 +56,22 @@ module game {
 			 App.EventSystem.dispatchEvent(PanelNotify.MAIL_INFO_UPDATE);
 			 this.updateMailTips();
 		}
+
+		/**
+		 * 读取邮件返回 
+		 */
+		private readMail(mail):void {
+			if(mail.id) {
+				(MailModel.getInstance() as MailModel).readMail(mail.id);
+				App.EventSystem.dispatchEvent(PanelNotify.MAIL_INFO_UPDATE);
+				this.updateMailTips();
+			}
+		}
+
+	
 		
 		/**
-		 * 领取邮件返回 // 成功返回 失败返回错误提示 邮件id
+		 * 领取邮件返回 // 0背包不足 1成功 邮件id
 		 */
 		private mailRewardStatus(data):void
 		{
@@ -65,9 +79,10 @@ module game {
 			{
 				(MailModel.getInstance() as MailModel).mailAttachSingle(data.id);
 				App.EventSystem.dispatchEvent(PanelNotify.MAIL_INFO_UPDATE);
-				
+				App.EventSystem.dispatchEvent(PanelNotify.MAIL_ATTACHMENT_SUCCESS);
 			}else{
-				console.log("领取附件失败,请检查你的背包");
+				GlobalTips.getInstance().showTips("领取附件失败,请检查你的背包容量");
+				// console.log("领取附件失败,请检查你的背包");
 			}
 			this.updateMailTips();
 		}

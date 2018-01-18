@@ -11,7 +11,7 @@ const ConstBtnTipType = {
 
 
 	ROLE:12,//角色系统（1类）
-	ROLE_EQUIP:123, //角色装备
+	ROLE_EQUIP:121, //角色装备
 	// ROLE_WING:121,//角色翅膀
 	// ROLE_WING_TRAIN:1211,//角色翅膀培养
 	// ROLE_WING_EQUIP:1212,//角色翅膀装备
@@ -44,6 +44,7 @@ const ConstBtnTipType = {
 	TASK:17,//每日必做，任务
 	TASK_MEDAL:171,//每日必做，任务 勋章
 	TASK_ACHIEVE:172,//每日必做，任务成就
+	TASK_ACHIEVETITLE:174,//每日必做，任务成就称号   111
 	TASK_DAILY:173,//每日必做，任务 每日必做
 
 	MOUTHCARD:18,//月卡
@@ -55,6 +56,26 @@ const ConstBtnTipType = {
 	WING :20,//翅膀
 	WING_TRAIN:201,//角色翅膀培养
 	WING_EQUIP:202,//角色翅膀装备
+
+	COPY:21,//副本  111
+	COPY_PERSONAL:211,//个人boss 111
+	COPY_MATERIAL:212,//材料boss 111
+	COPY_CHALLENGE:214,//挑战Boss副本 111
+
+	ACTIVITY:22,//活动   111
+	ACTIVITY_AllRECHARGE:221,//累计充值  111
+	ACTIVITY_DAILYRECHARGE:222,//每日充值  111
+
+	VIPGIFT:23,//vip礼包  111、
+
+	AREAN:24,//竞技场 111
+	AREAN_ENCOUNTER:241,//竞技场遭遇 111
+	AREAN_LABBER:242,//竞技场争霸 111
+
+	METAL:25, //勋章
+
+	RAIDER:26, //寻宝
+	
 }
 
 const ConstBtnTipTypeParent = {
@@ -67,8 +88,9 @@ const ConstBtnTipTypeParent = {
 	[ConstBtnTipType.ROLE_RUBY]:ConstBtnTipType.ROLE,
 	[ConstBtnTipType.ROLE_REBORN]:ConstBtnTipType.ROLE,
 	[ConstBtnTipType.ROLE_RUBY_COMNINE]:ConstBtnTipType.ROLE_RUBY,
-	// [ConstBtnTipType.ROLE_WING_TRAIN]:ConstBtnTipType.ROLE_WING,
-	// [ConstBtnTipType.ROLE_WING_EQUIP]:ConstBtnTipType.ROLE_WING,
+	[ConstBtnTipType.ROLE_RUBY_EMBED]:ConstBtnTipType.ROLE_RUBY,
+	[ConstBtnTipType.WING_TRAIN]:ConstBtnTipType.WING,
+	[ConstBtnTipType.WING_EQUIP]:ConstBtnTipType.WING,
 	[ConstBtnTipType.ROLE_RUBY_COMNINE_GEMSTONE]:ConstBtnTipType.ROLE_RUBY_COMNINE,
 	[ConstBtnTipType.ROLE_RUBY_COMNINE_WING]:ConstBtnTipType.ROLE_RUBY_COMNINE,
 	[ConstBtnTipType.ROLE_REBORN_UP]:ConstBtnTipType.ROLE_REBORN,
@@ -78,9 +100,20 @@ const ConstBtnTipTypeParent = {
 	[ConstBtnTipType.BOSS_CHALLENGE]:ConstBtnTipType.BOSS,
 	[ConstBtnTipType.TASK_MEDAL]:ConstBtnTipType.TASK,
 	[ConstBtnTipType.TASK_ACHIEVE]:ConstBtnTipType.TASK,
+	[ConstBtnTipType.TASK_ACHIEVETITLE]:ConstBtnTipType.TASK,
 	[ConstBtnTipType.TASK_DAILY]:ConstBtnTipType.TASK,
 	[ConstBtnTipType.WELFARE_SIGN]:ConstBtnTipType.WELFARE,
 	[ConstBtnTipType.WELFARE_LEVEN]:ConstBtnTipType.WELFARE,
+
+	[ConstBtnTipType.COPY_PERSONAL]:ConstBtnTipType.COPY,
+	[ConstBtnTipType.COPY_MATERIAL]:ConstBtnTipType.COPY,
+	[ConstBtnTipType.COPY_CHALLENGE]:ConstBtnTipType.COPY,
+
+	[ConstBtnTipType.ACTIVITY_AllRECHARGE]:ConstBtnTipType.ACTIVITY,
+	[ConstBtnTipType.ACTIVITY_DAILYRECHARGE]:ConstBtnTipType.ACTIVITY,
+
+	[ConstBtnTipType.AREAN_ENCOUNTER]:ConstBtnTipType.AREAN,
+	[ConstBtnTipType.AREAN_LABBER]:ConstBtnTipType.AREAN,
 }
 const ConstBtnTipTypeChild = {
 	[ConstBtnTipType.FORGE]:[ConstBtnTipType.FORGE_STRENGTH,ConstBtnTipType.FORGE_STAR],
@@ -93,8 +126,12 @@ const ConstBtnTipTypeChild = {
 	[ConstBtnTipType.ROLE_REBORN]:[ConstBtnTipType.ROLE_REBORN_UP,ConstBtnTipType.ROLE_REBORN_CULTURE],
 	[ConstBtnTipType.BACKPACK]:[ConstBtnTipType.BACKPACK_SMELT,ConstBtnTipType.BACKPACK_SMELTORANGE],
 	[ConstBtnTipType.BOSS]:[ConstBtnTipType.BOSS_CHALLENGE],
-	[ConstBtnTipType.TASK]:[ConstBtnTipType.TASK_MEDAL,ConstBtnTipType.TASK_ACHIEVE,ConstBtnTipType.TASK_DAILY],
+	[ConstBtnTipType.TASK]:[ConstBtnTipType.TASK_MEDAL,ConstBtnTipType.TASK_ACHIEVE,ConstBtnTipType.TASK_ACHIEVETITLE,ConstBtnTipType.TASK_DAILY],
 	[ConstBtnTipType.WELFARE]:[ConstBtnTipType.WELFARE_SIGN,ConstBtnTipType.WELFARE_LEVEN],
+
+	[ConstBtnTipType.COPY]:[ConstBtnTipType.COPY_PERSONAL,ConstBtnTipType.COPY_MATERIAL,ConstBtnTipType.COPY_CHALLENGE],
+	[ConstBtnTipType.ACTIVITY]:[ConstBtnTipType.ACTIVITY_AllRECHARGE,ConstBtnTipType.ACTIVITY_DAILYRECHARGE],
+	[ConstBtnTipType.AREAN]:[ConstBtnTipType.AREAN_ENCOUNTER,ConstBtnTipType.AREAN_LABBER],
 }
 
 /**

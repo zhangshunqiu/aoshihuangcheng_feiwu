@@ -1,0 +1,11 @@
+{"file":"combat_zhandouli_up.png","frames":{
+"0":{"x":73,"y":1,"w":21,"h":31,"offX":0,"offY":0,"sourceW":21,"sourceH":31},
+"1":{"x":69,"y":34,"w":15,"h":30,"offX":0,"offY":0,"sourceW":15,"sourceH":30},
+"2":{"x":1,"y":1,"w":23,"h":30,"offX":0,"offY":0,"sourceW":23,"sourceH":30},
+"3":{"x":96,"y":33,"w":21,"h":30,"offX":0,"offY":0,"sourceW":21,"sourceH":30},
+"4":{"x":96,"y":1,"w":21,"h":30,"offX":0,"offY":0,"sourceW":21,"sourceH":30},
+"5":{"x":26,"y":1,"w":22,"h":31,"offX":0,"offY":0,"sourceW":22,"sourceH":31},
+"6":{"x":1,"y":33,"w":21,"h":30,"offX":0,"offY":0,"sourceW":21,"sourceH":30},
+"7":{"x":47,"y":34,"w":20,"h":28,"offX":0,"offY":0,"sourceW":20,"sourceH":28},
+"8":{"x":50,"y":1,"w":21,"h":31,"offX":0,"offY":0,"sourceW":21,"sourceH":31},
+"9":{"x":24,"y":34,"w":21,"h":30,"offX":0,"offY":0,"sourceW":21,"sourceH":30}}}

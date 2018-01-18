@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ProgressBarWingExpSkin1" width="583" height="36" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="wing_bg_jingyantiao_png" x="0" y="0" visible="false"/>
+	<e:Image id="thumb" source="wing_jingyantiao_png" x="44" y="16" anchorOffsetX="0" width="491.5" visible="false"/>
+	<e:Label id="labelDisplay" text="10/1000" size="20" fontFamily="黑体" verticalCenter="5" textColor="0xffffff" stroke="1" horizontalCenter="0"/>
+</e:Skin>

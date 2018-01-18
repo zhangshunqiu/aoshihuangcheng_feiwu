@@ -1,17 +1,41 @@
 module game {
-	export class FortuneResultView extends eui.Component{
+	export class FortuneResultView extends BaseView{
 		public lb_num:eui.Label;
-		public gold_num:number;
-		public constructor(gold) {
-			super();
-			this.gold_num = gold;
-			this.skinName =  "FortuneResultSkin";
-			this.addEventListener(eui.UIEvent.CREATION_COMPLETE,this.showUi,this);
+				
+		public constructor(viewConf: WinManagerVO = null) 
+		{
+			super(viewConf);
 		}
 
-		private showUi():void
-		{	
-			this.lb_num.text = this.gold_num + "";
+		protected childrenCreated() 
+		{
+            super.childrenCreated();
+			this.addEventListener(egret.TouchEvent.TOUCH_TAP,this.handlerCloseBtn,this);
+        }
+
+		public openWin(openParam: any = null): void {
+			super.openWin();
+			this.lb_num.text = this.openData + "";
 		}
+
+		/**
+		 * 界面返回
+		 */
+		private handlerCloseBtn():void
+		{
+			WinManager.getInstance().closePopWin(WinName.POP_FORTUNE_RESULT);
+		}
+
+		public clear():void
+		{	
+			super.clear();
+		}
+
+		public destroy():void
+		{
+			super.destroy();
+		}
+
+		
 	}
 }

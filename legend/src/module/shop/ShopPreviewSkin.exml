@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ShopPreviewSkin" width="720" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image y="183.31" horizontalCenter="0" source="com_bg_tips_png" scale9Grid="73,64,440,96" anchorOffsetY="0" height="481"/>
+	<e:Scroller id="scroller" width="548" height="405.33" y="250.62" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" scrollPolicyH="off" scrollPolicyV="on">
+		<e:Group id="gp_preview">
+			<e:layout>
+				<e:TileLayout horizontalGap="120" verticalGap="50" horizontalAlign="center"/>
+			</e:layout>
+		</e:Group>
+	</e:Scroller>
+	<e:Label text="极品道具预览" y="206.31" textColor="0xffea00" fontFamily="SimHei" horizontalCenter="0"/>
+	<e:Image y="717" source="com_pic_clickClose_png" horizontalCenter="0.5"/>
+</e:Skin>

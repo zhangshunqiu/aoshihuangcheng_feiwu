@@ -37,7 +37,11 @@ module game {
 		private handlerInvestData(data):void
 		{	
 			this._investModel.investDataUpdate(data);
-			this.dispatchEvent(PanelNotify.INVEST_INFO_UPDATE);
+			if(data["left_time"] <= 0) {
+				this.dispatchEvent(PanelNotify.REMOVE_TOP_BTN,MainUIBtnType.INVEST);
+			}else {
+				this.dispatchEvent(PanelNotify.INVEST_INFO_UPDATE);
+			}
 		}
 
 		/**

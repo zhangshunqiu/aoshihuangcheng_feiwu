@@ -6,8 +6,10 @@ module game {
     export class EquipVO extends ItemVO {
         public score : number; //评分
         public base : any; //基础
-        public special : any; //极品
+        public strength : any; //强化
+        public special : any; //极品 （升星）
         public wash : any; //神装
+        public ruby : any; //宝石
         public constructor(data) {
             super(data);
         }

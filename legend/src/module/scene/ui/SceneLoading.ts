@@ -8,47 +8,45 @@ class SceneLoading extends egret.Sprite {
     private stageH:number = egret.MainContext.instance.stage.stageHeight;
     private ww:number = 0;
     private hh:number = 0;
+
+    private _textField:egret.TextField;
+    private _bg:egret.Bitmap;
     public constructor() {
         super();
+        this._bg = new egret.Bitmap();
+        this.addChild(this._bg);
         this.createView();
-        RES.getResByUrl(ResUrlUtil.getLogoUrl(),this.logoLoadComplete,this)
+        // RES.getResByUrl(ResUrlUtil.getLogoUrl(),this.logoLoadComplete,this,RES.ResourceItem.TYPE_IMAGE);
+        RES.getResByUrl(ResUrlUtil.getLoadingBgUrl(),this.logoLoadComplete,this,RES.ResourceItem.TYPE_IMAGE); 
     }
 
     private logoLoadComplete(event:any):void {
         var img: egret.Texture = <egret.Texture>event;
-        var bitmap: egret.Bitmap = new egret.Bitmap(img);
-        this.addChild(bitmap);
-        this.ww = bitmap.width;
-        this.hh = bitmap.height;
-        bitmap.x = (this.stageW - this.ww)/2;
-        bitmap.y = (this.stageH - this.hh)/2;
-        //this.createView();
+        if(img){
+            this._bg.texture = img;
+            this.ww = this._bg.width;
+            this.hh = this._bg.height;
+            // this._bg.x = (this.stageW - this.ww)/2;
+            this._bg.y = (this.stageH - this.hh)/2;
+        }
     }
-
-    private createBitmapByName(name: string) {
-        let result = new egret.Bitmap();
-        let texture: egret.Texture = RES.getRes(name);
-        result.texture = texture;
-        return result;
-    }
-
-    private textField:egret.TextField;
 
     private createView():void {
-        this.textField = new egret.TextField();
-        this.addChild(this.textField);
+        this._textField = new egret.TextField();
+        this.addChild(this._textField);
         //this.textField.x = 100;
         //this.textField.y = 0;
-        this.textField.width = 480;
-        this.textField.height = 100;
-        this.textField.textAlign = "center";
+        this._textField.width = 480;
+        this._textField.height = 100;
+        this._textField.textAlign = "center";
+        this._textField.size = 24;
 
-        this.textField.x = (this.stageW - 480)/2;
-        this.textField.y = (this.stageH)/2+200;
-		this.textField.text = "场景加载中... 0/0";
+        this._textField.x = (this.stageW - 480)/2;
+        this._textField.y = (this.stageH -100)/2+ 240;
+		this._textField.text = "场景加载中...   (0/0)";
     }
 
     public setProgress(current:number, total:number):void {
-        this.textField.text = `场景加载中...${current}/${total}`;
+        this._textField.text = `场景加载中...  (${current}/${total})`;
     }
 }

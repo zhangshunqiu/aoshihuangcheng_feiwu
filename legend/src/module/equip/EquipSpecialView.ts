@@ -61,6 +61,11 @@ module game {
 		private _starArray: Array<eui.Image> = [];
 		private _enough: boolean = false;
 		private _costId: number;
+		private _fragmentActiveMc0: AMovieClip;//可激活特效
+		private _fragmentActiveMc1: AMovieClip;//可激活特效
+		private _fragmentActiveMc2: AMovieClip;//可激活特效
+		private _fragmentActiveMc3: AMovieClip;//可激活特效
+		private _ringActiveEffs: Array<AMovieClip> = [];
 		public constructor(viewConf: WinManagerVO = null) {
 			super(viewConf);
 		}
@@ -89,6 +94,7 @@ module game {
 			this.gp_ring.visible = false;
 			this.gp_tip.visible = false;
 
+
 			this._curPos = this.heroModel.curPos;
 			this._ringFragment.push(this.lb_ring_fragment0);
 			this._ringFragment.push(this.lb_ring_fragment1);
@@ -108,10 +114,45 @@ module game {
 			this._starArray.push(this.img_star7);
 			this._starArray.push(this.img_star8);
 			this._starArray.push(this.img_star9);
+
+			this.addActiveEff();
 			// this.updateView(this._curPos);
 			this.validateNow();
 		}
+		private addActiveEff() {
 
+			if (this._ringActiveEffs.length == 0) {
+				this._ringActiveEffs.push(this._fragmentActiveMc0);//可激活特效
+				this._ringActiveEffs.push(this._fragmentActiveMc1);
+				this._ringActiveEffs.push(this._fragmentActiveMc2);
+				this._ringActiveEffs.push(this._fragmentActiveMc3);
+			}
+
+			for (let i = 0; i < this._ringActiveEffs.length; i++) {
+				if (this._ringActiveEffs[i] == null) {
+					this._ringActiveEffs[i] = new AMovieClip();
+					this._ringImg[i].parent.addChild(this._ringActiveEffs[i]);
+					this._ringActiveEffs[i].touchEnabled = false;
+					this._ringActiveEffs[i].scaleX = 1.6;
+					this._ringActiveEffs[i].x = this._ringImg[i].x+174;
+					this._ringActiveEffs[i].y = this._ringImg[i].y+27;
+				}
+				this._ringActiveEffs[i].visible = false;
+
+			}
+		}
+		private clearActiveEff() {
+
+			for (let i = 0; i < this._ringActiveEffs.length; i++) {
+				if (this._ringActiveEffs[i]) {
+					this._ringActiveEffs[i].stop();
+					this._ringActiveEffs[i].destroy();
+					this._ringActiveEffs[i] = null;
+				}
+			}
+			this._ringActiveEffs.splice(0);
+
+		}
 		private updateView(data) {
 			if (data || data == 0) {
 				this._curPos = data;
@@ -152,7 +193,7 @@ module game {
 				let info = App.ConfigManager.getEquipSpecialByPartLevel(this._curPart, 0);
 				this.lb_active_desc.text = info.des;
 				if (info.condition && typeof info.condition == "number") {
-					let sceneInfo = App.ConfigManager.getHookSceneConfigByLevel( info.condition);
+					let sceneInfo = App.ConfigManager.getHookSceneConfigByLevel(info.condition);
 					this.lb_active_condition.text = "通关关卡" + sceneInfo.name + "解锁";
 					if (info.condition_level) {
 						this.lb_active_condition.text += "\n等级达到" + info.condition_level + "级解锁";
@@ -185,15 +226,27 @@ module game {
 				}
 
 			} else {
-				for (let i = 0; i < 4; i++) {
-					let singleRingInfo = App.ConfigManager.getEquipSpecialFragmentById(ringInfo.ring_id[i]);
-					this._ringFragment[i].text = singleRingInfo.name;
-					if (specialInfo.getpieceByKey(ringInfo.ring_id[i])) { //激活了
-						this._ringFragment[i].textFlow = [{ text: this._ringFragment[i].text, style: { underline: true, textColor: 0x00f829 } }, { text: "已激活", style: { underline: true, textColor: 0xd7852f } }];
-					} else if (BossModel.getInstance().level >= singleRingInfo.condition) {
-						this._ringFragment[i].textFlow = [{ text: this._ringFragment[i].text, style: { underline: true, textColor: 0x00f829 } }, { text: "可激活", style: { underline: true, textColor: 0xffea01 } }];
-					} else {
+				if (ringInfo.next_id) {
+					this.gp_ring_fragment.visible = true;
+					for (let i = 0; i < 4; i++) {
+						let singleRingInfo = App.ConfigManager.getEquipSpecialFragmentById(ringInfo.ring_id[i]);
+						this._ringFragment[i].text = singleRingInfo.name;
+						if (specialInfo.getpieceByKey(ringInfo.ring_id[i])) { //激活了
+							this._ringActiveEffs[i].visible = false;
+							this._ringActiveEffs[i].stop();
+							this._ringFragment[i].textFlow = [{ text: this._ringFragment[i].text, style: { underline: true, textColor: 0x00f829 } }, { text: "已激活", style: { underline: true, textColor: 0xd7852f } }];
+
+						} else if (BossModel.getInstance().level >= singleRingInfo.condition) {
+							this._ringFragment[i].textFlow = [{ text: this._ringFragment[i].text, style: { underline: true, textColor: 0x00f829 } }, { text: "可激活", style: { underline: true, textColor: 0xffea01 } }];
+							this._ringActiveEffs[i].visible = true;
+							this._ringActiveEffs[i].playMCKey("effanniu");
+						} else {
+							this._ringActiveEffs[i].visible = false;
+							this._ringActiveEffs[i].stop();
+						}
 					}
+				} else {
+					this.gp_ring_fragment.visible = false;
 				}
 			}
 
@@ -219,6 +272,9 @@ module game {
 					}
 				}
 			};
+			if (textArray.length > 0) {
+				textArray.pop();
+			}
 			this.lb_ring_attr.textFlow = textArray;
 			if (ringInfo.next_id) {
 				// let nextInfo = App.ConfigManager.getEquipSpecialById(ringInfo.next_id);
@@ -243,6 +299,9 @@ module game {
 						}
 					}
 				};
+				if (textArray2.length > 0) {
+					textArray2.pop();
+				}
 				this.lb_ring_attr_next.textFlow = textArray2;
 			} else {
 				this.lb_ring_attr_next.text = "满级";
@@ -256,6 +315,9 @@ module game {
 			let otherInfo = App.ConfigManager.getEquipSpecialById(specialInfo.id);
 			let afterLevel = otherInfo.level % 10;  //激活星星数
 			this.lb_name.text = otherInfo.name;
+			if (afterLevel == 0 && otherInfo.level != 0) {
+				afterLevel = 10;
+			}
 			for (let i = 0; i < this._starArray.length; i++) {
 				if (i + 1 <= afterLevel) {
 					this._starArray[i].visible = true;
@@ -364,8 +426,9 @@ module game {
 			// 	let view = new EquipSpecialTipView({ pos: this._curPos, part: this._curPart, num: pos });
 			// 	PopUpManager.addPopUp({ obj: view });
 			// }
-			let view = new EquipSpecialTipView({id: this.heroModel.heroInfo[this._curPos].id, pos: this._curPos, part: this._curPart, num: pos });
-			PopUpManager.addPopUp({ obj: view });
+			// let view = new EquipSpecialTipView({id: this.heroModel.heroInfo[this._curPos].id, pos: this._curPos, part: this._curPart, num: pos });
+			// PopUpManager.addPopUp({ obj: view });
+			App.WinManager.openWin(WinName.POP_EQUIPSPECIAL_TIP, { data: { id: this.heroModel.heroInfo[this._curPos].id, pos: this._curPos, part: this._curPart, num: pos } });
 		}
 
 		//特殊装备升级 
@@ -378,15 +441,15 @@ module game {
 		}
 
 		public checkGuide() {
-			App.GuideManager.bindClickBtn(this.btn_active,1015,2);
-			App.GuideManager.bindClickBtn(this.commonWin.img_close,1015,3);
+			App.GuideManager.bindClickBtn(this.btn_active, 1015, 2);
+			App.GuideManager.bindClickBtn(this.commonWin.img_close, 1015, 3);
 			// App.GuideManager.bindClickBtn(this._ringImg[0],1015,3);
 			App.GuideManager.checkGuide(1015);
 		}
 
 		public removeGuide() {
-			App.GuideManager.removeClickBtn(1015,2);
-			App.GuideManager.removeClickBtn(1015,3);
+			App.GuideManager.removeClickBtn(1015, 2);
+			App.GuideManager.removeClickBtn(1015, 3);
 		}
 
 		/**
@@ -417,9 +480,11 @@ module game {
 			if (!this._updateHandleId) {
 				this._updateHandleId = App.EventSystem.addEventListener(PanelNotify.HERO_SPECIAL_EQUIP_UPDATE, this.updateView, this);
 			}
+			this.hero_head.open(openParam);
 			this.hero_head.readyOpen(openParam);
 			this.updateView(this._curPos);
 			this.checkGuide();
+			//this.addActiveEff();
 		}
 
 		/**
@@ -444,6 +509,7 @@ module game {
 				this._updateHandleId = undefined;
 			}
 			this.hero_head.clear(data);
+			this.clearActiveEff()
 		}
 		/**
 		 * 销毁

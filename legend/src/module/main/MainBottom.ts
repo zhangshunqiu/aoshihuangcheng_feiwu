@@ -13,16 +13,20 @@ module game {
         //public img_achieve: eui.Image;
         public img_shop: eui.Image;
 
-        public img_add_diamond: eui.Image;
-        public img_add_money: eui.Image;
+        // public img_add_diamond: eui.Image;
+        // public img_add_money: eui.Image;
         public lb_name: eui.Label;
         public lb_level: eui.Label;
-        public lb_money: eui.Label;
-        public lb_diamond: eui.Label;
+        // public lb_money: eui.Label;
+        // public lb_diamond: eui.Label;
+        public pb_exp: eui.ProgressBar;
+        public pb_exp1: eui.ProgressBar;
 
         public img_maincity: eui.Image;
         public img_field: eui.Image;
         public img_bossR: eui.Image;
+        public gp_pbEffect: eui.Group;
+        public re_pbMask: eui.Rect;
 
         public gp_btn: eui.Group;
 
@@ -40,6 +44,10 @@ module game {
         public img_backPag_full: eui.Image;//背包满提示
         private _isShowBackPagFullTips: Boolean = false;
         private _guideTimeHandler: number; //新手引导计时器
+        private _pbMc: AMovieClip;
+
+        private _winOpenEventId: number = 0;
+        private _winCloseEventId: number = 0;
 
         public constructor(viewconf) {
             super(viewconf);
@@ -56,6 +64,12 @@ module game {
             if (this._backPagTipEventId == 0) {
                 this._backPagTipEventId = App.EventSystem.addEventListener(PanelNotify.MAIN_BACKPAG_FULL_TIPS, this.updateBackPagFullTips, this);
             }
+            if (this._winOpenEventId == 0) {
+                this._winOpenEventId = App.EventSystem.addEventListener(WinManagerEvent.WIN_OPEN, this.selectButton, this);
+            }
+            if (this._winCloseEventId == 0) {
+                this._winCloseEventId = App.EventSystem.addEventListener(WinManagerEvent.WIN_CLOSE, this.closeButton, this);
+            }
         }
 
         public initView() {
@@ -66,13 +80,13 @@ module game {
 
             this.touchEnabled = false;
             this.img_main.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: egret.Event) => {
-                if (SceneUtil.isMainScene(SceneModel.getInstance().sceneId)) {
+                if (SceneUtil.isMainScene(SceneModel.getInstance().sceneId) || SceneUtil.isBossScene(SceneModel.getInstance().sceneId)||SceneUtil.isArenaScene(SceneModel.getInstance().sceneId)) {
                     App.Socket.send(13001, {});
                 } else if (SceneUtil.isWorldBossScene(SceneModel.getInstance().sceneId)) {
-                    App.Socket.send(36008, {});    //推出挑战世界boss
+                    App.Socket.send(36008, {});    //退出挑战世界boss
                 } else {
                     App.Socket.send(11003, {});
-                }
+                } 
             }, this);
             // this.img_backpack.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: egret.Event) => {
             //     App.WinManager.openWin(WinName.BACKPACK);
@@ -90,16 +104,18 @@ module game {
                 App.WinManager.openWin(WinName.SHOP);
             }, this);
 
-            this.img_add_money.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
+            // this.img_add_money.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
+            //     App.GlobalTips.showItemWayTips(0,101);
+            // }, this);
 
-            }, this);
-
-            this.img_add_diamond.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
-                RechargeOpenManager.getInstance().openRechargeView();
-            }, this);
+            // this.img_add_diamond.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
+            //     RechargeOpenManager.getInstance().openRechargeView();
+            // }, this);
 
             this.updateBackPagFullTips(this._isShowBackPagFullTips);
             this.updateBottomBtn();
+            this.joinPbEffect();
+            this.updateBaseInfo();
         }
         /**
          * 背包满提示信息
@@ -120,14 +136,42 @@ module game {
             let wealthInfo = App.RoleManager.roleWealthInfo;
             this.lb_level.text = baseInfo.lv + "级";
             this.lb_name.text = baseInfo.name;
-            this.lb_diamond.text = String(wealthInfo.gold);
-            this.lb_money.text = String(wealthInfo.coin);
-            if (wealthInfo.coin > 10000000) {
-                this.lb_money.text = Math.floor(wealthInfo.coin / 10000) + "万";
+            // this.lb_diamond.text = String(wealthInfo.gold);
+            // this.lb_money.text = String(wealthInfo.coin);
+            // if (wealthInfo.coin > 10000000) {
+            //     this.lb_money.text = Math.floor(wealthInfo.coin / 10000) + "万";
+            // }
+            // if (wealthInfo.gold > 1000000) {
+            //     this.lb_money.text = Math.floor(wealthInfo.coin / 10000) + "万";
+            // }
+            // if (baseInfo.turn) {
+            //     this.lb_level.text = baseInfo.turn + "转" + baseInfo.lv + "级";
+            // }
+            let upExp;
+            if(baseInfo == App.ConfigManager.getConstConfigByType("LEVEL_MAX")) {
+                upExp = App.ConfigManager.getExpConfigByLv(Number(baseInfo.lv)); 
+            } else {
+                upExp = App.ConfigManager.getExpConfigByLv(Number(baseInfo.lv) + 1);  //升级经验
             }
-            if (baseInfo.turn) {
-                this.lb_level.text = baseInfo.turn + "转" + baseInfo.lv + "级";
+            this.pb_exp.maximum = upExp.exp;
+            this.pb_exp.value = App.RoleManager.roleInfo.exp;
+            this.pb_exp.labelDisplay.visible = false;
+            this.pb_exp1.maximum = upExp.exp;
+            this.pb_exp1.value = App.RoleManager.roleInfo.exp;
+            this.gp_pbEffect.x = this.pb_exp.value / this.pb_exp.maximum * this.pb_exp.width + 75;
+        }
+
+        private joinPbEffect() {
+            if (this._pbMc == null) {
+                this._pbMc = new AMovieClip();
             }
+            this.gp_pbEffect.addChild(this._pbMc);
+            this._pbMc.playMCKey("efftyjdt", "", -1, null, ()=>{
+                this._pbMc.frameRate = 8;
+            }, this);
+            this._pbMc.x = -42;
+            this._pbMc.y = 10;
+            this.gp_pbEffect.mask = this.re_pbMask;
         }
 
         private updateBottomBtn() {
@@ -154,36 +198,79 @@ module game {
                     }
                 }, this);
                 this.gp_btn.addChild(item);
-                item.x = j * 107 + 164;
-                item.y = -8;
+                item.x = j * 90 + 130;
+                item.y = -15;
                 this._buttomBtnList.push(item);
             }
         }
 
         private updateSceneStatus(data) {
-            this.img_maincity.visible = false;
+            // this.img_maincity.visible = false;
             this.img_bossR.visible = false;
             this.img_field.visible = false;
-            // this._curStatus = data ? data : ConstSceneType.MAIN;
-            // if (data == ConstSceneType.MAIN) {  //主城
-            //     this.img_field.visible = true;
-            // } else if (data == ConstSceneType.FIELD) {  //野外挂机
-            //     this.img_maincity.visible = true;
-            // } else if (data == ConstSceneType.BOSS) {   //挑战boss
-            //     this.img_bossR.visible = true;
-            // } else {
-            //     this.img_maincity.visible = true;
-            // }
-
             if (SceneUtil.isMainScene(SceneModel.getInstance().sceneId)) {
                 this.img_field.visible = true;
             } else if (SceneUtil.isHookScene(SceneModel.getInstance().sceneId)) {
-                this.img_maincity.visible = true;
-            } else if (SceneUtil.isBossScene(SceneModel.getInstance().sceneId)) {
+                // this.img_maincity.visible = true;
+            } else if (SceneUtil.isBossScene(SceneModel.getInstance().sceneId)||SceneUtil.isActivityScene(SceneModel.getInstance().sceneId)) {
                 this.img_bossR.visible = true;
             } else {
                 this.img_field.visible = true;
             }
+        }
+
+        private selectButton(vo) {
+            if (vo) {
+                switch(vo.winName) {
+                    case WinName.HERO: 
+                        this.onSelected(this._buttomBtnList[0]);
+                        break;
+                    case WinName.BACKPACK: 
+                        this.onSelected(this._buttomBtnList[1]);
+                        break;
+                    case WinName.FORGE: 
+                        this.onSelected(this._buttomBtnList[2]);
+                        break;
+                    case WinName.WING: 
+                        this.onSelected(this._buttomBtnList[3]);
+                        break;
+                    case WinName.METAL:
+                        this.onSelected(this._buttomBtnList[4]);
+                        break;
+                    //default
+                }
+            }
+        }
+
+        private closeButton(vo) {
+             if (vo) {
+                switch(vo.winName) {
+                    case WinName.HERO: 
+                        this.onClosed(this._buttomBtnList[0]);
+                        break;
+                    case WinName.BACKPACK: 
+                        this.onClosed(this._buttomBtnList[1]);
+                        break;
+                    case WinName.FORGE: 
+                        this.onClosed(this._buttomBtnList[2]);
+                        break;
+                    case WinName.WING: 
+                        this.onClosed(this._buttomBtnList[3]);
+                        break;
+                    case WinName.METAL:
+                        this.onClosed(this._buttomBtnList[4]);
+                        break;
+                    //default
+                }
+            }
+        }
+
+        private onSelected(obj) {
+            obj.setSelected(true);
+        }
+
+        private onClosed(obj) {
+            obj.setSelected(false);
         }
 
         //引导检测
@@ -238,6 +325,14 @@ module game {
             super.destroy();
             App.EventSystem.removeEventListener(PanelNotify.PLAYER_UPDATE_PLAYER_INFO, this._handle);
             App.EventSystem.removeEventListener(SceneEventType.INIT_SCENE, this._sceneHandle);
+            if (this._winOpenEventId != 0) {
+                App.EventSystem.removeEventListener(WinManagerEvent.WIN_OPEN, this._winOpenEventId);
+                this._winOpenEventId = 0;
+            }
+            if (this._winCloseEventId != 0) {
+                App.EventSystem.removeEventListener(WinManagerEvent.WIN_CLOSE, this._winCloseEventId);
+                this._winCloseEventId = 0;
+            }
         }
     }
 }

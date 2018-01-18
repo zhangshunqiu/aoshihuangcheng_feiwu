@@ -21,9 +21,10 @@ module game {
         public constructor() {
             super();
             this._serverList = [
-                new ServerListVo(124,"刘博的服务器","10.0.10.157",32750),
-                new ServerListVo(125,"甘振志的服务器","10.0.10.44",32750),
-                new ServerListVo(126,"廖伯祥的服务器","10.0.10.79",32750),
+          
+                new ServerListVo(124,"刘博的服务器","10.0.20.206",32750),
+                new ServerListVo(125,"甘振志的服务器","10.0.20.207",32750),
+                new ServerListVo(126,"廖伯祥的服务器","10.0.20.208",32750),
                 new ServerListVo(123,"默认服务器","10.0.10.25",32750)
                 ]
             let sid:number = Number(egret.localStorage.getItem("localServerId"));

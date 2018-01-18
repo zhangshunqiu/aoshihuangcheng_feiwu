@@ -22,6 +22,8 @@ module game {
 		public lb_my_level: eui.Label;
 		public lb_nextlevel: eui.Label;
 		public btn_rank: eui.Button;
+		public lb_myLv:eui.Label;
+		public lb_stageLv:eui.Label;
 		public baseItem1: customui.BaseItem;
 		public baseItem2: customui.BaseItem;
 		public baseItem3: customui.BaseItem;
@@ -49,6 +51,8 @@ module game {
 
 		protected childrenCreated() {
 			super.childrenCreated();
+			this.scroller.viewport = this.list;
+			this.list.itemRenderer = ActivityDailyRankItem;
 			this.lb_rank.textFlow = [{ text: "查看排名", style: { underline: true } }];
 			this.baseItem_reward.addEventListener(egret.TouchEvent.TOUCH_TAP, this.getReward, this);
 			this.lb_rank.addEventListener(egret.TouchEvent.TOUCH_TAP, this.showRank, this);
@@ -97,7 +101,7 @@ module game {
 			}
 
 			//App.loglh(this._curCondition);
-
+			//阶段奖励
 			for (let k in info.stage_reward_all) {
 				if (info.stage_reward_all[k][0] == this._curCondition) {
 					// let baseItem = new customui.BaseItem();
@@ -120,12 +124,12 @@ module game {
 
 			this.lb_desc.text = info.des;
 			this.lb_my_level.text = activityData.value;
-			this.lb_my_rank.textFlow = [{text:"宝石总等级："},{text:activityData.value+"级",style:{textColor:0xffa200}}];
+			this.lb_my_rank.textFlow = [{text:info.desc+"总"+info.unit +"："},{text:activityData.value+"",style:{textColor:0xffa200}}];
 			this.lb_nextlevel.text = String(this._curCondition);
+			this.lb_stageLv.textFlow = [{text:info.desc+"总"+info.unit,style:{textColor:0xBFBFBF}}];
+			this.lb_myLv.textFlow = [{text:"我的"+info.desc+info.unit,style:{textColor:0xBFBFBF}}];
 
-
-
-			//各阶段奖励
+			//各个排名奖励
 			this.baseItem1.updateBaseItem(info.reward1[0][0], info.reward1[0][1], info.reward1[0][2]);
 
 			this._rewardid_list.push(info.reward1[0][1]);
@@ -236,6 +240,11 @@ module game {
 		public constructor() {
 			super();
 			this.skinName = "ActivityDailyRankItemSkin";
+			let layout = new eui.HorizontalLayout();
+			layout.gap = 10;
+			layout.horizontalAlign = egret.HorizontalAlign.LEFT;
+			layout.verticalAlign = egret.VerticalAlign.MIDDLE;
+			this.gp_reward.layout = layout;
 		}
 
 		protected dataChanged() {
@@ -243,7 +252,7 @@ module game {
 			let info = App.ConfigManager.getDaliyRankInfoById(activityData.rank_id);
 
 			this.lb_rank.text = this.data.rank;
-			this.lb_level.text = "总等级："+this.data.key+"级";
+			this.lb_level.text = "总"+ info.unit +"："+this.data.key;
 			this.lb_name.text = this.data.name;
 
 			this.gp_reward.removeChildren();

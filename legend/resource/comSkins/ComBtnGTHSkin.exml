@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.ComBtnGTHSkin" width="52" height="55" xmlns:e="http://ns.egret.com/eui" states="up" >
+	<e:Image x="0" y="0" source="com_btn_gth_png"/>
+</e:Skin>

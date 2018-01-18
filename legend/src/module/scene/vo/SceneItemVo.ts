@@ -7,18 +7,19 @@ class SceneItemVo extends BaseObjectVo {
 	public num:number = 0;//物品数量
 	public ownerId:number = 0;//归属玩家id
 	public timeOut:number = 0;//归属失效时间
+	public monsterId:number = 0;//掉落怪物ID
 	public constructor() {
 		super();
 		this.type = SceneObjectType.ITEM;
 
 		//测试数据
-		this.bodyId = "gold_png";
+		//this.bodyId = "gold_png";
 		this.gridX = SceneModel.getInstance().getRandomGX();
 		this.gridY = SceneModel.getInstance().getRandomGY();
 		this.posX = SceneUtil.gridToPixelX(this.gridX);
 		this.posY =  SceneUtil.gridToPixelY(this.gridY);
 		this.id = this.objectId;
-		this.name = "金币"+this.id;
+		//this.name = "金币"+this.id;
 	}
 	
 	/**
@@ -39,8 +40,25 @@ class SceneItemVo extends BaseObjectVo {
 		this.num = obj["goods_num"];
 		this.ownerId = obj["own_id"];
 		this.timeOut = obj["time_out"];
+		this.monsterId = obj["obj_mon_id"];
 
-		var selfVo:BaseFightObjVo = SceneModel.getInstance().getSelfPlayerVo();
+		var goodsconf = App.ConfigManager.getItemInfoById(this.modelId);
+		if(goodsconf){
+		}else{
+			goodsconf = App.ConfigManager.getEquipConfigById(Number(this.modelId));
+		}
+		this.bodyId = goodsconf.icon;
+		if(this.modelId == "101"){
+			this.name =  String(this.num);
+		}else{
+			this.name = goodsconf.name;
+		}
+		
+		var selfVo:BaseFightObjVo = SceneModel.getInstance().getMonsterVo(this.monsterId);
+
+		if(!selfVo){
+			selfVo = SceneModel.getInstance().getSelfPlayerVo();
+		}
 		if(selfVo){
 			var nPos:Array<number> = SceneUtil.getRoundWalkGrid(selfVo.gridX,selfVo.gridY,selfVo.dire.dire8);
 			if(nPos){
@@ -51,7 +69,7 @@ class SceneItemVo extends BaseObjectVo {
 				this.gridY = selfVo.gridY;
 			}
 		}else{
-			this.gridX = SceneModel.getInstance().getRandomGX(); 
+			this.gridX = SceneModel.getInstance().getRandomGX();
 			this.gridY = SceneModel.getInstance().getRandomGY();
 		}
 

@@ -15,7 +15,7 @@ module game {
 		private _movieClip:EffectMovieClip;
 		private _rewardData;//服务端数据
 		private _itemData;//表中数据
-		private _num:number;
+		private _num:number;//天数
 
 		public constructor(itemData,num) {
 			super();

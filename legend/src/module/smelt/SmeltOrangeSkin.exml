@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="SmeltOrangeSkin" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:customui="customui.*">
 	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
-		<customui:CommonWin id="commonWin" left="0" right="0" top="0" bottom="0" locked="true"/>
-		<e:Image source="common_bg_interface_level_1_png" horizontalCenter="0" top="0" visible="false"/>
-		<e:Image source="smelt_orange_bg_1_png" top="60" horizontalCenter="0"/>
-		<e:Image source="common_interface_tanchuang_1_png" height="450" top="69" scale9Grid="28,24,168,151" width="646" horizontalCenter="0"/>
-		<e:Image source="smelt_orange_hengtiao_png" y="584" horizontalCenter="0.5"/>
-		<e:Image source="smelt_orange_hengtiao_png" y="688" horizontalCenter="0.5"/>
-		<e:Image source="smelt_orange_zhuangshi_png" y="531" horizontalCenter="0"/>
-		<e:Image source="smelt_orange_baoxiang_png" x="90" y="592"/>
-		<e:Image source="smelt_orange_baoxiang_png" x="88" y="696"/>
-		<e:Image source="smelt_orange_huoqutujing_png" y="543" horizontalCenter="0"/>
-		<e:Label text="注：蓝装和紫装能通过橙装碎片提升成橙装" x="73" y="799" fontFamily="SimHei" textColor="0x7e541a" size="24"/>
-		<e:Image id="img_smelt" source="common_btn_common_png" y="835" x="285"/>
-		<e:Image source="smelt_orange_shengjichengzhuang_png" y="849" x="312" touchEnabled="false"/>
-		<e:Scroller id="scroller" width="630" height="435" horizontalCenter="0" top="75">
+		<e:Image horizontalCenter="0.5" source="com_bg_tips_png" scale9Grid="73,93,440,51" width="677" height="859" verticalCenter="-13.5"/>
+		<e:Image source="smelt_orange_hengtiao_png" y="598" horizontalCenter="0.5"/>
+		<e:Image source="smelt_orange_hengtiao_png" y="702" horizontalCenter="0.5"/>
+		<e:Image y="531" horizontalCenter="0.5" source="com_pic_decorate5_png"/>
+		<e:Image source="smelt_orange_baoxiang_png" x="90" y="606"/>
+		<e:Image source="smelt_orange_baoxiang_png" x="88" y="710"/>
+		<e:Image source="com_bg_list2_png" y="837" width="666" horizontalCenter="0"/>
+		<e:Label text="熔炼橙装" y="111" fontFamily="SimHei" size="24" horizontalCenter="0" textColor="0xc89857"/>
+		<e:Label text="注：蓝装和紫装能通过橙装碎片提升成橙装" y="809" fontFamily="SimHei" size="24" textColor="0xf87500" horizontalCenter="0"/>
+		<e:Label text="获取途径" y="552" fontFamily="SimHei" size="28" horizontalCenter="0" textColor="0x7f693d"/>
+		<e:Scroller id="scroller" width="630" height="380" horizontalCenter="0" top="154">
 			<e:Group/>
 		</e:Scroller>
-		<e:Label id="lb_way1" text="Label" x="208" y="625" fontFamily="SimHei" size="24" textColor="0x3ce200"/>
-		<e:Label id="lb_way2" text="Label" x="208" y="729" fontFamily="SimHei" size="24" textColor="0x3CE200"/>
+		<e:Label id="lb_way1" text="Label" x="235" y="639" fontFamily="SimHei" size="24" textColor="0x3ce200"/>
+		<e:Label id="lb_way2" text="Label" x="235" y="743" fontFamily="SimHei" size="24" textColor="0x3CE200"/>
+		<e:Label id="lb_tips" text="没有可熔炼的橙装" fontFamily="SimHei" size="24" horizontalCenter="0" verticalCenter="-205" textColor="0xf10000"/>
+		<e:Button id="btn_smelt" label="升级橙装" y="868" skinName="skins.ComBtnRedSkin" horizontalCenter="0.5"/>
+		<e:Button id="btn_return" label="" x="606" y="863" skinName="skins.ComBtnBackSkin"/>
+		<e:Image source="com_pic_clickClose_png" y="947" horizontalCenter="0.5" touchEnabled="false"/>
 	</e:Group>
 </e:Skin>

@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="SignVipPromptSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" width="487" height="300">
-	<e:Image source="shop_bg_tips_png" horizontalCenter="0" top="13" bottom="13" scale9Grid="140,97,215,101"/>
-	<e:Image source="shop_txt_tishi_png" horizontalCenter="0" top="36"/>
-	<e:Image  source="shop_btn_tanchuang_hongse_png" x="294" y="209"/>
-	<e:Image  source="shop_btn_tanchuang_huise_png" x="78" y="209"/>
-	<e:Image id="img_refuse" width="86" height="27.06" x="95" y="214.94" source="sign_txt_canrenjujue_png" anchorOffsetX="0" anchorOffsetY="0"/>
-	<e:Image id="img_accept" width="76" height="25.04" x="318" y="216.96" anchorOffsetX="0" anchorOffsetY="0" source="sign_txt_tishengvip_png"/>
-	<e:Image id="img_close" source="common_btn_close_1_png" x="422" y="27"/>
-	<e:Label id="lb_text" text="vipXX可以双倍签到" y="114" size="24" anchorOffsetX="0" width="316" anchorOffsetY="0" height="67" textAlign="center" verticalAlign="middle" horizontalCenter="0"/>
+<e:Skin class="SignVipPromptSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" width="720" height="1066">
+	<e:Group width="529" height="300" verticalCenter="-34" horizontalCenter="0.5">
+		<e:Image source="shop_bg_tips_png" horizontalCenter="0" top="13" bottom="13" scale9Grid="140,97,215,101" x="0" y="13" scaleX="1" scaleY="1"/>
+		<e:Image source="shop_txt_tishi_png" horizontalCenter="0" top="36" x="214" y="36" scaleX="1" scaleY="1"/>
+		<e:Image id="img_close" source="common_btn_close_1_png" x="422" y="27" scaleX="1" scaleY="1"/>
+		<e:Label id="lb_text" text="vipXX可以双倍签到" y="114" size="24" anchorOffsetX="0" width="316" anchorOffsetY="0" height="67" textAlign="center" verticalAlign="middle" horizontalCenter="0" x="86" scaleX="1" scaleY="1"/>
+		<e:Group y="208" anchorOffsetX="0" anchorOffsetY="0" x="78">
+			<e:Image source="shop_btn_tanchuang_huise_png" scaleX="1" scaleY="1" x="0" y="0"/>
+			<e:Image id="img_refuse" width="86" height="27.06" source="sign_txt_canrenjujue_png" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" x="17" y="7"/>
+		</e:Group>
+		<e:Group y="208" x="299">
+			<e:Image source="shop_btn_tanchuang_hongse_png" scaleX="1" scaleY="1" x="0" y="0"/>
+			<e:Image id="img_accept" width="76" height="25.04" anchorOffsetX="0" anchorOffsetY="0" source="sign_txt_tishengvip_png" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0.5"/>
+		</e:Group>
+	</e:Group>
 </e:Skin>

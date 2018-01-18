@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="ItemWaySkin" width="530" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:customui="customui.*" height="335">
-	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
-		<e:Image source="common_bg_window_tips_png" left="0" right="0" top="0" bottom="0" scale9Grid="264,257,120,100" height="330"/>
-		<e:Image source="common_bg_tips_title_png" horizontalCenter="0" top="7"/>
-		<e:Image source="forge_bg_huoqutujing_png" y="169" horizontalCenter="0"/>
-		<e:Image source="forge_txt_huoqudaoju_png" y="16" horizontalCenter="0"/>
-		<e:Image source="forge_txt_huoqutujing_png" y="178" horizontalCenter="0"/>
-		<e:Image id="img_close" source="common_btn_close_2_png" x="474" y="4"/>
-		<customui:BaseItem id="baseItem" width="90" height="90" y="102" anchorOffsetX="45" anchorOffsetY="45" horizontalCenter="0"/>
-		<e:Group id="gp_way" width="480" horizontalCenter="0" top="215" height="100"/>
+<e:Skin class="ItemWaySkin" width="586" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:customui="customui.*" height="430">
+	<e:Group id="gp_main" right="0" left="0" top="0" bottom="0">
+		<e:Image source="com_bg_tips_png" scale9Grid="73,62,440,98" right="0" left="0" top="0" bottom="0"/>
+		<e:Image source="common_bg_tips_title_png" horizontalCenter="0" top="7" visible="false"/>
+		<e:Image y="67" source="com_pic_decorate7_png" horizontalCenter="0.5"/>
+		<e:Image y="269" horizontalCenter="-0.5" source="com_pic_decorate5_png" anchorOffsetX="0"/>
+		<e:Image source="forge_txt_huoqudaoju_png" y="16" horizontalCenter="0" visible="false"/>
+		<e:Image source="forge_txt_huoqutujing_png" y="263" horizontalCenter="0" visible="false"/>
+		<e:Image id="img_close" source="common_btn_close_2_png" x="474" y="4" visible="false"/>
+		<customui:BaseItem id="baseItem" width="90" height="90" y="140" anchorOffsetX="45" anchorOffsetY="45" horizontalCenter="0"/>
+		<e:Group id="gp_way" height="80" anchorOffsetY="0" anchorOffsetX="0" y="335" horizontalCenter="0" width="554"/>
+		<e:Image source="com_pic_clickClose_png" horizontalCenter="0.5" bottom="-46"/>
+		<e:Label text="获取途径" y="291" size="24" horizontalCenter="0" fontFamily="SimHei" textColor="0x7f693d"/>
+		<e:Label id="lb_name" text="道具" y="193" size="24" horizontalCenter="0" fontFamily="SimHei"/>
+		<e:Label text="材料不足时，可以通过以下途径获取" y="20" size="24" textColor="0xc89857" fontFamily="SimHei" horizontalCenter="0"/>
 	</e:Group>
 </e:Skin>

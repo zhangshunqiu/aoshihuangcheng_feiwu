@@ -27,18 +27,19 @@ module game{
 		public receiveGoodList(data) {
 			this.backpackModel.updateBackpack(data);
 			App.EventSystem.dispatchEvent(PanelNotify.HERO_ON_HERO_BAG_UPDATE);
+			
 		}
 
 		//更新背包列表
 		public updateGoodList(data) {
-			App.logzrj("data:",data);
+			// App.logzrj("data:",data);
 			this.backpackModel.updateBackpackItemInfo(data.playergoods);
 			App.EventSystem.dispatchEvent(PanelNotify.HERO_ON_HERO_BAG_UPDATE);
 		}
 
 		//使用 出售物品
 		public backpackChangedR(data) {
-			
+			App.EventSystem.dispatchEvent(PanelNotify.HERO_ON_HERO_BAG_UPDATE);
 		}
 
 		/**

@@ -24,7 +24,11 @@ class GameScene extends egret.DisplayObjectContainer {
 
 	//游戏层次
 	private _miniMapLayer: eui.Image;  //地图背景
+	private _mapImage:eui.Image;
+	private _curMapUrl:string = "";//当前地图地址
+	private _curMiniMapUrl:string = "";//当前小地图地址
 	//private _mapLayer: map.SceneMap; //地图层
+	private _mapLayer: egret.DisplayObjectContainer; //地图层
 	private _elementLayer : egret.DisplayObjectContainer; //元素层
 	private _bottomEffLayer: egret.DisplayObjectContainer; //效果层
 	private _objectLayer: egret.DisplayObjectContainer; //角色层
@@ -61,7 +65,9 @@ class GameScene extends egret.DisplayObjectContainer {
 	public constructor() {
 		super();
 		this._miniMapLayer = new eui.Image();
+		this._mapImage = new eui.Image();
 		//this._mapLayer = new map.SceneMap();
+		//this._mapLayer = new egret.DisplayObjectContainer();
 		this._elementLayer = new egret.DisplayObjectContainer();
 		this._bottomEffLayer = new egret.DisplayObjectContainer();
 		this._objectLayer = new egret.DisplayObjectContainer();
@@ -69,7 +75,8 @@ class GameScene extends egret.DisplayObjectContainer {
 		this._objectUILayer = new egret.DisplayObjectContainer();
 		this._topEffLayer = new egret.DisplayObjectContainer();
 		this.addChild(this._miniMapLayer);
-		//this.addChild(this._mapLayer);
+		this.addChild(this._mapImage);
+		// this.addChild(this._mapLayer);
 		this.addChild(this._elementLayer);
 		this.addChild(this._bottomEffLayer);
 		this.addChild(this._objectLayer);
@@ -236,12 +243,34 @@ class GameScene extends egret.DisplayObjectContainer {
 		if(this._batchResLoad == null){
 			this._batchResLoad = new BatchResLoad();
 		}
-		this._loadReslist = [[ResUrlUtil.getMapUrlById(this._sceneModel.mapResId),RES.ResourceItem.TYPE_IMAGE],[ResUrlUtil.getMapConfUrlById(this._sceneModel.mapResId),RES.ResourceItem.TYPE_JSON]];
+
+		if(this._miniMapLayer){
+			this._miniMapLayer.source = null;
+		}
+		this._loadReslist = [[ResUrlUtil.getMapMiniUrlById(this._sceneModel.mapResId),RES.ResourceItem.TYPE_IMAGE],[ResUrlUtil.getMapConfUrlById(this._sceneModel.mapResId),RES.ResourceItem.TYPE_JSON]];
+		//,[ResUrlUtil.getMapUrlById(this._sceneModel.mapResId),RES.ResourceItem.TYPE_IMAGE]
 		this._batchResLoad.loadUrl(this._loadReslist,this.loadResComplete,this,this.loadProgress)
 		//处理好场景相关的东西后就this.startScene();
 		//this.startScene();
+		//App.logzsq("加载场景资源");
 	}
-
+	/**
+	 * 加载大图成功
+	 */
+	private onBigMapComplete(data: any, curl: string){
+		if(this._curMapUrl != curl){
+			if(this._curMapUrl && this._curMapUrl != ""){
+				RES.destroyRes(this._curMapUrl);
+			}
+			if(this._mapImage){
+				this._mapImage.source = data;
+			}
+			this._curMapUrl = curl;
+			this._mapImage.width = this._sceneModel.sceneWidth;
+			this._mapImage.height =  this._sceneModel.sceneHeight;
+			this._miniMapLayer.visible = false;
+		}
+	}
 	/**
 	 * 进度函数
 	 */
@@ -259,12 +288,48 @@ class GameScene extends egret.DisplayObjectContainer {
 			this._sceneModel.updateSceneConfig(mapConf);
 			App.logzsq("SCENE WIDTH = ", this._sceneModel.sceneWidth, this._sceneModel.sceneHeight);
 			//this._mapLayer.init(this._sceneModel.mapResId,this._sceneModel.sceneWidth,this._sceneModel.sceneHeight);
+		}else{
+			App.GlobalTips.showTips("地图配置加载失败 MAPID = "+this._sceneModel.mapResId);
 		}
-		var res:any = data[ResUrlUtil.getMapUrlById(this._sceneModel.mapResId)];
-		if(res){
-			this._miniMapLayer.source = res;
-			//this._mapLayer.setMiniMap(res);
+		var miniMap:any = data[ResUrlUtil.getMapMiniUrlById(this._sceneModel.mapResId)];
+		if(miniMap){
+			var curUrl = ResUrlUtil.getMapMiniUrlById(this._sceneModel.mapResId);
+			if(this._curMiniMapUrl != curUrl){
+				if(this._curMiniMapUrl != ""){
+					RES.destroyRes(this._curMiniMapUrl);
+				}
+				this._curMiniMapUrl = curUrl;
+				if(this._miniMapLayer){
+					this._miniMapLayer.source = miniMap;
+				}
+				this._miniMapLayer.width = this._sceneModel.sceneWidth;
+				this._miniMapLayer.height =  this._sceneModel.sceneHeight;
+				this._miniMapLayer.visible = true;
+			}else{
+				App.GlobalTips.showTips("小地图加载失败 MAPID = "+this._sceneModel.mapResId);
+			}
 		}
+
+		var curBigMapUrl = ResUrlUtil.getMapUrlById(this._sceneModel.mapResId);
+		if(curBigMapUrl != this._curMapUrl){
+			if(this._curMapUrl && this._curMapUrl != ""){
+					RES.destroyRes(this._curMapUrl);
+			}
+			if(this._mapImage){
+				this._mapImage.source = null;
+			}
+			RES.getResByUrl(curBigMapUrl, this.onBigMapComplete, this, RES.ResourceItem.TYPE_IMAGE);
+		}
+		// var res:any = data[ResUrlUtil.getMapUrlById(this._sceneModel.mapResId)];
+		// if(res){
+		// 	if(this._curMapUrl && this._curMapUrl != ""){
+		// 		RES.destroyRes(this._curMapUrl);
+		// 	}
+		// 	this._mapImage.source = res;
+		// 	this._curMapUrl = ResUrlUtil.getMapUrlById(this._sceneModel.mapResId);
+		// 	this._mapImage.width = this._sceneModel.sceneWidth;
+		// 	this._mapImage.height =  this._sceneModel.sceneHeight;
+		// }
 		this._scenePosInit = false;
 		this.startScene();
 		
@@ -310,9 +375,11 @@ class GameScene extends egret.DisplayObjectContainer {
 		this._eventSystem.dispatchEvent(SceneEventType.SCENE_INIT_COMPLETE);
 		//this._sceneModel.sceneId;
 	
-		  //zhanagshunqiu test Mc
+		//zhanagshunqiu test Mc
         this.touchEnabled = true;
-        this.addEventListener(egret.TouchEvent.TOUCH_BEGIN,this.mouseTouch,this);
+		if( this.hasEventListener(egret.TouchEvent.TOUCH_BEGIN) == false){
+			this.addEventListener(egret.TouchEvent.TOUCH_BEGIN,this.mouseTouch,this);
+		}
 
 	   //Math.random()*SceneModel.getInstance().sceneWidth,Math.random()*SceneModel.getInstance().sceneHeight
 
@@ -332,7 +399,7 @@ class GameScene extends egret.DisplayObjectContainer {
 		// SceneModel.getInstance().addSceneObjectVo(vo2);
 		// (EventSystem.getInstance() as EventSystem).dispatchEvent(SceneEventType.ADD_SCENE_OBJECT,vo2);
 		 //zhanagshunqiu test Mc end
-
+		 //App.logzsq("加载场景资源完成");
 		 egret.setTimeout(function () {
                  this.closeSceneLoading();
             }, this, 500)
@@ -361,11 +428,11 @@ class GameScene extends egret.DisplayObjectContainer {
 			// 	player.addMovePath(list);
 			// }
 			//this.showClickMc(px,py,(list == null));
-
-			player.addMovePath([[px,py]]);
-			this.showClickMc(px,py,true);
+			player.clearMovePath();
+			player.playMove([[px,py]]);
+			this.showClickMc(px,py,false);
 			
-			App.logzsq("mouseTouch ",vo.getPetNum());
+			App.logzsq("mouseTouch ",vo.getPetNum(),player.vo.gridX,player.vo.gridY);
 		}
 		// if(this.ff){
 		// 	App.EventSystem.dispatchEvent(PanelNotify.REMOVE_TOP_BTN, MainUIBtnType.FIRSTCHARGE);
@@ -410,7 +477,7 @@ class GameScene extends egret.DisplayObjectContainer {
 				}
 			}
 		}
-		var t:number = Date.now();
+		//var t:number = Date.now();
 		if(this._updateTimes%2>=0){
 		for(let key in this._sceneNpcDic){
 			this._sceneNpcDic[key].update();
@@ -430,9 +497,12 @@ class GameScene extends egret.DisplayObjectContainer {
 		for(let key in this._scenePlayerCopyDic){
 			this._scenePlayerCopyDic[key].update();
 		}
+		var num:number = 0;
 		for(let key in this._sceneItemDic){
 			this._sceneItemDic[key].update();
+			num++;
 		}
+		this._sceneModel.curSceneItemNum = num;
 		for(let key in this._sceneCollectDic){
 			this._sceneCollectDic[key].update();
 		}
@@ -473,7 +543,7 @@ class GameScene extends egret.DisplayObjectContainer {
 			// 	this._objectLayer.setChildIndex(value,999);
 			// },this);
 		}
-
+		
 		if(this._updateTimes%250==1){
 			this._sceneManager.update();
 		}
@@ -553,6 +623,8 @@ class GameScene extends egret.DisplayObjectContainer {
 
 			this._loadReslist = [];
 		}
+		this._curMapUrl = "";
+		this._curMiniMapUrl = "";
 	}
 
 	/**
@@ -629,7 +701,7 @@ class GameScene extends egret.DisplayObjectContainer {
 			for(let i:number = 0;i<data.target_list.length;i++){
 				var v:any = data.target_list[i];
 				var obj:SceneMonster = this.getSceneObjectById(v.obj_id,v.obj_type);	
-				if(obj){
+				if(obj && obj.vo.immuneCZ == false){
 					if(atk){
 						obj.playBeCollision(2,atk.vo.dire.dire8);
 					}else{
@@ -642,7 +714,7 @@ class GameScene extends egret.DisplayObjectContainer {
 			for(let i:number = 0;i<data.target_list.length;i++){
 				var v:any = data.target_list[i];
 				var obj:SceneMonster = this.getSceneObjectById(v.obj_id,v.obj_type);
-				if(obj){
+				if(obj && obj.vo.immuneKJHH == false){
 					if(atk){
 						var dire:DireScale = SceneUtil.getDirectByPoint(obj.vo.posX,obj.vo.posY,atk.vo.posX,atk.vo.posY);
 						obj.playBeCollision(2,dire.dire8);

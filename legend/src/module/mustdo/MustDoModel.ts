@@ -23,6 +23,7 @@ module game {
         public achieve_upgrade: number;
         public has_can_get: boolean;//判断成就是否能一键领取
         public selectTitleId: number;
+        public selectTitileVo:TitleVo;
         public activetitlenum: number;
         public has_activity_can_get:boolean;
 
@@ -55,6 +56,9 @@ module game {
                 tivo.is_alive = false;
                 tivo.title_id = config[key].title_id;
                 tivo.att_id = config[key].att_id;
+                tivo.type = config[key].type;
+                tivo.time = config[key].time
+                tivo.des = config[key].des;
                 for (let i = 0; i < data.titles.length; i++) {
                     if (config[key].title_id == data.titles[i].id) {
                         tivo.is_alive = true;
@@ -70,7 +74,13 @@ module game {
 
         }
 
-
+    //    public getCurShowTitle(){
+    //        for(let i = 0 ;i<this.titleList.length;i++){
+    //          if(this.titleList[i].is_show)
+    //           return this.titleList[i].icon;
+    //        }
+    //        return "";
+    //    }
 
         public getMedalInfo(data) {
 
@@ -91,8 +101,9 @@ module game {
                 this.achieveranklist.push(rv);
 
             }
-
-            if (this.achieve_own >= this.achieve_upgrade) {
+            
+            
+            if (this.achieve_own >= this.achieve_upgrade&&this.achieve_upgrade>0) {
                 App.BtnTipManager.setTypeValue(ConstBtnTipType.TASK_MEDAL, true);
             }
             else if (this.month_card == 1 && this.achieve_not_get > 0) {

@@ -14,9 +14,7 @@ module game{
 
         protected childrenCreated() {
             super.childrenCreated();
-            this.re_close.addEventListener(egret.TouchEvent.TOUCH_TAP, ()=>{
-                App.WinManager.closeWin(WinName.WING_SKILL);
-            }, this);
+            this.re_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.closeWin, this);
             this.updateView();
         }
 
@@ -34,8 +32,8 @@ module game{
 		/**
 		 * 关闭窗口
 		 */
-		public closeWin(callback): void {
-			super.closeWin(callback);
+		public closeWin(): void {
+			super.closeWin();
 		}
 
 		/**

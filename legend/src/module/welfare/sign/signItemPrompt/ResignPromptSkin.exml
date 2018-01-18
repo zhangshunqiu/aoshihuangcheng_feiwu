@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="ResignPromptSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Image width="354.65" height="179.68" source="sign_bg_m_png" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" y="0"/>
-	<e:Label id="lb_cancel" text="取消" y="124" size="24" horizontalCenter="-56.5"/>
-	<e:Label id="lb_confirm" text="确定" y="122" size="24" horizontalCenter="60.5" x="10"/>
-	<e:Image id="img_close" source="common_btn_close_1_png" x="303" y="2"/>
-	<e:Label id="lb_text" text="是否花费10元宝补签" y="51" size="24" horizontalCenter="0"/>
-</e:Skin>

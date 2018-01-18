@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ForgeStarSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:customui="customui.*" width="720" height="1136">
+	<e:Group touchEnabled="false" anchorOffsetX="0" width="685" y="60" horizontalCenter="0">
+		<e:Image source="forge_bg_shengxing_png" left="0" right="0" top="0" bottom="0" width="685"/>
+		<e:Image id="img_starCostIcon" source="24300a_png" x="430" y="275" scaleX="1" scaleY="1"/>
+		<customui:BaseItem id="baseItem" width="90" height="90" y="305.48" horizontalCenter="-94.5" anchorOffsetX="45" anchorOffsetY="45"/>
+		<customui:BaseItem id="baseItem_result" width="90" height="90" y="411.54" horizontalCenter="8.305000000000007" anchorOffsetX="45" anchorOffsetY="45"/>
+		<e:Label id="lb_star" text="星级+99" y="204.75" size="24" fontFamily="SimHei" textColor="0xE8B10A" horizontalCenter="0.3050000000000068"/>
+		<e:Group id="gp_attr" y="620.63" anchorOffsetY="0" anchorOffsetX="0" height="144.3" left="0" right="0">
+			<e:Image scaleX="1" scaleY="1" source="com_pic_decorate6_png" horizontalCenter="0"/>
+			<e:Image verticalCenter="22.349999999999994" source="com_pic_jb_png" scale9Grid="185,11,74,71" anchorOffsetX="0" left="0" right="0"/>
+			<e:Image source="forge_jiantou_shuxingzengqiang_png" y="85.8" x="293.92" scaleX="1" scaleY="1"/>
+			<e:Label id="lb_starLeft" text="20%" x="248" y="98.8" fontFamily="SimHei" size="24" textColor="0xBFBFBF" scaleX="1" scaleY="1"/>
+			<e:Label id="lb_starRight" text="20%" x="398" y="98.8" fontFamily="SimHei" size="24" textColor="0x63D72A" scaleX="1" scaleY="1"/>
+			<e:Label text="基础属性增加" y="59.30000000000007" fontFamily="SimHei" size="24" horizontalCenter="0.5" textColor="0xF93A26" x="271" scaleX="1" scaleY="1"/>
+			<e:Label id="lb_total" text="" y="98.09" fontFamily="SimHei" size="24" horizontalCenter="0.5" x="281" scaleX="1" scaleY="1" textColor="0x63d72a"/>
+		</e:Group>
+		<e:Group left="0" right="0" anchorOffsetX="0" bottom="1">
+			<e:Image source="com_bg_list2_png" scaleX="1" scaleY="1" top="0" bottom="0" anchorOffsetX="0" horizontalCenter="0"/>
+			<e:Label text="消耗：" x="197.64" y="16.000000000000114" fontFamily="SimHei" textColor="0x259DC2" size="24" scaleX="1" scaleY="1"/>
+			<e:Label id="lb_starNum" text="xxx/xxx" x="315" y="16.000000000000114" fontFamily="SimHei" textColor="0xBFBFBF" size="24" scaleX="1" scaleY="1"/>
+			<e:Label id="lb_starGet" text="获得道具" x="423.6700000000001" y="19" size="24" fontFamily="SimHei" textColor="0x63D72A" italic="false" scaleX="1" scaleY="1"/>
+			<e:Button id="btn_upStar" label="升星" y="46.41" scaleX="0.9000000000000001" skinName="skins.ComBtnRedSkin" scaleY="1" horizontalCenter="-0.19499999999999318"/>
+			<e:Image id="img_starCost" source="24300a_png" x="254" y="-2" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Image id="img_attr" source="forge_icon_taozhuangshuxing_png" x="540" y="60" scaleX="1" scaleY="1"/>
+		<e:Group id="gp_starEquip" height="500" y="164.05" touchEnabled="false" scaleX="1" scaleY="1" anchorOffsetX="0" width="720" horizontalCenter="0.5"/>
+	</e:Group>
+</e:Skin>

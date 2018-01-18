@@ -6,13 +6,13 @@ module game {
     //转生获取修为界面
     export class RebornPointView extends BaseView {
         public gp_main: eui.Group;
-        public img_close: eui.Image;
+        //public rect_bg: eui.Rect;
         public list: eui.List = new eui.List();
 
         private _infoHandle: number;
         private _array : Array<RebornPointItem> = [];
-        public constructor() {
-            super();
+        public constructor(viewConfig) {
+            super(viewConfig);
             this.skinName = "RebornPointSkin";
         }
 
@@ -24,9 +24,10 @@ module game {
         }
 
         public initView() {
-            this.img_close.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
-                PopUpManager.removePopUp(this);
-            }, this);
+            // this.rect_bg.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
+            //     // PopUpManager.removePopUp(this);
+            //     App.WinManager.closeWin(WinName.POP_REBORN_POINT);
+            // }, this);
             this.gp_main.addChild(this.list);
             this.list.horizontalCenter = 0;
             this.list.top = 70;
@@ -36,7 +37,7 @@ module game {
             for(let i =0; i< id.length ;i++) {
                 let item = new RebornPointItem(id[i]);
                 this.gp_main.addChild(item);
-                item.y = 70+i*120;
+                item.y =30+i*120;
                 item.horizontalCenter = 0;
                 this._array.push(item);
             }
@@ -91,9 +92,9 @@ module game {
         public lb_cost: eui.Label;
         public lb_time: eui.Label;
 
-        public img_use: eui.Image;
+        public btn_use: eui.Button;
         public img_gold: eui.Image;
-        public img_change: eui.Image;
+        //public img_change: eui.Image;
 
         private rebornModel: RebornModel = RebornModel.getInstance();
         private _index : number = 0;
@@ -101,7 +102,7 @@ module game {
         public constructor(data) {
             super();
             this.skinName = "RebornPointItemSkin";
-            this.img_use.addEventListener(egret.TouchEvent.TOUCH_TAP,()=>{
+            this.btn_use.addEventListener(egret.TouchEvent.TOUCH_TAP,()=>{
                 App.Socket.send(20003,{type:this._index+1});
             },this); 
             this.baseItem.addEventListener(egret.TouchEvent.TOUCH_TAP,()=>{
@@ -117,16 +118,17 @@ module game {
 
         protected dataChanged() {
             this.baseItem.updateBaseItem(ClientType.BASE_ITEM, this.data);
-            this.baseItem.lb_name.visible = false;
+            this.baseItem.setItemNameVisible(false);
 
             if (this._index + 1 == ConstRebornExchangeType.LEVEL) {
                 let lvInfo = App.ConfigManager.getRebornInfoByLevel(App.RoleManager.roleInfo.lv);
                 if (!lvInfo) {
                     lvInfo = {number : 0};
                 }
-                RES.getResAsync("reborn_txt_duihuan_png", (texture) => {
-                    this.img_change.source = texture;
-                }, this)
+                this.btn_use.label = "兑换";
+                // RES.getResAsync("reborn_txt_duihuan_png", (texture) => {
+                //     this.img_change.source = texture;
+                // }, this)
                 this.img_gold.visible = false;
                 let remind = App.ConfigManager.getConstConfigByType("TRANSMI_CONVERT_NUM").value - this.rebornModel.getExchangeInfoByType(ConstRebornExchangeType.LEVEL).used_times;
                 this.lb_time.textFlow = [{ text: "今天还可兑换" }, { text: String(remind), style: { textColor: 0x59ff10 } }, { text: "次" }];
@@ -144,15 +146,17 @@ module game {
                 if (!itemInfo) {
                     this.lb_cost.text = info.name + "\t\t\t\t\t" + App.ConfigManager.getConstConfigByType("TRANSMI_EXPERP_GOLD").value;
                     this.img_gold.visible = true;
-                    RES.getResAsync("reborn_goumaibingshiyong_png", (texture) => {
-                        this.img_change.source = texture;
-                    }, this)
+                    this.btn_use.label = "购买并使用";
+                    // RES.getResAsync("reborn_goumaibingshiyong_png", (texture) => {
+                    //     this.img_change.source = texture;
+                    // }, this)
                 } else {
                     this.lb_cost.text = "背包剩余" + itemInfo.num + "个";
                     this.img_gold.visible = false;
-                    RES.getResAsync("reborn_txt_shiyong_png", (texture) => {
-                        this.img_change.source = texture;
-                    }, this)
+                    this.btn_use.label = "使用";
+                    // RES.getResAsync("reborn_txt_shiyong_png", (texture) => {
+                    //     this.img_change.source = texture;
+                    // }, this)
                 }
                 let remind = App.ConfigManager.getConstConfigByType("TRANSMI_EXPERP_NUM").value - this.rebornModel.getExchangeInfoByType(ConstRebornExchangeType.REDUCE).used_times;
                 this.lb_time.textFlow = [{ text: "今天还可兑换" }, { text: String(remind), style: { textColor: 0x59ff10 } }, { text: "次" }];
@@ -169,15 +173,18 @@ module game {
                 if (!itemInfo) {
                     this.lb_cost.text = info.name + "\t\t\t\t\t" + App.ConfigManager.getConstConfigByType("TRANSMI_SUPER_GOLD").value;
                     this.img_gold.visible = true;
-                    RES.getResAsync("reborn_goumaibingshiyong_png", (texture) => {
-                        this.img_change.source = texture;
-                    }, this)
+                    this.btn_use.label = "购买并使用";
+                    // RES.getResAsync("reborn_goumaibingshiyong_png", (texture) => {
+                    //     this.img_change.source = texture;
+                    // }, this)
+
                 } else {
                     this.lb_cost.text = "背包剩余" + itemInfo.num + "个";
                     this.img_gold.visible = false;
-                    RES.getResAsync("reborn_txt_shiyong_png", (texture) => {
-                        this.img_change.source = texture;
-                    }, this)
+                    this.btn_use.label = "购买并使用";
+                    // RES.getResAsync("reborn_txt_shiyong_png", (texture) => {
+                    //     this.img_change.source = texture;
+                    // }, this)
                 }
                 let remind = App.ConfigManager.getConstConfigByType("TRANSMI_SUPER_NUM").value - this.rebornModel.getExchangeInfoByType(ConstRebornExchangeType.SUPER).used_times;
                 this.lb_time.textFlow = [{ text: "今天还可兑换" }, { text: String(remind), style: { textColor: 0x59ff10 } }, { text: "次" }];

@@ -5,9 +5,7 @@
 		<e:TabBar id="tab_medal" width="434.85" height="54" x="20.09" y="908.7" anchorOffsetY="0" anchorOffsetX="0" itemRendererSkinName="skins.TabbarButtonSkin1" scaleX="1" scaleY="1" visible="false"/>
 		<e:Image id="bt_back" source="common_btn_fanhui_png" x="612" y="899" scaleX="1" scaleY="1"/>
 		<e:RadioButton id="rb_mustdo" label="勋章" x="42" y="926"/>
-		<e:RadioButton id="rb_title" label="称号" x="186" y="927"/>
-		<e:RadioButton id="rb_achieve" label="称号" x="476" y="927" visible="false"/>
-		<e:RadioButton id="rb_medal" label="称号" x="332" y="927" visible="false"/>
+		<e:RadioButton id="rb_medal" label="称号" x="186" y="927"/>
 	</e:Group>
 	<e:Group id="gp_activity" x="0" y="12" touchEnabled="false" touchThrough="true" visible="false">
 		<e:Image id="bg_mustdo" source="task_bg_renwu_png" x="26.3" y="128.97"/>

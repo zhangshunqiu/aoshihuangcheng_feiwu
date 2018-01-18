@@ -8,7 +8,10 @@ module game {
 		public commonWin: customui.CommonWin;
 		public img_emoji: eui.Image;
 		public img_send: eui.Image;
-		public tabbar: eui.TabBar;
+		//public tabbar: eui.TabBar;
+		public rb_all: eui.RadioButton;
+		public rb_world: eui.RadioButton;
+		public rb_system: eui.RadioButton;
 		public scroller: eui.Scroller;
 		public scr_group: eui.Group;
 		public inp_textf: eui.TextInput;
@@ -16,7 +19,6 @@ module game {
 		public eff_newchat: AMovieClip;
 		public item_list: Array<any> = [];
 		private _nextposiy: number = 0;
-		private _lastitemheight: number;
 		private _chatModel: ChatModel = ChatModel.getInstance();
 		private _sendchat: string;
 		private _sendtime: number;
@@ -25,6 +27,7 @@ module game {
 		private _worldchatlog: string = "";
 		private _guildchatlog: string = "";
 		private _eventid_onechat: number = 0;
+		private _show_id: number = 0;
 
 		protected childrenCreated() {
 			super.childrenCreated();
@@ -57,16 +60,31 @@ module game {
 			this.inp_textf.maxChars = 41;
 			this.inp_textf.text = "";
 
-			let data = ["全部", "世界", /*"公会",*/ "系统"];
-			this.tabbar.dataProvider = new eui.ArrayCollection(data);
-			this.tabbar.addEventListener(eui.ItemTapEvent.ITEM_TAP, (event: eui.ItemTapEvent) => {
-				this.changedChatType(event.itemIndex);
+			var radioGroup: eui.RadioButtonGroup = new eui.RadioButtonGroup();
+			radioGroup.addEventListener(eui.UIEvent.CHANGE, (evt: eui.UIEvent) => {
+				var radioGroup: eui.RadioButtonGroup = evt.target;
+				this.changedChatType(radioGroup.selectedValue);
 			}, this);
-			this.tabbar.selectedIndex = 0;
-			this._selecttype = ChatType.ALLCHAT;
+			this.rb_all.group = radioGroup;
+			this.rb_all.value = 0;
+			this.rb_all.label = "全部";
+			this.rb_all.selected = true;
+			this.rb_world.group = radioGroup;
+			this.rb_world.label = "世界";
+			this.rb_world.value = 1;
+			this.rb_system.group = radioGroup;
+			this.rb_system.label = "系统";
+			this.rb_system.value = 3;
+			// let data = ["全部", "世界", /*"公会",*/ "系统"];
+			// this.tabbar.dataProvider = new eui.ArrayCollection(data);
+			// this.tabbar.addEventListener(eui.ItemTapEvent.ITEM_TAP, (event: eui.ItemTapEvent) => {
+			// 	this.changedChatType(event.itemIndex);
+			// }, this);
+			// this.tabbar.selectedIndex = 0;
+
 			this.scroller.viewport = this.scr_group;
 			this.scroller.scrollPolicyH = eui.ScrollPolicy.OFF;
-			this.updateChatList();
+
 		}
 
 
@@ -74,27 +92,38 @@ module game {
 		 * 发送消息
 		 */
 		private chatInputCheck(sendtext: string) {
-			if (this.inp_textf.text.length == 0) {
+			if (this.inp_textf.text.length == 0 || (this.inp_textf.text.trim()).length == 0) {
 				return;
 			}
 			;
 
 			if (Date.now() - this._sendtime < 3000) {
-				App.GlobalTips.showAlert({ style: BaseTipsStyle.ONLY_OK, content: "勇士您说话太快，喝口水再说吧" });
+				//App.GlobalTips.showAlert({ style: AlertTipsStyle.ONLY_OK, content: "勇士您说话太快，喝口水再说吧" });
+				let text = [{ text: "勇士您说话太快，喝口水再说吧", style: { textColor: 0xffffff, size: 24, fontFamily: "SimHei" } }]
+				App.GlobalTips.showTips(text);
+
 				return;
 			}
 			if (this.inp_textf.text == this._sendchat) {
 
-				App.GlobalTips.showAlert({ style: BaseTipsStyle.ONLY_OK, content: "禁止发送重复信息" });
+				//App.GlobalTips.showAlert({ style: AlertTipsStyle.ONLY_OK, content: "禁止发送重复信息" });
+				let text = [{ text: "禁止发送重复信息", style: { textColor: 0xffffff, size: 24, fontFamily: "SimHei" } }]
+				App.GlobalTips.showTips(text);
 				return;
+			}
+			let word = this.inp_textf.text;
+			if (this._show_id > 0) {
+
+				let equip = App.ConfigManager.getEquipById(this._show_id);//App.ConfigManager.itemConfig()[this._show_id];	
+				word = this.inp_textf.text.replace("[" + equip.name + "]", "<font href = \"event:equip_" + this._show_id + "\">[" + equip.name + "]</font>");
 			}
 
 			if (this._selecttype == ChatType.GUILD) {
-				App.Socket.send(17002, { channel: ChatType.GUILD + 1, content: App.ConfigManager.getSensitiveWordCheck(this.inp_textf.text) });
+				App.Socket.send(17002, { channel: ChatType.GUILD + 1, content: App.ConfigManager.getSensitiveWordCheck(word) });
 			}
 			else {
 
-				App.Socket.send(17002, { channel: ChatType.WORLD + 1, content: App.ConfigManager.getSensitiveWordCheck(this.inp_textf.text) });
+				App.Socket.send(17002, { channel: ChatType.WORLD + 1, content: App.ConfigManager.getSensitiveWordCheck(word) });
 
 			}
 			this._sendtime = Date.now();
@@ -178,27 +207,17 @@ module game {
 			//if()
 			for (let i = 0; i < chatinfolist.length; i++) {
 				if ((chatinfolist[i] as ChatVo).player_id == 0) {
-					let item = new ChatTextItem();
-					item.updateInfo(chatinfolist[i]);
-					this.scr_group.addChild(item);
-					item.$setY(this._nextposiy);
-					this._nextposiy += item.item_height;
-					this._lastitemheight = item.item_height;
-					this.item_list.push(item);
+					this.addOneSystemInfo(chatinfolist[i]);
 				}
 				else {
-					let item = new ChatItem();
-					item.updateInfo(chatinfolist[i]);
-					this.scr_group.addChild(item);
-					item.$setY(this._nextposiy);
-					this._nextposiy += item.item_height;
-					this.item_list.push(item);
-					this._lastitemheight = item.item_height;
-
+					this.addOneNewChat(chatinfolist[i]);
 				}
 
 			}
-			this.scroller.viewport.scrollV = this._nextposiy - this.scroller.height;
+			if (this._nextposiy <= this.scroller.height)
+				this.scroller.viewport.scrollV = 0;
+			else
+				this.scroller.viewport.scrollV = this._nextposiy - this.scroller.height;
 		}
 		//endregion	
 
@@ -216,8 +235,12 @@ module game {
 				else {
 					this.addOneNewChat(data);
 				}
-				if (data.player_id == RoleManager.getInstance().roleInfo.playerId)
-					this.scroller.viewport.scrollV = this._nextposiy - this.scroller.height;
+				if (data.player_id == RoleManager.getInstance().roleInfo.playerId) {
+					if (this._nextposiy <= this.scroller.height)
+						this.scroller.viewport.scrollV = 0;
+					else
+						this.scroller.viewport.scrollV = this._nextposiy - this.scroller.height;
+				}//this.scroller.viewport.scrollV = this._nextposiy - this.scroller.height;
 				else {
 					if (this.eff_newchat == null) {
 						this.eff_newchat = new AMovieClip();
@@ -228,7 +251,6 @@ module game {
 					this.eff_newchat.visible = true;
 					this.eff_newchat.playMCKey("effxxts", "", 30, null, () => {
 						this.eff_newchat.frameRate = 8;
-
 					}
 						, this);
 					if (this.eff_newchat.hasEventListener(egret.Event.LOOP_COMPLETE) == false) {
@@ -249,25 +271,39 @@ module game {
 			var item = new ChatItem();
 			item.updateInfo(info);
 			this.scr_group.addChild(item);
+			item.belong_scroller = this.scroller;
 			item.$setY(this._nextposiy);
 			this._nextposiy += item.item_height;
 
 			this.item_list.unshift(item);
 
+			if (this.item_list.length > 50) {
+				for (let i = 0; i < this.item_list.length; i++) {
+					this.item_list[i].y -= this.item_list[this.item_list.length - 1].height;
+				}
+				this._nextposiy -= this.item_list[this.item_list.length - 1].height;
+				this.scr_group.removeChild(this.item_list[this.item_list.length - 1]);
+				this.item_list.pop();
+			}
 
 		}
-		private addOneSystemInfo(info) {
+		 private addOneSystemInfo(info) {
 			var item = new ChatTextItem();
 			item.updateInfo(info);
 			this.scr_group.addChild(item);
 			item.$setY(this._nextposiy);
 			this._nextposiy += item.item_height;
-			//  for(let i= 0;i<this.item_list.length;i++)
-			//  {
-			//    (this.item_list[i] as ChatTextItem).y+=item.item_height;
-			//  }
+
 			this.item_list.unshift(item);
 
+			if (this.item_list.length > 50) {
+				for (let i = 0; i < this.item_list.length; i++) {
+					this.item_list[i].y -= this.item_list[this.item_list.length - 1];
+				}
+				this._nextposiy -= this.item_list[this.item_list.length - 1].height;
+				this.scr_group.removeChild(this.item_list[this.item_list.length - 1]);
+				this.item_list.pop();
+			}
 		}
 		//endregion
 
@@ -276,11 +312,27 @@ module game {
 		 */
 		public openWin(openParam: any = null): void {
 			super.openWin(openParam);
-			// App.Socket.send(16001,{});
+		
 			if (this._eventid_onechat == 0) {
 				this._eventid_onechat = App.EventSystem.addEventListener(PanelNotify.CHAT_HAS_NEW_INFO, this.updateOneChat, this);
 			}
+
+			this._selecttype = -1;
+			this.changedChatType(ChatType.ALLCHAT);
+
 			App.BtnTipManager.setTypeValue(ConstBtnTipType.CHAT, false);
+
+			//装备展示
+			// if (openParam && openParam.show_id) {
+			// 	this._show_id = openParam.show_id;
+			// 	let equip = App.ConfigManager.getEquipById(this._show_id);//App.ConfigManager.itemConfig()[this._show_id];
+			// 	this.inp_textf.text = "[" + equip.name + "]";
+
+			// } else {
+			// 	this._show_id = 0;
+			// }
+
+
 		}
 
 		/**
@@ -288,6 +340,7 @@ module game {
 		 */
 		public closeWin(callback): void {
 			super.closeWin(callback);
+
 		}
 
 		/**
@@ -299,6 +352,7 @@ module game {
 				this._eventid_onechat = 0;
 			}
 			if (this.eff_newchat) {
+				this.eff_newchat.stop();
 				this.eff_newchat.destroy();
 				this.removeChild(this.eff_newchat);
 				this.eff_newchat = null;
@@ -318,7 +372,7 @@ module game {
 	export class ChatItem extends eui.ItemRenderer {
 
 		public lb_name: eui.Label;
-		public lb_content: eui.Label;
+		public lb_content: RichTextField;
 		public lb_vip: eui.BitmapLabel;
 		public img_icon: eui.Image;
 		public img_vip: eui.Image;
@@ -327,11 +381,21 @@ module game {
 		public item_height: number = 112;
 		public gp_text: eui.Group;
 		public img_monthcard: eui.Image;
-		//private _chatModel: ChatModel = ChatModel.getInstance();
+		public belong_scroller: eui.Scroller;
+		//private _iconTips: ChatIconTipsView;
+		private _chatModel: ChatModel = ChatModel.getInstance();
+		public info: ChatVo;
 
 		public constructor() {
 			super();
 			this.skinName = "ChatItemSkin";
+			this.lb_content = new RichTextField();
+			this.addChild(this.lb_content);
+			this.lb_content.x = 122;
+			this.lb_content.y = 53;
+			this.lb_content.width = 420;
+			this.img_icon.addEventListener(egret.TouchEvent.TOUCH_TAP, this.viewIconTips, this);
+
 		}
 
 		public dataChanged() {
@@ -341,16 +405,17 @@ module game {
 
 		public updateInfo(info: ChatVo) {
 
+			this.info = info;
 			this.chat_type = info.type;
 			this.lb_name.text = info.player_name;
-			this.lb_content.text = info.content;
+			this.lb_content.textHtml = "<font fontfamily=\"SimHei\" color=0xbfbfbf size = 24>" + info.content + "</font>";
 			if (!info.is_monthcard) {
-				this.gp_text.x -= 25;//没有月卡文字要左移
-				this.img_vip.visible = false;
+				this.gp_text.x -= 36;//没有月卡文字要左移
+				this.img_monthcard.visible = false;
 
 			}
 			else {
-				this.img_vip.visible = true;
+				this.img_monthcard.visible = true;
 			}
 
 			if (info.vip_id > 0) {
@@ -359,17 +424,33 @@ module game {
 				this.lb_vip.text = info.vip_id + "";
 			}
 			else {
+				this.lb_name.x -= 105;
 				this.img_vip.visible = false;
 				this.lb_vip.visible = false;
 			}
-			RES.getResAsync(App.ConfigManager.getSmallHeroIconBySexAndJob(info.sex, info.career), (texture) => {
+
+			let str: string = App.ConfigManager.getSmallHeroIconBySexAndJob(info.sex, info.career);
+
+			RES.getResAsync(App.ConfigManager.getSmallHeroIconBySexAndJob(info.sex, info.career) + "_png", (texture) => {
 				this.img_icon.source = texture;
 			}, this);
 		}
+
+		public viewIconTips() {
+
+			if (this.info.player_id != RoleManager.getInstance().roleInfo.playerId) {
+				this._chatModel.selectPlayerName = this.info.player_name;
+				this._chatModel.selectPlayerId = this.info.player_id;
+				App.WinManager.openWin(WinName.CHAT_ICON_TIP, { x: 150, y: this.y + this.height - this.belong_scroller.viewport.scrollV });
+			}
+
+
+		}
+
 	}
 
 	export class ChatTextItem extends eui.ItemRenderer {
-		public lb_content: eui.Label;
+		public lb_content: RichTextField;
 		public img_system: eui.Image;
 		public img_notice: eui.Image;
 		public img_line: eui.Image;
@@ -377,6 +458,13 @@ module game {
 		public constructor() {
 			super();
 			this.skinName = "ChatTextItemSkin";
+			this.lb_content = new RichTextField();
+			this.addChild(this.lb_content);
+			this.lb_content.x = 125;
+			this.lb_content.y = 25;
+			this.lb_content.width = 420;
+			this.lb_content.size = 24;
+			this.lb_content.lineSpacing = 3;
 		}
 		public dataChanged() {
 
@@ -391,33 +479,28 @@ module game {
 			else {
 				this.img_notice.visible = false;
 			}
-			// if()//}
-			// {
-              //  this.lb_content.textFlow = GlobalUtil.getChatPortText
-			// }
-			// else
-			// this.lb_content.text = info.content;
-             
+
+			if (info.config_id > 0) {
+
+				this.lb_content.textHtml = ChatUtil.getSystemEventText(info.config_id, info.args);
+			}
+			else
+				this.lb_content.textHtml = "<font fontfamily=\"SimHei\" color=0xbfbfbf size = 20>" + info.content + "</font>";
+
 			//保证两行的位置
 			// if(this.lb_content.numLines>0)   //防止出现负数
 			// {
-			this.item_height = 30 * (this.lb_content.numLines) + 66;
-			this.img_line.y += 30 * (this.lb_content.numLines);
+			this.item_height = this.lb_content.height + 66;//30 * (this.lb_content.numLines) + 66;
+			this.img_line.y += this.lb_content.height;//30 * (this.lb_content.numLines);
+			this.height = this.lb_content.height + 66;
 			//}
 
 		}
 
 
-		  public static getChatSystemText(config_id:number,args:Array<any>){
-           
-            let str:string =   App.ConfigManager.getSystemChatByID(config_id).content;
-			let strs =  str.split
-
-         return <Array<egret.ITextElement>>[ ];
-    }
-
-
 	}
+
+
 
 
 }

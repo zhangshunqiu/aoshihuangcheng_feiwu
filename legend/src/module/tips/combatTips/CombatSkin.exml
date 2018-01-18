@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CombatSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group anchorOffsetX="0" anchorOffsetY="0" x="0" y="0" width="340" height="82" touchChildren="false" touchThrough="true" touchEnabled="false">
+		<e:Image source="words_bg_zhandouli_y_png" horizontalCenter="0" verticalCenter="0" touchEnabled="false" visible="false"/>
+		<e:Image source="equipping_bg_zhandouli_png" horizontalCenter="0" x="-11" scaleX="1" scaleY="1" bottom="0"/>
+		<e:Image source="words_zhandouli_y_png" scaleX="1" scaleY="1" y="44" left="49"/>
+		<e:BitmapLabel id="bitmap_combat" font="combat_zhandouli_fnt" text="" scaleX="1" scaleY="1"  anchorOffsetX="0" x="123" y="48"/>
+		<e:Group id="gp_increase" width="148" height="33" x="202" anchorOffsetY="0" anchorOffsetX="0" y="84" scaleX="1" scaleY="1" alpha="0" touchThrough="true">
+			<e:Image source="words_zhandouli_g_+_png" y="0" scaleX="1" scaleY="1" left="0"/>
+			<e:BitmapLabel id="bitmap_combat_up" y="0" text="" font="combat_zhandouli_up_fnt" scaleX="1" scaleY="1" left="27"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

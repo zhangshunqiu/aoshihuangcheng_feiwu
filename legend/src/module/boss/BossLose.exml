@@ -23,7 +23,7 @@
 			<e:Image source="boss_jilituijian_lose_png" x="0" y="0"/>
 		</e:Group>
 		<e:Image id="img_role" source="main_icon_juese_png" x="132" y="369" scaleX="1" scaleY="1"/>
-		<e:Image id="img_wing" source="main_icon_chibang_png" x="245" y="369" scaleX="1" scaleY="1"/>
+		<e:Image id="img_wing" x="245" y="369" scaleX="1" scaleY="1" source="main_icon_yuyi_png"/>
 		<e:Image id="img_forge" source="main_icon_duanzao_png" x="369" y="375" scaleX="1" scaleY="1"/>
 		<e:Image id="img_raid" source="boss_icon_xunbao_png" x="478" y="371"/>
 		<e:Scroller id="scroller" width="430" height="279" y="513" horizontalCenter="0" anchorOffsetY="0" x="145" scaleX="1" scaleY="1">

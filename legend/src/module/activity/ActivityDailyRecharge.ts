@@ -11,6 +11,7 @@ module game {
 		public lb_have_recharge : eui.Label;
 		public btn_recharge : eui.Button;
 		public scroller : eui.Scroller;
+		public btn_rechange:eui.Button;
 		public list : eui.List = new eui.List();
 
 		private activityModel :ActivityModel = ActivityModel.getInstance();
@@ -30,7 +31,9 @@ module game {
 			this.scroller.verticalScrollBar.visible = false;
 			this.list.itemRenderer = ActivityDailyRechargeItem;
 			this.scroller.viewport = this.list;
-
+			this.btn_rechange.addEventListener(egret.TouchEvent.TOUCH_TAP,()=>{
+				RechargeOpenManager.getInstance().openRechargeView();
+			},this);
 		}
 
 		public updateView() {

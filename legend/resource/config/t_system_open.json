@@ -33,7 +33,7 @@
 		"id":6,
 		"name":"熔炼",
 		"limit":[0,0,0],
-		"client_name":"BOSS_BAG_TIP"
+		"client_name":"SMELT"
 	},
 	"7":{
 		"id":7,
@@ -171,7 +171,7 @@
 		"id":29,
 		"name":"自动挑战",
 		"limit":[6,0,6],
-		"client_name":0
+		"client_name":"AUTO_FIGHT"
 	},
 	"30":{
 		"id":30,
@@ -231,7 +231,7 @@
 		"id":39,
 		"name":"遭遇战",
 		"limit":[1,0,0],
-		"client_name":"ENCOUNTER"
+		"client_name":"HEGEMONY"
 	},
 	"40":{
 		"id":40,
@@ -321,7 +321,7 @@
 		"id":54,
 		"name":"主线任务",
 		"limit":[0,0,0],
-		"client_name":0
+		"client_name":"TASK"
 	},
 	"55":{
 		"id":55,
@@ -346,5 +346,47 @@
 		"name":"充值",
 		"limit":[0,0,0],
 		"client_name":"RECHARGE_SPECIAL"
+	},
+	"59":{
+		"id":59,
+		"name":"限购礼包",
+		"limit":[0,0,0],
+		"client_name":"ACTIVITY_LIMIT"
+	},
+	"60":{
+		"id":60,
+		"name":"特惠礼包",
+		"limit":[0,0,0],
+		"client_name":"ACTIVITY_DISCOUNTS"
+	},
+	"61":{
+		"id":61,
+		"name":"累计充值",
+		"limit":[0,0,0],
+		"client_name":"ACTIVITY_ADD"
+	},
+	"62":{
+		"id":62,
+		"name":"每日累充",
+		"limit":[0,0,0],
+		"client_name":"ACTIVITY_EVERYDAY_ADD"
+	},
+	"63":{
+		"id":63,
+		"name":"连续充值",
+		"limit":[0,0,0],
+		"client_name":"ACTIVITY_EVERYDAY"
+	},
+	"64":{
+		"id":64,
+		"name":"幸运转盘",
+		"limit":[0,0,0],
+		"client_name":"FORTUNE"
+	},
+	"65":{
+		"id":65,
+		"name":"解锁新角色",
+		"limit":[80,0,0],
+		"client_name":"NEW_ROLE"
 	}
 }

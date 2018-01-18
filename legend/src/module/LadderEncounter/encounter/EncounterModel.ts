@@ -44,6 +44,7 @@ module game {
 
         public getEncounterLogInfo(data) {
 
+            this.log_list.splice(0);
             for (let i = 0; i < data.pk_log.length; i++) {
                 let info = new EncounterLogVo();
                 info.name = data.pk_log[i].nick;

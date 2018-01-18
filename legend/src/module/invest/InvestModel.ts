@@ -45,10 +45,10 @@ module game {
 
 				if(investList.indexOf(Number(key)) != -1)
 				{
-					var investVo:InvestVo = new InvestVo(investConfig[key],true);
+					var investVo:InvestVo = new InvestVo(investConfig[key],true);//true已经领取
 					_arr.push(investVo);
 				}else{
-					var investVo:InvestVo = new InvestVo(investConfig[key],false);
+					var investVo:InvestVo = new InvestVo(investConfig[key],false);//false还没有领取
 					_arr.push(investVo);
 				}
 			

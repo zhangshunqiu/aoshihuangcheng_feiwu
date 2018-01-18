@@ -17,6 +17,6 @@
 		<e:Image id="img_have_buy" x="516" y="62" source="activity_txt_yigoumai_png"/>
 		<e:Image source="shop_bg_zhekou_png" x="39" y="26"/>
 		<e:Image source="shop_txt_zhe_png" x="48" y="38" rotation="-45"/>
-		<e:BitmapLabel id="bmlb_discount" width="20" height="20" x="38" y="52" font="shop_shuzhi_zhekou_fnt" rotation="-45" text="5.5"/>
+		<e:BitmapLabel id="bmlb_discount" width="20" height="20" x="38" y="52" font="shop_shuzhi_zhekou_fnt" rotation="-45" text="5"/>
 	</e:Group>
 </e:Skin>

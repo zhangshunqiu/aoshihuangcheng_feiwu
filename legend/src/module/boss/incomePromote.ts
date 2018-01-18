@@ -24,25 +24,21 @@ module game{
 			this.lb_minute.text = this._bossModel.upLevelTime % 60 + '';
 		 }
 
-		 private closeIncomePromote() {
-			 App.WinManager.closeWin(WinName.INCOME_PROMOTE);
-		 }
-
         /**
 		 * 打开窗口
 		 */
 		public openWin(openParam:any = null):void{
 			super.openWin(openParam);
 			if(this._timerId == 0) {
-				this._timerId = App.GlobalTimer.addSchedule(4000, 1, this.closeIncomePromote, this, ()=>{}, this);
+				this._timerId = App.GlobalTimer.addSchedule(4000, 1, this.closeWin, this, ()=>{}, this);
 			}
 		}
 
 		/**
 		 * 关闭窗口
 		 */
-		public closeWin(callback): void {
-			super.closeWin(callback);
+		public closeWin(): void {
+			super.closeWin();
 		}
 
 		/**

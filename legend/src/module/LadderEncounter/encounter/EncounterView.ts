@@ -16,6 +16,7 @@ module game {
         public lb_pkTime: eui.Label;
         public gp_pkText: eui.Group;
         public lb_time: eui.Label;
+        public lb_getPkValue: eui.Label;
         public scroller: eui.Scroller;
         public list: eui.List;
         public img_question: eui.Image;
@@ -34,7 +35,8 @@ module game {
             super.childrenCreated();
             this.img_reward.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
                 // App.WinManager.openWin(WinName.ENCOUNTER_REWARD);   //每日奖励入口
-                PopUpManager.addPopUp({ obj: new EncounterRewardView(), effectType: 0 })
+                // PopUpManager.addPopUp({ obj: new EncounterRewardView(), effectType: 0 })
+                WinManager.getInstance().openPopWin(WinName.POP_Encounter_Reward);
             }, this);
             this.btn_rank.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
                 App.WinManager.openWin(WinName.RANK, ConstRankName.KILL);   //遭遇战排行榜入口
@@ -81,18 +83,28 @@ module game {
             this.initView();
         }
 
+        private setBtnRedTip() {
+            if (this._encounterModel.pkNum >= 100 || this._encounterModel.playerList.length == 0) {
+                App.BtnTipManager.setTypeValue(ConstBtnTipType.	AREAN_ENCOUNTER, false);
+            } else {
+                App.BtnTipManager.setTypeValue(ConstBtnTipType.	AREAN_ENCOUNTER, true);
+            }
+        }
+
         private initView() {
 
             this.scroller.scrollPolicyH = eui.ScrollPolicy.OFF;
-            this.scroller.scrollPolicyV = eui.ScrollPolicy.ON;
+            this.scroller.scrollPolicyV = eui.ScrollPolicy.OFF;
             this.scroller.verticalScrollBar.autoVisibility = false;
             this.scroller.verticalScrollBar.visible = false;
         }
 
         private updateView() {
+            this.setBtnRedTip();
             this.lb_killNum.text = this._encounterModel.killNum + "";
             this.lb_rank.text = this._encounterModel.rank + "";
             this.lb_pkNum.text = this._encounterModel.pkNum + "";
+            this.lb_getPkValue.text = App.ConfigManager.getConstConfigByType("ENCOUNTER_PK_ADD").value;
             if (this._encounterModel.pkNum >= 100) {
                 this.gp_pkText.visible = true;
                 this.lb_pkTime.text = this._encounterModel.pkNum - 99 + "";
@@ -188,6 +200,7 @@ module game {
         public btn_challenge: eui.Button;
         public data: any;
         private _encounterPkReduceEventId: number = 0;
+        private _startChallengeSuccessEventId: number = 0;
 
         public _encounterModel: EncounterModel = EncounterModel.getInstance();
         public constructor(data) {
@@ -203,12 +216,16 @@ module game {
             if (this._encounterPkReduceEventId == 0) {
                 this._encounterPkReduceEventId = App.EventSystem.addEventListener(PanelNotify.ENCOUNTER_PK_REDUCE_SUCCESS, this.pkReduceSuccess, this);
             }
+            if (this._startChallengeSuccessEventId == 0) {
+                this._startChallengeSuccessEventId = App.EventSystem.addEventListener(PanelNotify.ENCOUNTER_START_CHALLENGE_SUCCESS, () => {
+                    App.WinManager.closeWin(WinName.HEGEMONY);
+                }, this);
+            }
         }
         private pkReduceSuccess(): void {
             if (this.data.type == (EncounterModel.getInstance() as EncounterModel).curType &&
                 (EncounterModel.getInstance() as EncounterModel).curId == this.data.id) {
                 App.Socket.send(38002, { type: this.data.type, id: this.data.id });
-                App.WinManager.closeWin(WinName.HEGEMONY);
             }
         }
 
@@ -243,28 +260,17 @@ module game {
                     style: 0,
                     title: "",
                     // context:"",
-                    textFlow: [{ text: `当前PK值达到${cur_Pk},是否消耗${costGold}减少${pk_gap}点Pk值立即挑战`, style: { textColor: 0x235454 } }],
+                    textFlow: [{ text: `当前PK值达到${cur_Pk},是否消耗${costGold}元宝减少${pk_gap}点Pk值立即挑战`, style: { textColor: 0x235454 } }],
                     okCB: okCallback
                 });
 
             } else {
                 App.Socket.send(38002, { type: this.data.type, id: this.data.id });
-                App.WinManager.closeWin(WinName.HEGEMONY);
             }
         }
 
         private updateView() {
             let reward = [];
-            // if (this.data.type == 1) {
-            //     // this.img_icon.source = App.ConfigManager.getHeroIconBySexAndJob(this.data.sex, this.data.job) + "_png";
-                
-            // } else {
-            //     let info = App.ConfigManager.getRobotInfoById(this.data.id);
-            //     this.lb_name.text = App.ConfigManager.getRandomNameBySex(info.sex);
-            //     this.lb_lv.text = info.transmigration + "转" + info.level + "级";
-            //     // this.img_icon.source = App.ConfigManager.getHeroIconBySexAndJob(info.sex, info.career) + "_png";
-            //     reward = App.ConfigManager.getEncounterRewardByLvAndTurn(info.level, info.transmigration);
-            // }
             this.img_icon.source = App.ConfigManager.getSmallHeroIconBySexAndJob(this.data.sex, this.data.job) + "_png";
             this.lb_name.text = this.data.nick;
             this.lb_lv.text = this.data.turn + "转" + this.data.lv + "级";
@@ -283,21 +289,18 @@ module game {
       */
         public openWin(openParam: any = null): void {
             super.openWin(openParam);
-
+            
         }
-        // private pkReduceSuccess():void
-        // {   //pk消除成功
-        //     // App.Socket.send(38002, { type: this.data.type, id: this.data.id });
-        // }
 
-        /**
-         * 清理
-         */
         public clear(data: any = null): void {
             super.clear();
             if (this._encounterPkReduceEventId != 0) {
                 App.EventSystem.removeEventListener(PanelNotify.ENCOUNTER_PK_REDUCE_SUCCESS, this._encounterPkReduceEventId);
                 this._encounterPkReduceEventId = 0;
+            }
+            if (this._startChallengeSuccessEventId != 0) {
+                App.EventSystem.removeEventListener(PanelNotify.ENCOUNTER_START_CHALLENGE_SUCCESS, this._startChallengeSuccessEventId);
+                this._startChallengeSuccessEventId = 0;
             }
         }
         /**

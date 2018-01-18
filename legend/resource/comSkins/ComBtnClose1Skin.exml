@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<e:Skin class="skins.ComBtnClose1Skin" states="up" minHeight="50" minWidth="100"
+        xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" width="52" height="52" width.up="52">
+    <e:Image  includeIn="up" scale9Grid="1,3,8,8" source="com_btn_close_png" horizontalCenter="0" verticalCenter="0"/>
+</e:Skin>

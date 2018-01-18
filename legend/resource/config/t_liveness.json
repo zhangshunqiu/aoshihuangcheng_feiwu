@@ -2,25 +2,25 @@
 	"1":{
 		"id":1,
 		"liveness":20,
-		"reward_id":102,
-		"reward_num":3
+		"reward_id":10,
+		"reward_num":5
 	},
 	"2":{
 		"id":2,
 		"liveness":40,
-		"reward_id":102,
-		"reward_num":5
+		"reward_id":16,
+		"reward_num":3
 	},
 	"3":{
 		"id":3,
 		"liveness":80,
-		"reward_id":102,
-		"reward_num":7
+		"reward_id":26,
+		"reward_num":1
 	},
 	"4":{
 		"id":4,
 		"liveness":100,
 		"reward_id":102,
-		"reward_num":9
+		"reward_num":100
 	}
 }

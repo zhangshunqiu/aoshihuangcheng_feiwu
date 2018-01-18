@@ -46,53 +46,86 @@ module game {
         }
 
         private handlerCombat(data):void
-        {
-            this._rankModel.rankCombat(data);
-            App.EventSystem.dispatchEvent(PanelNotify.RANK_INFO_UPDATE,ConstRankName.COMBAT);
+        {   //假如list没有内容，说明这个排行榜没有排名，这时候只需要显示膜拜信息
+            if(data["list"].length > 0) {
+                this._rankModel.rankCombat(data);
+                App.EventSystem.dispatchEvent(PanelNotify.RANK_INFO_UPDATE,ConstRankName.COMBAT);
+            }else{
+                this._rankModel.setWorShip(data["worship"],ConstRankName.COMBAT);
+                App.EventSystem.dispatchEvent(PanelNotify.RANK_INFO_NOTHING,ConstRankName.COMBAT);
+            }
         }
 
         private handlerLv(data):void
-        {
-            this._rankModel.rankLevel(data);
-            App.EventSystem.dispatchEvent(PanelNotify.RANK_INFO_UPDATE,ConstRankName.LEVEL);
+        {   if(data["list"].length > 0) {
+                this._rankModel.rankLevel(data);
+                App.EventSystem.dispatchEvent(PanelNotify.RANK_INFO_UPDATE,ConstRankName.LEVEL);
+            }else{
+                this._rankModel.setWorShip(data["worship"],ConstRankName.LEVEL);
+                App.EventSystem.dispatchEvent(PanelNotify.RANK_INFO_NOTHING,ConstRankName.LEVEL);
+            }
         }
 
         private handlerFighter(data):void
-        {   
-            this._rankModel.rankFighter(data);
-            App.EventSystem.dispatchEvent(PanelNotify.RANK_INFO_UPDATE,ConstRankName.FIGHTER);
-            
+        {   if(data["list"].length > 0) {
+                this._rankModel.rankFighter(data);
+                App.EventSystem.dispatchEvent(PanelNotify.RANK_INFO_UPDATE,ConstRankName.FIGHTER);
+            }else{
+                this._rankModel.setWorShip(data["worship"],ConstRankName.FIGHTER);
+                App.EventSystem.dispatchEvent(PanelNotify.RANK_INFO_NOTHING,ConstRankName.FIGHTER);
+            }
         }
 
         private handlerMagic(data):void
-        {   
-            this._rankModel.rankMagic(data);
-            App.EventSystem.dispatchEvent(PanelNotify.RANK_INFO_UPDATE,ConstRankName.MAGIC);
-            
+        {   if(data["list"].length > 0) {
+                this._rankModel.rankMagic(data);
+                App.EventSystem.dispatchEvent(PanelNotify.RANK_INFO_UPDATE,ConstRankName.MAGIC);
+            }else{
+                this._rankModel.setWorShip(data["worship"],ConstRankName.MAGIC);
+                App.EventSystem.dispatchEvent(PanelNotify.RANK_INFO_NOTHING,ConstRankName.MAGIC);
+            }
         }
 
         private handlerTaoist(data):void
-        {   
-            this._rankModel.rankTaoist(data);
-            App.EventSystem.dispatchEvent(PanelNotify.RANK_INFO_UPDATE,ConstRankName.TAOIST);
+        {   if(data["list"].length > 0) {
+                this._rankModel.rankTaoist(data);
+                App.EventSystem.dispatchEvent(PanelNotify.RANK_INFO_UPDATE,ConstRankName.TAOIST);
+            }else{
+                this._rankModel.setWorShip(data["worship"],ConstRankName.TAOIST);
+                App.EventSystem.dispatchEvent(PanelNotify.RANK_INFO_NOTHING,ConstRankName.TAOIST);
+            }
         }
 
         private handlerKill(data):void
         {   
-            this._rankModel.rankKill(data);
-            App.EventSystem.dispatchEvent(PanelNotify.RANK_INFO_UPDATE,ConstRankName.KILL);
+            if(data["list"].length > 0) {
+                this._rankModel.rankKill(data);
+                App.EventSystem.dispatchEvent(PanelNotify.RANK_INFO_UPDATE,ConstRankName.KILL);
+            }else{
+                this._rankModel.setWorShip(data["worship"],ConstRankName.KILL);
+                App.EventSystem.dispatchEvent(PanelNotify.RANK_INFO_NOTHING,ConstRankName.KILL);
+            }
+            
         }
 
         private handlerMemal(data):void
-        {   
-            this._rankModel.rankMemal(data);
-            App.EventSystem.dispatchEvent(PanelNotify.RANK_INFO_UPDATE,ConstRankName.MEMAL);
+        {   if(data["list"].length > 0) {
+                this._rankModel.rankMemal(data);
+                App.EventSystem.dispatchEvent(PanelNotify.RANK_INFO_UPDATE,ConstRankName.MEMAL);
+            }else{
+                this._rankModel.setWorShip(data["worship"],ConstRankName.MEMAL);
+                App.EventSystem.dispatchEvent(PanelNotify.RANK_INFO_NOTHING,ConstRankName.MEMAL);
+            }
         }
 
         private handlerKing(data):void
-        {
-            this._rankModel.rankKing(data);
-            App.EventSystem.dispatchEvent(PanelNotify.RANK_INFO_UPDATE,ConstRankName.KING);
+        {   if(data["list"].length > 0) {
+                this._rankModel.rankKing(data);
+                App.EventSystem.dispatchEvent(PanelNotify.RANK_INFO_UPDATE,ConstRankName.KING);
+            }else{
+                this._rankModel.setWorShip(data["worship"],ConstRankName.KING);
+                App.EventSystem.dispatchEvent(PanelNotify.RANK_INFO_NOTHING,ConstRankName.KING);
+            }
         }
 
         private handlerWorship(data):void

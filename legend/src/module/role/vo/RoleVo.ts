@@ -17,6 +17,7 @@ class RoleVo {
 	public lifeExp : number = 0; //修为值
 	public first_charge:number = 0; //0未首充 1已充未领奖励 2已领奖励
 	public guideId : number = 0; //引导id
+	public titleId:number = 0;
 
 	public updateFrom9002(data:any) {
 		this.playerId = data.player_id;
@@ -32,6 +33,7 @@ class RoleVo {
 		this.turn = data.turn ? data.turn : 0;
 		this.lifeExp = data.life_exp ? data.life_exp : 0;
 		this.guideId = data.guide_id;
+		this.titleId = data.title_id;
 	}
 
 

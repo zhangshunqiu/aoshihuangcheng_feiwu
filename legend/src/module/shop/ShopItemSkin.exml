@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="ShopItemSkin" width="646" height="112" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:customui="customui.*">
-	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
-		<e:Image source="shop_bg_list_shangcheng_png" horizontalCenter="0" verticalCenter="0" x="0" y="0" scaleX="1" scaleY="1"/>
-		<customui:BaseItem id="baseItem" width="90" height="90" anchorOffsetX="45" anchorOffsetY="45" verticalCenter="0" left="10"/>
-		<e:Group id="gp_sale" width="50" height="50" top="0" left="0" visible="false">
+<e:Skin class="ShopItemSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:customui="customui.*" xmlns:ns1="*">
+	<e:Group id="gp_main" width="682" height="133" left="0" top="0">
+		<e:Image scaleX="1" scaleY="1" anchorOffsetY="0" x="0" y="0" height="133" width="682" source="shop_bg_listBg_png"/>
+		<e:Image id="img_bg" x="135" y="17" source="shop_bg_name_png" scaleX="1" scaleY="1"/>
+		<e:Label id="lb_name" text="名字" x="159" y="34" size="20" fontFamily="SimHei" scaleX="1" scaleY="1"/>
+		<e:Image id="img_money" x="160" y="80" source="com_icon_gold_png" scaleX="1" scaleY="1"/>
+		<e:Label id="lb_price" text="99999" x="212" y="77" fontFamily="SimHei" size="20" textColor="0xffea00" scaleX="1" scaleY="1"/>
+		<e:Label id="lb_count" text="本次限购1/1" x="482" y="15" fontFamily="SimHei" textColor="0xfed700" size="24" width="165" textAlign="center" scaleX="1" scaleY="1"/>
+		<e:Label id="lb_cap" text="" x="321" y="77" size="20" textColor="0x26f62e" scaleX="1" scaleY="1"/>
+		<e:Label id="lb_tip" text="" x="122" y="75" fontFamily="SimHei" size="24" textColor="0xf63526" scaleX="1" scaleY="1"/>
+		<ns1:ShopBaseItem id="shopBaseItem" x="79" skinName="BaseItemSkin" width="90" height="90" anchorOffsetX="45" anchorOffsetY="45" scaleX="1" scaleY="1" verticalCenter="0"/>
+		<e:Button id="img_buy" label="购买" horizontalCenter="227" skinName="skins.ComBtnList1Skin" x="485" scaleX="1" scaleY="1" verticalCenter="10.5"/>
+		<e:Group id="gp_sale" width="50" height="50" top="20" left="295" x="295" y="20" scaleX="1" scaleY="1" visible="false">
 			<e:Image source="shop_bg_zhekou_png" left="0" top="0"/>
 			<e:Image source="shop_txt_zhe_png" x="7" y="12" rotation="-45"/>
 			<e:BitmapLabel id="bmlb_sale" x="-3" y="25" font="shop_shuzhi_zhekou_fnt" rotation="-45" text="9"/>
 		</e:Group>
-		<e:Image id="img_bg" source="shop_bg_daojuming_chengse_png" x="101" y="12"/>
-		<e:Label id="lb_name" text="名字" x="124" y="30" size="20" fontFamily="SimHei"/>
-		<e:Image id="img_money" source="common_yuanbao_png" x="119" y="71"/>
-		<e:Label id="lb_price" text="99999" x="177" y="77" fontFamily="SimHei" size="20"/>
-		<e:Image id="img_buy" y="35" source="common_btn_common_png" x="471"/>
-		<e:Image x="522" y="48" touchEnabled="false" source="shop_txt_goumai_anniu_png"/>
-		<e:Label id="lb_count" text="本次限购1/1" x="464" y="7" fontFamily="SimHei" textColor="0xfed700" size="24" width="165" textAlign="center"/>
-		<e:Label id="lb_cap" text="" x="321" y="77" size="20" textColor="0x26f62e"/>
-		<e:Label id="lb_tip" text="" x="122" y="75" fontFamily="SimHei" size="24" textColor="0xf63526"/>
 	</e:Group>
 </e:Skin>

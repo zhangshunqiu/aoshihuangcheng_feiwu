@@ -54,7 +54,7 @@ module game {
 				let info = this.limitShop[key];
 				if(this.limitShop[key].id == data.id) {
 					exist = true;
-					this.limitShop[key].limit -= data.num;
+					this.limitShop[key].limit += data.num;
 					break;
 				}
 			}

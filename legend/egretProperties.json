@@ -28,9 +28,6 @@
 			"name": "socket"
 		},
 		{
-			"name": "dragonBones"
-		},
-		{
 			"name": "protobuf",
 			"path": "../third_party/protobuf"
 		},

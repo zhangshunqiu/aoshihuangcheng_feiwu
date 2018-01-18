@@ -16,6 +16,7 @@ class PageView extends eui.Component implements eui.ICollection {
     private _beginPosArr: any = {};
     private _tabbarEnabled: boolean = false; //显示页码
     private _tabbar: eui.TabBar = new eui.TabBar();
+    public slideCallback:Function;
     public constructor() {
         super();
         this.once(egret.Event.REMOVED_FROM_STAGE, () => {
@@ -69,6 +70,7 @@ class PageView extends eui.Component implements eui.ICollection {
         this._group.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.ontouchstart, this, true);
         // this._group.addEventListener(egret.TouchEvent.TOUCH_MOVE, this.ontouchmove, this,true);
         this._group.addEventListener(egret.TouchEvent.TOUCH_END, this.ontouchend, this, true);
+        this._group.addEventListener(egret.TouchEvent.TOUCH_TAP, this.ontouchtap, this, true);
         // this._group.addEventListener(egret.TouchEvent.TOUCH_CANCEL, this.ontouchcancel, this, true);
         this._group.addEventListener(egret.TouchEvent.TOUCH_RELEASE_OUTSIDE, this.ontouchcancel, this, true);
         // let rect = new eui.Rect(this.width, this.height, 0x888888);
@@ -149,6 +151,20 @@ class PageView extends eui.Component implements eui.ICollection {
         }
     }
 
+    protected ontouchtap(event: egret.TouchEvent) {
+        let offset = 0;
+        if (this._direction == PageView_Direction.Horizonal) {
+            offset = event.stageX - this._beginPos.x;
+        } else {
+            offset = event.stageY - this._beginPos.y;
+        }
+        if (Math.abs(offset) == 0) {
+
+        } else {
+            event.stopImmediatePropagation();
+        }
+    }
+
     protected ontouchcancel(event: egret.TouchEvent) {
         // console.log("canelllllll");
         // this.boundAnimate();
@@ -195,7 +211,10 @@ class PageView extends eui.Component implements eui.ICollection {
                         // this.refresh();
                         this._group.touchEnabled = true;
                     }
-
+                    if(this.slideCallback)
+                    {
+                        this.slideCallback();
+                    }
                 });
             } else {
                 egret.Tween.get(value).to({ y: finalY - direction * this.height }, 300, egret.Ease.sineOut).call(() => {
@@ -204,6 +223,10 @@ class PageView extends eui.Component implements eui.ICollection {
                         this._currentIndex = this._currentIndex + direction;
                         // this.refresh();
                         this._group.touchEnabled = true;
+                    }
+                    if(this.slideCallback)
+                    {
+                        this.slideCallback();
                     }
                 });
             }
@@ -363,6 +386,16 @@ class PageView extends eui.Component implements eui.ICollection {
         } else {
             this.currentIndex = index;
         }
+    }
+
+    /**
+     * 取消翻页
+     */
+    public cancelSlide() {
+        this._group.removeEventListener(egret.TouchEvent.TOUCH_BEGIN, this.ontouchstart, this, true);
+        this._group.removeEventListener(egret.TouchEvent.TOUCH_END, this.ontouchend, this, true);
+        this._group.removeEventListener(egret.TouchEvent.TOUCH_RELEASE_OUTSIDE, this.ontouchcancel, this, true);
+        this._group.removeEventListener(egret.TouchEvent.TOUCH_TAP,this.ontouchtap,this, true);
     }
 
 }

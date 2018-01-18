@@ -4,10 +4,10 @@
 		<e:Image source="boss_qizhi_succeed_png" horizontalCenter="0" verticalCenter="0"/>
 		<e:Image source="boss_taitou_succeed_png" y="122.99" horizontalCenter="0"/>
 		<e:Image source="boss_txt_tiaozhanchenggong_succeed_png" y="181.38" horizontalCenter="0.5"/>
+		<e:Label id="lb_rewardDes" text="获得以下奖励：" x="137" y="381" fontFamily="SimHei" size="24" textColor="0xC4BA1A"/>
 		<e:Group id="gp_bossTop" x="136" y="306">
 			<e:Label id="lb_exp" text="Label" x="0" y="0" fontFamily="SimHei" size="24" textColor="0x2ab119"/>
 			<e:Label id="lb_level" text="Label" x="0" y="37" fontFamily="SimHei" size="24" textColor="0xc4ba1a"/>
-			<e:Label text="获得以下奖励：" x="0" y="84" fontFamily="SimHei" size="24" textColor="0xC4BA1A"/>
 			<e:ProgressBar id="pb_exp" x="76" y="40" skinName="skins.ProgressBarExpSkin" value="30"/>
 		</e:Group>
 		<e:Group id="gp_worldBossTop" y="316" horizontalCenter="0" visible="false">

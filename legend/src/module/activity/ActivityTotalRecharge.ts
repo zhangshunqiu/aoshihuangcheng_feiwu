@@ -17,7 +17,7 @@ module game {
 		public baseItem3:customui.BaseItem;
 		public baseItem4:customui.BaseItem;
 		public baseItem5:customui.BaseItem;
-
+		public gp_recharge:eui.Group;
 		private _intervalId:number = 0;
 
 		public constructor(skinName: string) {
@@ -27,14 +27,13 @@ module game {
 
 		protected childrenCreated() {
 			super.childrenCreated();
-			this.btn_recharge.addEventListener(egret.TouchEvent.TOUCH_TAP,this.handlerRecharge,this);
+			// this.btn_recharge.addEventListener(egret.TouchEvent.TOUCH_TAP,this.handlerRecharge,this);
 			this.btn_reward.addEventListener(egret.TouchEvent.TOUCH_TAP,this.handlerReward,this);
+			this.gp_recharge.addEventListener(egret.TouchEvent.TOUCH_TAP,()=>{
+				RechargeOpenManager.getInstance().openRechargeView();
+			},this)
 		}
 
-		private handlerRecharge():void
-		{
-			//跳转充值页面
-		}
 
 		private handlerReward():void
 		{	
@@ -63,33 +62,42 @@ module game {
 				var id = reward[i][1];
 				var num = reward[i][2];
 				(this["baseItem" + i] as customui.BaseItem).updateBaseItem(type,id,num);
-				(this["baseItem" + i] as customui.BaseItem).lb_name.visible = true;
+				(this["baseItem" + i] as customui.BaseItem).setItemNameVisible(true);
 			}
 
-			this.lb_rechargeDesc.textFlow = [{text:"花费"},{text:config["add_gold"],style:{textColor:0xffea00}},
+			this.lb_rechargeDesc.textFlow = [{text:"累冲"},{text:config["add_gold"],style:{textColor:0xffea00}},
 			{text:"元宝即可获得"},{text:"材料礼包",style:{textColor:0xffea00}}] ;
 
 			this.lb_desc.textFlow = [{text:"活动说明：",style:{textColor:0xf87500}},{text:"开服1-7天累计充值满" + config["add_gold"] + "可领取",style:{textColor:0xB6B1AE}}]
+
 			//倒计时
-			var that = this;
-			this._intervalId = setInterval(function() {
-				var _leftTime:number = (ActivityModel.getInstance() as ActivityModel).totalRechargeInfo["left_time"];
-				var leftTime:number = _leftTime - new Date().getSeconds();
-				if(leftTime <= 0)
-				{
-					leftTime = 0;
-					clearInterval(this._intervalId);
-					this._intervalId = 0;
-				}
-				(that.lb_leftTime as eui.Label).textFlow =[{text:"剩余时间：",style:{textColor:0xf87500}},{text:InvestUtil.getFormatBySecond1(leftTime),style:{textColor:0x11E428}}] ;
-			}, 1000);
+			if(this._intervalId) {
+				App.GlobalTimer.remove(this._intervalId);
+			}
+			var leftTime:number = (ActivityModel.getInstance() as ActivityModel).totalRechargeInfo["left_time"];
+			(this.lb_leftTime as eui.Label).textFlow =[{text:"剩余时间：",style:{textColor:0xf87500}},{text:InvestUtil.getFormatBySecond1(leftTime),style:{textColor:0x11E428}}] ;
+			if(leftTime <= 0 ) {
+				(this.lb_leftTime as eui.Label).textFlow =[{text:"剩余时间：",style:{textColor:0xf87500}},{text:InvestUtil.getFormatBySecond1(0),style:{textColor:0x11E428}}] ;
+				App.Socket.send(30008,{});
+			}else {
+				(this.lb_leftTime as eui.Label).textFlow =[{text:"剩余时间：",style:{textColor:0xf87500}},{text:InvestUtil.getFormatBySecond1(leftTime),style:{textColor:0x11E428}}] ;
+				App.GlobalTimer.addSchedule(1000,leftTime,this.updateTime,this,()=>{
+					App.GlobalTimer.remove(this._intervalId);
+					App.Socket.send(30008,{});
+					this._intervalId = null;
+				},this)
+			}
 
 			//充值元宝 
 			var charge:number = (ActivityModel.getInstance() as ActivityModel).totalRechargeInfo["charge"];
 			this.lb_gold.text = "已充值：" + charge + "/" + config["add_gold"] + "元宝";
 		}
 
-	
+		private updateTime():void {
+			(ActivityModel.getInstance() as ActivityModel).totalRechargeInfo["left_time"]--;
+			var leftTime = (ActivityModel.getInstance() as ActivityModel).totalRechargeInfo["left_time"];
+			(this.lb_leftTime as eui.Label).textFlow =[{text:"剩余时间：",style:{textColor:0xf87500}},{text:InvestUtil.getFormatBySecond1(leftTime),style:{textColor:0x11E428}}] ;
+		}
 
 		/**
 		 * 打开窗口

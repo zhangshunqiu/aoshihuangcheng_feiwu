@@ -6,7 +6,7 @@
 				<e:List id="list" x="1" y="-1"/>
 			</e:Scroller>
 			<e:Image source="activity_bg_level_png" y="674.32" horizontalCenter="0"/>
-			<e:Label id="lb_my_rank" text="宝石总等级" y="695.69" fontFamily="SimHei" textColor="0xffffff" size="28" horizontalCenter="0"/>
+			<e:Label id="lb_my_rank" text="宝石总等级" y="695.69" fontFamily="SimHei" textColor="0xffffff" size="28" anchorOffsetX="0" width="221" horizontalCenter="1.5" textAlign="center"/>
 			<e:Image id="img_return" source="common_btn_fanhui_png" x="608" y="650" scaleX="1" scaleY="1" visible="false"/>
 		</e:Group>
 		<e:Group id="gp_center" height="600" left="0" right="0" bottom="0">
@@ -18,7 +18,7 @@
 				<e:Label text="剩余时间:" x="52" y="16" fontFamily="SimHei" size="24" textColor="0xF87500"/>
 			</e:Group>
 			<e:Group id="gp_left" width="360" left="0" height="300" y="0">
-				<e:Image source="activity_bg_level1_png" x="40" y="2.66"/>
+				<e:Image source="activity_bg_level1_png" x="40" y="3.66"/>
 				<e:Image source="activity_bg_diyiming_png" x="93" top="2"/>
 				<e:Image source="activity_diyiming_png" x="171" top="7"/>
 				<e:Image source="activity_bg_name_png" x="43" y="297.65"/>
@@ -44,11 +44,11 @@
 			</e:Group>
 			<e:Group id="gp_my" height="150" y="374.66" left="0" right="0">
 				<e:Image source="activity_bg_zongdengji_png" x="38" y="-2"/>
-				<e:Label id="lb_my_level" text="99" x="549" fontFamily="SimHei" size="24" textAlign="center" textColor="0xff0505" y="59"/>
-				<e:Label text="我的等级" x="511" fontFamily="SimHei" size="24" textColor="0xbfbfbf" y="23"/>
-				<e:Label text="总等级" x="102" fontFamily="SimHei" size="24" textColor="0xBFBFBF" y="23"/>
+				<e:Label id="lb_my_level" text="99" x="549" fontFamily="SimHei" size="24" textAlign="center" textColor="0xff0505" y="69"/>
+				<e:Label id="lb_myLv" text="我的等级" x="454" fontFamily="SimHei" size="24" textColor="0xbfbfbf" y="23" anchorOffsetX="0" width="199" textAlign="center"/>
+				<e:Label id="lb_stageLv" text="总等级" x="53" fontFamily="SimHei" size="24" textColor="0xBFBFBF" y="23" anchorOffsetX="0" width="169" textAlign="center"/>
 				<e:Label text="奖励" x="266" fontFamily="SimHei" size="24" textColor="0xf87500" y="59"/>
-				<e:Label id="lb_nextlevel" text="30" x="120" fontFamily="SimHei" size="24" textAlign="center" textColor="0xf87500" y="59"/>
+				<e:Label id="lb_nextlevel" text="30" x="120" fontFamily="SimHei" size="24" textAlign="center" textColor="0xf87500" y="69"/>
 				<customui:BaseItem id="baseItem_reward" width="90" height="90" anchorOffsetX="45" anchorOffsetY="45" x="372" y="71"/>
 			</e:Group>
 			<e:Button id="btn_rank" label="" x="302" bottom="22">

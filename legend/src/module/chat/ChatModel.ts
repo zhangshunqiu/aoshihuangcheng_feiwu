@@ -6,8 +6,8 @@ module game {
 		public chatWorldList: Array<any> = [];  //
 		public chatSystemList: Array<any> = [];  //
 		public EquipInfo:any = {};
-
-
+		public selectPlayerId:number = 0;
+		public selectPlayerName:string = "";
 
 		public constructor() {
 			super();
@@ -67,28 +67,27 @@ module game {
 			//this.chatAllList.unshift(cv);
 			this.chatAllList.push(cv);
 			if (this.chatAllList.length > 50) {
-				this.chatAllList.pop();
+				this.chatAllList.shift();
 			}
 			switch (cv.type) {
 				case ChatType.WORLD:
 					//this.chatWorldList.unshift(cv);最后改的新bug
 					this.chatWorldList.push(cv);
 					if (this.chatWorldList.length > 50) {
-						this.chatWorldList.pop();
+						this.chatWorldList.shift();
 					}
 					break;
 				case ChatType.GUILD:
 					//this.chatGuildList.unshift(cv);
 					this.chatGuildList.push(cv);
 					if (this.chatGuildList.length > 50) {
-						this.chatGuildList.pop();
+						this.chatGuildList.shift();
 					}
 					break;
 				case ChatType.SYSTEM:
-				    //this.chatGuildList.unshift(cv);
-					this.chatSystemList.push(cv);
+				    this.chatSystemList.push(cv);
 					if (this.chatSystemList.length > 20) {
-						this.chatSystemList.pop();
+						this.chatSystemList.shift();
 					}
 					GlobalTips.getInstance().showBroadcastTips(cv.content);
 					break;

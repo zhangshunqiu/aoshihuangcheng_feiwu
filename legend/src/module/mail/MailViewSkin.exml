@@ -14,7 +14,7 @@
 		</e:skinName>
 		</e:Button>
 		<e:Image width="198" height="77" y="-6" source="mail_youjian_title_png" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0"/>
-		<e:Label text="邮件可保存15天" x="62" y="873" textColor="0xE90202" size="24"/>
+		<e:Label id="lb_15" text="邮件可保存15天" x="56" y="857" textColor="0xE90202" size="24" anchorOffsetX="0" width="176" anchorOffsetY="0" height="26" fontFamily="SimHei"/>
 		<e:Label text="一键领取" x="292" y="871" size="24" anchorOffsetX="0" width="136" anchorOffsetY="0" height="30" textAlign="center" touchEnabled="false"/>
 		<e:Label id="lb_pageNum" text="页码" x="290" y="819" size="24" anchorOffsetX="0" width="136" anchorOffsetY="0" height="30" textAlign="center" touchEnabled="false" textColor="0xf6a527"/>
 		<e:Image id="img_return0" source="common_btn_fanhui_png" x="598" y="834" scaleX="1" scaleY="1"/>

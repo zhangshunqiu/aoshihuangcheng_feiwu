@@ -12,7 +12,7 @@
 				<e:Image source="boss_frame_tongguanjiangli_png" x="0" y="5"/>
 					<e:Image id="img_passReward" source="common_jinbi_jiangli2_png" horizontalCenter="0" verticalCenter="0"/>
 				</e:Group>
-				<e:ProgressBar id="pb_challengeNum" width="113.33" height="22.68" x="545" y="363" skinName="ProgressBarGuanqiaSkin" anchorOffsetX="0" anchorOffsetY="0" value="1" maximum="10"/>
+				<e:ProgressBar id="pb_challengeNum" width="113.33" height="22.68" x="545" y="363" skinName="ProgressBarGuanqiaSkin" anchorOffsetX="0" anchorOffsetY="0" maximum="10"/>
 				<e:Image source="boss_bosslaixi_png" x="83" y="1" visible="false"/>
 				<e:Image source="boss_txt_tongguanjiangli_png" x="548" y="202"/>
 				<e:Image source="boss_bg_name_png" y="-25" horizontalCenter="0"/>
@@ -28,7 +28,7 @@
 				<e:Label id="lb_no2" text="2、xxx" y="27" size="24" fontFamily="SimHei" textColor="0xBFBFBF" left="0"/>
 				<e:Label id="lb_no3" text="3、xxx" y="51" size="24" fontFamily="SimHei" textColor="0xBFBFBF" left="0"/>
 				</e:Group>
-				<e:Group y="55" x="197">
+				<e:Group y="55" x="197" anchorOffsetX="0" width="83">
 				<e:Label id="lb_no1_guanqia" text="xxx关" y="0" size="24" fontFamily="SimHei" textColor="0xBFBFBF" left="0"/>
 				<e:Label id="lb_no2_guanqia" text="xxx关" y="27" size="24" fontFamily="SimHei" textColor="0xBFBFBF" left="0"/>
 				<e:Label id="lb_no3_guanqia" text="xxx关" y="51" size="24" fontFamily="SimHei" textColor="0xBFBFBF" left="0"/>
@@ -72,7 +72,7 @@
 			</e:Group>
 			<e:List id="list" width="566" height="112" x="75" y="724" anchorOffsetX="0" anchorOffsetY="0"/>
 		</e:Group>
-		<e:Group id="gp_getReward" x="0" y="55" scaleX="1" scaleY="1" visible="false">
+		<e:Group id="gp_getReward" x="0" y="55" scaleX="1" scaleY="1">
 			<e:Image source="boss_bg_tongguanjiangli_png" x="20" y="65" anchorOffsetY="0" height="866" anchorOffsetX="0" width="680"/>
 			<e:Group x="304" y="408">
 			<e:Image source="boss_frame_tongguanjiangli_png" y="0" horizontalCenter="0"/>

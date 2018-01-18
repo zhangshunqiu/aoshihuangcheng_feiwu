@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MustDoTitleSkin" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="title_bg_png" x="31" y="132"/>
+	<e:Scroller id="scr_title" width="638" height="595.33" anchorOffsetY="0" anchorOffsetX="0" x="40.03" y="138.49" scaleX="1" scaleY="1">
+		<e:Group id="vp_activity"/>
+	</e:Scroller>
+	<e:Label id="lb_totalactivity" text="151" y="797" fontFamily="SimHei" size="28" x="309.3" scaleX="1" scaleY="1" textColor="0xffea01" textAlign="left"/>
+	<e:Label id="des_totalactivity0" text="累积获得成就点数:" y="797" fontFamily="SimHei" size="28" x="51.3" scaleX="1" scaleY="1" textColor="0xf87500"/>
+	<e:Button id="btn_lighten" label="" x="544" y="751">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="title_dianliangshuxing_png" source.down="title_dianliangshuxing_png" source.disabled="title_dianliangshuxing_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+	</e:Button>
+</e:Skin>

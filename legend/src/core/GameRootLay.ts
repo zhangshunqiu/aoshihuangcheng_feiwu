@@ -98,7 +98,7 @@ class GameRootLay extends eui.UILayer {
         this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStageView, this);
         this._eventSystem.addEventListener(WinManagerEvent.WIN_ADD,this.addWinToScene,this)
 		this._eventSystem.addEventListener(WinManagerEvent.WIN_REMOVE,this.removeWinToScene,this)
-        this._eventSystem.addEventListener(GameEvent.SHOW_LOADING,this.onShowLoading,this)
+        this._eventSystem.addEventListener(GameEvent.SHOW_LOADINGVIEW,this.onShowLoadingView,this)
 
         if(this._sockConnectEventId == 0){
             this._sockConnectEventId = this._eventSystem.addEventListener(SocketConst.SOCKET_CONNECT,this.closeLoading,this);
@@ -200,7 +200,7 @@ class GameRootLay extends eui.UILayer {
 	public destroy() {
         this._eventSystem.removeEventListener(WinManagerEvent.WIN_ADD);
 		this._eventSystem.removeEventListener(WinManagerEvent.WIN_REMOVE);
-        this._eventSystem.removeEventListener(GameEvent.SHOW_LOADING);
+        this._eventSystem.removeEventListener(GameEvent.SHOW_LOADINGVIEW);
 
         if(this._sockConnectEventId != 0){
               this._eventSystem.removeEventListener(SocketConst.SOCKET_CONNECT,this._sockConnectEventId);
@@ -243,11 +243,9 @@ class GameRootLay extends eui.UILayer {
         this._loadLay.touchThrough = enable;
     }
 
-    public onShowLoading(data:any):void{
-        if(data){
-            this.showLoading();
-        }else{
-            this.closeLoading();
+    private onShowLoadingView(data:any):void{
+        if(this._sceneLoading){
+            this._sceneLoading.visible = Boolean(data);
         }
     }
 

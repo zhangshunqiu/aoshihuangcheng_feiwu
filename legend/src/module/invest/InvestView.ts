@@ -35,23 +35,12 @@ module game {
 
 			this.list_invest.itemRenderer = InvestListItem;
 		}
+		
 		private question():void
 		{
-			var view:eui.Component = new eui.Component();
-			view.skinName = "InvestTipsSkin";
-    		view["lb_content"]["textFlow"] =(new egret.HtmlTextParser).parser('<font size=24>1.限制投资只是限制玩家投资的时间，玩家投资后，可在</font>'
-				+ '<font color=0x00f828 size=24 >任意</font>'
-				+'<font size=24>时间内完成并且领取奖励\n</font>'
-
-				+'<font size=24>2.投资计划只能投资</font>'
-				+ '<font color=0x00f828 size=24 >一次，</font>'
-				+'<font size=24>奖励也只能领取</font>'
-				+ '<font color=0x00f828 size=24 >一次，\n</font>'
-
-			
-			);
-			PopUpManager.addPopUp({obj:view,dark:true});
+			WinManager.getInstance().openPopWin(WinName.POP_INVEST_TIPS);
 		}
+
 		public closeWin():void{
 			WinManager.getInstance().closeWin(this.winVo.winName);
 		}
@@ -84,9 +73,17 @@ module game {
 
 		private buyInvest():void
 		{	
-			// console.log(RoleManager.getInstance().roleInfo.vipLv)
-			// console.log(RoleManager.getInstance().roleWealthInfo.gold)
-			App.Socket.send(34002,{});
+			if((InvestModel.getInstance() as InvestModel).isBuy) {
+				App.GlobalTips.showTips("已购买投资!");
+			}else {
+				var vipLv:number = ConfigManager.getInstance().getConstConfigByType("INVEST_VIP")["value"];
+				var costGold:number = ConfigManager.getInstance().getConstConfigByType("INVEST_GOLD")["value"];
+				if(RoleManager.getInstance().roleInfo.vipLv >= vipLv && RoleManager.getInstance().roleWealthInfo.gold >= costGold) {
+					App.Socket.send(34002,{});
+				}else {
+					App.GlobalTips.showTips("VIP等级或元宝不足!");
+				}
+			}
 		}
 		/**
 		 * 展示投资页面信息
@@ -96,8 +93,13 @@ module game {
 			this.bitmap_gold.text = ConfigManager.getInstance().getConstConfigByType("INVEST_GOLD")["value"];
 			this.bitmap_beishu.text = ConfigManager.getInstance().getConstConfigByType("INVEST_MULTIPLE")["value"];
 			this.lb_vip.text ="VIP" + ConfigManager.getInstance().getConstConfigByType("INVEST_VIP")["value"] + "以上可投资";
-			if((InvestModel.getInstance() as InvestModel).leftTime)
+			if((InvestModel.getInstance() as InvestModel).leftTime > 0)
 			{	
+				this.lb_invest_time.text = "剩余时间：" + InvestUtil.getFormatBySecond1((InvestModel.getInstance() as InvestModel).leftTime);
+				if(this._intervalId != 0) {
+					clearInterval(this._intervalId);
+					this._intervalId = 0;
+				}
 				if(this._intervalId == 0)
 				{	
 					var that = this;
@@ -112,6 +114,9 @@ module game {
 						that.lb_invest_time.text = "剩余时间：" + InvestUtil.getFormatBySecond1(leftTime);
 					}, 1000);
 				}
+			}else {
+				that.lb_invest_time.text = "剩余时间：" + InvestUtil.getFormatBySecond1(0);
+				App.Socket.send(34001,{});
 			}
 
 			// if((InvestModel.getInstance() as InvestModel).isBuy)
@@ -136,7 +141,8 @@ module game {
 			}
 			if(this._intervalId !=0)
 			{
-				// setti/
+				clearInterval(this._intervalId);
+				this._intervalId = 0;
 			}
 		}
 		/**

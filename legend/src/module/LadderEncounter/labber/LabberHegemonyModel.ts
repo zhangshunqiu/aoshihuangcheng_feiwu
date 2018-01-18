@@ -65,6 +65,8 @@ module game {
             this.left_num = data.left_times;
             this.left_total = data.max_times;
             this.left_buy_times = data.left_buy_times;
+            App.BtnTipManager.setTypeValue(ConstBtnTipType.AREAN_LABBER, this.left_num>0);
+
 
         }
 
@@ -96,26 +98,35 @@ module game {
         }
 
         public getLabberRewardInfo(data) {
-
+              
             this.tier_reward_list = App.ConfigManager.getLabberTierRewardInfo();
+            this.rank_reward_List = App.ConfigManager.getLabberRankRewardInfo();
+            //this.tier_reward_list = App.ConfigManager.getLabberRankRewardInfo();
             this.reward_list.splice(0);
             this.my_tier = data.myGrade;
             this.my_lv = data.myLv;
             this.my_margin = data.myMargin;
 
-            for (let i = 0; i < data.list.length; i++) {
+            for (let i = 0; i < this.rank_reward_List.length; i++) {
 
                 let info = new LabberRewardVo();
-                info.name = data.list[i].name;
-                info.player_id = data.list[i].player_id;
-                info.rank = data.list[i].rank;
-                info.tier = data.list[i].grade;
-                info.lv = data.list[i].lv;
-                info.margin = data.list[i].margin;
-                if (i < this.tier_reward_list.length) {
-                    info.reward_id = this.tier_reward_list[i][1];
-                    info.reward_num = this.tier_reward_list[i][2];
+                if (i < data.list.length) {
+
+                    info.name = data.list[i].name;
+                    info.player_id = data.list[i].player_id;
+                    info.rank = data.list[i].rank;
+                    info.tier = data.list[i].grade;
+                    info.lv = data.list[i].lv;
+                    info.margin = data.list[i].margin;
+                } 
+                else {
+                    info.player_id = -1;
+                    info.rank = i+1;
                 }
+
+                info.reward_id = this.rank_reward_List[i][1];
+                info.reward_num = this.rank_reward_List[i][2];
+
                 this.reward_list.push(info);
             }
         }

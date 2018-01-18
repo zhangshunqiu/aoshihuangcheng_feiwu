@@ -47,8 +47,8 @@ class SceneFlyEff extends BaseEff {
 			this.vo.callBackFun();
 			return false;
 		}else{
-			this.x = this.x+(this.vo.targetPos.x-this.x)/1.5;
-			this.y = this.y+(this.vo.targetPos.y-this.y)/1.5;
+			this.x = this.x+(this.vo.targetPos.x-this.x)/2.5;
+			this.y = this.y+(this.vo.targetPos.y-this.y)/2.5;
 		}
 		return true;
 	}

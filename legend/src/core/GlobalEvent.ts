@@ -4,7 +4,7 @@
 
 //事件
 const GameEvent = {
-    SHOW_LOADING: "show_loading",//显示加载中动画
+    SHOW_LOADINGVIEW: "show_loadingview",//显示场景加载页面
 }
 
 //模块事件
@@ -33,6 +33,7 @@ const PanelNotify = {
     HERO_ON_HERO_UPDATE_VIEW: "HERO_ON_HERO_UPDATE_VIEW",//更新英雄界面
     HERO_NEW_PARTNER: "HERO_NEW_PARTNER",//选择新英雄
     HERO_ACTIVE_SPECIAL: "HERO_ACTIVE_SPECIAL",//激活特殊装备
+    HERO_CHANGE: "HERO_CHANGE",  //切换英雄
 
 
     //技能
@@ -47,6 +48,7 @@ const PanelNotify = {
     HERO_BAG_NOT_ENOUGH: "HERO_BAG_NOT_ENOUGH",                      //背包不足
     HERO_MONEY_NOT_ENOUGH: "HERO_MONEY_NOT_ENOUGH",                      //元宝不足
     HERO_COIN_NOT_ENOUGH: "HERO_COIN_NOT_ENOUGH",                      //金币不足
+    HERO_ITEMINFO_UPDATE : "HERO_ITEMINFO_UPDATE",  //道具信息更新
 
     //装备
     HERO_TAP_EQUIP: "HERO_TAP_EQUIP", //点击了某个装备位置
@@ -87,6 +89,7 @@ const PanelNotify = {
     BOSS_WAVE_UPDATE: "BOSS_WAVE_UPDATE",   //小怪波数更新
     BOSS_REWARD_UPDATE: "BOSS_REWARD_UPDATE",  //boss通关奖励更新
     BOSS_MEET: "BOSS_MEET",   //随机遭遇了boss
+    BOSS_MEET_START_CHALLENGE: "BOSS_MEET_START_CHALLENGE", //请求挑战随机遭遇boss成功
 
     //main
     MAIN_CLOSE_BUTTON: "MAIN_CLOSE_BUTTON",  //挑战boss时关闭上面和侧面图标
@@ -107,7 +110,8 @@ const PanelNotify = {
     WING_INFO_UPDATE: "WING_INFO_UPDATE",  //winginfo更新
     WING_EQUIP_TIP: "WING_EQUIP_TIP",  //打开羽翼装备提示框
     WING_TRANSFORM_RESULT: "WING_TRANSFORM_RESULT", //羽翼装备转换结果
-    WING_STEP_SUCCESS: "WING_STEP_SUCCESS",  //羽翼升阶成功    
+    WING_STEP_SUCCESS: "WING_STEP_SUCCESS",  //羽翼升阶成功
+    WING_EQUIP_STEP_SUCCESS: "WING_EQUIP_STEP_SUCCESS",  //羽翼装备升阶成功    
 
     //chat
     CHAT_HAS_NEW_INFO: "CHAT_HAS_NEW_INFO",//收到一条新消息
@@ -163,16 +167,21 @@ const PanelNotify = {
 
     //vip
     VIP_REWARD_UPDATE: "VIP_REWARD_UPDATE",   //VIP奖励更新
+    VIP_GET_REWARD_SUCCESS: "VIP_GET_REWARD_SUCCESS",  //VIP奖励获取成功
 
     //pageView
     PAGE_CURRENTINDEX_UPDATE: "PAGE_CURRENTINDEX_UPDATE",  //当前页面索引更新
 
     //monthCard
     MONTHCARD_INFO_UPDATE: "MONTHCARD_INFO_UPDATE",    //月卡数据更新
+    MONTHCARD_GET_SUCCESS: "MONTHCARD_GET_SUCCESS",   //领取月卡奖励成功
 
     //排行榜更新
     RANK_INFO_UPDATE:"RANK_INFO_UPDATE",
-    RANK_WORSHIP_UPDATE:"RANK_WORSHIP_UPDATE",
+    RANK_WORSHIP_UPDATE:"RANK_WORSHIP_UPDATE",//膜拜
+    RANK_INFO_NOTHING:"RANK_INFO_NOTHING", //没有信息
+    //关卡榜
+    RANK_GUANQIA_UPDATE:"RANK_GUANQIA_UPDATE",
 
     //副本
     COPY_INFO_UPDATE: "COPY_INFO_UPDATE",  //副本信息更新
@@ -208,8 +217,21 @@ const PanelNotify = {
 
     //遭遇战
     ENCOUNTER_INFO_UPDATE: "ENCOUNTER_INFO_UPDATE",   //遭遇战信息更新
-    ENCOUNTER_PK_REDUCE_SUCCESS:"ENCOUNTER_PK_REDUCE_SUCCESS",
+    ENCOUNTER_PK_REDUCE_SUCCESS:"ENCOUNTER_PK_REDUCE_SUCCESS",  //消除pk值成功
+    ENCOUNTER_START_CHALLENGE_SUCCESS: "ENCOUNTER_START_CHALLENGE_SUCCESS",  //请求挑战成功
 
     //遭遇战
     ENCOUNTER_LOG_UPDATE:"ENCOUNTER_LOG_UPDATE",//遭遇战战斗记录
+
+    //玩家战力变化
+    PLAYER_COMBAT_UPDATE:"PLAYER_COMBAT_UPDATE",
+
+    //查看玩家信息
+    PLAYER_MSG_INQUIRE:"PLAYER_MSG_INQUIRE",
+    PLAYER_HERO_ATTRIBUTE_INDEX_CHANGE:"PLAYER_HERO_ATTRIBUTE_INDEX_CHANGE",
+    
+    //战斗力显示飘字属性播放完成
+    COMBAT_ATTR_FINISH:"COMBAT_ATTR_FINISH",
+    //战斗力提升战斗力播放完成
+    COMBAT_INCREASE_FINISH:"COMBAT_INCREASE_FINISH",
 }

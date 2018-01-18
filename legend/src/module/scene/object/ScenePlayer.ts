@@ -31,8 +31,16 @@ class ScenePlayer extends SceneMonster {
 		this.isCollision = false;
 		this.moveSpeed = this.vo.moveSpeed;
 		this.playStand();
+		//有时玩家的位置不对，要矫正玩家位置
+		if(this.vo.posX >= this._sceneModel.sceneWidth || this.vo.posY >= this._sceneModel.sceneHeight){
+			this.vo.posX = this._sceneModel.sceneWidth - 32;
+			this.vo.posY = this._sceneModel.sceneHeight-32;
+			this.vo.gridX = SceneUtil.pixelToGridX(this.vo.posX);
+			this.vo.gridY = SceneUtil.pixelToGridY(this.vo.posY);
+		}
 		this.x = this.vo.posX;
 		this.y = this.vo.posY;
+
 		this.setGridPosition(this.vo.gridX,this.vo.gridY);
 		this.curActState = 0;
 		this._action = 0;
@@ -43,9 +51,7 @@ class ScenePlayer extends SceneMonster {
 		this.actionTime = 500;
 		this.nextAtkTime = (GlobalModel.getInstance() as GlobalModel).getTimer()+500;
 		if(this.modelLay.alpha < 1){this.modelLay.alpha = 1;}
-		if(this.shadow.visible == false){
-			this.shadow.visible = true;
-		}
+		this.setShadowVisible(true);
 		this.showNameAndHpBar = true;
 		this.updateName();
 		this.updateHp();
@@ -93,10 +99,10 @@ class ScenePlayer extends SceneMonster {
 			this.updateActState(ActState.STAND,this.vo.dire);
 		}else{
 			var nn:number = Math.random()*1000; 
-			if(GlobalModel.getInstance().getTimer() > this.nextAtkTime && nn>900){
+			if(GlobalModel.getInstance().getTimer() > this.nextAtkTime && nn>500){
 
 				//优先查找可以拾取的物品
-				if(this.isMainRole){
+				if((this.isMainRole ||(this.isMainRole == false && this._sceneModel.pickItemHeroId == this.vo.id && this.vo.type == SceneObjectType.PLAYER)) && this._sceneModel.pickItemType == PICK_ITEM_TYPE.get_by_move){
 					var model:SceneModel = SceneModel.getInstance();
 					var itemDic:any = model.sceneItemVoDic;
 					var dis:number = 100000;
@@ -185,6 +191,7 @@ class ScenePlayer extends SceneMonster {
 	public moveToPickupCallback(itemVO:SceneItemVo):boolean{
 		if(SceneUtil.getDistance(this.x,this.y,itemVO.posX,itemVO.posY) < 64){
 			//test zhangshunqiu 拾取物品测试
+			App.Socket.send(11006,{id:itemVO.id});
 			SceneModel.getInstance().removeSceneObjectVo(itemVO);
 			EventSystem.getInstance().dispatchEvent(SceneEventType.REMOVE_SCENE_OBJECT,itemVO);
 			return true
@@ -258,13 +265,14 @@ class ScenePlayer extends SceneMonster {
 			if(this.wingMc){
 				this.wingMc.visible = false;
 			}
-			if(this.shadow){
-				this.shadow.visible = false;
-			}
+			this.setShadowVisible(false);
 			this.clearAllBuffEff();
 
 			this.pathList = [];
 			this.clearMoveCallBack();
+			if(this.isMainRole || this.vo.type == SceneObjectType.PLAYER){
+				this._sceneModel.updatePickItemHeroId();
+			}
 		}
 	}
 
@@ -360,12 +368,12 @@ class ScenePlayer extends SceneMonster {
 	 * 更新显示对象深度
 	 */
 	protected updateZorder(dire:number) {
-		if((dire == 1 || dire == 2) && this._zorderDire != 1){
+		if(dire == 1 && this._zorderDire != 1){
 			this._zorderDire = 1;
 			if(this.weaponMc){this.modelLay.setChildIndex(this.weaponMc,9);}
 			this.modelLay.setChildIndex(this.bodyMc,9);
 			if(this.wingMc){this.modelLay.setChildIndex(this.wingMc,9);}
-		}else if(dire == 3 && this._zorderDire != 2){
+		}else if((dire == 3 || dire == 2) && this._zorderDire != 2){
 			this._zorderDire = 2;
 			this.modelLay.setChildIndex(this.bodyMc,9);
 			if(this.weaponMc){this.modelLay.setChildIndex(this.weaponMc,9);}

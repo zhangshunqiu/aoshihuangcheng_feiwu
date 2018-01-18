@@ -1,80 +1,92 @@
 {
 	"1":{
 		"id":1,
-		"level":10,
+		"level":30,
 		"transmigration":0,
-		"gold":100
+		"gold":1288
 	},
 	"2":{
 		"id":2,
-		"level":20,
+		"level":50,
 		"transmigration":0,
-		"gold":110
+		"gold":1588
 	},
 	"3":{
 		"id":3,
-		"level":30,
+		"level":60,
 		"transmigration":0,
-		"gold":120
+		"gold":1888
 	},
 	"4":{
 		"id":4,
-		"level":40,
+		"level":70,
 		"transmigration":0,
-		"gold":130
+		"gold":2188
 	},
 	"5":{
 		"id":5,
-		"level":50,
+		"level":80,
 		"transmigration":0,
-		"gold":140
+		"gold":2488
 	},
 	"6":{
 		"id":6,
-		"level":60,
-		"transmigration":0,
-		"gold":150
+		"level":0,
+		"transmigration":1,
+		"gold":2788
 	},
 	"7":{
 		"id":7,
-		"level":70,
-		"transmigration":0,
-		"gold":160
+		"level":0,
+		"transmigration":2,
+		"gold":3088
 	},
 	"8":{
 		"id":8,
-		"level":80,
-		"transmigration":0,
-		"gold":170
+		"level":0,
+		"transmigration":3,
+		"gold":3388
 	},
 	"9":{
 		"id":9,
 		"level":0,
-		"transmigration":1,
-		"gold":180
+		"transmigration":4,
+		"gold":3688
 	},
 	"10":{
 		"id":10,
 		"level":0,
-		"transmigration":2,
-		"gold":190
+		"transmigration":5,
+		"gold":3988
 	},
 	"11":{
 		"id":11,
 		"level":0,
-		"transmigration":3,
-		"gold":200
+		"transmigration":6,
+		"gold":4288
 	},
 	"12":{
 		"id":12,
 		"level":0,
-		"transmigration":4,
-		"gold":210
+		"transmigration":7,
+		"gold":4588
 	},
 	"13":{
 		"id":13,
 		"level":0,
-		"transmigration":5,
-		"gold":220
+		"transmigration":8,
+		"gold":4888
+	},
+	"14":{
+		"id":14,
+		"level":0,
+		"transmigration":9,
+		"gold":5188
+	},
+	"15":{
+		"id":15,
+		"level":0,
+		"transmigration":10,
+		"gold":5488
 	}
 }

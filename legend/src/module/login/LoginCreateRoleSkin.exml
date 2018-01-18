@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="LoginCreateRoleSkin" width="720" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
 	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
-		<e:Image horizontalCenter="0" verticalCenter="0" source="role_bg_png"/>
+		<e:Image horizontalCenter="0" verticalCenter="0" source="role_bg_jpg"/>
 		<e:Image horizontalCenter="0" top="0" source="role_bg_taitou_png"/>
 		<e:Image horizontalCenter="0" top="15" source="role_xuanze_png"/>
 		<e:Group id="gp_middle" height="600" verticalCenter="0" left="0" right="0" touchEnabled="false">

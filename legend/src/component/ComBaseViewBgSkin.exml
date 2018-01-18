@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ComBaseViewBgSkin" width="720" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image x="0" y="0" source="com_bg_win_png" touchEnabled="false" locked="true"/>
+	<e:Image x="354" y="19" source="com_icon_coin_png" touchEnabled="false"/>
+	<e:Image x="531" y="20" source="com_icon_gold_png" touchEnabled="false"/>
+	<e:Group width="200" height="42" x="88" y="7" touchEnabled="false" touchChildren="false" scrollEnabled="false">
+		<e:Image id="img_winTitle" touchEnabled="false" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" source=""/>
+	</e:Group>
+	<e:Label id="lb_winCoin" text="123456" x="371" y="20" touchEnabled="false" size="20" width="120" textAlign="center"/>
+	<e:Label id="lb_winGold" text="123456" y="20" touchEnabled="false" size="20" width="100" textAlign="center" horizontalCenter="236"/>
+	<e:Button id="btn_winCoin" label="" x="482" y="15" width="28" height="28" skinName="skins.ComBtnSmallAddSkin"/>
+	<e:Button id="btn_winGold" label="" x="631" y="15" width="28" height="28" skinName="skins.ComBtnSmallAddSkin">
+	</e:Button>
+</e:Skin>

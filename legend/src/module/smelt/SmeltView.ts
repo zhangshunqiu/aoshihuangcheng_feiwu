@@ -8,17 +8,17 @@ module game{
 		public commonWin : customui.CommonWin;
 		public btn_smelt : eui.Button;
 		public labelDisplay : eui.Label;
-		public cbox0 : eui.CheckBox;
-		public cbox1 : eui.CheckBox;
+		// public cbox0 : eui.CheckBox;
+		// public cbox1 : eui.CheckBox;
 		public cbox2 : eui.CheckBox;
 		public cbox3 : eui.CheckBox;
-		public cbox_keep : eui.CheckBox;
+		// public cbox_keep : eui.CheckBox;
 		public scroller : eui.Scroller;
 		public gp_equip : eui.Group;
-
+		public img_close:eui.Image;
 		private itemArray : Array<customui.BaseItem> = [];
 		private smeltModel : SmeltModel = SmeltModel.getInstance();
-		private TOTAL_COUNT = 25;
+		private TOTAL_COUNT = 16;
 
 		public constructor(viewConf:WinManagerVO=null) {
             super(viewConf);
@@ -33,14 +33,14 @@ module game{
 			this.scroller.scrollPolicyV = eui.ScrollPolicy.OFF;
 			this.smeltModel.selectedQuality[0] = true;
 			//默认选白色
-			this.cbox0.selected = true;
+			// this.cbox0.selected = true;
 			this.smeltModel.selectedQuality[0] = true;
-			this.cbox1.selected = true;
+			// this.cbox1.selected = true;
 			this.smeltModel.selectedQuality[1] = true;
 			this.cbox2.selected = true;
 			this.smeltModel.selectedQuality[2] = true;
-			this.cbox_keep.selected = true;
-			this.cbox_keep.touchEnabled = false;
+			// this.cbox_keep.selected = true;
+			// this.cbox_keep.touchEnabled = false;
             this.initView();
 			this.updateView();
 			this.validateNow();
@@ -48,36 +48,44 @@ module game{
 
         private initView() {
 			this.commonWin.img_close.addEventListener(egret.TouchEvent.TOUCH_TAP,()=>{
-				App.WinManager.closeWin(WinName.SMELT);
+				// App.WinManager.closeWin(WinName.SMELT);
+				WinManager.getInstance().closePopWin(WinName.POP_SMELT);
             },this);
-
+			this.img_close.addEventListener(egret.TouchEvent.TOUCH_TAP,()=>{
+				// App.WinManager.closeWin(WinName.SMELT);
+				WinManager.getInstance().closePopWin(WinName.POP_SMELT);
+            },this);
 			let selectQuality = (quality,isSelected)=> {
 				if (isSelected) {
 					this.smeltModel.selectedQuality[quality] = true;
 				} else {
 					this.smeltModel.selectedQuality[quality] = false;
 				}
-				this.updateView();
+				// this.updateView();  //注释掉
 			}
 			
-			this.cbox_keep.addEventListener(eui.UIEvent.CHANGE,(event:eui.UIEvent)=>{
-				// console.log(event.target.selected);
-			},this)
-			this.cbox0.addEventListener(eui.UIEvent.CHANGE,(event:eui.UIEvent)=>{
-				// console.log(event.target.selected);
-				selectQuality.call(this,0,event.target.selected);
-			},this)
-			this.cbox1.addEventListener(eui.UIEvent.CHANGE,(event:eui.UIEvent)=>{
-				// console.log(event.target.selected);
-				selectQuality.call(this,1,event.target.selected);
-			},this)
+			// this.cbox_keep.addEventListener(eui.UIEvent.CHANGE,(event:eui.UIEvent)=>{
+			// 	// console.log(event.target.selected);
+			// },this)
+			// this.cbox0.addEventListener(eui.UIEvent.CHANGE,(event:eui.UIEvent)=>{
+			// 	// console.log(event.target.selected);
+				
+			// },this)
+			// this.cbox1.addEventListener(eui.UIEvent.CHANGE,(event:eui.UIEvent)=>{
+			// 	// console.log(event.target.selected);
+				
+			// },this)
 			this.cbox2.addEventListener(eui.UIEvent.CHANGE,(event:eui.UIEvent)=>{
 				// console.log(event.target.selected);
+				selectQuality.call(this,0,event.target.selected);
+				selectQuality.call(this,1,event.target.selected);
 				selectQuality.call(this,2,event.target.selected);
+				this.updateView();
 			},this)
 			this.cbox3.addEventListener(eui.UIEvent.CHANGE,(event:eui.UIEvent)=>{
 				// console.log(event.target.selected);
 				selectQuality.call(this,3,event.target.selected);
+				this.updateView();
 			},this)
 
 			this.btn_smelt.addEventListener(egret.TouchEvent.TOUCH_TAP,()=>{
@@ -85,24 +93,28 @@ module game{
 					App.GlobalTips.showTips("没有可熔炼的装备！");
 					return;
 				}
-				let a = this.smeltModel.selectedQuality[0] ? 1 :0;
-				let b = this.smeltModel.selectedQuality[1] ? 1 :0;
-				let c = this.smeltModel.selectedQuality[2] ? 1 :0;
-				let d = this.smeltModel.selectedQuality[3] ? 1 :0;
-				App.Socket.send(14011,[a,b,c,d,1]);
+				// let a = this.smeltModel.selectedQuality[0] ? 1 :0;
+				// let b = this.smeltModel.selectedQuality[1] ? 1 :0;
+				// let c = this.smeltModel.selectedQuality[2] ? 1 :0;
+				// let d = this.smeltModel.selectedQuality[3] ? 1 :0;
+				let arr: any[]=[];
+				for(let i:number=0; i<this.smeltModel.curSmeltArr.length; i++) {
+					arr.push(this.smeltModel.curSmeltArr[i].id);
+				}
+				App.Socket.send(14011,{ids:arr});
 			},this)
 
 			let layout = new eui.TileLayout();
-			layout.requestedRowCount = 5;
-			layout.requestedColumnCount = 5;
-			layout.verticalGap = 30;
-			layout.horizontalGap = 40;
+			layout.requestedRowCount = 4;
+			layout.requestedColumnCount = 4;
+			layout.verticalGap = 35;
+			layout.horizontalGap = 50;
 			layout.horizontalAlign = egret.HorizontalAlign.CENTER;
 			layout.verticalAlign = egret.VerticalAlign.MIDDLE;
 			this.gp_equip.layout = layout;
 			for(let i=0;i<this.TOTAL_COUNT;i++) {
 				let item = new customui.BaseItem();
-				item.img_bg.visible = true;
+				item.setStopShowTips(true);
 				this.itemArray.push(item);
 				this.gp_equip.addChild(item);
 			}
@@ -124,19 +136,23 @@ module game{
 					effectMc.y = 45;
 				}
 			}
+			// this.smeltModel._dataArray.splice(0, this.smeltModel.curSmeltArr.length);
 			this.updateView();
 		}
 
 		public updateView() {
 			this.smeltModel.FilterEquipByScore();
 			this.smeltModel.filterEquip();
+			this.smeltModel.sortByQuality();
+			this.smeltModel.curSmeltArr = [];
 			// console.log("smelt updateView ",this.smeltModel._dataArray.length);
 			for(let i=0;i<this.TOTAL_COUNT;i++) {
 				if (this.smeltModel._dataArray[i]) { //有数据
-					this.itemArray[i].updateBaseItem(ClientType.EQUIP,this.smeltModel._dataArray[i].good_id);					
+					this.itemArray[i].updateBaseItem(ClientType.EQUIP,this.smeltModel._dataArray[i].good_id);
+					this.smeltModel.curSmeltArr.push(this.smeltModel._dataArray[i]);
 				} else {
 					this.itemArray[i].updateBaseItem(ClientType.EQUIP,0);
-					this.itemArray[i].img_icon.source = "";
+					this.itemArray[i].setItemIcon("");
 				}
 			}
 		}
@@ -159,6 +175,8 @@ module game{
 			super.openWin(openParam);
 			App.EventSystem.addEventListener(PanelNotify.SMELT_SMELT_EQUIP,this.handleSmeltSuccess,this);
 			if (this.itemArray.length >0) {
+				// this.smeltModel.filterEquip();
+				// this.smeltModel.sortByQuality();
 				this.updateView();
 			}
 

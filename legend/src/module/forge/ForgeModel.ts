@@ -60,6 +60,11 @@ module game {
 					tempLv = value.lv;
 				}
 			}, this);
+			//判断等级
+			if (App.RoleManager.roleInfo.lv <= tempLv) {
+				return false;
+			}
+
 			let equip = heroModel.heroInfo[pos].getPartInfoByPart(this.curPart);
 			let curLevel = equip ? equip.lv : 0;
 			let forgeInfo = this.getStrengthByPartLevel(this.curPart, curLevel + 1);
@@ -72,9 +77,11 @@ module game {
 				// return true;
 				this.strengthHeroRedDot[pos] = true;
 				App.BtnTipManager.setTypeValue(ConstBtnTipType.FORGE_STRENGTH, true);
+				return true;
 			} else {
 				this.strengthHeroRedDot[pos] = false;
 				App.BtnTipManager.setTypeValue(ConstBtnTipType.FORGE_STRENGTH, false);
+				return false;
 			}
 		}
 
@@ -141,6 +148,7 @@ module game {
 
 		}
 
+		//橙装升级
 		public checkCanOrangeUp(pos) {
 			let heroInfo = HeroModel.getInstance().heroInfo[pos];
 
@@ -170,6 +178,11 @@ module game {
 			let nextInfo = App.ConfigManager.getEquipById(equipInfo.upgrade);
 
 			if (!nextInfo) {
+				return false;
+			}
+			if (App.RoleManager.roleInfo.turn < nextInfo.reincarnation) {
+				return false;
+			} else if (App.RoleManager.roleInfo.lv < nextInfo.limit_lvl) {
 				return false;
 			}
 			//橙装精华

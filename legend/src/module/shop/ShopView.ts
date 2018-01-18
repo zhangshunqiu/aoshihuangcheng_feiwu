@@ -16,7 +16,10 @@ module game {
 		public img_refresh: eui.Image;
 		public lb_cost: eui.Label;
 		public lb_over_tip: eui.Label;
-
+		public img_girl:eui.Label;
+		public lb_desc:eui.Label;
+		public lb_preview:eui.Label;
+		public comBaseBg:ComBaseViewBg;
 		private list: eui.List = new eui.List();
 		private shopModel: ShopModel = ShopModel.getInstance();
 		private timeHandle: number; //当前倒计时handle
@@ -36,6 +39,11 @@ module game {
 		}
 
 		private initView() {
+			this.comBaseBg.winVo = this.winVo;
+			this.lb_preview.textFlow = [{ text: "极品预览", style: { underline: true } }];
+			this.lb_preview.addEventListener(egret.TouchEvent.TOUCH_TAP,()=>{
+				WinManager.getInstance().openPopWin(WinName.POP_SHOP_PREVIEW);
+			},this)
 			this.img_return.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
 				App.WinManager.closeWin(WinName.SHOP);
 			}, this);
@@ -60,45 +68,50 @@ module game {
 			}, this);
 			this.list.itemRenderer = ShopItem;
 			this.scroller.viewport = this.list;
+			this.scroller.verticalScrollBar.autoVisibility = false;
+			this.scroller.verticalScrollBar.visible = false;
 			this.scroller.scrollPolicyH = eui.ScrollPolicy.OFF;
-
-			this.list.dataProvider = new eui.ArrayCollection([{"id":1,"goods":1,"money":1,"number":10}]);
+			this.list.layout = new eui.VerticalLayout();
+			(this.list.layout as eui.VerticalLayout).gap = 5;
+			this.list.dataProvider = new eui.ArrayCollection([{ "id": 1, "goods": 1, "money": 1, "number": 10 }]);
 			this.tabbar.selectedIndex = 0;
 			this.list.validateNow();
 			this.validateNow();
 		}
 
 		private showBuyWin(data) {
-			if (!this._subview) {
-				this._subview = new ShopBuyWinView(data);
-				PopUpManager.addPopUp({ obj: this._subview });
-			} else if(this._subview){
-				PopUpManager.removePopUp(this._subview);
-				this._subview = undefined;
-				this._subview = new ShopBuyWinView(data);
-				PopUpManager.addPopUp({ obj: this._subview });
-			}else if (this._subview && this._subview.parent) {
-				PopUpManager.removePopUp(this._subview);
-				this._subview = undefined;
-				this._subview = new ShopBuyWinView(data);
-				PopUpManager.addPopUp({ obj: this._subview });
-			}
+			App.WinManager.openWin(WinName.POP_SHOP_BUY, { data: data });
+			// if (!this._subview) {
+			// 	this._subview = new ShopBuyWinView(data);
+			// 	PopUpManager.addPopUp({ obj: this._subview });
+			// } else if(this._subview){
+			// 	PopUpManager.removePopUp(this._subview);
+			// 	this._subview = undefined;
+			// 	this._subview = new ShopBuyWinView(data);
+			// 	PopUpManager.addPopUp({ obj: this._subview });
+			// }else if (this._subview && this._subview.parent) {
+			// 	PopUpManager.removePopUp(this._subview);
+			// 	this._subview = undefined;
+			// 	this._subview = new ShopBuyWinView(data);
+			// 	PopUpManager.addPopUp({ obj: this._subview });
+			// }
 		}
 
 		private closeBuyWin() {
-			if(this._subview){
-				PopUpManager.removePopUp(this._subview);
-				this._subview = undefined;
-			}else if (this._subview && this._subview.parent) {
-				PopUpManager.removePopUp(this._subview);
-				this._subview = undefined;
-			}
+			App.WinManager.closeWin(WinName.POP_SHOP_BUY);
+			// if(this._subview){
+			// 	PopUpManager.removePopUp(this._subview);
+			// 	this._subview = undefined;
+			// }else if (this._subview && this._subview.parent) {
+			// 	PopUpManager.removePopUp(this._subview);
+			// 	this._subview = undefined;
+			// }
 		}
 
 		private changedIndex(index) {
 			App.logzrj("index:  ", index);
 			this.scroller.stopAnimation();
-			this.scroller.bottom = 288;
+			this.scroller.bottom = 175;
 			this.lb_over_tip.visible = false;
 			if (this.timeHandle) {
 				egret.clearInterval(this.timeHandle);
@@ -107,13 +120,22 @@ module game {
 			if (index == null) {
 				this.updateMysteryShop();
 			} else if (index == 0) {
+				this.img_girl.visible = true;
+				this.lb_desc.text = "点击刷新有\n惊喜哦!"
+				this.lb_preview.visible = true;
 				this.updateMysteryShop();
 				this.checkGuide();
 			} else if (index == 1) {
+				this.lb_desc.text = "机不可失\n赶紧入手吧!"
+				this.img_girl.visible = true;
+				this.lb_preview.visible = false;
 				this.updateLimitShop();
 			} else if (index == 2) {
+				this.lb_desc.text = ""
+				this.img_girl.visible = false;
+				this.lb_preview.visible = false;
 				this.updateNormalShop();
-				this.scroller.bottom = 218;
+				this.scroller.bottom = 35;
 			}
 			egret.callLater(() => {
 				this.list.validateNow();
@@ -124,10 +146,11 @@ module game {
 		}
 
 		public updateView(data) {
-			if (this._subview && this._subview.parent) {
-				PopUpManager.removePopUp(this._subview);
-				this._subview = undefined;
-			}
+			App.WinManager.closeWin(WinName.POP_SHOP_BUY);
+			// if (this._subview && this._subview.parent) {
+			// 	PopUpManager.removePopUp(this._subview);
+			// 	this._subview = undefined;
+			// }
 			if (data) { //刷新商店数据
 				if (this.tabbar.selectedIndex == data - 1) {
 					this._offset = this.list.scrollV;
@@ -209,24 +232,39 @@ module game {
 		}
 
 		public checkGuide() {
-			App.GuideManager.bindClickBtn(this.img_refresh,1012,2);
-			App.GuideManager.bindClickBtn((<eui.Group>(<ShopItem>this.list.getElementAt(0)).getChildAt(0)).getChildByName("img_buy"),1012,3);
-			App.GuideManager.checkGuide(1012);
+			if (this.list.getElementAt(0)) {
+				App.GuideManager.bindClickBtn(this.img_refresh, 1012, 2);
+				App.GuideManager.bindClickBtn((<eui.Group>(<ShopItem>this.list.getElementAt(0)).getChildAt(0)).getChildByName("img_buy"), 1012, 3);
+				App.GuideManager.checkGuide(1012);
+			}
 		}
 
 		public removeGuide() {
-			App.GuideManager.removeClickBtn(1012,2);
-			App.GuideManager.removeClickBtn(1012,3);
+			App.GuideManager.removeClickBtn(1012, 2);
+			App.GuideManager.removeClickBtn(1012, 3);
 		}
 		/**
 		 * 打开窗口
 		 */
 		public openWin(openParam: any = null): void {
 			super.openWin(openParam);
+			if (openParam && openParam.type) {
+				if (openParam.type == ShopType.MYSTERY) {
+					App.Socket.send(16001, {});
+				} else if (openParam.type == ShopType.LIMIT) {
+					App.Socket.send(16002, {});
+				} else if (openParam.type == ShopType.NORMAL) {
+
+				}
+				this.changedIndex(openParam.type - 1);
+				this.tabbar.selectedIndex = openParam.type - 1;
+			} else {
+				App.Socket.send(16001, {});
+			}
 			App.EventSystem.addEventListener(PanelNotify.SHOP_UPDATE_LIST, this.updateView, this);
 			App.EventSystem.addEventListener(PanelNotify.SHOP_BUY_WIN, this.showBuyWin, this);
 			App.EventSystem.addEventListener(PanelNotify.SHOP_CLOSE_BUY_WIN, this.closeBuyWin, this);
-			App.Socket.send(16001, {});
+			// App.Socket.send(16001, {});
 			// this.checkGuide();
 		}
 
@@ -257,7 +295,7 @@ module game {
 
 	export class ShopItem extends eui.ItemRenderer {
 		public gp_main: eui.Label;
-		public baseItem: customui.BaseItem;
+		public shopBaseItem: ShopBaseItem;
 		public lb_name: eui.Label;
 		public lb_price: eui.Label;
 		public img_money: eui.Image;
@@ -288,7 +326,7 @@ module game {
 				let goodId = this.data.good_id ? this.data.good_id : this.data.goods;  //商品id
 				let price = Number(this.lb_price.text);
 				let num = this.data.num ? this.data.num : 1;
-				let data = { id: this.data.id, good_id: goodId, type: this._moneyType, max: this._max, price: price, shopType: this._type,num:num }
+				let data = { id: this.data.id, good_id: goodId, type: this._moneyType, max: this._max, price: price, shopType: this._type, num: num }
 				App.EventSystem.dispatchEvent(PanelNotify.SHOP_BUY_WIN, data);
 				// let view = new ShopBuyWinView({ id: this.data.id, good_id: goodId, type: this._moneyType, max: this._max, price: price, shopType: this._type });
 				// PopUpManager.addPopUp({ obj: view });
@@ -304,37 +342,57 @@ module game {
 				this._max = 1;
 				if (this.data.type == ClientType.BASE_ITEM) {
 					itemInfo = App.ConfigManager.itemConfig()[this.data.good_id];
-					this.baseItem.updateBaseItem(this.data.type, this.data.good_id, this.data.num);
+					this.shopBaseItem.updateBaseItem(this.data.type, this.data.good_id, this.data.num);
 					this.lb_cap.visible = false;
 				} else if (this.data.type == ClientType.EQUIP) {
 					itemInfo = App.ConfigManager.equipConfig()[this.data.good_id];
-					this.baseItem.updateBaseItem(this.data.type, this.data.good_id, this.data.num);
-					this.baseItem.img_career.visible = false;
+					this.shopBaseItem.updateBaseItem(this.data.type, this.data.good_id, this.data.num,this.data);
+					// this.baseItem.equipInfo = this.data;
+					this.shopBaseItem.setCarrerIconVisible(false);
 					this.lb_cap.visible = true;
-					this.baseItem.lb_num.visible = false;
+					this.shopBaseItem.setItemNumVisible(false);
 					this.lb_cap.text = "评分：" + this.data.equip.score;
 				}
 				this.lb_tip.visible = false;
 				this.lb_count.visible = false;
 				if (this.data.discount == 100 || this.data.discount == 0) { //折扣
-					this.gp_sale.visible = false;
-					this.lb_price.text = this.data.price;
+					// this.gp_sale.visible = false;
+					// this.lb_price.text = this.data.price;
+					this.shopBaseItem.setDiscountIcon(null);
 				} else {
-					this.gp_sale.visible = true;
-					this.bmlb_sale.text = String(this.data.discount / 10);
-					this.lb_price.text = String(Math.ceil(this.data.price * this.data.discount / 100));
+					var discount = this.data.discount / 10
+					switch (discount) {
+						case 5:
+							this.shopBaseItem.setDiscountIcon("com_sign_agioFive");
+							break;
+						case 8:
+							this.shopBaseItem.setDiscountIcon("com_sign_agioEight");
+							break;
+					}
+					// this.gp_sale.visible = true;
+					// this.bmlb_sale.text = String(this.data.discount / 10);
+					// this.lb_price.text = String(Math.ceil(this.data.price * this.data.discount / 100));
 				}
 			} else if (this.data.batch != null) {  //限购商店
 				this._type = ShopType.LIMIT;
 				itemInfo = App.ConfigManager.itemConfig()[this.data.goods];
-				this.baseItem.updateBaseItem(1, this.data.goods, this.data.num);
+				this.shopBaseItem.updateBaseItem(1, this.data.goods, this.data.num);
 				if (this.data.discount == 10 || this.data.discount == 0) {
-					this.gp_sale.visible = false;
-					this.lb_price.text = String(this.data.number);
+					// this.gp_sale.visible = false;
+					// this.lb_price.text = String(this.data.number);
+					this.shopBaseItem.setDiscountIcon(null);
 				} else {
-					this.gp_sale.visible = true;
-					this.bmlb_sale.text = String(this.data.discount);
-					this.lb_price.text = String(Math.ceil(this.data.number / 10 * this.data.discount));
+					switch (this.data.discount) {
+						case 5:
+							this.shopBaseItem.setDiscountIcon("com_sign_agioFive");
+							break;
+						case 8:
+							this.shopBaseItem.setDiscountIcon("com_sign_agioEight");
+							break;
+					}
+					// this.gp_sale.visible = true;
+					// this.bmlb_sale.text = String(this.data.discount);
+					// this.lb_price.text = String(Math.ceil(this.data.number / 10 * this.data.discount));
 				}
 				this.lb_count.visible = true;
 				this.lb_cap.visible = false;
@@ -368,7 +426,7 @@ module game {
 				this._type = ShopType.NORMAL;
 				this._max = 0;
 				itemInfo = App.ConfigManager.itemConfig()[this.data.goods];
-				this.baseItem.updateBaseItem(1, this.data.goods, this.data.num);
+				this.shopBaseItem.updateBaseItem(1, this.data.goods, this.data.num);
 				this.gp_sale.visible = false;
 				this.lb_count.visible = false;
 				this.lb_cap.visible = false;

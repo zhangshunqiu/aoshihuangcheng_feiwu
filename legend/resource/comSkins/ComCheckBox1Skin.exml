@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.ComCheckBox1Skin" states="up,down,disabled" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="com_checkBox_bg_png"/>
+    <e:Group width="100%" height="100%">
+        <e:layout>
+            <e:HorizontalLayout verticalAlign="middle"/>
+        </e:layout>
+        <e:Image fillMode="scale" alpha="1" alpha.disabled="0.5" alpha.down="1"
+                 source.down="com_checkBox_sel_png"
+                 source.disabled="com_checkBox_sel_png"
+                 x="3" y="-1" includeIn="down" source="com_checkBox_sel_png"/>
+			<e:Image source="alpha_png" x="22" y="17" includeIn="up" width="30" height="29"/>
+        <e:Label id="labelDisplay" size="22"
+                
+                 fontFamily="SimHei" x="16" y="14" text="" textColor="0xbfb294"/>
+    </e:Group>
+</e:Skin>

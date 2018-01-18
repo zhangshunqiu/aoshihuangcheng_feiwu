@@ -44,6 +44,8 @@ class MainController extends BaseController {
 		game.LabberHegemonyController.getInstance();
 		game.WorldBossController.getInstance();
 		game.EncounterController.getInstance();
+		game.RankGuanqiaController.getInstance();
+		game.PlayerMsgController.getInstance();
 	}
 
 	/**
@@ -98,6 +100,11 @@ class MainController extends BaseController {
 				App.logzsq("SOCKET 系统错误handleException");
 				(MainController.getInstance() as MainController).clear();
 				App.Socket.reconnect();
+				return;
+			}
+
+			case 15014 : {  //强化转生等级不够
+				App.GlobalTips.showTips("强化等级达到上限，请先提升转生等级到"+(App.RoleManager.roleInfo.turn+1)+"转");
 				return;
 			}
 		}

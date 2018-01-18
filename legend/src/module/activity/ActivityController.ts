@@ -19,6 +19,7 @@ module game {
 			this.registerProtocal(30004,this.handleActivityLimitGiftInfo,this);
 			this.registerProtocal(30005,this.handleActivityLimitGiftReward,this);
 			this.registerProtocal(30008,this.handleActivityTotalRecharge,this);
+			this.registerProtocal(30009,this.handleActivityTotalRechargeReward,this);
 			this.registerProtocal(30006,this.handleActivityPerferentialGiftInfo,this);
 			this.registerProtocal(30007,this.handleActivityGetPerferentialGift,this);
 			this.registerProtocal(30010,this.handleActivityDailyRechargeInfo,this);
@@ -68,11 +69,20 @@ module game {
 			this.dispatchEvent(PanelNotify.ACTIVITY_UPDATE_VIEW);
 		}
 
+		//累计充值返回
+		public handleActivityTotalRechargeReward(data) {
+			ActivityModel.getInstance().totalRechargeInfo["state"] = 2;// 状态 （0不能领 1可领 2已领
+			ActivityModel.getInstance().checkActicityRedDot(4);
+			this.dispatchEvent(PanelNotify.ACTIVITY_UPDATE_VIEW);
+		}
+
+
 		//每日累充礼包信息
 		public handleActivityDailyRechargeInfo(data) {
 			App.logzrj("data:",data);
 			ActivityModel.getInstance().dailyRechargeInfo = data;
-			ActivityModel.getInstance().sortDailyRecharge();
+			// ActivityModel.getInstance().sortDailyRecharge();
+			ActivityModel.getInstance().updateDailyRechargeInfo(data);
 			this.dispatchEvent(PanelNotify.ACTIVITY_UPDATE_VIEW);
 		}
 

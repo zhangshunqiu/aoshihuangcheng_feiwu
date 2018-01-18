@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="SignProgressBarSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Image width="555" height="23" source="sign_bg_jindutiao_png" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" verticalCenter="-0.5"/>
-	<e:Image id="thumb" width="548" height="17.88" source="sign_jindutiao_png" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" x="5" verticalCenter="0"/>
+	<e:Image width="560" height="23" source="sign_bg_jindutiao_png" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" verticalCenter="-0.5"/>
+	<e:Image id="thumb" width="560" height="17.88" source="sign_jindutiao_png" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" x="5" verticalCenter="0"/>
 </e:Skin>

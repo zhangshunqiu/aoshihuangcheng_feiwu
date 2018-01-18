@@ -3,38 +3,23 @@
         xmlns:w="http://ns.egret.com/wing" xmlns:cu="customui.*" xmlns:game="game.*">
 	<e:Group id="gp_middle" touchEnabled="false" width="720" height="1136" y="0" x="0">
 		<e:Group id="gp_broadcast" width="100%" height="100" horizontalCenter="0" top="291" visible="false">
-			<e:Image horizontalCenter="0" verticalCenter="0" source="main_xitongkuang_png"/>
+			<e:Image horizontalCenter="0" verticalCenter="0" source=""/>
 			<e:Label text="系统消息：xxxxxxxxxxxxxxxxxxxxxxx" fontFamily="Microsoft YaHei" verticalCenter="0" x="113" size="18" textAlign="left"/>
 		</e:Group>
 		<e:Image id="img_bg0" source="shop_bg_list_shangcheng_png" x="108" y="311" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" height="31" width="511" visible="false"/>
-		<e:Group id="gp_chatlist" verticalCenter="408" touchEnabled="false" height="100" width="440" horizontalCenter="-11" visible="false">
-			<e:Image source="main_bg_liaotian_png" scale9Grid="54,22,327,139" height="100" horizontalCenter="0.5" verticalCenter="0" visible="false"/>
-			<e:Scroller id="scr_chatlist" width="422.33" height="90" anchorOffsetY="0" anchorOffsetX="0" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" visible="false">
-				<e:Group id="vp_chatlist" touchEnabled="true">
-				</e:Group>
-			</e:Scroller>
-		</e:Group>
-		<game:MainLineTaskView id="mainline_view" width="400" height="100" x="136" y="773" skinName="MainLineTaskSkin"/>
+		<game:MainLineTaskView id="mainline_view" width="400" height="100" x="155" y="805" skinName="MainLineTaskSkin"/>
 	</e:Group>
 	<e:Group id="gp_bottom" width="100%" height="100" x="1" bottom="0">
-		<e:Group id="gp_bottom_right" y="-508.54" width="100" height="400" right="0">
-			<e:Image id="img_copy" y="20" x="-5" source="main_icon_fuben_png"/>
-			<e:Group id="gp_bossUiAll" width="150" height="200" y="235" right="0">
+		<e:Group id="gp_bottom_right" y="-550.54" width="100" height="400" x="616">
+			<e:Group id="gp_bossUiAll" width="150" height="200" y="216" right="19">
 				<e:Group id="gp_boss" x="-16" y="-0.6200000000000045">
 					<e:Image y="0" x="0" source="main_tiaozhanguanqia_png" scaleX="1" scaleY="1"/>
-					<e:Group id="gp_bossUI" width="-1" height="0" x="76" y="76.62" anchorOffsetX="0" anchorOffsetY="0"/>
+					<e:Group id="gp_bossUI" width="-1" height="0" x="108" y="98.62" anchorOffsetX="0" anchorOffsetY="0"/>
 				</e:Group>
-				<e:Image source="main_liansheng_png" x="-20" y="133" scaleX="1" scaleY="1"/>
-				<e:Image source="main_guanqia_png" x="27" y="107" scaleX="1" scaleY="1" touchEnabled="false"/>
-				<e:ProgressBar id="pb_monsterWave" x="37" y="137" skinName="skins.ProgressBarSkin2" direction="ltr" value="0" scaleX="1" scaleY="1" maximum="3"/>
-				<e:Group x="4" y="165">
-					<e:Button id="btn_auto" label="" x="0" y="0">
-					<e:skinName>
-						<e:Skin states="up,down,disabled">
-						<e:Image width="100%" height="100%" source="main_btn_weixuanze_png" source.down="main_btn_xuanze_png"/>
-						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-						</e:Skin>
-					</e:skinName>
+				<e:Image source="main_guanqia_png" x="56" y="162" scaleX="1" scaleY="1" touchEnabled="false"/>
+				<e:ProgressBar id="pb_monsterWave" x="39" y="201" skinName="skins.ProgressBarSkin2" direction="ltr" value="0" scaleX="1" scaleY="1" maximum="3"/>
+				<e:Group x="31" y="230">
+					<e:Button id="btn_auto" label="" x="-4" y="0" skinName="skins.ComBtnTab1Skin">
 					</e:Button>
 					<e:Label id="lb_tiaozhan" text="自动挑战" textColor="0xe4cea9" fontFamily="黑体" size="24" horizontalCenter="0" verticalCenter="0" touchEnabled="false"/>
 					<e:Group id="gp_autoChallenge" width="0" height="0" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" verticalCenter="0" touchEnabled="true"/>
@@ -42,26 +27,9 @@
 				<e:Group id="gp_meetBoss" x="-25" y="-124" anchorOffsetX="0" width="51" anchorOffsetY="0" height="48" scaleX="1" scaleY="1" visible="false">
 				</e:Group>
 			</e:Group>
-			<e:Image id="img_fastfight" source="main_icon_kuaisuzhandou_png" x="-25" y="-175"/>
-			<e:Button id="btn_daily" label="" x="-5" y="118">
-				<e:skinName>
-					<e:Skin states="up,down,disabled">
-					<e:Image width="100%" height="100%" source="main_icon_richang_png"/>
-					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-					</e:Skin>
-				</e:skinName>
-			</e:Button>
-			<e:Button id="btn_metal" label="" x="-5" y="-77">
-				<e:skinName>
-					<e:Skin states="up,down,disabled">
-					<e:Image width="100%" height="100%" source="main_icon_xunzhang_png"/>
-					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-					</e:Skin>
-				</e:skinName>
-			</e:Button>
 		</e:Group>
-		<e:Group id="gp_bottom_left" y="-506.54" width="100" height="400" left="0" touchThrough="true" touchEnabled="false">
-			<e:Button id="btn_arena" label="" x="18" y="128">
+		<e:Group id="gp_bottom_left" y="-740" width="100" height="266" touchThrough="true" touchEnabled="false" anchorOffsetX="0" anchorOffsetY="0" x="30">
+			<e:Button id="btn_arena" label="" x="547" y="255.76" visible="false">
 				<e:skinName>
 					<e:Skin states="up,down,disabled">
 					<e:Image width="100%" height="100%" source="main_icon_jingji_png"/>
@@ -69,13 +37,20 @@
 					</e:Skin>
 				</e:skinName>
 			</e:Button>
-			<e:Image id="img_worldBoss" x="-1" y="24" source="main_icon_quanminboss_png"/>
+			<e:Button id="btn_worldBoss" label="" x="560" y="358.96" scaleX="1" scaleY="1" visible="false">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="main_icon_shijieboss_png" source.down="main_icon_shijieboss_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
 		</e:Group>
 		<e:ProgressBar id="pb_exp" width="100%" height="30" y="75" skinName="skins.ProgressBarSkin" horizontalCenter="0" visible="false"/>
 	</e:Group>
 	<e:Group id="gp_top" width="100%" height="190" x="0" top="0" touchEnabled="false">
-		<game:MainHead id="mainHead" width="720" height="190" top="0" horizontalCenter="0"/>
+		<game:MainHead id="mainHead" width="720" height="190" top="0" skinName="MainHeadSkin" x="1"/>
 	</e:Group>
-	<e:Group id="gp_activity" width="100%" height="100" horizontalCenter="0" top="179">
+	<e:Group id="gp_activity" width="559" height="94" horizontalCenter="74.5" top="87" anchorOffsetX="0" anchorOffsetY="0">
 	</e:Group>
 </e:Skin>

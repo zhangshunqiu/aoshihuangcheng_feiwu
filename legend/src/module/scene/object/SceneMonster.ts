@@ -15,6 +15,8 @@ class SceneMonster extends SceneBaseObj {
 	protected bodyMc:AMovieClip;
 	protected bodyUrl:string = "";
 
+	protected shadowMc:AMovieClip;//阴影动画
+
 	// protected buffMc:AMovieClip;
 	// protected buffUrl:string = "";
 
@@ -93,9 +95,7 @@ class SceneMonster extends SceneBaseObj {
 			this.endPoint = null;
 		}
 		if(this.modelLay.alpha < 1){this.modelLay.alpha = 1;}
-		if(this.shadow.visible == false){
-			this.shadow.visible = true;
-		}
+		this.setShadowVisible(true);
 		if(this.showNameAndHpBar){
 			this.updateName();
 			this.updateHp();
@@ -162,6 +162,8 @@ class SceneMonster extends SceneBaseObj {
         var img: egret.Texture = <egret.Texture>event;
         if(img){
 			this.honorTitle.texture = img;
+			this.honorTitle.x = 0-this.honorTitle.width/2;
+			this.honorTitle.y = -200 -this.honorTitle.height/2;
 		}
     }
 
@@ -178,8 +180,10 @@ class SceneMonster extends SceneBaseObj {
 			App.EventSystem.dispatchEvent(SceneEventType.BOSS_INFO,this.vo);
 		}
 		this.hpBar.setValue(this.vo.curHp,this.vo.hp);
-		if(this.vo.curHp <= 0 && this.isCollision == false){
-			this.setDeadState();
+		if(this.vo.curHp <= 0){
+			if(this.isCollision == false){
+				this.setDeadState();
+			}
 			//this.playDead();
 		}else{
 			if(this.nameText == null){
@@ -210,7 +214,7 @@ class SceneMonster extends SceneBaseObj {
 			this.updateActState(ActState.STAND,this.vo.dire);
 		}else{
 			var curt:number = GlobalModel.getInstance().getTimer();
-			if(curt > this.nextAtkTime && Math.random()*1000>920 ){
+			if(curt > this.nextAtkTime && Math.random()*1000>500 ){
 				//根据怪物攻击类型实行攻击效果
 				if( this.vo.enableUseSkill() && this.vo.attackType == MonsterAtkType.AUTO || (this.vo.attackType == MonsterAtkType.PASSIVE && this.vo.curHp < this.vo.hp)){ //1:主动攻击 或者 2=被动攻击 别人打了才攻击
 					var skillTargetVo:FSkillTargetVo = (SceneManager.getInstance() as SceneManager).searchUseSkillAndTarget(this.vo,this.vo.nextFSkillVo);
@@ -604,7 +608,7 @@ class SceneMonster extends SceneBaseObj {
 						vo.effKey = fSkillTarget.skillVo.hurtEff;
 						App.EventSystem.dispatchEvent(SceneEventType.SHOW_GROUP_EFF,vo);
 					}
-				}else if(hurtEffType == SkillHurtEffType.GROUP_SKY){
+				}else if(hurtEffType == SkillHurtEffType.GROUP_SKY || hurtEffType == SkillHurtEffType.GROUP_SURFACE){
 					var pos:point;
 					if(fSkillTarget.targetArr && fSkillTarget.targetArr.length >0){
 						var target:BaseObjectVo = fSkillTarget.targetArr[0] as BaseObjectVo;
@@ -680,9 +684,7 @@ class SceneMonster extends SceneBaseObj {
 			this.curActState = ActState.DEAD;
 			this.updateActState(ActState.DEAD,this.vo.dire);
 			this.headLay.visible = false;
-			if(this.shadow){
-				this.shadow.visible = false;
-			}
+			this.setShadowVisible(false);
 			this.clearAllBuffEff();
 
 			this.pathList = [];
@@ -829,9 +831,6 @@ class SceneMonster extends SceneBaseObj {
 	 */
 	public playBeCollision(gridDis:number = 2,dire:number = 0,moveSpeed:number = 30) {
 		if(this.vo.actState == ActState.DEAD){return;}
-		this.isCollision = true;
-		//跑完后才让他死亡
-
 		this.pathList = [];
 		this.clearMoveCallBack();
 		if(dire == 0){
@@ -856,6 +855,9 @@ class SceneMonster extends SceneBaseObj {
 			var dis:number = SceneUtil.getDistance(this.x,this.y,pos[0],pos[1]);
 			var times:number = Math.round(dis/moveSpeed);
 			this.updateMoveStepTimes(pos, times ,this.vo.dire);
+
+			this.isCollision = true;
+			//跑完后才让他死亡
 		}
 		// let pos:Array<number>;
 		// if(nextPos == null){
@@ -958,7 +960,7 @@ class SceneMonster extends SceneBaseObj {
 			}
 			this.atkEffMc = null;
 		}
-
+		this.clearShadow();
 		this.clearAllBuffEff();
 
 		this.pathList = [];
@@ -970,19 +972,53 @@ class SceneMonster extends SceneBaseObj {
 		this.isCollision = false;
 	}
 
-	public showShadow(){
-		var shadow:string = "sceneObjShadow_png";
+	protected showShadow(isSel:boolean = false){
+		var picUrl:string;
 		if(this.vo.monsterType > 1){
-			shadow = "sceneObjShadow2_png";
-		}
-		if(this.shadow == null){
-			this.shadow = new egret.Bitmap(RES.getRes(shadow));
-			this.addChild(this.shadow);
+			this.setPicShadow();
+			if(isSel){
+				picUrl = "effbosszb";
+			}else{
+				picUrl = "effbosszb";
+			}
+			this.setMCShadow(picUrl);
 		}else{
-			this.shadow.texture = RES.getRes(shadow);
+			this.setMCShadow();
+			super.showShadow(isSel);
 		}
-		this.shadow.x = 0-this.shadow.width/2;
-		this.shadow.y = 0-this.shadow.height/2;
+	}
+
+	//设置动画阴影
+	protected setMCShadow(picUrl:string=null){
+		if(picUrl && picUrl != ""){
+			if(this.shadowMc == null){
+				this.shadowMc = new AMovieClip();
+				this.addChild(this.shadowMc);
+			}
+			this.shadowMc.playMCKey(picUrl,"",-1);
+			//this.shadowMc.x = 0-this.shadow.width/2;
+			//this.shadowMc.y = 0-this.shadow.height/2;
+		}else{
+			if(this.shadowMc){
+				this.shadowMc.destroy();
+				if(this.shadowMc.parent){
+					this.shadowMc.parent.removeChild(this.shadowMc);
+				}
+				this.shadowMc = null;
+			}
+		}
+	}
+	//清理阴影
+	protected clearShadow(){
+		super.clearShadow();
+		this.setMCShadow();
+	}
+	//设置阴影显示
+	protected setShadowVisible(b:boolean){
+		super.setShadowVisible(b);
+		if(this.shadowMc){
+			this.shadowMc.visible = b;
+		}
 	}
 
 

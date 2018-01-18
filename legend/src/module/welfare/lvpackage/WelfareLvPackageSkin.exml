@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="WelfareLvPackageSkin" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="gp_level" x="40.02999999999997" y="237.49" touchEnabled="false" touchThrough="true">
+		<e:Image source="sign_bg_banzi_png" x="-13.69" y="617.19" scaleX="1" scaleY="1"/>
+		<e:Image source="sign_bg_m_png" x="-0.33" y="20" anchorOffsetY="0" height="628" alpha="1" scaleX="1" scaleY="1"/>
+		<e:Group x="-12.67" y="21.33">
+		<e:Image source="sign_bg_dibu_png" x="2" y="722" anchorOffsetX="0" width="670"/>
+		<e:Image id="btn_lvback" source="common_btn_fanhui_png" x="586" y="647"/>
+		</e:Group>
+		<e:Scroller id="scr_levelpackage" width="638" height="568.33" anchorOffsetY="0" anchorOffsetX="0" x="0" y="37" scaleX="1" scaleY="1">
+		<e:Group/>
+		</e:Scroller>
+	</e:Group>
+</e:Skin>

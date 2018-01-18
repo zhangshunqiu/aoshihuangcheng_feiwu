@@ -6,7 +6,20 @@ class GlobalUtil {
     public static getTimer(): number {
         return GlobalModel.getInstance().getTimer();
     }
-
+    public static fixNum(num:number):string {
+        if(num/100000000>=1) {
+            var _num:number = num/100000000;
+            var _str:string = _num.toFixed(2);
+            return _str.substring(0,_str.lastIndexOf(".")+2) + "亿"; //之所以这样做是为了小数点位不要四舍五入
+        }else if(num/100000 >= 1) {
+            var _num:number = num/10000;
+            var _str:string = _num.toFixed(2);
+            return _str.substring(0,_str.lastIndexOf(".")+2) + "万"; //之所以这样做是为了小数点位不要四舍五入
+        }else {
+            return num + "";
+        }
+       
+    }
     //3: 传入秒数，返回00:00格式的字符串
     public static getFormatBySecond1(t: number = 0): string {
         var hourst: number = Math.floor(t / 3600);
@@ -87,38 +100,6 @@ class GlobalUtil {
         }
     }
 
-    public static getFrameByColor(color: number) {
-        let name = "white";
-        switch (color) {
-            case 0: {
-                name = "white";
-                break;
-            }
-            case 1: {
-                name = "green";
-                break;
-            }
-            case 2: {
-                name = "blue";
-                break;
-            }
-            case 3: {
-                name = "purple";
-                break;
-            }
-            case 4: {
-                name = "orange";
-                break;
-            }
-            case 5: {
-                name = "red";
-                break;
-            }
-
-        }
-        return "common_frame_" + name + "_png";
-    }
-
     /**
      * 根据type id 获取配置基本信息
     */
@@ -146,44 +127,7 @@ class GlobalUtil {
         return info;
     }
 
-    /**
-      * 根据info显示名称、消息内容
-     */
-    public static getChatPortText(vo) {
-        switch (vo.type) {
-            case ChatType.GUILD:
-                return <Array<egret.ITextElement>>[                  //转换成元素为 egret.ITextElement 的数组
-                    { text: "[工会]", style: { "textColor": 0xbd1012, fontFamily: "SimHei" } }
-                    , { text: vo.player_name, style: { "underline": true, "textColor": 0x01acfe, fontFamily: "SimHei" } }
-                    , { text: "：", style: { "textColor": 0x01acfe, fontFamily: "SimHei" } }
-                    , { text: vo.content, style: { "textColor": 0xbfbfbf, fontFamily: "SimHei" } }
-                ];
-
-            case ChatType.SYSTEM:
-                return <Array<egret.ITextElement>>[                  //转换成元素为 egret.ITextElement 的数组
-                    { text: "[系统]", style: { "textColor": 0x1fd745, fontFamily: "SimHei" } }
-                    , { text: vo.content, style: { "textColor": 0xbfbfbf, fontFamily: "SimHei" } }
-                ];
-
-
-            // case ChatType.WORLD:
-
-            //  return <Array<egret.ITextElement>>[                  //转换成元素为 egret.ITextElement 的数组
-            //         { text: "[世界]", style: { "textColor": 0xb463ff } }
-            //         , { text: vo.player_name, style: { "underline": true, "textColor": 0x01acfe } }
-            //         , { text: vo.content }
-            //     ];
-            default:
-
-                return <Array<egret.ITextElement>>[                  //转换成元素为 egret.ITextElement 的数组
-                    { text: "[世界]", style: { "textColor": 0xb463ff, fontFamily: "SimHei" } }
-                    , { text: vo.player_name, style: { "underline": true, "textColor": 0x01acfe, fontFamily: "SimHei" } }
-                    , { text: "：", style: { "textColor": 0x01acfe, fontFamily: "SimHei" } }
-                    , { text: vo.content, style: { "textColor": 0xbfbfbf, fontFamily: "SimHei" } }
-                ];
-        }
-
-    }
+   
 
   
     //天梯争霸
@@ -272,5 +216,18 @@ class GlobalUtil {
         }
 
 
+    }
+
+    /**
+     * 挑战boss前检查背包容量是否小于20，小于则弹出熔炼提示框，并返回true
+     * @return {boolean}
+     */
+    public static checkBagCapacity(): boolean {
+        if ((game.BackpackModel.getInstance() as game.BackpackModel).getRemindCapacity() < 20) { //如果背包容量不足20
+            var textFlow = [{ text: "背包空间不足", style: {textColor: 0xffffff}},{ text: "20", style: {textColor: 0xf10000}},{ text: "，请先清理", style: {textColor: 0xffffff}},{ text: "背包", style: {textColor: 0xf10000}}];
+            App.GlobalTips.showAlert({style:AlertTipsStyle.ONLY_OK, textFlow:textFlow, okCB:()=>{App.WinManager.openPopWin(WinName.POP_SMELT);},cbThisObject:this,okLab:"熔 炼",okCdTime:20});
+            return true;
+        }
+        return false;
     }
 }

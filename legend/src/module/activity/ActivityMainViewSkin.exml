@@ -10,8 +10,8 @@
 		<e:Scroller id="scroller" width="540" height="110" y="68" horizontalCenter="0">
 			<e:Group/>
 		</e:Scroller>
-		<e:Image source="vip_jiantou_right_png" x="631" y="76"/>
-		<e:Image source="vip_jiantou_left_png" x="44" y="81"/>
+		<e:Image id="img_next" source="vip_jiantou_right_png" x="631" y="76"/>
+		<e:Image id="img_front" source="vip_jiantou_left_png" x="44" y="81"/>
 		<e:Group id="gp_subview" height="750" y="180" left="0" right="0">
 		</e:Group>
 		<e:Image source="开服活动-特惠礼包_jpg" x="-2" y="-73" alpha="0.5" locked="true" visible="false"/>

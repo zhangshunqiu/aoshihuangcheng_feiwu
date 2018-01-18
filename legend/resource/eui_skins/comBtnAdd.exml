@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<e:Skin class="comBtnAdd" states="up" minHeight="50" minWidth="100"
+        xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" width="31" height="28" width.up="30">
+    <e:Image horizontalCenter="0" verticalCenter="0"  includeIn="up" scale9Grid="1,3,8,8" source="com_btn_miniAdd_png"/>
+</e:Skin>

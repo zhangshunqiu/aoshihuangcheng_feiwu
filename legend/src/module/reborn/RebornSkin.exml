@@ -1,39 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="RebornSkin" width="720" height="1066" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:customui="customui.*">
+	<e:Image source="转生界面_png" x="0" y="0" visible="false"/>
 	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0" touchThrough="true" touchEnabled="false">
-		<e:Image source="common_bg_interface_level_1_png" left="0" right="0" top="0" bottom="0" visible="false"/>
-		<e:Image source="reborn_bg_png" y="66" horizontalCenter="0"/>
-		<e:Image source="forge_bg_zhandouli_png" y="43" x="202" scaleX="1" scaleY="1"/>
-		<e:Image source="forge_txt_zhandouli_png" x="215" y="100" scaleX="1" scaleY="1"/>
-		<e:BitmapLabel id="bmlb_cap" x="336" y="109" font="main_pingfen_shu_fnt" text="96842" scaleX="1" scaleY="1"/>
-		<e:Group id="gp_middle" height="450" y="159" left="-1" right="1" locked="true">
-			<e:Image source="reborn_bg3_png" y="83" left="40"/>
-			<e:Image source="reborn_bg3_png" y="83" right="40"/>
-			<e:Image source="reborn_bg1_png" y="9" horizontalCenter="0"/>
-			<e:Image source="reborn_bg2_png" y="83" x="55"/>
-			<e:Image source="reborn_bg2_png" y="83" x="378"/>
-			<e:Image source="medal_txt_dangqianshuxing_png" x="135" y="94"/>
-			<e:Image source="medal_txt_xiajishuxing_png" y="94" left="501"/>
-			<e:Label id="lb_level" text="当前转生等级" y="16" scaleX="1" scaleY="1" horizontalCenter="0" fontFamily="SimHei" size="24" textColor="0xffd479"/>
-			<e:Label id="lb_attr" text="Label" y="135" scaleX="1" scaleY="1" fontFamily="SimHei" size="22" textColor="0xBFBFBF" height="160" verticalAlign="middle" x="130" lineSpacing="15"/>
-			<e:Label id="lb_attr_next" text="Label" y="135" scaleX="1" scaleY="1" fontFamily="SimHei" size="22" x="500" height="160" verticalAlign="middle" textColor="0x1cff21" lineSpacing="15"/>
-			<e:Image source="reborn_tips_png" y="325" horizontalCenter="0.5"/>
-			<e:Image source="compound_jiantou_png" x="327" y="174"/>
+		<e:Image source="reborn_bg_decorate_png" x="17" y="57"/>
+		<e:Image x="193" y="97" source="com_bg_combat_png"/>
+		<e:Image source="words_zhandouli_png" x="278" y="128"/>
+		<e:BitmapLabel id="bmlb_cap" x="336" y="131" text="158" scaleX="1" scaleY="1" font="combat_shuxing_fnt"/>
+		<e:Group id="gp_middle" height="450" y="159" left="-1" right="1">
+			<e:Label id="lb_level" text="当前转生等级" scaleX="1" scaleY="1" horizontalCenter="-27" fontFamily="SimHei" size="24" textColor="0xffd479" y="-88"/>
+			<e:Label id="lb_attr" text="Label" y="441" scaleX="1" scaleY="1" fontFamily="SimHei" size="22" textColor="0xBFBFBF" height="160" verticalAlign="middle" x="190" lineSpacing="15"/>
+			<e:Label id="lb_attr_next" text="Label" y="439" scaleX="1" scaleY="1" fontFamily="SimHei" size="22" x="431" height="160" verticalAlign="middle" textColor="0x1cff21" lineSpacing="15"/>
+			<e:Image source="com_pic_jb2_png" x="9" y="457" width="698" height="137"/>
 		</e:Group>
-		<e:Group id="gp_bottom" height="200" y="617" left="0" right="0">
-			<e:Image source="common_bg_shuju_png" x="325" y="53"/>
-			<e:Image source="common_bg_shuju_png" x="323" y="9"/>
+		<e:Group id="gp_bottom" height="200" y="748" left="-3" right="3">
+			<e:Image source="com_bg_list2_png" x="13" y="91"/>
+			<e:Image source="common_bg_shuju_png" x="334" y="53" width="169" height="36"/>
+			<e:Image source="common_bg_shuju_png" x="334" y="13" anchorOffsetX="0" width="169" anchorOffsetY="0" height="36"/>
 			<e:Label text="消耗修为：" y="12" scaleX="1" scaleY="1" fontFamily="SimHei" size="28" x="190" textColor="0x2fc9fb"/>
 			<e:Label text="拥有修为：" y="56" scaleX="1" scaleY="1" fontFamily="SimHei" size="28" x="190" textColor="0xfd7100"/>
-			<e:Label id="lb_cost" text="9999999" y="12" scaleX="1" scaleY="1" fontFamily="SimHei" size="24" x="337" textColor="0x2fc9fb"/>
-			<e:Label id="lb_own" text="9999999" y="56" scaleX="1" scaleY="1" fontFamily="SimHei" size="24" x="337" textColor="0xfd7100"/>
-			<e:Group id="gp_up" width="150" height="61" x="286" y="109" anchorOffsetX="0" anchorOffsetY="0">
-				<e:Image id="img_upgrade" source="common_btn_common_png" y="-1" horizontalCenter="0" x="-1" scaleX="1" scaleY="1"/>
-				<e:Image source="wing_txt_tisheng_png" x="50" y="14" touchEnabled="false" scaleX="1" scaleY="1"/>
+			<e:Label id="lb_cost" text="9999999" y="16" scaleX="1" scaleY="1" fontFamily="SimHei" size="28" x="340" textColor="0x2fc9fb"/>
+			<e:Label id="lb_own" text="9999999" y="56" scaleX="1" scaleY="1" fontFamily="SimHei" size="28" x="337" textColor="0xfd7100"/>
+			<e:Group id="gp_up" width="150" height="61" x="282" y="123" anchorOffsetX="0" anchorOffsetY="0">
+				<e:Button id="btn_upgrade" label="转 生" y="3" skinName="skins.ComBtnRedSkin" x="-13"/>
 			</e:Group>
-			<e:Group id="gp_xiuwei" width="105" height="30" x="465" y="132" anchorOffsetX="0" anchorOffsetY="0">
-				<e:Label id="lb_get" text="获取修为" y="-2" scaleX="1" scaleY="1" fontFamily="SimHei" size="24" horizontalCenter="0" x="-5" textColor="0x29ef13"/>
+			<e:Group id="gp_xiuwei" width="105" height="30" x="489" y="147" anchorOffsetX="0" anchorOffsetY="0">
+				<e:Label id="lb_get" text="获取修为" y="0" scaleX="1" scaleY="1" fontFamily="SimHei" size="24" x="0" textColor="0x29ef13"/>
 			</e:Group>
 		</e:Group>
+		<e:Image source="com_btn_arrow2Right_png" x="343" y="656"/>
 	</e:Group>
 </e:Skin>

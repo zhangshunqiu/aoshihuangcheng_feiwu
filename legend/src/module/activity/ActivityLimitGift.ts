@@ -28,7 +28,7 @@ module game {
 			this.scroller.verticalScrollBar.visible = false;
 			this.list.itemRenderer = ActivityLimitGiftItem;
 			this.scroller.viewport = this.list;
-
+			this.list.useVirtualLayout = true;
 		}
 
 		public updateView() {
@@ -38,7 +38,11 @@ module game {
 				this.list.dataProvider = this._dataArray;
 			} else { //有数据了，刷新就行
 				// this._dataArray.source = activityData;
+				let offset = this.list.scrollV;
 				this._dataArray.refresh();
+				// this._dataArray.itemUpdated(2);
+				this.list.validateNow();
+				this.scroller.viewport.scrollV = offset;
 			}
 			//倒计时
 			if(this._countDown) {
@@ -49,7 +53,7 @@ module game {
 			this._countDown = App.GlobalTimer.addSchedule(1000,activityData.left_time,this.updateTime,this,()=>{
 				App.GlobalTimer.remove(this._countDown);
 				this._countDown = undefined;
-				App.Socket.send(30002,{});
+				App.Socket.send(30004,{});
 			},this);
 
 		}
@@ -121,8 +125,9 @@ module game {
 			let itemInfo = App.ConfigManager.getItemInfoById(baseInfo.goods);
 			this.baseItem.updateBaseItem(ClientType.BASE_ITEM,baseInfo.goods,baseInfo.num);
 			this.lb_name.text = itemInfo.name;
-			this.lb_cur_price.text = String(baseInfo.number*baseInfo.discount/10);
+			this.lb_cur_price.text = String(Math.ceil(baseInfo.number*baseInfo.discount/10));
 			this.lb_origin_price.text = String(baseInfo.number);
+			this.bmlb_discount.text = baseInfo.discount;
 
 			if (baseInfo.money == CurrencyType.COIN) {
 				RES.getResAsync("common_jinbi_png",(texture)=> {

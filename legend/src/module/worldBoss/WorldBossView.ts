@@ -13,7 +13,8 @@ module game {
         public lb_timesReturn: eui.Label;
         public scroller: eui.Scroller;
         public gp_refreshTime: eui.Group;
-        private _worldBossItemGroup: any[] = [];
+        private _curIndex: number = 0;
+        // private _worldBossItemGroup: any = {};
         private _bossItemWidth: number = 0;
         private _bossItemHeight: number = 0;
         private _worldBossInfoItem: WorldBossInfoItem;
@@ -52,12 +53,16 @@ module game {
                 worldBossItem.index = i;
                 worldBossItem.addEventListener(egret.TouchEvent.TOUCH_TAP, (e:Event)=>{
                     this.updateView(e.currentTarget["index"]);
+                    this._curIndex = e.currentTarget["index"];
                 }, this);
                 i++;
-                this._worldBossItemGroup.push(worldBossItem);
+                this._worldBossModel.worldBossItemGroup[k] = worldBossItem;
             }
-            this._bossItemWidth = this._worldBossItemGroup[0].width;
-            this._bossItemHeight = this._worldBossItemGroup[0].height;
+            for(let k in this._worldBossModel.worldBossItemGroup) {
+                this._bossItemWidth = this._worldBossModel.worldBossItemGroup[k].width;
+                this._bossItemHeight = this._worldBossModel.worldBossItemGroup[k].height;
+                break;
+            }
             this.lb_curTimes.text = this._worldBossModel.pbWorldBossInfo.left_times; 
             this.lb_timesLimit.text = "/" + this._worldBossModel.maxTimesLimit;
             if(this._worldBossModel.pbWorldBossInfo.refresh_time <= 0) {
@@ -71,7 +76,7 @@ module game {
                     }
                 }, this);
             }
-            this.updateView(0);
+            this.updateView(this._curIndex);
         }
 
         private stopTimer() {
@@ -84,19 +89,21 @@ module game {
 
         private updateView(index:number = 0) {
             let blank:number = 0; //世界boss的掉落物品信息预留高度
-            for(let i:number=0; i<this._worldBossItemGroup.length; i++) {
-                this._worldBossItemGroup[i].x = 6;
-                this._worldBossItemGroup[i].y = i * this._bossItemHeight + blank;
-                this.gp_middle.addChild(this._worldBossItemGroup[i]);
+            let i:number = 0;
+            for(let k in this._worldBossModel.worldBossItemGroup) {
+                this._worldBossModel.worldBossItemGroup[k].x = 6;
+                this._worldBossModel.worldBossItemGroup[k].y = i * this._bossItemHeight + blank;
+                this.gp_middle.addChild(this._worldBossModel.worldBossItemGroup[k]);
                 if(i==index) {
                     if(!this._worldBossInfoItem) {
                         this._worldBossInfoItem = new WorldBossInfoItem();
                     }
-                    this._worldBossInfoItem.updateView(this._worldBossItemGroup[i]);
+                    this._worldBossInfoItem.updateView(this._worldBossModel.worldBossItemGroup[k]);
                     this.gp_middle.addChild(this._worldBossInfoItem);
                     this._worldBossInfoItem.y = (index + 1) * this._bossItemHeight + 2;
                     blank = 360;    
                 }
+                i++;
             }
         }
 

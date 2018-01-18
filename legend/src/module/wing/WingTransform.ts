@@ -222,7 +222,7 @@ module game {
 						<customui:BaseItem id="baseItem" width="100" height="100" horizontalCenter="0" top="0" anchorOffsetX="0" anchorOffsetY="0"/>
 					</e:Group>
 				</e:Skin>`;
-			this.baseItem.lb_name.visible = true;
+            this.baseItem.setItemNameVisible(true);
 	    }
 
         protected dataChanged() {

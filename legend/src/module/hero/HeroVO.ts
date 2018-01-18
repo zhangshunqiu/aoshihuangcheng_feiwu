@@ -91,6 +91,7 @@ module game {
             this.sex = info.sex;
             this.score = info.score;
             this.equip_info = info.equip_info;
+            this.wing_info = info.wing_info;
             this.updateAttributeInfo(info.attribute);
             this.updateSpecialEquipInfo(info.sp_equip);
             this.jewelDic = info.stone_info;
@@ -203,7 +204,7 @@ module game {
                 let itemInfo = App.ConfigManager.getEquipConfigById(info.good_id);
                 return itemInfo.model;
             }
-            return "";
+            return null;
         }
         //返回羽翼模型id，没有返回null
         public getWingModelId() {
@@ -211,7 +212,7 @@ module game {
             if (wingModel.wingInfoObj[this.id]) {
                 return wingModel.wingInfoObj[this.id].model;
             }
-            return "";
+            return null;
         }
 
         //返回衣服的模型的id，没有返回null
@@ -223,11 +224,11 @@ module game {
             }
             //返回默认衣服
             if (this.sex == ConstSex.MAN) {
-                return "1101";
+                return "1700";
             } else if (this.sex == ConstSex.WOMAN) {
-                return "1201";
+                return "1800";
             }
-            return "";
+            return null;
         }
 
         //根据属性key去拿属性的值

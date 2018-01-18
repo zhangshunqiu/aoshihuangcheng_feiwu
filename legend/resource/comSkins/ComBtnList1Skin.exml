@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.ComBtnList1Skin" width="130" height="58" currentState="up" xmlns:e="http://ns.egret.com/eui" states="up,down,disable" >
+	<e:Image includeIn="up,down,disable" y="-2" x="0" x.up="0" source.disable="com_btn_list2Dis_png" source.down="com_btn_list2Over_png" source="com_btn_list1_png"/>
+	<e:Label id="labelDisplay" size="24" verticalAlign="middle" textAlign="center" text="" fontFamily="SimHei" textColor="0xE4CEA9" anchorOffsetX="0" anchorOffsetY="0" stroke="1" strokeColor="0x000000" textColor.up="0xe7d1a7" textColor.down="0xa69676" horizontalCenter="0" verticalCenter="0" textColor.disable="0x69584d"/>
+</e:Skin>

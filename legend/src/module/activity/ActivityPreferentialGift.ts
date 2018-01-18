@@ -18,6 +18,9 @@ module game {
         public img_display: eui.Image;
         public btn_buy: eui.Button;
         public list: eui.List;
+		public img_buy: eui.Image;
+		public img_alreadyBuy: eui.Image;
+		private _timer: number = 0;  // 定时器id
 
         public _currentIndex: number = 0;
 
@@ -60,15 +63,23 @@ module game {
             this.lb_name.text = info.name;
             this.img_display.source = info.icon + "_png";
             this.list.dataProvider = new eui.ArrayCollection(info.reward);
-            this.lb_day.text = Math.floor(this._activityModel.perferentialGiftInfo.left_time / (3600 *24)) + "";
-            this.lb_hour.text = Math.floor((this._activityModel.perferentialGiftInfo.left_time / 3600) % 24) + "";
-            this.lb_minute.text = Math.floor((this._activityModel.perferentialGiftInfo.left_time / 60) % 60) + "";
+            this.updateTime();
             if(this._activityModel.perferentialGiftInfo.list[this._currentIndex].state == 1) {
                 this.btn_buy.currentState = "up";
+				this.img_buy.visible = true;
+				this.img_alreadyBuy.visible = false;
             } else {
                 this.btn_buy.currentState = "down";
+				this.img_alreadyBuy.visible = true;
+				this.img_buy.visible = false;
             }
 
+		}
+
+		public updateTime() {
+			this.lb_day.text = Math.floor(this._activityModel.perferentialGiftInfo.left_time / (3600 *24)) + "";
+            this.lb_hour.text = Math.floor((this._activityModel.perferentialGiftInfo.left_time / 3600) % 24) + "";
+            this.lb_minute.text = Math.floor((this._activityModel.perferentialGiftInfo.left_time / 60) % 60) + "";
 		}
 
 		/**
@@ -77,6 +88,13 @@ module game {
 		public open(openParam: any = null): void {
 			super.open(openParam);
 			App.Socket.send(30006,{});
+			if (this._timer == 0) {
+				this._timer = App.GlobalTimer.addSchedule(60000, 0, ()=>{
+					this._activityModel.perferentialGiftInfo.left_time -= 60;
+					this.updateTime();
+				}, this);
+			}
+			
 		}
 
 		/**
@@ -84,6 +102,10 @@ module game {
 		 */
 		public clear(data: any = null): void {
 			super.clear(data);
+			if (this._timer != 0) {
+				App.GlobalTimer.remove(this._timer);
+				this._timer = 0;
+			}
 		}
 		/**
 		 * 销毁
@@ -101,21 +123,15 @@ module game {
 			this.skinName = `<?xml version="1.0" encoding="utf-8"?>
 				<e:Skin class="backpackItemSkin" width="100" height="125" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:customui="customui.*">
 					<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
-						<customui:BaseItem id="baseItem" width="100" height="100" horizontalCenter="0" top="0" anchorOffsetX="0" anchorOffsetY="0"/>
+						<customui:BaseItem id="baseItem" width="90" height="90" horizontalCenter="0" top="0" anchorOffsetX="0" anchorOffsetY="0"/>
 					</e:Group>
 				</e:Skin>`;
-			this.baseItem.lb_name.visible = true;
-            this.baseItem.lb_num.visible = false;
+			this.baseItem.setItemNameVisible(true);
+			this.baseItem.setItemNumVisible(false);
 		}
 
 		protected dataChanged() {
             this.baseItem.updateBaseItem(this.data[0], this.data[1], this.data[2]);
-			if (this.data[1] == ClientType.EQUIP) {
-				let info = App.ConfigManager.equipConfig()[this.data.good_id];
-				if (info) {
-					this.baseItem.lb_name.text = "LV:" + info.limit_lvl;
-				}
-			}
 		}
 
 	} 		

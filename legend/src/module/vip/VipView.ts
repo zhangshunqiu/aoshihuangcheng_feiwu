@@ -34,6 +34,14 @@ module game {
             this.validateNow();
         }
 
+        private setBtnRedTip() {
+            if(this._vipModel.hasReward) {
+                App.BtnTipManager.setTypeValue(ConstBtnTipType.VIPGIFT, true);
+            } else {
+                App.BtnTipManager.setTypeValue(ConstBtnTipType.VIPGIFT, false);
+            }
+        }
+
         private initView() {
             this.img_close.addEventListener(egret.TouchEvent.TOUCH_TAP, ()=>{
                 App.WinManager.closeWin(WinName.VIP);
@@ -44,7 +52,7 @@ module game {
             this.img_left.addEventListener(egret.TouchEvent.TOUCH_TAP, this.toLeft, this);
             this.img_right.addEventListener(egret.TouchEvent.TOUCH_TAP, this.toRight, this);
             this.img_charge.addEventListener(egret.TouchEvent.TOUCH_TAP, ()=>{
-                App.WinManager.openWin(WinName.RECHARGE);
+                RechargeOpenManager.getInstance().openRechargeView();
             }, this);
 
             this.pageView = new PageView();
@@ -54,7 +62,7 @@ module game {
 			this.pageView.height = 1000;
 			this.pageView.width = 680;
 			this.gp_main.addChild(this.pageView);
-            this.pageView.touchEnabled = false;
+            this.pageView.cancelSlide();
         }
 
         private updateVipInfo() {
@@ -142,6 +150,8 @@ module game {
                 App.EventSystem.removeEventListener(PanelNotify.PAGE_CURRENTINDEX_UPDATE, this._eventId1);
                 this._eventId1 = 0;
             }
+            this._vipModel.btnRedTip();
+            this.setBtnRedTip();
             this.removeGuide();
         }
         /**
@@ -295,7 +305,7 @@ module game {
                         }
                         this.lb_quickFight.visible = true;
                         this.lb_quickFightNum.visible = true;
-                        this.lb_quickFight.text = this.count + "、快速战斗每天可购买";
+                        this.lb_quickFight.text = this.count + "、快速战斗每天可多购买";
                         this.lb_quickFightNum.text = this.vipInfo.quick_fight + "次";
                         this.lb_quickFight.y = 8 + (this.count-1) * 36 ;
                         this.lb_quickFightNum.y = 8 + (this.count -1) * 36 ; 
@@ -374,6 +384,7 @@ module game {
 
         private getReward() {
             App.Socket.send(24002, {lv:this.vipInfo.rewardList.lv});
+            this._vipModel.vipArr[this.vipInfo.rewardList.lv].rewardList.state;
             this.vipInfo.rewardList.state = 2;
             this.judgeGetOrNot();
         }
@@ -387,18 +398,14 @@ module game {
 			this.skinName = `<?xml version="1.0" encoding="utf-8"?>
 				<e:Skin class="backpackItemSkin" width="100" height="125" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:customui="customui.*">
 					<e:Group id="gp_main" left="0" right="0" top="0" bottom="0">
-						<customui:BaseItem id="baseItem" width="100" height="100" horizontalCenter="0" top="0" anchorOffsetX="0" anchorOffsetY="0"/>
+						<customui:BaseItem id="baseItem" width="90" height="90" horizontalCenter="0" top="0" anchorOffsetX="0" anchorOffsetY="0"/>
 					</e:Group>
 				</e:Skin>`;
-			this.baseItem.lb_name.visible = true;
+            this.baseItem.setItemNameVisible(true);
 		}
 
 		protected dataChanged() {
 			this.baseItem.updateBaseItem(this.data.type, this.data.good_id, this.data.num);
-			if (this.data.type == ClientType.EQUIP) {
-				let info = App.ConfigManager.equipConfig()[this.data.good_id];
-				this.baseItem.lb_name.text = "LV:" + info.limit_lvl;
-			}
 		}
 
 	}

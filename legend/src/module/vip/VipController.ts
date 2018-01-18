@@ -25,8 +25,10 @@ module game {
             App.EventSystem.dispatchEvent(PanelNotify.VIP_REWARD_UPDATE);
         }
 
-        public handlerVipGetReward() {
-
+        public handlerVipGetReward(data) {
+            if (data) {
+                this.dispatchEvent(PanelNotify.VIP_GET_REWARD_SUCCESS);
+            }
         }
 
          /**

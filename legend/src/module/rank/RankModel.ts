@@ -271,7 +271,7 @@ module game {
 		this._rankObj[ConstRankName.KING]["worShip"] = data.worship;
 
 		var firstTop = (data.list as Array<any>).shift();
-		var _rankTopVo:RankVo = new RankVo(firstTop,"净胜场: "+firstTop.margin);
+		var _rankTopVo:RankVo = new RankVo(firstTop,firstTop.margin+"场");
 		var rankTop:eui.ArrayCollection = new eui.ArrayCollection([_rankTopVo]);
 		this._rankObj[ConstRankName.KING]["topRank"] = rankTop;
 		
@@ -279,7 +279,7 @@ module game {
 		var rankVoArr:eui.ArrayCollection = new eui.ArrayCollection();
 		for(var i:number=0;i<_arr.length;i++)
 		{	
-			var marginNum = "净胜场: " +  _arr[i].margin;
+			var marginNum =  _arr[i].margin + "场";
 			var _rankVo:RankVo = new RankVo(_arr[i],marginNum);
 			rankVoArr.addItem(_rankVo);
 		}
@@ -290,7 +290,66 @@ module game {
 	{	
 		var index = result -1 ;
 		var rankType:string = ConstRankIndex[index];
+		this._rankObj[rankType] = {}
 		this._rankObj[rankType]["worShip"] = 2;//不能再膜拜了
+	}
+
+	public setWorShip(canWorShip,rankType:string):void {
+		switch(rankType)
+		{
+			case ConstRankName.COMBAT:
+					if(this._rankObj[rankType] == null) {  //因为有些排行榜没有排名，就没有创建字段，但仍然可以膜拜
+						this._rankObj[rankType] = {};
+						this._rankObj[rankType]["worShip"] = canWorShip;
+					}
+					break;
+			case ConstRankName.LEVEL:
+					if(this._rankObj[rankType] == null) {  //因为有些排行榜没有排名，就没有创建字段，但仍然可以膜拜
+						this._rankObj[rankType] = {};
+						this._rankObj[rankType]["worShip"] = canWorShip;
+					}
+					break;
+			case ConstRankName.FIGHTER:
+					if(this._rankObj[rankType] == null) {  //因为有些排行榜没有排名，就没有创建字段，但仍然可以膜拜
+						this._rankObj[rankType] = {};
+						this._rankObj[rankType]["worShip"] = canWorShip;
+					}
+					break;
+			case ConstRankName.MAGIC:
+					if(this._rankObj[rankType] == null) {  //因为有些排行榜没有排名，就没有创建字段，但仍然可以膜拜
+						this._rankObj[rankType] = {};
+						this._rankObj[rankType]["worShip"] = canWorShip;
+					}
+					break;
+			case ConstRankName.TAOIST:
+					if(this._rankObj[rankType] == null) {  //因为有些排行榜没有排名，就没有创建字段，但仍然可以膜拜
+						this._rankObj[rankType] = {};
+						this._rankObj[rankType]["worShip"] = canWorShip;
+					}
+					break;
+			case ConstRankName.KILL:
+					if(this._rankObj[rankType] == null) {  //因为有些排行榜没有排名，就没有创建字段，但仍然可以膜拜
+						this._rankObj[rankType] = {};
+						this._rankObj[rankType]["worShip"] = canWorShip;
+					}
+					break;
+			case ConstRankName.MEMAL:
+					if(this._rankObj[rankType] == null) {  //因为有些排行榜没有排名，就没有创建字段，但仍然可以膜拜
+						this._rankObj[rankType] = {};
+						this._rankObj[rankType]["worShip"] = canWorShip;
+					}
+					break;
+			case ConstRankName.KING:
+					if(this._rankObj[rankType] == null) {  //因为有些排行榜没有排名，就没有创建字段，但仍然可以膜拜
+						this._rankObj[rankType] = {};
+						this._rankObj[rankType]["worShip"] = canWorShip;
+					}
+					break;
+			default:
+					break;
+		}
+		
+		
 	}
 
 

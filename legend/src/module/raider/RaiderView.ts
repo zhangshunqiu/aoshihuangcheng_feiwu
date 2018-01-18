@@ -85,11 +85,11 @@ module game {
 			this.gp_raid.addChild(item2);
 			this._itemArray.push(item2);
 
-			for (let i = 0; i < this._itemArray.length; i++) {
-				this._itemArray[i].addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
-					this._itemArray[i].showItemInfo();
-				}, this);
-			}
+			// for (let i = 0; i < this._itemArray.length; i++) {
+			// 	this._itemArray[i].addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
+			// 		this._itemArray[i].showItemInfo();
+			// 	}, this);
+			// }
 
 			//播报布局
 			let layout = new eui.VerticalLayout();
@@ -143,13 +143,19 @@ module game {
 			RES.getResAsync("raider_xunbao_title_png", (texture) => {
 				this.commonWin.img_title.texture = texture;
 			}, this);
-			let data = App.ConfigManager.getRaiderInfoByDay(this.raiderModel.curDay);
+			let temp = App.ConfigManager.getRaiderInfoByDay(this.raiderModel.curDay);
+			let data = [];
+			for( let i=0;i< temp.length;i++) {
+				if (temp[i].career == this.heroModel.getCurHero().job || temp[i].career == 0) {
+					data.push(temp[i]);
+				}
+			}
 			for (let i = 0; i < this._itemArray.length; i++) {
 				for (let k in data) {
 					if (data[k].house_id == i + 1) {
 						this._itemArray[i].updateBaseItem(data[k].type, data[k].item);
 						if(data[k].house_id <=12) {
-							this._itemArray[i].lb_name.visible = true;
+							this._itemArray[i].setItemNameVisible(true);
 						}
 						break;
 					}
@@ -224,12 +230,13 @@ module game {
 
 		//打开寻宝奖励
 		public openReward(data) {
-			if (this._rewardView && this._rewardView.parent) { //还存在奖励界面
-				PopUpManager.removePopUp(this._rewardView);
-				this._rewardView = undefined;
-			}
-			this._rewardView = new RaiderRewardView(data);
-			PopUpManager.addPopUp({obj:this._rewardView});
+			// if (this._rewardView && this._rewardView.parent) { //还存在奖励界面
+			// 	PopUpManager.removePopUp(this._rewardView);
+			// 	this._rewardView = undefined;
+			// }
+			// this._rewardView = new RaiderRewardView(data);
+			// PopUpManager.addPopUp({obj:this._rewardView});
+			App.WinManager.openWin(WinName.POP_RAIDER_REWARD,{data:data});
 		}
 
 		//从仓库中取出所有
@@ -315,17 +322,14 @@ module game {
 						<customui:BaseItem id="baseItem" width="100" height="100" horizontalCenter="0" top="0" anchorOffsetX="0" anchorOffsetY="0"/>
 					</e:Group>
 				</e:Skin>`;
-			this.baseItem.lb_name.visible = true;
+			this.baseItem.setItemNameVisible(true);
+			// this.baseItem.setStopShowTips(true);
 		}
 
 		protected dataChanged() {
 			this.baseItem.updateBaseItem(this.data.good_type, this.data.good_id, this.data.num);
-			this.baseItem.lb_name.size = 22;
-			this.baseItem.lb_name.y = 96;
-			if (this.data.good_type == ClientType.EQUIP) {
-				let info = App.ConfigManager.equipConfig()[this.data.good_id];
-				this.baseItem.lb_name.text = "LV:" + info.limit_lvl;
-			}
+			this.baseItem.setItemNameAtt({size:22});
+			this.baseItem.setItemNameAtt({y:96});
 		}
 
 	}
@@ -357,7 +361,7 @@ module game {
 
 		private itemTap(event: eui.ItemTapEvent) {
 			let itemData = event.item;
-			App.GlobalTips.showItemTips(itemData.type, itemData.good_id, itemData.id);
+			App.GlobalTips.showItemTips(itemData.good_type, itemData.good_id, itemData.id);
 		}
 
 	}

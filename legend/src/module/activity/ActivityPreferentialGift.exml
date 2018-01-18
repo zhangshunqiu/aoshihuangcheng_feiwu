@@ -29,7 +29,7 @@
 		<e:Label id="lb_name" text="特惠礼包" x="442" y="179" size="24" fontFamily="黑体" textAlign="center" width="99" anchorOffsetX="0" textColor="0xffea00"/>
 		<e:Image id="img_display" source="243001_png" x="72" y="341" anchorOffsetX="0" width="187" anchorOffsetY="0" height="178" rotation="0.03" visible="false"/>
 		<e:List id="list" width="341" height="250" x="339" y="266" anchorOffsetX="0" anchorOffsetY="0"/>
-		<e:Button id="btn_buy" label="" x="265" y="560">
+		<e:Button id="btn_buy" label="" x="265" y="560" width="180" height="62">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
 				<e:Image width="100%" height="100%" source="common_btn_huabian_png" source.down="common_btn_huabian_png"/>
@@ -38,6 +38,7 @@
 			</e:skinName>
 		</e:Button>
 		<e:Image source="activity_bg_libao_l_png" x="54" y="357"/>
-		<e:Image source="activity_txt_lijigoumai_png" x="307" y="580"/>
+		<e:Image id="img_buy" source="activity_txt_lijigoumai_png" x="307" y="580" touchEnabled="false"/>
+		<e:Image id="img_alreadyBuy" source="activity_txt_yigoumai_png" x="319" y="579" touchEnabled="false"/>
 	</e:Group>
 </e:Skin>

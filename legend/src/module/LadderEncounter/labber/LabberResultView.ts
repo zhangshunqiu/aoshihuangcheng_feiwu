@@ -13,6 +13,7 @@ module game {
         public gp_lose: eui.Group;
         public gp_content: eui.Group;
         public lb_lv: eui.BitmapLabel;
+        public lb_countDown: eui.BitmapLabel;
         public img_tier: eui.Image;
         public btn_take: eui.Button;
         public star_reward1: eui.Image;
@@ -29,6 +30,8 @@ module game {
         private _cur_lv: number;
         private _cur_star: number;
         private _result_timeId: number = 0;
+        private _count_timeId: number = 0;
+        private _auto_time: number = 6;
         private _labbermodel: LabberHegemonyModel = LabberHegemonyModel.getInstance();
 
         protected childrenCreated() {
@@ -40,10 +43,7 @@ module game {
             this.tier_stars.push(this.star_tier1);
             this.tier_stars.push(this.star_tier2);
             this.tier_stars.push(this.star_tier3);
-            this.btn_take.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
-                App.WinManager.closeWin(WinName.HEGEMONY_LABBER_RESULT);
-                
-            }, this);
+            this.btn_take.addEventListener(egret.TouchEvent.TOUCH_TAP, this.getReward, this);
         }
 
 		/**
@@ -75,19 +75,26 @@ module game {
             this._cur_tier = this._labbermodel.old_tier;
             this._cur_lv = this._labbermodel.old_lv;
             this._cur_star = this._labbermodel.old_star;
+
             if (this._result_timeId == 0) {
-                this._result_timeId = App.GlobalTimer.addSchedule(1000, 0, this.showNewTier, this);
+                this._result_timeId = App.GlobalTimer.addSchedule(500, 0, this.showNewTier, this);
             }
-            //egret.setTimeout(this.showNewTier, this, 500);
+
+            if (this._count_timeId == 0) {
+                this._count_timeId = App.GlobalTimer.addSchedule(1000, 0, this.onCountDown, this);
+            }
+            this._auto_time = 6;
 
             for (let i = 0; i < this._labbermodel.surprise_list.length; i++) {
                 let item = new customui.BaseItem();
                 item.x = 52 + this._item_posi;
                 item.y = 388;
                 this._item_posi += (item.width + 10);
-                item.updateBaseItem(ClientType.BASE_ITEM, this._labbermodel.surprise_list[i].id);
-                item.lb_num.visible = true;
-                item.lb_num.text = this._labbermodel.surprise_list[i].num + "";
+                
+                item.setItemNumVisible(true);
+                item.updateBaseItem(ClientType.BASE_ITEM, this._labbermodel.surprise_list[i].id, this._labbermodel.surprise_list[i].num);
+                //item.lb_num.visible = true;
+                //item.lb_num.text = this._labbermodel.surprise_list[i].num + "";
                 this.reward_items.push(item);
                 this.gp_content.addChild(this.reward_items[this.reward_items.length - 1]);
 
@@ -96,7 +103,18 @@ module game {
 
 
         }
+        public onCountDown() {
 
+            this.lb_countDown.text = this._auto_time + "";
+            this._auto_time--;
+            if (this._auto_time < 0) {
+                if (this._count_timeId != 0) {
+                    App.GlobalTimer.remove(this._count_timeId);
+                    this._count_timeId = 0;
+                }
+                this.getReward();
+            }
+        }
         public showNewTier() {
 
             this.showTierInfo(this._cur_tier, this._cur_lv, this._cur_star);
@@ -112,8 +130,8 @@ module game {
 
             if (this._labbermodel.result == 0) {
 
-                if (this._cur_star == 0) {
-                    this._cur_star = 2;
+                if (this._cur_star == 1) {
+                    this._cur_star = 3;
                     if (this._cur_lv == 5) {
                         this._cur_lv = 1;
                         this._cur_tier--;
@@ -168,11 +186,18 @@ module game {
 
         }
 
+        private getReward() {
+            App.Socket.send(13001, null);
+            App.WinManager.closeWin(WinName.HEGEMONY_LABBER_RESULT);
+            App.WinManager.openWin(WinName.HEGEMONY,{index:2});
+        }
+
 		/**
 		 * 关闭窗口
 		 */
         public closeWin(callback): void {
             super.closeWin(callback);
+
         }
 
 		/**
@@ -181,6 +206,7 @@ module game {
         public clear(data: any = null): void {
             super.clear(data);
 
+            // App.Socket.send(13001, null);
             for (let i = 0; i < this.reward_items.length; i++) {
                 this.gp_content.removeChild(this.reward_items[i]);
             }
@@ -189,7 +215,10 @@ module game {
                 App.GlobalTimer.remove(this._result_timeId);
                 this._result_timeId = 0;
             }
-            App.Socket.send(13001, null);
+            if (this._count_timeId != 0) {
+                App.GlobalTimer.remove(this._count_timeId);
+                this._count_timeId = 0;
+            }
         }
 		/**
 		 * 销毁

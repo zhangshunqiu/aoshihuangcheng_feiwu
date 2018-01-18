@@ -43,12 +43,12 @@ module game {
 				// this.lb_read.text = "未读";
 				// this.lb_read.textColor = 12566463;
 			}
-			if(this.data.reward.length>0 && !this.data.isRead)
+			if(this.data.rewardState)
 			{
-				this.img_reward.visible = true;
+				this.img_reward.visible = false;//已领取
 			}else
 			{
-				this.img_reward.visible = false;
+				this.img_reward.visible = true;
 			}
 
 		}

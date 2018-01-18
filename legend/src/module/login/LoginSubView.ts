@@ -29,7 +29,8 @@ module game {
 
         private initView() {
             this.img_close.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: Event) => {
-                PopUpManager.removePopUp(this, 0);
+                // PopUpManager.removePopUp(this, 0);
+                App.WinManager.closeWin(WinName.POP_LOGIN_SERVER)
             }, this);
             this.list_server = new eui.List();
             this.list_server.itemRenderer = ServerItem;
@@ -59,7 +60,8 @@ module game {
                     //(this._curSelGroupNum -1)*this._oneGroupNum
                     this._loginModel.curSelServer = this._loginModel.serverList[(this._curSelGroupNum - 1) * this._oneGroupNum + i - 1];
                     App.EventSystem.dispatchEvent(PanelNotify.LOGIN_SERVER_SELECT);
-                    PopUpManager.removePopUp(this, 0);
+                    // PopUpManager.removePopUp(this, 0);
+                    App.WinManager.closeWin(WinName.POP_LOGIN_SERVER);
                 }, this);
                 // (<eui.Label>item.getChildAt(1)).text = this._loginModel.serverList[i - 1].sName;
                 item.x = 13;
@@ -170,6 +172,7 @@ module game {
         private roleName: string = "";
         private mc: AMovieClip;
         private img_role: eui.Image;
+        private mc_role : AMovieClip;
 
         public constructor() {
             super();
@@ -186,12 +189,16 @@ module game {
         }
 
         private initView() {
+            this.mc_role = new AMovieClip();
+            this.mc_role.x = 360;
+            this.mc_role.y = 300;
+            this.gp_middle.addChild(this.mc_role);
             this.textInput.textDisplay.prompt = "玩家名字6字";
             this.textInput.textColor = 0xFFFC00;
             (<eui.Label>this.btn_male.labelDisplay).textColor = 0xFFFC00;
             (<eui.Label>this.btn_female.labelDisplay).textColor = 0xFFFC00;
             this.btn_create.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: Event) => {
-                if (App.ConfigManager.isContainSensitiveWord(this.textInput.text)) {
+                if (App.ConfigManager.isContainSensitiveWord(this.textInput.text) || this.textInput.text.indexOf(" ") >=0 ) {
                     App.GlobalTips.showTips("名字含有非法字符");
                     return;
                 } else if (this.textInput.text.length > 6) {
@@ -285,6 +292,13 @@ module game {
                 this.img_role.source = texture;
             }, this);
 
+            //Test 
+            this.img_role.visible = false;
+            this.mc_role.playMCKey("effxj"+this.sex+this.career,"",-1,null,()=>{
+                this.mc_role.frameRate = 7;
+            },this);
+
+            
         }
 
         //计算长度
@@ -332,6 +346,7 @@ module game {
          */
         public clear() {
             super.clear();
+            this.mc_role.destroy();
         }
 
     }

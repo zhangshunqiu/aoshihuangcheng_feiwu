@@ -11,6 +11,7 @@ module game {
 		public lb_have_day : eui.Label;
 		public btn_recharge : eui.Button;
 		public scroller : eui.Scroller;
+		public btn_rechange:eui.Button;
 		public list : eui.List = new eui.List();
 
 		private activityModel :ActivityModel = ActivityModel.getInstance();
@@ -30,7 +31,9 @@ module game {
 			this.scroller.verticalScrollBar.visible = false;
 			this.list.itemRenderer = ActivityContinueRechargeItem;
 			this.scroller.viewport = this.list;
-
+			this.btn_rechange.addEventListener(egret.TouchEvent.TOUCH_TAP,()=>{
+				RechargeOpenManager.getInstance().openRechargeView();
+			},this);
 		}
 
 		public updateView() {
@@ -138,7 +141,7 @@ module game {
 					this.img_txt.source = texture;
 				},this);
 				this.btn_get.currentState = 'down';
-				this.lb_name.textFlow = [{text:"已达成"},{text:this.activityModel.continueRechargeInfo.days,style:{textColor:0xf10000}},{text:"/"+baseInfo.add_day+"天"}];
+				this.lb_name.textFlow = [{text:"已达成"},{text:this.activityModel.continueRechargeInfo.days+"",style:{textColor:0xf10000}},{text:"/"+baseInfo.add_day+"天"}];
 			} else if(this.data.state == 1){  //可以领
 				this.btn_get.visible = true;
 				this.img_txt.visible = true;
@@ -147,7 +150,7 @@ module game {
 					this.img_txt.source = texture;
 				},this);
 				this.btn_get.currentState = 'up';
-				this.lb_name.textFlow = [{text:"已达成"},{text:this.activityModel.continueRechargeInfo.days,style:{textColor:0x00f829}},{text:"/"+baseInfo.add_day+"天"}];
+				this.lb_name.textFlow = [{text:"已达成"},{text:this.activityModel.continueRechargeInfo.days+"",style:{textColor:0x00f829}},{text:"/"+baseInfo.add_day+"天"}];
 			} else if(this.data.state == 2) {  //已领
 				this.btn_get.visible = false;
 				this.img_txt.visible = false;
@@ -155,7 +158,7 @@ module game {
 				RES.getResAsync("invest_txt_lijilingqu_png",(texture)=>{
 					this.img_txt.source = texture;
 				},this);
-				this.lb_name.textFlow = [{text:"已达成"},{text:this.activityModel.continueRechargeInfo.days,style:{textColor:0x00f829}},{text:"/"+baseInfo.add_day+"天"}];
+				this.lb_name.textFlow = [{text:"已达成"},{text:this.activityModel.continueRechargeInfo.days+"",style:{textColor:0x00f829}},{text:"/"+baseInfo.add_day+"天"}];
 			}
 
 		}

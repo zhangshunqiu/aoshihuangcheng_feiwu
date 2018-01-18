@@ -15,5 +15,7 @@
 	</e:Group>
 	<e:Group id="gp_joinReward" width="18" height="16" y="602" anchorOffsetX="0" anchorOffsetY="0" x="34">
 	</e:Group>
+	<e:Image source="common_bg_tips_title_png" x="50" y="177" anchorOffsetX="0" width="628" anchorOffsetY="0" height="52"/>
 	<e:Image source="worldboss_jianglijieshao_title_png" x="306" y="187"/>
+	<e:Image id="img_close" source="common_btn_close_2_png" x="629" y="175"/>
 </e:Skin>

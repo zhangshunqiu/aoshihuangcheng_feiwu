@@ -34,7 +34,7 @@
 			<game:ForgeOrangeView id="forgeOrangeView" left="0" right="0" top="0" bottom="0"/>
 		</e:Group>
 		<e:Group id="gp_storage" height="775" y="70" left="0" right="0">
-			<e:Image source="common_bg_window_tips_png" scale9Grid="81,83,488,500" width="611" height="674" horizontalCenter="0" top="0"/>
+			<e:Image source="common_bg_window_tips_png" scale9Grid="81,83,488,500" width="645" height="674" horizontalCenter="0" top="0"/>
 			<e:Image id="img_withdraw" x="501" y="707" source="common_btn_common_png"/>
 			<e:Label id="lb_capacity" text="999/999" y="718" horizontalCenter="0" fontFamily="SimHei" size="28" textColor="0xbfbfbf"/>
 			<e:Image x="528" y="720" source="raider_txt_quanbuquchu_png" touchEnabled="false"/>

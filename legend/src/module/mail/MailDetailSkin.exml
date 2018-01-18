@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="MailDetailSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:customui="customui.*" width="555" height="619">
-	<e:Group id="gp_main" left="0" right="0" top="0" bottom="314" anchorOffsetY="0">
+<e:Skin class="MailDetailSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:customui="customui.*" width="720" height="1066">
+	<e:Group id="gp_main" top="190" bottom="257" anchorOffsetY="0" horizontalCenter="0">
 		<e:Image source="common_bg_interface_level_1_png" top="0" anchorOffsetX="0" width="554" anchorOffsetY="0" height="618.62" horizontalCenter="0.5"/>
 		<e:Image id="img_close" x="499.61" y="-3.18" source="common_btn_close_1_png"/>
 		<e:Image width="198" height="77" y="-14" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0.5" source="mail_youjianneirong_title_png"/>
@@ -8,10 +8,10 @@
 		<e:Label id="lb_content" text="邮件内容 哔哩哔哩哔哩哔哩哔哩哔哩" x="99" y="84" anchorOffsetX="0" width="366" anchorOffsetY="0" height="135"/>
 		<e:Image id="img_return" source="common_btn_fanhui_png" x="450" y="497" scaleX="1" scaleY="1"/>
 	
-		<e:Scroller width="502" height="124" y="355" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" scrollPolicyV="off" horizontalCenter="0.5">
-			<e:List id="list_items" width="492" height="99" y="371" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" horizontalCenter="-8.5">
+		<e:Scroller width="502" height="127" y="350" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" scrollPolicyV="off" horizontalCenter="0.5">
+			<e:List id="list_items" width="492" height="99" y="-1" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" horizontalCenter="0">
 				<e:layout>
-				<e:HorizontalLayout horizontalAlign="contentJustify" paddingLeft="35" gap="60"/>
+				<e:HorizontalLayout paddingLeft="35" gap="20" verticalAlign="top"/>
 				</e:layout>
 			</e:List>
 		</e:Scroller>
@@ -25,11 +25,11 @@
 				</e:Skin>
 			</e:skinName>
 			</e:Button>
-			<e:Image id="img_reward1" width="97.99" height="30.34" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" source="mail_txt_lingqufujian_png" touchEnabled="false" horizontalCenter="0" verticalCenter="0"/>
+			<e:Image id="img_reward1" width="97.99" height="27.34" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" source="mail_txt_lingqufujian_png" touchEnabled="false" horizontalCenter="0.5" verticalCenter="-1"/>
 			<e:Image id="img_reward2" width="65.99" height="27.34" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" source="mail_yilingqu_png" touchEnabled="false" horizontalCenter="0" verticalCenter="0" visible="false"/>
 		</e:Group>
-		<e:Image source="smelt_orange_zhuangshi_png" y="279" scaleX="1" scaleY="1" horizontalCenter="0.5"/>
+		<e:Image source="smelt_orange_zhuangshi_png" y="277" scaleX="1" scaleY="1" horizontalCenter="0.5"/>
 		<e:Image width="57.99" height="30.34" y="286" anchorOffsetX="0" anchorOffsetY="0" x="249" scaleX="1" scaleY="1" source="mail_txt_fujian_png"/>
-		<e:Label id="lb_attachBtn" text="改邮件没有附件" y="385" scaleX="1" scaleY="1" horizontalCenter="0" size="24"/>
+		<e:Label id="lb_attachBtn" text="该邮件没有附件" y="385" scaleX="1" scaleY="1" horizontalCenter="0" size="24"/>
 	</e:Group>
 </e:Skin>

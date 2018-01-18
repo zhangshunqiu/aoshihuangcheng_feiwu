@@ -61,5 +61,12 @@
 		"num":1,
 		"money":2,
 		"number":50
+	},
+	"10":{
+		"id":10,
+		"goods":30,
+		"num":1,
+		"money":2,
+		"number":1800
 	}
 }

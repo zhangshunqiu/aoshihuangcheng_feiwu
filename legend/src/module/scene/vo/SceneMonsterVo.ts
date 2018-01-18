@@ -19,6 +19,9 @@ class SceneMonsterVo extends BaseFightObjVo {
 
 	public honorTitleUrl:string = "";//称号样式
 
+	public immuneCZ:boolean = false;//是否免疫冲撞
+	public immuneKJHH:boolean = false;//是否免疫抗拒火环
+
 	public constructor() {
 		super();
 		this.type = SceneObjectType.MONSTER;
@@ -79,7 +82,16 @@ class SceneMonsterVo extends BaseFightObjVo {
 			this.lv = config.lv;
 			this.name = config.name+"lv."+this.lv;
 			this.attackType = config.attack_type;
-			
+			if(config.immune_cz && config.immune_cz == 1){
+				this.immuneCZ = true;
+			}else{
+				this.immuneCZ = false;
+			}
+			if(config.immune_kjhh && config.immune_kjhh == 1){
+				this.immuneKJHH = true;
+			}else{
+				this.immuneKJHH = false;
+			}
 			this.updateHookSkill();
 		}
 	}

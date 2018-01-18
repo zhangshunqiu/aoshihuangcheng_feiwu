@@ -61,9 +61,12 @@ module game {
                 }
                 App.RoleManager.roleInfo.lifeExp = data.value;
             } else if (data.type == CurrencyType.TURN) {
-                App.RoleManager.roleInfo.turn = data.value;
+                App.RoleManager.roleInfo.turn = Number(data.value);
             } else if (data.type == CurrencyType.VIP_LV) {
                 App.RoleManager.roleInfo.vipLv = data.value;
+            }
+            else if(data.type == CurrencyType.TITLE){
+                App.RoleManager.roleInfo.titleId = data.value;
             }
             App.EventSystem.dispatchEvent(PanelNotify.PLAYER_UPDATE_PLAYER_INFO);
             WingModel.getInstance().updateBaseInfo();

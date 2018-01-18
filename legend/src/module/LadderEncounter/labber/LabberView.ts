@@ -15,11 +15,12 @@ module game {
         public lb_winmatch: eui.Label;
         public lb_leftcount: eui.Label;
         public lb_winingrate: eui.Label;
+        public lb_recovertime:eui.Label;
         public btn_tips: eui.Button;
         public btn_reward: eui.Button;
         public btn_match: eui.Button;
         public btn_buytimes: eui.Button;
-        public btn_rank:eui.Button;
+        public btn_rank: eui.Button;
         public img_winingstreak: eui.Image;
         public img_career: eui.Image;
         public scr_match: eui.Scroller;
@@ -35,7 +36,7 @@ module game {
         private img_stars: Array<eui.Image> = [];
         private _labbermodel: LabberHegemonyModel = LabberHegemonyModel.getInstance();
         private _match_time: number;
-
+        private _match_count: number;
         public constructor(skinName: string) {
             super("LabberSkin")
         }
@@ -116,20 +117,24 @@ module game {
 
         public openRanking() {
 
-            App.WinManager.openWin(WinName.RANK,ConstRankName.KING);
+            App.WinManager.openWin(WinName.RANK, ConstRankName.KING);
         }
 
         public buyHegemonyMatchTimes() {
 
-
+            if (this._labbermodel.left_num >= this._labbermodel.left_total) {
+                let text = [{ text: "挑战次数已达到上限", style: { textColor: 0xffffff, size: 24, fontFamily: "SimHei" } }]
+                App.GlobalTips.showTips(text);
+                return;
+            }
             let info = (App.ConfigManager.getLabberBuyTimeInfo());
-           
+
             let okCB = function (selected) {
                 App.Socket.send(37003, null);
             }
 
             let textFlow = [{ text: "确定花费", style: { textColor: 0xff8500 } }, { text: info.buy_gold + "元宝", style: { textColor: 0xffea01 } }, { text: "购买一次天梯挑战次数吗？", style: { textColor: 0xff8500 } }, { text: "\n今日已购买次数：" }, { text: (info.buy_num - this._labbermodel.left_buy_times) + "/" + info.buy_num, style: { textColor: 0x22a322 } }]
-            App.GlobalTips.showAlert({ style: BaseTipsStyle.COMMON, textFlow: textFlow, okCB: okCB, context: this, needCheckBox: false });
+            App.GlobalTips.showAlert({ style: AlertTipsStyle.COMMON, textFlow: textFlow, okCB: okCB, context: this, needCheckBox: false });
 
 
         }
@@ -139,11 +144,16 @@ module game {
             this.lb_name.text = this._labbermodel.hegemony_name;
 
             this.lb_tier.text = GlobalUtil.getTierName(this._labbermodel.tier);
-            this.lb_tierdetail.text = GlobalUtil.getTierName(this._labbermodel.tier) + GlobalUtil.getTierLvName(this._labbermodel.lv);
+            this.lb_tierdetail.text = GlobalUtil.getTierName(this._labbermodel.tier).substring(2, GlobalUtil.getTierName(this._labbermodel.tier).length) + GlobalUtil.getTierLvName(this._labbermodel.lv);
             this.lb_winmatch.text = this._labbermodel.win_match + "";
             this.lb_rank.text = this._labbermodel.my_rank + "";
-            this.lb_leftcount.text = this._labbermodel.left_num + "/" + this._labbermodel.left_total;
+            if (this._labbermodel.my_rank == 0)
+                this.lb_rank.text = "未上榜";
+            //this.lb_leftcount.text = this._labbermodel.left_num + "/" + this._labbermodel.left_total;
+            this.lb_leftcount.textFlow = [{ text: this._labbermodel.left_num + "", style: { textColor: 0x00f829 } }, { text: "/" + this._labbermodel.left_total }];
             this.lb_winingrate.text = this._labbermodel.wining_rate + "%";
+           let info = (App.ConfigManager.getLabberBuyTimeInfo());
+            this.lb_recovertime.text = "（每"+(info.recover_time/3600)+"小时恢复一次）";
             this.img_winingstreak.visible = this._labbermodel.is_winingstreak;
             for (let i = 0; i < this.img_stars.length; i++) {
                 if (i < this._labbermodel.star)
@@ -170,17 +180,18 @@ module game {
 
             this.img_default.visible = true;
             this._match_time = 0;
+            this._match_count = this._labbermodel.match_list.length;
             this._list_match.dataProvider = new eui.ArrayCollection(this._labbermodel.match_list);
             if (this._match_timeId == 0) {
-                this._match_timeId = App.GlobalTimer.addSchedule(200, 0, this.matchTimerHandler, this);
+                this._match_timeId = App.GlobalTimer.addSchedule(50, 0, this.matchTimerHandler, this);
             }
 
         }
 
         public matchTimerHandler() {
 
-            this._match_time += 0.2;
-            if (this.scr_match.viewport.scrollV >= this._list_match.height) {
+            this._match_time += 0.05;
+            if (this.scr_match.viewport.scrollV >= (this._match_count-1)*450) {
                 if (this._match_timeId != 0 && this._match_time >= 5) {
                     App.GlobalTimer.remove(this._match_timeId);
                     this._match_timeId = 0;

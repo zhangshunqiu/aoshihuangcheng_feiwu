@@ -17,9 +17,9 @@
 			</e:Group>
 			<e:Group id="gp_ring_fragment" height="140" y="491.28" left="0" right="0">
 				<e:Image id="img_ring_fragment0" x="56" source="equip_sp_shenjiesuipian_png" y="5"/>
-				<e:Image x="371" id="img_ring_fragment1" source="equip_sp_shenjiesuipian_png" top="5"/>
+				<e:Image x="371" id="img_ring_fragment1" source="equip_sp_shenjiesuipian_png" y="5"/>
 				<e:Image x="56" id="img_ring_fragment2" source="equip_sp_shenjiesuipian_png" y="81"/>
-				<e:Image x="372" id="img_ring_fragment3" source="equip_sp_shenjiesuipian_png" bottom="5"/>
+				<e:Image x="372" id="img_ring_fragment3" source="equip_sp_shenjiesuipian_png" y="81"/>
 				<e:Label id="lb_ring_fragment0" text="Label" x="118" y="20" fontFamily="SimHei" textColor="0x8f8f8f" size="24"/>
 				<e:Label text="Label" x="433.33" y="20" fontFamily="SimHei" textColor="0x8f8f8f" size="24" id="lb_ring_fragment1"/>
 				<e:Label text="Label" x="118" y="96" fontFamily="SimHei" textColor="0x8f8f8f" size="24" id="lb_ring_fragment2"/>

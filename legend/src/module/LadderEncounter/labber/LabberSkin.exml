@@ -4,7 +4,7 @@
 	<e:Image source="labber_bg5_png" x="30" y="120" anchorOffsetY="0" height="783"/>
 	<e:Group id="gp_up" x="181" y="133" touchEnabled="false" touchThrough="true">
 		<e:Image id="img_career" x="-190" y="-21" scaleX="1" scaleY="1" source="300012_png" width="370" height="430"/>
-		<e:Scroller id="scr_match" width="374" height="421" anchorOffsetY="0" anchorOffsetX="0" x="122" y="0">
+		<e:Scroller id="scr_match" width="374" height="421" anchorOffsetY="0" anchorOffsetX="0" x="122" y="0" touchChildren="false" touchEnabled="false">
 		<e:Group id="scr_group" touchEnabled="false" y="33"/>
 		</e:Scroller>
 		<e:Image id="img_winingstreak" x="0" y="32" source="labber_liansheng_png"/>
@@ -20,9 +20,9 @@
 	</e:Group>
 	<e:Group id="gp_middle" x="120" y="268" touchChildren="true" touchEnabled="false" touchThrough="true">
 		<e:Image source="labber_bg_huizhang_png" x="75" y="333"/>
-		<e:Label id="lb_name" text="梦之安魂曲" y="208" fontFamily="SimHei" size="24" x="0" scaleX="1" scaleY="1" textAlign="center" textColor="0xe4d1de"/>
+		<e:Label id="lb_name" text="梦之安魂曲" y="208" fontFamily="SimHei" size="24" x="10" scaleX="1" scaleY="1" textColor="0xe4d1de"/>
 		<e:Label id="lb_tier" text="段位" y="233" fontFamily="SimHei" size="24" x="10" scaleX="1" scaleY="1" textAlign="left" textColor="0x22a322"/>
-		<e:Label id="lb_tierdetail" text="青铜五阶" y="313" fontFamily="SimHei" size="24" x="197" scaleX="1" scaleY="1" textAlign="center" textColor="0x22a322"/>
+		<e:Label id="lb_tierdetail" text="青铜五阶" y="305" fontFamily="SimHei" size="24" x="194" scaleX="1" scaleY="1" textAlign="center" textColor="0x22a322"/>
 		<e:Label text="胜率" y="260" fontFamily="SimHei" size="24" x="9" scaleX="1" scaleY="1" textAlign="center" textColor="0xf87500"/>
 		<e:Label id="lb_winingrate" text="0%" y="261" fontFamily="SimHei" size="24" x="81" scaleX="1" scaleY="1" textAlign="left" textColor="0xffea01"/>
 		<e:Button id="btn_reward" label="" x="349" y="337">
@@ -59,8 +59,8 @@
 		<e:Label id="lb_rank" text="0" y="663" fontFamily="SimHei" size="24" scaleX="1" scaleY="1" textColor="0xf6a527" touchEnabled="false" horizontalCenter="-223.5" width="72" textAlign="center"/>
 		<e:Label text="剩余场数:" y="633" fontFamily="SimHei" size="24" x="340" scaleX="1" scaleY="1" textAlign="center" textColor="0xffa200"/>
 		<e:Label id="lb_leftcount" text="1/2" y="634" fontFamily="SimHei" size="24" x="497" scaleX="1" scaleY="1" textAlign="center" textColor="0xf9fcfa"/>
-		<e:Label text="（每2小时恢复一次）" y="760" fontFamily="SimHei" size="20" x="242" scaleX="1" scaleY="1" textAlign="center" textColor="0xf87500"/>
-		<e:Button id="btn_match" label="" x="263" y="699" anchorOffsetX="0" width="149" anchorOffsetY="0" height="45">
+		<e:Label id="lb_recovertime" text="（每2小时恢复一次）" y="760" fontFamily="SimHei" size="20" x="211" scaleX="1" scaleY="1" textAlign="center" textColor="0xf87500" width="263"/>
+		<e:Button id="btn_match" label="" x="260" y="692" anchorOffsetX="0" width="158" anchorOffsetY="0" height="53">
 			<e:skinName>
 			<e:Skin states="up,down,disabled">
 				<e:Image width="100%" height="100%" source="common_btn_common_png" source.down="common_btn_common_png" source.disabled="common_btn_common_png"/>

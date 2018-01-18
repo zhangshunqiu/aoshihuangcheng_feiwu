@@ -20,6 +20,7 @@ module game {
 
         private _creatRoleEventId:number = 0;
 
+        private _isFirstLogin:Boolean = true;
         public constructor() {
             super();
             this.initProtocol();
@@ -56,20 +57,22 @@ module game {
          * 打开创建角色VIew
          */
         private onShowCreateRole() {
-            if (this.loginCreateRoleView == null){
-                 let view = new LoginCreateRole();
-                this.loginCreateRoleView = view;
-                PopUpManager.addPopUp({obj:view,effectType:0});
-            }
+            App.WinManager.openWin(WinName.POP_LOGIN_CREATE);
+            // if (this.loginCreateRoleView == null){
+            //      let view = new LoginCreateRole();
+            //     this.loginCreateRoleView = view;
+            //     PopUpManager.addPopUp({obj:view,effectType:0});
+            // }
         }
         /**
          * 关闭创建角色VIew
          */
         private onCloseCreateRole() {
-            if (this.loginCreateRoleView) {
-                PopUpManager.removePopUp(this.loginCreateRoleView);
-                this.loginCreateRoleView = null;
-            }
+            App.WinManager.closeWin(WinName.POP_LOGIN_CREATE);
+            // if (this.loginCreateRoleView) {
+            //     PopUpManager.removePopUp(this.loginCreateRoleView);
+            //     this.loginCreateRoleView = null;
+            // }
         }
 
         /**
@@ -124,6 +127,7 @@ module game {
                 this._socketNoConnectEventId = this.addEventListener(SocketConst.SOCKET_NOCONNECT,this.onSocketNoConnect,this);     //没有或不能连接
             }
             App.Socket.connect();
+            App.logzsq("链接SOCKET"+"_"+Date.now());
         }
        
         /**
@@ -138,9 +142,9 @@ module game {
          * socket 链接成功
          */
         private onSocketConnect() {
-            App.logzsq("SOCKET 链接成功 CONNECT");
-            this.startHeartSchedule();
+            App.logzsq("SOCKET 链接成功 CONNECT"+"_"+Date.now());
             this.sendRequestRoleInfo();
+            this.startHeartSchedule();
         }
         /**
          * socket重连成功
@@ -148,8 +152,8 @@ module game {
         private onSocketReconnect() {
             //重连成功后发送登录协议
             App.logzsq("SOCKET 重连成功_RECONNECT");
-            this.startHeartSchedule();
             this.sendRequestRoleInfo();
+            this.startHeartSchedule();
         }
         /**
          * 开始重连
@@ -177,6 +181,7 @@ module game {
             App.WinManager.closeWin(WinName.LOGIN);
             App.WinManager.closeWin(WinName.MAIN);
             App.WinManager.openWin(WinName.LOGIN);
+            App.EventSystem.dispatchEvent(GameEvent.SHOW_LOADINGVIEW,false);
         }
 
          /**
@@ -197,6 +202,9 @@ module game {
             if(this._heartTimeId == 0){
                 this._heartTimeId = App.GlobalTimer.addSchedule(3000,0,this.onHeartSchedule,this);
             }
+            egret.setTimeout(function () {
+                this.onHeartSchedule();//必须加上
+            }, this, 60)
         }
         /**
          * 停止心跳
@@ -222,6 +230,7 @@ module game {
          */
         private handlerHeartSchedule(data) {
             this._serverHeartTime = Date.now();
+            //App.logzsq(Date.now(),Number(data.result)*1000);
             GlobalModel.getInstance().serverTime = Number(data.result)*1000;
         }
         /**
@@ -230,6 +239,8 @@ module game {
         private handlerAccountLogin(data) {
             if(data.result == 1){
                 this.onCloseCreateRole();
+                App.EventSystem.dispatchEvent(GameEvent.SHOW_LOADINGVIEW,this._isFirstLogin);
+                this._isFirstLogin = false;
                 App.WinManager.closeWin(WinName.LOGIN);
                 if(App.WinManager.isOpen(WinName.MAIN)){
                     App.WinManager.closeWin(WinName.MAIN);
@@ -243,6 +254,8 @@ module game {
          */
         public handlerCreateRoleComplete(data) {
             this.onCloseCreateRole();
+            App.EventSystem.dispatchEvent(GameEvent.SHOW_LOADINGVIEW,this._isFirstLogin);
+            this._isFirstLogin = false;
             App.WinManager.closeWin(WinName.LOGIN);
             if(App.WinManager.isOpen(WinName.MAIN)){
                  App.WinManager.closeWin(WinName.MAIN);
@@ -282,9 +295,9 @@ module game {
 	     *  // optional int32 state	= 2;	// 红点状态（0没有， 1有）
          */
         private handlerUpdateBtnTips(data:any){
-            if(data.pbRedDot){
-                for(var i:number = 0;i<data.pbRedDot.length;i++){
-                    var d:any = data.pbRedDot[i];
+            if(data.list){
+                for(var i:number = 0;i<data.list.length;i++){
+                    var d:any = data.list[i];
                     this.updateBtnTipsValue(d);
                     //this._btnTipsManager.setTypeValue(d.id,(d.state == 1));
                 }

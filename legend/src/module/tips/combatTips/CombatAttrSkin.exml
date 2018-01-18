@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CombatAttrSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group horizontalCenter="0" verticalCenter="0" touchChildren="false" touchThrough="true">
+		<e:Image source="words_bg_shuxingjiacheng_png" left="3" x="92" scaleX="1" scaleY="1" touchEnabled="false"/>
+		<e:Image id="img_attr" source="words_gongji_png" x="3" scaleX="1" scaleY="1" verticalCenter="4" touchEnabled="false"/>
+		<e:BitmapLabel id="bitmap_attr_num" x="85" font="combat_shuxing_fnt" text="123" scaleX="1" scaleY="1" verticalCenter="6" touchEnabled="false"/>
+	</e:Group>
+</e:Skin>

@@ -1,4 +1,52 @@
 {
+	"1":{
+		"buffId":1,
+		"name":"快速战斗BUFF",
+		"effectid":2,
+		"effectbuffid":"",
+		"describe":"伤害倍率+20%",
+		"show":1
+	},
+	"100":{
+		"buffId":100,
+		"name":"麻痹戒指一阶",
+		"effectid":7,
+		"effectbuffid":"",
+		"describe":"每次攻击有2%概率对目标麻痹2秒，使目标无法攻击",
+		"show":1
+	},
+	"101":{
+		"buffId":101,
+		"name":"麻痹戒指二阶",
+		"effectid":7,
+		"effectbuffid":"",
+		"describe":"每次攻击有4%概率对目标麻痹2秒，使目标无法攻击",
+		"show":1
+	},
+	"102":{
+		"buffId":102,
+		"name":"麻痹戒指三阶",
+		"effectid":7,
+		"effectbuffid":"",
+		"describe":"每次攻击有6%概率对目标麻痹2秒，使目标无法攻击",
+		"show":1
+	},
+	"103":{
+		"buffId":103,
+		"name":"麻痹戒指四阶",
+		"effectid":7,
+		"effectbuffid":"",
+		"describe":"每次攻击有8%概率对目标麻痹2秒，使目标无法攻击",
+		"show":1
+	},
+	"104":{
+		"buffId":104,
+		"name":"麻痹戒指五阶",
+		"effectid":7,
+		"effectbuffid":"",
+		"describe":"每次攻击有10%概率对目标麻痹2秒，使目标无法攻击",
+		"show":1
+	},
 	"20000":{
 		"buffId":20000,
 		"name":"魔法盾1级",
@@ -2404,7 +2452,7 @@
 		"name":"助威1级",
 		"effectid":2,
 		"effectbuffid":0,
-		"describe":"助威加成",
+		"describe":"伤害倍率+10%",
 		"show":0
 	},
 	"40001":{
@@ -2412,7 +2460,7 @@
 		"name":"助威2级",
 		"effectid":2,
 		"effectbuffid":0,
-		"describe":"助威加成",
+		"describe":"伤害倍率+20%",
 		"show":1
 	},
 	"40002":{
@@ -2420,7 +2468,7 @@
 		"name":"助威3级",
 		"effectid":2,
 		"effectbuffid":0,
-		"describe":"助威加成",
+		"describe":"伤害倍率+30%",
 		"show":2
 	},
 	"40003":{
@@ -2428,7 +2476,7 @@
 		"name":"助威4级",
 		"effectid":2,
 		"effectbuffid":0,
-		"describe":"助威加成",
+		"describe":"伤害倍率+40%",
 		"show":3
 	},
 	"40004":{
@@ -2436,7 +2484,7 @@
 		"name":"助威5级",
 		"effectid":2,
 		"effectbuffid":0,
-		"describe":"助威加成",
+		"describe":"伤害倍率+50%",
 		"show":4
 	},
 	"40005":{
@@ -2444,7 +2492,7 @@
 		"name":"助威6级",
 		"effectid":2,
 		"effectbuffid":0,
-		"describe":"助威加成",
+		"describe":"伤害倍率+60%",
 		"show":5
 	},
 	"40006":{
@@ -2452,7 +2500,7 @@
 		"name":"助威7级",
 		"effectid":2,
 		"effectbuffid":0,
-		"describe":"助威加成",
+		"describe":"伤害倍率+70%",
 		"show":6
 	},
 	"40007":{
@@ -2460,7 +2508,7 @@
 		"name":"助威8级",
 		"effectid":2,
 		"effectbuffid":0,
-		"describe":"助威加成",
+		"describe":"伤害倍率+80%",
 		"show":7
 	},
 	"40008":{
@@ -2468,7 +2516,7 @@
 		"name":"助威9级",
 		"effectid":2,
 		"effectbuffid":0,
-		"describe":"助威加成",
+		"describe":"伤害倍率+90%",
 		"show":8
 	},
 	"40009":{
@@ -2476,7 +2524,7 @@
 		"name":"助威10级",
 		"effectid":2,
 		"effectbuffid":0,
-		"describe":"助威加成",
+		"describe":"伤害倍率+100%",
 		"show":9
 	},
 	"40010":{
@@ -2484,7 +2532,7 @@
 		"name":"助威11级",
 		"effectid":2,
 		"effectbuffid":0,
-		"describe":"助威加成",
+		"describe":"伤害倍率+110%",
 		"show":10
 	},
 	"40011":{
@@ -2492,7 +2540,7 @@
 		"name":"助威12级",
 		"effectid":2,
 		"effectbuffid":0,
-		"describe":"助威加成",
+		"describe":"伤害倍率+120%",
 		"show":11
 	},
 	"40012":{
@@ -2500,7 +2548,7 @@
 		"name":"助威13级",
 		"effectid":2,
 		"effectbuffid":0,
-		"describe":"助威加成",
+		"describe":"伤害倍率+130%",
 		"show":12
 	},
 	"40013":{
@@ -2508,7 +2556,7 @@
 		"name":"助威14级",
 		"effectid":2,
 		"effectbuffid":0,
-		"describe":"助威加成",
+		"describe":"伤害倍率+140%",
 		"show":13
 	},
 	"40014":{
@@ -2516,7 +2564,7 @@
 		"name":"助威15级",
 		"effectid":2,
 		"effectbuffid":0,
-		"describe":"助威加成",
+		"describe":"伤害倍率+150%",
 		"show":14
 	},
 	"40015":{
@@ -2524,7 +2572,7 @@
 		"name":"助威16级",
 		"effectid":2,
 		"effectbuffid":0,
-		"describe":"助威加成",
+		"describe":"伤害倍率+160%",
 		"show":15
 	},
 	"40016":{
@@ -2532,7 +2580,7 @@
 		"name":"助威17级",
 		"effectid":2,
 		"effectbuffid":0,
-		"describe":"助威加成",
+		"describe":"伤害倍率+170%",
 		"show":16
 	},
 	"40017":{
@@ -2540,7 +2588,7 @@
 		"name":"助威18级",
 		"effectid":2,
 		"effectbuffid":0,
-		"describe":"助威加成",
+		"describe":"伤害倍率+180%",
 		"show":17
 	},
 	"40018":{
@@ -2548,7 +2596,7 @@
 		"name":"助威19级",
 		"effectid":2,
 		"effectbuffid":0,
-		"describe":"助威加成",
+		"describe":"伤害倍率+190%",
 		"show":18
 	},
 	"40019":{
@@ -2556,7 +2604,7 @@
 		"name":"助威20级",
 		"effectid":2,
 		"effectbuffid":0,
-		"describe":"助威加成",
+		"describe":"伤害倍率+200%",
 		"show":19
 	},
 	"40020":{
@@ -2564,7 +2612,7 @@
 		"name":"助威21级",
 		"effectid":2,
 		"effectbuffid":0,
-		"describe":"助威加成",
+		"describe":"伤害倍率+210%",
 		"show":20
 	},
 	"40021":{
@@ -2572,7 +2620,7 @@
 		"name":"助威22级",
 		"effectid":2,
 		"effectbuffid":0,
-		"describe":"助威加成",
+		"describe":"伤害倍率+220%",
 		"show":21
 	},
 	"40022":{
@@ -2580,7 +2628,7 @@
 		"name":"助威23级",
 		"effectid":2,
 		"effectbuffid":0,
-		"describe":"助威加成",
+		"describe":"伤害倍率+230%",
 		"show":22
 	},
 	"40023":{
@@ -2588,7 +2636,7 @@
 		"name":"助威24级",
 		"effectid":2,
 		"effectbuffid":0,
-		"describe":"助威加成",
+		"describe":"伤害倍率+240%",
 		"show":23
 	},
 	"40024":{
@@ -2596,7 +2644,7 @@
 		"name":"助威25级",
 		"effectid":2,
 		"effectbuffid":0,
-		"describe":"助威加成",
+		"describe":"伤害倍率+250%",
 		"show":24
 	},
 	"40025":{
@@ -2604,7 +2652,7 @@
 		"name":"助威26级",
 		"effectid":2,
 		"effectbuffid":0,
-		"describe":"助威加成",
+		"describe":"伤害倍率+260%",
 		"show":25
 	},
 	"40026":{
@@ -2612,7 +2660,7 @@
 		"name":"助威27级",
 		"effectid":2,
 		"effectbuffid":0,
-		"describe":"助威加成",
+		"describe":"伤害倍率+270%",
 		"show":26
 	},
 	"40027":{
@@ -2620,7 +2668,7 @@
 		"name":"助威28级",
 		"effectid":2,
 		"effectbuffid":0,
-		"describe":"助威加成",
+		"describe":"伤害倍率+280%",
 		"show":27
 	},
 	"40028":{
@@ -2628,7 +2676,7 @@
 		"name":"助威29级",
 		"effectid":2,
 		"effectbuffid":0,
-		"describe":"助威加成",
+		"describe":"伤害倍率+290%",
 		"show":28
 	},
 	"40029":{
@@ -2636,7 +2684,87 @@
 		"name":"助威30级",
 		"effectid":2,
 		"effectbuffid":0,
-		"describe":"助威加成",
+		"describe":"伤害倍率+300%",
 		"show":29
+	},
+	"40101":{
+		"buffId":40101,
+		"name":"勋章技能1级",
+		"effectid":1,
+		"effectbuffid":0,
+		"describe":"伤害减免+1%",
+		"show":0
+	},
+	"40102":{
+		"buffId":40102,
+		"name":"勋章技能2级",
+		"effectid":1,
+		"effectbuffid":0,
+		"describe":"伤害减免+2%",
+		"show":0
+	},
+	"40103":{
+		"buffId":40103,
+		"name":"勋章技能3级",
+		"effectid":1,
+		"effectbuffid":0,
+		"describe":"伤害减免+3%",
+		"show":0
+	},
+	"40104":{
+		"buffId":40104,
+		"name":"勋章技能4级",
+		"effectid":1,
+		"effectbuffid":0,
+		"describe":"伤害减免+4%",
+		"show":0
+	},
+	"40105":{
+		"buffId":40105,
+		"name":"勋章技能5级",
+		"effectid":1,
+		"effectbuffid":0,
+		"describe":"伤害减免+5%",
+		"show":0
+	},
+	"40106":{
+		"buffId":40106,
+		"name":"勋章技能6级",
+		"effectid":1,
+		"effectbuffid":0,
+		"describe":"伤害减免+6%",
+		"show":0
+	},
+	"40107":{
+		"buffId":40107,
+		"name":"勋章技能7级",
+		"effectid":1,
+		"effectbuffid":0,
+		"describe":"伤害减免+7%",
+		"show":0
+	},
+	"40108":{
+		"buffId":40108,
+		"name":"勋章技能8级",
+		"effectid":1,
+		"effectbuffid":0,
+		"describe":"伤害减免+8%",
+		"show":0
+	},
+	"40109":{
+		"buffId":40109,
+		"name":"勋章技能9级",
+		"effectid":1,
+		"effectbuffid":0,
+		"describe":"伤害减免+9%",
+		"show":0
+	},
+	"40110":{
+		"buffId":40110,
+		"name":"勋章技能10级",
+		"effectid":1,
+		"effectbuffid":0,
+		"describe":"伤害减免+10%",
+		"show":0
 	}
 }

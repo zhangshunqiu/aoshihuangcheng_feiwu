@@ -18,13 +18,28 @@ module game {
 			switch(rechargeState)
 			{
 				case 0:
-					 WinManager.getInstance().openWin(WinName.RECHARGE_FIRST,0);
+					if(WinManager.getInstance().isOpen(WinName.RECHARGE_FIRST))
+					{
+						WinManager.getInstance().closeWin(WinName.RECHARGE_FIRST);
+					}else {
+					 	WinManager.getInstance().openWin(WinName.RECHARGE_FIRST,0);
+					}
 					break;
 				case 1:
-					 WinManager.getInstance().openWin(WinName.RECHARGE_FIRST,1);
+					if(WinManager.getInstance().isOpen(WinName.RECHARGE_FIRST))
+					{
+						WinManager.getInstance().closeWin(WinName.RECHARGE_FIRST);
+					}else {
+					 	WinManager.getInstance().openWin(WinName.RECHARGE_FIRST,1);
+					}
 					break;
 				case 2:
-					 WinManager.getInstance().openWin(WinName.RECHARGE);
+					if(WinManager.getInstance().isOpen(WinName.RECHARGE))
+					{
+						WinManager.getInstance().closeWin(WinName.RECHARGE);
+					}else {
+					 	WinManager.getInstance().openWin(WinName.RECHARGE);
+					}
 					break;
 				default:
 					break;

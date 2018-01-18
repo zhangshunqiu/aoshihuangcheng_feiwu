@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ForgeStrengthSkin" width="720" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*" xmlns:game="game.*">
+	<e:Group id="gp_main" left="0" right="0" top="0" bottom="0" touchThrough="true">
+		<e:Group id="gp_strength" left="0" right="0" top="0" bottom="0" touchEnabled="false" touchThrough="true">
+			<e:Image horizontalCenter="1.5" top="60" height="793" x="31" y="60" scaleX="1" scaleY="1" source="forge_bg_qianghua_png"/>
+			<e:Image y="752" scaleX="1" scaleY="1" scale9Grid="48,10,294,18" left="0" right="0" source="com_pic_jb_png"/>
+			<e:Image source="com_pic_decorate6_png" y="700" horizontalCenter="0.5"/>
+			<e:Group id="gp_display" height="540" y="210" left="0" right="0" x="0" scaleX="1" scaleY="1">
+				<e:Image source="forge_hui_png" x="72" y="74"/>
+				<e:Group id="gp_part" left="0" right="0" top="0" bottom="0">
+					<e:Image source="forge_wuqi_png" x="74" y="229" scaleX="1" scaleY="1"/>
+					<e:Image source="forge_yifu_png" x="315" y="98" scaleX="1" scaleY="1"/>
+					<e:Image source="forge_toukui_png" x="361" y="69" scaleX="1" scaleY="1"/>
+					<e:Image source="forge_xianglian_png" x="356" y="126" scaleX="1" scaleY="1"/>
+					<e:Image source="forge_shouzhuo_left_png" x="141" y="177" scaleX="1" scaleY="1"/>
+					<e:Image source="forge_shouzhuo_right_png" x="425" y="185" scaleX="1" scaleY="1"/>
+					<e:Image source="forge_jiezhi_left_png" x="282" y="232" scaleX="1" scaleY="1"/>
+					<e:Image source="forge_jiezhi_right_png" x="438" y="252" scaleX="1" scaleY="1"/>
+					<e:Image source="forge_yaodai_png" x="263" y="193" scaleX="1" scaleY="1"/>
+					<e:Image source="forge_xiezi_png" x="310" y="277" scaleX="1" scaleY="1"/>
+				</e:Group>
+				<e:Group id="gp_part_line" left="0" right="0" top="0" bottom="0">
+					<e:Image source="forge_wuqi_x_png" x="131" y="63"/>
+					<e:Image source="forge_yifu_x_png" x="131" y="131"/>
+					<e:Image source="forge_toukui_x_png" x="394" y="67"/>
+					<e:Image source="forge_xianglian_x_png" x="369" y="143"/>
+					<e:Image source="forge_shouzhuo_left_x_png" x="131" y="221"/>
+					<e:Image source="forge_shouzhuo_right_x_png" x="456" y="230"/>
+					<e:Image source="forge_jiezhi_left_x_png" x="132" y="240" scaleX="1" scaleY="1"/>
+					<e:Image source="forge_jiezhi_right_x_png" x="440" y="256"/>
+					<e:Image source="forge_yaodai_x_png" x="130" y="246"/>
+					<e:Image source="forge_xiezi_x_png" x="436" y="429"/>
+				</e:Group>
+			</e:Group>
+			<e:Group id="gp_equip" height="540" y="210" left="0" right="0" x="0" scaleX="1" scaleY="1">
+			</e:Group>
+			<e:Label text="消耗：" x="221" y="852" size="24" fontFamily="SimHei" textColor="0x259DC2" scaleX="1" scaleY="1"/>
+			<e:Label id="lb_num" text="xxx/xxx" y="850" size="24" fontFamily="SimHei" textColor="0x259DC2" x="328" scaleX="1" scaleY="1"/>
+			<e:Image id="img_cost" x="281" y="838" scaleX="0.8" scaleY="0.8" source="243002_png"/>
+			<e:Label id="label_get" text="获得道具" x="426" y="850" size="24" fontFamily="SimHei" textColor="0x63D72A" scaleX="1" scaleY="1"/>
+			<e:Button id="btn_forge" label="强 化" x="165" y="880" skinName="skins.ComBtnRedSkin"/>
+			<e:Button id="btn_all" label="一键强化" x="395" y="879" skinName="skins.ComBtnRedSkin"/>
+			<e:Group id="gp_attr" height="90" y="751" left="0" right="0">
+				<e:Label id="lb_left0" text="攻击力：" x="136" y="-3" fontFamily="SimHei" size="24" verticalAlign="middle" textAlign="center" height="90" scaleX="1" scaleY="1" lineSpacing="20"/>
+				<e:Label id="lb_left" text="xxxxxx" x="221" y="-3" fontFamily="SimHei" size="24" width="110" height="90" scaleX="1" scaleY="1" lineSpacing="20" verticalAlign="middle" textAlign="center"/>
+				<e:Label id="lb_right" text="xxxxxx" x="391" y="-3" fontFamily="SimHei" size="24" textColor="0x54B122" width="130" height="90" verticalAlign="middle" textAlign="center" scaleX="1" scaleY="1" lineSpacing="20"/>
+				<e:Image source="forge_jiantou_shuxingzengqiang_png" horizontalCenter="0" verticalCenter="0"/>
+			</e:Group>
+		</e:Group>
+	</e:Group>
+</e:Skin>

@@ -3,6 +3,7 @@
  * Email： hersletter@qq.com
  * 每日必做UI界面逻辑 2017/06/20.
  */
+
 module game {
 
 	// export class MyTabbar extends eui.TabBar
@@ -28,7 +29,7 @@ module game {
 		private _curgroup: eui.Group;
 		private _mustdomodel: MustDoModel = MustDoModel.getInstance();
 		public rb_mustdo: eui.RadioButton;
-		public rb_title: eui.RadioButton;
+		public rb_medal: eui.RadioButton;
 		//public rb_achieve: eui.RadioButton;
 		//public rb_medal: eui.RadioButton;
 		private _activity_view: ActivityTaskView;
@@ -104,18 +105,13 @@ module game {
 		}
 
 		protected initBtnTips() {
-			//App.BtnTipManager.addBtnTipItem(ConstBtnTipType.TASK_MEDAL, this.rb_medal);
+			App.BtnTipManager.addBtnTipItem(ConstBtnTipType.TASK_MEDAL, this.rb_medal);
 			App.BtnTipManager.addBtnTipItem(ConstBtnTipType.TASK_DAILY, this.rb_mustdo);
 			//App.BtnTipManager.addBtnTipItem(ConstBtnTipType.TASK_ACHIEVE, this.rb_achieve);
 		}
 
 		private initView() {
-			// let data = ["勋章", "每日必做", "成就", "称号"];
-			// this.tab_medal.dataProvider = new eui.ArrayCollection(data);
-			// this.tab_medal.addEventListener(eui.ItemTapEvent.ITEM_TAP, (event: eui.ItemTapEvent) => {
-			// 	this.changeMustDoState(event.itemIndex);
-			// }, this);
-			// this.tab_medal.selectedIndex = MustDoType.MEDAL - 1;
+			
 			this.initBtnTips();
 
 			var radioGroup: eui.RadioButtonGroup = new eui.RadioButtonGroup();
@@ -127,9 +123,9 @@ module game {
 			this.rb_mustdo.value = 1;
 			this.rb_mustdo.label = "每日必做";
 			this.rb_mustdo.selected = true;
-			this.rb_title.group = radioGroup;
-			this.rb_title.label = "称号";
-			this.rb_title.value = 3;
+			this.rb_medal.group = radioGroup;
+			this.rb_medal.label = "勋章";
+			this.rb_medal.value = 0;  //原本是和勋章在一起的，后来被拆到了别的地方 后来勋章又移过来了
 			// this.rb_achieve.group = radioGroup;
 			// this.rb_achieve.label = "成就";
 			// this.rb_achieve.value = 2;
@@ -208,13 +204,23 @@ module game {
 			// if (this._eventid_Title == 0)
 			// 	this._eventid_Title = App.EventSystem.addEventListener(PanelNotify.MUSTDO_UPDATETITLE, this.updateTitle, this);
 			//this.openActivity();
-			if (this._activity_view == null) {
-				this._activity_view = new ActivityTaskView("ActivityTaskSkin")
-				this.addChild(this._activity_view);
+			// if (this._activity_view == null) {
+			// 	this._activity_view = new ActivityTaskView("ActivityTaskSkin")
+			// 	this.addChild(this._activity_view);
+			// }
+			// this._activity_view.readyOpen({ data: {} });
+			// this._curSelView = this._activity_view;
+			// this._curSelIndex = 1;
+			if (openParam && openParam.index) {
+				if (openParam.index == 2) {
+					this.changeMustDoState(this.rb_medal.value);
+					this.rb_medal.selected = true;
+				}
 			}
-			this._activity_view.readyOpen({ data: {} });
-			this._curSelView = this._activity_view;
-			this._curSelIndex = 1;
+			else {
+				this.changeMustDoState(this.rb_mustdo.value);
+				this.rb_mustdo.selected = true;
+			}
 
 		}
 
@@ -287,20 +293,19 @@ module game {
 			//this._btnTakeAllMc.stop();
 			//this._btnTakeAllMc.visible = false;
 			switch (index + 1) {
-				// case MustDoType.MEDAL:
-				// 	RES.getResAsync("medal_xunzhang_title2_png", (texture) => {
-				// 		this.commonWin.img_title.texture = texture;
-				// 	}, this);
-				// 	if (this._medal_view == null) {
-				// 		this._medal_view = new MustDoMedalView("MustDoMedalSkin")
-				// 		this.addChild(this._medal_view);
-				// 	}
-				// 	this._medal_view.readyOpen({ data: {} });
-				// 	this._curSelView = this._medal_view;
-				// 	//this._curgroup = this.gp_medal;
-				// 	//this._curgroup.visible = true;
-				// 	//this.openMedal();
-				// 	break;
+				case MustDoType.MEDAL:
+					RES.getResAsync("medal_xunzhang_title2_png", (texture) => {
+						this.commonWin.img_title.texture = texture;
+					}, this);
+					if (this._medal_view == null) {
+						this._medal_view = new MustDoMedalView("MustDoMedalSkin")
+						this.addChild(this._medal_view);
+					}
+					this._medal_view.readyOpen({ data: {} });
+					this._curSelView = this._medal_view;
+
+					break;
+
 				case MustDoType.ACTIVITY:
 					// this._curgroup = this.gp_activity;
 					// this._curgroup.visible = true;
@@ -329,17 +334,7 @@ module game {
 				// 		this.commonWin.img_title.texture = texture;
 				// 	}, this);
 				// 	break;
-				case MustDoType.TITLE:
-					if (this._title_view == null) {
-						this._title_view = new MustDoTitleView("MustDoTitleSkin")
-						this.addChild(this._title_view);
-					}
-					this._title_view.readyOpen({ data: {} });
-					this._curSelView = this._title_view;
-					RES.getResAsync("title_chenghao_title_png", (texture) => {
-						this.commonWin.img_title.texture = texture;
-					}, this);
-
+				// 
 				//this._curgroup = this.gp_title;
 				//this._curgroup.visible = true;
 				//this.openTitle();
@@ -502,83 +497,95 @@ module game {
 
 
 
-	export class TaskItem extends eui.ItemRenderer {
-		public lb_taskname: eui.Label;
-		public lb_reward: eui.Label;
-		public lb_progress: eui.Label;
-		public gp_finish: eui.Group;
-		public gp_goto: eui.Group;
-		public gp_take: eui.Group;
-		public bt_take: eui.Image;
-		public bt_goto: eui.Image;
-		public tv_data: TaskVo;;
+	// export class TaskItem extends eui.ItemRenderer {
+	// 	public lb_taskname: eui.Label;
+	// 	public lb_reward: eui.Label;
+	// 	public lb_progress: eui.Label;
+	// 	public gp_finish: eui.Group;
+	// 	public gp_goto: eui.Group;
+	// 	public gp_take: eui.Group;
+	// 	public bt_take: eui.Image;
+	// 	public bt_goto: eui.Image;
+	// 	public tv_data: TaskVo;;
 
-		public constructor() {
-			super();
-			this.skinName = "MustDoItemSkin";
-			this.gp_finish.visible = false;
-			this.gp_goto.visible = false;
-			this.gp_take.visible = false;
+	// 	public constructor() {
+	// 		super();
+	// 		this.skinName = "MustDoItemSkin";
+	// 		this.gp_finish.visible = false;
+	// 		this.gp_goto.visible = false;
+	// 		this.gp_take.visible = false;
 
-			this.bt_take.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
-				this.getTaskReward();
-			}, this);
+	// 		this.bt_take.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
+	// 			this.getTaskReward();
+	// 		}, this);
 
-			this.bt_goto.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
-				this.gotoTask();
-			}, this);
-		}
+	// 		this.bt_goto.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
+	// 			this.gotoTask();
+	// 		}, this);
+	// 	}
 
-		public getTaskReward() {
-			if (this.tv_data.type == MustDoType.ACTIVITY)
-				App.Socket.send(18002, { task_id: this.tv_data.task_id });
-			else if (this.tv_data.type == MustDoType.ACHIEVE)
-				App.Socket.send(19002, { achieve_id: this.tv_data.task_id });
+	// 	public getTaskReward() {
+	// 		if (this.tv_data.type == MustDoType.ACTIVITY)
+	// 			App.Socket.send(18002, { task_id: this.tv_data.task_id });
+	// 		else if (this.tv_data.type == MustDoType.ACHIEVE)
+	// 			App.Socket.send(19002, { achieve_id: this.tv_data.task_id });
 
-		}
-		public gotoTask() {
+	// 	}
+	// 	public gotoTask() {
 
-		}
-		public dataChanged() {
+	// 		if (this.tv_data.type == MustDoType.ACTIVITY) {
+	// 			let info = App.ConfigManager.getTaskDailyInfoById(this.tv_data.task_id);
+	// 			MainModuleJump.jumpToModule(info.skip);
+	// 		}
+	// 		else if (this.tv_data.type == MustDoType.ACHIEVE) {
+	// 			let info = App.ConfigManager.getAchieveInfoById(this.tv_data.task_id);
+	// 			MainModuleJump.jumpToModule(info.skip);
 
-			let tv: TaskVo = this.data as TaskVo;
-			this.tv_data = tv;
-			this.lb_taskname.text = tv.task_name;
-			if (tv.need_num > tv.finish_num)
-				this.lb_progress.textFlow = [{ text: tv.finish_num + "", style: { textColor: 0xf10000 } }, { text: "/" + tv.need_num, style: { textColor: 0xffffff } }];
-			else
-				this.lb_progress.textFlow = [{ text: tv.finish_num + "" }, { text: "/" + tv.need_num, style: { textColor: 0xffffff } }];
-			//this.lb_progress.text = tv.finish_num + "/" + tv.need_num;//
-			switch (tv.state) {
-				case 0:
-					this.gp_take.visible = false;
-					this.gp_finish.visible = false;
-					this.gp_goto.visible = true;
-					break;
-				case 1:
-					this.gp_take.visible = true;
-					this.gp_finish.visible = false;
-					this.gp_goto.visible = false;
-					break;
-				case 2:
-					this.gp_finish.visible = true;
-					this.gp_take.visible = false;
-					this.gp_goto.visible = false;
-					break;
+	// 		}
+	// 	}
+	// 	public dataChanged() {
 
-			}
-			let rewardtxt: string = "奖励：";
-			for (let i = 0; i < tv.reward_list.length; i++) {
-				let info = App.ConfigManager.getItemInfoById(tv.reward_list[i].id);
-				rewardtxt += (info.name + "" + tv.reward_list[i].num);
-				if (i < tv.reward_list.length - 1)
-					rewardtxt += ",";
-			}
-			this.lb_reward.text = rewardtxt;
-			//this.lb_reward.text 
-			//this.updateInfo(this.data);
-		}
-	}
+	// 		let tv: TaskVo = this.data as TaskVo;
+	// 		this.tv_data = tv;
+	// 		this.lb_taskname.text = tv.task_name;
+	// 		if (tv.need_num > tv.finish_num)
+	// 			this.lb_progress.textFlow = [{ text: tv.finish_num + "", style: { textColor: 0xf10000 } }, { text: "/" + tv.need_num, style: { textColor: 0xffffff } }];
+	// 		else
+	// 			this.lb_progress.textFlow = [{ text:  tv.need_num + "" }, { text: "/" + tv.need_num, style: { textColor: 0xffffff } }];//超过上限的显示为上限
+	// 		//this.lb_progress.text = tv.finish_num + "/" + tv.need_num;//
+	// 		if (tv.state == 2) {
+	// 			this.lb_progress.text = "";
+	// 		}
+	// 		switch (tv.state) {
+	// 			case 0:
+	// 				this.gp_take.visible = false;
+	// 				this.gp_finish.visible = false;
+	// 				this.gp_goto.visible = true;
+	// 				break;
+	// 			case 1:
+	// 				this.gp_take.visible = true;
+	// 				this.gp_finish.visible = false;
+	// 				this.gp_goto.visible = false;
+	// 				break;
+	// 			case 2:
+	// 				this.gp_finish.visible = true;
+	// 				this.gp_take.visible = false;
+	// 				this.gp_goto.visible = false;
+	// 				break;
+
+	// 		}
+	// 		let rewardtxt: string = "奖励：";
+	// 		for (let i = 0; i < tv.reward_list.length; i++) {
+	// 			let info = App.ConfigManager.getItemInfoById(tv.reward_list[i].id);
+	// 			rewardtxt += (info.name + "" + tv.reward_list[i].num);
+	// 			if (i < tv.reward_list.length - 1)
+	// 				rewardtxt += ",";
+	// 		}
+	// 		this.lb_reward.text = rewardtxt;
+	// 		//this.lb_reward.text 
+	// 		//this.updateInfo(this.data);
+	// 	}
+	// }
 
 
 

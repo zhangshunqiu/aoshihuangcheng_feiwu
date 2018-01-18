@@ -3,7 +3,6 @@
 	<e:Image id="img_bg" horizontalCenter="0" verticalCenter="0" x="0" y="0" scaleX="1" scaleY="1" source="main_bg_xitong_png" touchEnabled="false"/>
 	<e:Group id="gp_main" width="520" height="48" horizontalCenter="44" verticalCenter="0" touchThrough="true" touchChildren="false">
 		<e:Rect id="rect_mask" width="513" height="48" fillColor="0x000000" fillAlpha="1" scaleX="1" scaleY="1" horizontalCenter="47.5" verticalCenter="0" anchorOffsetX="0" touchEnabled="false"/>
-		<e:Label id="lb_content" text="Label" x="451" fontFamily="SimHei" verticalCenter="0" y="9" scaleX="1" scaleY="1" size="24" textColor="0xffe400"/>
 	</e:Group>
 	<e:Label text="系统消息：" x="86" y="20" fontFamily="SimHei" size="22" textColor="0x08ea84" textAlign="center" touchEnabled="false"/>
 	<e:Image source="main_laba_png" x="30" y="7" touchEnabled="false"/>

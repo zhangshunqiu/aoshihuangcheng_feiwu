@@ -10,7 +10,7 @@ class DelayOptManager extends BaseClass {
     public constructor() {
         super();
         this._delayOpts = [];
-        App.TimerManager.doFrame(1, 0, this.runCachedFun, this);
+        // App.TimerManager.doFrame(1, 0, this.runCachedFun, this);
     }
 
     public addDelayOptFunction(thisObj:any, fun:Function, funPara?:any, callBack?:Function, para?:any):void {
@@ -22,7 +22,7 @@ class DelayOptManager extends BaseClass {
     }
 
     public stop():void {
-        App.TimerManager.remove(this.runCachedFun, this);
+        // App.TimerManager.remove(this.runCachedFun, this);
     }
 
     private runCachedFun(f:any):void {

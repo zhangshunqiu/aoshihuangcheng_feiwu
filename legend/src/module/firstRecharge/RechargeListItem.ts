@@ -20,12 +20,14 @@ module game {
 				//可以赠送元宝
 				this.gp_attach.visible = true;
 				this.lb_gold_attach.text = configData.ext_gold + "元宝";
+				this.lb_gold_total.text = (configData.rmb * charge_rate + configData.ext_gold);
+				
 			}else{
 				//不可以赠送元宝
 				this.gp_attach.visible = false;
+				this.lb_gold_total.text = (configData.rmb * charge_rate) + "";
 			}
 			this.lb_money.text = configData.rmb + "元";
-			this.lb_gold_total.text = (configData.rmb * charge_rate + configData.ext_gold);
 		}
 	}
 }

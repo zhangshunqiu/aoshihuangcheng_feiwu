@@ -31,14 +31,18 @@
 		<e:Image id="img_close" x="645.28" y="3.48" source="common_btn_close_1_png"/>
 		<e:Image id="img_return" source="common_btn_fanhui_png" x="605" y="835" scaleX="1" scaleY="1"/>
 		<e:Label id="lb_leftTime" text="" x="49" y="124" size="23" fontFamily="SimHei"/>
-		<e:Label id="lb_name" text="幸运用户：" x="52" y="880.01" size="30" fontFamily="SimHei"/>
-		<e:ProgressBar id="progress" width="558" height="24" y="828" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" skinName="FortuneProgressSkin"/>
-		<e:Label id="lb_progress" text="" y="831.33" size="22" horizontalCenter="-19.5"/>
+		<e:Label id="lb_name" text="幸运用户：" x="52" y="876.01" size="30" fontFamily="SimHei"/>
+		<e:ProgressBar id="progress" width="558" height="24" y="828" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" skinName="FortuneProgressSkin" visible="false"/>
 		<e:Image source="charge_bg_zhandoulli_png" y="73.11" anchorOffsetX="0" width="641.94" anchorOffsetY="0" height="49.52" horizontalCenter="0"/>
 		<e:Image source="turnplate_xingyunzhuanpan_title_png" y="2.69" horizontalCenter="0"/>
 		<e:Image source="turnplate_wenzi_png" y="78.67" horizontalCenter="0.5"/>
 		<e:Image width="660" height="54.34" y="760.7" source="monthcard_bg_tips_png" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0"/>
 		<e:Label id="lb_desc" text="" y="774.32" anchorOffsetX="0" width="587.33" anchorOffsetY="0" height="30" textColor="0xf87500" size="16" fontFamily="SimHei" horizontalCenter="-0.5" textAlign="center" verticalAlign="middle"/>
 		<e:Image id="img_pointer" width="46.66" height="125" x="354.69" y="471.32" anchorOffsetY="183.33" anchorOffsetX="25.04" source="turnplate_zhizhen_png"/>
+		<e:Group id="gp_progress" width="584" height="53.33" x="68.67" y="803" anchorOffsetX="0" anchorOffsetY="0">
+			<e:Image source="wing_bg_jingyantiao_png" anchorOffsetY="0" height="38" y="6.100000000000023" horizontalCenter="0" width="580" x="1.3300000000000125" scaleX="1" scaleY="1"/>
+			<e:Rect id="re_mask" width="495" height="25" x="43.860000000000014" y="15.3599999999999" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1"/>
+			<e:Label id="lb_progress" text="" y="19.02" size="22" scaleX="1" scaleY="1" horizontalCenter="11.5"/>
+		</e:Group>
 	</e:Group>
 </e:Skin>

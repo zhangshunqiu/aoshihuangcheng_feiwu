@@ -32,8 +32,8 @@ module game {
             (WorldBossModel.getInstance() as WorldBossModel).updateWorldBossInfo(data);
             App.EventSystem.dispatchEvent(PanelNotify.WORLDBOSS_INFO_UPDATE);
             if(data.bosses.length < 3) {
-                if((WorldBossModel.getInstance() as WorldBossModel).revive) {
-                    App.WinManager.openWin(WinName.WORLDBOSS_REVIVE)
+                if((WorldBossModel.getInstance() as WorldBossModel).showBossRevive()) {
+                    App.WinManager.openWin(WinName.WORLDBOSS_REVIVE);
                 }
             }
         }
@@ -81,6 +81,13 @@ module game {
          * 世界boss挑战结果
          */
         public handlerWorldBossChallengeResult(data) {
+             //延迟弹出窗口
+		    SceneManager.getInstance().delayOpenCompleteView(data,this.worldBossChallengeResult,this);
+        }
+         /**
+         * 执行世界boss挑战结果
+         */
+        public worldBossChallengeResult(data) {
             (BossModel.getInstance() as BossModel).rank = data.rank;
             (BossModel.getInstance() as BossModel).dropItem = data.reward;
             App.WinManager.openWin(WinName.BOSS_WIN);

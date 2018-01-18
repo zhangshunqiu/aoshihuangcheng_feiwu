@@ -26,7 +26,8 @@
 		<e:Label text="星级奖励:" y="251.66" fontFamily="SimHei" size="24" x="2.67" scaleX="1" scaleY="1" textColor="0xfcfffc"/>
 		<e:Label text="挑战奖励:" y="302.66" fontFamily="SimHei" size="24" x="1.67" scaleX="1" scaleY="1" textColor="0xffea01"/>
 		<e:BitmapLabel id="lb_lv" width="20" height="20" x="204" y="154" text="1" font="laber_big_lv_fnt"/>
-		<e:Button id="btn_take" label="" x="138.51000000000005" y="444.05999999999995" scaleX="1" scaleY="1">
+		<e:Image source="boss_txt_lingqujiangli_succeed_png" x="160.28" y="457.56" scaleX="1" scaleY="1" touchEnabled="false"/>
+		<e:Button id="btn_take" label="" x="118.50999999999999" y="444.05999999999995" scaleX="1" scaleY="1" width="195" height="53">
 			<e:skinName>
 			<e:Skin states="up,down,disabled">
 				<e:Image width="100%" height="100%" source="common_btn_common_png" source.down="common_btn_common_png" source.disabled="common_btn_common_png"/>
@@ -34,6 +35,10 @@
 			</e:Skin>
 			</e:skinName>
 		</e:Button>
-		<e:Image source="boss_txt_lingqujiangli_succeed_png" x="160.28" y="457.56" scaleX="1" scaleY="1" touchEnabled="false"/>
+		<e:Group id="gp_get" y="447" x="120" scaleX="1" scaleY="1" touchEnabled="false" touchChildren="false">
+			<e:Image source="boss_txt_lingqujiangli_succeed_png" y="12.350000000000023" touchEnabled="false" x="18"/>
+			<e:BitmapLabel id="lb_countDown" width="55" height="28" x="130" y="16.35" anchorOffsetX="0" anchorOffsetY="0" text="6" font="boss_fail_txt_fnt"/>
+			<e:BitmapLabel id="btlb_countDown2" width="67" height="23" x="117" y="14.35" anchorOffsetX="0" anchorOffsetY="0" text="(     s)" font="boss_fail_txt_fnt"/>
+		</e:Group>
 	</e:Group>
 </e:Skin>

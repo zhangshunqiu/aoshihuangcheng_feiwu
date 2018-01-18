@@ -11,19 +11,20 @@ module game {
         private heroModel : HeroModel = (HeroModel.getInstance() as HeroModel);
         private _data : any;
         public constructor(info) {
-            super();
+            super(info);
             this.skinName = "MainOfflineSkin";
-            this._data = info;
+            // this._data = info;
         }
 
         protected childrenCreated() {
             super.childrenCreated();
-            this.initView();
+            // this.initView();
         }
 
         public initView() {
             this.img_close.addEventListener(egret.TouchEvent.TOUCH_TAP,()=>{
-                PopUpManager.removePopUp(this);
+                // PopUpManager.removePopUp(this);
+                App.WinManager.closeWin(WinName.POP_OFFLINE_RESULT);
             },this);
             let textArray = [];
             let sceneInfo = App.ConfigManager.getSceneConfigById(this._data.scene_id);
@@ -63,6 +64,8 @@ module game {
 
         public openWin(openParam) {
             super.openWin(openParam);
+            this._data = openParam.data;
+            this.initView();
         }
 
         public closeWin() {

@@ -16,16 +16,21 @@ module game {
 		private _part: number; //部位
 		private heroModel: HeroModel = HeroModel.getInstance();
 		private forgeModel: ForgeModel = ForgeModel.getInstance();
-		public constructor(id, part) {
-			super();
+		public constructor(config) {
+			super(config);
 			this.skinName = "ForgeEquipSkin";
-			this._id = id;
-			this._part = part;
+			// this._id = id;
+			// this._part = part;
 		}
 
 		protected childrenCreated() {
 			super.childrenCreated();
 
+
+
+		}
+
+		private initView() {
 			let equip = this.heroModel.heroInfo[this.heroModel.curPos].getPartInfoByPart(this._part);
 			let curLevel = equip ? equip.lv : 0;
 			// this.lb_left.text = "";
@@ -115,22 +120,26 @@ module game {
 			if (this.heroModel.heroInfo[this.heroModel.curPos].equipExist(this._part) >= 0) { //有装备
 				let equipInfo = this.heroModel.heroInfo[this.heroModel.curPos].getPartInfoByPart(this._part);
 				this.baseItem.updateBaseItem(ClientType.EQUIP, equipInfo.good_id);
-				this.baseItem.img_career.visible = false;
+				this.baseItem.setCarrerIconVisible(false);
 			} else {
-				RES.getResAsync("common_default_png", (texture) => {
-					this.baseItem.img_frame.source = texture;
-				}, this);
-				RES.getResAsync(ConstEquipIcon[this._part] + "_png", (texture) => {
-					this.baseItem.img_icon.source = texture;
-				}, this);
+				// RES.getResAsync("common_default_png", (texture) => {
+				// 	this.baseItem.img_frame.source = texture;
+				// }, this);
+				// RES.getResAsync(ConstEquipIcon[this._part] + "_png", (texture) => {
+				// 	this.baseItem.img_icon.source = texture;
+				// }, this);
+				this.baseItem.updateBaseItem(ClientType.EQUIP,0);
+				this.baseItem.setItemIcon(ConstEquipIcon[this._part] + "_png");
 			}
-
 		}
         /**
 		 * 打开窗口
 		 */
 		public openWin(openParam: any = null): void {
 			super.openWin(openParam);
+			this._id = openParam.id;
+			this._part = openParam.part;
+			this.initView();
 		}
 
 		/**
@@ -167,10 +176,10 @@ module game {
 		private _id: number; //英雄id
 		private heroModel: HeroModel = HeroModel.getInstance();
 		private forgeModel: ForgeModel = ForgeModel.getInstance();
-		public constructor(id) {
-			super();
+		public constructor(config) {
+			super(config);
 			this.skinName = "ForgeStarInfoSkin";
-			this._id = id;
+			// this._id = id;
 		}
 
 		protected childrenCreated() {
@@ -229,7 +238,16 @@ module game {
 					this.img_status.source = texture;
 				}, this);
 			}
+			this.bmlb_star.text = String(level);
+			this.lb_cur1.textFlow = [{ text: "当前效果：全身升星" }, { text: "+" + level, style: { textColor: 0x21c42b } }];
+
+			//下一级
 			let forgeInfo = this.forgeModel.getStarByPartLevel("", level + 1);
+			if (!forgeInfo) {
+				this.lb_attr2.textFlow = [];
+				this.lb_cur2.text = "下级效果：已满级";
+				return;
+			}
 			let attribute = App.ConfigManager.attributeConfig()[forgeInfo.all_star];
 			let attrBase = EquipModel.getInstance().attributeFilter(attribute);
 			let text = [];
@@ -269,10 +287,9 @@ module game {
 			this.lb_attr2.textFlow = text;
 			// this.lb_attr2.text = "全身属性+" +attribute["attribute_rate"] / 100 + "%";
 
-			this.bmlb_star.text = String(level);
-			this.lb_cur1.textFlow = [{ text: "当前效果：全身升星" }, { text: "+" + level, style: { textColor: 0x21c42b } }];
+
 			// this.lb_cur2.textFlow = [{ text: "下级效果：全身升星" }, { text: "+" + (level + 1), style: { textColor: 0x21c42b } }];
-			this.lb_cur2.text = "下级效果：全身升星+" +(level + 1);
+			this.lb_cur2.text = "下级效果：全身升星+" + (level + 1);
 			this.lb_cur2.textColor = 0x626262;
 
 		}

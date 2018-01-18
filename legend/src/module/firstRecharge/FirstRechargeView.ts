@@ -31,6 +31,9 @@ module game {
 			this.gp_rewardBtn.addEventListener(egret.TouchEvent.TOUCH_TAP,this.handlerGetReward,this);
 		}
 
+		/**
+		 * 领取首冲奖励
+		 */
 		private handlerGetReward():void
 		{
 			App.Socket.send(28001,{});
@@ -62,12 +65,12 @@ module game {
 					var good_id = chargeRewardArr[i][1];
 					var num = chargeRewardArr[i][2];
 					var baseItem:customui.BaseItem = new customui.BaseItem();
-					baseItem.lb_name.visible = true;
+					baseItem.setItemNameVisible(true);
 					baseItem.addEventListener(egret.TouchEvent.TOUCH_TAP,()=>{
 						App.GlobalTips.showItemTips(type,good_id,null);
 					},this)
 					baseItem.updateBaseItem(type,good_id,num);
-					baseItem.lb_name.textColor = 0xFA8100;
+					baseItem.setItemNameAtt({textColor:0xFA8100});
 					gp_reward.addChild(baseItem);
 					// console.log(this);//这个this是window
 				})(i,this.gp_reward)

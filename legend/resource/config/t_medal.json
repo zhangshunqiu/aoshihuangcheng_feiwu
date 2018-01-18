@@ -21,7 +21,7 @@
 		"def":34,
 		"sdef":34,
 		"grade":285,
-		"model":0
+		"model":"medal_1"
 	},
 	"2":{
 		"lv":2,
@@ -33,7 +33,7 @@
 		"def":68,
 		"sdef":68,
 		"grade":570,
-		"model":0
+		"model":"medal_1"
 	},
 	"3":{
 		"lv":3,
@@ -45,7 +45,7 @@
 		"def":102,
 		"sdef":102,
 		"grade":855,
-		"model":0
+		"model":"medal_1"
 	},
 	"4":{
 		"lv":4,
@@ -57,7 +57,7 @@
 		"def":136,
 		"sdef":136,
 		"grade":1140,
-		"model":0
+		"model":"medal_1"
 	},
 	"5":{
 		"lv":5,
@@ -69,7 +69,7 @@
 		"def":170,
 		"sdef":170,
 		"grade":1425,
-		"model":0
+		"model":"medal_1"
 	},
 	"6":{
 		"lv":6,
@@ -81,7 +81,7 @@
 		"def":204,
 		"sdef":204,
 		"grade":1710,
-		"model":0
+		"model":"medal_1"
 	},
 	"7":{
 		"lv":7,
@@ -93,7 +93,7 @@
 		"def":238,
 		"sdef":238,
 		"grade":1995,
-		"model":0
+		"model":"medal_1"
 	},
 	"8":{
 		"lv":8,
@@ -105,7 +105,7 @@
 		"def":272,
 		"sdef":272,
 		"grade":2280,
-		"model":0
+		"model":"medal_1"
 	},
 	"9":{
 		"lv":9,
@@ -117,7 +117,7 @@
 		"def":306,
 		"sdef":306,
 		"grade":2565,
-		"model":0
+		"model":"medal_1"
 	},
 	"10":{
 		"lv":10,
@@ -129,7 +129,7 @@
 		"def":340,
 		"sdef":340,
 		"grade":2850,
-		"model":0
+		"model":"medal_1"
 	},
 	"11":{
 		"lv":11,
@@ -141,7 +141,7 @@
 		"def":374,
 		"sdef":374,
 		"grade":3135,
-		"model":0
+		"model":"medal_2"
 	},
 	"12":{
 		"lv":12,
@@ -153,7 +153,7 @@
 		"def":408,
 		"sdef":408,
 		"grade":3420,
-		"model":0
+		"model":"medal_2"
 	},
 	"13":{
 		"lv":13,
@@ -165,7 +165,7 @@
 		"def":442,
 		"sdef":442,
 		"grade":3705,
-		"model":0
+		"model":"medal_2"
 	},
 	"14":{
 		"lv":14,
@@ -177,7 +177,7 @@
 		"def":476,
 		"sdef":476,
 		"grade":3990,
-		"model":0
+		"model":"medal_2"
 	},
 	"15":{
 		"lv":15,
@@ -189,7 +189,7 @@
 		"def":510,
 		"sdef":510,
 		"grade":4275,
-		"model":0
+		"model":"medal_2"
 	},
 	"16":{
 		"lv":16,
@@ -201,7 +201,7 @@
 		"def":544,
 		"sdef":544,
 		"grade":4560,
-		"model":0
+		"model":"medal_2"
 	},
 	"17":{
 		"lv":17,
@@ -213,7 +213,7 @@
 		"def":578,
 		"sdef":578,
 		"grade":4845,
-		"model":0
+		"model":"medal_2"
 	},
 	"18":{
 		"lv":18,
@@ -225,7 +225,7 @@
 		"def":612,
 		"sdef":612,
 		"grade":5130,
-		"model":0
+		"model":"medal_2"
 	},
 	"19":{
 		"lv":19,
@@ -237,7 +237,7 @@
 		"def":646,
 		"sdef":646,
 		"grade":5415,
-		"model":0
+		"model":"medal_2"
 	},
 	"20":{
 		"lv":20,
@@ -249,7 +249,7 @@
 		"def":680,
 		"sdef":680,
 		"grade":5700,
-		"model":0
+		"model":"medal_2"
 	},
 	"21":{
 		"lv":21,
@@ -261,7 +261,7 @@
 		"def":714,
 		"sdef":714,
 		"grade":5984,
-		"model":0
+		"model":"medal_3"
 	},
 	"22":{
 		"lv":22,
@@ -273,7 +273,7 @@
 		"def":748,
 		"sdef":748,
 		"grade":6269,
-		"model":0
+		"model":"medal_3"
 	},
 	"23":{
 		"lv":23,
@@ -285,7 +285,7 @@
 		"def":782,
 		"sdef":782,
 		"grade":6554,
-		"model":0
+		"model":"medal_3"
 	},
 	"24":{
 		"lv":24,
@@ -297,7 +297,7 @@
 		"def":816,
 		"sdef":816,
 		"grade":6839,
-		"model":0
+		"model":"medal_3"
 	},
 	"25":{
 		"lv":25,
@@ -309,7 +309,7 @@
 		"def":850,
 		"sdef":850,
 		"grade":7124,
-		"model":0
+		"model":"medal_3"
 	},
 	"26":{
 		"lv":26,
@@ -321,7 +321,7 @@
 		"def":884,
 		"sdef":884,
 		"grade":7409,
-		"model":0
+		"model":"medal_3"
 	},
 	"27":{
 		"lv":27,
@@ -333,7 +333,7 @@
 		"def":918,
 		"sdef":918,
 		"grade":7694,
-		"model":0
+		"model":"medal_3"
 	},
 	"28":{
 		"lv":28,
@@ -345,7 +345,7 @@
 		"def":952,
 		"sdef":952,
 		"grade":7979,
-		"model":0
+		"model":"medal_3"
 	},
 	"29":{
 		"lv":29,
@@ -357,7 +357,7 @@
 		"def":986,
 		"sdef":986,
 		"grade":8264,
-		"model":0
+		"model":"medal_3"
 	},
 	"30":{
 		"lv":30,
@@ -369,7 +369,7 @@
 		"def":1020,
 		"sdef":1020,
 		"grade":8549,
-		"model":0
+		"model":"medal_3"
 	},
 	"31":{
 		"lv":31,
@@ -381,7 +381,7 @@
 		"def":1054,
 		"sdef":1054,
 		"grade":8834,
-		"model":0
+		"model":"medal_4"
 	},
 	"32":{
 		"lv":32,
@@ -393,7 +393,7 @@
 		"def":1088,
 		"sdef":1088,
 		"grade":9119,
-		"model":0
+		"model":"medal_4"
 	},
 	"33":{
 		"lv":33,
@@ -405,7 +405,7 @@
 		"def":1122,
 		"sdef":1122,
 		"grade":9404,
-		"model":0
+		"model":"medal_4"
 	},
 	"34":{
 		"lv":34,
@@ -417,7 +417,7 @@
 		"def":1156,
 		"sdef":1156,
 		"grade":9689,
-		"model":0
+		"model":"medal_4"
 	},
 	"35":{
 		"lv":35,
@@ -429,7 +429,7 @@
 		"def":1190,
 		"sdef":1190,
 		"grade":9974,
-		"model":0
+		"model":"medal_4"
 	},
 	"36":{
 		"lv":36,
@@ -441,7 +441,7 @@
 		"def":1224,
 		"sdef":1224,
 		"grade":10259,
-		"model":0
+		"model":"medal_4"
 	},
 	"37":{
 		"lv":37,
@@ -453,7 +453,7 @@
 		"def":1258,
 		"sdef":1258,
 		"grade":10544,
-		"model":0
+		"model":"medal_4"
 	},
 	"38":{
 		"lv":38,
@@ -465,7 +465,7 @@
 		"def":1292,
 		"sdef":1292,
 		"grade":10829,
-		"model":0
+		"model":"medal_4"
 	},
 	"39":{
 		"lv":39,
@@ -477,7 +477,7 @@
 		"def":1326,
 		"sdef":1326,
 		"grade":11114,
-		"model":0
+		"model":"medal_4"
 	},
 	"40":{
 		"lv":40,
@@ -489,7 +489,7 @@
 		"def":1360,
 		"sdef":1360,
 		"grade":11399,
-		"model":0
+		"model":"medal_4"
 	},
 	"41":{
 		"lv":41,
@@ -501,7 +501,7 @@
 		"def":1394,
 		"sdef":1394,
 		"grade":11684,
-		"model":0
+		"model":"medal_5"
 	},
 	"42":{
 		"lv":42,
@@ -513,7 +513,7 @@
 		"def":1428,
 		"sdef":1428,
 		"grade":11969,
-		"model":0
+		"model":"medal_5"
 	},
 	"43":{
 		"lv":43,
@@ -525,7 +525,7 @@
 		"def":1462,
 		"sdef":1462,
 		"grade":12254,
-		"model":0
+		"model":"medal_5"
 	},
 	"44":{
 		"lv":44,
@@ -537,7 +537,7 @@
 		"def":1496,
 		"sdef":1496,
 		"grade":12539,
-		"model":0
+		"model":"medal_5"
 	},
 	"45":{
 		"lv":45,
@@ -549,7 +549,7 @@
 		"def":1530,
 		"sdef":1530,
 		"grade":12824,
-		"model":0
+		"model":"medal_5"
 	},
 	"46":{
 		"lv":46,
@@ -561,7 +561,7 @@
 		"def":1564,
 		"sdef":1564,
 		"grade":13109,
-		"model":0
+		"model":"medal_5"
 	},
 	"47":{
 		"lv":47,
@@ -573,7 +573,7 @@
 		"def":1598,
 		"sdef":1598,
 		"grade":13394,
-		"model":0
+		"model":"medal_5"
 	},
 	"48":{
 		"lv":48,
@@ -585,7 +585,7 @@
 		"def":1632,
 		"sdef":1632,
 		"grade":13679,
-		"model":0
+		"model":"medal_5"
 	},
 	"49":{
 		"lv":49,
@@ -597,7 +597,7 @@
 		"def":1666,
 		"sdef":1666,
 		"grade":13964,
-		"model":0
+		"model":"medal_5"
 	},
 	"50":{
 		"lv":50,
@@ -609,7 +609,7 @@
 		"def":1700,
 		"sdef":1700,
 		"grade":14249,
-		"model":0
+		"model":"medal_5"
 	},
 	"51":{
 		"lv":51,
@@ -621,7 +621,7 @@
 		"def":1734,
 		"sdef":1734,
 		"grade":14534,
-		"model":0
+		"model":"medal_6"
 	},
 	"52":{
 		"lv":52,
@@ -633,7 +633,7 @@
 		"def":1768,
 		"sdef":1768,
 		"grade":14819,
-		"model":0
+		"model":"medal_6"
 	},
 	"53":{
 		"lv":53,
@@ -645,7 +645,7 @@
 		"def":1802,
 		"sdef":1802,
 		"grade":15104,
-		"model":0
+		"model":"medal_6"
 	},
 	"54":{
 		"lv":54,
@@ -657,7 +657,7 @@
 		"def":1836,
 		"sdef":1836,
 		"grade":15389,
-		"model":0
+		"model":"medal_6"
 	},
 	"55":{
 		"lv":55,
@@ -669,7 +669,7 @@
 		"def":1870,
 		"sdef":1870,
 		"grade":15674,
-		"model":0
+		"model":"medal_6"
 	},
 	"56":{
 		"lv":56,
@@ -681,7 +681,7 @@
 		"def":1904,
 		"sdef":1904,
 		"grade":15959,
-		"model":0
+		"model":"medal_6"
 	},
 	"57":{
 		"lv":57,
@@ -693,7 +693,7 @@
 		"def":1938,
 		"sdef":1938,
 		"grade":16244,
-		"model":0
+		"model":"medal_6"
 	},
 	"58":{
 		"lv":58,
@@ -705,7 +705,7 @@
 		"def":1972,
 		"sdef":1972,
 		"grade":16529,
-		"model":0
+		"model":"medal_6"
 	},
 	"59":{
 		"lv":59,
@@ -717,7 +717,7 @@
 		"def":2006,
 		"sdef":2006,
 		"grade":16814,
-		"model":0
+		"model":"medal_6"
 	},
 	"60":{
 		"lv":60,
@@ -729,7 +729,7 @@
 		"def":2040,
 		"sdef":2040,
 		"grade":17099,
-		"model":0
+		"model":"medal_6"
 	},
 	"61":{
 		"lv":61,
@@ -741,7 +741,7 @@
 		"def":2074,
 		"sdef":2074,
 		"grade":17383,
-		"model":0
+		"model":"medal_7"
 	},
 	"62":{
 		"lv":62,
@@ -753,7 +753,7 @@
 		"def":2108,
 		"sdef":2108,
 		"grade":17668,
-		"model":0
+		"model":"medal_7"
 	},
 	"63":{
 		"lv":63,
@@ -765,7 +765,7 @@
 		"def":2142,
 		"sdef":2142,
 		"grade":17953,
-		"model":0
+		"model":"medal_7"
 	},
 	"64":{
 		"lv":64,
@@ -777,7 +777,7 @@
 		"def":2176,
 		"sdef":2176,
 		"grade":18238,
-		"model":0
+		"model":"medal_7"
 	},
 	"65":{
 		"lv":65,
@@ -789,7 +789,7 @@
 		"def":2210,
 		"sdef":2210,
 		"grade":18523,
-		"model":0
+		"model":"medal_7"
 	},
 	"66":{
 		"lv":66,
@@ -801,7 +801,7 @@
 		"def":2244,
 		"sdef":2244,
 		"grade":18808,
-		"model":0
+		"model":"medal_7"
 	},
 	"67":{
 		"lv":67,
@@ -813,7 +813,7 @@
 		"def":2278,
 		"sdef":2278,
 		"grade":19093,
-		"model":0
+		"model":"medal_7"
 	},
 	"68":{
 		"lv":68,
@@ -825,7 +825,7 @@
 		"def":2312,
 		"sdef":2312,
 		"grade":19378,
-		"model":0
+		"model":"medal_7"
 	},
 	"69":{
 		"lv":69,
@@ -837,7 +837,7 @@
 		"def":2346,
 		"sdef":2346,
 		"grade":19663,
-		"model":0
+		"model":"medal_7"
 	},
 	"70":{
 		"lv":70,
@@ -849,7 +849,7 @@
 		"def":2380,
 		"sdef":2380,
 		"grade":19948,
-		"model":0
+		"model":"medal_7"
 	},
 	"71":{
 		"lv":71,
@@ -861,7 +861,7 @@
 		"def":2414,
 		"sdef":2414,
 		"grade":20234,
-		"model":0
+		"model":"medal_8"
 	},
 	"72":{
 		"lv":72,
@@ -873,7 +873,7 @@
 		"def":2448,
 		"sdef":2448,
 		"grade":20520,
-		"model":0
+		"model":"medal_8"
 	},
 	"73":{
 		"lv":73,
@@ -885,7 +885,7 @@
 		"def":2482,
 		"sdef":2482,
 		"grade":20806,
-		"model":0
+		"model":"medal_8"
 	},
 	"74":{
 		"lv":74,
@@ -897,7 +897,7 @@
 		"def":2516,
 		"sdef":2516,
 		"grade":21092,
-		"model":0
+		"model":"medal_8"
 	},
 	"75":{
 		"lv":75,
@@ -909,7 +909,7 @@
 		"def":2550,
 		"sdef":2550,
 		"grade":21378,
-		"model":0
+		"model":"medal_8"
 	},
 	"76":{
 		"lv":76,
@@ -921,7 +921,7 @@
 		"def":2584,
 		"sdef":2584,
 		"grade":21664,
-		"model":0
+		"model":"medal_8"
 	},
 	"77":{
 		"lv":77,
@@ -933,7 +933,7 @@
 		"def":2618,
 		"sdef":2618,
 		"grade":21950,
-		"model":0
+		"model":"medal_8"
 	},
 	"78":{
 		"lv":78,
@@ -945,7 +945,7 @@
 		"def":2652,
 		"sdef":2652,
 		"grade":22236,
-		"model":0
+		"model":"medal_8"
 	},
 	"79":{
 		"lv":79,
@@ -957,7 +957,7 @@
 		"def":2686,
 		"sdef":2686,
 		"grade":22522,
-		"model":0
+		"model":"medal_8"
 	},
 	"80":{
 		"lv":80,
@@ -969,7 +969,7 @@
 		"def":2720,
 		"sdef":2720,
 		"grade":22808,
-		"model":0
+		"model":"medal_8"
 	},
 	"81":{
 		"lv":81,
@@ -981,7 +981,7 @@
 		"def":2754,
 		"sdef":2754,
 		"grade":23093,
-		"model":0
+		"model":"medal_9"
 	},
 	"82":{
 		"lv":82,
@@ -993,7 +993,7 @@
 		"def":2788,
 		"sdef":2788,
 		"grade":23378,
-		"model":0
+		"model":"medal_9"
 	},
 	"83":{
 		"lv":83,
@@ -1005,7 +1005,7 @@
 		"def":2822,
 		"sdef":2822,
 		"grade":23663,
-		"model":0
+		"model":"medal_9"
 	},
 	"84":{
 		"lv":84,
@@ -1017,7 +1017,7 @@
 		"def":2856,
 		"sdef":2856,
 		"grade":23948,
-		"model":0
+		"model":"medal_9"
 	},
 	"85":{
 		"lv":85,
@@ -1029,7 +1029,7 @@
 		"def":2890,
 		"sdef":2890,
 		"grade":24233,
-		"model":0
+		"model":"medal_9"
 	},
 	"86":{
 		"lv":86,
@@ -1041,7 +1041,7 @@
 		"def":2924,
 		"sdef":2924,
 		"grade":24518,
-		"model":0
+		"model":"medal_9"
 	},
 	"87":{
 		"lv":87,
@@ -1053,7 +1053,7 @@
 		"def":2958,
 		"sdef":2958,
 		"grade":24803,
-		"model":0
+		"model":"medal_9"
 	},
 	"88":{
 		"lv":88,
@@ -1065,7 +1065,7 @@
 		"def":2992,
 		"sdef":2992,
 		"grade":25088,
-		"model":0
+		"model":"medal_9"
 	},
 	"89":{
 		"lv":89,
@@ -1077,7 +1077,7 @@
 		"def":3026,
 		"sdef":3026,
 		"grade":25373,
-		"model":0
+		"model":"medal_9"
 	},
 	"90":{
 		"lv":90,
@@ -1089,7 +1089,7 @@
 		"def":3060,
 		"sdef":3060,
 		"grade":25658,
-		"model":0
+		"model":"medal_9"
 	},
 	"91":{
 		"lv":91,
@@ -1101,7 +1101,7 @@
 		"def":3094,
 		"sdef":3094,
 		"grade":25943,
-		"model":0
+		"model":"medal_10"
 	},
 	"92":{
 		"lv":92,
@@ -1113,7 +1113,7 @@
 		"def":3128,
 		"sdef":3128,
 		"grade":26228,
-		"model":0
+		"model":"medal_10"
 	},
 	"93":{
 		"lv":93,
@@ -1125,7 +1125,7 @@
 		"def":3162,
 		"sdef":3162,
 		"grade":26513,
-		"model":0
+		"model":"medal_10"
 	},
 	"94":{
 		"lv":94,
@@ -1137,7 +1137,7 @@
 		"def":3196,
 		"sdef":3196,
 		"grade":26798,
-		"model":0
+		"model":"medal_10"
 	},
 	"95":{
 		"lv":95,
@@ -1149,7 +1149,7 @@
 		"def":3230,
 		"sdef":3230,
 		"grade":27083,
-		"model":0
+		"model":"medal_10"
 	},
 	"96":{
 		"lv":96,
@@ -1161,7 +1161,7 @@
 		"def":3264,
 		"sdef":3264,
 		"grade":27368,
-		"model":0
+		"model":"medal_10"
 	},
 	"97":{
 		"lv":97,
@@ -1173,7 +1173,7 @@
 		"def":3298,
 		"sdef":3298,
 		"grade":27653,
-		"model":0
+		"model":"medal_10"
 	},
 	"98":{
 		"lv":98,
@@ -1185,7 +1185,7 @@
 		"def":3332,
 		"sdef":3332,
 		"grade":27938,
-		"model":0
+		"model":"medal_10"
 	},
 	"99":{
 		"lv":99,
@@ -1197,7 +1197,7 @@
 		"def":3366,
 		"sdef":3366,
 		"grade":28223,
-		"model":0
+		"model":"medal_10"
 	},
 	"100":{
 		"lv":100,
@@ -1209,6 +1209,6 @@
 		"def":3400,
 		"sdef":3400,
 		"grade":28508,
-		"model":0
+		"model":"medal_10"
 	}
 }

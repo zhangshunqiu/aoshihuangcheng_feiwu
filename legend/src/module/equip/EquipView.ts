@@ -26,6 +26,7 @@ module game {
 		public gp_super: eui.Group;
 		public gp_strength: eui.Group;
 		public gp_gem: eui.Group;
+		private img_bg: eui.Image;
 
 		private offset: number = 0;
 		private type: number = 0;
@@ -35,6 +36,8 @@ module game {
 		private info: any = {}; //服务端数据
 		private baseInfo: any = {};
 		private heroModel: HeroModel = HeroModel.getInstance();
+		private forgeModel: ForgeModel = ForgeModel.getInstance();
+		private bmlb_fightcap: eui.BitmapLabel;
 		public constructor(viewConf: WinManagerVO = null) {
 			super(viewConf);
 		}
@@ -44,14 +47,17 @@ module game {
 
 			this.btn_change.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: Event) => {
 				App.WinManager.closeWin(WinName.EQUIP);
-				let view = new EquipSelect(this.baseInfo.limit_career, this.part, this.baseInfo.sex);
-				PopUpManager.addPopUp({ obj: view, effectType: 0 });
+				// let view = new EquipSelect(this.baseInfo.limit_career, this.part, this.baseInfo.sex);
+				// PopUpManager.addPopUp({ obj: view, effectType: 0 });
+				App.WinManager.openWin(WinName.POP_EQUIP_SELECT, { career: this.baseInfo.limit_career, type: this.part, sex: this.baseInfo.sex });
 			}, this);
 
 			this.img_close.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: Event) => {
 				App.WinManager.closeWin(WinName.EQUIP);
 			}, this);
-
+			this.btn_show.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: Event) => {
+				//App.WinManager.openWin(WinName.CHAT,{show_id:this.id}); //此功能先不做了
+			}, this);
 			this.initView();
 		}
 
@@ -74,56 +80,159 @@ module game {
 			// let attrBase = EquipModel.getInstance().attributeFilter(attribute);
 			let attrBase = this.info.equip.base;
 			this.lb_name.text = info.name;
+			this.lb_name.textColor = ConstTextColor[info.quality];
 			this.lb_cap.text = this.info.equip.score;
+			this.bmlb_fightcap.text = this.info.equip.score;
 			this.baseItem.updateBaseItem(ClientType.EQUIP, info.id);
 			this.lb_level.textFlow = [{ text: "需求等级：", style: { textColor: 0xf5d98f } }, { text: String(info.limit_lvl), style: { textColor: 0xd8cecc } }];
-			this.lb_part.textFlow = [{ text: "部位：", style: { textColor: 0xf5d98f } }, { text: ConstEquipType[info.sub_type], style: { textColor: 0xd8cecc } }];
-			this.lb_career.textFlow = [{ text: "职业：", style: { textColor: 0xf5d98f } }, { text: ConstCareer[info.limit_career], style: { textColor: 0xd8cecc } }];
+			this.lb_part.textFlow = [{ text: "部位：", style: { textColor: 0xbfb294 } }, { text: ConstEquipType[info.sub_type], style: { textColor: 0xecc176 } }];
+			this.lb_career.textFlow = [{ text: "职位：", style: { textColor: 0xbfb294 } }, { text: ConstCareer[info.limit_career], style: { textColor: 0xecc176 } }];
 			this.lb_base.lineSpacing = 2;
 			let textArray = [];
 			for (let key in attrBase) {
 				let myKey = ConstAttributeArray[attrBase[key].key];
-				textArray.push({ text: ConstAttribute[myKey] + ": ", style: { textColor: 0xc6be66 } }, { text: attrBase[key].value, style: { textColor: 0xc6bebb } },
-					{ text: " + " + attrBase[key].add_value + "\n", style: { textColor: 0x23ff00 } });
+				textArray.push({ text: ConstAttributeTwo[myKey] + ": ", style: { textColor: 0xbfb294 } }, { text: attrBase[key].value, style: { textColor: 0xbfb294 } },
+					{ text: " + " + attrBase[key].add_value + "\n", style: { textColor: 0x00f828 } });
 			};
 			this.lb_base.textFlow = textArray;
-			this.offset = this.gp_base.height + 5;
-
-			// if (true) { //有强化属性
-			// 	this.gp_strength.visible = true;
-			// 	this.gp_strength.y = this.offset;
-			// 	this.lb_strength.textFlow = textArray
-			// 	this.offset += this.gp_strength.height + 5;	
-			// }
-
-			let attrBaseOrange = this.info.equip.special;
-
-			if (attrBaseOrange.length > 0) { //有极品属性
-				this.gp_great.visible = true;
-				this.gp_great.y = this.offset;
-				let textArray2 = [];
-				for (let key in attrBaseOrange) {
-					let myKey = ConstAttributeArray[attrBaseOrange[key].key];
-					textArray.push({ text: ConstAttribute[myKey] + ": ", style: { textColor: 0xc6be66 } }, { text: attrBaseOrange[key].value, style: { textColor: 0xc6bebb } },
-						{ text: " + " + attrBaseOrange[key].add_value + "\n", style: { textColor: 0x23ff00 } });
-				};
-				this.lb_great.textFlow = textArray2;
-				this.offset += this.gp_great.height + 5;
+			this.offset = this.gp_base.y + this.gp_base.height;
+			if (textArray.length > 12) {
+				this.height += (textArray.length - 12)/3 *24;
 			}
 
+
+			let equip = this.heroModel.heroInfo[this.heroModel.curPos].getPartInfoByPart(this.part);
+
+			if (equip && equip.lv) { //有强化属性
+				this.gp_strength.visible = true;
+				this.gp_strength.y = this.offset;
+				let textArrayStrength = [];
+				let forgeInfo = this.forgeModel.getStrengthByPartLevel(this.part, equip.lv);
+				let attributeStrength = App.ConfigManager.attributeConfig()[forgeInfo.attribute];
+				let attrBaseStr = EquipModel.getInstance().attributeFilter(attributeStrength);
+				for (let key in attrBaseStr) {
+					if (equip.part == ConstEquipPart.WEAPON) {
+						if (key == "ac" || key == "mac" || key == "sc") {
+							if (info.limit_career == CareerType.SOLDIER) {
+								if (key == "ac") {
+									textArrayStrength.push({ text: ConstAttributeTwo[key] + ": ", style: { textColor: 0xbfb294 } }, { text: attrBaseStr[key], style: { textColor: 0xbfb294 } },
+										{ text: "\n", style: { textColor: 0x23ff00 } });
+								}
+							} else if (info.limit_career == CareerType.MAGES) {
+								if (key == "mac") {
+									textArrayStrength.push({ text: ConstAttributeTwo[key] + ": ", style: { textColor: 0xbfb294 } }, { text: attrBaseStr[key], style: { textColor: 0xbfb294 } },
+										{ text: "\n", style: { textColor: 0x23ff00 } });
+								}
+							} else if (info.limit_career == CareerType.TAOIST) {
+								if (key == "sc") {
+									textArrayStrength.push({ text: ConstAttributeTwo[key] + ": ", style: { textColor: 0xbfb294 } }, { text: attrBaseStr[key], style: { textColor: 0xbfb294 } },
+										{ text: "\n", style: { textColor: 0x23ff00 } });
+								}
+							}
+						} else {
+							textArrayStrength.push({ text: ConstAttributeTwo[key] + ": ", style: { textColor: 0xbfb294 } }, { text: attrBaseStr[key], style: { textColor: 0xbfb294 } },
+								{ text: "\n", style: { textColor: 0x23ff00 } });
+						}
+					} else {
+						textArrayStrength.push({ text: ConstAttributeTwo[key] + ": ", style: { textColor: 0xbfb294 } }, { text: attrBaseStr[key], style: { textColor: 0xbfb294 } },
+							{ text: "\n", style: { textColor: 0x23ff00 } });
+					}
+				};
+				this.lb_strength.textFlow = textArrayStrength;
+				this.offset += this.gp_strength.height;
+			}
+
+			if (equip && equip.star) { //有升星属性
+				this.gp_great.visible = true;
+				this.gp_great.y = this.offset;
+				let textArrayStar = [];
+				let forgeInfo2 = this.forgeModel.getStarByPartLevel(this.forgeModel.curStarPart, equip.star);
+				let attribute2 = App.ConfigManager.attributeConfig()[forgeInfo2.attribute];
+				let attrBaseStar = EquipModel.getInstance().attributeFilter(attribute2);
+				for (let key in attrBase) {
+					let myKey = ConstAttributeArray[attrBase[key].key];
+					let finalValue = Math.ceil((attrBase[key].value + attrBase[key].add_value) * attrBaseStar.attribute_rate / 10000);
+					textArrayStar.push({ text: ConstAttributeTwo[myKey] + ": ", style: { textColor: 0xbfb294 } }, { text: String(finalValue), style: { textColor: 0xbfb294 } },
+						{ text: "\n", style: { textColor: 0x23ff00 } });
+				};
+				// for (let key in attrBaseStar) {
+				// 	textArrayStar.push({ text: ConstAttributeTwo[key] + ": ", style: { textColor: 0xc6be66 } }, { text: attrBaseStar[key], style: { textColor: 0xc6bebb } },
+				// 		{ text: "\n", style: { textColor: 0x23ff00 } });
+				// };
+				this.lb_great.textFlow = textArrayStar;
+				this.offset += this.gp_great.height;
+				if (textArrayStar.length > 12) {
+				this.height += (textArrayStar.length - 12)/3 *24;
+			}
+
+			}
+
+			// let attrBaseOrange = this.info.equip.special;
+			// if (attrBaseOrange.length > 0) { //有极品属性
+			// 	this.gp_great.visible = true;
+			// 	this.gp_great.y = this.offset;
+			// 	let textArray2 = [];
+			// 	for (let key in attrBaseOrange) {
+			// 		let myKey = ConstAttributeArray[attrBaseOrange[key].key];
+			// 		textArray.push({ text: ConstAttributeTwo[myKey] + ": ", style: { textColor: 0xc6be66 } }, { text: attrBaseOrange[key].value, style: { textColor: 0xc6bebb } },
+			// 			{ text: " + " + attrBaseOrange[key].add_value + "\n", style: { textColor: 0x23ff00 } });
+			// 	};
+			// 	this.lb_great.textFlow = textArray2;
+			// 	this.offset += this.gp_great.height + 5;
+			// }
+
 			let attrBaseGod = this.info.equip.wash;
-			if (attrBaseGod.length > 0) { //有神装属性
+			if (attrBaseGod && attrBaseGod.length > 0) { //有神装属性
 				this.gp_super.visible = true;
 				this.gp_super.y = this.offset;
 				let textArray3 = [];
 				for (let key in attrBaseGod) {
 					let myKey = ConstAttributeArray[attrBaseGod[key].key];
-					textArray.push({ text: ConstAttribute[myKey] + ": ", style: { textColor: 0xc6be66 } }, { text: attrBaseGod[key].value, style: { textColor: 0xc6bebb } },
-						{ text: " + " + attrBaseGod[key].add_value + "\n", style: { textColor: 0x23ff00 } });
+					textArray3.push({ text: ConstAttributeTwo[myKey] + ": ", style: { textColor: 0xbfb294 } }, { text: attrBaseGod[key].value, style: { textColor: 0xbfb294 } },
+						{ text: " + " + attrBaseGod[key].add_value + "\n", style: { textColor: 0x00f828 } });
 				};
 
 				this.lb_super.textFlow = textArray3;
-				this.offset += this.gp_super.height + 5;
+				this.offset += this.gp_super.height;
+			}
+
+			let jewelInfo = this.heroModel.heroInfo[this.heroModel.curPos].getJewelInfoByPart(this.part);
+			let jewelActive = false;
+			if (jewelInfo) {
+				for (let i = 0; i < jewelInfo.length; i++) {
+					let info = App.ConfigManager.getJewelInfoById(jewelInfo[i].stone_id);
+					if (info) {
+						jewelActive = true;
+					}
+				}
+			}
+			if (jewelActive) { //有宝石属性
+				let heroInfo = this.heroModel.heroInfo[this.heroModel.curPos];
+				this.gp_gem.visible = true;
+				this.gp_gem.y = this.offset;
+				let textArrayJewel = [];
+				for (let i = 0; i < jewelInfo.length; i++) {
+					let info = App.ConfigManager.getJewelInfoById(jewelInfo[i].stone_id);
+					if (info) {
+						if (jewelInfo[i].hole == JewelType.ATTACK) {
+							if (heroInfo.job == CareerType.SOLDIER) {
+								textArrayJewel.push({ text: ConstAttributeTwo["ac"] + "：", style: { textColor: 0xbfb294 } }, { text: info["ac"] + "\n", style: { textColor: 0xbfb294 } });
+							} else if (heroInfo.job == CareerType.MAGES) {
+								textArrayJewel.push({ text: ConstAttributeTwo["mac"] + "：", style: { textColor: 0xbfb294 } }, { text: info["mac"] + "\n", style: { textColor: 0xbfb294 } });
+							} else if (heroInfo.job == CareerType.TAOIST) {
+								textArrayJewel.push({ text: ConstAttributeTwo["sc"] + "：", style: { textColor: 0xbfb294 } }, { text: info["sc"] + "\n", style: { textColor: 0xbfb294 } });
+							}
+						} else if (jewelInfo[i].hole == JewelType.LIFE) {
+							textArrayJewel.push({ text: ConstAttributeTwo["hp"] + "：", style: { textColor: 0xbfb294 } }, { text: info["hp"] + "\n", style: { textColor: 0xbfb294 } });
+						} else if (jewelInfo[i].hole == JewelType.DEFENCE) {
+							textArrayJewel.push({ text: ConstAttributeTwo["def"] + "：", style: { textColor: 0xbfb294 } }, { text: info["def"] + "\n", style: { textColor: 0xbfb294 } });
+						} else if (jewelInfo[i].hole == JewelType.MAGIC) {
+							textArrayJewel.push({ text: ConstAttributeTwo["sdef"] + "：", style: { textColor: 0xbfb294 } }, { text: info["sdef"] + "\n", style: { textColor: 0xbfb294 } });
+						}
+					}
+				}
+				this.lb_gem.textFlow = textArrayJewel;
+				this.offset += this.gp_gem.height;
 			}
 		}
 
@@ -142,11 +251,11 @@ module game {
 			this.baseItem.updateBaseItem(ClientType.EQUIP, info.id);
 			this.lb_level.textFlow = [{ text: "需求等级：", style: { textColor: 0xf5d98f } }, { text: String(info.limit_lvl), style: { textColor: 0xd8cecc } }];
 			this.lb_part.textFlow = [{ text: "部位：", style: { textColor: 0xf5d98f } }, { text: ConstEquipType[info.sub_type], style: { textColor: 0xd8cecc } }];
-			this.lb_career.textFlow = [{ text: "职业：", style: { textColor: 0xf5d98f } }, { text: ConstCareer[info.limit_career], style: { textColor: 0xd8cecc } }];
+			this.lb_career.textFlow = [{ text: "职位：", style: { textColor: 0xf5d98f } }, { text: ConstCareer[info.limit_career], style: { textColor: 0xd8cecc } }];
 			this.lb_base.lineSpacing = 2;
 			let textArray = [];
 			for (let key in attrBase) {
-				textArray.push({ text: ConstAttribute[key] + ": ", style: { textColor: 0xc6be66 } }, { text: attrBase[key], style: { textColor: 0xc6bebb } },
+				textArray.push({ text: ConstAttributeTwo[key] + ": ", style: { textColor: 0xc6be66 } }, { text: attrBase[key], style: { textColor: 0xc6bebb } },
 					{ text: " + " + "?" + "\n", style: { textColor: 0x23ff00 } });
 			};
 			this.lb_base.textFlow = textArray;
@@ -167,7 +276,7 @@ module game {
 				this.gp_great.y = this.offset;
 				let textArray2 = [];
 				for (let key in attrBaseOrange) {
-					textArray.push({ text: ConstAttribute[key] + ": ", style: { textColor: 0xc6be66 } }, { text: attrBaseOrange[key], style: { textColor: 0xc6bebb } },
+					textArray.push({ text: ConstAttributeTwo[key] + ": ", style: { textColor: 0xc6be66 } }, { text: attrBaseOrange[key], style: { textColor: 0xc6bebb } },
 						{ text: " + " + "?" + "\n", style: { textColor: 0x23ff00 } });
 				};
 				this.lb_great.textFlow = textArray2;
@@ -181,7 +290,7 @@ module game {
 				this.gp_super.y = this.offset;
 				let textArray3 = [];
 				for (let key in attrBaseGod) {
-					textArray.push({ text: ConstAttribute[key] + ": ", style: { textColor: 0xc6be66 } }, { text: attrBaseGod[key], style: { textColor: 0xc6bebb } },
+					textArray.push({ text: ConstAttributeTwo[key] + ": ", style: { textColor: 0xc6be66 } }, { text: attrBaseGod[key], style: { textColor: 0xc6bebb } },
 						{ text: " + " + "?" + "\n", style: { textColor: 0x23ff00 } });
 				};
 
@@ -205,9 +314,10 @@ module game {
 				//透传过来的数据，可以是装备展示
 				if (openParam.info) {
 					this.info = openParam.info;
+					this.btn_show.visible = false;
 				} else {
 					this.info = (BackpackModel.getInstance() as BackpackModel).getItemByTypeIdUuid(ClientType.EQUIP, this.id, this.uuid);
-					if (!this.info) { //背包里没有，装备在身上了
+					if (!this.info && this.type == 1) { //背包里没有，装备在身上了
 						this.info = this.heroModel.getHeroEquipByPosPart(this.heroModel.curPos, this.heroModel.curPart);
 					}
 				}
@@ -219,14 +329,15 @@ module game {
 			} else if (this.type == 1) {
 				this.btn_change.visible = true;
 			}
+			this.baseItem.setStopShowTips(true);
 			this.updateView();
 		}
 
 		/**
 		 * 关闭窗口
 		 */
-		public closeWin(callback): void {
-			super.closeWin(callback);
+		public closeWin(): void {
+			super.closeWin();
 		}
 
 		/**

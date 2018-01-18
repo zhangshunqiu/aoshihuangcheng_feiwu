@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="LabberMatchItemSkin" width="350" height="450" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
 	<e:Image id="img_career" width="370" height="435" x="-3" y="-20" source="20001_png"/>
-	<e:Label id="lb_name" text="梦之安魂曲" x="161" y="344" fontFamily="SimHei" size="24" textColor="0xe4e1de"/>
+	<e:Label id="lb_name" text="梦之安魂曲" x="171" y="344" fontFamily="SimHei" size="24" textColor="0xe4e1de" textAlign="left"/>
 	<e:Label id="lb_tier" text="倔强青铜" x="170" y="371" fontFamily="SimHei" size="24" textColor="0x22a322"/>
 	<e:Label id="lb_pwin" text="0" x="244" y="399" fontFamily="SimHei" size="24" textAlign="left" textColor="0xffea01"/>
 	<e:Label text="胜率：" x="172" y="399" fontFamily="SimHei" size="24" textColor="0xf87500"/>
