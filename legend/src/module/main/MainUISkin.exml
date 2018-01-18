@@ -53,4 +53,5 @@
 	</e:Group>
 	<e:Group id="gp_activity" width="559" height="94" horizontalCenter="74.5" top="87" anchorOffsetX="0" anchorOffsetY="0">
 	</e:Group>
+	<e:Button id="debug" label="debug" y="2" x="2" anchorOffsetX="0" anchorOffsetY="0" scaleX="0.7" scaleY="0.7"/>
 </e:Skin>

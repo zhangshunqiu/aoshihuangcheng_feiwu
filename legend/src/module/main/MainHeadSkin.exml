@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="MainHeadSkin" width="720" height="180" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+<e:Skin class="MainHeadSkin" width="720" height="131" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
 	<e:Image source="main_bg_touxiang2_png" x="96" y="-1"/>
 	<e:Image source="words_bg_zhandouli_y_png" x="61" y="-27" visible="false"/>
 	<e:Image source="main_bg_touxiang1_png" y="-15"/>
 	<e:Image source="mian_nv_png" x="10" y="5"/>
 	
-	<e:Image x="0" y="60" source="main_bg_touxiang_png" visible="false"/>
-	<e:Image source="main_txt_paihangbang_png" x="249" y="135.25" touchEnabled="false" visible="false"/>
-	<e:Label id="lb_career" text="职业是什么" x="170" y="103" fontFamily="Microsoft YaHei" size="28" visible="false"/>
-	<e:Label id="lb_fightcap" text="9999999" x="238" y="87" fontFamily="Microsoft YaHei" size="24" textColor="0xf49424" visible="false"/>
 	<e:Label text="级" x="321" y="56" fontFamily="SimHei" size="22"/>
 	<e:Label id="lb_turnText" text="转" x="266" y="56" fontFamily="SimHei" size="22"/>
 	<e:Label id="lb_name" text="陈龙生" x="138" y="56" fontFamily="SimHei" size="22" textColor="0xe1e1e1"/>
@@ -32,9 +28,7 @@
 			<e:BitmapLabel id="bmlb_fightcap" x="58.75" y="1.75" text="1582687" font="combat_shuxing_fnt"/>
 		</e:Group>
 	</e:Group>
-	<e:Image horizontalCenter="123" top="-7" x="0" y="0" scaleX="1" scaleY="1" source="main_bg_shujutiao__png" locked="true"/>
-	<e:Label text="9999999" x="388" y="16" fontFamily="SimHei" size="20" textColor="0xE1E1E1" scaleX="1" scaleY="1" anchorOffsetX="0" width="90" visible="false"/>
-	<e:Label text="999900" x="558" y="15" fontFamily="SimHei" size="20" textColor="0xE1E1E1" scaleX="1" scaleY="1" anchorOffsetX="0" width="77" anchorOffsetY="0" height="20" textAlign="center" visible="false"/>
+	<e:Image horizontalCenter="123" top="-7" x="0" y="0" scaleX="1" scaleY="1" source="main_bg_shujutiao__png"/>
 	<e:Image x="445" scaleX="1" scaleY="1" source="main_jinbi_png" y="56"/>
 	<e:Group x="353" y="15">
 		<e:Image x="-2" scaleX="1" scaleY="1" source="main_jinbi_png" verticalCenter="0.5"/>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="BossIconSKin" width="186" height="284" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="gp_boss" x="-16" y="-0.62">
+		<e:Image y="0" x="0" source="main_tiaozhanguanqia_png" scaleX="1" scaleY="1"/>
+		<e:Group id="gp_bossUI" width="-1" height="0" x="108" y="98.62" anchorOffsetX="0" anchorOffsetY="0"/>
+	</e:Group>
+	<e:ProgressBar id="pb_monsterWave" x="39" y="201" skinName="skins.ProgressBarSkin2" direction="ltr" value="0" scaleX="1" scaleY="1" maximum="3"/>
+	<e:Group x="31" y="230">
+		<e:Button id="btn_auto" label="自动挑战" x="-4" y="0" skinName="skins.ComBtnTab2Skin"/>
+		<e:Group id="gp_autoChallenge0" width="0" height="0" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" verticalCenter="0" touchEnabled="true"/>
+	</e:Group>
+	<e:Group id="gp_meetBoss" x="-25" y="-124" anchorOffsetX="0" width="51" anchorOffsetY="0" height="48" scaleX="1" scaleY="1"/>
+</e:Skin>

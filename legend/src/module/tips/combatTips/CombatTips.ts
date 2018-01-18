@@ -4,7 +4,7 @@ module game {
 		private static instance: CombatTips;
 
 		private _combatArr:Array<any> = [];
-		private _attrToShow: Array<string> = ["hp", "ac", "def", "sdef", "hit", "dodge", "crit", "rcrit"];
+		private _attrToShow: Array<string> = ["hp", "ac","mac","sc", "def", "sdef", "hit", "dodge", "crit", "rcrit"];
 
 		private _combatTipsItem: CombatTipsItem;
 		private _labelArr:Array<CombatTipsAttrItem> = [];
@@ -53,6 +53,7 @@ module game {
 			if (this._labelArr.indexOf(item) != -1) {
 				var index = this._labelArr.indexOf(item);
 				this._labelArr.splice(index, 1);
+				ObjectPool.push(item);
 			}
 		}
 
@@ -136,8 +137,12 @@ module game {
 		private playAttr(arr): void {
 			for (var i: number = 0; i < arr.length; i++) {
 				var attrItem = arr.pop();
-				var tipsItem: CombatTipsAttrItem = new CombatTipsAttrItem(attrItem);
+				// var tipsItem: CombatTipsAttrItem = new CombatTipsAttrItem(attrItem);
+				var tipsItem: CombatTipsAttrItem = ObjectPool.pop("game.CombatTipsAttrItem");
+				tipsItem.setAttr(attrItem);
 				tipsItem.y = 830;
+				tipsItem.x = 0;
+				GameRootLay.gameLayer()._effectLay.addChild(tipsItem);
 				this._labelArr.unshift(tipsItem);
 				
 			}
@@ -145,7 +150,6 @@ module game {
 			for (var j: number = 0; j < this._labelArr.length; j++) {
 				var tipsItem: CombatTipsAttrItem = this._labelArr[j];
 				egret.Tween.removeTweens(tipsItem);
-				GameRootLay.gameLayer()._effectLay.addChild(tipsItem);
 				egret.Tween.get(tipsItem).to({ y: 830 - j * 50 }, 230, egret.Ease.sineOut);
 			}
 		}
@@ -177,7 +181,7 @@ module game {
 				var valueBef: number = attrBef[j].value;
 				var valueAft: number = attrAft[j].value;
 				if (valueAft > valueBef) {
-					arr.push({ attr: key, value: valueAft - valueBef })
+					arr.push({ attr: key, value: valueAft - valueBef });
 				}
 			}
 			return arr;
@@ -304,20 +308,28 @@ module game {
 			dodge: "words_shanbi_png",
 			ac: "words_gongji_png",
 			mac: "words_gongji_png",
+			sc:"words_gongji_png",
 		}
 		private _requestAnimId: number;
-		public constructor(attrItem: Object) {
+		public constructor() {
 			super();
 			this.skinName = "CombatAttrSkin";
-			this.bitmap_attr_num.text = attrItem["value"];
-			this.img_attr.source = this._attrDesc[attrItem["attr"]];
+			// this.bitmap_attr_num.text = attrItem["value"];
+			// this.img_attr.source = this._attrDesc[attrItem["attr"]];
 			this.touchEnabled = false;
 			this.touchChildren = false;
 		}
 
+		public setAttr(attrObj:Object):void {
+			this.bitmap_attr_num.text = attrObj["value"];
+			this.img_attr.source = this._attrDesc[attrObj["attr"]];
+		}
+
 		protected childrenCreated(): void {
 			super.childrenCreated();
-			egret.setTimeout(this.startAnim, this, 1000);
+			this.addEventListener(egret.Event.ADDED_TO_STAGE,()=>{
+				egret.setTimeout(this.startAnim, this, 1000);
+			},this)
 		}
 
 		/**

@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="MainUISkin1" width="720" height="1136" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing" xmlns:cu="customui.*" xmlns:game="game.*">
+	<e:Group id="gp_middle" touchEnabled="false" width="720" height="1136" y="0" x="0">
+		<e:Group id="gp_broadcast" width="100%" height="100" horizontalCenter="0" top="291" visible="false">
+			<e:Image horizontalCenter="0" verticalCenter="0" source=""/>
+			<e:Label text="系统消息：xxxxxxxxxxxxxxxxxxxxxxx" fontFamily="Microsoft YaHei" verticalCenter="0" x="113" size="18" textAlign="left"/>
+		</e:Group>
+		<e:Image id="img_bg0" source="shop_bg_list_shangcheng_png" x="108" y="311" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" height="31" width="511" visible="false"/>
+		<game:MainLineTaskView id="mainline_view" width="400" height="100" x="155" y="805" skinName="MainLineTaskSkin"/>
+	</e:Group>
+	<e:Group id="gp_bottom_right" y="279" width="100" height="400" x="591">
+		<game:BossIconView width="164" height="285" x="-41" y="422" skinName="BossIconSKin" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1"/>
+	</e:Group>
+	<e:Group id="gp_bottom" width="100%" height="100" x="1" y="1036">
+		<e:Group id="gp_bottom_left" y="-754" width="100" height="266" touchThrough="true" touchEnabled="false" anchorOffsetX="0" anchorOffsetY="0" x="30">
+			<e:Button id="btn_arena" label="" x="547" y="255.76" visible="false">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="main_icon_jingji_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Button id="btn_worldBoss" label="" x="560" y="358.96" scaleX="1" scaleY="1" visible="false">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="main_icon_shijieboss_png" source.down="main_icon_shijieboss_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+		</e:Group>
+	</e:Group>
+	<e:Group id="gp_activity" width="559" height="94" horizontalCenter="74.5" top="87" anchorOffsetX="0" anchorOffsetY="0">
+	</e:Group>
+	<e:Button id="debug" label="debug" y="2" x="2" anchorOffsetX="0" anchorOffsetY="0" scaleX="0.7" scaleY="0.7"/>
+</e:Skin>

@@ -6,6 +6,7 @@
 		<e:Image source="jewel_bg_wheel_png" x="17" y="67" alpha="1"/>
 		<e:Image x="206.06" y="162.6" source="com_bg_combat_png"/>
 		<e:Image source="words_zhandouli_png" x="289.72" y="192.44"/>
+		<e:Image source="com_pic_jb2_png" x="10" y="673"/>
 		<e:BitmapLabel id="bmlb_cap" x="350" y="197" text="159" scaleX="1" scaleY="1" font="combat_shuxing_fnt"/>
 		<game:HeroHeadComponentView id="hero_head" xmlns:game="game.*" width="700" height="120" horizontalCenter="0" top="65"/>
 		<e:Image id="img_master" y="694" left="152" source="jewel_icon_baoshidashi_png" visible="false"/>
@@ -52,7 +53,6 @@
 		<e:Group id="gp_equip" height="600" y="195" left="0" right="0" touchEnabled="false">
 		</e:Group>
 		<e:Group id="gp_middle" width="450" height="150" y="624" horizontalCenter="0">
-			<e:Image source="com_pic_jb2_png" x="-124.91" y="55.21"/>
 			<e:Image source="com_btn_arrow2Right_png" x="221.25" y="104.59"/>
 			<e:Label id="lb_attr" text="Label" y="65.49" fontFamily="SimHei" size="24" lineSpacing="12" textAlign="center" x="297.59" textColor="0x00f828"/>
 			<e:Label id="lb_name" text="极\n的\n到\n到\n" y="68.54" fontFamily="SimHei" size="24" lineSpacing="12" textAlign="center" x="76.73" textColor="0xbfb294"/>

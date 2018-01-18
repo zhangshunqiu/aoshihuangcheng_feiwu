@@ -397,6 +397,7 @@ module game {
 					//转生 
 					if (baseInfo.reincarnation != 0) {
 						this.equipArray[i - 1].setItemName(baseInfo.reincarnation + "转");
+						this.equipArray[i - 1].setItemNameAtt({textColor:0xbfb294,size:20});
 					}
 				} else {
 					let partInfo = this.heroModel.heroInfo[this.heroModel.curPos].getPartInfoByPart(i);
